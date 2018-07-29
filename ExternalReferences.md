@@ -282,7 +282,7 @@ An empty polyline is represented with an empty array for the paths field. Nulls 
 |---------|--------|--------|
 | hasM | boolean |Indicates whether the geometry contains M coordinate values.
 | hasZ | boolean |Indicates whether the geometry contains Z coordinate values.
-| paths |[[path](ExternalReferences.md#path)],| Ordered array of paths. Each path represented as ordered array of [Points](ExternalReferences.md#point)
+| paths |[[path](ExternalReferences.md#path)]| Ordered array of paths. Each path represented as ordered array of [Points](ExternalReferences.md#point)
 | curvePaths |[[CurvePath](ExternalReferences.md#curvepath)]| Ordered array of curved paths. Each curve path is ordered array of [Points](ExternalReferences.md#point) and [Curves](ExternalReferences.md#curves)
 | spatialReference | [SpatialReference](ExternalReferences.md#spatialreference) | The spatial reference can be defined using a well-known ID (WKID) or well-known text (WKT).
 
@@ -336,7 +336,7 @@ When adding elements to a GeometryBag, keep in mind that the elements acquire th
 
 ### Area
 Area represents the type of geometries that have area. It can be one of these:
-* [Envelope](ExternalReferences.md#Envelope)
+* [Envelope](ExternalReferences.md#envelope)
 * [Polygon](ExternalReferences.md#polygon)
 
 ### Path
