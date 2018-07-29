@@ -282,8 +282,8 @@ An empty polyline is represented with an empty array for the paths field. Nulls 
 |---------|--------|--------|
 | hasM | boolean |Indicates whether the geometry contains M coordinate values.
 | hasZ | boolean |Indicates whether the geometry contains Z coordinate values.
-| paths |[[Point](ExternalReferences.md#point)],| Ordered array of paths. Each path represented as ordered array of [Points](ExternalReferences.md#point)
-| curvePaths |[[CurvePath]](ExternalReferences.md#path)| Ordered array of curved paths. Each curve path is ordered array of [Points](ExternalReferences.md#point) and [Curves](ExternalReferences.md#curves)
+| paths |[[path](ExternalReferences.md#path)],| Ordered array of paths. Each path represented as ordered array of [Points](ExternalReferences.md#point)
+| curvePaths |[[CurvePath](ExternalReferences.md#curvepath)]| Ordered array of curved paths. Each curve path is ordered array of [Points](ExternalReferences.md#point) and [Curves](ExternalReferences.md#curves)
 | spatialReference | [SpatialReference](ExternalReferences.md#spatialreference) | The spatial reference can be defined using a well-known ID (WKID) or well-known text (WKT).
 
 ### Polygon
@@ -302,8 +302,8 @@ When drawing a polygon, use the even-odd fill rule. The even-odd fill rule will 
 |---------|--------|--------|
 | hasM | boolean |Indicates whether the geometry contains M coordinate values.
 | hasZ | boolean |Indicates whether the geometry contains Z coordinate values.
-| rings |[[Ring]](ExternalReferences.md#ring)| Ordered array of rings. Each ring is an array of [points](ExternalReferences.md#point).
-| curveRings |[[CurveRing]](ExternalReferences.md#curveRing)|  Ordered array of curved rings. Each curve ring is  ordered array of [Points](ExternalReferences.md#point) and [Curves](ExternalReferences.md#curves)
+| rings |[[Ring](ExternalReferences.md#ring)]| Ordered array of rings. Each ring is an array of [points](ExternalReferences.md#point).
+| curveRings |[[CurveRing](ExternalReferences.md#curvering)]|  Ordered array of curved rings. Each curve ring is  ordered array of [Points](ExternalReferences.md#point) and [Curves](ExternalReferences.md#curves)
 | spatialReference | [SpatialReference](ExternalReferences.md#spatialreference) | The spatial reference can be defined using a well-known ID (WKID) or well-known text (WKT).
 
 ### Envelope
@@ -338,6 +338,34 @@ When adding elements to a GeometryBag, keep in mind that the elements acquire th
 Area represents the type of geometries that have area. It can be one of these:
 * [Envelope](ExternalReferences.md#Envelope)
 * [Polygon](ExternalReferences.md#polygon)
+
+### Path
+A path is a sequence of connected segments represented by an array of [points](ExternalReferences.md#point).
+
+|Property | Type | Description |
+|---------|--------|--------|
+| - | [[point](ExternalReferences.md#point)] |Ordered array of [points](ExternalReferences.md#point)|
+
+### CurvePath
+A curve path is a sequence of connected segments represented by an array of [points](ExternalReferences.md#point) and [curves](ExternalReferences.md#curves).
+
+|Property | Type | Description |
+|---------|--------|--------|
+| - | [[point](ExternalReferences.md#point)] |Ordered array of [points](ExternalReferences.md#point)|
+
+### Ring
+A ring is an area bounded by one, closed sequence of connected segments represented by array of [points](ExternalReferences.md#point).
+
+|Property | Type | Description |
+|---------|--------|--------|
+| - | [[point](ExternalReferences.md#point)] |Ordered array of [points](ExternalReferences.md#point)|
+
+### CurveRing
+A curve ring is an area bounded by one, closed sequence of connected segments represented by array of [points](ExternalReferences.md#point) and [curves](ExternalReferences.md#curves).
+
+|Property | Type | Description |
+|---------|--------|--------|
+| - | [[point](ExternalReferences.md#point)] |Ordered array of [points](ExternalReferences.md#point)|
 
 ### Curves
 A curve object is a segment in a polyline or polygon. It cannot be used as a stand-alone object.
