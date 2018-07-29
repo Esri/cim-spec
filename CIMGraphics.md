@@ -2,25 +2,25 @@
 
 
 ## CIMGraphicFrame
-#### Represents a graphic frame. 
+Represents a graphic frame.
 
 
-### CIMGraphicFrame 
+### CIMGraphicFrame
 
-|Property | Type | Description | 
+|Property | Type | Description |
 |---------|--------|--------|
-| backgroundSymbol | [CIMSymbolReference](CIMSymbolizers.md#cimsymbolreference)|Gets and sets the background symbol of the graphic frame. 
-| borderSymbol | [CIMSymbolReference](CIMSymbolizers.md#cimsymbolreference)|Gets and sets the border symbol of the graphic frame. 
-| shadowSymbol | [CIMSymbolReference](CIMSymbolizers.md#cimsymbolreference)|Gets and sets the shadow symbol of the graphic frame. 
-| backgroundGapX | double|Gets and sets the background X gap. 
-| backgroundGapY | double|Gets and sets the background Y gap. 
-| backgroundCornerRounding | double|Gets and sets the background corner rounding. 0 = fully square. 100 = fully round. 
-| borderGapX | double|Gets and sets the border X gap. 
-| borderGapY | double|Gets and sets the border Y gap. 
-| borderCornerRounding | double|Gets and sets the border corner rounding. 0 = fully square. 100 = fully round. 
-| shadowOffsetX | double|Gets and sets the shadow X offset. 
-| shadowOffsetY | double|Gets and sets the shadow Y offset. 
-| shadowCornerRounding | double|Gets and sets the shadow corner rounding. 0 = fully square. 100 = fully round. 
+| backgroundSymbol | [CIMSymbolReference](CIMSymbolizers.md#cimsymbolreference)|The background symbol of the graphic frame.
+| borderSymbol | [CIMSymbolReference](CIMSymbolizers.md#cimsymbolreference)|The border symbol of the graphic frame.
+| shadowSymbol | [CIMSymbolReference](CIMSymbolizers.md#cimsymbolreference)|The shadow symbol of the graphic frame.
+| backgroundGapX | number //double|The background X gap.
+| backgroundGapY | number //double|The background Y gap.
+| backgroundCornerRounding | number //double|The background corner rounding. 0 = fully square. 100 = fully round.
+| borderGapX | number //double|The border X gap.
+| borderGapY | number //double|The border Y gap.
+| borderCornerRounding | number //double|The border corner rounding. 0 = fully square. 100 = fully round.
+| shadowOffsetX | number //double|The shadow X offset.
+| shadowOffsetY | number //double|The shadow Y offset.
+| shadowCornerRounding | number //double|The shadow corner rounding. 0 = fully square. 100 = fully round.
 
 
 
@@ -28,29 +28,29 @@
 
 
 ## CIMInkGraphic
-#### Represents an ink graphic. 
+Represents an ink graphic.
 
 
-### CIMGraphic 
+### CIMGraphic
 
-|Property | Type | Description | 
+|Property | Type | Description |
 |---------|--------|--------|
-| symbol | [CIMSymbolReference](CIMSymbolizers.md#cimsymbolreference)|Gets and sets the symbol for the graphic. 
-| transparency | double|Gets and sets the transparency of the graphic. Typically set by the layer or element during draw. Change the transparency of layers in the symbol for persistent changes. 
-| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode)|Gets and sets the blending mode of the graphic. Typically set by the layer or element during draw. 
-| masks | [{JSON_object}]|Gets and sets an array of masks for the graphic. Typically set by the layer or element during draw. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon. 
-| referenceScale | double|Gets and sets the reference scale of the graphic. Typically set by the layer or element during draw. 
-| attributes | {JSON_object}|Gets and sets a property set of attributes. Typically set by the layer or element during draw. 
-| placement | [enumeration Anchor](CIMLayout.md#enumeration-anchor)|Gets and sets the placement anchor of the graphic. 
+| symbol | [CIMSymbolReference](CIMSymbolizers.md#cimsymbolreference)|The symbol for the graphic.
+| transparency | number //double|The transparency of the graphic. Typically set by the layer or element during draw. Change the transparency of layers in the symbol for persistent changes.
+| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode)|The blending mode of the graphic. Typically set by the layer or element during draw.
+| masks | [Object]|An array of masks for the graphic. Typically set by the layer or element during draw. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon.
+| referenceScale | number //double|The reference scale of the graphic. Typically set by the layer or element during draw.
+| attributes | Object|A property set of attributes. Typically set by the layer or element during draw.
+| placement | [enumeration Anchor](CIMLayout.md#enumeration-anchor)|The placement anchor of the graphic.
 
 
-### CIMInkGraphic 
+### CIMInkGraphic
 
-|Property | Type | Description | 
+|Property | Type | Description |
 |---------|--------|--------|
-| bounds | [Envelope](ExternalReferences.md#envelope)|Gets and sets the bounds of the ink graphic. 
-| inkData | string|Gets and sets the ink data as a string. 
-| roughSketch | [Polyline](ExternalReferences.md#polyline)|Gets and sets a polyline used to define a rough sketch of the ink data. 
+| bounds | [Envelope](ExternalReferences.md#envelope)|The bounds of the ink graphic.
+| inkData | string|The ink data as a string.
+| roughSketch | [Polyline](ExternalReferences.md#polyline)|A polyline used to define a rough sketch of the ink data.
 
 
 
@@ -58,20 +58,20 @@
 
 
 ## CIMLeaderLine
-#### Represents a leader line. 
+Represents a leader line.
 
 
-### CIMLeader 
+### CIMLeader
 
-|Property | Type | Description | 
+|Property | Type | Description |
 |---------|--------|--------|
 
 
-### CIMLeaderLine 
+### CIMLeaderLine
 
-|Property | Type | Description | 
+|Property | Type | Description |
 |---------|--------|--------|
-| line | [Polyline](ExternalReferences.md#polyline)|Gets and sets the leader line drawn from the graphic. 
+| line | [Polyline](ExternalReferences.md#polyline)|The leader line drawn from the graphic.
 
 
 
@@ -79,20 +79,20 @@
 
 
 ## CIMLeaderPoint
-#### Represents a leader point. 
+Represents a leader point.
 
 
-### CIMLeader 
+### CIMLeader
 
-|Property | Type | Description | 
+|Property | Type | Description |
 |---------|--------|--------|
 
 
-### CIMLeaderPoint 
+### CIMLeaderPoint
 
-|Property | Type | Description | 
+|Property | Type | Description |
 |---------|--------|--------|
-| point | [Point](ExternalReferences.md#point)|Gets and sets the anchor point for the leader. 
+| point | [Point](ExternalReferences.md#point)|The anchor point for the leader.
 
 
 
@@ -100,35 +100,35 @@
 
 
 ## CIMLineGraphic
-#### Represents a line graphic. 
+Represents a line graphic.
 
 
-### CIMGraphic 
+### CIMGraphic
 
-|Property | Type | Description | 
+|Property | Type | Description |
 |---------|--------|--------|
-| symbol | [CIMSymbolReference](CIMSymbolizers.md#cimsymbolreference)|Gets and sets the symbol for the graphic. 
-| transparency | double|Gets and sets the transparency of the graphic. Typically set by the layer or element during draw. Change the transparency of layers in the symbol for persistent changes. 
-| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode)|Gets and sets the blending mode of the graphic. Typically set by the layer or element during draw. 
-| masks | [{JSON_object}]|Gets and sets an array of masks for the graphic. Typically set by the layer or element during draw. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon. 
-| referenceScale | double|Gets and sets the reference scale of the graphic. Typically set by the layer or element during draw. 
-| attributes | {JSON_object}|Gets and sets a property set of attributes. Typically set by the layer or element during draw. 
-| placement | [enumeration Anchor](CIMLayout.md#enumeration-anchor)|Gets and sets the placement anchor of the graphic. 
+| symbol | [CIMSymbolReference](CIMSymbolizers.md#cimsymbolreference)|The symbol for the graphic.
+| transparency | number //double|The transparency of the graphic. Typically set by the layer or element during draw. Change the transparency of layers in the symbol for persistent changes.
+| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode)|The blending mode of the graphic. Typically set by the layer or element during draw.
+| masks | [Object]|An array of masks for the graphic. Typically set by the layer or element during draw. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon.
+| referenceScale | number //double|The reference scale of the graphic. Typically set by the layer or element during draw.
+| attributes | Object|A property set of attributes. Typically set by the layer or element during draw.
+| placement | [enumeration Anchor](CIMLayout.md#enumeration-anchor)|The placement anchor of the graphic.
 
 
-### CIMShapeGraphic 
+### CIMShapeGraphic
 
-|Property | Type | Description | 
+|Property | Type | Description |
 |---------|--------|--------|
-| name | string|Gets and sets the name. 
-| popupHtmlText | string|Gets and sets the popup HTML text. 
+| name | string|The name.
+| popupHtmlText | string|The popup HTML text.
 
 
-### CIMLineGraphic 
+### CIMLineGraphic
 
-|Property | Type | Description | 
+|Property | Type | Description |
 |---------|--------|--------|
-| line | [Polyline](ExternalReferences.md#polyline)|Gets and sets the polyline of the line graphic 
+| line | [Polyline](ExternalReferences.md#polyline)|The polyline of the line graphic
 
 
 
@@ -136,35 +136,35 @@
 
 
 ## CIMMultiPatchGraphic
-#### Represents a shape graphic with a MultiPatch geometry. 
+Represents a shape graphic with a MultiPatch geometry.
 
 
-### CIMGraphic 
+### CIMGraphic
 
-|Property | Type | Description | 
+|Property | Type | Description |
 |---------|--------|--------|
-| symbol | [CIMSymbolReference](CIMSymbolizers.md#cimsymbolreference)|Gets and sets the symbol for the graphic. 
-| transparency | double|Gets and sets the transparency of the graphic. Typically set by the layer or element during draw. Change the transparency of layers in the symbol for persistent changes. 
-| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode)|Gets and sets the blending mode of the graphic. Typically set by the layer or element during draw. 
-| masks | [{JSON_object}]|Gets and sets an array of masks for the graphic. Typically set by the layer or element during draw. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon. 
-| referenceScale | double|Gets and sets the reference scale of the graphic. Typically set by the layer or element during draw. 
-| attributes | {JSON_object}|Gets and sets a property set of attributes. Typically set by the layer or element during draw. 
-| placement | [enumeration Anchor](CIMLayout.md#enumeration-anchor)|Gets and sets the placement anchor of the graphic. 
+| symbol | [CIMSymbolReference](CIMSymbolizers.md#cimsymbolreference)|The symbol for the graphic.
+| transparency | number //double|The transparency of the graphic. Typically set by the layer or element during draw. Change the transparency of layers in the symbol for persistent changes.
+| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode)|The blending mode of the graphic. Typically set by the layer or element during draw.
+| masks | [Object]|An array of masks for the graphic. Typically set by the layer or element during draw. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon.
+| referenceScale | number //double|The reference scale of the graphic. Typically set by the layer or element during draw.
+| attributes | Object|A property set of attributes. Typically set by the layer or element during draw.
+| placement | [enumeration Anchor](CIMLayout.md#enumeration-anchor)|The placement anchor of the graphic.
 
 
-### CIMShapeGraphic 
+### CIMShapeGraphic
 
-|Property | Type | Description | 
+|Property | Type | Description |
 |---------|--------|--------|
-| name | string|Gets and sets the name. 
-| popupHtmlText | string|Gets and sets the popup HTML text. 
+| name | string|The name.
+| popupHtmlText | string|The popup HTML text.
 
 
-### CIMMultiPatchGraphic 
+### CIMMultiPatchGraphic
 
-|Property | Type | Description | 
+|Property | Type | Description |
 |---------|--------|--------|
-| multiPatch | [MultiPatch](ExternalReferences.md#multipatch)|Gets/sets the graphic's MultiPatch geometry. 
+| multiPatch | [MultiPatch](ExternalReferences.md#multipatch)|The graphic's MultiPatch geometry.
 
 
 
@@ -172,35 +172,35 @@
 
 
 ## CIMMultipointGraphic
-#### Represents a shape graphic with a Multipoint geometry. 
+Represents a shape graphic with a Multipoint geometry.
 
 
-### CIMGraphic 
+### CIMGraphic
 
-|Property | Type | Description | 
+|Property | Type | Description |
 |---------|--------|--------|
-| symbol | [CIMSymbolReference](CIMSymbolizers.md#cimsymbolreference)|Gets and sets the symbol for the graphic. 
-| transparency | double|Gets and sets the transparency of the graphic. Typically set by the layer or element during draw. Change the transparency of layers in the symbol for persistent changes. 
-| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode)|Gets and sets the blending mode of the graphic. Typically set by the layer or element during draw. 
-| masks | [{JSON_object}]|Gets and sets an array of masks for the graphic. Typically set by the layer or element during draw. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon. 
-| referenceScale | double|Gets and sets the reference scale of the graphic. Typically set by the layer or element during draw. 
-| attributes | {JSON_object}|Gets and sets a property set of attributes. Typically set by the layer or element during draw. 
-| placement | [enumeration Anchor](CIMLayout.md#enumeration-anchor)|Gets and sets the placement anchor of the graphic. 
+| symbol | [CIMSymbolReference](CIMSymbolizers.md#cimsymbolreference)|The symbol for the graphic.
+| transparency | number //double|The transparency of the graphic. Typically set by the layer or element during draw. Change the transparency of layers in the symbol for persistent changes.
+| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode)|The blending mode of the graphic. Typically set by the layer or element during draw.
+| masks | [Object]|An array of masks for the graphic. Typically set by the layer or element during draw. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon.
+| referenceScale | number //double|The reference scale of the graphic. Typically set by the layer or element during draw.
+| attributes | Object|A property set of attributes. Typically set by the layer or element during draw.
+| placement | [enumeration Anchor](CIMLayout.md#enumeration-anchor)|The placement anchor of the graphic.
 
 
-### CIMShapeGraphic 
+### CIMShapeGraphic
 
-|Property | Type | Description | 
+|Property | Type | Description |
 |---------|--------|--------|
-| name | string|Gets and sets the name. 
-| popupHtmlText | string|Gets and sets the popup HTML text. 
+| name | string|The name.
+| popupHtmlText | string|The popup HTML text.
 
 
-### CIMMultipointGraphic 
+### CIMMultipointGraphic
 
-|Property | Type | Description | 
+|Property | Type | Description |
 |---------|--------|--------|
-| multipoint | [Multipoint](ExternalReferences.md#multipoint)|Gets/sets the graphic's Multipoint geometry. 
+| multipoint | [Multipoint](ExternalReferences.md#multipoint)|The graphic's Multipoint geometry.
 
 
 
@@ -208,39 +208,39 @@
 
 
 ## CIMParagraphTextGraphic
-#### Represents a paragraph text graphic. 
+Represents a paragraph text graphic.
 
 
-### CIMGraphic 
+### CIMGraphic
 
-|Property | Type | Description | 
+|Property | Type | Description |
 |---------|--------|--------|
-| symbol | [CIMSymbolReference](CIMSymbolizers.md#cimsymbolreference)|Gets and sets the symbol for the graphic. 
-| transparency | double|Gets and sets the transparency of the graphic. Typically set by the layer or element during draw. Change the transparency of layers in the symbol for persistent changes. 
-| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode)|Gets and sets the blending mode of the graphic. Typically set by the layer or element during draw. 
-| masks | [{JSON_object}]|Gets and sets an array of masks for the graphic. Typically set by the layer or element during draw. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon. 
-| referenceScale | double|Gets and sets the reference scale of the graphic. Typically set by the layer or element during draw. 
-| attributes | {JSON_object}|Gets and sets a property set of attributes. Typically set by the layer or element during draw. 
-| placement | [enumeration Anchor](CIMLayout.md#enumeration-anchor)|Gets and sets the placement anchor of the graphic. 
+| symbol | [CIMSymbolReference](CIMSymbolizers.md#cimsymbolreference)|The symbol for the graphic.
+| transparency | number //double|The transparency of the graphic. Typically set by the layer or element during draw. Change the transparency of layers in the symbol for persistent changes.
+| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode)|The blending mode of the graphic. Typically set by the layer or element during draw.
+| masks | [Object]|An array of masks for the graphic. Typically set by the layer or element during draw. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon.
+| referenceScale | number //double|The reference scale of the graphic. Typically set by the layer or element during draw.
+| attributes | Object|A property set of attributes. Typically set by the layer or element during draw.
+| placement | [enumeration Anchor](CIMLayout.md#enumeration-anchor)|The placement anchor of the graphic.
 
 
-### CIMTextGraphic 
+### CIMTextGraphic
 
-|Property | Type | Description | 
+|Property | Type | Description |
 |---------|--------|--------|
-| text | string|Gets and sets the text string of the text graphic. 
-| shape | [Geometry](ExternalReferences.md#geometry)|Gets and sets the geometry of the text graphic. 
-| leaders | [CIMLeader](Types.md#cimleader) |Gets and sets a collection of leaders coming off of the graphic. 
+| text | string|The text string of the text graphic.
+| shape | [Geometry](ExternalReferences.md#geometry)|The geometry of the text graphic.
+| leaders | [CIMLeader](Types.md#cimleader) |A collection of leaders coming off of the graphic.
 
 
-### CIMParagraphTextGraphic 
+### CIMParagraphTextGraphic
 
-|Property | Type | Description | 
+|Property | Type | Description |
 |---------|--------|--------|
-| frame | [CIMGraphicFrame](CIMGraphics.md#cimgraphicframe)|Gets and sets the graphic frame of the paragraph text graphic. 
-| columnCount | long|Gets and sets number of columns in the paragraphic text graphic. 
-| columnGap | double|Gets and sets the gap between columns. 
-| margin | double|Gets and sets the margin of the paragraph text graphic. 
+| frame | [CIMGraphicFrame](CIMGraphics.md#cimgraphicframe)|The graphic frame of the paragraph text graphic.
+| columnCount | number //int32|The number of columns in the paragraphic text graphic.
+| columnGap | number //double|The gap between columns.
+| margin | number //double|The margin of the paragraph text graphic.
 
 
 
@@ -248,30 +248,30 @@
 
 
 ## CIMPictureGraphic
-#### Represents a picture graphic. 
+Represents a picture graphic.
 
 
-### CIMGraphic 
+### CIMGraphic
 
-|Property | Type | Description | 
+|Property | Type | Description |
 |---------|--------|--------|
-| symbol | [CIMSymbolReference](CIMSymbolizers.md#cimsymbolreference)|Gets and sets the symbol for the graphic. 
-| transparency | double|Gets and sets the transparency of the graphic. Typically set by the layer or element during draw. Change the transparency of layers in the symbol for persistent changes. 
-| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode)|Gets and sets the blending mode of the graphic. Typically set by the layer or element during draw. 
-| masks | [{JSON_object}]|Gets and sets an array of masks for the graphic. Typically set by the layer or element during draw. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon. 
-| referenceScale | double|Gets and sets the reference scale of the graphic. Typically set by the layer or element during draw. 
-| attributes | {JSON_object}|Gets and sets a property set of attributes. Typically set by the layer or element during draw. 
-| placement | [enumeration Anchor](CIMLayout.md#enumeration-anchor)|Gets and sets the placement anchor of the graphic. 
+| symbol | [CIMSymbolReference](CIMSymbolizers.md#cimsymbolreference)|The symbol for the graphic.
+| transparency | number //double|The transparency of the graphic. Typically set by the layer or element during draw. Change the transparency of layers in the symbol for persistent changes.
+| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode)|The blending mode of the graphic. Typically set by the layer or element during draw.
+| masks | [Object]|An array of masks for the graphic. Typically set by the layer or element during draw. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon.
+| referenceScale | number //double|The reference scale of the graphic. Typically set by the layer or element during draw.
+| attributes | Object|A property set of attributes. Typically set by the layer or element during draw.
+| placement | [enumeration Anchor](CIMLayout.md#enumeration-anchor)|The placement anchor of the graphic.
 
 
-### CIMPictureGraphic 
+### CIMPictureGraphic
 
-|Property | Type | Description | 
+|Property | Type | Description |
 |---------|--------|--------|
-| pictureURL | string|Gets and sets the URL of the picture graphic. Typically a base64 encoded representation of the picture. 
-| box | [Envelope](ExternalReferences.md#envelope)|Gets and sets the bounding box of the picture graphic. 
-| frame | [CIMGraphicFrame](CIMGraphics.md#cimgraphicframe)|Gets and sets the graphic frame of the picture graphic. 
-| sourceURL | string|Gets and sets the source URL of the picture graphic. Typically the source of the image copied into the PictureURL. 
+| pictureURL | string|The URL of the picture graphic. Typically a base64 encoded representation of the picture.
+| box | [Envelope](ExternalReferences.md#envelope)|The bounding box of the picture graphic.
+| frame | [CIMGraphicFrame](CIMGraphics.md#cimgraphicframe)|The graphic frame of the picture graphic.
+| sourceURL | string|The source URL of the picture graphic. Typically the source of the image copied into the PictureURL.
 
 
 
@@ -279,36 +279,36 @@
 
 
 ## CIMPointGraphic
-#### Represents a point graphic. 
+Represents a point graphic.
 
 
-### CIMGraphic 
+### CIMGraphic
 
-|Property | Type | Description | 
+|Property | Type | Description |
 |---------|--------|--------|
-| symbol | [CIMSymbolReference](CIMSymbolizers.md#cimsymbolreference)|Gets and sets the symbol for the graphic. 
-| transparency | double|Gets and sets the transparency of the graphic. Typically set by the layer or element during draw. Change the transparency of layers in the symbol for persistent changes. 
-| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode)|Gets and sets the blending mode of the graphic. Typically set by the layer or element during draw. 
-| masks | [{JSON_object}]|Gets and sets an array of masks for the graphic. Typically set by the layer or element during draw. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon. 
-| referenceScale | double|Gets and sets the reference scale of the graphic. Typically set by the layer or element during draw. 
-| attributes | {JSON_object}|Gets and sets a property set of attributes. Typically set by the layer or element during draw. 
-| placement | [enumeration Anchor](CIMLayout.md#enumeration-anchor)|Gets and sets the placement anchor of the graphic. 
+| symbol | [CIMSymbolReference](CIMSymbolizers.md#cimsymbolreference)|The symbol for the graphic.
+| transparency | number //double|The transparency of the graphic. Typically set by the layer or element during draw. Change the transparency of layers in the symbol for persistent changes.
+| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode)|The blending mode of the graphic. Typically set by the layer or element during draw.
+| masks | [Object]|An array of masks for the graphic. Typically set by the layer or element during draw. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon.
+| referenceScale | number //double|The reference scale of the graphic. Typically set by the layer or element during draw.
+| attributes | Object|A property set of attributes. Typically set by the layer or element during draw.
+| placement | [enumeration Anchor](CIMLayout.md#enumeration-anchor)|The placement anchor of the graphic.
 
 
-### CIMShapeGraphic 
+### CIMShapeGraphic
 
-|Property | Type | Description | 
+|Property | Type | Description |
 |---------|--------|--------|
-| name | string|Gets and sets the name. 
-| popupHtmlText | string|Gets and sets the popup HTML text. 
+| name | string|The name.
+| popupHtmlText | string|The popup HTML text.
 
 
-### CIMPointGraphic 
+### CIMPointGraphic
 
-|Property | Type | Description | 
+|Property | Type | Description |
 |---------|--------|--------|
-| location | [Point](ExternalReferences.md#point)|Gets and sets the location of the point graphic. 
-| leaders | [CIMLeader](Types.md#cimleader) |Gets and sets a collection of leaders coming off of the graphic. 
+| location | [Point](ExternalReferences.md#point)|The location of the point graphic.
+| leaders | [CIMLeader](Types.md#cimleader) |A collection of leaders coming off of the graphic.
 
 
 
@@ -316,35 +316,35 @@
 
 
 ## CIMPolygonGraphic
-#### Represents a polygon graphic. 
+Represents a polygon graphic.
 
 
-### CIMGraphic 
+### CIMGraphic
 
-|Property | Type | Description | 
+|Property | Type | Description |
 |---------|--------|--------|
-| symbol | [CIMSymbolReference](CIMSymbolizers.md#cimsymbolreference)|Gets and sets the symbol for the graphic. 
-| transparency | double|Gets and sets the transparency of the graphic. Typically set by the layer or element during draw. Change the transparency of layers in the symbol for persistent changes. 
-| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode)|Gets and sets the blending mode of the graphic. Typically set by the layer or element during draw. 
-| masks | [{JSON_object}]|Gets and sets an array of masks for the graphic. Typically set by the layer or element during draw. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon. 
-| referenceScale | double|Gets and sets the reference scale of the graphic. Typically set by the layer or element during draw. 
-| attributes | {JSON_object}|Gets and sets a property set of attributes. Typically set by the layer or element during draw. 
-| placement | [enumeration Anchor](CIMLayout.md#enumeration-anchor)|Gets and sets the placement anchor of the graphic. 
+| symbol | [CIMSymbolReference](CIMSymbolizers.md#cimsymbolreference)|The symbol for the graphic.
+| transparency | number //double|The transparency of the graphic. Typically set by the layer or element during draw. Change the transparency of layers in the symbol for persistent changes.
+| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode)|The blending mode of the graphic. Typically set by the layer or element during draw.
+| masks | [Object]|An array of masks for the graphic. Typically set by the layer or element during draw. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon.
+| referenceScale | number //double|The reference scale of the graphic. Typically set by the layer or element during draw.
+| attributes | Object|A property set of attributes. Typically set by the layer or element during draw.
+| placement | [enumeration Anchor](CIMLayout.md#enumeration-anchor)|The placement anchor of the graphic.
 
 
-### CIMShapeGraphic 
+### CIMShapeGraphic
 
-|Property | Type | Description | 
+|Property | Type | Description |
 |---------|--------|--------|
-| name | string|Gets and sets the name. 
-| popupHtmlText | string|Gets and sets the popup HTML text. 
+| name | string|The name.
+| popupHtmlText | string|The popup HTML text.
 
 
-### CIMPolygonGraphic 
+### CIMPolygonGraphic
 
-|Property | Type | Description | 
+|Property | Type | Description |
 |---------|--------|--------|
-| polygon | [Polygon](ExternalReferences.md#polygon)|Gets and sets the polygon of the polygon graphic. 
+| polygon | [Polygon](ExternalReferences.md#polygon)|The polygon of the polygon graphic.
 
 
 
@@ -352,29 +352,26 @@
 
 
 ## CIMTextGraphic
-#### Represents a text graphic. 
+Represents a text graphic.
 
 
-### CIMGraphic 
+### CIMGraphic
 
-|Property | Type | Description | 
+|Property | Type | Description |
 |---------|--------|--------|
-| symbol | [CIMSymbolReference](CIMSymbolizers.md#cimsymbolreference)|Gets and sets the symbol for the graphic. 
-| transparency | double|Gets and sets the transparency of the graphic. Typically set by the layer or element during draw. Change the transparency of layers in the symbol for persistent changes. 
-| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode)|Gets and sets the blending mode of the graphic. Typically set by the layer or element during draw. 
-| masks | [{JSON_object}]|Gets and sets an array of masks for the graphic. Typically set by the layer or element during draw. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon. 
-| referenceScale | double|Gets and sets the reference scale of the graphic. Typically set by the layer or element during draw. 
-| attributes | {JSON_object}|Gets and sets a property set of attributes. Typically set by the layer or element during draw. 
-| placement | [enumeration Anchor](CIMLayout.md#enumeration-anchor)|Gets and sets the placement anchor of the graphic. 
+| symbol | [CIMSymbolReference](CIMSymbolizers.md#cimsymbolreference)|The symbol for the graphic.
+| transparency | number //double|The transparency of the graphic. Typically set by the layer or element during draw. Change the transparency of layers in the symbol for persistent changes.
+| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode)|The blending mode of the graphic. Typically set by the layer or element during draw.
+| masks | [Object]|An array of masks for the graphic. Typically set by the layer or element during draw. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon.
+| referenceScale | number //double|The reference scale of the graphic. Typically set by the layer or element during draw.
+| attributes | Object|A property set of attributes. Typically set by the layer or element during draw.
+| placement | [enumeration Anchor](CIMLayout.md#enumeration-anchor)|The placement anchor of the graphic.
 
 
-### CIMTextGraphic 
+### CIMTextGraphic
 
-|Property | Type | Description | 
+|Property | Type | Description |
 |---------|--------|--------|
-| text | string|Gets and sets the text string of the text graphic. 
-| shape | [Geometry](ExternalReferences.md#geometry)|Gets and sets the geometry of the text graphic. 
-| leaders | [CIMLeader](Types.md#cimleader) |Gets and sets a collection of leaders coming off of the graphic. 
-
-
-
+| text | string|The text string of the text graphic.
+| shape | [Geometry](ExternalReferences.md#geometry)|The geometry of the text graphic.
+| leaders | [CIMLeader](Types.md#cimleader) |A collection of leaders coming off of the graphic.
