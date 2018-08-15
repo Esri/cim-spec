@@ -2,931 +2,931 @@
 
 ### MapDefinition
 
-[CIMMap](Map.md#cimmap)
+[CIMMap](CIMMap.md#cimmap)
 
 ### Renderer
 
-[CIMGAIsoRenderer](GAIsoRenderer.md#cimgaisorenderer)
+[CIMGAIsoRenderer](CIMGALayer.md#cimgaisorenderer)
 
-[CIMChartRenderer](ChartRenderer.md#cimchartrenderer)
+[CIMChartRenderer](CIMSymbolizers.md#cimchartrenderer)
 
-[CIMClassBreaksRenderer](ClassBreaksRenderer.md#cimclassbreaksrenderer)
+[CIMClassBreaksRenderer](CIMSymbolizers.md#cimclassbreaksrenderer)
 
-[CIMDictionaryRenderer](DictionaryRenderer.md#cimdictionaryrenderer)
+[CIMDictionaryRenderer](CIMSymbolizers.md#cimdictionaryrenderer)
 
-[CIMDotDensityRenderer](DotDensityRenderer.md#cimdotdensityrenderer)
+[CIMDotDensityRenderer](CIMSymbolizers.md#cimdotdensityrenderer)
 
-[CIMHeatMapRenderer](HeatMapRenderer.md#cimheatmaprenderer)
+[CIMHeatMapRenderer](CIMSymbolizers.md#cimheatmaprenderer)
 
-[CIMProportionalRenderer](ProportionalRenderer.md#cimproportionalrenderer)
+[CIMProportionalRenderer](CIMSymbolizers.md#cimproportionalrenderer)
 
-[CIMRepresentationRenderer](RepresentationRenderer.md#cimrepresentationrenderer)
+[CIMRepresentationRenderer](CIMSymbolizers.md#cimrepresentationrenderer)
 
-[CIMRuleRenderer](RuleRenderer.md#cimrulerenderer)
+[CIMRuleRenderer](CIMSymbolizers.md#cimrulerenderer)
 
-[CIMSimpleRenderer](SimpleRenderer.md#cimsimplerenderer)
+[CIMSimpleRenderer](CIMSymbolizers.md#cimsimplerenderer)
 
-[CIMUniqueValueRenderer](UniqueValueRenderer.md#cimuniquevaluerenderer)
+[CIMUniqueValueRenderer](CIMSymbolizers.md#cimuniquevaluerenderer)
 
 ### SymbolLayer
 
-[CIMBarChartMarker](BarChartMarker.md#cimbarchartmarker)
+[CIMBarChartMarker](CIMSymbols.md#cimbarchartmarker)
 
-[CIMCharacterMarker](CharacterMarker.md#cimcharactermarker)
+[CIMCharacterMarker](CIMSymbols.md#cimcharactermarker)
 
-[CIMGradientFill](GradientFill.md#cimgradientfill)
+[CIMGradientFill](CIMSymbols.md#cimgradientfill)
 
-[CIMGradientStroke](GradientStroke.md#cimgradientstroke)
+[CIMGradientStroke](CIMSymbols.md#cimgradientstroke)
 
-[CIMHatchFill](HatchFill.md#cimhatchfill)
+[CIMHatchFill](CIMSymbols.md#cimhatchfill)
 
-[CIMMarker3D](Marker3D.md#cimmarker3d)
+[CIMMarker3D](CIMSymbols.md#cimmarker3d)
 
-[CIMMaterialSymbolLayer](MaterialSymbolLayer.md#cimmaterialsymbollayer)
+[CIMMaterialSymbolLayer](CIMSymbols.md#cimmaterialsymbollayer)
 
-[CIMObjectMarker3D](ObjectMarker3D.md#cimobjectmarker3d)
+[CIMObjectMarker3D](CIMSymbols.md#cimobjectmarker3d)
 
-[CIMPictureFill](PictureFill.md#cimpicturefill)
+[CIMPictureFill](CIMSymbols.md#cimpicturefill)
 
-[CIMPictureMarker](PictureMarker.md#cimpicturemarker)
+[CIMPictureMarker](CIMSymbols.md#cimpicturemarker)
 
-[CIMPictureStroke](PictureStroke.md#cimpicturestroke)
+[CIMPictureStroke](CIMSymbols.md#cimpicturestroke)
 
-[CIMPieChartMarker](PieChartMarker.md#cimpiechartmarker)
+[CIMPieChartMarker](CIMSymbols.md#cimpiechartmarker)
 
-[CIMProceduralSymbolLayer](ProceduralSymbolLayer.md#cimproceduralsymbollayer)
+[CIMProceduralSymbolLayer](CIMSymbols.md#cimproceduralsymbollayer)
 
-[CIMSolidFill](SolidFill.md#cimsolidfill)
+[CIMSolidFill](CIMSymbols.md#cimsolidfill)
 
-[CIMSolidStroke](SolidStroke.md#cimsolidstroke)
+[CIMSolidStroke](CIMSymbols.md#cimsolidstroke)
 
-[CIMStackedBarChartMarker](StackedBarChartMarker.md#cimstackedbarchartmarker)
+[CIMStackedBarChartMarker](CIMSymbols.md#cimstackedbarchartmarker)
 
-[CIMVectorMarker](VectorMarker.md#cimvectormarker)
+[CIMVectorMarker](CIMSymbols.md#cimvectormarker)
 
 ### Symbol
 
-[CIMLineSymbol](LineSymbol.md#cimlinesymbol)
+[CIMLineSymbol](CIMSymbols.md#cimlinesymbol)
 
-[CIMMeshSymbol](MeshSymbol.md#cimmeshsymbol)
+[CIMMeshSymbol](CIMSymbols.md#cimmeshsymbol)
 
-[CIMPointSymbol](PointSymbol.md#cimpointsymbol)
+[CIMPointSymbol](CIMSymbols.md#cimpointsymbol)
 
-[CIMPolygonSymbol](PolygonSymbol.md#cimpolygonsymbol)
+[CIMPolygonSymbol](CIMSymbols.md#cimpolygonsymbol)
 
-[CIMTextSymbol](TextSymbol.md#cimtextsymbol)
+[CIMTextSymbol](CIMSymbols.md#cimtextsymbol)
 
 ### Color
 
-[CIMCMYKColor](CMYKColor.md#cimcmykcolor)
+[CIMCMYKColor](CIMColor.md#cimcmykcolor)
 
-[CIMGrayColor](GrayColor.md#cimgraycolor)
+[CIMGrayColor](CIMColor.md#cimgraycolor)
 
-[CIMHSLColor](HSLColor.md#cimhslcolor)
+[CIMHSLColor](CIMColor.md#cimhslcolor)
 
-[CIMHSVColor](HSVColor.md#cimhsvcolor)
+[CIMHSVColor](CIMColor.md#cimhsvcolor)
 
-[CIMLABColor](LABColor.md#cimlabcolor)
+[CIMLABColor](CIMColor.md#cimlabcolor)
 
-[CIMRGBColor](RGBColor.md#cimrgbcolor)
+[CIMRGBColor](CIMColor.md#cimrgbcolor)
 
-[CIMSpotColor](SpotColor.md#cimspotcolor)
+[CIMSpotColor](CIMColor.md#cimspotcolor)
 
-[CIMXYZColor](XYZColor.md#cimxyzcolor)
+[CIMXYZColor](CIMColor.md#cimxyzcolor)
 
 
 
 ### Activity
 
-[CIMHighlightActivity](HighlightActivity.md#cimhighlightactivity)
+[CIMHighlightActivity](CIMVectorLayers.md#cimhighlightactivity)
 
-[CIMSuppressActivity](SuppressActivity.md#cimsuppressactivity)
+[CIMSuppressActivity](CIMVectorLayers.md#cimsuppressactivity)
 
 ### BindVariable
 
-[CIMDiscreteVariable](DiscreteVariable.md#cimdiscretevariable)
+[CIMDiscreteVariable](CIMVectorLayers.md#cimdiscretevariable)
 
-[CIMRangeVariable](RangeVariable.md#cimrangevariable)
+[CIMRangeVariable](CIMVectorLayers.md#cimrangevariable)
 
 ### Callout
 
-[CIMBackgroundCallout](BackgroundCallout.md#cimbackgroundcallout)
+[CIMBackgroundCallout](CIMSymbols.md#cimbackgroundcallout)
 
-[CIMBalloonCallout](BalloonCallout.md#cimballooncallout)
+[CIMBalloonCallout](CIMSymbols.md#cimballooncallout)
 
-[CIMPointSymbolCallout](PointSymbolCallout.md#cimpointsymbolcallout)
+[CIMPointSymbolCallout](CIMSymbols.md#cimpointsymbolcallout)
 
-[CIMSimpleLineCallout](SimpleLineCallout.md#cimsimplelinecallout)
+[CIMSimpleLineCallout](CIMSymbols.md#cimsimplelinecallout)
 
 ### ChartSeries
 
-[CIMChartBarSeries](ChartBarSeries.md#cimchartbarseries)
+[CIMChartBarSeries](CIMLayer.md#cimchartbarseries)
 
-[CIMChartBoxPlotSeries](ChartBoxPlotSeries.md#cimchartboxplotseries)
+[CIMChartBoxPlotSeries](CIMLayer.md#cimchartboxplotseries)
 
-[CIMChartHistogramSeries](ChartHistogramSeries.md#cimcharthistogramseries)
+[CIMChartHistogramSeries](CIMLayer.md#cimcharthistogramseries)
 
-[CIMChartLineSeries](ChartLineSeries.md#cimchartlineseries)
+[CIMChartLineSeries](CIMLayer.md#cimchartlineseries)
 
-[CIMChartProbabilityPlotSeries](ChartProbabilityPlotSeries.md#cimchartprobabilityplotseries)
+[CIMChartProbabilityPlotSeries](CIMLayer.md#cimchartprobabilityplotseries)
 
-[CIMChartProfileGraphSeries](ChartProfileGraphSeries.md#cimchartprofilegraphseries)
+[CIMChartProfileGraphSeries](CIMLayer.md#cimchartprofilegraphseries)
 
-[CIMChartScatterSeries](ChartScatterSeries.md#cimchartscatterseries)
+[CIMChartScatterSeries](CIMLayer.md#cimchartscatterseries)
 
 ### ColorRamp
 
-[CIMFixedColorRamp](FixedColorRamp.md#cimfixedcolorramp)
+[CIMFixedColorRamp](CIMColor.md#cimfixedcolorramp)
 
-[CIMLinearContinuousColorRamp](LinearContinuousColorRamp.md#cimlinearcontinuouscolorramp)
+[CIMLinearContinuousColorRamp](CIMColor.md#cimlinearcontinuouscolorramp)
 
-[CIMMultipartColorRamp](MultipartColorRamp.md#cimmultipartcolorramp)
+[CIMMultipartColorRamp](CIMColor.md#cimmultipartcolorramp)
 
-[CIMPolarContinuousColorRamp](PolarContinuousColorRamp.md#cimpolarcontinuouscolorramp)
+[CIMPolarContinuousColorRamp](CIMColor.md#cimpolarcontinuouscolorramp)
 
-[CIMRandomHSVColorRamp](RandomHSVColorRamp.md#cimrandomhsvcolorramp)
+[CIMRandomHSVColorRamp](CIMColor.md#cimrandomhsvcolorramp)
 
 ### ColorSpace
 
-[CIMICCColorSpace](ICCColorSpace.md#cimicccolorspace)
+[CIMICCColorSpace](CIMColor.md#cimicccolorspace)
 
-[CIMSpotColorSpace](SpotColorSpace.md#cimspotcolorspace)
+[CIMSpotColorSpace](CIMColor.md#cimspotcolorspace)
 
 ### Condition
 
-[CIMAttributeCondition](AttributeCondition.md#cimattributecondition)
+[CIMAttributeCondition](CIMVectorLayers.md#cimattributecondition)
 
-[CIMGeometryLocationCondition](GeometryLocationCondition.md#cimgeometrylocationcondition)
+[CIMGeometryLocationCondition](CIMVectorLayers.md#cimgeometrylocationcondition)
 
 ### DataConnection
 
-[CIMGADataConnection](GADataConnection.md#cimgadataconnection)
+[CIMGADataConnection](CIMGALayer.md#cimgadataconnection)
 
-[CIMRasterBandDataConnection](RasterBandDataConnection.md#cimrasterbanddataconnection)
+[CIMRasterBandDataConnection](CIMImageLayers.md#cimrasterbanddataconnection)
 
-[CIMVideoDataConnection](VideoDataConnection.md#cimvideodataconnection)
+[CIMVideoDataConnection](CIMImageLayers.md#cimvideodataconnection)
 
-[CIMKMLDataConnection](KMLDataConnection.md#cimkmldataconnection)
+[CIMKMLDataConnection](CIMLayer.md#cimkmldataconnection)
 
-[CIMDiagramDatasetDataConnection](DiagramDatasetDataConnection.md#cimdiagramdatasetdataconnection)
+[CIMDiagramDatasetDataConnection](CIMNetworkDiagrams.md#cimdiagramdatasetdataconnection)
 
-[CIMDiagramRelQueryDataConnection](DiagramRelQueryDataConnection.md#cimdiagramrelquerydataconnection)
+[CIMDiagramRelQueryDataConnection](CIMNetworkDiagrams.md#cimdiagramrelquerydataconnection)
 
-[CIMNetworkDiagramDataConnection](NetworkDiagramDataConnection.md#cimnetworkdiagramdataconnection)
+[CIMNetworkDiagramDataConnection](CIMNetworkDiagrams.md#cimnetworkdiagramdataconnection)
 
-[CIMInMemoryDatasetDataConnection](InMemoryDatasetDataConnection.md#ciminmemorydatasetdataconnection)
+[CIMInMemoryDatasetDataConnection](CIMNetworkLayers.md#ciminmemorydatasetdataconnection)
 
-[CIMInMemoryWorkspaceDataConnection](InMemoryWorkspaceDataConnection.md#ciminmemoryworkspacedataconnection)
+[CIMInMemoryWorkspaceDataConnection](CIMNetworkLayers.md#ciminmemoryworkspacedataconnection)
 
-[CIMSchematicDataConnection](SchematicDataConnection.md#cimschematicdataconnection)
+[CIMSchematicDataConnection](CIMSchematics.md#cimschematicdataconnection)
 
-[CIMAGSServiceConnection](AGSServiceConnection.md#cimagsserviceconnection)
+[CIMAGSServiceConnection](CIMServiceLayers.md#cimagsserviceconnection)
 
-[CIMStandardServiceConnection](StandardServiceConnection.md#cimstandardserviceconnection)
+[CIMStandardServiceConnection](CIMServiceLayers.md#cimstandardserviceconnection)
 
-[CIMWCSServiceConnection](WCSServiceConnection.md#cimwcsserviceconnection)
+[CIMWCSServiceConnection](CIMServiceLayers.md#cimwcsserviceconnection)
 
-[CIMWFSServiceConnection](WFSServiceConnection.md#cimwfsserviceconnection)
+[CIMWFSServiceConnection](CIMServiceLayers.md#cimwfsserviceconnection)
 
-[CIMWMSServiceConnection](WMSServiceConnection.md#cimwmsserviceconnection)
+[CIMWMSServiceConnection](CIMServiceLayers.md#cimwmsserviceconnection)
 
-[CIMWMTSServiceConnection](WMTSServiceConnection.md#cimwmtsserviceconnection)
+[CIMWMTSServiceConnection](CIMServiceLayers.md#cimwmtsserviceconnection)
 
-[CIMSceneDataConnection](SceneDataConnection.md#cimscenedataconnection)
+[CIMSceneDataConnection](CIMTerrainLayers.md#cimscenedataconnection)
 
-[CIMFeatureDatasetDataConnection](FeatureDatasetDataConnection.md#cimfeaturedatasetdataconnection)
+[CIMFeatureDatasetDataConnection](CIMVectorLayers.md#cimfeaturedatasetdataconnection)
 
-[CIMNetCDFRasterDataConnection](NetCDFRasterDataConnection.md#cimnetcdfrasterdataconnection)
+[CIMNetCDFRasterDataConnection](CIMVectorLayers.md#cimnetcdfrasterdataconnection)
 
-[CIMNetCDFStandardDataConnection](NetCDFStandardDataConnection.md#cimnetcdfstandarddataconnection)
+[CIMNetCDFStandardDataConnection](CIMVectorLayers.md#cimnetcdfstandarddataconnection)
 
-[CIMRelQueryTableDataConnection](RelQueryTableDataConnection.md#cimrelquerytabledataconnection)
+[CIMRelQueryTableDataConnection](CIMVectorLayers.md#cimrelquerytabledataconnection)
 
-[CIMRouteEventDataConnection](RouteEventDataConnection.md#cimrouteeventdataconnection)
+[CIMRouteEventDataConnection](CIMVectorLayers.md#cimrouteeventdataconnection)
 
-[CIMSqlQueryDataConnection](SqlQueryDataConnection.md#cimsqlquerydataconnection)
+[CIMSqlQueryDataConnection](CIMVectorLayers.md#cimsqlquerydataconnection)
 
-[CIMStandardDataConnection](StandardDataConnection.md#cimstandarddataconnection)
+[CIMStandardDataConnection](CIMVectorLayers.md#cimstandarddataconnection)
 
-[CIMStreamServiceDataConnection](StreamServiceDataConnection.md#cimstreamservicedataconnection)
+[CIMStreamServiceDataConnection](CIMVectorLayers.md#cimstreamservicedataconnection)
 
-[CIMTableQueryNameDataConnection](TableQueryNameDataConnection.md#cimtablequerynamedataconnection)
+[CIMTableQueryNameDataConnection](CIMVectorLayers.md#cimtablequerynamedataconnection)
 
-[CIMTemporalDataConnection](TemporalDataConnection.md#cimtemporaldataconnection)
+[CIMTemporalDataConnection](CIMVectorLayers.md#cimtemporaldataconnection)
 
-[CIMTrackingServerDataConnection](TrackingServerDataConnection.md#cimtrackingserverdataconnection)
+[CIMTrackingServerDataConnection](CIMVectorLayers.md#cimtrackingserverdataconnection)
 
-[CIMVectorTileDataConnection](VectorTileDataConnection.md#cimvectortiledataconnection)
+[CIMVectorTileDataConnection](CIMVectorLayers.md#cimvectortiledataconnection)
 
-[CIMXYEventDataConnection](XYEventDataConnection.md#cimxyeventdataconnection)
+[CIMXYEventDataConnection](CIMVectorLayers.md#cimxyeventdataconnection)
 
 ### DataExclusion
 
-[CIMChartRenderer](ChartRenderer.md#cimchartrenderer)
+[CIMChartRenderer](CIMSymbolizers.md#cimchartrenderer)
 
-[CIMClassBreaksRenderer](ClassBreaksRenderer.md#cimclassbreaksrenderer)
+[CIMClassBreaksRenderer](CIMSymbolizers.md#cimclassbreaksrenderer)
 
-[CIMDotDensityRenderer](DotDensityRenderer.md#cimdotdensityrenderer)
+[CIMDotDensityRenderer](CIMSymbolizers.md#cimdotdensityrenderer)
 
-[CIMProportionalRenderer](ProportionalRenderer.md#cimproportionalrenderer)
+[CIMProportionalRenderer](CIMSymbolizers.md#cimproportionalrenderer)
 
 ### DataNormalization
 
-[CIMRasterClassifyColorizer](RasterClassifyColorizer.md#cimrasterclassifycolorizer)
+[CIMRasterClassifyColorizer](CIMImageLayers.md#cimrasterclassifycolorizer)
 
-[CIMChartRenderer](ChartRenderer.md#cimchartrenderer)
+[CIMChartRenderer](CIMSymbolizers.md#cimchartrenderer)
 
-[CIMClassBreaksRenderer](ClassBreaksRenderer.md#cimclassbreaksrenderer)
+[CIMClassBreaksRenderer](CIMSymbolizers.md#cimclassbreaksrenderer)
 
-[CIMProportionalRenderer](ProportionalRenderer.md#cimproportionalrenderer)
+[CIMProportionalRenderer](CIMSymbolizers.md#cimproportionalrenderer)
 
 ### Definition
 
-[CIMGALayer](GALayer.md#cimgalayer)
+[CIMGALayer](CIMGALayer.md#cimgalayer)
 
-[CIMFeatureMosaicSubLayer](FeatureMosaicSubLayer.md#cimfeaturemosaicsublayer)
+[CIMFeatureMosaicSubLayer](CIMImageLayers.md#cimfeaturemosaicsublayer)
 
-[CIMImageMosaicSubLayer](ImageMosaicSubLayer.md#cimimagemosaicsublayer)
+[CIMImageMosaicSubLayer](CIMImageLayers.md#cimimagemosaicsublayer)
 
-[CIMImageServiceLayer](ImageServiceLayer.md#cimimageservicelayer)
+[CIMImageServiceLayer](CIMImageLayers.md#cimimageservicelayer)
 
-[CIMMosaicLayer](MosaicLayer.md#cimmosaiclayer)
+[CIMMosaicLayer](CIMImageLayers.md#cimmosaiclayer)
 
-[CIMRasterCatalogLayer](RasterCatalogLayer.md#cimrastercataloglayer)
+[CIMRasterCatalogLayer](CIMImageLayers.md#cimrastercataloglayer)
 
-[CIMRasterLayer](RasterLayer.md#cimrasterlayer)
+[CIMRasterLayer](CIMImageLayers.md#cimrasterlayer)
 
-[CIMStandaloneVideo](StandaloneVideo.md#cimstandalonevideo)
+[CIMStandaloneVideo](CIMImageLayers.md#cimstandalonevideo)
 
-[CIMGroupLayer](GroupLayer.md#cimgrouplayer)
+[CIMGroupLayer](CIMLayer.md#cimgrouplayer)
 
-[CIMKMLLayer](KMLLayer.md#cimkmllayer)
+[CIMKMLLayer](CIMLayer.md#cimkmllayer)
 
-[CIMTopologyLayer](TopologyLayer.md#cimtopologylayer)
+[CIMTopologyLayer](CIMLayer.md#cimtopologylayer)
 
-[CIMLayout](Layout.md#cimlayout)
+[CIMLayout](CIMLayout.md#cimlayout)
 
-[CIMReport](Report.md#cimreport)
+[CIMReport](CIMLayout.md#cimreport)
 
-[CIMMap](Map.md#cimmap)
+[CIMMap](CIMMap.md#cimmap)
 
-[CIMDiagramLayer](DiagramLayer.md#cimdiagramlayer)
+[CIMDiagramLayer](CIMNetworkDiagrams.md#cimdiagramlayer)
 
-[CIMNALayer](NALayer.md#cimnalayer)
+[CIMNALayer](CIMNetworkLayers.md#cimnalayer)
 
-[CIMNetworkDatasetLayer](NetworkDatasetLayer.md#cimnetworkdatasetlayer)
+[CIMNetworkDatasetLayer](CIMNetworkLayers.md#cimnetworkdatasetlayer)
 
-[CIMUtilityNetworkLayer](UtilityNetworkLayer.md#cimutilitynetworklayer)
+[CIMUtilityNetworkLayer](CIMNetworkLayers.md#cimutilitynetworklayer)
 
-[CIMSchematicLayer](SchematicLayer.md#cimschematiclayer)
+[CIMSchematicLayer](CIMSchematics.md#cimschematiclayer)
 
-[CIMDynamicServiceLayer](DynamicServiceLayer.md#cimdynamicservicelayer)
+[CIMDynamicServiceLayer](CIMServiceLayers.md#cimdynamicservicelayer)
 
-[CIMGlobeServiceLayer](GlobeServiceLayer.md#cimglobeservicelayer)
+[CIMGlobeServiceLayer](CIMServiceLayers.md#cimglobeservicelayer)
 
-[CIMSceneServiceLayer](SceneServiceLayer.md#cimsceneservicelayer)
+[CIMSceneServiceLayer](CIMServiceLayers.md#cimsceneservicelayer)
 
-[CIMTiledServiceLayer](TiledServiceLayer.md#cimtiledservicelayer)
+[CIMTiledServiceLayer](CIMServiceLayers.md#cimtiledservicelayer)
 
-[CIMLASDatasetLayer](LASDatasetLayer.md#cimlasdatasetlayer)
+[CIMLASDatasetLayer](CIMTerrainLayers.md#cimlasdatasetlayer)
 
-[CIMPointCloudLayer](PointCloudLayer.md#cimpointcloudlayer)
+[CIMPointCloudLayer](CIMTerrainLayers.md#cimpointcloudlayer)
 
-[CIMTerrainLayer](TerrainLayer.md#cimterrainlayer)
+[CIMTerrainLayer](CIMTerrainLayers.md#cimterrainlayer)
 
-[CIMTinLayer](TinLayer.md#cimtinlayer)
+[CIMTinLayer](CIMTerrainLayers.md#cimtinlayer)
 
-[CIMAnnotationLayer](AnnotationLayer.md#cimannotationlayer)
+[CIMAnnotationLayer](CIMVectorLayers.md#cimannotationlayer)
 
-[CIMDimensionLayer](DimensionLayer.md#cimdimensionlayer)
+[CIMDimensionLayer](CIMVectorLayers.md#cimdimensionlayer)
 
-[CIMFeatureLayer](FeatureLayer.md#cimfeaturelayer)
+[CIMFeatureLayer](CIMVectorLayers.md#cimfeaturelayer)
 
-[CIMParcelFabricLayer](ParcelFabricLayer.md#cimparcelfabriclayer)
+[CIMParcelFabricLayer](CIMVectorLayers.md#cimparcelfabriclayer)
 
-[CIMParcelLayer](ParcelLayer.md#cimparcellayer)
+[CIMParcelLayer](CIMVectorLayers.md#cimparcellayer)
 
-[CIMStandaloneTable](StandaloneTable.md#cimstandalonetable)
+[CIMStandaloneTable](CIMVectorLayers.md#cimstandalonetable)
 
-[CIMSubtypeGroupLayer](SubtypeGroupLayer.md#cimsubtypegrouplayer)
+[CIMSubtypeGroupLayer](CIMVectorLayers.md#cimsubtypegrouplayer)
 
-[CIMVectorTileLayer](VectorTileLayer.md#cimvectortilelayer)
+[CIMVectorTileLayer](CIMVectorLayers.md#cimvectortilelayer)
 
 ### DisplayTableDefinition
 
-[CIMFeatureTable](FeatureTable.md#cimfeaturetable)
+[CIMFeatureTable](CIMVectorLayers.md#cimfeaturetable)
 
-[CIMRasterTable](RasterTable.md#cimrastertable)
+[CIMRasterTable](CIMVectorLayers.md#cimrastertable)
 
-[CIMStandaloneTable](StandaloneTable.md#cimstandalonetable)
+[CIMStandaloneTable](CIMVectorLayers.md#cimstandalonetable)
 
 ### EditingTemplate
 
-[CIMFeatureTemplate](FeatureTemplate.md#cimfeaturetemplate)
+[CIMFeatureTemplate](CIMVectorLayers.md#cimfeaturetemplate)
 
-[CIMGroupEditingTemplate](GroupEditingTemplate.md#cimgroupeditingtemplate)
+[CIMGroupEditingTemplate](CIMVectorLayers.md#cimgroupeditingtemplate)
 
-[CIMMultipatchFeatureTemplate](MultipatchFeatureTemplate.md#cimmultipatchfeaturetemplate)
+[CIMMultipatchFeatureTemplate](CIMVectorLayers.md#cimmultipatchfeaturetemplate)
 
 ### Element
 
-[CIMDoubleFillScaleBar](DoubleFillScaleBar.md#cimdoublefillscalebar)
+[CIMDoubleFillScaleBar](CIMLayout.md#cimdoublefillscalebar)
 
-[CIMGraphicElement](GraphicElement.md#cimgraphicelement)
+[CIMGraphicElement](CIMLayout.md#cimgraphicelement)
 
-[CIMGroupElement](GroupElement.md#cimgroupelement)
+[CIMGroupElement](CIMLayout.md#cimgroupelement)
 
-[CIMGroupFooter](GroupFooter.md#cimgroupfooter)
+[CIMGroupFooter](CIMLayout.md#cimgroupfooter)
 
-[CIMGroupHeader](GroupHeader.md#cimgroupheader)
+[CIMGroupHeader](CIMLayout.md#cimgroupheader)
 
-[CIMLegend](Legend.md#cimlegend)
+[CIMLegend](CIMLayout.md#cimlegend)
 
-[CIMMapFrame](MapFrame.md#cimmapframe)
+[CIMMapFrame](CIMLayout.md#cimmapframe)
 
-[CIMMarkerNorthArrow](MarkerNorthArrow.md#cimmarkernortharrow)
+[CIMMarkerNorthArrow](CIMLayout.md#cimmarkernortharrow)
 
-[CIMMeterReferenceGuide](MeterReferenceGuide.md#cimmeterreferenceguide)
+[CIMMeterReferenceGuide](CIMLayout.md#cimmeterreferenceguide)
 
-[CIMReportDetails](ReportDetails.md#cimreportdetails)
+[CIMReportDetails](CIMLayout.md#cimreportdetails)
 
-[CIMReportFooter](ReportFooter.md#cimreportfooter)
+[CIMReportFooter](CIMLayout.md#cimreportfooter)
 
-[CIMReportHeader](ReportHeader.md#cimreportheader)
+[CIMReportHeader](CIMLayout.md#cimreportheader)
 
-[CIMReportPageFooter](ReportPageFooter.md#cimreportpagefooter)
+[CIMReportPageFooter](CIMLayout.md#cimreportpagefooter)
 
-[CIMReportPageHeader](ReportPageHeader.md#cimreportpageheader)
+[CIMReportPageHeader](CIMLayout.md#cimreportpageheader)
 
-[CIMReportSection](ReportSection.md#cimreportsection)
+[CIMReportSection](CIMLayout.md#cimreportsection)
 
-[CIMReportSectionElement](ReportSectionElement.md#cimreportsectionelement)
+[CIMReportSectionElement](CIMLayout.md#cimreportsectionelement)
 
-[CIMScaleLine](ScaleLine.md#cimscaleline)
+[CIMScaleLine](CIMLayout.md#cimscaleline)
 
-[CIMSingleFillScaleBar](SingleFillScaleBar.md#cimsinglefillscalebar)
+[CIMSingleFillScaleBar](CIMLayout.md#cimsinglefillscalebar)
 
-[CIMTMElevationGuideBarElement](TMElevationGuideBarElement.md#cimtmelevationguidebarelement)
+[CIMTMElevationGuideBarElement](CIMLayout.md#cimtmelevationguidebarelement)
 
-[CIMTableFrame](TableFrame.md#cimtableframe)
+[CIMTableFrame](CIMLayout.md#cimtableframe)
 
-[CIMTopoNorthArrow](TopoNorthArrow.md#cimtoponortharrow)
+[CIMTopoNorthArrow](CIMLayout.md#cimtoponortharrow)
 
 ### ElementContainer
 
-[CIMGroupElement](GroupElement.md#cimgroupelement)
+[CIMGroupElement](CIMLayout.md#cimgroupelement)
 
-[CIMGroupFooter](GroupFooter.md#cimgroupfooter)
+[CIMGroupFooter](CIMLayout.md#cimgroupfooter)
 
-[CIMGroupHeader](GroupHeader.md#cimgroupheader)
+[CIMGroupHeader](CIMLayout.md#cimgroupheader)
 
-[CIMLayout](Layout.md#cimlayout)
+[CIMLayout](CIMLayout.md#cimlayout)
 
-[CIMReport](Report.md#cimreport)
+[CIMReport](CIMLayout.md#cimreport)
 
-[CIMReportDetails](ReportDetails.md#cimreportdetails)
+[CIMReportDetails](CIMLayout.md#cimreportdetails)
 
-[CIMReportFooter](ReportFooter.md#cimreportfooter)
+[CIMReportFooter](CIMLayout.md#cimreportfooter)
 
-[CIMReportHeader](ReportHeader.md#cimreportheader)
+[CIMReportHeader](CIMLayout.md#cimreportheader)
 
-[CIMReportPageFooter](ReportPageFooter.md#cimreportpagefooter)
+[CIMReportPageFooter](CIMLayout.md#cimreportpagefooter)
 
-[CIMReportPageHeader](ReportPageHeader.md#cimreportpageheader)
+[CIMReportPageHeader](CIMLayout.md#cimreportpageheader)
 
-[CIMReportSection](ReportSection.md#cimreportsection)
+[CIMReportSection](CIMLayout.md#cimreportsection)
 
-[CIMReportSectionElement](ReportSectionElement.md#cimreportsectionelement)
+[CIMReportSectionElement](CIMLayout.md#cimreportsectionelement)
 
 ### FeatureDatasetDataConnection
 
-[CIMDiagramDatasetDataConnection](DiagramDatasetDataConnection.md#cimdiagramdatasetdataconnection)
+[CIMDiagramDatasetDataConnection](CIMNetworkDiagrams.md#cimdiagramdatasetdataconnection)
 
-[CIMDiagramRelQueryDataConnection](DiagramRelQueryDataConnection.md#cimdiagramrelquerydataconnection)
+[CIMDiagramRelQueryDataConnection](CIMNetworkDiagrams.md#cimdiagramrelquerydataconnection)
 
-[CIMNetworkDiagramDataConnection](NetworkDiagramDataConnection.md#cimnetworkdiagramdataconnection)
+[CIMNetworkDiagramDataConnection](CIMNetworkDiagrams.md#cimnetworkdiagramdataconnection)
 
-[CIMFeatureDatasetDataConnection](FeatureDatasetDataConnection.md#cimfeaturedatasetdataconnection)
+[CIMFeatureDatasetDataConnection](CIMNetworkDiagrams.md#cimfeaturedatasetdataconnection)
 
 ### FrameElement
 
-[CIMDoubleFillScaleBar](DoubleFillScaleBar.md#cimdoublefillscalebar)
+[CIMDoubleFillScaleBar](CIMLayout.md#cimdoublefillscalebar)
 
-[CIMGroupElement](GroupElement.md#cimgroupelement)
+[CIMGroupElement](CIMLayout.md#cimgroupelement)
 
-[CIMGroupFooter](GroupFooter.md#cimgroupfooter)
+[CIMGroupFooter](CIMLayout.md#cimgroupfooter)
 
-[CIMGroupHeader](GroupHeader.md#cimgroupheader)
+[CIMGroupHeader](CIMLayout.md#cimgroupheader)
 
-[CIMLegend](Legend.md#cimlegend)
+[CIMLegend](CIMLayout.md#cimlegend)
 
-[CIMMapFrame](MapFrame.md#cimmapframe)
+[CIMMapFrame](CIMLayout.md#cimmapframe)
 
-[CIMMarkerNorthArrow](MarkerNorthArrow.md#cimmarkernortharrow)
+[CIMMarkerNorthArrow](CIMLayout.md#cimmarkernortharrow)
 
-[CIMMeterReferenceGuide](MeterReferenceGuide.md#cimmeterreferenceguide)
+[CIMMeterReferenceGuide](CIMLayout.md#cimmeterreferenceguide)
 
-[CIMReportDetails](ReportDetails.md#cimreportdetails)
+[CIMReportDetails](CIMLayout.md#cimreportdetails)
 
-[CIMReportFooter](ReportFooter.md#cimreportfooter)
+[CIMReportFooter](CIMLayout.md#cimreportfooter)
 
-[CIMReportHeader](ReportHeader.md#cimreportheader)
+[CIMReportHeader](CIMLayout.md#cimreportheader)
 
-[CIMReportPageFooter](ReportPageFooter.md#cimreportpagefooter)
+[CIMReportPageFooter](CIMLayout.md#cimreportpagefooter)
 
-[CIMReportPageHeader](ReportPageHeader.md#cimreportpageheader)
+[CIMReportPageHeader](CIMLayout.md#cimreportpageheader)
 
-[CIMReportSection](ReportSection.md#cimreportsection)
+[CIMReportSection](CIMLayout.md#cimreportsection)
 
-[CIMReportSectionElement](ReportSectionElement.md#cimreportsectionelement)
+[CIMReportSectionElement](CIMLayout.md#cimreportsectionelement)
 
-[CIMScaleLine](ScaleLine.md#cimscaleline)
+[CIMScaleLine](CIMLayout.md#cimscaleline)
 
-[CIMSingleFillScaleBar](SingleFillScaleBar.md#cimsinglefillscalebar)
+[CIMSingleFillScaleBar](CIMLayout.md#cimsinglefillscalebar)
 
-[CIMTMElevationGuideBarElement](TMElevationGuideBarElement.md#cimtmelevationguidebarelement)
+[CIMTMElevationGuideBarElement](CIMLayout.md#cimtmelevationguidebarelement)
 
-[CIMTableFrame](TableFrame.md#cimtableframe)
+[CIMTableFrame](CIMLayout.md#cimtableframe)
 
-[CIMTopoNorthArrow](TopoNorthArrow.md#cimtoponortharrow)
+[CIMTopoNorthArrow](CIMLayout.md#cimtoponortharrow)
 
 ### GeneralPlacementProperties
 
-[CIMMaplexGeneralPlacementProperties](MaplexGeneralPlacementProperties.md#cimmaplexgeneralplacementproperties)
+[CIMMaplexGeneralPlacementProperties](CIMLabelPlacement.md#cimmaplexgeneralplacementproperties)
 
-[CIMStandardGeneralPlacementProperties](StandardGeneralPlacementProperties.md#cimstandardgeneralplacementproperties)
+[CIMStandardGeneralPlacementProperties](CIMLabelPlacement.md#cimstandardgeneralplacementproperties)
 
 ### GeometricEffect
 
-[CIMGeometricEffectAddControlPoints](GeometricEffectAddControlPoints.md#cimgeometriceffectaddcontrolpoints)
+[CIMGeometricEffectAddControlPoints](CIMSymbols.md#cimgeometriceffectaddcontrolpoints)
 
-[CIMGeometricEffectArrow](GeometricEffectArrow.md#cimgeometriceffectarrow)
+[CIMGeometricEffectArrow](CIMSymbols.md#cimgeometriceffectarrow)
 
-[CIMGeometricEffectBuffer](GeometricEffectBuffer.md#cimgeometriceffectbuffer)
+[CIMGeometricEffectBuffer](CIMSymbols.md#cimgeometriceffectbuffer)
 
-[CIMGeometricEffectCut](GeometricEffectCut.md#cimgeometriceffectcut)
+[CIMGeometricEffectCut](CIMSymbols.md#cimgeometriceffectcut)
 
-[CIMGeometricEffectDashes](GeometricEffectDashes.md#cimgeometriceffectdashes)
+[CIMGeometricEffectDashes](CIMSymbols.md#cimgeometriceffectdashes)
 
-[CIMGeometricEffectDonut](GeometricEffectDonut.md#cimgeometriceffectdonut)
+[CIMGeometricEffectDonut](CIMSymbols.md#cimgeometriceffectdonut)
 
-[CIMGeometricEffectEnclosingPolygon](GeometricEffectEnclosingPolygon.md#cimgeometriceffectenclosingpolygon)
+[CIMGeometricEffectEnclosingPolygon](CIMSymbols.md#cimgeometriceffectenclosingpolygon)
 
-[CIMGeometricEffectExtension](GeometricEffectExtension.md#cimgeometriceffectextension)
+[CIMGeometricEffectExtension](CIMSymbols.md#cimgeometriceffectextension)
 
-[CIMGeometricEffectJog](GeometricEffectJog.md#cimgeometriceffectjog)
+[CIMGeometricEffectJog](CIMSymbols.md#cimgeometriceffectjog)
 
-[CIMGeometricEffectMove](GeometricEffectMove.md#cimgeometriceffectmove)
+[CIMGeometricEffectMove](CIMSymbols.md#cimgeometriceffectmove)
 
-[CIMGeometricEffectOffset](GeometricEffectOffset.md#cimgeometriceffectoffset)
+[CIMGeometricEffectOffset](CIMSymbols.md#cimgeometriceffectoffset)
 
-[CIMGeometricEffectOffsetTangent](GeometricEffectOffsetTangent.md#cimgeometriceffectoffsettangent)
+[CIMGeometricEffectOffsetTangent](CIMSymbols.md#cimgeometriceffectoffsettangent)
 
-[CIMGeometricEffectRadial](GeometricEffectRadial.md#cimgeometriceffectradial)
+[CIMGeometricEffectRadial](CIMSymbols.md#cimgeometriceffectradial)
 
-[CIMGeometricEffectRegularPolygon](GeometricEffectRegularPolygon.md#cimgeometriceffectregularpolygon)
+[CIMGeometricEffectRegularPolygon](CIMSymbols.md#cimgeometriceffectregularpolygon)
 
-[CIMGeometricEffectReverse](GeometricEffectReverse.md#cimgeometriceffectreverse)
+[CIMGeometricEffectReverse](CIMSymbols.md#cimgeometriceffectreverse)
 
-[CIMGeometricEffectRotate](GeometricEffectRotate.md#cimgeometriceffectrotate)
+[CIMGeometricEffectRotate](CIMSymbols.md#cimgeometriceffectrotate)
 
-[CIMGeometricEffectScale](GeometricEffectScale.md#cimgeometriceffectscale)
+[CIMGeometricEffectScale](CIMSymbols.md#cimgeometriceffectscale)
 
-[CIMGeometricEffectSuppress](GeometricEffectSuppress.md#cimgeometriceffectsuppress)
+[CIMGeometricEffectSuppress](CIMSymbols.md#cimgeometriceffectsuppress)
 
-[CIMGeometricEffectTaperedPolygon](GeometricEffectTaperedPolygon.md#cimgeometriceffecttaperedpolygon)
+[CIMGeometricEffectTaperedPolygon](CIMSymbols.md#cimgeometriceffecttaperedpolygon)
 
-[CIMGeometricEffectWave](GeometricEffectWave.md#cimgeometriceffectwave)
+[CIMGeometricEffectWave](CIMSymbols.md#cimgeometriceffectwave)
 
 ### Graphic
 
-[CIMInkGraphic](InkGraphic.md#ciminkgraphic)
+[CIMInkGraphic](CIMGraphics.md#ciminkgraphic)
 
-[CIMLineGraphic](LineGraphic.md#cimlinegraphic)
+[CIMLineGraphic](CIMGraphics.md#cimlinegraphic)
 
-[CIMMultiPatchGraphic](MultiPatchGraphic.md#cimmultipatchgraphic)
+[CIMMultiPatchGraphic](CIMGraphics.md#cimmultipatchgraphic)
 
-[CIMMultipointGraphic](MultipointGraphic.md#cimmultipointgraphic)
+[CIMMultipointGraphic](CIMGraphics.md#cimmultipointgraphic)
 
-[CIMParagraphTextGraphic](ParagraphTextGraphic.md#cimparagraphtextgraphic)
+[CIMParagraphTextGraphic](CIMGraphics.md#cimparagraphtextgraphic)
 
-[CIMPictureGraphic](PictureGraphic.md#cimpicturegraphic)
+[CIMPictureGraphic](CIMGraphics.md#cimpicturegraphic)
 
-[CIMPointGraphic](PointGraphic.md#cimpointgraphic)
+[CIMPointGraphic](CIMGraphics.md#cimpointgraphic)
 
-[CIMPolygonGraphic](PolygonGraphic.md#cimpolygongraphic)
+[CIMPolygonGraphic](CIMGraphics.md#cimpolygongraphic)
 
-[CIMTextGraphic](TextGraphic.md#cimtextgraphic)
+[CIMTextGraphic](CIMGraphics.md#cimtextgraphic)
 
 ### GridLine
 
-[CIMGridLine](GridLine.md#cimgridline)
+[CIMGridLine](CIMLayout.md#cimgridline)
 
-[CIMLadderGridLine](LadderGridLine.md#cimladdergridline)
+[CIMLadderGridLine](CIMLayout.md#cimladdergridline)
 
-[CIMMGRSGridLine](MGRSGridLine.md#cimmgrsgridline)
+[CIMMGRSGridLine](CIMLayout.md#cimmgrsgridline)
 
 ### GroupElement
 
-[CIMGroupElement](GroupElement.md#cimgroupelement)
+[CIMGroupElement](CIMLayout.md#cimgroupelement)
 
-[CIMGroupFooter](GroupFooter.md#cimgroupfooter)
+[CIMGroupFooter](CIMLayout.md#cimgroupfooter)
 
-[CIMGroupHeader](GroupHeader.md#cimgroupheader)
+[CIMGroupHeader](CIMLayout.md#cimgroupheader)
 
-[CIMReportDetails](ReportDetails.md#cimreportdetails)
+[CIMReportDetails](CIMLayout.md#cimreportdetails)
 
-[CIMReportFooter](ReportFooter.md#cimreportfooter)
+[CIMReportFooter](CIMLayout.md#cimreportfooter)
 
-[CIMReportHeader](ReportHeader.md#cimreportheader)
+[CIMReportHeader](CIMLayout.md#cimreportheader)
 
-[CIMReportPageFooter](ReportPageFooter.md#cimreportpagefooter)
+[CIMReportPageFooter](CIMLayout.md#cimreportpagefooter)
 
-[CIMReportPageHeader](ReportPageHeader.md#cimreportpageheader)
+[CIMReportPageHeader](CIMLayout.md#cimreportpageheader)
 
-[CIMReportSection](ReportSection.md#cimreportsection)
+[CIMReportSection](CIMLayout.md#cimreportsection)
 
-[CIMReportSectionElement](ReportSectionElement.md#cimreportsectionelement)
+[CIMReportSectionElement](CIMLayout.md#cimreportsectionelement)
 
 ### HorizontalLegendItem
 
-[CIMHorizontalLegendItem](HorizontalLegendItem.md#cimhorizontallegenditem)
+[CIMHorizontalLegendItem](CIMLayout.md#cimhorizontallegenditem)
 
-[CIMNestedLegendItem](NestedLegendItem.md#cimnestedlegenditem)
+[CIMNestedLegendItem](CIMLayout.md#cimnestedlegenditem)
 
 ### LabelPlacementProperties
 
-[CIMMaplexLabelPlacementProperties](MaplexLabelPlacementProperties.md#cimmaplexlabelplacementproperties)
+[CIMMaplexLabelPlacementProperties](CIMLabelPlacement.md#cimmaplexlabelplacementproperties)
 
-[CIMStandardLabelPlacementProperties](StandardLabelPlacementProperties.md#cimstandardlabelplacementproperties)
+[CIMStandardLabelPlacementProperties](CIMLabelPlacement.md#cimstandardlabelplacementproperties)
 
 ### Leader
 
-[CIMLeaderLine](LeaderLine.md#cimleaderline)
+[CIMLeaderLine](CIMGraphics.md#cimleaderline)
 
-[CIMLeaderPoint](LeaderPoint.md#cimleaderpoint)
+[CIMLeaderPoint](CIMGraphics.md#cimleaderpoint)
 
 ### LegendItem
 
-[CIMHorizontalBarLegendItem](HorizontalBarLegendItem.md#cimhorizontalbarlegenditem)
+[CIMHorizontalBarLegendItem](CIMLayout.md#cimhorizontalbarlegenditem)
 
-[CIMHorizontalLegendItem](HorizontalLegendItem.md#cimhorizontallegenditem)
+[CIMHorizontalLegendItem](CIMLayout.md#cimhorizontallegenditem)
 
-[CIMNestedLegendItem](NestedLegendItem.md#cimnestedlegenditem)
+[CIMNestedLegendItem](CIMLayout.md#cimnestedlegenditem)
 
-[CIMVerticalLegendItem](VerticalLegendItem.md#cimverticallegenditem)
+[CIMVerticalLegendItem](CIMLayout.md#cimverticallegenditem)
 
 ### MapDefinition
 
-[CIMMap](Map.md#cimmap)
+[CIMMap](CIMMap.md#cimmap)
 
 ### MapGrid
 
-[CIMGraticule](Graticule.md#cimgraticule)
+[CIMGraticule](CIMLayout.md#cimgraticule)
 
-[CIMMeasuredGrid](MeasuredGrid.md#cimmeasuredgrid)
+[CIMMeasuredGrid](CIMLayout.md#cimmeasuredgrid)
 
 ### MapSeries
 
-[CIMSpatialMapSeries](SpatialMapSeries.md#cimspatialmapseries)
+[CIMSpatialMapSeries](CIMLayout.md#cimspatialmapseries)
 
-[CIMTemporalMapSeries](TemporalMapSeries.md#cimtemporalmapseries)
+[CIMTemporalMapSeries](CIMLayout.md#cimtemporalmapseries)
 
 ### MapSurround
 
-[CIMDoubleFillScaleBar](DoubleFillScaleBar.md#cimdoublefillscalebar)
+[CIMDoubleFillScaleBar](CIMLayout.md#cimdoublefillscalebar)
 
-[CIMLegend](Legend.md#cimlegend)
+[CIMLegend](CIMLayout.md#cimlegend)
 
-[CIMMarkerNorthArrow](MarkerNorthArrow.md#cimmarkernortharrow)
+[CIMMarkerNorthArrow](CIMLayout.md#cimmarkernortharrow)
 
-[CIMMeterReferenceGuide](MeterReferenceGuide.md#cimmeterreferenceguide)
+[CIMMeterReferenceGuide](CIMLayout.md#cimmeterreferenceguide)
 
-[CIMScaleLine](ScaleLine.md#cimscaleline)
+[CIMScaleLine](CIMLayout.md#cimscaleline)
 
-[CIMSingleFillScaleBar](SingleFillScaleBar.md#cimsinglefillscalebar)
+[CIMSingleFillScaleBar](CIMLayout.md#cimsinglefillscalebar)
 
-[CIMTMElevationGuideBarElement](TMElevationGuideBarElement.md#cimtmelevationguidebarelement)
+[CIMTMElevationGuideBarElement](CIMLayout.md#cimtmelevationguidebarelement)
 
-[CIMTableFrame](TableFrame.md#cimtableframe)
+[CIMTableFrame](CIMLayout.md#cimtableframe)
 
-[CIMTopoNorthArrow](TopoNorthArrow.md#cimtoponortharrow)
+[CIMTopoNorthArrow](CIMLayout.md#cimtoponortharrow)
 
 ### MarkerPlacement
 
-[CIMMarkerPlacementAlongLineRandomSize](MarkerPlacementAlongLineRandomSize.md#cimmarkerplacementalonglinerandomsize)
+[CIMMarkerPlacementAlongLineRandomSize](CIMSymbols.md#cimmarkerplacementalonglinerandomsize)
 
-[CIMMarkerPlacementAlongLineSameSize](MarkerPlacementAlongLineSameSize.md#cimmarkerplacementalonglinesamesize)
+[CIMMarkerPlacementAlongLineSameSize](CIMSymbols.md#cimmarkerplacementalonglinesamesize)
 
-[CIMMarkerPlacementAlongLineVariableSize](MarkerPlacementAlongLineVariableSize.md#cimmarkerplacementalonglinevariablesize)
+[CIMMarkerPlacementAlongLineVariableSize](CIMSymbols.md#cimmarkerplacementalonglinevariablesize)
 
-[CIMMarkerPlacementAtExtremities](MarkerPlacementAtExtremities.md#cimmarkerplacementatextremities)
+[CIMMarkerPlacementAtExtremities](CIMSymbols.md#cimmarkerplacementatextremities)
 
-[CIMMarkerPlacementAtMeasuredUnits](MarkerPlacementAtMeasuredUnits.md#cimmarkerplacementatmeasuredunits)
+[CIMMarkerPlacementAtMeasuredUnits](CIMSymbols.md#cimmarkerplacementatmeasuredunits)
 
-[CIMMarkerPlacementAtRatioPositions](MarkerPlacementAtRatioPositions.md#cimmarkerplacementatratiopositions)
+[CIMMarkerPlacementAtRatioPositions](CIMSymbols.md#cimmarkerplacementatratiopositions)
 
-[CIMMarkerPlacementInsidePolygon](MarkerPlacementInsidePolygon.md#cimmarkerplacementinsidepolygon)
+[CIMMarkerPlacementInsidePolygon](CIMSymbols.md#cimmarkerplacementinsidepolygon)
 
-[CIMMarkerPlacementOnLine](MarkerPlacementOnLine.md#cimmarkerplacementonline)
+[CIMMarkerPlacementOnLine](CIMSymbols.md#cimmarkerplacementonline)
 
-[CIMMarkerPlacementOnVertices](MarkerPlacementOnVertices.md#cimmarkerplacementonvertices)
+[CIMMarkerPlacementOnVertices](CIMSymbols.md#cimmarkerplacementonvertices)
 
-[CIMMarkerPlacementPolygonCenter](MarkerPlacementPolygonCenter.md#cimmarkerplacementpolygoncenter)
+[CIMMarkerPlacementPolygonCenter](CIMSymbols.md#cimmarkerplacementpolygoncenter)
 
 ### MediaInfo
 
-[CIMAttachmentsMediaInfo](AttachmentsMediaInfo.md#cimattachmentsmediainfo)
+[CIMAttachmentsMediaInfo](CIMVectorLayers.md#cimattachmentsmediainfo)
 
-[CIMBarChartMediaInfo](BarChartMediaInfo.md#cimbarchartmediainfo)
+[CIMBarChartMediaInfo](CIMVectorLayers.md#cimbarchartmediainfo)
 
-[CIMColumnChartMediaInfo](ColumnChartMediaInfo.md#cimcolumnchartmediainfo)
+[CIMColumnChartMediaInfo](CIMVectorLayers.md#cimcolumnchartmediainfo)
 
-[CIMImageMediaInfo](ImageMediaInfo.md#cimimagemediainfo)
+[CIMImageMediaInfo](CIMVectorLayers.md#cimimagemediainfo)
 
-[CIMLineChartMediaInfo](LineChartMediaInfo.md#cimlinechartmediainfo)
+[CIMLineChartMediaInfo](CIMVectorLayers.md#cimlinechartmediainfo)
 
-[CIMPieChartMediaInfo](PieChartMediaInfo.md#cimpiechartmediainfo)
+[CIMPieChartMediaInfo](CIMVectorLayers.md#cimpiechartmediainfo)
 
-[CIMTableMediaInfo](TableMediaInfo.md#cimtablemediainfo)
+[CIMTableMediaInfo](CIMVectorLayers.md#cimtablemediainfo)
 
-[CIMTextMediaInfo](TextMediaInfo.md#cimtextmediainfo)
+[CIMTextMediaInfo](CIMVectorLayers.md#cimtextmediainfo)
 
 ### MosaicSubLayerDefinition
 
-[CIMFeatureMosaicSubLayer](FeatureMosaicSubLayer.md#cimfeaturemosaicsublayer)
+[CIMFeatureMosaicSubLayer](CIMImageLayers.md#cimfeaturemosaicsublayer)
 
-[CIMImageMosaicSubLayer](ImageMosaicSubLayer.md#cimimagemosaicsublayer)
+[CIMImageMosaicSubLayer](CIMImageLayers.md#cimimagemosaicsublayer)
 
 ### NetworkDatasetRenderer
 
-[CIMNetworkDatasetElementCompositeRenderer](NetworkDatasetElementCompositeRenderer.md#cimnetworkdatasetelementcompositerenderer)
+[CIMNetworkDatasetElementCompositeRenderer](CIMNetworkLayers.md#cimnetworkdatasetelementcompositerenderer)
 
-[CIMNetworkDatasetSimpleRenderer](NetworkDatasetSimpleRenderer.md#cimnetworkdatasetsimplerenderer)
+[CIMNetworkDatasetSimpleRenderer](CIMNetworkLayers.md#cimnetworkdatasetsimplerenderer)
 
-[CIMNetworkDatasetTrafficRenderer](NetworkDatasetTrafficRenderer.md#cimnetworkdatasettrafficrenderer)
+[CIMNetworkDatasetTrafficRenderer](CIMNetworkLayers.md#cimnetworkdatasettrafficrenderer)
 
 ### NorthArrow
 
-[CIMMarkerNorthArrow](MarkerNorthArrow.md#cimmarkernortharrow)
+[CIMMarkerNorthArrow](CIMLayout.md#cimmarkernortharrow)
 
-[CIMTopoNorthArrow](TopoNorthArrow.md#cimtoponortharrow)
+[CIMTopoNorthArrow](CIMLayout.md#cimtoponortharrow)
 
 ### NumberFormat
 
-[CIMAngleFormat](AngleFormat.md#cimangleformat)
+[CIMAngleFormat](CIMNumberFormat.md#cimangleformat)
 
-[CIMCurrencyFormat](CurrencyFormat.md#cimcurrencyformat)
+[CIMCurrencyFormat](CIMNumberFormat.md#cimcurrencyformat)
 
-[CIMCustomNumberFormat](CustomNumberFormat.md#cimcustomnumberformat)
+[CIMCustomNumberFormat](CIMNumberFormat.md#cimcustomnumberformat)
 
-[CIMDirectionFormat](DirectionFormat.md#cimdirectionformat)
+[CIMDirectionFormat](CIMNumberFormat.md#cimdirectionformat)
 
-[CIMFractionFormat](FractionFormat.md#cimfractionformat)
+[CIMFractionFormat](CIMNumberFormat.md#cimfractionformat)
 
-[CIMLatLonFormat](LatLonFormat.md#cimlatlonformat)
+[CIMLatLonFormat](CIMNumberFormat.md#cimlatlonformat)
 
-[CIMNumericFormat](NumericFormat.md#cimnumericformat)
+[CIMNumericFormat](CIMNumberFormat.md#cimnumericformat)
 
-[CIMPercentageFormat](PercentageFormat.md#cimpercentageformat)
+[CIMPercentageFormat](CIMNumberFormat.md#cimpercentageformat)
 
-[CIMRateFormat](RateFormat.md#cimrateformat)
+[CIMRateFormat](CIMNumberFormat.md#cimrateformat)
 
-[CIMScientificNumberFormat](ScientificNumberFormat.md#cimscientificnumberformat)
+[CIMScientificNumberFormat](CIMNumberFormat.md#cimscientificnumberformat)
 
 ### OrthoRectification
 
-[CIMRasterCMYKColorizer](RasterCMYKColorizer.md#cimrastercmykcolorizer)
+[CIMRasterCMYKColorizer](CIMImageLayers.md#cimrastercmykcolorizer)
 
-[CIMRasterClassifyColorizer](RasterClassifyColorizer.md#cimrasterclassifycolorizer)
+[CIMRasterClassifyColorizer](CIMImageLayers.md#cimrasterclassifycolorizer)
 
-[CIMRasterColorMapColorizer](RasterColorMapColorizer.md#cimrastercolormapcolorizer)
+[CIMRasterColorMapColorizer](CIMImageLayers.md#cimrastercolormapcolorizer)
 
-[CIMRasterDiscreteColorColorizer](RasterDiscreteColorColorizer.md#cimrasterdiscretecolorcolorizer)
+[CIMRasterDiscreteColorColorizer](CIMImageLayers.md#cimrasterdiscretecolorcolorizer)
 
-[CIMRasterRGBColorizer](RasterRGBColorizer.md#cimrasterrgbcolorizer)
+[CIMRasterRGBColorizer](CIMImageLayers.md#cimrasterrgbcolorizer)
 
-[CIMRasterStretchColorizer](RasterStretchColorizer.md#cimrasterstretchcolorizer)
+[CIMRasterStretchColorizer](CIMImageLayers.md#cimrasterstretchcolorizer)
 
-[CIMRasterUniqueValueColorizer](RasterUniqueValueColorizer.md#cimrasteruniquevaluecolorizer)
+[CIMRasterUniqueValueColorizer](CIMImageLayers.md#cimrasteruniquevaluecolorizer)
 
-[CIMRasterVectorFieldColorizer](RasterVectorFieldColorizer.md#cimrastervectorfieldcolorizer)
+[CIMRasterVectorFieldColorizer](CIMImageLayers.md#cimrastervectorfieldcolorizer)
 
 ### PointCloudFilter
 
-[CIMPointCloudBitFieldFilter](PointCloudBitFieldFilter.md#cimpointcloudbitfieldfilter)
+[CIMPointCloudBitFieldFilter](CIMTerrainLayers.md#cimpointcloudbitfieldfilter)
 
-[CIMPointCloudReturnFilter](PointCloudReturnFilter.md#cimpointcloudreturnfilter)
+[CIMPointCloudReturnFilter](CIMTerrainLayers.md#cimpointcloudreturnfilter)
 
-[CIMPointCloudValueFilter](PointCloudValueFilter.md#cimpointcloudvaluefilter)
+[CIMPointCloudValueFilter](CIMTerrainLayers.md#cimpointcloudvaluefilter)
 
 ### PointCloudRenderer
 
-[CIMPointCloudClassBreaksRenderer](PointCloudClassBreaksRenderer.md#cimpointcloudclassbreaksrenderer)
+[CIMPointCloudClassBreaksRenderer](CIMTerrainLayers.md#cimpointcloudclassbreaksrenderer)
 
-[CIMPointCloudRGBRenderer](PointCloudRGBRenderer.md#cimpointcloudrgbrenderer)
+[CIMPointCloudRGBRenderer](CIMTerrainLayers.md#cimpointcloudrgbrenderer)
 
-[CIMPointCloudStretchRenderer](PointCloudStretchRenderer.md#cimpointcloudstretchrenderer)
+[CIMPointCloudStretchRenderer](CIMTerrainLayers.md#cimpointcloudstretchrenderer)
 
-[CIMPointCloudUniqueValueRenderer](PointCloudUniqueValueRenderer.md#cimpointclouduniquevaluerenderer)
+[CIMPointCloudUniqueValueRenderer](CIMTerrainLayers.md#cimpointclouduniquevaluerenderer)
 
 ### PointCloudSizeAlgorithm
 
-[CIMPointCloudFixedSizeAlgorithm](PointCloudFixedSizeAlgorithm.md#cimpointcloudfixedsizealgorithm)
+[CIMPointCloudFixedSizeAlgorithm](CIMTerrainLayers.md#cimpointcloudfixedsizealgorithm)
 
-[CIMPointCloudSplatAlgorithm](PointCloudSplatAlgorithm.md#cimpointcloudsplatalgorithm)
+[CIMPointCloudSplatAlgorithm](CIMTerrainLayers.md#cimpointcloudsplatalgorithm)
 
 ### ReportSectionElement
 
-[CIMGroupFooter](GroupFooter.md#cimgroupfooter)
+[CIMGroupFooter](CIMLayout.md#cimgroupfooter)
 
-[CIMGroupHeader](GroupHeader.md#cimgroupheader)
+[CIMGroupHeader](CIMLayout.md#cimgroupheader)
 
-[CIMReportDetails](ReportDetails.md#cimreportdetails)
+[CIMReportDetails](CIMLayout.md#cimreportdetails)
 
-[CIMReportFooter](ReportFooter.md#cimreportfooter)
+[CIMReportFooter](CIMLayout.md#cimreportfooter)
 
-[CIMReportHeader](ReportHeader.md#cimreportheader)
+[CIMReportHeader](CIMLayout.md#cimreportheader)
 
-[CIMReportPageFooter](ReportPageFooter.md#cimreportpagefooter)
+[CIMReportPageFooter](CIMLayout.md#cimreportpagefooter)
 
-[CIMReportPageHeader](ReportPageHeader.md#cimreportpageheader)
+[CIMReportPageHeader](CIMLayout.md#cimreportpageheader)
 
-[CIMReportSection](ReportSection.md#cimreportsection)
+[CIMReportSection](CIMLayout.md#cimreportsection)
 
-[CIMReportSectionElement](ReportSectionElement.md#cimreportsectionelement)
+[CIMReportSectionElement](CIMLayout.md#cimreportsectionelement)
 
 ### RuleLayerDescription
 
-[CIMRuleEventLayerDescription](RuleEventLayerDescription.md#cimruleeventlayerdescription)
+[CIMRuleEventLayerDescription](CIMMap.md#cimruleeventlayerdescription)
 
-[CIMRuleLRSLayerDescription](RuleLRSLayerDescription.md#cimrulelrslayerdescription)
+[CIMRuleLRSLayerDescription](CIMMap.md#cimrulelrslayerdescription)
 
-[CIMRuleLayerDescription](RuleLayerDescription.md#cimrulelayerdescription)
+[CIMRuleLayerDescription](CIMMap.md#cimrulelayerdescription)
 
-[CIMRuleRouteLayerDescription](RuleRouteLayerDescription.md#cimruleroutelayerdescription)
+[CIMRuleRouteLayerDescription](CIMMap.md#cimruleroutelayerdescription)
 
 ### ScaleBar
 
-[CIMDoubleFillScaleBar](DoubleFillScaleBar.md#cimdoublefillscalebar)
+[CIMDoubleFillScaleBar](CIMLayout.md#cimdoublefillscalebar)
 
-[CIMScaleLine](ScaleLine.md#cimscaleline)
+[CIMScaleLine](CIMLayout.md#cimscaleline)
 
-[CIMSingleFillScaleBar](SingleFillScaleBar.md#cimsinglefillscalebar)
+[CIMSingleFillScaleBar](CIMLayout.md#cimsinglefillscalebar)
 
 ### ScaleMarks
 
-[CIMDoubleFillScaleBar](DoubleFillScaleBar.md#cimdoublefillscalebar)
+[CIMDoubleFillScaleBar](CIMLayout.md#cimdoublefillscalebar)
 
-[CIMScaleLine](ScaleLine.md#cimscaleline)
+[CIMScaleLine](CIMLayout.md#cimscaleline)
 
-[CIMSingleFillScaleBar](SingleFillScaleBar.md#cimsinglefillscalebar)
+[CIMSingleFillScaleBar](CIMLayout.md#cimsinglefillscalebar)
 
 ### ServerConnection
 
-[CIMDCOMServerConnection](DCOMServerConnection.md#cimdcomserverconnection)
+[CIMDCOMServerConnection](CIMServiceLayers.md#cimdcomserverconnection)
 
-[CIMInternetServerConnection](InternetServerConnection.md#ciminternetserverconnection)
+[CIMInternetServerConnection](CIMServiceLayers.md#ciminternetserverconnection)
 
-[CIMLANServerConnection](LANServerConnection.md#cimlanserverconnection)
+[CIMLANServerConnection](CIMServiceLayers.md#cimlanserverconnection)
 
-[CIMProjectServerConnection](ProjectServerConnection.md#cimprojectserverconnection)
+[CIMProjectServerConnection](CIMServiceLayers.md#cimprojectserverconnection)
 
 ### SubLayer
 
-[CIMCompositeSubLayer](CompositeSubLayer.md#cimcompositesublayer)
+[CIMCompositeSubLayer](CIMServiceLayers.md#cimcompositesublayer)
 
-[CIMSubLayer](SubLayer.md#cimsublayer)
+[CIMSubLayer](CIMVectorLayers.md#cimsublayer)
 
-[CIMDynamicServiceCompositeSubLayer](DynamicServiceCompositeSubLayer.md#cimdynamicservicecompositesublayer)
+[CIMDynamicServiceCompositeSubLayer](CIMServiceLayers.md#cimdynamicservicecompositesublayer)
 
-[CIMDynamicServiceSubLayer](DynamicServiceSubLayer.md#cimdynamicservicesublayer)
+[CIMDynamicServiceSubLayer](CIMServiceLayers.md#cimdynamicservicesublayer)
 
-[CIMWMSSubLayer](WMSSubLayer.md#cimwmssublayer)
+[CIMWMSSubLayer](CIMServiceLayers.md#cimwmssublayer)
 
-[CIMAnnotationSubLayer](AnnotationSubLayer.md#cimannotationsublayer)
+[CIMAnnotationSubLayer](CIMVectorLayers.md#cimannotationsublayer)
 
 ### TableField
 
-[CIMReportField](ReportField.md#cimreportfield)
+[CIMReportField](CIMLayout.md#cimreportfield)
 
-[CIMTableFrameField](TableFrameField.md#cimtableframefield)
+[CIMTableFrameField](CIMLayout.md#cimtableframefield)
 
 ### Tick
 
-[CIMExteriorTick](ExteriorTick.md#cimexteriortick)
+[CIMExteriorTick](CIMLayout.md#cimexteriortick)
 
-[CIMInteriorTick](InteriorTick.md#ciminteriortick)
+[CIMInteriorTick](CIMLayout.md#ciminteriortick)
 
 ### TinRenderer
 
-[CIMLASPointElevationRenderer](LASPointElevationRenderer.md#cimlaspointelevationrenderer)
+[CIMLASPointElevationRenderer](CIMTerrainLayers.md#cimlaspointelevationrenderer)
 
-[CIMLASStretchRenderer](LASStretchRenderer.md#cimlasstretchrenderer)
+[CIMLASStretchRenderer](CIMTerrainLayers.md#cimlasstretchrenderer)
 
-[CIMLASUniqueValueRenderer](LASUniqueValueRenderer.md#cimlasuniquevaluerenderer)
+[CIMLASUniqueValueRenderer](CIMTerrainLayers.md#cimlasuniquevaluerenderer)
 
-[CIMTerrainDirtyAreaRenderer](TerrainDirtyAreaRenderer.md#cimterraindirtyarearenderer)
+[CIMTerrainDirtyAreaRenderer](CIMTerrainLayers.md#cimterraindirtyarearenderer)
 
-[CIMTerrainPointAttributeGraduatedRenderer](TerrainPointAttributeGraduatedRenderer.md#cimterrainpointattributegraduatedrenderer)
+[CIMTerrainPointAttributeGraduatedRenderer](CIMTerrainLayers.md#cimterrainpointattributegraduatedrenderer)
 
-[CIMTerrainPointAttributeUniqueRenderer](TerrainPointAttributeUniqueRenderer.md#cimterrainpointattributeuniquerenderer)
+[CIMTerrainPointAttributeUniqueRenderer](CIMTerrainLayers.md#cimterrainpointattributeuniquerenderer)
 
-[CIMTerrainPointElevationRenderer](TerrainPointElevationRenderer.md#cimterrainpointelevationrenderer)
+[CIMTerrainPointElevationRenderer](CIMTerrainLayers.md#cimterrainpointelevationrenderer)
 
-[CIMTinBreaklineRenderer](TinBreaklineRenderer.md#cimtinbreaklinerenderer)
+[CIMTinBreaklineRenderer](CIMTerrainLayers.md#cimtinbreaklinerenderer)
 
-[CIMTinContourRenderer](TinContourRenderer.md#cimtincontourrenderer)
+[CIMTinContourRenderer](CIMTerrainLayers.md#cimtincontourrenderer)
 
-[CIMTinEdgeRenderer](TinEdgeRenderer.md#cimtinedgerenderer)
+[CIMTinEdgeRenderer](CIMTerrainLayers.md#cimtinedgerenderer)
 
-[CIMTinFaceClassBreaksRenderer](TinFaceClassBreaksRenderer.md#cimtinfaceclassbreaksrenderer)
+[CIMTinFaceClassBreaksRenderer](CIMTerrainLayers.md#cimtinfaceclassbreaksrenderer)
 
-[CIMTinFaceRenderer](TinFaceRenderer.md#cimtinfacerenderer)
+[CIMTinFaceRenderer](CIMTerrainLayers.md#cimtinfacerenderer)
 
-[CIMTinFaceValueRenderer](TinFaceValueRenderer.md#cimtinfacevaluerenderer)
+[CIMTinFaceValueRenderer](CIMTerrainLayers.md#cimtinfacevaluerenderer)
 
-[CIMTinNodeElevationRenderer](TinNodeElevationRenderer.md#cimtinnodeelevationrenderer)
+[CIMTinNodeElevationRenderer](CIMTerrainLayers.md#cimtinnodeelevationrenderer)
 
-[CIMTinNodeRenderer](TinNodeRenderer.md#cimtinnoderenderer)
+[CIMTinNodeRenderer](CIMTerrainLayers.md#cimtinnoderenderer)
 
-[CIMTinNodeValueRenderer](TinNodeValueRenderer.md#cimtinnodevaluerenderer)
+[CIMTinNodeValueRenderer](CIMTerrainLayers.md#cimtinnodevaluerenderer)
 
 ### ValidationRule
 
-[CIMCutbacksRule](CutbacksRule.md#cimcutbacksrule)
+[CIMCutbacksRule](CIMMap.md#cimcutbacksrule)
 
-[CIMDomainRule](DomainRule.md#cimdomainrule)
+[CIMDomainRule](CIMMap.md#cimdomainrule)
 
-[CIMDuplicateFeatureRule](DuplicateFeatureRule.md#cimduplicatefeaturerule)
+[CIMDuplicateFeatureRule](CIMMap.md#cimduplicatefeaturerule)
 
-[CIMEventOnEventRule](EventOnEventRule.md#cimeventoneventrule)
+[CIMEventOnEventRule](CIMMap.md#cimeventoneventrule)
 
-[CIMFeatureOnFeatureRule](FeatureOnFeatureRule.md#cimfeatureonfeaturerule)
+[CIMFeatureOnFeatureRule](CIMMap.md#cimfeatureonfeaturerule)
 
-[CIMInvalidEventRule](InvalidEventRule.md#ciminvalideventrule)
+[CIMInvalidEventRule](CIMMap.md#ciminvalideventrule)
 
-[CIMMonotonicityRule](MonotonicityRule.md#cimmonotonicityrule)
+[CIMMonotonicityRule](CIMMap.md#cimmonotonicityrule)
 
-[CIMReviewerSimpleValidationRule](ReviewerSimpleValidationRule.md#cimreviewersimplevalidationrule)
+[CIMReviewerSimpleValidationRule](CIMMap.md#cimreviewersimplevalidationrule)
 
-[CIMSubtypeRule](SubtypeRule.md#cimsubtyperule)
+[CIMSubtypeRule](CIMMap.md#cimsubtyperule)
 
-[CIMTableToTableAttributeRule](TableToTableAttributeRule.md#cimtabletotableattributerule)
+[CIMTableToTableAttributeRule](CIMMap.md#cimtabletotableattributerule)
 
 ### Version
 
-[CIMDocumentInfo](DocumentInfo.md#cimdocumentinfo)
+[CIMDocumentInfo](CIMDocument.md#cimdocumentinfo)
 
-[CIMLayerDocument](LayerDocument.md#cimlayerdocument)
+[CIMLayerDocument](CIMDocument.md#cimlayerdocument)
 
-[CIMLayoutDocument](LayoutDocument.md#cimlayoutdocument)
+[CIMLayoutDocument](CIMDocument.md#cimlayoutdocument)
 
-[CIMMapDocument](MapDocument.md#cimmapdocument)
+[CIMMapDocument](CIMDocument.md#cimmapdocument)
 
-[CIMReportDocument](ReportDocument.md#cimreportdocument)
+[CIMReportDocument](CIMDocument.md#cimreportdocument)
 
 ### VerticalLegendItem
 
-[CIMHorizontalBarLegendItem](HorizontalBarLegendItem.md#cimhorizontalbarlegenditem)
+[CIMHorizontalBarLegendItem](CIMLayout.md#cimhorizontalbarlegenditem)
 
-[CIMVerticalLegendItem](VerticalLegendItem.md#cimverticallegenditem)
+[CIMVerticalLegendItem](CIMLayout.md#cimverticallegenditem)
 
 ### View
 
-[CIMExternalTableView](ExternalTableView.md#cimexternaltableview)
+[CIMExternalTableView](CIMDocument.md#cimexternaltableview)
 
-[CIMGenericView](GenericView.md#cimgenericview)
+[CIMGenericView](CIMDocument.md#cimgenericview)
 
-[CIMMapTableView](MapTableView.md#cimmaptableview)
+[CIMMapTableView](CIMDocument.md#cimmaptableview)
 
-[CIMMapView](MapView.md#cimmapview)
+[CIMMapView](CIMDocument.md#cimmapview)
 
-[CIMLayoutView](LayoutView.md#cimlayoutview)
+[CIMLayoutView](CIMDocument.md#cimlayoutview)
 
 ### VisualVariable
 
-[CIMColorVisualVariable](ColorVisualVariable.md#cimcolorvisualvariable)
+[CIMColorVisualVariable](CIMSymbolizers.md#cimcolorvisualvariable)
 
-[CIMRotationVisualVariable](RotationVisualVariable.md#cimrotationvisualvariable)
+[CIMRotationVisualVariable](CIMSymbolizers.md#cimrotationvisualvariable)
 
-[CIMSizeVisualVariable](SizeVisualVariable.md#cimsizevisualvariable)
+[CIMSizeVisualVariable](CIMSymbolizers.md#cimsizevisualvariable)
 
-[CIMTransparencyVisualVariable](TransparencyVisualVariable.md#cimtransparencyvisualvariable)
+[CIMTransparencyVisualVariable](CIMSymbolizers.md#cimtransparencyvisualvariable)
 
 ### VisualVariableRenderer
 
-[CIMClassBreaksRenderer](ClassBreaksRenderer.md#cimclassbreaksrenderer)
+[CIMClassBreaksRenderer](CIMSymbolizers.md#cimclassbreaksrenderer)
 
-[CIMDotDensityRenderer](DotDensityRenderer.md#cimdotdensityrenderer)
+[CIMDotDensityRenderer](CIMSymbolizers.md#cimdotdensityrenderer)
 
-[CIMProportionalRenderer](ProportionalRenderer.md#cimproportionalrenderer)
+[CIMProportionalRenderer](CIMSymbolizers.md#cimproportionalrenderer)
 
-[CIMRuleRenderer](RuleRenderer.md#cimrulerenderer)
+[CIMRuleRenderer](CIMSymbolizers.md#cimrulerenderer)
 
-[CIMSimpleRenderer](SimpleRenderer.md#cimsimplerenderer)
+[CIMSimpleRenderer](CIMSymbolizers.md#cimsimplerenderer)
 
-[CIMUniqueValueRenderer](UniqueValueRenderer.md#cimuniquevaluerenderer)
+[CIMUniqueValueRenderer](CIMSymbolizers.md#cimuniquevaluerenderer)
 
 ## Index
 
