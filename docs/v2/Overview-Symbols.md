@@ -9,7 +9,7 @@ Symbols are classified by the type of geometry they depict: [CIMPointSymbol](CIM
 
 [CIMStroke](CIMSymbols.md#CIMStroke) symbol layers can be of type [CIMSolidStroke](CIMSymbols.md#CIMSolidStroke), [CIMPictureStroke](CIMSymbols.md#CIMPictureStroke), or [CIMGradientStroke](CIMSymbols.md#CIMGradientStroke).
 
-[CIMMarker](CIMSymbols.md#CIMMarker) symbol layer types include [CIMPictureMarker](CIMSymbols.md#CIMPictureMarker), [CIMObjectMarker3D](CIMSymbols.md#CIMObjectMarker3D) (which are true three-dimensional objects), [CIMCharacterMarker](CIMSymbols.md#CIMCharacterMarker) (which reference font glyphs for shape), [CIMVectorMarker](CIMSymbols.md#CIMVectorMarker), which are vector-based, and [CIMProceduralSymbolLayer](CIMSymbols.md#CIMProceduralSymbolLayer) (which reference a rule package).
+[CIMMarker](CIMSymbols.md#CIMMarker) symbol layer types include [CIMPictureMarker](CIMSymbols.md#CIMPictureMarker), [CIMObjectMarker3D](CIMSymbols.md#CIMObjectMarker3D) (which are true three-dimensional objects), [CIMCharacterMarker](CIMSymbols.md#CIMCharacterMarker) (which references a font glyph for its shape), [CIMVectorMarker](CIMSymbols.md#CIMVectorMarker), which are vector-based, and [CIMProceduralSymbolLayer](CIMSymbols.md#CIMProceduralSymbolLayer) (referencing a rule package).
 
 Symbols have at least one symbol layer, but can have more, as outlined below:
 
@@ -32,10 +32,10 @@ Symbols have at least one symbol layer, but can have more, as outlined below:
 * Text symbols do not contain layers but use [CIMPolygonSymbol](CIMSymbols.md#CIMPolygonSymbol) and can use additional decorator objects like [CIMCallouts](CIMSymbols.md#CIMCallout)
 
 ## Symbol effects
-In addition to these arrangements, you can add any symbol layer to any symbol provided that you alter the geometry appropriately by using a [GeometricEffect](CIMSymbols.md#GeometricEffect). Geometric effects dynamically alter symbol geometry, and in some cases even different geometry types, to create different appearances. For instance, when a [GeometricEffectBuffer](CIMSymbols.md#GeometricEffectBuffer) is added to a [CIMLineSymbol](CIMSymbols.md#CIMLineSymbol) the resulting geometry is drawn with a [CIMFill](CIMSymbols.md#CIMFill).
+In addition to these arrangements, you can add any symbol layer to any symbol when using a [GeometricEffect](CIMSymbols.md#GeometricEffect). Geometric effects dynamically alter symbol geometry to create different appearances. For instance, a [GeometricEffectBuffer](CIMSymbols.md#GeometricEffectBuffer) can be added to a [CIMLineSymbol](CIMSymbols.md#CIMLineSymbol) so that the symbol can be drawn with a [CIMFill](CIMSymbols.md#CIMFill).
 
 ## Marker placements
-[CIMMarker](CIMSymbols.md#CIMMarker) layers are most commonly used in [CIMPointSymbols](CIMSymbols.md#CIMPointSymbol) and usually placed directly on the point feature geometry. You can adjust the anchor points and offsets of a marker to customize their relative position. [CIMMarker](CIMSymbols.md#CIMMarker) layers are also used in [CIMLineSymbols](CIMSymbols.md#CIMLineSymbol) and [CIMPolygonSymbols](CIMSymbols.md#CIMPolygonSymbol), drawn along lines and outlines, at endpoints, or within polygon interiors. These placements are achieved by selecting a [CIMMarkerPlacement](CIMSymbols.md#CIMMarkerPlacement) to places the markers accordingly.
+[CIMMarker](CIMSymbols.md#CIMMarker) layers are most commonly used in [CIMPointSymbols](CIMSymbols.md#CIMPointSymbol), usually placed directly on the point feature geometry. You can adjust the anchor points and offsets of a marker to customize their relative position. [CIMMarker](CIMSymbols.md#CIMMarker) layers are also used in [CIMLineSymbols](CIMSymbols.md#CIMLineSymbol) and [CIMPolygonSymbols](CIMSymbols.md#CIMPolygonSymbol), drawn along lines and outlines, at endpoints, or within polygon interiors. This is achieved by selecting a [CIMMarkerPlacement](CIMSymbols.md#CIMMarkerPlacement) that places the symbols where desired.
 
 ## Mobile symbols
 For increased compatibility with mobile devices, a mobile profile of CIMSymbols is used.  Mobile versions of symbols differ is a few minor ways:

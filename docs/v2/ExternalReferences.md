@@ -177,6 +177,7 @@ Diagram feature class types.
 | esriTemporaryDiagramEdgeFeatureClass| 3|Temporary Edge feature class.
 | esriTemporaryDiagramJunctionFeatureClass| 4|Temporary Junction feature class.
 | esriTemporaryDiagramContainerFeatureClass| 5|Temporary Container feature class.
+| esriNetworkDiagramFeatureClass | 6|Diagram feature class.
 
 ### Enumeration: esriImageFormat
 Image formats.
@@ -229,11 +230,11 @@ Defines the JSON formats of the point and spatial reference objects.
 
 |Property | Type | Description |
 |---------|--------|--------|
-| m | number //double| M coordinate which contains measures used for linear referencing.
+| m | double | M coordinate which contains measures used for linear referencing.
 |spatialReference| [SpatialReference](ExternalReferences.md#spatialreference) | The spatial reference can be defined using a well-known ID (WKID) or well-known text (WKT).
-| x | number //double| X coordinate which is measured along the east/west axis.<br>Must be one of the following values:<ul><li>`Number`</li><li>`Null`</li><li>`String`</li></ul>
-| y | number //double| Y coordinate which is measured along the north/south axis.
-| z | number //double| Z coordinate which measures height or elevation.
+| x | double | X coordinate which is measured along the east/west axis.<br>Must be one of the following values:<ul><li>`Number`</li><li>`Null`</li><li>`String`</li></ul>
+| y | double | Y coordinate which is measured along the north/south axis.
+| z | double | Z coordinate which measures height or elevation.
 
 ### Multipoint
 A Multipoint is a collection of Points.  A multipoint is a one-dimensional geometry object.  Multipoints can be used to store a collection of Point-based information where the order and individual identity of each point is not an essential characteristic of the Point set.  Functions that return multiple point results simultaneously return the result as a single Multipoint.
@@ -261,11 +262,11 @@ A Multipoint is a collection of Points.  A multipoint is a one-dimensional geome
 |---------|--------|--------|
 |name     | string | Name that identifies the material.|
 |color    | [Color](CIMColor.md#CIMColor)| Color of the material.|
-|shininess| number //int16 | Shininess of the material ranging from 0 to 255 inclusive.|
-|transparency| number //double| Transparency of the material ranging from 0 and 100 inclusive.|
+|shininess| integer | Shininess of the material ranging from 0 to 255 inclusive.|
+|transparency| double | Transparency of the material ranging from 0 and 100 inclusive.|
 |cull| boolean | Indicates the
 |edgeColor| [Color](CIMColor.md#CIMColor)| Edge color.|
-|edgeWidth| number //int16 | Width of the edge ranging from 0 and 255 inclusive.|
+|edgeWidth| integer | Width of the edge ranging from 0 and 255 inclusive.|
 |texture| string | base64 encoded texture image.|
 |textureUrl| string | URL of texture image.|
 |sharedTexture| string | Name of the material that contains the actual texture.|
@@ -312,15 +313,15 @@ An envelope is a rectangle defined by a range of values for each coordinate and 
 
 |Property | Type | Description |
 |---------|--------|--------|
-| mmax | number //double| The maximum measure value in the area of the envelope.
-| mmin | number //double| The minimum measure value in the area of the envelope.
+| mmax | double | The maximum measure value in the area of the envelope.
+| mmin | double | The minimum measure value in the area of the envelope.
 |spatialReference | [SpatialReference](spatialReference.md) | The spatial reference can be defined using a well-known ID (wkid) or well-known text (wkt)
-| xmax | number //double| The maximum X value in the area of the envelope.
+| xmax | double | The maximum X value in the area of the envelope.
 | xmin | number or string ("NaN") | The minimum X value in the area of the envelope.
-| ymax | number //double| The maximum Y value in the area of the envelope.
-| ymin | number //double| The minimum Y value in the area of the envelope.
-| zmax | number //double| The maximum Z value in the area of the envelope.
-| zmin | number //double| The minimum Z value in the area of the envelope.
+| ymax | double | The maximum Y value in the area of the envelope.
+| ymin | double | The minimum Y value in the area of the envelope.
+| zmax | double | The maximum Z value in the area of the envelope.
+| zmin | double | The minimum Z value in the area of the envelope.
 
 ### GeometryBag
 A GeometryBag is a heterogeneous collection of references to geometry objects.
@@ -410,7 +411,7 @@ Represents a linear unit or angular unit of measure.
 
 |Property | Type | Description |
 |---------|--------|--------|
-| uwkid | number //int32 | Well-known identifier representing the specific unit type.
+| uwkid | long | Well-known identifier representing the specific unit type.
 
 
 ### LinearUnit
@@ -419,7 +420,7 @@ Represents a linear unit of measure.
 
 |Property | Type | Description |
 |---------|--------|--------|
-| uwkid | number //int32| Well-known identifier representing the specific unit. Refer to the [list of units](http://desktop.arcgis.com/en/arcmap/latest/map/projections/pdf/projected_coordinate_systems.pdf) for well-known IDs and conversion values for Linear Units.
+| uwkid | long| Well-known identifier representing the specific unit. Refer to the [list of units](http://desktop.arcgis.com/en/arcmap/latest/map/projections/pdf/projected_coordinate_systems.pdf) for well-known IDs and conversion values for Linear Units.
 
 ### AngularUnit
 
@@ -427,7 +428,7 @@ Represents a angular unit of measure.
 
 |Property | Type | Description |
 |---------|--------|--------|
-| uwkid | number //int32| Well-known identifier representing the specific unit. Refer to the [list of units](http://desktop.arcgis.com/en/arcmap/latest/map/projections/pdf/geographic_coordinate_systems.pdf) for well-known IDs and conversion values for angular Units.
+| uwkid | long| Well-known identifier representing the specific unit. Refer to the [list of units](http://desktop.arcgis.com/en/arcmap/latest/map/projections/pdf/geographic_coordinate_systems.pdf) for well-known IDs and conversion values for angular Units.
 
 ### SpatialReference
 
@@ -435,10 +436,10 @@ A spatial reference is the georeferencing and coordinate system assigned to any 
 
 |Property | Type | Description |
 |---------|--------|--------|
-| wkid | number //int32| Well-known identifier representing the specific geographic or projected coordinate system. Refer to the list for well known identifiers:<ul><li>[Projected Coordinate Systems Listing](https://developers.arcgis.com/rest/services-reference/projected-coordinate-systems.htm)</li><li>[Geographic Coordinate Systems Listing](https://developers.arcgis.com/rest/services-reference/geographic-coordinate-systems.htm)</li></ul>
-| latestWkid | number //int32| Represents is an more resent version of an identifier for a wkid. when this value is different from wkid, wkid is considered the originally introduced identifier and latestWkid is the more resent one that should be preferred.|
-| vcsWkid | number //int32| Well-known identifier representing the specific geographic or projected coordinate system. Refer to the list for well known identifiers:<ul><li>[Vertical Coordinate Systems Listing](https://developers.arcgis.com/rest/services-reference/vertical-coordinate-systems.htm)</li></ul>
-| latestVcsWkid | number //int32| Represents is an more resent version of an identifier for a wkid. when this value is different from wkid, wkid is considered the originally introduced identifier and latestWkid is the more resent one that should be preferred.|
+| wkid | long| Well-known identifier representing the specific geographic or projected coordinate system. Refer to the list for well known identifiers:<ul><li>[Projected Coordinate Systems Listing](https://developers.arcgis.com/rest/services-reference/projected-coordinate-systems.htm)</li><li>[Geographic Coordinate Systems Listing](https://developers.arcgis.com/rest/services-reference/geographic-coordinate-systems.htm)</li></ul>
+| latestWkid | long| Represents is an more resent version of an identifier for a wkid. when this value is different from wkid, wkid is considered the originally introduced identifier and latestWkid is the more resent one that should be preferred.|
+| vcsWkid | long| Well-known identifier representing the specific geographic or projected coordinate system. Refer to the list for well known identifiers:<ul><li>[Vertical Coordinate Systems Listing](https://developers.arcgis.com/rest/services-reference/vertical-coordinate-systems.htm)</li></ul>
+| latestVcsWkid | long| Represents is an more resent version of an identifier for a wkid. when this value is different from wkid, wkid is considered the originally introduced identifier and latestWkid is the more resent one that should be preferred.|
 
 ### GeoTransformation
 
@@ -446,8 +447,8 @@ A spatial reference is the georeferencing and coordinate system assigned to any 
 
 |Property | Type | Description |
 |---------|--------|--------|
-| wkid | number //int32| Well-known identifier representing the specific transformation. Refer to the list for well known identifiers:<ul><li>[Datum transformations](https://developers.arcgis.com/rest/services-reference/datum-transformations.htm)</li></ul>
-| latestWkid | number //int32 | Represents is an more resent version of an identifier for a wkid. when this value is different from wkid, wkid is considered the originally introduced identifier and latestWkid is the more resent one that should be preferred.|
+| wkid | long| Well-known identifier representing the specific transformation. Refer to the list for well known identifiers:<ul><li>[Datum transformations](https://developers.arcgis.com/rest/services-reference/datum-transformations.htm)</li></ul>
+| latestWkid | long | Represents is an more resent version of an identifier for a wkid. when this value is different from wkid, wkid is considered the originally introduced identifier and latestWkid is the more resent one that should be preferred.|
 |transformForward|boolean|The direction (forward/reverse) of a geographic transformation.|
 |name     | string | Name of the geographic transformation.|
 
@@ -464,25 +465,25 @@ A composite geotransformation allows you to create a 'chain' of existing or cust
 
 |Property | Type | Description |
 |---------|--------|--------|
-| min | number //double|The minimum value of the histogram.|
-| max | number //double|The maximum value of the histogram.|
-| mean | number //double|The mean value of the histogram.|
-| stddev | number //double|The standard deviation of the histogram.|
-| limitMin | number //double|The minimum limit of the range.|
-| limitMax | number //double|The maximum limit of the range.|
-| histogram | [number], //[double], |The histogram values of the statistics.|
-| nsamples | number //double|The number of samples.|
-| resolution | number //double|The resolution.|
-| nBands | number //int32 |The number of bands.|
-| covariances | [number], //[double], |The covariances.|
+| min | double |The minimum value of the histogram.|
+| max | double |The maximum value of the histogram.|
+| mean | double |The mean value of the histogram.|
+| stddev | double |The standard deviation of the histogram.|
+| limitMin | double |The minimum limit of the range.|
+| limitMax | double |The maximum limit of the range.|
+| histogram | [double], |The histogram values of the statistics.|
+| nsamples | double |The number of samples.|
+| resolution | double |The resolution.|
+| nBands | long |The number of bands.|
+| covariances | [double], |The covariances.|
 
 ## RasterColormap
 A container for a colormap used to display a raster band.
 
 |Property | Type | Description |
 |---------|--------|--------|
-| Values| [number], //[int32], |An array of values of the colormap.|
-| Colors| [number], //[int32], |An array of colors corresponding to the values. Colors are represented as RGB stored as a long integer.|
+| Values| [long], |An array of values of the colormap.|
+| Colors| [long], |An array of colors corresponding to the values. Colors are represented as RGB stored as a long integer.|
 
 ## TimeReference
 The Time Reference contains information about time zone and daylight savings time rules.  It is used to integrate different data sets that have time stamps from different time zones, or using different daylight savings time rules.
@@ -507,8 +508,8 @@ A [TimeValue](ExternalReferences.md#timevalue) object that represents a time-ref
 |Property | Type | Description |
 |---------|--------|--------|
 | type | string | The value for this will always be "TimeExtent"
-| start | number //double|The time extent's start time.
-| end | number //double|The time extent's end time.
+| start | double |The time extent's start time.
+| end | double |The time extent's end time.
 | empty | boolean |A boolean indicating whether the time extent is empty.
 | TimeReference | [TimeReference](ExternalReferences.md#timereference) |The time reference for the time value.
 
@@ -519,7 +520,7 @@ An [TimeValue](ExternalReferences.md#timevalue) object that represents a time-re
 |Property | Type | Description |
 |---------|--------|--------|
 | type  | string| The value for this will always be "TimeInstant"
-| start | number //double|The time value of the time instant.
+| start | double |The time value of the time instant.
 | TimeReference | [TimeReference](ExternalReferences.md#timereference) |The time reference for the time value.
 
 ## LasFilter
@@ -529,7 +530,7 @@ An object defining LAS filtering
 |---------|--------|--------|
 | type  | string | The value for this will always be "LasFilter"|
 | areaOfInterest | [geometry](ExternalReferences.md#geometry) |The area of interest.|
-| classCodes     | [number], //[int32],|An array of class codes each number ranging from 0-255. |
-| classFlags     | number //int32 |	The number that is the bitwise OR of several values indicating. the class flags. Here are the values:<br><ul><li>0x00000001 - None</li><li>0x00000002 - LAS synthetic-point flag.</li><li>0x00000004 - LAS key-point flag.</li><li>0x00000002 - LAS synthetic-point flag.</li><li>0x00000008 - LAS withheld-point flag.</li><li>0x000000010 - LAS overlap-point flag.</li></ul>|
-| Returns        | [number], //[int32],|An arrayof LAS return numbers. |
+| classCodes     | [long],|An array of class codes each number ranging from 0-255. |
+| classFlags     | long |	The number that is the bitwise OR of several values indicating. the class flags. Here are the values:<br><ul><li>0x00000001 - None</li><li>0x00000002 - LAS synthetic-point flag.</li><li>0x00000004 - LAS key-point flag.</li><li>0x00000002 - LAS synthetic-point flag.</li><li>0x00000008 - LAS withheld-point flag.</li><li>0x000000010 - LAS overlap-point flag.</li></ul>|
+| Returns        | [long],|An arrayof LAS return numbers. |
 | SurfaceConstraints|	[string] |The array of surface constraints.|

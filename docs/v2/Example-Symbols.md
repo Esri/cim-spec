@@ -1,7 +1,7 @@
 # Point symbol of a pin
 A simple pin defined as a CIMPointSymbol with a single CIMVectorMarker layer.
 
-Appearance: ![Image of pin symbol](/images/pin.png)
+Appearance: ![Image of pin symbol](../images/pin.png)
 
 JSON:
 ```
@@ -107,7 +107,7 @@ JSON:
 # Point symbol of a campground
 A simple pin defined as a CIMPointSymbol with two CIMVectorMarker layers. The white circle is a CIMVectorMarker with a white CIMSolidFill and a gray CIMSolidStroke. The green tent is a CIMVectorMarker with a green CIMSolidFill.
 
-Appearance: ![Image of campground symbol](/images/campground.png)
+Appearance: ![Image of campground symbol](../images/campground.png)
 
 JSON:
 ```
@@ -254,7 +254,7 @@ JSON:
 # Point symbol of a highway shield
 A simple pin defined as a CIMPointSymbol with two CIMVectorMarker layers. The blue portion of the shield is a CIMVectorMarker with a blue CIMSolidFill and a white CIMSolidStroke. The red crown of the shield is a CIMVectorMarker with a red fill and a white CIMSolidStroke.
 
-Appearance: ![Image of a highway shield](/images/highwayShield.png)
+Appearance: ![Image of a highway shield](../images/highwayShield.png)
 
 JSON:
 ```
