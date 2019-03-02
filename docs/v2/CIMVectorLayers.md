@@ -1634,7 +1634,6 @@
 | OIDFields | string | The OID fields. 
 | geometryType | [enumeration esriGeometryType](ExternalReferences.md#enumeration-esrigeometrytype) | The geometry type. 
 | extent | [Envelope](ExternalReferences.md#envelope) | The extent. 
-| queryFields | Fields | 
 | spatialStorageType | long | The spatial storage type. 
 
 
