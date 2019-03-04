@@ -526,8 +526,8 @@
 | rightImage | [DataConnection](Types.md#dataconnection) | The right image of the stereo pair. 
 | sourceType | [enumeration StereoSourceType](CIMMap.md#enumeration-stereosourcetype) | The stereo source type. 
 | stereoModelCollection | [DataConnection](Types.md#dataconnection) | The data connection to the source stereo model collection. 
-| leftImageID | long64 | The OID of the left image of the current stereo model in a collection. 
-| rightImageID | long64 | The OID of the right image of the current stereo model in a collection. 
+| leftImageID | long long | The OID of the left image of the current stereo model in a collection. 
+| rightImageID | long long | The OID of the right image of the current stereo model in a collection. 
 | leftImageColorizer | [CIMRasterColorizer](CIMImageLayers.md#cimrastercolorizer) | The colorizer for the left image. 
 | rightImageColorizer | [CIMRasterColorizer](CIMImageLayers.md#cimrastercolorizer) | The colorizer for the right image. 
 | adjustColorizersInSync | boolean | A value indicating whether adjustments to either colorizer should be synced to the other. 

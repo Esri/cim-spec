@@ -72,8 +72,8 @@
 | dateTimeFormat | string | The format string for axis date/time labels. 
 | calculateAutomaticMinimum | boolean | A value indicating whether the chart axis calculates its minimum. 
 | calculateAutomaticMaximum | boolean | A value indicating whether the chart axis calculates its maximum. 
-| minimum | VARIANT | The minimum of the axis. 
-| maximum | VARIANT | The maximum of the axis. 
+| minimum | any | The minimum of the axis. 
+| maximum | any | The maximum of the axis. 
 | titleText | [CIMChartTextProperties](CIMLayer.md#cimcharttextproperties) | The title symbol properties. 
 | labelText | [CIMChartTextProperties](CIMLayer.md#cimcharttextproperties) | The label symbol properties. 
 | axisLineSymbolProperties | [CIMChartLineSymbolProperties](CIMLayer.md#cimchartlinesymbolproperties) | The line symbol properties for axis. 

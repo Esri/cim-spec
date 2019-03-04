@@ -528,8 +528,8 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| defaultValue | ["<string>" / <number> / {JSON_object}]| The variable's required default value. The array can have multiple values only if AllowMultiple is true. 
-| boundValue | ["<string>" / <number> / {JSON_object}]| The variable's currently-bound value. The array can have multiple values only if AllowMultiple is true. 
+| defaultValue | [any]| The variable's required default value. The array can have multiple values only if AllowMultiple is true. 
+| boundValue | [any]| The variable's currently-bound value. The array can have multiple values only if AllowMultiple is true. 
 | allowMultiple | boolean | A value indicating whether the variable will accept an array of values. 
 
 
@@ -750,7 +750,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | actions | [CIMLayerAction](CIMVectorLayers.md#cimlayeraction) | The layer actions. 
-| exclusionSet | [long64] | The set of excluded features. 
+| exclusionSet | [long long] | The set of excluded features. 
 | featureMasks | [CIMDataConnection](Types.md#dataconnection) | The data connection of the masking data. 
 | labelClasses | [CIMLabelClass](CIMLabelPlacement.md#cimlabelclass) | The collection of label class definitions. 
 | labelVisibility | boolean | A value indicating whether to display labels for this layer's label classes. 
@@ -1220,7 +1220,7 @@
 | invertRows | boolean | A value indicating whether or not to invert rows. 
 | selectedDimensionIndexes | [long] | The selected dimension indexes. 
 | selectedDimensions | [string] | The selected dimensions. 
-| selectedDimensionValues | ["<string>" / <number> / {JSON_object}]| The selected dimension values. 
+| selectedDimensionValues | [any]| The selected dimension values. 
 | variable | string | The variable. 
 | verticalDimension | string | The vertical dimension. 
 | verticalDimensionUnit | string | The vertical dimension unit. 
@@ -1265,7 +1265,7 @@
 | MDimension | string | The M dimension. 
 | selectedDimensions | [string] | The selected dimensions. 
 | selectedDimensionIndexes | [long] | The selected dimension indexes. 
-| selectedDimensionValues | ["<string>" / <number> / {JSON_object}]| The selected dimension values. 
+| selectedDimensionValues | [any]| The selected dimension values. 
 | shapeFieldName | string | The shape field name. 
 | verticalDimension | string | The vertical dimension. 
 | verticalDimensionUnit | string | The vertical dimension unit. 
@@ -1467,8 +1467,8 @@
 |---------|--------|--------|
 | fieldExpression | string | The field for which the value range will be specified. 
 | optional | boolean | A value indicating whether this variable is optional. If not, default values must be provided. 
-| defaultMin | VARIANT | The default minimum value. 
-| defaultMax | VARIANT | The default maximum value. 
+| defaultMin | any | The default minimum value. 
+| defaultMax | any | The default maximum value. 
 | tableName | string | The name of the table to which the field in FieldExpression belongs. 
 | valueIfMissing | boolean | A value indicating whether the resulting expression should take if the variable is optional and no value is passed. 
 
@@ -1753,8 +1753,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | featureExpirationMethod | [enumeration FeatureExpirationMethod](CIMVectorLayers.md#enumeration-featureexpirationmethod) | Feature expiration method used at dataset level. 
-| maximumFeatureCount | long64 | The maximum number of features that are held in memory before features are discarded. 
-| maximumFeatureAge | long64 | The maximum age for each feature before the feature is discarded. 
+| maximumFeatureCount | long long | The maximum number of features that are held in memory before features are discarded. 
+| maximumFeatureAge | long long | The maximum age for each feature before the feature is discarded. 
 
 
 

@@ -262,11 +262,11 @@ A Multipoint is a collection of Points.  A multipoint is a one-dimensional geome
 |---------|--------|--------|
 |name     | string | Name that identifies the material.|
 |color    | [Color](CIMColor.md#CIMColor)| Color of the material.|
-|shininess| integer | Shininess of the material ranging from 0 to 255 inclusive.|
+|shininess| short | Shininess of the material ranging from 0 to 255 inclusive.|
 |transparency| double | Transparency of the material ranging from 0 and 100 inclusive.|
 |cull| boolean | Indicates the
 |edgeColor| [Color](CIMColor.md#CIMColor)| Edge color.|
-|edgeWidth| integer | Width of the edge ranging from 0 and 255 inclusive.|
+|edgeWidth| short | Width of the edge ranging from 0 and 255 inclusive.|
 |texture| string | base64 encoded texture image.|
 |textureUrl| string | URL of texture image.|
 |sharedTexture| string | Name of the material that contains the actual texture.|

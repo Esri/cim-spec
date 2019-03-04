@@ -595,7 +595,7 @@
 | labelVisibility | boolean | A value indicating whether to display labels for this layer's label classes. 
 | dataConnection | [CIMSceneDataConnection](CIMTerrainLayers.md#cimscenedataconnection) | The data connection. Currently used only when loading local scene layer packages. 
 | useRealWorldSymbolSizes | boolean | A value indicating whether to use real world symbols sizes (meters) vs. points. 
-| exclusionSet | [long64] | The set of excluded features. 
+| exclusionSet | [long long] | The set of excluded features. 
 | definitionExpression | string | The definition expression that can subset the features. 
 | definitionExpressionName | string | The Name of definition expression. 
 | definitionFilterChoices | [CIMDefinitionFilter](CIMLayer.md#cimdefinitionfilter) | The definition filter choices. 
