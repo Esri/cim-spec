@@ -131,7 +131,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | actions | [CIMLayerAction](CIMVectorLayers.md#cimlayeraction) | The layer actions. 
-| exclusionSet | [long64] | The set of excluded features. 
+| exclusionSet | [long long] | The set of excluded features. 
 | featureMasks | [CIMDataConnection](Types.md#dataconnection) | The data connection of the masking data. 
 | labelClasses | [CIMLabelClass](CIMLabelPlacement.md#cimlabelclass) | The collection of label class definitions. 
 | labelVisibility | boolean | A value indicating whether to display labels for this layer's label classes. 
@@ -431,11 +431,11 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | ascending | boolean | A value indicating whether the mosaic rule uses ascending order. 
-| FIDs | [long64] | An array of IDs. 
+| FIDs | [long long] | An array of IDs. 
 | lockRasterID | string | The ID of the lock raster. 
 | mosaicMethod | [enumeration RasterMosaicMethod](CIMImageLayers.md#enumeration-rastermosaicmethod) | The mosaic method. 
 | mosaicOperatorType | [enumeration RasterMosaicOperatorType](CIMImageLayers.md#enumeration-rastermosaicoperatortype) | The mosaic operator type. 
-| orderByBaseValue | VARIANT | The order by base value. 
+| orderByBaseValue | any | The order by base value. 
 | orderByFieldName | string | The order by field name. 
 | timeValue | [TimeValue](ExternalReferences.md#timevalue) | The time value. 
 | viewpoint | [Point](ExternalReferences.md#point) | The viewpoint as a point. 

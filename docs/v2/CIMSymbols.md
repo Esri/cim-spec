@@ -192,7 +192,7 @@
 |---------|--------|--------|
 | name | string | The name. 
 | CGAAttributeType | [enumeration CGAAttributeType](CIMSymbols.md#enumeration-cgaattributetype) | The CGA attribute type. 
-| value | VARIANT | The value. 
+| value | any | The value. 
 
 
 
