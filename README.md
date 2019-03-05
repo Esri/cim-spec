@@ -11,7 +11,7 @@ Usage of the CIM primarily begins with an entry point through a primary object. 
 
 ## How this specification is formatted
 This CIM specification is documented via Markdown documents that contain definitions for objects and their properties. JSON lacks an inheritance mechanism and CIM implementations often deal with many abstract types using inheritance. Additionally, JSON has one numeric type, but typed languages typically differentiate various integer and floating-point types. The formatting of the Markdown reflects these realities in the following ways:
-1. Objects that can be thought of inheriting from a type list properties in a section for each inherited type. In some cases, the final type may inherit all properties from another type and have no unique properties for itself. See  [CIMRGBColor](CIMColor.md#CIMRGBColor) for an example.
+1. Objects that can be thought of inheriting from a type list properties in a section for each inherited type. In some cases, the final type may inherit all properties from another type and have no unique properties for itself. See  [CIMRGBColor](docs/v2/CIMColor.md#CIMRGBColor) for an example.
 2. The [Types](docs/v2/Types.md) document lists objects by their type for quick reference.
 3. Numeric types are specified as `short`, `long`, `long long`, `float`, and `double` corresponding to 16-bit integer, 32-bit integer, 64-bit integer, single-precision floating-point, and double-precision floating-point types respectively.
 4. Types specified as `any` may be any basic JSON type: `string`, `number`, `boolean`, or `null`.
