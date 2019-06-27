@@ -345,6 +345,39 @@
 
 
 
+
+## CIMMultilevelColorVisualVariable
+#### Represents a color visual variable with different levels-of-detail. 
+
+
+### CIMVisualVariable 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| authoringInfo | [CIMVisualVariableAuthoringInfo](CIMRenderers.md#cimvisualvariableauthoringinfo) | The authoring info. 
+
+
+### CIMMultilevelVisualVariable 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| levels | [CIMVisualVariableLevel](CIMRenderers.md#cimvisualvariablelevel) | The levels that hold the minimum and maximum values of the data. 
+
+
+### CIMMultilevelColorVisualVariable 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp. 
+| normalizationField | string | The normalization field. 
+| normalizationType | [enumeration DataNormalizationMethod](CIMRenderers.md#enumeration-datanormalizationmethod) | The data normalization method. 
+| valueExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | ExpressionInfo that contains the Arcade expression that returns value as a number. 
+| polygonSymbolColorTarget | [enumeration PolygonSymbolColorTarget](CIMRenderers.md#enumeration-polygonsymbolcolortarget) | The property that controls how the color ramp is applied to polygon symbols. 
+
+
+
+
+
 ### Enumeration: PatchShape
 #### Patch shapes. 
 

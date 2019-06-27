@@ -165,6 +165,52 @@
 
 
 
+
+## CIMChartCalendarHeatSeries
+#### Provides access to members that control CalendarHeat series. 
+
+
+### CIMChartSeries 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name of the series shown in the legend. 
+| uniqueName | string | The default and unique name of the series. 
+| fields | [string] | The data field names in the series. Optional depending on series type. 
+| orderFields | [string] | The sort field names in the series. 
+| groupFields | [string] | The group field names in the series. 
+| whereClause | string | The format string for series value labels. 
+| showLabels | boolean | A value indicating whether the series shows data labels. 
+| horizontalAxis | long | The index of horizontal axis. 
+| verticalAxis | long | The index of vertical axis. 
+| colorType | [enumeration ChartColorType](CIMLayer.md#enumeration-chartcolortype) | The type of color for the series. 
+| fieldAggregation | [string] | The aggregate field values if series data has a group field. Allowed values are count, sum, median, mean, and empty string. 
+| orderFieldsSortTypes | [long] | The array of sort order types for fields in OrderFields property Allowed values 0(Ascending), 1(Descending). 
+| visible | boolean | A value indicating whether the series is visible or not. 
+| dataLabelText | [CIMChartTextProperties](CIMLayer.md#cimcharttextproperties) | The text style for the data label. 
+| multiSeries | boolean | A value indicating whether this series is a multi-series. 
+| locations | [CIMChartLocationDefinition](CIMLayer.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
+
+
+### CIMChartCalendarHeatSeries 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| columnTimeUnits | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The time units for columns. 
+| rowTimeUnits | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The time units for rows. 
+| nullPolicy | [enumeration ChartNullPolicy](CIMLayer.md#enumeration-chartnullpolicy) | The policy for handling missing data. 
+| noDataColor | [Color](Types.md#color) | Color properties for empty cells. 
+| classificationMethod | [enumeration ClassificationMethod](CIMRenderers.md#enumeration-classificationmethod) | The classification method with which breaks are created. 
+| breaksCount | long | The number of breaks for automatic breaks creation. 
+| minimumBreak | double | The lower bound of the first range. 
+| breaks | [double] | The upper bound breaks. 
+| breakColors | [CIMColor](Types.md#color) | The color for each break. 
+| colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp from which break colors are created. 
+
+
+
+
+
 ### Enumeration: ChartColorType
 #### Provides a type of coloring that chart series uses. 
 
@@ -208,14 +254,15 @@
 |---------|--------|--------|
 | wedgeTimeUnits | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The time units for wedges. 
 | ringTimeUnits | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The time units for rings. 
-| nullPolicy | [enumeration ChartNullPolicy](CIMLayer.md#enumeration-chartnullpolicy) | Handling policy for missing data. 
+| trimIncompleteTimeInterval | boolean | A value indicating whether incomplete time intervals at the ends of time interval ranges are trimmed in order to avoid bias. 
+| nullPolicy | [enumeration ChartNullPolicy](CIMLayer.md#enumeration-chartnullpolicy) | The policy for handling missing data. 
 | noDataColor | [Color](Types.md#color) | Color properties for empty cells. 
-| classificationMethod | [enumeration ClassificationMethod](CIMRenderers.md#enumeration-classificationmethod) | Classification method with which breaks are created. 
-| breaksCount | long | Number of breaks for automatic breaks creation. 
-| minimumBreak | double | Lower bound of the first range. 
-| breaks | [double] | Upper bound breaks. 
-| breakColors | [CIMColor](Types.md#color) | Colors for each break. 
-| colorRamp | [ColorRamp](Types.md#colorramp) | Color ramp with which break colors are created. 
+| classificationMethod | [enumeration ClassificationMethod](CIMRenderers.md#enumeration-classificationmethod) | The classification method with which breaks are created. 
+| breaksCount | long | The number of breaks for automatic breaks creation. 
+| minimumBreak | double | The lower bound of the first range. 
+| breaks | [double] | The upper bound breaks. 
+| breakColors | [CIMColor](Types.md#color) | The color for each break. 
+| colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp from which break colors are created. 
 | showWedgeLabel | boolean | A value indicating whether the wedge label is visible. 
 | wedgeLabelText | [CIMChartTextProperties](CIMLayer.md#cimcharttextproperties) | The text symbol properties for the wedge label. 
 
@@ -301,10 +348,13 @@
 | label | string | The label for the guide. 
 | labelText | [CIMChartTextProperties](CIMLayer.md#cimcharttextproperties) | The text format for the guide label. 
 | labelPosition | [enumeration ChartPosition](CIMLayer.md#enumeration-chartposition) | The relative position of the label to the guide. 
-| valueFrom | double | The coordinate of the from value for the guide. 
-| valueTo | double | The coordinate of the to value for the guide. 
+| valueFrom | double | The numeric coordinate of the from value for the guide. This value will be used when guide value type is set to numeric. 
+| valueTo | double | The numeric coordinate of the to value for the guide. This value will be used when guide value type is set to numeric. 
+| timeFrom | [TimeInstant](ExternalReferences.md#timeinstant) | The temporal coordinate of the from value for the guide. This value will be used when guide value type is set to temporal. 
+| timeTo | [TimeInstant](ExternalReferences.md#timeinstant) | The temporal coordinate of the to value for the guide. This value will be used when guide value type is set to temporal. 
 | visible | boolean | A value indicating whether the guide is visible. 
 | guideType | [enumeration ChartGuideType](CIMLayer.md#enumeration-chartguidetype) | The type of the guide. 
+| guideValueType | [enumeration ChartValueType](CIMLayer.md#enumeration-chartvaluetype) | The type of the coordinate value used in the guide. 
 | fillSymbolProperties | [CIMChartFillSymbolProperties](CIMLayer.md#cimchartfillsymbolproperties) | The symbol properties for the guide. 
 
 
@@ -363,6 +413,7 @@
 | showComparisonDistribution | boolean | A value indicating whether to show a comparison distribution line overlay for the histogram chart. 
 | dataTransformationType | [enumeration ChartDataTransformationType](CIMLayer.md#enumeration-chartdatatransformationtype) | The type of a data transformation to apply before calculating histogram bins and counts. 
 | distributionLineSymbolProperties | [CIMChartLineSymbolProperties](CIMLayer.md#cimchartlinesymbolproperties) | The line symbol for the comparison distribution. 
+| countField | string | A raster attribute table count field in order to calculate a histogram and statistics for fields that have to be adjusted for counts. 
 
 
 
@@ -451,8 +502,9 @@
 | timeAggregationType | [enumeration ChartTimeAggregationType](CIMLayer.md#enumeration-charttimeaggregationtype) | The time aggregation type. 
 | timeIntervalUnits | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units used for the time interval size. 
 | timeIntervalSize | double | The time interval size. 
+| calculateAutomaticTimeInterval | boolean | A value indicating whether the time interval is automatically calculated. 
 | trimIncompleteTimeInterval | boolean | A value indicating whether incomplete time intervals at the ends of time interval ranges are trimmed in order to avoid bias. 
-| nullPolicy | [enumeration ChartNullPolicy](CIMLayer.md#enumeration-chartnullpolicy) | The policy for handling null values. 
+| nullPolicy | [enumeration ChartNullPolicy](CIMLayer.md#enumeration-chartnullpolicy) | The policy for handling missing data. 
 | verticalOrientation | boolean | A value indicating whether this is a vertical (true) or horizontal (false) orientation of a line series. 
 
 
@@ -704,6 +756,8 @@
 | trendLineSymbolProperties | [CIMChartLineSymbolProperties](CIMLayer.md#cimchartlinesymbolproperties) | The line symbol properties of the scatter plot series' trend line. 
 | histogramFillSymbolProperties | [CIMChartFillSymbolProperties](CIMLayer.md#cimchartfillsymbolproperties) | The fill symbol properties of histograms. 
 | selectedMiniPlot | long | The index of the selected mini plot (-1 stands for non selected, -2 for uninitialized). 
+| RSquareText | [CIMChartTextProperties](CIMLayer.md#cimcharttextproperties) | The text symbol properties for the RSquare. 
+| selectionLineSymbolProperties | [CIMChartLineSymbolProperties](CIMLayer.md#cimchartlinesymbolproperties) | The line symbol properties of the selection line for the mini plot. 
 
 
 
@@ -805,6 +859,8 @@
 | symbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol. 
 | label | string | The label. 
 | locationID | long | The index of the location this definition corresponds to. 
+| dimension | string | The dimension to be plotted on the y axis. 
+| dimensionValues | [double] | The dimension values corresponding to the dimension to be plotted on the y axis. 
 
 
 
@@ -930,6 +986,8 @@
 | name | string | The name. 
 | symbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol. 
 | label | string | The label. 
+| dimension | string | The dimension to be plotted on the y axis. 
+| dimensionValues | [double] | The dimension values corresponding to the dimension to be plotted on the y axis. 
 
 
 
@@ -1004,6 +1062,16 @@
 
 
 
+### Enumeration: ChartValueType
+#### Specifies the type of value. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| ChartValueType_Numeric| 0| Value is numeric 
+| ChartValueType_Temporal| 1| Value is temporal 
+
+
+
 
 ## CIMCompositeSubLayer
 #### Represents a composite sublayer. 
@@ -1063,6 +1131,23 @@
 
 
 
+## CIMEyeDomeLighting
+#### Represents eye-dome lighting properties. 
+
+
+### CIMEyeDomeLighting 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| isEnabled | boolean | A value indicating whether eye-dome lighting is enabled. 
+| strength | double | The strength of the eye-dome lighting. This property can have a value between 0 and 1. 
+| radius | double | The radius of the eye-dome lighting. This property can have a value between 1 and 5. 
+
+
+
+
+
+
 ## CIMGeodatabaseErrorLayer
 #### Represents GDB Error tables as a composite layer and draws the errors. 
 
@@ -1077,6 +1162,7 @@
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
 
 
 ### CIMLayerDefinition 
@@ -1138,6 +1224,7 @@
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
 
 
 ### CIMLayerDefinition 
@@ -1217,6 +1304,7 @@
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
 
 
 ### CIMLayerDefinition 
@@ -1402,6 +1490,7 @@
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
 
 
 ### CIMLayerDefinition 

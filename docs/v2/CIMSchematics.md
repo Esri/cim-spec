@@ -36,7 +36,7 @@
 | isPredefined | boolean | A value indicating whether or not the schematic attribute is predefined. 
 | name | string | The name of the schematic attribute. 
 | parameters | {JSON_object}| The schematic attribute parameters. 
-| storageFieldDescription | [CIMFieldDescription](CIMVectorLayers.md#cimfielddescription) | The storage field description. 
+| storageFieldDescription | [FieldDescription](Types.md#fielddescription) | The storage field description. 
 | storageMode | [enumeration SchematicAttributeStorage](CIMSchematics.md#enumeration-schematicattributestorage) | The storage mode. 
 | storageName | string | The storage name. 
 | storagePropertyName | string | The storage property name. 
@@ -239,7 +239,7 @@
 | schematicDataSourceID | long | The schematic data source ID. 
 | schematicElementType | [enumeration SchematicElementType](CIMSchematics.md#enumeration-schematicelementtype) | The schematic element type. 
 | schematicQueryParameters | [CIMSchematicQueryParameter](CIMSchematics.md#cimschematicqueryparameter) | The schematic query parameters. 
-| shapeFieldDescription | [CIMFieldDescription](CIMVectorLayers.md#cimfielddescription) | The shape field description. 
+| shapeFieldDescription | [FieldDescription](Types.md#fielddescription) | The shape field description. 
 | tableName | string | The table name. 
 
 
@@ -261,6 +261,7 @@
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
 
 
 ### CIMLayerDefinition 

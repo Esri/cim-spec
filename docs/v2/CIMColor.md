@@ -10,7 +10,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | colorSpace | [ColorSpace](Types.md#colorspace) | The color spaced used defined by an ICC color profile. 
-| values | [double], | The values for the color and alpha channels as defined by the color model. Alpha is the last value in the array for all colors. 
+| values | [double] | The values for the color and alpha channels as defined by the color model. Alpha is the last value in the array for all colors. 
 
 
 ### CIMCMYKColor 
@@ -70,7 +70,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | colorSpace | [ColorSpace](Types.md#colorspace) | The color spaced used defined by an ICC color profile. 
-| values | [double], | The values for the color and alpha channels as defined by the color model. Alpha is the last value in the array for all colors. 
+| values | [double] | The values for the color and alpha channels as defined by the color model. Alpha is the last value in the array for all colors. 
 
 
 ### CIMGrayColor 
@@ -92,7 +92,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | colorSpace | [ColorSpace](Types.md#colorspace) | The color spaced used defined by an ICC color profile. 
-| values | [double], | The values for the color and alpha channels as defined by the color model. Alpha is the last value in the array for all colors. 
+| values | [double] | The values for the color and alpha channels as defined by the color model. Alpha is the last value in the array for all colors. 
 
 
 ### CIMHSLColor 
@@ -114,7 +114,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | colorSpace | [ColorSpace](Types.md#colorspace) | The color spaced used defined by an ICC color profile. 
-| values | [double], | The values for the color and alpha channels as defined by the color model. Alpha is the last value in the array for all colors. 
+| values | [double] | The values for the color and alpha channels as defined by the color model. Alpha is the last value in the array for all colors. 
 
 
 ### CIMHSVColor 
@@ -275,7 +275,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | colorSpace | [ColorSpace](Types.md#colorspace) | The color spaced used defined by an ICC color profile. 
-| values | [double], | The values for the color and alpha channels as defined by the color model. Alpha is the last value in the array for all colors. 
+| values | [double] | The values for the color and alpha channels as defined by the color model. Alpha is the last value in the array for all colors. 
 
 
 ### CIMRGBColor 
@@ -327,7 +327,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | colorSpace | [ColorSpace](Types.md#colorspace) | The color spaced used defined by an ICC color profile. 
-| values | [double], | The values for the color and alpha channels as defined by the color model. Alpha is the last value in the array for all colors. 
+| values | [double] | The values for the color and alpha channels as defined by the color model. Alpha is the last value in the array for all colors. 
 
 
 ### CIMSpotColor 
@@ -374,7 +374,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | colorSpace | [ColorSpace](Types.md#colorspace) | The color spaced used defined by an ICC color profile. 
-| values | [double], | The values for the color and alpha channels as defined by the color model. Alpha is the last value in the array for all colors. 
+| values | [double] | The values for the color and alpha channels as defined by the color model. Alpha is the last value in the array for all colors. 
 
 
 ### CIMXYZColor 

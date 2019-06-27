@@ -17,6 +17,30 @@
 
 
 
+## CIMBookmarkDocument
+#### Represents a bookmark document which is the document type used for saving .bkmx files. 
+
+
+### CIMVersion 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| version | string | Document version. Set by the system. 
+| build | long | The build an item was created with. Set by the system. 
+
+
+### CIMBookmarkDocument 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| spatialReference | [SpatialReference](ExternalReferences.md#spatialreference) | The spatial reference. 
+| bookmarks | [CIMBookmark](CIMMap.md#cimbookmark) | The bookmarks. 
+
+
+
+
+
+
 ## CIMDocumentInfo
 #### Represents high level information for a document. 
 
@@ -172,6 +196,8 @@
 | layerDefinitions | [CIMDefinition](Types.md#definition) | The layer definitions in the layer document. 
 | binaryReferences | [CIMBinaryReference](CIMDocument.md#cimbinaryreference) | The binary references of the document. 
 | elevationSurfaces | [CIMMapElevationSurface](CIMMap.md#cimmapelevationsurface) | The elevation surfaces used by layer definitions in the layer document. 
+| RGBColorProfile | string | The name of the RGB color profile of this layer's source map. If the target map has color management enabled, this value will be used to transform the layer's RGB colors as it is imported into that map. 
+| CMYKColorProfile | string | The name of the CMYK color profile of this layer's source map. If the target map has color management enabled, this value will be used to transform the layer's CMYK colors as it is imported into that map. 
 
 
 
@@ -303,6 +329,7 @@
 | sceneDrawingMode | [enumeration SceneDrawingMode](CIMDocument.md#enumeration-scenedrawingmode) | The scene's drawing mode. 
 | fieldOfView | double | The scene's field-of-view in degrees (value must be between 35 and 70). Only used when the scene is in Perspective draw mode. 
 | pauseDrawing | boolean | A value indicating whether drawing is in paused state for the view. 
+| exploratoryAnalysis | [CIMExploratoryAnalysisDefinition](Types.md#exploratoryanalysisdefinition) | The exploratory analysis definitions for the view. 
 
 
 
@@ -356,4 +383,128 @@
 |---------|--------|--------|
 | Perspective| 0| Draw scene using vanishing point technique. 
 | Isometric| 1| Draw scene using parallel line technique. 
+
+
+
+
+## CIMStatisticalDataCollection
+#### A statistical data collection is used by the Business Analyst to organize and present data that can be aggregated by the enrich functionality. This is not the storage of the data, it is metadata about the data that describes how data will be aggregated by Business Analyst. Currently, data can be calculated by defining what data collections and analysis variables are needed in the output for a given input features. 
+
+
+### CIMStatisticalDataCollection 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The Name of the data collection. 
+| shortDescription | string | Short description of the data collection. 
+| longDescription | string | Long description of the data collection. 
+| keywords | [string] | Keywords for the data collection. 
+| countries | [string] | List of countries for data collection. Use to filter data collections by country. 
+| categories | [string] | Levels of categories the data collection. Used to show the data collection in the Data Browser. 
+| author | string | Author of the data collection. 
+| creationDate | [TimeInstant](ExternalReferences.md#timeinstant) | Creation date of the data collection. 
+| lastRevisionDate | [TimeInstant](ExternalReferences.md#timeinstant) | Last revision date of the data collection. 
+| calculators | [CIMStatisticalDataCollectionCalculator](CIMDocument.md#cimstatisticaldatacollectioncalculator) | The Calculators of the data collection. 
+| dataVintage | string | Vintage of used data (for example, "Q3_2018"). 
+| dataVintageDescription | string | Description of used data ("2018 US Data Update"). 
+| icon | string | Data collection image. 
+
+
+
+
+
+
+## CIMStatisticalDataCollectionDocument
+#### Represents a document used for saving statistical data collections. 
+
+
+### CIMVersion 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| version | string | Document version. Set by the system. 
+| build | long | The build an item was created with. Set by the system. 
+
+
+### CIMStatisticalDataCollectionDocument 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| statisticalDataCollection | [CIMStatisticalDataCollection](CIMDocument.md#cimstatisticaldatacollection) | The Statistical Data Collection. 
+
+
+
+
+
+
+## CIMStatisticalDataCollectionFeatureLayerCalculator
+#### Statistical data collection calculator based on a feature layer. 
+
+
+### CIMStatisticalDataCollectionCalculator 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The Name of the calculator. 
+
+
+### CIMStatisticalDataCollectionFeatureLayerCalculator 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| datasetID | string | The DatasetID which is used for getting the information about which points layer will be available and which apportionment methods will be used. If DatasetID is empty, only Area Apportionment method is available. 
+| dataConnection | [DataConnection](Types.md#dataconnection) | The data connection to the source. 
+| fields | [CIMStatisticalDataCollectionField](CIMDocument.md#cimstatisticaldatacollectionfield) | The regular fields of the calculator. 
+
+
+
+
+
+
+## CIMStatisticalDataCollectionField
+#### Represents a field of a statistical data collection that matches to existing field in referenced feature dataset. 
+
+
+### CIMStatisticalDataCollectionField 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The field name from the data. 
+| alias | string | The alias of the field. 
+| category | string | The category of the field. 
+| apportionmentMethod | string | How the values from the feature service are apportioned. For local data it should be one of the apportionment method from default hierarchy of the specified dataset. Use ?GEOM? for Area apportionment. 
+| summaryType | [enumeration StatisticalDataCollectionSummaryType](CIMDocument.md#enumeration-statisticaldatacollectionsummarytype) | The summary type how apportioned values are summarized to produce the final result. 
+| weightFieldName | string | The additional attribute for 'Average' summary type that defines which field should be used to get weighted sum. 
+| precision | long | The number of digits in a number. For example, the number 56.78 has a precision of 4. Precision is only valid for fields that are numeric. 
+| fieldFormat | [enumeration StatisticalReportFieldFormat](CIMDocument.md#enumeration-statisticalreportfieldformat) | How to display values of the field in reports. 
+| vintage | string | The description of vintage of the data (For example, "US2018 Q4"). 
+| script | string | The additional attribute for 'Script' summary type that defines script which should be calculated. 
+| scriptLanguage | [enumeration LabelExpressionEngine](CIMLabelPlacement.md#enumeration-labelexpressionengine) | The additional attribute for 'Script' summary type that defines script language used by 'Script' attribute. 
+| usedFields | [string] | The additional attribute for 'Script' summary type that defines another fields used by script. These may include featureclass fields (even non-existing in calculator?) and another scripts. 
+
+
+
+
+
+### Enumeration: StatisticalDataCollectionSummaryType
+#### Represents the script language used by the statistical data collection. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Sum| 0| Sum 
+| Avg| 1| Average 
+| Min| 2| Minimum 
+| Max| 3| Maximum 
+| Script| 4| Script/Calculated variable 
+
+
+
+### Enumeration: StatisticalReportFieldFormat
+#### How to display values of the field in reports. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Count| 0| Regular value (numeric or text). 
+| Percent| 1| It is a percentage value and it should displayed using the rules for percentage values. 
+| Currency| 2| The value is a currency and should be displayed using the rules for currencies. 
 

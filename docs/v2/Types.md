@@ -62,6 +62,8 @@
 
 [CIMVectorMarker](CIMSymbols.md#cimvectormarker)
 
+[CIMWaterFill](CIMSymbols.md#cimwaterfill)
+
 [CIMglTFMarker3D](CIMSymbols.md#cimgltfmarker3d)
 
 ### Symbol
@@ -123,6 +125,8 @@
 [CIMChartBarSeries](CIMLayer.md#cimchartbarseries)
 
 [CIMChartBoxPlotSeries](CIMLayer.md#cimchartboxplotseries)
+
+[CIMChartCalendarHeatSeries](CIMLayer.md#cimchartcalendarheatseries)
 
 [CIMChartDataClockSeries](CIMLayer.md#cimchartdataclockseries)
 
@@ -304,11 +308,17 @@
 
 [CIMLASDatasetLayer](CIMTerrainLayers.md#cimlasdatasetlayer)
 
+[CIMPointCloudLayer](CIMTerrainLayers.md#cimpointcloudlayer)
+
 [CIMTerrainLayer](CIMTerrainLayers.md#cimterrainlayer)
 
 [CIMTinLayer](CIMTerrainLayers.md#cimtinlayer)
 
 [CIMAnnotationLayer](CIMVectorLayers.md#cimannotationlayer)
+
+[CIMBuildingDisciplineLayer](CIMVectorLayers.md#cimbuildingdisciplinelayer)
+
+[CIMBuildingLayer](CIMVectorLayers.md#cimbuildinglayer)
 
 [CIMDimensionLayer](CIMVectorLayers.md#cimdimensionlayer)
 
@@ -316,7 +326,11 @@
 
 [CIMParcelFabricLayer](CIMVectorLayers.md#cimparcelfabriclayer)
 
+[CIMParcelLayer](CIMVectorLayers.md#cimparcellayer)
+
 [CIMStandaloneTable](CIMVectorLayers.md#cimstandalonetable)
+
+[CIMSubtypeGroupLayer](CIMVectorLayers.md#cimsubtypegrouplayer)
 
 [CIMVectorTileLayer](CIMVectorLayers.md#cimvectortilelayer)
 
@@ -336,7 +350,15 @@
 
 [CIMMultipatchFeatureTemplate](CIMVectorLayers.md#cimmultipatchfeaturetemplate)
 
+### EditingTemplateCollectionItem
+
+[CIMEditingTemplateCollection](CIMMap.md#cimeditingtemplatecollection)
+
+[CIMEditingTemplateReference](CIMMap.md#cimeditingtemplatereference)
+
 ### Element
+
+[CIMChartFrame](CIMLayout.md#cimchartframe)
 
 [CIMDoubleFillScaleBar](CIMLayout.md#cimdoublefillscalebar)
 
@@ -436,7 +458,15 @@
 
 [CIMFeatureDatasetDataConnection](CIMVectorLayers.md#cimfeaturedatasetdataconnection)
 
+### FieldDescription
+
+[CIMAggregateField](CIMVectorLayers.md#cimaggregatefield)
+
+[CIMFieldDescription](CIMVectorLayers.md#cimfielddescription)
+
 ### FrameElement
+
+[CIMChartFrame](CIMLayout.md#cimchartframe)
 
 [CIMDoubleFillScaleBar](CIMLayout.md#cimdoublefillscalebar)
 
@@ -632,6 +662,8 @@
 
 ### MapSurround
 
+[CIMChartFrame](CIMLayout.md#cimchartframe)
+
 [CIMDoubleFillScaleBar](CIMLayout.md#cimdoublefillscalebar)
 
 [CIMLegend](CIMLayout.md#cimlegend)
@@ -754,6 +786,30 @@
 
 [CIMRasterVectorFieldColorizer](CIMImageLayers.md#cimrastervectorfieldcolorizer)
 
+### PointCloudFilter
+
+[CIMPointCloudBitFieldFilter](CIMTerrainLayers.md#cimpointcloudbitfieldfilter)
+
+[CIMPointCloudReturnFilter](CIMTerrainLayers.md#cimpointcloudreturnfilter)
+
+[CIMPointCloudValueFilter](CIMTerrainLayers.md#cimpointcloudvaluefilter)
+
+### PointCloudRenderer
+
+[CIMPointCloudClassBreaksRenderer](CIMTerrainLayers.md#cimpointcloudclassbreaksrenderer)
+
+[CIMPointCloudRGBRenderer](CIMTerrainLayers.md#cimpointcloudrgbrenderer)
+
+[CIMPointCloudStretchRenderer](CIMTerrainLayers.md#cimpointcloudstretchrenderer)
+
+[CIMPointCloudUniqueValueRenderer](CIMTerrainLayers.md#cimpointclouduniquevaluerenderer)
+
+### PointCloudSizeAlgorithm
+
+[CIMPointCloudFixedSizeAlgorithm](CIMTerrainLayers.md#cimpointcloudfixedsizealgorithm)
+
+[CIMPointCloudSplatAlgorithm](CIMTerrainLayers.md#cimpointcloudsplatalgorithm)
+
 ### ProfileObstacle
 
 [CIMProfileObstacle](CIMLayout.md#cimprofileobstacle)
@@ -872,6 +928,12 @@
 
 ### Version
 
+[CIMSegmentationProfileDocument](CIMBusinessAnalyst.md#cimsegmentationprofiledocument)
+
+[CIMSegmentationTargetGroupDocument](CIMBusinessAnalyst.md#cimsegmentationtargetgroupdocument)
+
+[CIMBookmarkDocument](CIMDocument.md#cimbookmarkdocument)
+
 [CIMDocumentInfo](CIMDocument.md#cimdocumentinfo)
 
 [CIMLayerDocument](CIMDocument.md#cimlayerdocument)
@@ -879,6 +941,8 @@
 [CIMLayoutDocument](CIMDocument.md#cimlayoutdocument)
 
 [CIMMapDocument](CIMDocument.md#cimmapdocument)
+
+[CIMStatisticalDataCollectionDocument](CIMDocument.md#cimstatisticaldatacollectiondocument)
 
 [CIMReportDocument](CIMLayout.md#cimreportdocument)
 
@@ -904,6 +968,8 @@
 
 [CIMColorVisualVariable](CIMRenderers.md#cimcolorvisualvariable)
 
+[CIMMultilevelColorVisualVariable](CIMRenderers.md#cimmultilevelcolorvisualvariable)
+
 [CIMRotationVisualVariable](CIMRenderers.md#cimrotationvisualvariable)
 
 [CIMSizeVisualVariable](CIMRenderers.md#cimsizevisualvariable)
@@ -923,6 +989,16 @@
 [CIMUniqueValueRenderer](CIMRenderers.md#cimuniquevaluerenderer)
 
 ## Index 
+
+[CIMSegmentationProfile](CIMBusinessAnalyst.md#CIMSegmentationProfile)
+
+[CIMSegmentationProfileDocument](CIMBusinessAnalyst.md#CIMSegmentationProfileDocument)
+
+[CIMSegmentationTarget](CIMBusinessAnalyst.md#CIMSegmentationTarget)
+
+[CIMSegmentationTargetGroup](CIMBusinessAnalyst.md#CIMSegmentationTargetGroup)
+
+[CIMSegmentationTargetGroupDocument](CIMBusinessAnalyst.md#CIMSegmentationTargetGroupDocument)
 
 [CIMCMYKColor](CIMColor.md#CIMCMYKColor)
 
@@ -956,6 +1032,8 @@
 
 [CIMBinaryReference](CIMDocument.md#CIMBinaryReference)
 
+[CIMBookmarkDocument](CIMDocument.md#CIMBookmarkDocument)
+
 [CIMDocumentInfo](CIMDocument.md#CIMDocumentInfo)
 
 [CIMExternalTableView](CIMDocument.md#CIMExternalTableView)
@@ -977,6 +1055,14 @@
 [CIMModuleSettings](CIMDocument.md#CIMModuleSettings)
 
 [CIMProjectItem](CIMDocument.md#CIMProjectItem)
+
+[CIMStatisticalDataCollection](CIMDocument.md#CIMStatisticalDataCollection)
+
+[CIMStatisticalDataCollectionDocument](CIMDocument.md#CIMStatisticalDataCollectionDocument)
+
+[CIMStatisticalDataCollectionFeatureLayerCalculator](CIMDocument.md#CIMStatisticalDataCollectionFeatureLayerCalculator)
+
+[CIMStatisticalDataCollectionField](CIMDocument.md#CIMStatisticalDataCollectionField)
 
 [CIMGADataConnection](CIMGALayer.md#CIMGADataConnection)
 
@@ -1112,6 +1198,8 @@
 
 [CIMChartBoxPlotSeries](CIMLayer.md#CIMChartBoxPlotSeries)
 
+[CIMChartCalendarHeatSeries](CIMLayer.md#CIMChartCalendarHeatSeries)
+
 [CIMChartDataClockSeries](CIMLayer.md#CIMChartDataClockSeries)
 
 [CIMChartFillSymbolProperties](CIMLayer.md#CIMChartFillSymbolProperties)
@@ -1160,6 +1248,8 @@
 
 [CIMDefinitionFilter](CIMLayer.md#CIMDefinitionFilter)
 
+[CIMEyeDomeLighting](CIMLayer.md#CIMEyeDomeLighting)
+
 [CIMGeodatabaseErrorLayer](CIMLayer.md#CIMGeodatabaseErrorLayer)
 
 [CIMGroupLayer](CIMLayer.md#CIMGroupLayer)
@@ -1181,6 +1271,8 @@
 [CIMTopologyLayer](CIMLayer.md#CIMTopologyLayer)
 
 [CIMAutoCamera](CIMLayout.md#CIMAutoCamera)
+
+[CIMChartFrame](CIMLayout.md#CIMChartFrame)
 
 [CIMCondensedTabGridLine](CIMLayout.md#CIMCondensedTabGridLine)
 
@@ -1326,7 +1418,15 @@
 
 [CIMDatumTransform](CIMMap.md#CIMDatumTransform)
 
+[CIMEditingElevation](CIMMap.md#CIMEditingElevation)
+
+[CIMEditingTemplateCollection](CIMMap.md#CIMEditingTemplateCollection)
+
+[CIMEditingTemplateReference](CIMMap.md#CIMEditingTemplateReference)
+
 [CIMElevationSource](CIMMap.md#CIMElevationSource)
+
+[CIMFieldMapping](CIMMap.md#CIMFieldMapping)
 
 [CIMGroundToGridCorrection](CIMMap.md#CIMGroundToGridCorrection)
 
@@ -1518,6 +1618,8 @@
 
 [CIMHeatMapRenderer](CIMRenderers.md#CIMHeatMapRenderer)
 
+[CIMMultilevelColorVisualVariable](CIMRenderers.md#CIMMultilevelColorVisualVariable)
+
 [CIMPrimitiveOverride](CIMRenderers.md#CIMPrimitiveOverride)
 
 [CIMProportionalPieSizeOptions](CIMRenderers.md#CIMProportionalPieSizeOptions)
@@ -1692,9 +1794,15 @@
 
 [CIMVectorMarker](CIMSymbols.md#CIMVectorMarker)
 
+[CIMWaterFill](CIMSymbols.md#CIMWaterFill)
+
 [CIMglTFMarker3D](CIMSymbols.md#CIMglTFMarker3D)
 
+[CIMColorClassBreak](CIMTerrainLayers.md#CIMColorClassBreak)
+
 [CIMColorModulationInfo](CIMTerrainLayers.md#CIMColorModulationInfo)
+
+[CIMColorUniqueValue](CIMTerrainLayers.md#CIMColorUniqueValue)
 
 [CIMLASDatasetLayer](CIMTerrainLayers.md#CIMLASDatasetLayer)
 
@@ -1711,6 +1819,24 @@
 [CIMLASUniqueValueRenderer](CIMTerrainLayers.md#CIMLASUniqueValueRenderer)
 
 [CIMPointCloudBitFieldFilter](CIMTerrainLayers.md#CIMPointCloudBitFieldFilter)
+
+[CIMPointCloudClassBreaksRenderer](CIMTerrainLayers.md#CIMPointCloudClassBreaksRenderer)
+
+[CIMPointCloudFixedSizeAlgorithm](CIMTerrainLayers.md#CIMPointCloudFixedSizeAlgorithm)
+
+[CIMPointCloudLayer](CIMTerrainLayers.md#CIMPointCloudLayer)
+
+[CIMPointCloudRGBRenderer](CIMTerrainLayers.md#CIMPointCloudRGBRenderer)
+
+[CIMPointCloudReturnFilter](CIMTerrainLayers.md#CIMPointCloudReturnFilter)
+
+[CIMPointCloudSplatAlgorithm](CIMTerrainLayers.md#CIMPointCloudSplatAlgorithm)
+
+[CIMPointCloudStretchRenderer](CIMTerrainLayers.md#CIMPointCloudStretchRenderer)
+
+[CIMPointCloudUniqueValueRenderer](CIMTerrainLayers.md#CIMPointCloudUniqueValueRenderer)
+
+[CIMPointCloudValueFilter](CIMTerrainLayers.md#CIMPointCloudValueFilter)
 
 [CIMSceneDataConnection](CIMTerrainLayers.md#CIMSceneDataConnection)
 
@@ -1744,6 +1870,8 @@
 
 [CIMTinNodeValueRenderer](CIMTerrainLayers.md#CIMTinNodeValueRenderer)
 
+[CIMAggregateField](CIMVectorLayers.md#CIMAggregateField)
+
 [CIMAnnotationLayer](CIMVectorLayers.md#CIMAnnotationLayer)
 
 [CIMAnnotationSubLayer](CIMVectorLayers.md#CIMAnnotationSubLayer)
@@ -1754,7 +1882,13 @@
 
 [CIMBarChartMediaInfo](CIMVectorLayers.md#CIMBarChartMediaInfo)
 
+[CIMBinningFeatureReduction](CIMVectorLayers.md#CIMBinningFeatureReduction)
+
 [CIMBinningVisualization](CIMVectorLayers.md#CIMBinningVisualization)
+
+[CIMBuildingDisciplineLayer](CIMVectorLayers.md#CIMBuildingDisciplineLayer)
+
+[CIMBuildingLayer](CIMVectorLayers.md#CIMBuildingLayer)
 
 [CIMColumnChartMediaInfo](CIMVectorLayers.md#CIMColumnChartMediaInfo)
 
@@ -1818,6 +1952,8 @@
 
 [CIMParcelFabricLayer](CIMVectorLayers.md#CIMParcelFabricLayer)
 
+[CIMParcelLayer](CIMVectorLayers.md#CIMParcelLayer)
+
 [CIMPieChartMediaInfo](CIMVectorLayers.md#CIMPieChartMediaInfo)
 
 [CIMPopupInfo](CIMVectorLayers.md#CIMPopupInfo)
@@ -1843,6 +1979,8 @@
 [CIMStandardDataConnection](CIMVectorLayers.md#CIMStandardDataConnection)
 
 [CIMStreamServiceDataConnection](CIMVectorLayers.md#CIMStreamServiceDataConnection)
+
+[CIMSubtypeGroupLayer](CIMVectorLayers.md#CIMSubtypeGroupLayer)
 
 [CIMSuppressActivity](CIMVectorLayers.md#CIMSuppressActivity)
 

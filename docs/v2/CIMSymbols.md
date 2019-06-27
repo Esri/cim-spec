@@ -484,7 +484,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | beginCut | double | The distance from the beginning of a line that the display of the stroke starts. The beginning of the line is determined by the direction in which the line was digitized. 
-| endCut | double | The distance from the end of a line that the display of the stroke starts. The end of the line is determined by the direction in which the line was digitized. 
+| endCut | double | The distance from the end of a line that the display of the stroke ends. The end of the line is determined by the direction in which the line was digitized. 
+| middleCut | double | The distance around the middle of a line that the display of the stroke is interrupted. 
 | invert | boolean | A value indicating whether the effect should be applied in the opposite manner. This displays the stroke symbol only at the ends of the line and leaves the rest of the line unsymbolized. 
 
 
@@ -2535,6 +2536,7 @@
 | verticalGlyphOrientation | [enumeration VerticalGlyphOrientation](CIMSymbols.md#enumeration-verticalglyphorientation) | The orientation for the non-vertical text in a vertical layout. For example, an English fragment in a Japanese text. 
 | wordSpacing | double | The additional spacing that is added to between the words of the text string. 100% indicates that regular spacing is used. 
 | billboardMode3D | [enumeration BillboardMode](CIMEnumerations.md#enumeration-billboardmode) | The billboard mode of the text symbol. 
+| overprint | boolean | A value indicating whether or not the symbol should overprint in press printing. 
 
 
 
@@ -2622,6 +2624,66 @@
 |---------|--------|--------|
 | Right| 0| Align right. 
 | Upright| 1| Align upright. 
+
+
+
+
+## CIMWaterFill
+#### Represents a water fill which fills polygonal geometry with animated water. 
+
+
+### CIMSymbolLayer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| effects | [CIMGeometricEffect](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
+| enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
+| name | string | The internal name of the symbol layer used for symbol level drawing. 
+| colorLocked | boolean | A value indicating whether the color set at the basic properties level is applied to the symbol layer. If the symbol layer is color locked then changes made to the color in the basic properties will not be applied to the symbol layer. 
+| primitiveName | string | The primitive name. 
+| overprint | boolean | A value indicating whether or not the symbol layer should overprint in press printing. 
+
+
+### CIMFill 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMWaterFill 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| color | [Color](Types.md#color) | The intrinsic color of the water. 
+| waveStrength | [enumeration WaveStrength](CIMSymbols.md#enumeration-wavestrength) | Strength of the waves. This property along with waterbody size are the parameters which drive the wave appearance. 
+| waterbodySize | [enumeration WaterbodySize](CIMSymbols.md#enumeration-waterbodysize) | The waterbody size allowing for a range of sizes from small pools to oceans. This property along with wave strength are the parameters which drive the wave appearance. 
+| waveHasDirection | boolean | A value indicating whether the waves are directionless (false), or if they have a dominant direction (true). 
+| waveDirection | double | The azimuthal bearing for direction of the waves. Only has effect when WasHasDirection is true. 
+
+
+
+
+
+### Enumeration: WaterbodySize
+#### Waterbody size. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Small| 0| Small water body. 
+| Medium| 1| Medium water body. 
+| Large| 2| Large water body. 
+
+
+
+### Enumeration: WaveStrength
+#### Strength of waves. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Calm| 0| Calm glassy water with no waves. 
+| Rippled| 1| Rippled water. 
+| Slight| 2| Slightly wavy water. 
+| Moderate| 3| Moderately wavy water. 
 
 
 

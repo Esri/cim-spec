@@ -254,7 +254,7 @@ A Multipoint is a collection of Points.  A multipoint is a one-dimensional geome
 | hasZ | boolean |Indicates whether the geometry contains Z coordinate values.
 | spatialReference | [SpatialReference](ExternalReferences.md#spatialreference) | The spatial reference can be defined using a well-known ID (WKID) or well-known text (WKT).
 | binaryPatches | string |Contains a zip-compressed and base64 encoded ESRI shape without materials.
-| materials     |[[Material](ExternalReferences.md#material)],|This is an ordered Array contains MultiPatch materials and must have exactly same number of materials as the MultiPatch encoded in the binaryPatches.
+| materials     |[[Material](ExternalReferences.md#material)] |This is an ordered Array contains MultiPatch materials and must have exactly same number of materials as the MultiPatch encoded in the binaryPatches.
 
 ### Material
 
@@ -471,19 +471,19 @@ A composite geotransformation allows you to create a 'chain' of existing or cust
 | stddev | double |The standard deviation of the histogram.|
 | limitMin | double |The minimum limit of the range.|
 | limitMax | double |The maximum limit of the range.|
-| histogram | [double], |The histogram values of the statistics.|
+| histogram | [double] |The histogram values of the statistics.|
 | nsamples | double |The number of samples.|
 | resolution | double |The resolution.|
 | nBands | long |The number of bands.|
-| covariances | [double], |The covariances.|
+| covariances | [double] |The covariances.|
 
 ## RasterColormap
 A container for a colormap used to display a raster band.
 
 |Property | Type | Description |
 |---------|--------|--------|
-| Values| [long], |An array of values of the colormap.|
-| Colors| [long], |An array of colors corresponding to the values. Colors are represented as RGB stored as a long integer.|
+| Values| [long] |An array of values of the colormap.|
+| Colors| [long] |An array of colors corresponding to the values. Colors are represented as RGB stored as a long integer.|
 
 ## TimeReference
 The Time Reference contains information about time zone and daylight savings time rules.  It is used to integrate different data sets that have time stamps from different time zones, or using different daylight savings time rules.
@@ -530,7 +530,7 @@ An object defining LAS filtering
 |---------|--------|--------|
 | type  | string | The value for this will always be "LasFilter"|
 | areaOfInterest | [geometry](ExternalReferences.md#geometry) |The area of interest.|
-| classCodes     | [long],|An array of class codes each number ranging from 0-255. |
+| classCodes     | [long] |An array of class codes each number ranging from 0-255. |
 | classFlags     | long |	The number that is the bitwise OR of several values indicating. the class flags. Here are the values:<br><ul><li>0x00000001 - None</li><li>0x00000002 - LAS synthetic-point flag.</li><li>0x00000004 - LAS key-point flag.</li><li>0x00000002 - LAS synthetic-point flag.</li><li>0x00000008 - LAS withheld-point flag.</li><li>0x000000010 - LAS overlap-point flag.</li></ul>|
-| Returns        | [long],|An arrayof LAS return numbers. |
+| Returns        | [long] |An arrayof LAS return numbers. |
 | SurfaceConstraints|	[string] |The array of surface constraints.|

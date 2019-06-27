@@ -66,6 +66,7 @@
 | camera | [CIMViewCamera](CIMMap.md#cimviewcamera) | The camera. 
 | location | [Envelope](ExternalReferences.md#envelope) | The location. 
 | timeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The time extent. 
+| rangeExtent | [CIMLayerRange](CIMVectorLayers.md#cimlayerrange) | The range extent. RangeExtent.LayerURI is not currently being used. 
 | description | string | The bookmark description. 
 | videoURI | string | The URI to the standalone video. 
 | videoElapsedTime | double | The video elapsed time in seconds. 
@@ -92,6 +93,7 @@
 | None| 0| No clipping applied. 
 | MapExtent| 1| Clip to the custom extent defined for the map. 
 | CustomShape| 2| Clip to a custom shape. 
+| MapSeries| 3| Clip to the shape defined by a map series. 
 
 
 
@@ -137,6 +139,80 @@
 
 
 
+## CIMEditingElevation
+#### Defines the properties needed to specify new Z values when creating or modifying features. 
+
+
+### CIMEditingElevation 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| captureMode | [enumeration EditingElevationCaptureMode](CIMMap.md#enumeration-editingelevationcapturemode) | The elevation capture mode. 
+| constantValue | double | The the value used when CaptureMode is Constant. 
+| surfaceID | string | The GUID of the map elevation surface to be used when CaptureMode is Surface. 
+
+
+
+
+
+### Enumeration: EditingElevationCaptureMode
+#### Defines the capture mode used to specify new Z values when creating or modifying features. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Off| 0| No Elevation capturing mode is currently being used. 
+| Constant| 1| A constant value is used to populate all Z coordinates when an edit is performed. 
+| Surface| 2| A map elevation surface is used to populate all Z coordinates when an edit is performed. 
+
+
+
+
+## CIMEditingTemplateCollection
+#### Represents a collection of editing templates. 
+
+
+### CIMEditingTemplateCollectionItem 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name of this item. 
+
+
+### CIMEditingTemplateCollection 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| contents | [CIMEditingTemplateCollectionItem](Types.md#editingtemplatecollectionitem) | The array of items stored within this collection. 
+| expanded | boolean | A value indicating whether this collection is expanded in the user interface. 
+
+
+
+
+
+
+## CIMEditingTemplateReference
+#### Represents a reference to an editing template. 
+
+
+### CIMEditingTemplateCollectionItem 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name of this item. 
+
+
+### CIMEditingTemplateReference 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| layerURI | string | The layer URI where this template is located. 
+| templateName | string | The name of the template being referenced. 
+
+
+
+
+
+
 ## CIMElevationSource
 #### Represents an elevation source. 
 
@@ -151,6 +227,23 @@
 | name | string | The name of the elevation source. 
 | metadataURI | string | The metadata URI of the elevation source. 
 | elevationSourceID | string | The elevation source ID. 
+
+
+
+
+
+
+## CIMFieldMapping
+#### Represents a field mapping that maps fields from source layer or table to target layer or table. 
+
+
+### CIMFieldMapping 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| sourceURI | string | The URI of the source layer or table. 
+| targetURI | string | The URI of the target layer or table. 
+| mappingExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression for mapping from source layer or table to target layer or table. 
 
 
 
@@ -206,6 +299,8 @@
 | sunAzimuth | double | The sun azimuth. 
 | sunAltitude | double | The sun altitude. 
 | showStars | boolean | A value indicating whether to show the stars and the atmospheric halo for a global scene. 
+| enableAmbientOcclusion | boolean | A value indicating whether to enable ambient occlusion for a scene or map. 
+| enableEyeDomeLighting | boolean | A value indicating whether to enable eye-dome lighting for a scene or map. 
 
 
 
@@ -421,6 +516,7 @@
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
 
 
 ### CIMMap 
@@ -482,6 +578,11 @@
 | clippingAreaBorderSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The border symbol used for displaying the clipping area. 
 | nearPlaneClipDistanceMode | [enumeration ClipDistanceMode](CIMMap.md#enumeration-clipdistancemode) | The near plane clipping mode for a scene. This property applies to only local and global viewing modes. 
 | nearPlaneClipDistance | double | The near plane clip distance in meters for a scene. This property applies to only local and global viewing modes. 
+| editingElevation | [CIMEditingElevation](CIMMap.md#cimeditingelevation) | The editing elevation mode. 
+| editingTemplateCollection | [CIMEditingTemplateCollection](CIMMap.md#cimeditingtemplatecollection) | The collection of editing templates for a map. 
+| fieldMappings | [CIMFieldMapping](CIMMap.md#cimfieldmapping) | The collection of field mappings for a map. 
+| RGBColorProfile | string | The name of the RGB color profile for a map. 
+| CMYKColorProfile | string | The name of the CMYK color profile for a map. 
 
 
 
@@ -800,6 +901,7 @@
 | singleTimeSnapUnit | string | The time unit to snap to when in 'Single' time snapping mode. 
 | aliasExpressionLayerURI | string | The string containing URI of the layer that contains the alias definition. 
 | isMinimized | boolean | A value indicating whether to collapse the slider over the map view. 
+| ignoreInactiveValues | boolean | A value indicating whether to ignore values not currently set to show on the slider. 
 
 
 
@@ -998,6 +1100,11 @@
 | screenGraphics | [CIMAnimationScreenGraphic](CIMMap.md#cimanimationscreengraphic) | The list of graphic overlays used in the animation. 
 | referenceResolutionWidth | long | The desired pixel width the animation was made to export at. 
 | referenceResolutionHeight | long | The desired pixel height the animation was made to export at. 
+| exportType | string | The export MIME type. Supported formats: video/mp4, video/avi, image/gif, image/jpeg, or image/png. 
+| frameRate | double | The number of frames per second. 
+| dataRateFactor | double | The data rate factor. A higher data rate can give better quality, but produces a larger file. 
+| startFrameTime | double | What time in the animation to start at for exporting. 
+| endFrameTime | double | What time in the animation to end at for exporting. 
 
 
 

@@ -1,6 +1,24 @@
 
 
 
+## CIMColorClassBreak
+#### Represents a color class break. 
+
+
+### CIMColorClassBreak 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| upperBound | double | The upper bound for the color class break. 
+| label | string | The label for the color class break. 
+| description | string | The description for the color class break. 
+| color | [Color](Types.md#color) | The color for the color class break. 
+
+
+
+
+
+
 ## CIMColorModulationInfo
 #### Indicates whether modulation should be used to render the point. Low modulation values will darken the point color. 
 
@@ -12,6 +30,25 @@
 | field | string | The attribute to use as a source for the color modulation. 
 | minValue | double | The minimum value to compute modulation on linear scale based on field value. 
 | maxValue | double | The maximum value to compute modulation on linear scale based on field value. 
+
+
+
+
+
+
+## CIMColorUniqueValue
+#### Represents a color unique value. 
+
+
+### CIMColorUniqueValue 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| value | string | The class value as a string. 
+| label | string | The class label. 
+| description | string | The class description. 
+| color | [Color](Types.md#color) | The class color. 
+| visible | boolean | A value indicating whether this class is visible. 
 
 
 
@@ -32,6 +69,7 @@
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
 
 
 ### CIMLayerDefinition 
@@ -86,6 +124,7 @@
 | showResolution | boolean | A value indicating whether to show the resolution. 
 | useFullResolutionScale | boolean | A value indicating whether to use the full resolution scale. 
 | selectable | boolean | A value indicating whether the layer is selectable. 
+| eyeDomeLighting | [CIMEyeDomeLighting](CIMLayer.md#cimeyedomelighting) | Eye-dome lighting properties. 
 
 
 
@@ -369,6 +408,32 @@
 
 
 
+
+## CIMPointCloudClassBreaksRenderer
+#### Represents a point cloud class breaks renderer. 
+
+
+### CIMPointCloudRenderer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| pointShape | [enumeration PointCloudShapeType](CIMTerrainLayers.md#enumeration-pointcloudshapetype) | The symbol type. 
+| pointSizeAlgorithm | [CIMPointCloudAlgorithm](CIMTerrainLayers.md#cimpointcloudalgorithm) | The algorithm used to determine the symbol size. 
+| colorModulation | [CIMColorModulationInfo](CIMTerrainLayers.md#cimcolormodulationinfo) | The filter used to filter the points being drawn. 
+| fieldTransformType | [enumeration PointCloudFieldTransformType](CIMTerrainLayers.md#enumeration-pointcloudfieldtransformtype) | The field transform type. 
+| field | string | The field used to render the points. 
+
+
+### CIMPointCloudClassBreaksRenderer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| breaks | [CIMColorClassBreak](CIMTerrainLayers.md#cimcolorclassbreak) | The color class breaks of the renderer. 
+
+
+
+
+
 ### Enumeration: PointCloudFieldTransformType
 #### Point cloud field transform types. 
 
@@ -379,6 +444,261 @@
 | HighFourBit| 2| Bitwise shift field values to the right by 4. 
 | AbsoluteValue| 3| Apply abs() to field values. 
 | ModuloTen| 4| Modulate field values by 10. 
+
+
+
+
+## CIMPointCloudFixedSizeAlgorithm
+#### Represents a point cloud fixed size algorithm. 
+
+
+### CIMPointCloudSizeAlgorithm 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMPointCloudFixedSizeAlgorithm 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| useRealWorldSymbolSizes | boolean | A value indicating whether to use real world symbols sizes (meters) vs. points. 
+| size | double | The size of the symbols. 
+
+
+
+
+
+
+## CIMPointCloudLayer
+#### Represents a point cloud layer. 
+
+
+### CIMDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name. 
+| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| metadataURI | string | The metadata URI. 
+| useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
+
+
+### CIMLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| attribution | string | The attribution text that appears on a map that draws this layer. 
+| description | string | The description. 
+| layerElevation | [CIMLayerElevationSurface](CIMLayer.md#cimlayerelevationsurface) | The layer elevation. 
+| expanded | boolean | A value indicating whether this layer is expanded in the contents pane. 
+| layer3DProperties | [CIM3DLayerProperties](CIMLayer.md#cim3dlayerproperties) | The 3D layer properties. 
+| layerMasks | [string] | The layer masks. 
+| layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
+| maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| showLegends | boolean | A value indicating whether or not to show legends. 
+| transparency | double | The transparency of the layer. 
+| visibility | boolean | A value indicating whether or not this layer is visible. 
+| displayCacheType | [enumeration DisplayCacheType](CIMLayer.md#enumeration-displaycachetype) | The display cache type. 
+| maxDisplayCacheAge | double | The maximum display cache age. 
+| layerTemplate | [CIMLayerTemplate](CIMLayer.md#cimlayertemplate) | The layer template. 
+| popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
+| showPopups | boolean | A value indicating whether or not to show pop-ups. 
+| serviceLayerID | long | Identifier that will be used to identify the layer in server. 
+| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
+| refreshRate | double | The amount of time to wait between refreshing the layer. 
+| refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
+| showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
+| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+
+
+### CIMPointCloudLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| renderer | [PointCloudRenderer](Types.md#pointcloudrenderer) | The symbol renderer. 
+| dataConnection | [CIMSceneDataConnection](CIMTerrainLayers.md#cimscenedataconnection) | The data connection. 
+| pointsPerInch | double | The double value that determines the number of points to draw per display inch. 
+| pointsBudget | long | The double value to determine the upper limit on the number of points drawn. 
+| filters | [CIMPointCloudFilter](Types.md#pointcloudfilter) | The filter used to filter the points being drawn. 
+| snappable | boolean | A value indicating whether this layer participates in snapping in the editor. 
+| eyeDomeLighting | [CIMEyeDomeLighting](CIMLayer.md#cimeyedomelighting) | Eye-dome lighting properties. 
+
+
+
+
+
+
+## CIMPointCloudRGBRenderer
+#### Represents a point cloud RGB renderer. 
+
+
+### CIMPointCloudRenderer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| pointShape | [enumeration PointCloudShapeType](CIMTerrainLayers.md#enumeration-pointcloudshapetype) | The symbol type. 
+| pointSizeAlgorithm | [CIMPointCloudAlgorithm](CIMTerrainLayers.md#cimpointcloudalgorithm) | The algorithm used to determine the symbol size. 
+| colorModulation | [CIMColorModulationInfo](CIMTerrainLayers.md#cimcolormodulationinfo) | The filter used to filter the points being drawn. 
+| fieldTransformType | [enumeration PointCloudFieldTransformType](CIMTerrainLayers.md#enumeration-pointcloudfieldtransformtype) | The field transform type. 
+| field | string | The field used to render the points. 
+
+
+### CIMPointCloudRGBRenderer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+
+
+
+
+## CIMPointCloudReturnFilter
+#### Represents a point cloud return filter. 
+
+
+### CIMPointCloudFilter 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| field | string | The field used for the filter. 
+
+
+### CIMPointCloudReturnFilter 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| includedReturnsBitmask | long | The binary combination of PointCouldReturnType enumeration flags. 
+
+
+
+
+
+### Enumeration: PointCloudReturnType
+#### Point cloud return types. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Last| 1| Show last return only. 
+| FirstOfMany| 2| Show first return of multi-return only. 
+| LastOfMany| 4| Show last return of multi-return only. 
+| Single| 8| Show single return only. 
+| All| -1| No return filtering. 
+
+
+
+### Enumeration: PointCloudShapeType
+#### Point cloud shape types. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| DiskFlat| 0| Disk shaped symbol with no shading. 
+| DiskShaded| 1| Disk shaped symbol with shading. 
+
+
+
+
+## CIMPointCloudSplatAlgorithm
+#### Represents a point cloud splat algorithm. 
+
+
+### CIMPointCloudSizeAlgorithm 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMPointCloudSplatAlgorithm 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| scaleFactor | double | The scale factor used to compute the point size. 
+| minSize | double | The minimum point size. 
+
+
+
+
+
+
+## CIMPointCloudStretchRenderer
+#### Represents a point cloud stretch renderer. 
+
+
+### CIMPointCloudRenderer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| pointShape | [enumeration PointCloudShapeType](CIMTerrainLayers.md#enumeration-pointcloudshapetype) | The symbol type. 
+| pointSizeAlgorithm | [CIMPointCloudAlgorithm](CIMTerrainLayers.md#cimpointcloudalgorithm) | The algorithm used to determine the symbol size. 
+| colorModulation | [CIMColorModulationInfo](CIMTerrainLayers.md#cimcolormodulationinfo) | The filter used to filter the points being drawn. 
+| fieldTransformType | [enumeration PointCloudFieldTransformType](CIMTerrainLayers.md#enumeration-pointcloudfieldtransformtype) | The field transform type. 
+| field | string | The field used to render the points. 
+
+
+### CIMPointCloudStretchRenderer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| rangeMin | double | The minimum value used to compute the linear mapping of the renderer. 
+| rangeMax | double | The maximum value used to compute the linear mapping of the renderer. 
+| colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp of the renderer. 
+
+
+
+
+
+
+## CIMPointCloudUniqueValueRenderer
+#### Represents a point cloud unique value renderer. 
+
+
+### CIMPointCloudRenderer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| pointShape | [enumeration PointCloudShapeType](CIMTerrainLayers.md#enumeration-pointcloudshapetype) | The symbol type. 
+| pointSizeAlgorithm | [CIMPointCloudAlgorithm](CIMTerrainLayers.md#cimpointcloudalgorithm) | The algorithm used to determine the symbol size. 
+| colorModulation | [CIMColorModulationInfo](CIMTerrainLayers.md#cimcolormodulationinfo) | The filter used to filter the points being drawn. 
+| fieldTransformType | [enumeration PointCloudFieldTransformType](CIMTerrainLayers.md#enumeration-pointcloudfieldtransformtype) | The field transform type. 
+| field | string | The field used to render the points. 
+
+
+### CIMPointCloudUniqueValueRenderer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| classes | [CIMColorUniqueValue](CIMTerrainLayers.md#cimcoloruniquevalue) | The unique color classes of the renderer. 
+
+
+
+
+
+
+## CIMPointCloudValueFilter
+#### Represents a point cloud value filter. Filter points based on the value of an specified attribute. 
+
+
+### CIMPointCloudFilter 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| field | string | The field used for the filter. 
+
+
+### CIMPointCloudValueFilter 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| values | [double] | The values used as exclude or include list. 
+| mode | [enumeration PointCloudValueFilterMode](CIMTerrainLayers.md#enumeration-pointcloudvaluefiltermode) | The mode that determines if the ValueList is an include list or an exclude list. 
+
+
 
 
 
@@ -475,6 +795,7 @@
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
 
 
 ### CIMLayerDefinition 
@@ -857,6 +1178,7 @@
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
 
 
 ### CIMLayerDefinition 

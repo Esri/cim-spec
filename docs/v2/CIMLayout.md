@@ -67,6 +67,53 @@
 
 
 
+## CIMChartFrame
+#### Layout element used to display a chart. 
+
+
+### CIMElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| anchor | [enumeration Anchor](CIMLayout.md#enumeration-anchor) | The anchor position of the element. 
+| locked | boolean | A value indicating whether the element is locked. Each element in the contents pane has a lock icon. If the icon is shown as locked, you can not select that feature in the layout using the select tool. 
+| name | string | The name of the element. 
+| visible | boolean | A value indicating whether the element is visible. 
+| rotation | double | The rotation of the element. 
+| rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
+| lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
+| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+
+
+### CIMFrameElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| frame | [Polygon](ExternalReferences.md#polygon) | The geometry of a frame for an element. 
+| graphicFrame | [CIMGraphicFrame](CIMGraphics.md#cimgraphicframe) | The graphic symbology of an element's frame. 
+
+
+### CIMMapSurround 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| mapFrame | string | The map frame associated with the map surround. 
+
+
+### CIMChartFrame 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| mapMemberURI | string | The layer or standalone table that defines the data to display. 
+| chartName | string | The chart to display. 
+| isDynamic | boolean | A value indicating whether the chart is dynamic. 
+| useMapSeriesShape | boolean | A value indicating whether the chart uses the map series shape. 
+
+
+
+
+
+
 ## CIMCondensedTabGridLine
 #### Defines a condensed tab. 
 
@@ -470,6 +517,7 @@
 | geographicCoordinateSystem | [GeographicCoordinateSystem](ExternalReferences.md#geographiccoordinatesystem) | The spatial reference of a graticule. 
 | gridLines | [CIMGridLine](Types.md#gridline) | The collection of latitudes and longitudes for a graticule. 
 | isAutoScaled | boolean | A value indicating whether to automatically adjust the interval of the graticules based on scale of the map. 
+| useMapClipShape | boolean | A value indicating whether to use the clip shape of the map (if set) as the grid boundary. 
 
 
 
@@ -877,6 +925,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | pattern | [CIMGridPattern](CIMLayout.md#cimgridpattern) | The pattern for the interior ticks. 
+| indicateDirection | boolean | A value indicating whether the ticks show the direction away from the origin. If false, the ticks bisect the center of the grid line. 
 
 
 
@@ -930,6 +979,7 @@
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
 
 
 ### CIMElementContainer 
@@ -948,6 +998,8 @@
 | datePrinted | [TimeInstant](ExternalReferences.md#timeinstant) | The date printed property for a layout. 
 | mapSeries | [CIMMapSeries](CIMLayout.md#cimmapseries) | The map series for a layout. 
 | colorModel | [enumeration ColorModel](CIMEnumerations.md#enumeration-colormodel) | The color model for a layout. 
+| RGBColorProfile | string | The name of the RGB color profile for a layout. 
+| CMYKColorProfile | string | The name of the CMYK color profile for a layout. 
 
 
 
@@ -1303,6 +1355,7 @@
 | gridLines | [CIMGridLine](Types.md#gridline) | The gridLines of the measured grid. 
 | isAutoScaled | boolean | A value indicating whether to auto-scale the grid. 
 | clipUTMZone | boolean | A value indicating whether to clip the grid to the UTM zone. If the measured grid is not defined in one of the UTM coordinates, then this property is irrelevant. 
+| useMapClipShape | boolean | A value indicating whether to use the clip shape of the map (if set) as the grid boundary. 
 
 
 
@@ -1598,6 +1651,7 @@
 | runway | [CIMProfileRunway](CIMLayout.md#cimprofilerunway) | The text symbol for runway elevation. 
 | OISSurfaces | [CIMProfileOIS](CIMLayout.md#cimprofileois) | The display option for all the OIS surfaces shown in the profile. 
 | obstacles | [CIMProfileObstacle](Types.md#profileobstacle) | The display option for all the point obstacles shown in the profile. 
+| profileType | [enumeration ProfileFrameType](CIMLayout.md#enumeration-profileframetype) | The option for profile type. 
 
 
 
@@ -1610,6 +1664,16 @@
 |---------|--------|--------|
 | ConstantHeight| 0| Adjust the cell height based on the overall height of element 
 | ConstantRatio| 1| Keeps a constant ratio between width to height of each cell 
+
+
+
+### Enumeration: ProfileFrameType
+#### Options to specify if profile is displaying straight or curved approach. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Straight| 0| Default option for straight approach profile 
+| Curved| 1| option for a curved approach profile 
 
 
 
@@ -1636,6 +1700,8 @@
 | horizontalScaleTextSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The text symbol for the horizontal scale. 
 | verticalScaleLeftTextSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The text symbol for the vertical scale left. 
 | verticalScaleRightTextSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The text symbol for the vertical scale right. 
+| showEntireApproach | boolean | A value indicating whether to show the entire length of curved approach, or just show up to a particular distance. 
+| XMax | double | The horizontal length maximum value. 
 
 
 
@@ -1898,6 +1964,7 @@
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
 
 
 ### CIMLayoutDefinition 
@@ -1909,6 +1976,8 @@
 | datePrinted | [TimeInstant](ExternalReferences.md#timeinstant) | The date printed property for a layout. 
 | mapSeries | [CIMMapSeries](CIMLayout.md#cimmapseries) | The map series for a layout. 
 | colorModel | [enumeration ColorModel](CIMEnumerations.md#enumeration-colormodel) | The color model for a layout. 
+| RGBColorProfile | string | The name of the RGB color profile for a layout. 
+| CMYKColorProfile | string | The name of the CMYK color profile for a layout. 
 
 
 ### CIMElementContainer 
@@ -2794,6 +2863,7 @@
 | marginType | [enumeration UnitType](CIMLayout.md#enumeration-unittype) | The type of margins. 
 | marginUnits | [LinearUnit](ExternalReferences.md#linearunit) | The units of the margin. 
 | margin | double | The value of the margin. 
+| clipMapToIndexFeature | boolean | A value indicating whether map clipping is synchronized with the current series index feature. 
 
 
 
@@ -2911,6 +2981,7 @@
 | alternate2RowBackgroundCount | long | The alternate 2 row background count. Show odd row background for this many rows before alternating. 
 | rowBorderSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The border symbol for row sections: data records, summary statistics, and statistics totals. 
 | customWhereClause | string | The custom where clause. Show rows that match custom where clause when FillingStrategy is set to esriCIMTableFrameFillingStrategy_CustomWhereClause. 
+| defaultTableFrameField | [CIMTableFrameField](CIMLayout.md#cimtableframefield) | The default table frame field used when creating new table frames. 
 
 
 

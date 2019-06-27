@@ -1,6 +1,37 @@
 
 
 
+## CIMAggregateField
+#### A field holding the result of an aggregation of one or more other field values. 
+
+
+### CIMFieldDescription 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| alias | string | The field alias. 
+| fieldName | string | The field name. 
+| highlight | boolean | A value indicating whether the field is highlighted. 
+| numberFormat | [NumberFormat](Types.md#numberformat) | The number format. 
+| readOnly | boolean | A value indicating whether the field is read only. 
+| visible | boolean | A value indicating whether the field is visible. 
+| valueAsRatio | boolean | A value indicating whether the field value is a ratio (used only by geoprocessing). 
+| searchable | boolean | A value indicating whether the values from this field should be included in the search. 
+| searchMode | [enumeration DataSearchMode](CIMVectorLayers.md#enumeration-datasearchmode) | Search mode to use when searching for values in this field. 
+
+
+### CIMAggregateField 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| aggregatedFieldName | string | The field name on which the aggregation was done. 
+| statisticType | [enumeration esriDataStatType](ExternalReferences.md#enumeration-esridatastattype) | The type of statistic used to aggregate data. 
+
+
+
+
+
+
 ## CIMAnnotationLayer
 #### Represents an annotation layer used to draw annotation feature classes. 
 
@@ -15,6 +46,7 @@
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
 
 
 ### CIMLayerDefinition 
@@ -153,7 +185,7 @@
 |---------|--------|--------|
 | caption | string | The caption. 
 | title | string | The title. 
-| contentType | string | The content MIME type. Example: (image/png, image/jpeg, audio/mp3. 
+| contentType | string | The content MIME type. Example: (image/png, image/jpeg, audio/mp3). 
 | displayType | [enumeration AttachmentDisplayType](CIMVectorLayers.md#enumeration-attachmentdisplaytype) | The display type. 
 
 
@@ -241,6 +273,36 @@
 
 
 
+## CIMBinningFeatureReduction
+#### Represents a technique for reducing features by aggregating them into polygon bins. 
+
+
+### CIMFeatureReduction 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| enabled | boolean | A value indicating whether feature reduction is enabled in the feature layer. 
+
+
+### CIMBinningFeatureReduction 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| thresholdType | [enumeration BinsToPointsThresholdType](CIMVectorLayers.md#enumeration-binstopointsthresholdtype) | The threshold at which points are shown. 
+| maximumScale | double | The maximum scale to use when . 
+| featureCount | long | The number of features to use when . 
+| minimumBinSize | double | The minimum size (in points) to maintain as the bins are drawn at different scales. 
+| fields | [CIMAggregateField](CIMVectorLayers.md#cimaggregatefield) | The aggregate fields that should be shown with the bins. 
+| visualization | [CIMBinningVisualization](CIMVectorLayers.md#cimbinningvisualization) | The visualization used by the bins. 
+| spatialReference | [SpatialReference](ExternalReferences.md#spatialreference) | The spatial reference in which features are aggregated. A dataset may be aggregated in one or more spatial references. These may differ from the spatial reference of the dataset itself (the Geohash scheme always uses WGS84, for example). This property is the user's choice from among those spatial references. 
+| fixedLevel | long | The bin level at which bins will be drawn. If -1, the bin level will be automatically chosen based on the minimum bin size. 
+| binType | [enumeration esriFeatureBinType](ExternalReferences.md#enumeration-esrifeaturebintype) | The bin type in which features are aggregated. A dataset may be aggregated using one or more binning types. This property is the user's choice from among those binning types. 
+
+
+
+
+
+
 ## CIMBinningVisualization
 #### Describes the appearance and application behavior of polygon aggregation bins. 
 
@@ -250,8 +312,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | renderer | [Renderer](Types.md#renderer) | The renderer used by the bins. 
-| labelClass | [CIMLabelClass](CIMLabelPlacement.md#cimlabelclass) | The label class used by the bins. 
-| showLabels | boolean | A value indicating whether or not to show labels for the bins. 
+| labelClass | [CIMLabelClass](CIMLabelPlacement.md#cimlabelclass) | The label class used by the bins. Reserved for future use. 
+| showLabels | boolean | A value indicating whether or not to show labels for the bins. Reserved for future use. 
 
 
 
@@ -264,6 +326,126 @@
 |---------|--------|--------|
 | MaxScale| 0| Points will be shown when the map is zoomed in beyond the largest scale of the bin levels. 
 | FeatureCount| 1| Points will be shown when the number of features in a given map view falls below a certain number. 
+
+
+
+
+## CIMBuildingDisciplineLayer
+#### Represents a building discipline layer. 
+
+
+### CIMDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name. 
+| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| metadataURI | string | The metadata URI. 
+| useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
+
+
+### CIMLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| attribution | string | The attribution text that appears on a map that draws this layer. 
+| description | string | The description. 
+| layerElevation | [CIMLayerElevationSurface](CIMLayer.md#cimlayerelevationsurface) | The layer elevation. 
+| expanded | boolean | A value indicating whether this layer is expanded in the contents pane. 
+| layer3DProperties | [CIM3DLayerProperties](CIMLayer.md#cim3dlayerproperties) | The 3D layer properties. 
+| layerMasks | [string] | The layer masks. 
+| layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
+| maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| showLegends | boolean | A value indicating whether or not to show legends. 
+| transparency | double | The transparency of the layer. 
+| visibility | boolean | A value indicating whether or not this layer is visible. 
+| displayCacheType | [enumeration DisplayCacheType](CIMLayer.md#enumeration-displaycachetype) | The display cache type. 
+| maxDisplayCacheAge | double | The maximum display cache age. 
+| layerTemplate | [CIMLayerTemplate](CIMLayer.md#cimlayertemplate) | The layer template. 
+| popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
+| showPopups | boolean | A value indicating whether or not to show pop-ups. 
+| serviceLayerID | long | Identifier that will be used to identify the layer in server. 
+| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
+| refreshRate | double | The amount of time to wait between refreshing the layer. 
+| refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
+| showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
+| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+
+
+### CIMBuildingDisciplineLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| disciplineType | [enumeration DisciplineType](CIMVectorLayers.md#enumeration-disciplinetype) | The discipline type of this layer. 
+| categoryLayers | [string] | The category layers for this discipline in the project. 
+
+
+
+
+
+
+## CIMBuildingLayer
+#### Represents a building composite layer. 
+
+
+### CIMDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name. 
+| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| metadataURI | string | The metadata URI. 
+| useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
+
+
+### CIMLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| attribution | string | The attribution text that appears on a map that draws this layer. 
+| description | string | The description. 
+| layerElevation | [CIMLayerElevationSurface](CIMLayer.md#cimlayerelevationsurface) | The layer elevation. 
+| expanded | boolean | A value indicating whether this layer is expanded in the contents pane. 
+| layer3DProperties | [CIM3DLayerProperties](CIMLayer.md#cim3dlayerproperties) | The 3D layer properties. 
+| layerMasks | [string] | The layer masks. 
+| layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
+| maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| showLegends | boolean | A value indicating whether or not to show legends. 
+| transparency | double | The transparency of the layer. 
+| visibility | boolean | A value indicating whether or not this layer is visible. 
+| displayCacheType | [enumeration DisplayCacheType](CIMLayer.md#enumeration-displaycachetype) | The display cache type. 
+| maxDisplayCacheAge | double | The maximum display cache age. 
+| layerTemplate | [CIMLayerTemplate](CIMLayer.md#cimlayertemplate) | The layer template. 
+| popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
+| showPopups | boolean | A value indicating whether or not to show pop-ups. 
+| serviceLayerID | long | Identifier that will be used to identify the layer in server. 
+| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
+| refreshRate | double | The amount of time to wait between refreshing the layer. 
+| refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
+| showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
+| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+
+
+### CIMBuildingLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| buildingDisciplineLayers | [string] | The building discipline composite layers in the project. 
+| exteriorLayer | string | The exterior shell feature layer in the project. 
+| buildingID | string | The building ID to filter by building. 
+| dataConnection | [DataConnection](Types.md#dataconnection) | The data connection to the workspace. 
+
+
 
 
 
@@ -326,6 +508,7 @@
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
 
 
 ### CIMLayerDefinition 
@@ -510,6 +693,19 @@
 
 
 
+### Enumeration: DisciplineType
+#### Represents the discipline type of a building layer. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Architectural| 0| Architectural. 
+| Electrical| 1| Electrical. 
+| Mechanical| 2| Mechanical. 
+| Piping| 3| Piping 
+| Structural| 4| Structural. 
+
+
+
 
 ## CIMDiscreteVariable
 #### Represents a single bind variable. 
@@ -688,6 +884,7 @@
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
 
 
 ### CIMLayerDefinition 
@@ -787,7 +984,7 @@
 | displayField | string | The name of the attribute field that will be used as a label that represents each row in the table. The display field must be able to be represented as a string (string or numeric). 
 | editable | boolean | A value indicating whether or not the table can be edited. 
 | relates | [CIMRelateInfoBase](CIMVectorLayers.md#cimrelateinfobase) | The relates. 
-| fieldDescriptions | [CIMFieldDescription](CIMVectorLayers.md#cimfielddescription) | The field descriptions. Field descriptions for fields may only be written if values are overridden from defaults. 
+| fieldDescriptions | [CIMFieldDescription](Types.md#fielddescription) | The field descriptions. Field descriptions for fields may only be written if values are overridden from defaults. 
 | timeFields | [CIMTimeTableDefinition](CIMVectorLayers.md#cimtimetabledefinition) | The time fields. 
 | timeDefinition | [CIMTimeDataDefinition](CIMVectorLayers.md#cimtimedatadefinition) | The time definition. 
 | timeDisplayDefinition | [CIMTimeDisplayDefinition](CIMVectorLayers.md#cimtimedisplaydefinition) | The time display definition. 
@@ -1269,6 +1466,7 @@
 | shapeFieldName | string | The shape field name. 
 | verticalDimension | string | The vertical dimension. 
 | verticalDimensionUnit | string | The vertical dimension unit. 
+| selectedVolume | string | The selected volume in a multi-volume dataset. 
 
 
 
@@ -1305,6 +1503,7 @@
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
 
 
 ### CIMLayerDefinition 
@@ -1355,6 +1554,69 @@
 | plansTable | string | The path to the plans table. 
 | pointLayer | string | The path to the point layer. 
 | unlockedParcelSelectionSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The unlocked parcel selection symbol. 
+
+
+
+
+
+
+## CIMParcelLayer
+#### Represents a parcel fabric layer. 
+
+
+### CIMDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name. 
+| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| metadataURI | string | The metadata URI. 
+| useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
+
+
+### CIMLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| attribution | string | The attribution text that appears on a map that draws this layer. 
+| description | string | The description. 
+| layerElevation | [CIMLayerElevationSurface](CIMLayer.md#cimlayerelevationsurface) | The layer elevation. 
+| expanded | boolean | A value indicating whether this layer is expanded in the contents pane. 
+| layer3DProperties | [CIM3DLayerProperties](CIMLayer.md#cim3dlayerproperties) | The 3D layer properties. 
+| layerMasks | [string] | The layer masks. 
+| layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
+| maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| showLegends | boolean | A value indicating whether or not to show legends. 
+| transparency | double | The transparency of the layer. 
+| visibility | boolean | A value indicating whether or not this layer is visible. 
+| displayCacheType | [enumeration DisplayCacheType](CIMLayer.md#enumeration-displaycachetype) | The display cache type. 
+| maxDisplayCacheAge | double | The maximum display cache age. 
+| layerTemplate | [CIMLayerTemplate](CIMLayer.md#cimlayertemplate) | The layer template. 
+| popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
+| showPopups | boolean | A value indicating whether or not to show pop-ups. 
+| serviceLayerID | long | Identifier that will be used to identify the layer in server. 
+| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
+| refreshRate | double | The amount of time to wait between refreshing the layer. 
+| refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
+| showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
+| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+
+
+### CIMParcelLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| recordsLayer | string | The path to the parcel polygon records layer. The records layer links parcel polygons and lines to the legal record that created / retired it as well as integration point to business systems. 
+| dirtyAreaLayer | string | The path to the parcel dirty area layer. A dirty area is an area that has been modified and needs to be validated against the topology rules and parcel rules. Validation may yield error features (points, lines, polygons). 
+| pointErrorLayer | string | The path to the parcel point error layer. 
+| lineErrorLayer | string | The path to the parcel line error layer. 
+| polygonErrorLayer | string | The path to the parcel polygon error layer. 
+| parcelConnection | [DataConnection](Types.md#dataconnection) | The data connection to the Parcel Fabric. A Parcel Fabric controls simple feature classes and uses topology rules and parcel rules. Parcel geometry is edited using feature services The Parcel Layer provides additional services to control the fabric classes such as validate. 
 
 
 
@@ -1491,7 +1753,7 @@
 | displayField | string | The name of the attribute field that will be used as a label that represents each row in the table. The display field must be able to be represented as a string (string or numeric). 
 | editable | boolean | A value indicating whether or not the table can be edited. 
 | relates | [CIMRelateInfoBase](CIMVectorLayers.md#cimrelateinfobase) | The relates. 
-| fieldDescriptions | [CIMFieldDescription](CIMVectorLayers.md#cimfielddescription) | The field descriptions. Field descriptions for fields may only be written if values are overridden from defaults. 
+| fieldDescriptions | [CIMFieldDescription](Types.md#fielddescription) | The field descriptions. Field descriptions for fields may only be written if values are overridden from defaults. 
 | timeFields | [CIMTimeTableDefinition](CIMVectorLayers.md#cimtimetabledefinition) | The time fields. 
 | timeDefinition | [CIMTimeDataDefinition](CIMVectorLayers.md#cimtimedatadefinition) | The time definition. 
 | timeDisplayDefinition | [CIMTimeDisplayDefinition](CIMVectorLayers.md#cimtimedisplaydefinition) | The time display definition. 
@@ -1634,6 +1896,7 @@
 | OIDFields | string | The OID fields. 
 | geometryType | [enumeration esriGeometryType](ExternalReferences.md#enumeration-esrigeometrytype) | The geometry type. 
 | extent | [Envelope](ExternalReferences.md#envelope) | The extent. 
+| queryFields | Fields | 
 | spatialStorageType | long | The spatial storage type. 
 
 
@@ -1655,6 +1918,7 @@
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
 
 
 ### CIMDisplayTableDefinition 
@@ -1667,7 +1931,7 @@
 | displayField | string | The name of the attribute field that will be used as a label that represents each row in the table. The display field must be able to be represented as a string (string or numeric). 
 | editable | boolean | A value indicating whether or not the table can be edited. 
 | relates | [CIMRelateInfoBase](CIMVectorLayers.md#cimrelateinfobase) | The relates. 
-| fieldDescriptions | [CIMFieldDescription](CIMVectorLayers.md#cimfielddescription) | The field descriptions. Field descriptions for fields may only be written if values are overridden from defaults. 
+| fieldDescriptions | [CIMFieldDescription](Types.md#fielddescription) | The field descriptions. Field descriptions for fields may only be written if values are overridden from defaults. 
 | timeFields | [CIMTimeTableDefinition](CIMVectorLayers.md#cimtimetabledefinition) | The time fields. 
 | timeDefinition | [CIMTimeDataDefinition](CIMVectorLayers.md#cimtimedatadefinition) | The time definition. 
 | timeDisplayDefinition | [CIMTimeDisplayDefinition](CIMVectorLayers.md#cimtimedisplaydefinition) | The time display definition. 
@@ -1755,6 +2019,89 @@
 | featureExpirationMethod | [enumeration FeatureExpirationMethod](CIMVectorLayers.md#enumeration-featureexpirationmethod) | Feature expiration method used at dataset level. 
 | maximumFeatureCount | long long | The maximum number of features that are held in memory before features are discarded. 
 | maximumFeatureAge | long long | The maximum age for each feature before the feature is discarded. 
+
+
+
+
+
+
+## CIMSubtypeGroupLayer
+#### Represents a subtype group layer that works with feature classes enabled with subtypes. A subtype layer is a group layer that contains feature layers, each of which represents a subtype in a feature class. 
+
+
+### CIMDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name. 
+| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| metadataURI | string | The metadata URI. 
+| useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
+
+
+### CIMLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| attribution | string | The attribution text that appears on a map that draws this layer. 
+| description | string | The description. 
+| layerElevation | [CIMLayerElevationSurface](CIMLayer.md#cimlayerelevationsurface) | The layer elevation. 
+| expanded | boolean | A value indicating whether this layer is expanded in the contents pane. 
+| layer3DProperties | [CIM3DLayerProperties](CIMLayer.md#cim3dlayerproperties) | The 3D layer properties. 
+| layerMasks | [string] | The layer masks. 
+| layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
+| maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| showLegends | boolean | A value indicating whether or not to show legends. 
+| transparency | double | The transparency of the layer. 
+| visibility | boolean | A value indicating whether or not this layer is visible. 
+| displayCacheType | [enumeration DisplayCacheType](CIMLayer.md#enumeration-displaycachetype) | The display cache type. 
+| maxDisplayCacheAge | double | The maximum display cache age. 
+| layerTemplate | [CIMLayerTemplate](CIMLayer.md#cimlayertemplate) | The layer template. 
+| popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
+| showPopups | boolean | A value indicating whether or not to show pop-ups. 
+| serviceLayerID | long | Identifier that will be used to identify the layer in server. 
+| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
+| refreshRate | double | The amount of time to wait between refreshing the layer. 
+| refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
+| showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
+| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+
+
+### CIMFeatureLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| autoGenerateFeatureTemplates | boolean | A value indicating whether to automatically generate feature templates from the renderer. 
+| extrusion | [CIMFeatureExtrusion](CIMVectorLayers.md#cimfeatureextrusion) | The feature extrusion. 
+| featureElevationExpression | string | The feature elevation expression. 
+| featureHyperlinks | [CIMFeatureHyperlink](CIMVectorLayers.md#cimfeaturehyperlink) | The feature hyperlinks. 
+| featureTable | [CIMFeatureTable](CIMVectorLayers.md#cimfeaturetable) | The feature table. 
+| featureTemplates | [CIMEditingTemplate](Types.md#editingtemplate) | The feature templates. 
+| hotlinkField | string | The field containing hotlink URLs. 
+| htmlPopupEnabled | boolean | A value indicating whether HTML pop-ups are enabled. 
+| htmlPopupFormat | [CIMHtmlPopupFormat](CIMVectorLayers.md#cimhtmlpopupformat) | The HTML pop-ups format. 
+| isFlattened | boolean | A value indicating whether the layer is flattened. 
+| selectable | boolean | A value indicating whether the layer is selectable. 
+| selectionColor | [Color](Types.md#color) | The selection color. 
+| selectionSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The selection symbol. 
+| useSelectionSymbol | boolean | A value indicating whether to use the selection symbol. 
+| pageDefinition | [CIMPageDefinition](CIMVectorLayers.md#cimpagedefinition) | The page definition which allows for using current map series page to filter features. 
+| featureCacheType | [enumeration FeatureCacheType](CIMVectorLayers.md#enumeration-featurecachetype) | The feature cache type. 
+| enableDisplayFilters | boolean | A value indicating whether the current set of display filters are honored during drawing. 
+| displayFilters | [CIMDisplayFilter](CIMVectorLayers.md#cimdisplayfilter) | The current set of display filters. 
+| featureElevationExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression for setting the feature elevation. 
+
+
+### CIMSubtypeGroupLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| subtypeLayers | [string] | The layer URI corresponding to each subtype value. 
 
 
 
@@ -2097,6 +2444,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | URI | string | The URI of the VectorTile files or resources. 
+| resourcesURI | string | The URI of the external resources. 
 
 
 
@@ -2117,6 +2465,7 @@
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
 
 
 ### CIMLayerDefinition 
