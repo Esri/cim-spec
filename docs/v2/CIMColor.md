@@ -54,7 +54,6 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| colors | [CIMColor](Types.md#color) | The ordered list of colors in the color scheme. 
 | colors | [[CIMColor]](Types.md#cimcolor) | The ordered list of colors in the color scheme. 
 
 
