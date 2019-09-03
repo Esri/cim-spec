@@ -77,7 +77,7 @@
 | author | string | The name of the author of the target group. 
 | creationDate | [TimeInstant](ExternalReferences.md#timeinstant) | Creation date of the target group. 
 | lastRevisionDate | [TimeInstant](ExternalReferences.md#timeinstant) | Last revision date of the target group. 
-| targets | [CIMSegmentationTarget](CIMBusinessAnalyst.md#cimsegmentationtarget) | The targets of the target group. 
+| targets | [[CIMSegmentationTarget]](CIMBusinessAnalyst.md#cimsegmentationtarget) | The targets of the target group. 
 
 
 

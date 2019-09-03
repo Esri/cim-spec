@@ -94,12 +94,12 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
 | searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 ### CIMLASDatasetLayerDefinition 
@@ -117,7 +117,7 @@
 | maintainCurrentSurface | boolean | A value indicating whether the current surface should be maintained. 
 | pointBudget | long | The point budget. 
 | pointCountPerCentimeter | long | The point count per centimeter. 
-| renderers | [CIMTinRenderer](Types.md#tinrenderer) | The renderers. 
+| renderers | [[CIMTinRenderer]](Types.md#cimtinrenderer) | The renderers. 
 | scaleSymbols | boolean | A value indicating whether to scale symbols. 
 | showFileExtent | boolean | A value indicating whether to show the file extent. 
 | showFileName | boolean | A value indicating whether to show the file name. 
@@ -154,7 +154,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| breaks | [CIMClassBreak](CIMRenderers.md#cimclassbreak) | The class breaks. 
+| breaks | [[CIMClassBreak]](CIMRenderers.md#cimclassbreak) | The class breaks. 
 | classificationMethod | [enumeration ClassificationMethod](CIMRenderers.md#enumeration-classificationmethod) | The classification method. 
 | colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp. 
 | cursorType | [enumeration TerrainDrawCursorType](CIMTerrainLayers.md#enumeration-terraindrawcursortype) | The cursor type. 
@@ -263,7 +263,7 @@
 | standardDeviationParam | double | The standard deviation parameter. 
 | statsType | [enumeration LASStretchStatsType](CIMTerrainLayers.md#enumeration-lasstretchstatstype) | The LAS stats type. 
 | stretchAttribute | [enumeration LASStretchAttribute](CIMTerrainLayers.md#enumeration-lasstretchattribute) | The LAS stretch attribute. 
-| stretchClasses | [CIMLASStretchClass](CIMTerrainLayers.md#cimlasstretchclass) | The stretch classes. 
+| stretchClasses | [[CIMLASStretchClass]](CIMTerrainLayers.md#cimlasstretchclass) | The stretch classes. 
 | stretchStats | [StatsHistogram](ExternalReferences.md#statshistogram) | The stretch statistics. 
 | stretchType | [enumeration LASStretchType](CIMTerrainLayers.md#enumeration-lasstretchtype) | The stretch type. 
 | useCustomStretchMinMax | boolean | A value indicating whether to use custom stretch minimum maximum. 
@@ -362,7 +362,7 @@
 |---------|--------|--------|
 | colorScheme | string | The color ramp name. 
 | description | string | The description. 
-| groups | [CIMUniqueValueGroup](CIMRenderers.md#cimuniquevaluegroup) | The unique value groups. 
+| groups | [[CIMUniqueValueGroup]](CIMRenderers.md#cimuniquevaluegroup) | The unique value groups. 
 | heading | string | The heading. 
 | label | string | The label. 
 | lookupStyleset | string | The lookup styleset. 
@@ -428,7 +428,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| breaks | [CIMColorClassBreak](CIMTerrainLayers.md#cimcolorclassbreak) | The color class breaks of the renderer. 
+| breaks | [[CIMColorClassBreak]](CIMTerrainLayers.md#cimcolorclassbreak) | The color class breaks of the renderer. 
 
 
 
@@ -509,12 +509,12 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
 | searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 ### CIMPointCloudLayerDefinition 
@@ -525,7 +525,7 @@
 | dataConnection | [CIMSceneDataConnection](CIMTerrainLayers.md#cimscenedataconnection) | The data connection. 
 | pointsPerInch | double | The double value that determines the number of points to draw per display inch. 
 | pointsBudget | long | The double value to determine the upper limit on the number of points drawn. 
-| filters | [CIMPointCloudFilter](Types.md#pointcloudfilter) | The filter used to filter the points being drawn. 
+| filters | [[CIMPointCloudFilter]](Types.md#cimpointcloudfilter) | The filter used to filter the points being drawn. 
 | snappable | boolean | A value indicating whether this layer participates in snapping in the editor. 
 | eyeDomeLighting | [CIMEyeDomeLighting](CIMLayer.md#cimeyedomelighting) | Eye-dome lighting properties. 
 
@@ -673,7 +673,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| classes | [CIMColorUniqueValue](CIMTerrainLayers.md#cimcoloruniquevalue) | The unique color classes of the renderer. 
+| classes | [[CIMColorUniqueValue]](CIMTerrainLayers.md#cimcoloruniquevalue) | The unique color classes of the renderer. 
 
 
 
@@ -820,12 +820,12 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
 | searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 ### CIMTerrainLayerDefinition 
@@ -842,7 +842,7 @@
 | pyramidHonored | boolean | A value indicating whether the current surface resolution honors the scale/resolution relationship in the pyramid definition. 
 | scaleSymbols | boolean | A value indicating whether symbols should be scaled. 
 | showResolution | boolean | A value indicating whether the resolution should be shown in the contents pane. 
-| renderers | [CIMTinRenderer](Types.md#tinrenderer) | The renderers. 
+| renderers | [[CIMTinRenderer]](Types.md#cimtinrenderer) | The renderers. 
 | targetResolution | double | The target resolution. 
 | useOverviewTerrain | boolean | A value indicating whether the terrain overview should be used. 
 | usePointBudget | boolean | A value indicating whether the point budget should be used. 
@@ -875,7 +875,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| breaks | [CIMClassBreak](CIMRenderers.md#cimclassbreak) | The class breaks. 
+| breaks | [[CIMClassBreak]](CIMRenderers.md#cimclassbreak) | The class breaks. 
 | classificationMethod | [enumeration ClassificationMethod](CIMRenderers.md#enumeration-classificationmethod) | The classification method. 
 | colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp. 
 | cursorType | [enumeration TerrainDrawCursorType](CIMTerrainLayers.md#enumeration-terraindrawcursortype) | The cursor type. 
@@ -917,7 +917,7 @@
 |---------|--------|--------|
 | colorScheme | string | The color ramp name. 
 | description | string | The description. 
-| groups | [CIMUniqueValueGroup](CIMRenderers.md#cimuniquevaluegroup) | The unique value groups. 
+| groups | [[CIMUniqueValueGroup]](CIMRenderers.md#cimuniquevaluegroup) | The unique value groups. 
 | heading | string | The heading. 
 | label | string | The label. 
 | lookupStyleset | string | The lookup styleset. 
@@ -953,7 +953,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| breaks | [CIMClassBreak](CIMRenderers.md#cimclassbreak) | The class breaks. 
+| breaks | [[CIMClassBreak]](CIMRenderers.md#cimclassbreak) | The class breaks. 
 | classificationMethod | [enumeration ClassificationMethod](CIMRenderers.md#enumeration-classificationmethod) | The classification method. 
 | colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp. 
 | cursorType | [enumeration TerrainDrawCursorType](CIMTerrainLayers.md#enumeration-terraindrawcursortype) | The cursor type. 
@@ -995,7 +995,7 @@
 |---------|--------|--------|
 | colorScheme | string | The color ramp name. 
 | description | string | The description. 
-| groups | [CIMUniqueValueGroup](CIMRenderers.md#cimuniquevaluegroup) | The unique value groups. 
+| groups | [[CIMUniqueValueGroup]](CIMRenderers.md#cimuniquevaluegroup) | The unique value groups. 
 | heading | string | The heading. 
 | label | string | The label. 
 | lookupStyleset | string | The lookup styleset. 
@@ -1085,7 +1085,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| breaks | [CIMClassBreak](CIMRenderers.md#cimclassbreak) | The class breaks. 
+| breaks | [[CIMClassBreak]](CIMRenderers.md#cimclassbreak) | The class breaks. 
 | classificationMethod | [enumeration ClassificationMethod](CIMRenderers.md#enumeration-classificationmethod) | The classification method. 
 | colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp. 
 | cursorType | [enumeration TerrainDrawCursorType](CIMTerrainLayers.md#enumeration-terraindrawcursortype) | The cursor type. 
@@ -1151,7 +1151,7 @@
 |---------|--------|--------|
 | colorScheme | string | The color ramp name. 
 | description | string | The description. 
-| groups | [CIMUniqueValueGroup](CIMRenderers.md#cimuniquevaluegroup) | The unique value groups. 
+| groups | [[CIMUniqueValueGroup]](CIMRenderers.md#cimuniquevaluegroup) | The unique value groups. 
 | heading | string | The heading. 
 | label | string | The label. 
 | lookupStyleset | string | The lookup styleset. 
@@ -1203,12 +1203,12 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
 | searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 ### CIMTinLayerDefinition 
@@ -1217,7 +1217,7 @@
 |---------|--------|--------|
 | dataConnection | [DataConnection](Types.md#dataconnection) | The data connection. 
 | displayField | string | The display field. 
-| renderers | [CIMTinRenderer](Types.md#tinrenderer) | The renderers. 
+| renderers | [[CIMTinRenderer]](Types.md#cimtinrenderer) | The renderers. 
 | scaleSymbols | boolean | A value indicating whether or not to scale symbols. 
 
 
@@ -1248,7 +1248,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| breaks | [CIMClassBreak](CIMRenderers.md#cimclassbreak) | The class breaks. 
+| breaks | [[CIMClassBreak]](CIMRenderers.md#cimclassbreak) | The class breaks. 
 | classificationMethod | [enumeration ClassificationMethod](CIMRenderers.md#enumeration-classificationmethod) | The classification method. 
 | colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp. 
 | cursorType | [enumeration TerrainDrawCursorType](CIMTerrainLayers.md#enumeration-terraindrawcursortype) | The cursor type. 
@@ -1314,7 +1314,7 @@
 |---------|--------|--------|
 | colorScheme | string | The color ramp name. 
 | description | string | The description. 
-| groups | [CIMUniqueValueGroup](CIMRenderers.md#cimuniquevaluegroup) | The unique value groups. 
+| groups | [[CIMUniqueValueGroup]](CIMRenderers.md#cimuniquevaluegroup) | The unique value groups. 
 | heading | string | The heading. 
 | label | string | The label. 
 | lookupStyleset | string | The lookup styleset. 

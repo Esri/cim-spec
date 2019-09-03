@@ -73,12 +73,12 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
 | searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 ### CIMBuildingDisciplineSceneLayerDefinition 
@@ -132,12 +132,12 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
 | searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 ### CIMBuildingSceneLayerDefinition 
@@ -152,7 +152,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| filters | [CIMObject3DRenderingFilter](CIMServiceLayers.md#cimobject3drenderingfilter) | The filters. 
+| filters | [[CIMObject3DRenderingFilter]](CIMServiceLayers.md#cimobject3drenderingfilter) | The filters. 
 | activeFilterID | string | The active filter id. 
 
 
@@ -194,7 +194,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| subLayers | [CIMSubLayerBase](CIMLayer.md#cimsublayerbase) | The composite sublayers. 
+| subLayers | [[CIMSubLayerBase]](CIMLayer.md#cimsublayerbase) | The composite sublayers. 
 
 
 ### CIMDynamicServiceCompositeSubLayer 
@@ -247,12 +247,12 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
 | searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 ### CIMServiceLayerDefinition 
@@ -260,7 +260,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | serviceConnection | [CIMServiceConnection](CIMServiceLayers.md#cimserviceconnection) | The service connection. 
-| subLayers | [CIMSubLayerBase](CIMLayer.md#cimsublayerbase) | The sublayers. 
+| subLayers | [[CIMSubLayerBase]](CIMLayer.md#cimsublayerbase) | The sublayers. 
 | transparentColor | [Color](Types.md#color) | The transparent color. 
 | backgroundColor | [Color](Types.md#color) | The background color. 
 
@@ -357,12 +357,12 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
 | searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 ### CIMServiceLayerDefinition 
@@ -370,7 +370,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | serviceConnection | [CIMServiceConnection](CIMServiceLayers.md#cimserviceconnection) | The service connection. 
-| subLayers | [CIMSubLayerBase](CIMLayer.md#cimsublayerbase) | The sublayers. 
+| subLayers | [[CIMSubLayerBase]](CIMLayer.md#cimsublayerbase) | The sublayers. 
 | transparentColor | [Color](Types.md#color) | The transparent color. 
 | backgroundColor | [Color](Types.md#color) | The background color. 
 
@@ -423,7 +423,7 @@
 | ID | string | The ID. 
 | name | string | The name. 
 | description | string | The description. 
-| filterBlocks | [CIMObject3DRenderingFilterBlock](CIMServiceLayers.md#cimobject3drenderingfilterblock) | The filter blocks. 
+| filterBlocks | [[CIMObject3DRenderingFilterBlock]](CIMServiceLayers.md#cimobject3drenderingfilterblock) | The filter blocks. 
 | authoringInfo | [CIMObject3DRenderingFilterAuthoringInfo](CIMServiceLayers.md#cimobject3drenderingfilterauthoringinfo) | The authoring info. 
 
 
@@ -440,7 +440,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | isVisible | boolean | A value indicating whether the filter is displayed in the UI or not. 
-| filterBlocks | [CIMObject3DRenderingFilterBlockAuthoringInfo](CIMServiceLayers.md#cimobject3drenderingfilterblockauthoringinfo) | The filter blocks. 
+| filterBlocks | [[CIMObject3DRenderingFilterBlockAuthoringInfo]](CIMServiceLayers.md#cimobject3drenderingfilterblockauthoringinfo) | The filter blocks. 
 
 
 
@@ -472,7 +472,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| filterStates | [CIMObject3DRenderingFilterState](CIMServiceLayers.md#cimobject3drenderingfilterstate) | The filter state. 
+| filterStates | [[CIMObject3DRenderingFilterState]](CIMServiceLayers.md#cimobject3drenderingfilterstate) | The filter state. 
 
 
 
@@ -580,12 +580,12 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
 | searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 ### CIMSceneServiceLayerDefinition 
@@ -596,14 +596,14 @@
 | snappable | boolean | A value indicating whether the geometries are snappable. 
 | renderer | [Renderer](Types.md#renderer) | The primary symbol renderer. 
 | featureElevationExpression | string | The feature elevation expression. 
-| labelClasses | [CIMLabelClass](CIMLabelPlacement.md#cimlabelclass) | The collection of label class definitions. 
+| labelClasses | [[CIMLabelClass]](CIMLabelPlacement.md#cimlabelclass) | The collection of label class definitions. 
 | labelVisibility | boolean | A value indicating whether to display labels for this layer's label classes. 
 | dataConnection | [CIMSceneDataConnection](CIMTerrainLayers.md#cimscenedataconnection) | The data connection. Currently used only when loading local scene layer packages. 
 | useRealWorldSymbolSizes | boolean | A value indicating whether to use real world symbols sizes (meters) vs. points. 
 | exclusionSet | [long long] | The set of excluded features. 
 | definitionExpression | string | The definition expression that can subset the features. 
 | definitionExpressionName | string | The Name of definition expression. 
-| definitionFilterChoices | [CIMDefinitionFilter](CIMLayer.md#cimdefinitionfilter) | The definition filter choices. 
+| definitionFilterChoices | [[CIMDefinitionFilter]](CIMLayer.md#cimdefinitionfilter) | The definition filter choices. 
 | associatedFeatureLayerURI | string | The URI to the associated feature layer. 
 | sceneServiceLayerType | [enumeration SceneServiceLayerType](CIMServiceLayers.md#enumeration-sceneservicelayertype) | The scene service layer type. Typically set by the system and should not be modified. 
 | selectable | boolean | A value indicating whether the layer is selectable. 
@@ -708,12 +708,12 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
 | searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 ### CIMServiceLayerDefinition 
@@ -721,7 +721,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | serviceConnection | [CIMServiceConnection](CIMServiceLayers.md#cimserviceconnection) | The service connection. 
-| subLayers | [CIMSubLayerBase](CIMLayer.md#cimsublayerbase) | The sublayers. 
+| subLayers | [[CIMSubLayerBase]](CIMLayer.md#cimsublayerbase) | The sublayers. 
 | transparentColor | [Color](Types.md#color) | The transparent color. 
 | backgroundColor | [Color](Types.md#color) | The background color. 
 

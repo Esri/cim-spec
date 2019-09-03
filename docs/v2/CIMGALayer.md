@@ -15,7 +15,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| dataConnections | [CIMDataConnection](Types.md#dataconnection) | A collection of data connections. 
+| dataConnections | [[CIMDataConnection]](Types.md#cimdataconnection) | A collection of data connections. 
 | spatialReference | [SpatialReference](ExternalReferences.md#spatialreference) | The spatial reference. 
 | metaData | string | The data connection metadata. 
 
@@ -40,7 +40,7 @@
 |---------|--------|--------|
 | backgroundSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The background symbol used for graduated symbols. 
 | barrierWeight | [enumeration BarrierWeight](CIMVectorLayers.md#enumeration-barrierweight) | The barrier weight used for graduate symbols to avoid labels. 
-| breaks | [CIMClassBreak](CIMRenderers.md#cimclassbreak) | The class breaks. 
+| breaks | [[CIMClassBreak]](CIMRenderers.md#cimclassbreak) | The class breaks. 
 | classBreakType | [enumeration ClassBreakType](CIMRenderers.md#enumeration-classbreaktype) | The class break type. 
 | classificationMethod | [enumeration ClassificationMethod](CIMRenderers.md#enumeration-classificationmethod) | The classification method. 
 | colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp. 
@@ -114,12 +114,12 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
 | searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 ### CIMGALayerDefinition 
@@ -128,8 +128,8 @@
 |---------|--------|--------|
 | AOI | [Envelope](ExternalReferences.md#envelope) | The area of interest. 
 | method | [CIMGAMethod](CIMGALayer.md#cimgamethod) | The GA method. 
-| renderers | [CIMRenderer](Types.md#renderer) | The renderers. 
-| rangeDefinitions | [CIMRangeDefinition](CIMVectorLayers.md#cimrangedefinition) | The range definitions. 
+| renderers | [[CIMRenderer]](Types.md#cimrenderer) | The renderers. 
+| rangeDefinitions | [[CIMRangeDefinition]](CIMVectorLayers.md#cimrangedefinition) | The range definitions. 
 | activeRangeName | string | The name of the active range. 
 | isFlattened | boolean | A value indicating whether the layer is flattened. 
 

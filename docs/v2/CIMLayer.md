@@ -43,10 +43,10 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name of the chart. 
-| series | [CIMChartSeries](Types.md#chartseries) | The series properties of the chart. 
+| series | [[CIMChartSeries]](Types.md#cimchartseries) | The series properties of the chart. 
 | generalProperties | [CIMChartGeneralProperties](CIMLayer.md#cimchartgeneralproperties) | The general properties of the chart. 
 | legend | [CIMChartLegend](CIMLayer.md#cimchartlegend) | The legend properties of the chart. 
-| axes | [CIMChartAxis](CIMLayer.md#cimchartaxis) | The properties of chart axis. 
+| axes | [[CIMChartAxis]](CIMLayer.md#cimchartaxis) | The properties of chart axis. 
 | mapSelectionHandling | [enumeration ChartMapSelectionHandling](CIMLayer.md#enumeration-chartmapselectionhandling) | A setting which indicates whether chart handles selection in the input layer by creating series only from the selected data or highlights selected values on the chart made from entire dataset. 
 | metaData | string | The client metadata about the chart. 
 
@@ -77,7 +77,7 @@
 | titleText | [CIMChartTextProperties](CIMLayer.md#cimcharttextproperties) | The title symbol properties. 
 | labelText | [CIMChartTextProperties](CIMLayer.md#cimcharttextproperties) | The label symbol properties. 
 | axisLineSymbolProperties | [CIMChartLineSymbolProperties](CIMLayer.md#cimchartlinesymbolproperties) | The line symbol properties for axis. 
-| guides | [CIMChartGuide](CIMLayer.md#cimchartguide) | The array of guides. 
+| guides | [[CIMChartGuide]](CIMLayer.md#cimchartguide) | The array of guides. 
 
 
 
@@ -107,7 +107,7 @@
 | visible | boolean | A value indicating whether the series is visible or not. 
 | dataLabelText | [CIMChartTextProperties](CIMLayer.md#cimcharttextproperties) | The text style for the data label. 
 | multiSeries | boolean | A value indicating whether this series is a multi-series. 
-| locations | [CIMChartLocationDefinition](CIMLayer.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
+| locations | [[CIMChartLocationDefinition]](CIMLayer.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
 
 
 ### CIMChartBarSeries 
@@ -147,7 +147,7 @@
 | visible | boolean | A value indicating whether the series is visible or not. 
 | dataLabelText | [CIMChartTextProperties](CIMLayer.md#cimcharttextproperties) | The text style for the data label. 
 | multiSeries | boolean | A value indicating whether this series is a multi-series. 
-| locations | [CIMChartLocationDefinition](CIMLayer.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
+| locations | [[CIMChartLocationDefinition]](CIMLayer.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
 
 
 ### CIMChartBoxPlotSeries 
@@ -189,7 +189,7 @@
 | visible | boolean | A value indicating whether the series is visible or not. 
 | dataLabelText | [CIMChartTextProperties](CIMLayer.md#cimcharttextproperties) | The text style for the data label. 
 | multiSeries | boolean | A value indicating whether this series is a multi-series. 
-| locations | [CIMChartLocationDefinition](CIMLayer.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
+| locations | [[CIMChartLocationDefinition]](CIMLayer.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
 
 
 ### CIMChartCalendarHeatSeries 
@@ -204,7 +204,7 @@
 | breaksCount | long | The number of breaks for automatic breaks creation. 
 | minimumBreak | double | The lower bound of the first range. 
 | breaks | [double] | The upper bound breaks. 
-| breakColors | [CIMColor](Types.md#color) | The color for each break. 
+| breakColors | [[CIMColor]](Types.md#cimcolor) | The color for each break. 
 | colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp from which break colors are created. 
 
 
@@ -245,7 +245,7 @@
 | visible | boolean | A value indicating whether the series is visible or not. 
 | dataLabelText | [CIMChartTextProperties](CIMLayer.md#cimcharttextproperties) | The text style for the data label. 
 | multiSeries | boolean | A value indicating whether this series is a multi-series. 
-| locations | [CIMChartLocationDefinition](CIMLayer.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
+| locations | [[CIMChartLocationDefinition]](CIMLayer.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
 
 
 ### CIMChartDataClockSeries 
@@ -261,7 +261,7 @@
 | breaksCount | long | The number of breaks for automatic breaks creation. 
 | minimumBreak | double | The lower bound of the first range. 
 | breaks | [double] | The upper bound breaks. 
-| breakColors | [CIMColor](Types.md#color) | The color for each break. 
+| breakColors | [[CIMColor]](Types.md#cimcolor) | The color for each break. 
 | colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp from which break colors are created. 
 | showWedgeLabel | boolean | A value indicating whether the wedge label is visible. 
 | wedgeLabelText | [CIMChartTextProperties](CIMLayer.md#cimcharttextproperties) | The text symbol properties for the wedge label. 
@@ -395,7 +395,7 @@
 | visible | boolean | A value indicating whether the series is visible or not. 
 | dataLabelText | [CIMChartTextProperties](CIMLayer.md#cimcharttextproperties) | The text style for the data label. 
 | multiSeries | boolean | A value indicating whether this series is a multi-series. 
-| locations | [CIMChartLocationDefinition](CIMLayer.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
+| locations | [[CIMChartLocationDefinition]](CIMLayer.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
 
 
 ### CIMChartHistogramSeries 
@@ -490,7 +490,7 @@
 | visible | boolean | A value indicating whether the series is visible or not. 
 | dataLabelText | [CIMChartTextProperties](CIMLayer.md#cimcharttextproperties) | The text style for the data label. 
 | multiSeries | boolean | A value indicating whether this series is a multi-series. 
-| locations | [CIMChartLocationDefinition](CIMLayer.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
+| locations | [[CIMChartLocationDefinition]](CIMLayer.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
 
 
 ### CIMChartLineSeries 
@@ -650,7 +650,7 @@
 | visible | boolean | A value indicating whether the series is visible or not. 
 | dataLabelText | [CIMChartTextProperties](CIMLayer.md#cimcharttextproperties) | The text style for the data label. 
 | multiSeries | boolean | A value indicating whether this series is a multi-series. 
-| locations | [CIMChartLocationDefinition](CIMLayer.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
+| locations | [[CIMChartLocationDefinition]](CIMLayer.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
 
 
 ### CIMChartProbabilityPlotSeries 
@@ -701,7 +701,7 @@
 | visible | boolean | A value indicating whether the series is visible or not. 
 | dataLabelText | [CIMChartTextProperties](CIMLayer.md#cimcharttextproperties) | The text style for the data label. 
 | multiSeries | boolean | A value indicating whether this series is a multi-series. 
-| locations | [CIMChartLocationDefinition](CIMLayer.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
+| locations | [[CIMChartLocationDefinition]](CIMLayer.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
 
 
 ### CIMChartProfileGraphSeries 
@@ -741,7 +741,7 @@
 | visible | boolean | A value indicating whether the series is visible or not. 
 | dataLabelText | [CIMChartTextProperties](CIMLayer.md#cimcharttextproperties) | The text style for the data label. 
 | multiSeries | boolean | A value indicating whether this series is a multi-series. 
-| locations | [CIMChartLocationDefinition](CIMLayer.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
+| locations | [[CIMChartLocationDefinition]](CIMLayer.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
 
 
 ### CIMChartScatterPlotMatrixSeries 
@@ -787,7 +787,7 @@
 | visible | boolean | A value indicating whether the series is visible or not. 
 | dataLabelText | [CIMChartTextProperties](CIMLayer.md#cimcharttextproperties) | The text style for the data label. 
 | multiSeries | boolean | A value indicating whether this series is a multi-series. 
-| locations | [CIMChartLocationDefinition](CIMLayer.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
+| locations | [[CIMChartLocationDefinition]](CIMLayer.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
 
 
 ### CIMChartScatterSeries 
@@ -831,7 +831,7 @@
 | visible | boolean | A value indicating whether the series is visible or not. 
 | dataLabelText | [CIMChartTextProperties](CIMLayer.md#cimcharttextproperties) | The text style for the data label. 
 | multiSeries | boolean | A value indicating whether this series is a multi-series. 
-| locations | [CIMChartLocationDefinition](CIMLayer.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
+| locations | [[CIMChartLocationDefinition]](CIMLayer.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
 
 
 ### CIMChartSpectralProfileSeries 
@@ -876,7 +876,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | variable | string | The variable name for which the bands are to be plotted. 
-| bands | [CIMChartTemporalProfileBand](CIMLayer.md#cimcharttemporalprofileband) | The bands for a variable to be plotted. 
+| bands | [[CIMChartTemporalProfileBand]](CIMLayer.md#cimcharttemporalprofileband) | The bands for a variable to be plotted. 
 
 
 
@@ -911,7 +911,7 @@
 |---------|--------|--------|
 | variable | string | The name of the variable for which the values are to be plotted. 
 | dimension | string | The name of the dimension for which the values are to be plotted. 
-| values | [CIMChartTemporalProfileDimensionValue](CIMLayer.md#cimcharttemporalprofiledimensionvalue) | Dimension values for a variable to be plotted. 
+| values | [[CIMChartTemporalProfileDimensionValue]](CIMLayer.md#cimcharttemporalprofiledimensionvalue) | Dimension values for a variable to be plotted. 
 
 
 
@@ -952,7 +952,7 @@
 | visible | boolean | A value indicating whether the series is visible or not. 
 | dataLabelText | [CIMChartTextProperties](CIMLayer.md#cimcharttextproperties) | The text style for the data label. 
 | multiSeries | boolean | A value indicating whether this series is a multi-series. 
-| locations | [CIMChartLocationDefinition](CIMLayer.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
+| locations | [[CIMChartLocationDefinition]](CIMLayer.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
 
 
 ### CIMChartTemporalProfileSeries 
@@ -960,7 +960,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | plotType | [enumeration ChartTemporalProfilePlotType](CIMLayer.md#enumeration-charttemporalprofileplottype) | The type of plot for this chart. 
-| variables | [CIMChartTemporalProfileVariable](CIMLayer.md#cimcharttemporalprofilevariable) | The variables to be plotted over time. 
+| variables | [[CIMChartTemporalProfileVariable]](CIMLayer.md#cimcharttemporalprofilevariable) | The variables to be plotted over time. 
 | bands | [CIMChartTemporalProfileBands](CIMLayer.md#cimcharttemporalprofilebands) | The bands for a variable to be plotted over time. 
 | dimensionValues | [CIMChartTemporalProfileDimensionValues](CIMLayer.md#cimcharttemporalprofiledimensionvalues) | The dimension values for a variable to be plotted over time. 
 | standardizeValues | boolean | A value indicating whether to calculate standardized values. 
@@ -1096,7 +1096,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| subLayers | [CIMSubLayerBase](CIMLayer.md#cimsublayerbase) | The composite sublayers. 
+| subLayers | [[CIMSubLayerBase]](CIMLayer.md#cimsublayerbase) | The composite sublayers. 
 
 
 
@@ -1187,12 +1187,12 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
 | searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 ### CIMGeodatabaseErrorLayerDefinition 
@@ -1249,12 +1249,12 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
 | searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 ### CIMGroupLayerDefinition 
@@ -1329,12 +1329,12 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
 | searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 ### CIMKMLLayerDefinition 
@@ -1453,7 +1453,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| symbolLayers | [CIMSymbolLayerIdentifier](CIMLayer.md#cimsymbollayeridentifier) | The symbol layer identifiers. 
+| symbolLayers | [[CIMSymbolLayerIdentifier]](CIMLayer.md#cimsymbollayeridentifier) | The symbol layer identifiers. 
 | useSymbolLayerDrawing | boolean | A value indicating whether symbol layer drawing is enabled. 
 
 
@@ -1515,12 +1515,12 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
 | searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 ### CIMTopologyLayerDefinition 

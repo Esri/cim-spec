@@ -65,7 +65,7 @@
 | patch | [enumeration PatchShape](CIMRenderers.md#enumeration-patchshape) | The patch shape for this class. 
 | symbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol for the class. 
 | upperBound | double | The upper bound of the class. 
-| alternateSymbols | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | An array of symbol references that are intended to be used at specific scale ranges. 
+| alternateSymbols | [[CIMSymbolReference]](CIMRenderers.md#cimsymbolreference) | An array of symbol references that are intended to be used at specific scale ranges. 
 
 
 
@@ -99,7 +99,7 @@
 |---------|--------|--------|
 | backgroundSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The background symbol used for graduated symbols. 
 | barrierWeight | [enumeration BarrierWeight](CIMVectorLayers.md#enumeration-barrierweight) | The barrier weight used for graduate symbols to avoid labels. 
-| breaks | [CIMClassBreak](CIMRenderers.md#cimclassbreak) | The class breaks. 
+| breaks | [[CIMClassBreak]](CIMRenderers.md#cimclassbreak) | The class breaks. 
 | classBreakType | [enumeration ClassBreakType](CIMRenderers.md#enumeration-classbreaktype) | The class break type. 
 | classificationMethod | [enumeration ClassificationMethod](CIMRenderers.md#enumeration-classificationmethod) | The classification method. 
 | colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp. 
@@ -145,7 +145,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| visualVariables | [CIMVisualVariable](Types.md#visualvariable) | The visual variables. 
+| visualVariables | [[CIMVisualVariable]](Types.md#cimvisualvariable) | The visual variables. 
 
 
 
@@ -223,7 +223,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | dictionaryName | string | The dictionary name. 
-| fieldMap | [CIMStringMap](CIMRenderers.md#cimstringmap) | The field map between expected fields and actual fields. 
+| fieldMap | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The field map between expected fields and actual fields. 
 
 
 
@@ -244,7 +244,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| visualVariables | [CIMVisualVariable](Types.md#visualvariable) | The visual variables. 
+| visualVariables | [[CIMVisualVariable]](Types.md#cimvisualvariable) | The visual variables. 
 
 
 ### CIMDataExclusion 
@@ -276,7 +276,7 @@
 | randomSeed | long | A random seed. 
 | referenceScale | double | The reference scale. If specified, dots are calibrated from this scale. 
 | useMasking | boolean | A value indicating whether or not to use masking. 
-| valueExpressionInfos | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The arcade expressions the dot data comes from. If this array is populated it takes precedence over the FieldNames array. 
+| valueExpressionInfos | [[CIMExpressionInfo]](CIMRenderers.md#cimexpressioninfo) | The arcade expressions the dot data comes from. If this array is populated it takes precedence over the FieldNames array. 
 | sampleSize | long | The sample size for the number of features used to determine with initial dot value. 
 | symbolLabel | string | The legend label indicating what the symbol is (e.g. "dot"). 
 | unitLabel | string | The legend label indicating what the dots represent (e.g. "people"). 
@@ -361,7 +361,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| levels | [CIMVisualVariableLevel](CIMRenderers.md#cimvisualvariablelevel) | The levels that hold the minimum and maximum values of the data. 
+| levels | [[CIMVisualVariableLevel]](CIMRenderers.md#cimvisualvariablelevel) | The levels that hold the minimum and maximum values of the data. 
 
 
 ### CIMMultilevelColorVisualVariable 
@@ -470,7 +470,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| visualVariables | [CIMVisualVariable](Types.md#visualvariable) | The visual variables. 
+| visualVariables | [[CIMVisualVariable]](Types.md#cimvisualvariable) | The visual variables. 
 
 
 ### CIMDataNormalization 
@@ -541,7 +541,7 @@
 | invisibleRepresentationColor | [Color](Types.md#color) | The invisible representation color. 
 | representationClassName | string | The representation class name. 
 | ruleLegendVisibility | [long] | The rule legend visibility. 
-| symbolLayerNameMapping | [CIMRuleSymbolLayerNames](CIMRenderers.md#cimrulesymbollayernames) | The symbol layer name mapping. 
+| symbolLayerNameMapping | [[CIMRuleSymbolLayerNames]](CIMRenderers.md#cimrulesymbollayernames) | The symbol layer name mapping. 
 
 
 
@@ -620,7 +620,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| visualVariables | [CIMVisualVariable](Types.md#visualvariable) | The visual variables. 
+| visualVariables | [[CIMVisualVariable]](Types.md#cimvisualvariable) | The visual variables. 
 
 
 ### CIMSimpleRenderer 
@@ -631,7 +631,7 @@
 | label | string | The legend label. 
 | patch | [enumeration PatchShape](CIMRenderers.md#enumeration-patchshape) | The patch. 
 | symbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol. 
-| alternateSymbols | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | An array of symbol references that are intended to be used at specific scale ranges. 
+| alternateSymbols | [[CIMSymbolReference]](CIMRenderers.md#cimsymbolreference) | An array of symbol references that are intended to be used at specific scale ranges. 
 
 
 
@@ -727,13 +727,13 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| primitiveOverrides | [CIMPrimitiveOverride](CIMRenderers.md#cimprimitiveoverride) | The primitive overrides. Typically set by renderers at draw time. 
+| primitiveOverrides | [[CIMPrimitiveOverride]](CIMRenderers.md#cimprimitiveoverride) | The primitive overrides. Typically set by renderers at draw time. 
 | stylePath | string | The style path. Reserved for future use. 
 | symbol | [Symbol](Types.md#symbol) | The symbol. 
 | symbolName | string | The symbol name. 
 | minScale | double | The minimum scale range the symbol reference should be displayed at. 
 | maxScale | double | The maximum scale range the symbol reference should be displayed at. 
-| scaleDependentSizeVariation | [CIMScaleDependentSizeVariation](CIMRenderers.md#cimscaledependentsizevariation) | An array of scale dependent sizes. 
+| scaleDependentSizeVariation | [[CIMScaleDependentSizeVariation]](CIMRenderers.md#cimscaledependentsizevariation) | An array of scale dependent sizes. 
 | minDistance | double | The minimum distance at which symbols are visible. Objects closer than this don't get rendered. 
 | maxDistance | double | The maximum distance at which symbols are visible. Objects beyond this point don't get rendered. 
 
@@ -819,9 +819,9 @@
 | label | string | The label. 
 | patch | [enumeration PatchShape](CIMRenderers.md#enumeration-patchshape) | The patch. 
 | symbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol. 
-| values | [CIMUniqueValue](CIMRenderers.md#cimuniquevalue) | The values this class corresponds to. 
+| values | [[CIMUniqueValue]](CIMRenderers.md#cimuniquevalue) | The values this class corresponds to. 
 | visible | boolean | A value indicating whether this class is visible. 
-| alternateSymbols | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | An array of symbol references that are intended to be used at specific scale ranges. 
+| alternateSymbols | [[CIMSymbolReference]](CIMRenderers.md#cimsymbolreference) | An array of symbol references that are intended to be used at specific scale ranges. 
 
 
 
@@ -836,7 +836,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| classes | [CIMUniqueValueClass](CIMRenderers.md#cimuniquevalueclass) | The classes belonging to the group. 
+| classes | [[CIMUniqueValueClass]](CIMRenderers.md#cimuniquevalueclass) | The classes belonging to the group. 
 | heading | string | The heading. 
 
 
@@ -858,7 +858,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| visualVariables | [CIMVisualVariable](Types.md#visualvariable) | The visual variables. 
+| visualVariables | [[CIMVisualVariable]](Types.md#cimvisualvariable) | The visual variables. 
 
 
 ### CIMUniqueValueRenderer 
@@ -871,7 +871,7 @@
 | defaultSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The default symbol. 
 | defaultSymbolPatch | [enumeration PatchShape](CIMRenderers.md#enumeration-patchshape) | The patch shape for the default symbol. 
 | fields | [string] | The fields used by this renderer. 
-| groups | [CIMUniqueValueGroup](CIMRenderers.md#cimuniquevaluegroup) | The unique value groups. 
+| groups | [[CIMUniqueValueGroup]](CIMRenderers.md#cimuniquevaluegroup) | The unique value groups. 
 | useDefaultSymbol | boolean | A value indicating whether of not to use the default symbol. 
 | styleGallery | string | The style item name for the color ramp. 
 | valueExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | ExpressionInfo that contains the Arcade expression that returns value as a string. When both Fields and ValueExpressionInfo are present ValueExpressionInfo is used. 

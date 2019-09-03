@@ -71,12 +71,12 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
 | searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -86,9 +86,9 @@
 | autoGenerateFeatureTemplates | boolean | A value indicating whether to automatically generate feature templates from the renderer. 
 | extrusion | [CIMFeatureExtrusion](CIMVectorLayers.md#cimfeatureextrusion) | The feature extrusion. 
 | featureElevationExpression | string | The feature elevation expression. 
-| featureHyperlinks | [CIMFeatureHyperlink](CIMVectorLayers.md#cimfeaturehyperlink) | The feature hyperlinks. 
+| featureHyperlinks | [[CIMFeatureHyperlink]](CIMVectorLayers.md#cimfeaturehyperlink) | The feature hyperlinks. 
 | featureTable | [CIMFeatureTable](CIMVectorLayers.md#cimfeaturetable) | The feature table. 
-| featureTemplates | [CIMEditingTemplate](Types.md#editingtemplate) | The feature templates. 
+| featureTemplates | [[CIMEditingTemplate]](Types.md#cimeditingtemplate) | The feature templates. 
 | hotlinkField | string | The field containing hotlink URLs. 
 | htmlPopupEnabled | boolean | A value indicating whether HTML pop-ups are enabled. 
 | htmlPopupFormat | [CIMHtmlPopupFormat](CIMVectorLayers.md#cimhtmlpopupformat) | The HTML pop-ups format. 
@@ -100,7 +100,7 @@
 | pageDefinition | [CIMPageDefinition](CIMVectorLayers.md#cimpagedefinition) | The page definition which allows for using current map series page to filter features. 
 | featureCacheType | [enumeration FeatureCacheType](CIMVectorLayers.md#enumeration-featurecachetype) | The feature cache type. 
 | enableDisplayFilters | boolean | A value indicating whether the current set of display filters are honored during drawing. 
-| displayFilters | [CIMDisplayFilter](CIMVectorLayers.md#cimdisplayfilter) | The current set of display filters. 
+| displayFilters | [[CIMDisplayFilter]](CIMVectorLayers.md#cimdisplayfilter) | The current set of display filters. 
 | featureElevationExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression for setting the feature elevation. 
 
 
@@ -117,8 +117,8 @@
 | symbolSubstitutionType | [enumeration SymbolSubstitutionType](CIMVectorLayers.md#enumeration-symbolsubstitutiontype) | The type of symbol substitution this layer uses. 
 | massColorSubstitute | [Color](Types.md#color) | The mass color substitute. When using the SymbolSubstitutionColor substitution type this is the color that all text graphics will be overridden with. 
 | inlineColor | [Color](Types.md#color) | The in-line color. When using the SymbolSubstitutionIndividualSubordinate or SymbolSubstitutionIndividualDominant substitution types this is the color that all text graphics that are stored in-line (bloated) will be overridden with. 
-| substitutionSymbolCollection | [CIMSymbolIdentifier](CIMVectorLayers.md#cimsymbolidentifier) | A symbol substitution collection. When using the SymbolSubstitutionIndividualSubordinate or SymbolSubstitutionIndividualDominant substitution types this collection defines which symbols in the symbol collection are substituted and what their substitute values are. The symbol substitution properties allow the users to swap out symbols/colors of annotation stored in the geodatabase at the layer level. This allows annotation to be re-purposed in maps without duplicating the annotation. The classic case for this behavior is when a user wishes to utilize black text generated for standard parcel maps on top of a map with raster imagery. By substituting the color or symbol collection of the annotation the user is allowed to change the appearance for this one map without a large performance or data management overhead. One complex aspect of symbol substitution is how overrides are treated when it is enabled. When this feature was originally added some wanted overrides to be respected and others did not, so options were added for this (dominant and subordinate substitution types). When the dominant type is chosen overrides are ignored. When the subordinate type is chosen overrides are applied on top of the new symbols. 
-| subLayers | [CIMAnnotationSubLayer](CIMVectorLayers.md#cimannotationsublayer) | A collection of AnnotationSubLayers, corresponding to the annotation subclasses defined by the annotation feature class. 
+| substitutionSymbolCollection | [[CIMSymbolIdentifier]](CIMVectorLayers.md#cimsymbolidentifier) | A symbol substitution collection. When using the SymbolSubstitutionIndividualSubordinate or SymbolSubstitutionIndividualDominant substitution types this collection defines which symbols in the symbol collection are substituted and what their substitute values are. The symbol substitution properties allow the users to swap out symbols/colors of annotation stored in the geodatabase at the layer level. This allows annotation to be re-purposed in maps without duplicating the annotation. The classic case for this behavior is when a user wishes to utilize black text generated for standard parcel maps on top of a map with raster imagery. By substituting the color or symbol collection of the annotation the user is allowed to change the appearance for this one map without a large performance or data management overhead. One complex aspect of symbol substitution is how overrides are treated when it is enabled. When this feature was originally added some wanted overrides to be respected and others did not, so options were added for this (dominant and subordinate substitution types). When the dominant type is chosen overrides are ignored. When the subordinate type is chosen overrides are applied on top of the new symbols. 
+| subLayers | [[CIMAnnotationSubLayer]](CIMVectorLayers.md#cimannotationsublayer) | A collection of AnnotationSubLayers, corresponding to the annotation subclasses defined by the annotation feature class. 
 
 
 
@@ -292,7 +292,7 @@
 | maximumScale | double | The maximum scale to use when . 
 | featureCount | long | The number of features to use when . 
 | minimumBinSize | double | The minimum size (in points) to maintain as the bins are drawn at different scales. 
-| fields | [CIMAggregateField](CIMVectorLayers.md#cimaggregatefield) | The aggregate fields that should be shown with the bins. 
+| fields | [[CIMAggregateField]](CIMVectorLayers.md#cimaggregatefield) | The aggregate fields that should be shown with the bins. 
 | visualization | [CIMBinningVisualization](CIMVectorLayers.md#cimbinningvisualization) | The visualization used by the bins. 
 | spatialReference | [SpatialReference](ExternalReferences.md#spatialreference) | The spatial reference in which features are aggregated. A dataset may be aggregated in one or more spatial references. These may differ from the spatial reference of the dataset itself (the Geohash scheme always uses WGS84, for example). This property is the user's choice from among those spatial references. 
 | fixedLevel | long | The bin level at which bins will be drawn. If -1, the bin level will be automatically chosen based on the minimum bin size. 
@@ -369,12 +369,12 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
 | searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 ### CIMBuildingDisciplineLayerDefinition 
@@ -428,12 +428,12 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
 | searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 ### CIMBuildingLayerDefinition 
@@ -533,12 +533,12 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
 | searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -548,9 +548,9 @@
 | autoGenerateFeatureTemplates | boolean | A value indicating whether to automatically generate feature templates from the renderer. 
 | extrusion | [CIMFeatureExtrusion](CIMVectorLayers.md#cimfeatureextrusion) | The feature extrusion. 
 | featureElevationExpression | string | The feature elevation expression. 
-| featureHyperlinks | [CIMFeatureHyperlink](CIMVectorLayers.md#cimfeaturehyperlink) | The feature hyperlinks. 
+| featureHyperlinks | [[CIMFeatureHyperlink]](CIMVectorLayers.md#cimfeaturehyperlink) | The feature hyperlinks. 
 | featureTable | [CIMFeatureTable](CIMVectorLayers.md#cimfeaturetable) | The feature table. 
-| featureTemplates | [CIMEditingTemplate](Types.md#editingtemplate) | The feature templates. 
+| featureTemplates | [[CIMEditingTemplate]](Types.md#cimeditingtemplate) | The feature templates. 
 | hotlinkField | string | The field containing hotlink URLs. 
 | htmlPopupEnabled | boolean | A value indicating whether HTML pop-ups are enabled. 
 | htmlPopupFormat | [CIMHtmlPopupFormat](CIMVectorLayers.md#cimhtmlpopupformat) | The HTML pop-ups format. 
@@ -562,7 +562,7 @@
 | pageDefinition | [CIMPageDefinition](CIMVectorLayers.md#cimpagedefinition) | The page definition which allows for using current map series page to filter features. 
 | featureCacheType | [enumeration FeatureCacheType](CIMVectorLayers.md#enumeration-featurecachetype) | The feature cache type. 
 | enableDisplayFilters | boolean | A value indicating whether the current set of display filters are honored during drawing. 
-| displayFilters | [CIMDisplayFilter](CIMVectorLayers.md#cimdisplayfilter) | The current set of display filters. 
+| displayFilters | [[CIMDisplayFilter]](CIMVectorLayers.md#cimdisplayfilter) | The current set of display filters. 
 | featureElevationExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression for setting the feature elevation. 
 
 
@@ -909,12 +909,12 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
 | searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -924,9 +924,9 @@
 | autoGenerateFeatureTemplates | boolean | A value indicating whether to automatically generate feature templates from the renderer. 
 | extrusion | [CIMFeatureExtrusion](CIMVectorLayers.md#cimfeatureextrusion) | The feature extrusion. 
 | featureElevationExpression | string | The feature elevation expression. 
-| featureHyperlinks | [CIMFeatureHyperlink](CIMVectorLayers.md#cimfeaturehyperlink) | The feature hyperlinks. 
+| featureHyperlinks | [[CIMFeatureHyperlink]](CIMVectorLayers.md#cimfeaturehyperlink) | The feature hyperlinks. 
 | featureTable | [CIMFeatureTable](CIMVectorLayers.md#cimfeaturetable) | The feature table. 
-| featureTemplates | [CIMEditingTemplate](Types.md#editingtemplate) | The feature templates. 
+| featureTemplates | [[CIMEditingTemplate]](Types.md#cimeditingtemplate) | The feature templates. 
 | hotlinkField | string | The field containing hotlink URLs. 
 | htmlPopupEnabled | boolean | A value indicating whether HTML pop-ups are enabled. 
 | htmlPopupFormat | [CIMHtmlPopupFormat](CIMVectorLayers.md#cimhtmlpopupformat) | The HTML pop-ups format. 
@@ -938,7 +938,7 @@
 | pageDefinition | [CIMPageDefinition](CIMVectorLayers.md#cimpagedefinition) | The page definition which allows for using current map series page to filter features. 
 | featureCacheType | [enumeration FeatureCacheType](CIMVectorLayers.md#enumeration-featurecachetype) | The feature cache type. 
 | enableDisplayFilters | boolean | A value indicating whether the current set of display filters are honored during drawing. 
-| displayFilters | [CIMDisplayFilter](CIMVectorLayers.md#cimdisplayfilter) | The current set of display filters. 
+| displayFilters | [[CIMDisplayFilter]](CIMVectorLayers.md#cimdisplayfilter) | The current set of display filters. 
 | featureElevationExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression for setting the feature elevation. 
 
 
@@ -946,12 +946,12 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| actions | [CIMLayerAction](CIMVectorLayers.md#cimlayeraction) | The layer actions. 
+| actions | [[CIMLayerAction]](CIMVectorLayers.md#cimlayeraction) | The layer actions. 
 | exclusionSet | [long long] | The set of excluded features. 
-| featureMasks | [CIMDataConnection](Types.md#dataconnection) | The data connection of the masking data. 
-| labelClasses | [CIMLabelClass](CIMLabelPlacement.md#cimlabelclass) | The collection of label class definitions. 
+| featureMasks | [[CIMDataConnection]](Types.md#cimdataconnection) | The data connection of the masking data. 
+| labelClasses | [[CIMLabelClass]](CIMLabelPlacement.md#cimlabelclass) | The collection of label class definitions. 
 | labelVisibility | boolean | A value indicating whether to display labels for this layer's label classes. 
-| maskedSymbolLayers | [CIMSymbolLayerMasking](CIMVectorLayers.md#cimsymbollayermasking) | The masked symbol layers. Each SymbolLayerMasking gives the symbol layers that are masked by that masking layer. 
+| maskedSymbolLayers | [[CIMSymbolLayerMasking]](CIMVectorLayers.md#cimsymbollayermasking) | The masked symbol layers. Each SymbolLayerMasking gives the symbol layers that are masked by that masking layer. 
 | mostCurrentRenderer | [Renderer](Types.md#renderer) | The renderer used for the most current features when displaying tracks. Deprecated at 2.2, ignored in previous versions. 
 | renderer | [Renderer](Types.md#renderer) | The primary symbol renderer. 
 | scaleSymbols | boolean | A value indicating whether to scale the symbols in this layer based on the map's reference scale. 
@@ -980,19 +980,19 @@
 |---------|--------|--------|
 | definitionExpression | string | The definition expression that can subset the rows in the virtual table. 
 | definitionExpressionName | string | The Name of definition expression. 
-| definitionFilterChoices | [CIMDefinitionFilter](CIMLayer.md#cimdefinitionfilter) | The definition filter choices. 
+| definitionFilterChoices | [[CIMDefinitionFilter]](CIMLayer.md#cimdefinitionfilter) | The definition filter choices. 
 | displayField | string | The name of the attribute field that will be used as a label that represents each row in the table. The display field must be able to be represented as a string (string or numeric). 
 | editable | boolean | A value indicating whether or not the table can be edited. 
-| relates | [CIMRelateInfoBase](CIMVectorLayers.md#cimrelateinfobase) | The relates. 
-| fieldDescriptions | [CIMFieldDescription](Types.md#fielddescription) | The field descriptions. Field descriptions for fields may only be written if values are overridden from defaults. 
+| relates | [[CIMRelateInfoBase]](CIMVectorLayers.md#cimrelateinfobase) | The relates. 
+| fieldDescriptions | [[CIMFieldDescription]](Types.md#cimfielddescription) | The field descriptions. Field descriptions for fields may only be written if values are overridden from defaults. 
 | timeFields | [CIMTimeTableDefinition](CIMVectorLayers.md#cimtimetabledefinition) | The time fields. 
 | timeDefinition | [CIMTimeDataDefinition](CIMVectorLayers.md#cimtimedatadefinition) | The time definition. 
 | timeDisplayDefinition | [CIMTimeDisplayDefinition](CIMVectorLayers.md#cimtimedisplaydefinition) | The time display definition. 
 | timeDimensionFields | [CIMTimeDimensionDefinition](CIMVectorLayers.md#cimtimedimensiondefinition) | The time definition fields. 
-| rangeDefinitions | [CIMRangeDefinition](CIMVectorLayers.md#cimrangedefinition) | The range definitions. 
+| rangeDefinitions | [[CIMRangeDefinition]](CIMVectorLayers.md#cimrangedefinition) | The range definitions. 
 | activeRangeName | string | The active range name. 
 | selectRelatedData | boolean | A value indicating whether related data should be selected when creating a new selection. 
-| bindVariables | [CIMBindVariable](Types.md#bindvariable) | The bind variables. 
+| bindVariables | [[CIMBindVariable]](Types.md#cimbindvariable) | The bind variables. 
 | subtypeValue | long | The subtype value that should be used in the feature layer definition. This property is honored only when feature layer is a member of SubtypeLayer. 
 | useSubtypeValue | boolean | A value indicating whether or not the SubtypeValue should be used. 
 | displayExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression information used for coming up with a string that represents a row or a feature. 
@@ -1028,7 +1028,7 @@
 | tags | string | The tags. 
 | toolProgID | string | The tool ProgID. 
 | toolFilter | [string] | The tool filter. 
-| toolOptions | [CIMEditingTemplateToolOptions](CIMVectorLayers.md#cimeditingtemplatetooloptions) | The per-tool options. 
+| toolOptions | [[CIMEditingTemplateToolOptions]](CIMVectorLayers.md#cimeditingtemplatetooloptions) | The per-tool options. 
 
 
 ### CIMBasicFeatureTemplate 
@@ -1038,7 +1038,7 @@
 | defaultValues | {JSON_object}| The default values. 
 | requiredFields | [string] | The required fields. 
 | hiddenFields | [string] | The hidden fields. 
-| relationships | [CIMEditingTemplateRelationship](CIMVectorLayers.md#cimeditingtemplaterelationship) | The template relationships. 
+| relationships | [[CIMEditingTemplateRelationship]](CIMVectorLayers.md#cimeditingtemplaterelationship) | The template relationships. 
 
 
 ### CIMFeatureTemplate 
@@ -1131,7 +1131,7 @@
 | tags | string | The tags. 
 | toolProgID | string | The tool ProgID. 
 | toolFilter | [string] | The tool filter. 
-| toolOptions | [CIMEditingTemplateToolOptions](CIMVectorLayers.md#cimeditingtemplatetooloptions) | The per-tool options. 
+| toolOptions | [[CIMEditingTemplateToolOptions]](CIMVectorLayers.md#cimeditingtemplatetooloptions) | The per-tool options. 
 
 
 ### CIMGroupEditingTemplate 
@@ -1140,7 +1140,7 @@
 |---------|--------|--------|
 | baseName | string | The base name. 
 | basePart | [CIMGroupEditingTemplatePart](CIMVectorLayers.md#cimgroupeditingtemplatepart) | The base part. 
-| parts | [CIMGroupEditingTemplatePart](CIMVectorLayers.md#cimgroupeditingtemplatepart) | The parts. 
+| parts | [[CIMGroupEditingTemplatePart]](CIMVectorLayers.md#cimgroupeditingtemplatepart) | The parts. 
 | createUtilityNetworkAssociations | boolean | A value indicating whether this template will attempt to create associations between features being created. This property is only used with group templates in layers participating in a utility network. 
 
 
@@ -1256,8 +1256,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| activities | [CIMActivity](Types.md#activity) | Activities. 
-| conditions | [CIMCondition](Types.md#condition) | Conditions. 
+| activities | [[CIMActivity]](Types.md#cimactivity) | Activities. 
+| conditions | [[CIMCondition]](Types.md#cimcondition) | Conditions. 
 
 
 
@@ -1343,7 +1343,7 @@
 | tags | string | The tags. 
 | toolProgID | string | The tool ProgID. 
 | toolFilter | [string] | The tool filter. 
-| toolOptions | [CIMEditingTemplateToolOptions](CIMVectorLayers.md#cimeditingtemplatetooloptions) | The per-tool options. 
+| toolOptions | [[CIMEditingTemplateToolOptions]](CIMVectorLayers.md#cimeditingtemplatetooloptions) | The per-tool options. 
 
 
 ### CIMBasicFeatureTemplate 
@@ -1353,7 +1353,7 @@
 | defaultValues | {JSON_object}| The default values. 
 | requiredFields | [string] | The required fields. 
 | hiddenFields | [string] | The hidden fields. 
-| relationships | [CIMEditingTemplateRelationship](CIMVectorLayers.md#cimeditingtemplaterelationship) | The template relationships. 
+| relationships | [[CIMEditingTemplateRelationship]](CIMVectorLayers.md#cimeditingtemplaterelationship) | The template relationships. 
 
 
 ### CIMMultipatchFeatureTemplate 
@@ -1361,7 +1361,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | galleryMode | boolean | A value indicating whether or not this is gallery mode. 
-| models | [CIMMultipatchFeatureTemplateModel](CIMVectorLayers.md#cimmultipatchfeaturetemplatemodel) | The models. 
+| models | [[CIMMultipatchFeatureTemplateModel]](CIMVectorLayers.md#cimmultipatchfeaturetemplatemodel) | The models. 
 
 
 
@@ -1528,12 +1528,12 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
 | searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 ### CIMParcelFabricLayerDefinition 
@@ -1599,12 +1599,12 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
 | searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 ### CIMParcelLayerDefinition 
@@ -1666,8 +1666,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | title | string | The title. 
-| expressionInfos | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The media infos. 
-| mediaInfos | [CIMMediaInfo](Types.md#mediainfo) | The media infos. 
+| expressionInfos | [[CIMExpressionInfo]](CIMRenderers.md#cimexpressioninfo) | The media infos. 
+| mediaInfos | [[CIMMediaInfo]](Types.md#cimmediainfo) | The media infos. 
 
 
 
@@ -1749,19 +1749,19 @@
 |---------|--------|--------|
 | definitionExpression | string | The definition expression that can subset the rows in the virtual table. 
 | definitionExpressionName | string | The Name of definition expression. 
-| definitionFilterChoices | [CIMDefinitionFilter](CIMLayer.md#cimdefinitionfilter) | The definition filter choices. 
+| definitionFilterChoices | [[CIMDefinitionFilter]](CIMLayer.md#cimdefinitionfilter) | The definition filter choices. 
 | displayField | string | The name of the attribute field that will be used as a label that represents each row in the table. The display field must be able to be represented as a string (string or numeric). 
 | editable | boolean | A value indicating whether or not the table can be edited. 
-| relates | [CIMRelateInfoBase](CIMVectorLayers.md#cimrelateinfobase) | The relates. 
-| fieldDescriptions | [CIMFieldDescription](Types.md#fielddescription) | The field descriptions. Field descriptions for fields may only be written if values are overridden from defaults. 
+| relates | [[CIMRelateInfoBase]](CIMVectorLayers.md#cimrelateinfobase) | The relates. 
+| fieldDescriptions | [[CIMFieldDescription]](Types.md#cimfielddescription) | The field descriptions. Field descriptions for fields may only be written if values are overridden from defaults. 
 | timeFields | [CIMTimeTableDefinition](CIMVectorLayers.md#cimtimetabledefinition) | The time fields. 
 | timeDefinition | [CIMTimeDataDefinition](CIMVectorLayers.md#cimtimedatadefinition) | The time definition. 
 | timeDisplayDefinition | [CIMTimeDisplayDefinition](CIMVectorLayers.md#cimtimedisplaydefinition) | The time display definition. 
 | timeDimensionFields | [CIMTimeDimensionDefinition](CIMVectorLayers.md#cimtimedimensiondefinition) | The time definition fields. 
-| rangeDefinitions | [CIMRangeDefinition](CIMVectorLayers.md#cimrangedefinition) | The range definitions. 
+| rangeDefinitions | [[CIMRangeDefinition]](CIMVectorLayers.md#cimrangedefinition) | The range definitions. 
 | activeRangeName | string | The active range name. 
 | selectRelatedData | boolean | A value indicating whether related data should be selected when creating a new selection. 
-| bindVariables | [CIMBindVariable](Types.md#bindvariable) | The bind variables. 
+| bindVariables | [[CIMBindVariable]](Types.md#cimbindvariable) | The bind variables. 
 | subtypeValue | long | The subtype value that should be used in the feature layer definition. This property is honored only when feature layer is a member of SubtypeLayer. 
 | useSubtypeValue | boolean | A value indicating whether or not the SubtypeValue should be used. 
 | displayExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression information used for coming up with a string that represents a row or a feature. 
@@ -1927,19 +1927,19 @@
 |---------|--------|--------|
 | definitionExpression | string | The definition expression that can subset the rows in the virtual table. 
 | definitionExpressionName | string | The Name of definition expression. 
-| definitionFilterChoices | [CIMDefinitionFilter](CIMLayer.md#cimdefinitionfilter) | The definition filter choices. 
+| definitionFilterChoices | [[CIMDefinitionFilter]](CIMLayer.md#cimdefinitionfilter) | The definition filter choices. 
 | displayField | string | The name of the attribute field that will be used as a label that represents each row in the table. The display field must be able to be represented as a string (string or numeric). 
 | editable | boolean | A value indicating whether or not the table can be edited. 
-| relates | [CIMRelateInfoBase](CIMVectorLayers.md#cimrelateinfobase) | The relates. 
-| fieldDescriptions | [CIMFieldDescription](Types.md#fielddescription) | The field descriptions. Field descriptions for fields may only be written if values are overridden from defaults. 
+| relates | [[CIMRelateInfoBase]](CIMVectorLayers.md#cimrelateinfobase) | The relates. 
+| fieldDescriptions | [[CIMFieldDescription]](Types.md#cimfielddescription) | The field descriptions. Field descriptions for fields may only be written if values are overridden from defaults. 
 | timeFields | [CIMTimeTableDefinition](CIMVectorLayers.md#cimtimetabledefinition) | The time fields. 
 | timeDefinition | [CIMTimeDataDefinition](CIMVectorLayers.md#cimtimedatadefinition) | The time definition. 
 | timeDisplayDefinition | [CIMTimeDisplayDefinition](CIMVectorLayers.md#cimtimedisplaydefinition) | The time display definition. 
 | timeDimensionFields | [CIMTimeDimensionDefinition](CIMVectorLayers.md#cimtimedimensiondefinition) | The time definition fields. 
-| rangeDefinitions | [CIMRangeDefinition](CIMVectorLayers.md#cimrangedefinition) | The range definitions. 
+| rangeDefinitions | [[CIMRangeDefinition]](CIMVectorLayers.md#cimrangedefinition) | The range definitions. 
 | activeRangeName | string | The active range name. 
 | selectRelatedData | boolean | A value indicating whether related data should be selected when creating a new selection. 
-| bindVariables | [CIMBindVariable](Types.md#bindvariable) | The bind variables. 
+| bindVariables | [[CIMBindVariable]](Types.md#cimbindvariable) | The bind variables. 
 | subtypeValue | long | The subtype value that should be used in the feature layer definition. This property is honored only when feature layer is a member of SubtypeLayer. 
 | useSubtypeValue | boolean | A value indicating whether or not the SubtypeValue should be used. 
 | displayExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression information used for coming up with a string that represents a row or a feature. 
@@ -1953,13 +1953,13 @@
 | dataConnection | [DataConnection](Types.md#dataconnection) | The data connection for the table. 
 | description | string | The description. 
 | autoGenerateRowTemplates | boolean | A value indicating whether to automatically generate row templates from the renderer. 
-| rowTemplates | [CIMEditingTemplate](Types.md#editingtemplate) | The row templates. 
+| rowTemplates | [[CIMEditingTemplate]](Types.md#cimeditingtemplate) | The row templates. 
 | serviceTableID | long | Identifier that will be used to identify the layer in server. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
-| charts | [CIMChart](CIMLayer.md#cimchart) | The table's charts. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | The table's charts. 
 | pageDefinition | [CIMPageDefinition](CIMVectorLayers.md#cimpagedefinition) | The page definition which allows for using current map series page to filter rows. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the standalone table. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the standalone table. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 
@@ -2064,12 +2064,12 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
 | searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -2079,9 +2079,9 @@
 | autoGenerateFeatureTemplates | boolean | A value indicating whether to automatically generate feature templates from the renderer. 
 | extrusion | [CIMFeatureExtrusion](CIMVectorLayers.md#cimfeatureextrusion) | The feature extrusion. 
 | featureElevationExpression | string | The feature elevation expression. 
-| featureHyperlinks | [CIMFeatureHyperlink](CIMVectorLayers.md#cimfeaturehyperlink) | The feature hyperlinks. 
+| featureHyperlinks | [[CIMFeatureHyperlink]](CIMVectorLayers.md#cimfeaturehyperlink) | The feature hyperlinks. 
 | featureTable | [CIMFeatureTable](CIMVectorLayers.md#cimfeaturetable) | The feature table. 
-| featureTemplates | [CIMEditingTemplate](Types.md#editingtemplate) | The feature templates. 
+| featureTemplates | [[CIMEditingTemplate]](Types.md#cimeditingtemplate) | The feature templates. 
 | hotlinkField | string | The field containing hotlink URLs. 
 | htmlPopupEnabled | boolean | A value indicating whether HTML pop-ups are enabled. 
 | htmlPopupFormat | [CIMHtmlPopupFormat](CIMVectorLayers.md#cimhtmlpopupformat) | The HTML pop-ups format. 
@@ -2093,7 +2093,7 @@
 | pageDefinition | [CIMPageDefinition](CIMVectorLayers.md#cimpagedefinition) | The page definition which allows for using current map series page to filter features. 
 | featureCacheType | [enumeration FeatureCacheType](CIMVectorLayers.md#enumeration-featurecachetype) | The feature cache type. 
 | enableDisplayFilters | boolean | A value indicating whether the current set of display filters are honored during drawing. 
-| displayFilters | [CIMDisplayFilter](CIMVectorLayers.md#cimdisplayfilter) | The current set of display filters. 
+| displayFilters | [[CIMDisplayFilter]](CIMVectorLayers.md#cimdisplayfilter) | The current set of display filters. 
 | featureElevationExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression for setting the feature elevation. 
 
 
@@ -2153,7 +2153,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| symbolLayers | [CIMSymbolLayerIdentifier](CIMLayer.md#cimsymbollayeridentifier) | The symbol layer identifiers. 
+| symbolLayers | [[CIMSymbolLayerIdentifier]](CIMLayer.md#cimsymbollayeridentifier) | The symbol layer identifiers. 
 
 
 
@@ -2490,12 +2490,12 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
 | searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 ### CIMVectorTileLayerDefinition 

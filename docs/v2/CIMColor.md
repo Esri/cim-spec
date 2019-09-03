@@ -55,6 +55,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | colors | [CIMColor](Types.md#color) | The ordered list of colors in the color scheme. 
+| colors | [[CIMColor]](Types.md#cimcolor) | The ordered list of colors in the color scheme. 
 
 
 
@@ -215,7 +216,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| colorRamps | [CIMColorRamp](Types.md#colorramp) | The ordered list of color ramps (also known as schemes) that are combined to build the multipart ramp. Typically these are continuous color ramps. 
+| colorRamps | [[CIMColorRamp]](Types.md#cimcolorramp) | The ordered list of color ramps (also known as schemes) that are combined to build the multipart ramp. Typically these are continuous color ramps. 
 | weights | [double] | The proportional weight for each color ramp (also known as a color scheme) that make up the multipart ramp. This allows for ramp to ramp transition at specific weight points. 
 
 

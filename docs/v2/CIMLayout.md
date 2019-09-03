@@ -82,7 +82,7 @@
 | rotation | double | The rotation of the element. 
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
 
 
 ### CIMFrameElement 
@@ -129,7 +129,7 @@
 | pattern | [CIMGridPattern](CIMLayout.md#cimgridpattern) | The pattern of the grid lines. 
 | fromTick | [CIMExteriorTick](CIMLayout.md#cimexteriortick) | The properties of the tick that is at the start of the grid line it represents. 
 | toTick | [CIMExteriorTick](CIMLayout.md#cimexteriortick) | The properties of the tick that is at the end of the grid line it represents. 
-| interiorTicks | [CIMInteriorTick](CIMLayout.md#ciminteriortick) | The properties of the interior ticks for a grid line. 
+| interiorTicks | [[CIMInteriorTick]](CIMLayout.md#ciminteriortick) | The properties of the interior ticks for a grid line. 
 | visibleIndices | [long] | The visibility of the corner labels to edges by index. 
 
 
@@ -180,7 +180,7 @@
 | pattern | [CIMGridPattern](CIMLayout.md#cimgridpattern) | The pattern of the grid lines. 
 | fromTick | [CIMExteriorTick](CIMLayout.md#cimexteriortick) | The properties of the tick that is at the start of the grid line it represents. 
 | toTick | [CIMExteriorTick](CIMLayout.md#cimexteriortick) | The properties of the tick that is at the end of the grid line it represents. 
-| interiorTicks | [CIMInteriorTick](CIMLayout.md#ciminteriortick) | The properties of the interior ticks for a grid line. 
+| interiorTicks | [[CIMInteriorTick]](CIMLayout.md#ciminteriortick) | The properties of the interior ticks for a grid line. 
 | visibleIndices | [long] | The visibility of the corner labels to edges by index. 
 
 
@@ -258,7 +258,7 @@
 | rotation | double | The rotation of the element. 
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
 
 
 ### CIMFrameElement 
@@ -479,7 +479,7 @@
 | rotation | double | The rotation of the element. 
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
 
 
 ### CIMGraphicElement 
@@ -506,7 +506,7 @@
 | neatlineSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The neat line symbol of the Grid or Graticule. 
 | maxInteriorAngle | double | The maximum value of the interior angle that determines the edge of the mapFrame polygon. The angle is defined in degrees. 
 | edgeMinimumLength | double | The minimum length of the edge of the mapFrame polygon in page units. 
-| mapGridEdges | [CIMMapGridEdge](CIMLayout.md#cimmapgridedge) | The map grid edges. 
+| mapGridEdges | [[CIMMapGridEdge]](CIMLayout.md#cimmapgridedge) | The map grid edges. 
 
 
 ### CIMGraticule 
@@ -515,7 +515,7 @@
 |---------|--------|--------|
 | customOrigin | [Point](ExternalReferences.md#point) | The custom origin of a graticule. 
 | geographicCoordinateSystem | [GeographicCoordinateSystem](ExternalReferences.md#geographiccoordinatesystem) | The spatial reference of a graticule. 
-| gridLines | [CIMGridLine](Types.md#gridline) | The collection of latitudes and longitudes for a graticule. 
+| gridLines | [[CIMGridLine]](Types.md#cimgridline) | The collection of latitudes and longitudes for a graticule. 
 | isAutoScaled | boolean | A value indicating whether to automatically adjust the interval of the graticules based on scale of the map. 
 | useMapClipShape | boolean | A value indicating whether to use the clip shape of the map (if set) as the grid boundary. 
 
@@ -581,7 +581,7 @@
 | pattern | [CIMGridPattern](CIMLayout.md#cimgridpattern) | The pattern of the grid lines. 
 | fromTick | [CIMExteriorTick](CIMLayout.md#cimexteriortick) | The properties of the tick that is at the start of the grid line it represents. 
 | toTick | [CIMExteriorTick](CIMLayout.md#cimexteriortick) | The properties of the tick that is at the end of the grid line it represents. 
-| interiorTicks | [CIMInteriorTick](CIMLayout.md#ciminteriortick) | The properties of the interior ticks for a grid line. 
+| interiorTicks | [[CIMInteriorTick]](CIMLayout.md#ciminteriortick) | The properties of the interior ticks for a grid line. 
 | visibleIndices | [long] | The visibility of the corner labels to edges by index. 
 
 
@@ -632,7 +632,7 @@
 | rotation | double | The rotation of the element. 
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
 
 
 ### CIMFrameElement 
@@ -653,7 +653,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [CIMElement](Types.md#element) | A collection of layout elements. 
+| elements | [[CIMElement]](Types.md#cimelement) | A collection of layout elements. 
 
 
 
@@ -675,7 +675,7 @@
 | rotation | double | The rotation of the element. 
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
 
 
 ### CIMFrameElement 
@@ -696,7 +696,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [CIMElement](Types.md#element) | A collection of layout elements. 
+| elements | [[CIMElement]](Types.md#cimelement) | A collection of layout elements. 
 
 
 ### CIMReportSectionElement 
@@ -704,7 +704,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | autoSize | boolean | A value indicating whether the section height will grow and shrink to fit the content of the section. 
-| elementFieldProperties | [CIMReportElementFieldProperties](CIMLayout.md#cimreportelementfieldproperties) | The field properties that will be applied to the elements. 
+| elementFieldProperties | [[CIMReportElementFieldProperties]](CIMLayout.md#cimreportelementfieldproperties) | The field properties that will be applied to the elements. 
 | excludePageNumberPages | string | The comma delimited list of pages to exclude the page number from. 
 | excludeSectionPages | string | The comma delimited list of pages to exclude the section from. 
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
@@ -736,7 +736,7 @@
 | rotation | double | The rotation of the element. 
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
 
 
 ### CIMFrameElement 
@@ -757,7 +757,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [CIMElement](Types.md#element) | A collection of layout elements. 
+| elements | [[CIMElement]](Types.md#cimelement) | A collection of layout elements. 
 
 
 ### CIMReportSectionElement 
@@ -765,7 +765,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | autoSize | boolean | A value indicating whether the section height will grow and shrink to fit the content of the section. 
-| elementFieldProperties | [CIMReportElementFieldProperties](CIMLayout.md#cimreportelementfieldproperties) | The field properties that will be applied to the elements. 
+| elementFieldProperties | [[CIMReportElementFieldProperties]](CIMLayout.md#cimreportelementfieldproperties) | The field properties that will be applied to the elements. 
 | excludePageNumberPages | string | The comma delimited list of pages to exclude the page number from. 
 | excludeSectionPages | string | The comma delimited list of pages to exclude the section from. 
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
@@ -947,7 +947,7 @@
 | pattern | [CIMGridPattern](CIMLayout.md#cimgridpattern) | The pattern of the grid lines. 
 | fromTick | [CIMExteriorTick](CIMLayout.md#cimexteriortick) | The properties of the tick that is at the start of the grid line it represents. 
 | toTick | [CIMExteriorTick](CIMLayout.md#cimexteriortick) | The properties of the tick that is at the end of the grid line it represents. 
-| interiorTicks | [CIMInteriorTick](CIMLayout.md#ciminteriortick) | The properties of the interior ticks for a grid line. 
+| interiorTicks | [[CIMInteriorTick]](CIMLayout.md#ciminteriortick) | The properties of the interior ticks for a grid line. 
 | visibleIndices | [long] | The visibility of the corner labels to edges by index. 
 
 
@@ -986,7 +986,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [CIMElement](Types.md#element) | A collection of layout elements. 
+| elements | [[CIMElement]](Types.md#cimelement) | A collection of layout elements. 
 
 
 ### CIMLayoutDefinition 
@@ -1063,7 +1063,7 @@
 | rotation | double | The rotation of the element. 
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
 
 
 ### CIMFrameElement 
@@ -1096,7 +1096,7 @@
 | headingGap | double | The heading gap. Units in points. 
 | horizontalItemGap | double | The gap between horizontal items. Units in points. 
 | horizontalPatchGap | double | The horizontal gap between patches. Units in points. 
-| items | [CIMLegendItem](Types.md#legenditem) | A collection of items in a layout. 
+| items | [[CIMLegendItem]](Types.md#cimlegenditem) | A collection of items in a layout. 
 | labelWidth | double | The label width. Units in points. 
 | minFontSize | double | The minimum font size. Units in points. 
 | rightToLeft | boolean | A value indicating whether right to left orientation should be applied. 
@@ -1163,7 +1163,7 @@
 | pattern | [CIMGridPattern](CIMLayout.md#cimgridpattern) | The pattern of the grid lines. 
 | fromTick | [CIMExteriorTick](CIMLayout.md#cimexteriortick) | The properties of the tick that is at the start of the grid line it represents. 
 | toTick | [CIMExteriorTick](CIMLayout.md#cimexteriortick) | The properties of the tick that is at the end of the grid line it represents. 
-| interiorTicks | [CIMInteriorTick](CIMLayout.md#ciminteriortick) | The properties of the interior ticks for a grid line. 
+| interiorTicks | [[CIMInteriorTick]](CIMLayout.md#ciminteriortick) | The properties of the interior ticks for a grid line. 
 | visibleIndices | [long] | The visibility of the corner labels to edges by index. 
 
 
@@ -1205,7 +1205,7 @@
 | rotation | double | The rotation of the element. 
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
 
 
 ### CIMFrameElement 
@@ -1223,8 +1223,8 @@
 | autoCamera | [CIMAutoCamera](CIMLayout.md#cimautocamera) | The camera associated with the map frame. 
 | URI | string | The path to the map frame in the project. 
 | view | [CIMMapView](CIMDocument.md#cimmapview) | The view associated with the map frame. 
-| extentIndicators | [CIMExtentIndicator](CIMLayout.md#cimextentindicator) | The extent indicators associated with the map frame. 
-| grids | [CIMMapGrid](Types.md#mapgrid) | The Grids and Graticules associated with the MapFrame. 
+| extentIndicators | [[CIMExtentIndicator]](CIMLayout.md#cimextentindicator) | The extent indicators associated with the map frame. 
+| grids | [[CIMMapGrid]](Types.md#cimmapgrid) | The Grids and Graticules associated with the MapFrame. 
 
 
 
@@ -1292,7 +1292,7 @@
 | rotation | double | The rotation of the element. 
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
 
 
 ### CIMFrameElement 
@@ -1343,7 +1343,7 @@
 | neatlineSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The neat line symbol of the Grid or Graticule. 
 | maxInteriorAngle | double | The maximum value of the interior angle that determines the edge of the mapFrame polygon. The angle is defined in degrees. 
 | edgeMinimumLength | double | The minimum length of the edge of the mapFrame polygon in page units. 
-| mapGridEdges | [CIMMapGridEdge](CIMLayout.md#cimmapgridedge) | The map grid edges. 
+| mapGridEdges | [[CIMMapGridEdge]](CIMLayout.md#cimmapgridedge) | The map grid edges. 
 
 
 ### CIMMeasuredGrid 
@@ -1352,7 +1352,7 @@
 |---------|--------|--------|
 | customOrigin | [Point](ExternalReferences.md#point) | The custom origin of the measured grid. 
 | projectedCoordinateSystem | [ProjectedCoordinateSystem](ExternalReferences.md#projectedcoordinatesystem) | The projected coordinate system of the grid. 
-| gridLines | [CIMGridLine](Types.md#gridline) | The gridLines of the measured grid. 
+| gridLines | [[CIMGridLine]](Types.md#cimgridline) | The gridLines of the measured grid. 
 | isAutoScaled | boolean | A value indicating whether to auto-scale the grid. 
 | clipUTMZone | boolean | A value indicating whether to clip the grid to the UTM zone. If the measured grid is not defined in one of the UTM coordinates, then this property is irrelevant. 
 | useMapClipShape | boolean | A value indicating whether to use the clip shape of the map (if set) as the grid boundary. 
@@ -1377,7 +1377,7 @@
 | rotation | double | The rotation of the element. 
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
 
 
 ### CIMFrameElement 
@@ -1563,7 +1563,7 @@
 | width | double | The width of the layout in page units. 
 | printerPreferences | [CIMPrinterPreferences](CIMLayout.md#cimprinterpreferences) | The printer preferences for the page. 
 | units | [LinearUnit](ExternalReferences.md#linearunit) | The page units for the layout. 
-| guides | [CIMGuide](CIMLayout.md#cimguide) | The guides on a layout. 
+| guides | [[CIMGuide]](CIMLayout.md#cimguide) | The guides on a layout. 
 | showRulers | boolean | A value indicating whether rulers should be displayed on the layout. 
 | showGuides | boolean | A value indicating whether guides should be displayed on the layout. 
 | smallestRulerDivision | double | The smallest ruler division. 
@@ -1616,7 +1616,7 @@
 | rotation | double | The rotation of the element. 
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
 
 
 ### CIMFrameElement 
@@ -1649,8 +1649,8 @@
 | grid | [CIMProfileGrid](CIMLayout.md#cimprofilegrid) | The display options for the grid. 
 | terrain | [CIMProfileTerrain](CIMLayout.md#cimprofileterrain) | Display options for terrain. 
 | runway | [CIMProfileRunway](CIMLayout.md#cimprofilerunway) | The text symbol for runway elevation. 
-| OISSurfaces | [CIMProfileOIS](CIMLayout.md#cimprofileois) | The display option for all the OIS surfaces shown in the profile. 
-| obstacles | [CIMProfileObstacle](Types.md#profileobstacle) | The display option for all the point obstacles shown in the profile. 
+| OISSurfaces | [[CIMProfileOIS]](CIMLayout.md#cimprofileois) | The display option for all the OIS surfaces shown in the profile. 
+| obstacles | [[CIMProfileObstacle]](Types.md#cimprofileobstacle) | The display option for all the point obstacles shown in the profile. 
 | profileType | [enumeration ProfileFrameType](CIMLayout.md#enumeration-profileframetype) | The option for profile type. 
 
 
@@ -1909,7 +1909,7 @@
 | neatlineSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The neat line symbol of the Grid or Graticule. 
 | maxInteriorAngle | double | The maximum value of the interior angle that determines the edge of the mapFrame polygon. The angle is defined in degrees. 
 | edgeMinimumLength | double | The minimum length of the edge of the mapFrame polygon in page units. 
-| mapGridEdges | [CIMMapGridEdge](CIMLayout.md#cimmapgridedge) | The map grid edges. 
+| mapGridEdges | [[CIMMapGridEdge]](CIMLayout.md#cimmapgridedge) | The map grid edges. 
 
 
 ### CIMReferenceGrid 
@@ -1919,7 +1919,7 @@
 | isAutoScaled | boolean | A value indicating whether to auto-adjust the grid according to the size of the map frame. 
 | rowCount | long | The number of rows for the reference grids. 
 | columnCount | long | The number of columns for the reference grids. 
-| gridLines | [CIMGridLine](Types.md#gridline) | The collection of the grid lines. 
+| gridLines | [[CIMGridLine]](Types.md#cimgridline) | The collection of the grid lines. 
 
 
 
@@ -1984,7 +1984,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [CIMElement](Types.md#element) | A collection of layout elements. 
+| elements | [[CIMElement]](Types.md#cimelement) | A collection of layout elements. 
 
 
 ### CIMReport 
@@ -1993,7 +1993,7 @@
 |---------|--------|--------|
 | height | double | The Height of the report. 
 | startPage | long | The starting page for the report. 
-| watermarks | [CIMReportWatermark](CIMLayout.md#cimreportwatermark) | A collection of watermark for the report. 
+| watermarks | [[CIMReportWatermark]](CIMLayout.md#cimreportwatermark) | A collection of watermark for the report. 
 
 
 
@@ -2010,7 +2010,7 @@
 |---------|--------|--------|
 | dataConnection | [DataConnection](Types.md#dataconnection) | The data connection to the source. 
 | definitionQuery | string | The definition query. 
-| fields | [CIMReportField](CIMLayout.md#cimreportfield) | The fields used by the report. 
+| fields | [[CIMReportField]](CIMLayout.md#cimreportfield) | The fields used by the report. 
 | mapMemberURI | string | The URI to a Layer or Standalone table in the project. 
 | useSelectionSet | boolean | A value indicating whether the selection of the layer or table should be used for the report. 
 
@@ -2034,7 +2034,7 @@
 | rotation | double | The rotation of the element. 
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
 
 
 ### CIMFrameElement 
@@ -2055,7 +2055,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [CIMElement](Types.md#element) | A collection of layout elements. 
+| elements | [[CIMElement]](Types.md#cimelement) | A collection of layout elements. 
 
 
 ### CIMReportSectionElement 
@@ -2063,7 +2063,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | autoSize | boolean | A value indicating whether the section height will grow and shrink to fit the content of the section. 
-| elementFieldProperties | [CIMReportElementFieldProperties](CIMLayout.md#cimreportelementfieldproperties) | The field properties that will be applied to the elements. 
+| elementFieldProperties | [[CIMReportElementFieldProperties]](CIMLayout.md#cimreportelementfieldproperties) | The field properties that will be applied to the elements. 
 | excludePageNumberPages | string | The comma delimited list of pages to exclude the page number from. 
 | excludeSectionPages | string | The comma delimited list of pages to exclude the section from. 
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
@@ -2074,7 +2074,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | columns | long | The number of columns for the details section. 
-| rowBackgroundColors | [CIMColor](Types.md#color) | The collection of background colors for each of the repeating rows. 
+| rowBackgroundColors | [[CIMColor]](Types.md#cimcolor) | The collection of background colors for each of the repeating rows. 
 | rowBackgroundCount | long | The number of consecutive rows for each background color. 
 
 
@@ -2098,11 +2098,11 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| binaryReferences | [CIMBinaryReference](CIMDocument.md#cimbinaryreference) | The binary references of the document. 
-| layerDefinitions | [CIMDefinition](Types.md#definition) | The layer definitions in the report document. 
-| mapDefinitions | [CIMDefinition](Types.md#definition) | The map definitions of the report document. 
+| binaryReferences | [[CIMBinaryReference]](CIMDocument.md#cimbinaryreference) | The binary references of the document. 
+| layerDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The layer definitions in the report document. 
+| mapDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The map definitions of the report document. 
 | reportDefinition | [CIMReport](CIMLayout.md#cimreport) | The report definition of the report document. 
-| tableDefinitions | [CIMDefinition](Types.md#definition) | The table definitions of the report document. 
+| tableDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The table definitions of the report document. 
 
 
 
@@ -2169,7 +2169,7 @@
 | rotation | double | The rotation of the element. 
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
 
 
 ### CIMFrameElement 
@@ -2190,7 +2190,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [CIMElement](Types.md#element) | A collection of layout elements. 
+| elements | [[CIMElement]](Types.md#cimelement) | A collection of layout elements. 
 
 
 ### CIMReportSectionElement 
@@ -2198,7 +2198,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | autoSize | boolean | A value indicating whether the section height will grow and shrink to fit the content of the section. 
-| elementFieldProperties | [CIMReportElementFieldProperties](CIMLayout.md#cimreportelementfieldproperties) | The field properties that will be applied to the elements. 
+| elementFieldProperties | [[CIMReportElementFieldProperties]](CIMLayout.md#cimreportelementfieldproperties) | The field properties that will be applied to the elements. 
 | excludePageNumberPages | string | The comma delimited list of pages to exclude the page number from. 
 | excludeSectionPages | string | The comma delimited list of pages to exclude the section from. 
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
@@ -2229,7 +2229,7 @@
 | rotation | double | The rotation of the element. 
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
 
 
 ### CIMFrameElement 
@@ -2250,7 +2250,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [CIMElement](Types.md#element) | A collection of layout elements. 
+| elements | [[CIMElement]](Types.md#cimelement) | A collection of layout elements. 
 
 
 ### CIMReportSectionElement 
@@ -2258,7 +2258,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | autoSize | boolean | A value indicating whether the section height will grow and shrink to fit the content of the section. 
-| elementFieldProperties | [CIMReportElementFieldProperties](CIMLayout.md#cimreportelementfieldproperties) | The field properties that will be applied to the elements. 
+| elementFieldProperties | [[CIMReportElementFieldProperties]](CIMLayout.md#cimreportelementfieldproperties) | The field properties that will be applied to the elements. 
 | excludePageNumberPages | string | The comma delimited list of pages to exclude the page number from. 
 | excludeSectionPages | string | The comma delimited list of pages to exclude the section from. 
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
@@ -2290,7 +2290,7 @@
 | rotation | double | The rotation of the element. 
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
 
 
 ### CIMFrameElement 
@@ -2311,7 +2311,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [CIMElement](Types.md#element) | A collection of layout elements. 
+| elements | [[CIMElement]](Types.md#cimelement) | A collection of layout elements. 
 
 
 ### CIMReportSectionElement 
@@ -2319,7 +2319,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | autoSize | boolean | A value indicating whether the section height will grow and shrink to fit the content of the section. 
-| elementFieldProperties | [CIMReportElementFieldProperties](CIMLayout.md#cimreportelementfieldproperties) | The field properties that will be applied to the elements. 
+| elementFieldProperties | [[CIMReportElementFieldProperties]](CIMLayout.md#cimreportelementfieldproperties) | The field properties that will be applied to the elements. 
 | excludePageNumberPages | string | The comma delimited list of pages to exclude the page number from. 
 | excludeSectionPages | string | The comma delimited list of pages to exclude the section from. 
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
@@ -2350,7 +2350,7 @@
 | rotation | double | The rotation of the element. 
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
 
 
 ### CIMFrameElement 
@@ -2371,7 +2371,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [CIMElement](Types.md#element) | A collection of layout elements. 
+| elements | [[CIMElement]](Types.md#cimelement) | A collection of layout elements. 
 
 
 ### CIMReportSectionElement 
@@ -2379,7 +2379,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | autoSize | boolean | A value indicating whether the section height will grow and shrink to fit the content of the section. 
-| elementFieldProperties | [CIMReportElementFieldProperties](CIMLayout.md#cimreportelementfieldproperties) | The field properties that will be applied to the elements. 
+| elementFieldProperties | [[CIMReportElementFieldProperties]](CIMLayout.md#cimreportelementfieldproperties) | The field properties that will be applied to the elements. 
 | excludePageNumberPages | string | The comma delimited list of pages to exclude the page number from. 
 | excludeSectionPages | string | The comma delimited list of pages to exclude the section from. 
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
@@ -2410,7 +2410,7 @@
 | rotation | double | The rotation of the element. 
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
 
 
 ### CIMFrameElement 
@@ -2431,7 +2431,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [CIMElement](Types.md#element) | A collection of layout elements. 
+| elements | [[CIMElement]](Types.md#cimelement) | A collection of layout elements. 
 
 
 ### CIMReportSectionElement 
@@ -2439,7 +2439,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | autoSize | boolean | A value indicating whether the section height will grow and shrink to fit the content of the section. 
-| elementFieldProperties | [CIMReportElementFieldProperties](CIMLayout.md#cimreportelementfieldproperties) | The field properties that will be applied to the elements. 
+| elementFieldProperties | [[CIMReportElementFieldProperties]](CIMLayout.md#cimreportelementfieldproperties) | The field properties that will be applied to the elements. 
 | excludePageNumberPages | string | The comma delimited list of pages to exclude the page number from. 
 | excludeSectionPages | string | The comma delimited list of pages to exclude the section from. 
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
@@ -2471,7 +2471,7 @@
 | rotation | double | The rotation of the element. 
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
 
 
 ### CIMFrameElement 
@@ -2492,7 +2492,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [CIMElement](Types.md#element) | A collection of layout elements. 
+| elements | [[CIMElement]](Types.md#cimelement) | A collection of layout elements. 
 
 
 ### CIMReportSectionElement 
@@ -2500,7 +2500,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | autoSize | boolean | A value indicating whether the section height will grow and shrink to fit the content of the section. 
-| elementFieldProperties | [CIMReportElementFieldProperties](CIMLayout.md#cimreportelementfieldproperties) | The field properties that will be applied to the elements. 
+| elementFieldProperties | [[CIMReportElementFieldProperties]](CIMLayout.md#cimreportelementfieldproperties) | The field properties that will be applied to the elements. 
 | excludePageNumberPages | string | The comma delimited list of pages to exclude the page number from. 
 | excludeSectionPages | string | The comma delimited list of pages to exclude the section from. 
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
@@ -2604,7 +2604,7 @@
 | rotation | double | The rotation of the element. 
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
 
 
 ### CIMFrameElement 
@@ -2709,7 +2709,7 @@
 | rotation | double | The rotation of the element. 
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
 
 
 ### CIMFrameElement 
@@ -2791,7 +2791,7 @@
 | rotation | double | The rotation of the element. 
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
 
 
 ### CIMFrameElement 
@@ -2885,7 +2885,7 @@
 | rotation | double | The rotation of the element. 
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
 
 
 ### CIMFrameElement 
@@ -2937,7 +2937,7 @@
 | rotation | double | The rotation of the element. 
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
 
 
 ### CIMFrameElement 
@@ -2959,7 +2959,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| fields | [CIMTableFrameField](CIMLayout.md#cimtableframefield) | The fields displayed by the table frame. 
+| fields | [[CIMTableFrameField]](CIMLayout.md#cimtableframefield) | The fields displayed by the table frame. 
 | mapMemberURI | string | The layer or standalone table that defines the data to display. 
 | fillingStrategy | [enumeration TableFrameFillingStrategy](CIMLayout.md#enumeration-tableframefillingstrategy) | The strategy used to query records. 
 | fittingStrategy | [enumeration TableFrameFittingStrategy](CIMLayout.md#enumeration-tableframefittingstrategy) | The strategy used to query records. 
@@ -3060,7 +3060,7 @@
 | rotation | double | The rotation of the element. 
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
 
 
 ### CIMFrameElement 

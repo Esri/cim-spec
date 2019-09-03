@@ -146,7 +146,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The Maplex dictionary name. 
-| maplexDictionary | [CIMMaplexDictionaryEntry](CIMLabelPlacement.md#cimmaplexdictionaryentry) | The Maplex dictionary entries. 
+| maplexDictionary | [[CIMMaplexDictionaryEntry]](CIMLabelPlacement.md#cimmaplexdictionaryentry) | The Maplex dictionary entries. 
 
 
 
@@ -211,8 +211,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | allowBorderOverlap | boolean | A value indicating whether or not to allow border overlap. 
-| dictionaries | [CIMMaplexDictionary](CIMLabelPlacement.md#cimmaplexdictionary) | The Maplex dictionaries. 
-| keyNumberGroups | [CIMMaplexKeyNumberGroup](CIMLabelPlacement.md#cimmaplexkeynumbergroup) | The key number groups. 
+| dictionaries | [[CIMMaplexDictionary]](CIMLabelPlacement.md#cimmaplexdictionary) | The Maplex dictionaries. 
+| keyNumberGroups | [[CIMMaplexKeyNumberGroup]](CIMLabelPlacement.md#cimmaplexkeynumbergroup) | The key number groups. 
 | placementQuality | [enumeration MaplexQualityType](CIMLabelPlacement.md#enumeration-maplexqualitytype) | The placement quality. 
 
 
@@ -447,7 +447,7 @@
 | maximumNumberOfLines | long | The maximum number of lines. 
 | minimumNumberOfCharsPerLine | long | The minimum number of characters per line. 
 | maximumNumberOfCharsPerLine | long | The maximum number of characters per line. 
-| separators | [CIMMaplexStackingSeparator](CIMLabelPlacement.md#cimmaplexstackingseparator) | The stacking separators. 
+| separators | [[CIMMaplexStackingSeparator]](CIMLabelPlacement.md#cimmaplexstackingseparator) | The stacking separators. 
 
 
 

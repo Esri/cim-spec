@@ -150,9 +150,9 @@
 |---------|--------|--------|
 | is9xDataset | boolean | A value indicating whether or not this is an ArcGIS 9.x dataset. 
 | name | string | The dataset name. 
-| schematicDataSources | [CIMSchematicDataSource](CIMSchematics.md#cimschematicdatasource) | The schematic data sources. 
-| schematicDiagramTemplate | [CIMSchematicDiagramTemplate](CIMSchematics.md#cimschematicdiagramtemplate) | The schematic diagram template. 
-| schematicFeatureClasses | [CIMSchematicFeatureClass](CIMSchematics.md#cimschematicfeatureclass) | The schematic feature classes. 
+| schematicDataSources | [[CIMSchematicDataSource]](CIMSchematics.md#cimschematicdatasource) | The schematic data sources. 
+| schematicDiagramTemplate | [[CIMSchematicDiagramTemplate]](CIMSchematics.md#cimschematicdiagramtemplate) | The schematic diagram template. 
+| schematicFeatureClasses | [[CIMSchematicFeatureClass]](CIMSchematics.md#cimschematicfeatureclass) | The schematic feature classes. 
 | workspace | [CIMWorkspaceConnection](CIMVectorLayers.md#cimworkspaceconnection) | The workspace connection. 
 
 
@@ -178,14 +178,14 @@
 | name | string | The name. 
 | predefinedAttributeNames | [string] | The predefined attribute names. 
 | queryString | string | The query string. 
-| schematicAlgorithms | [CIMSchematicAlgorithm](CIMSchematics.md#cimschematicalgorithm) | The schematic algorithms. 
-| schematicAttributes | [CIMSchematicAttribute](CIMSchematics.md#cimschematicattribute) | The schematic attributes. 
+| schematicAlgorithms | [[CIMSchematicAlgorithm]](CIMSchematics.md#cimschematicalgorithm) | The schematic algorithms. 
+| schematicAttributes | [[CIMSchematicAttribute]](CIMSchematics.md#cimschematicattribute) | The schematic attributes. 
 | schematicBuilder | [CIMSchematicBuilder](CIMSchematics.md#cimschematicbuilder) | The schematic builder. 
 | schematicDataSourceID | long | The schematic data source ID. 
 | schematicLayerTemplate | [CIMSchematicLayer](CIMSchematics.md#cimschematiclayer) | The schematic layer template. 
-| schematicQueryParameters | [CIMSchematicQueryParameter](CIMSchematics.md#cimschematicqueryparameter) | The schematic query parameters. 
-| schematicRules | [CIMSchematicRule](CIMSchematics.md#cimschematicrule) | The schematic rules. 
-| schematicTraces | [CIMSchematicAlgorithm](CIMSchematics.md#cimschematicalgorithm) | The schematic traces. 
+| schematicQueryParameters | [[CIMSchematicQueryParameter]](CIMSchematics.md#cimschematicqueryparameter) | The schematic query parameters. 
+| schematicRules | [[CIMSchematicRule]](CIMSchematics.md#cimschematicrule) | The schematic rules. 
+| schematicTraces | [[CIMSchematicAlgorithm]](CIMSchematics.md#cimschematicalgorithm) | The schematic traces. 
 | tableName | string | The table name. 
 
 
@@ -235,10 +235,10 @@
 | parent | string | The parent. 
 | predefinedAttributeNames | [string] | The predefined attribute names. 
 | queryString | string | The query string. 
-| schematicAttributes | [CIMSchematicAttribute](CIMSchematics.md#cimschematicattribute) | The schematic attributes. 
+| schematicAttributes | [[CIMSchematicAttribute]](CIMSchematics.md#cimschematicattribute) | The schematic attributes. 
 | schematicDataSourceID | long | The schematic data source ID. 
 | schematicElementType | [enumeration SchematicElementType](CIMSchematics.md#enumeration-schematicelementtype) | The schematic element type. 
-| schematicQueryParameters | [CIMSchematicQueryParameter](CIMSchematics.md#cimschematicqueryparameter) | The schematic query parameters. 
+| schematicQueryParameters | [[CIMSchematicQueryParameter]](CIMSchematics.md#cimschematicqueryparameter) | The schematic query parameters. 
 | shapeFieldDescription | [FieldDescription](Types.md#fielddescription) | The shape field description. 
 | tableName | string | The table name. 
 
@@ -286,12 +286,12 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
 | searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 ### CIMSchematicLayerDefinition 

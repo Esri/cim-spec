@@ -34,7 +34,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | spatialReference | [SpatialReference](ExternalReferences.md#spatialreference) | The spatial reference. 
-| bookmarks | [CIMBookmark](CIMMap.md#cimbookmark) | The bookmarks. 
+| bookmarks | [[CIMBookmark]](CIMMap.md#cimbookmark) | The bookmarks. 
 
 
 
@@ -105,7 +105,7 @@
 | qualifyJoinFieldNames | boolean | A value indicating whether to qualify field names when the table contains fields from a join. 
 | time | [TimeValue](ExternalReferences.md#timevalue) | The current time of the table view. 
 | honorRange | boolean | A value indicating whether to honor ranges on the table view. 
-| ranges | [CIMLayerRange](CIMVectorLayers.md#cimlayerrange) | The ranges of the table view. 
+| ranges | [[CIMLayerRange]](CIMVectorLayers.md#cimlayerrange) | The ranges of the table view. 
 | extent | [Envelope](ExternalReferences.md#envelope) | The extent of the table view. 
 | timeRelation | [enumeration esriTimeRelation](ExternalReferences.md#enumeration-esritimerelation) | A time relation which allows the start and end times to be included or excluded in the time query. 
 
@@ -129,12 +129,12 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| views | [CIMView](Types.md#view) | The views of the project. 
-| moduleSettings | [CIMModuleSettings](CIMDocument.md#cimmodulesettings) | The module settings of the project. 
-| projectItems | [CIMProjectItem](CIMDocument.md#cimprojectitem) | The items of the project. 
-| databaseConnections | [CIMWorkspaceConnection](CIMVectorLayers.md#cimworkspaceconnection) | The database connections of the project. 
-| serverConnections | [CIMServerConnection](Types.md#serverconnection) | The service connections of the project. 
-| folderConnections | [CIMFolderConnection](CIMVectorLayers.md#cimfolderconnection) | The folder connections of the project. 
+| views | [[CIMView]](Types.md#cimview) | The views of the project. 
+| moduleSettings | [[CIMModuleSettings]](CIMDocument.md#cimmodulesettings) | The module settings of the project. 
+| projectItems | [[CIMProjectItem]](CIMDocument.md#cimprojectitem) | The items of the project. 
+| databaseConnections | [[CIMWorkspaceConnection]](CIMVectorLayers.md#cimworkspaceconnection) | The database connections of the project. 
+| serverConnections | [[CIMServerConnection]](Types.md#cimserverconnection) | The service connections of the project. 
+| folderConnections | [[CIMFolderConnection]](CIMVectorLayers.md#cimfolderconnection) | The folder connections of the project. 
 | viewLayoutXML | string | An XML representation of the view layout used for the project. 
 | defaultGeoDatabase | string | The path of the default geodatabase of the project. 
 | defaultToolbox | string | The path of the default toolbox of the project. 
@@ -193,9 +193,10 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | layers | [string] | An array of layer URIs stored in this layer document. 
-| layerDefinitions | [CIMDefinition](Types.md#definition) | The layer definitions in the layer document. 
-| binaryReferences | [CIMBinaryReference](CIMDocument.md#cimbinaryreference) | The binary references of the document. 
-| elevationSurfaces | [CIMMapElevationSurface](CIMMap.md#cimmapelevationsurface) | The elevation surfaces used by layer definitions in the layer document. 
+| layerDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The layer definitions in the layer document. 
+| binaryReferences | [[CIMBinaryReference]](CIMDocument.md#cimbinaryreference) | The binary references of the document. 
+| elevationSurfaces | [[CIMMapElevationSurface]](CIMMap.md#cimmapelevationsurface) | The elevation surfaces used by layer definitions in the layer document. 
+| validationRules | [[CIMValidationRule]](CIMMap.md#cimvalidationrule) | The validation rules used by layer definitions in the layer document. 
 | RGBColorProfile | string | The name of the RGB color profile of this layer's source map. If the target map has color management enabled, this value will be used to transform the layer's RGB colors as it is imported into that map. 
 | CMYKColorProfile | string | The name of the CMYK color profile of this layer's source map. If the target map has color management enabled, this value will be used to transform the layer's CMYK colors as it is imported into that map. 
 
@@ -220,10 +221,10 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| binaryReferences | [CIMBinaryReference](CIMDocument.md#cimbinaryreference) | The binary references of the document. 
-| layerDefinitions | [CIMDefinition](Types.md#definition) | The layer definitions in the layout document. 
-| mapDefinitions | [CIMDefinition](Types.md#definition) | The map definitions of the layout document. 
-| tableDefinitions | [CIMDefinition](Types.md#definition) | The table definitions of the layout document. 
+| binaryReferences | [[CIMBinaryReference]](CIMDocument.md#cimbinaryreference) | The binary references of the document. 
+| layerDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The layer definitions in the layout document. 
+| mapDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The map definitions of the layout document. 
+| tableDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The table definitions of the layout document. 
 | layoutDefinition | [CIMLayout](CIMLayout.md#cimlayout) | The layout definition of the layout document. 
 
 
@@ -248,9 +249,9 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | mapDefinition | [CIMMap](CIMMap.md#cimmap) | The map definition of the map document. 
-| layerDefinitions | [CIMDefinition](Types.md#definition) | The layer definitions of the map document. 
-| binaryReferences | [CIMBinaryReference](CIMDocument.md#cimbinaryreference) | The binary references of the document. 
-| tableDefinitions | [CIMDefinition](Types.md#definition) | The table definitions of the map document. 
+| layerDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The layer definitions of the map document. 
+| binaryReferences | [[CIMBinaryReference]](CIMDocument.md#cimbinaryreference) | The binary references of the document. 
+| tableDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The table definitions of the map document. 
 
 
 
@@ -286,7 +287,7 @@
 | qualifyJoinFieldNames | boolean | A value indicating whether to qualify field names when the table contains fields from a join. 
 | time | [TimeValue](ExternalReferences.md#timevalue) | The current time of the table view. 
 | honorRange | boolean | A value indicating whether to honor ranges on the table view. 
-| ranges | [CIMLayerRange](CIMVectorLayers.md#cimlayerrange) | The ranges of the table view. 
+| ranges | [[CIMLayerRange]](CIMVectorLayers.md#cimlayerrange) | The ranges of the table view. 
 | extent | [Envelope](ExternalReferences.md#envelope) | The extent of the table view. 
 | timeRelation | [enumeration esriTimeRelation](ExternalReferences.md#enumeration-esritimerelation) | A time relation which allows the start and end times to be included or excluded in the time query. 
 
@@ -323,13 +324,13 @@
 | camera | [CIMViewCamera](CIMMap.md#cimviewcamera) | The camera of the view. 
 | verticalExaggerationScaleFactor | double | The vertical exaggeration of the view. 
 | timeDisplay | [CIMMapTimeDisplay](CIMMap.md#cimmaptimedisplay) | The map time display of the view. 
-| layerRanges | [CIMLayerRange](CIMVectorLayers.md#cimlayerrange) | The layer ranges of the view. 
+| layerRanges | [[CIMLayerRange]](CIMVectorLayers.md#cimlayerrange) | The layer ranges of the view. 
 | rangeSliderSettings | [CIMSliderSettings](CIMMap.md#cimslidersettings) | The range slider settings of the view. 
 | timeSliderSettings | [CIMSliderSettings](CIMMap.md#cimslidersettings) | The time slider settings of the view. 
 | sceneDrawingMode | [enumeration SceneDrawingMode](CIMDocument.md#enumeration-scenedrawingmode) | The scene's drawing mode. 
 | fieldOfView | double | The scene's field-of-view in degrees (value must be between 35 and 70). Only used when the scene is in Perspective draw mode. 
 | pauseDrawing | boolean | A value indicating whether drawing is in paused state for the view. 
-| exploratoryAnalysis | [CIMExploratoryAnalysisDefinition](Types.md#exploratoryanalysisdefinition) | The exploratory analysis definitions for the view. 
+| exploratoryAnalysis | [[CIMExploratoryAnalysisDefinition]](Types.md#cimexploratoryanalysisdefinition) | The exploratory analysis definitions for the view. 
 
 
 
@@ -404,7 +405,7 @@
 | author | string | Author of the data collection. 
 | creationDate | [TimeInstant](ExternalReferences.md#timeinstant) | Creation date of the data collection. 
 | lastRevisionDate | [TimeInstant](ExternalReferences.md#timeinstant) | Last revision date of the data collection. 
-| calculators | [CIMStatisticalDataCollectionCalculator](CIMDocument.md#cimstatisticaldatacollectioncalculator) | The Calculators of the data collection. 
+| calculators | [[CIMStatisticalDataCollectionCalculator]](CIMDocument.md#cimstatisticaldatacollectioncalculator) | The Calculators of the data collection. 
 | dataVintage | string | Vintage of used data (for example, "Q3_2018"). 
 | dataVintageDescription | string | Description of used data ("2018 US Data Update"). 
 | icon | string | Data collection image. 
@@ -454,7 +455,7 @@
 |---------|--------|--------|
 | datasetID | string | The DatasetID which is used for getting the information about which points layer will be available and which apportionment methods will be used. If DatasetID is empty, only Area Apportionment method is available. 
 | dataConnection | [DataConnection](Types.md#dataconnection) | The data connection to the source. 
-| fields | [CIMStatisticalDataCollectionField](CIMDocument.md#cimstatisticaldatacollectionfield) | The regular fields of the calculator. 
+| fields | [[CIMStatisticalDataCollectionField]](CIMDocument.md#cimstatisticaldatacollectionfield) | The regular fields of the calculator. 
 
 
 

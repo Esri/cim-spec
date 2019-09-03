@@ -94,12 +94,12 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
 | searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -109,9 +109,9 @@
 | autoGenerateFeatureTemplates | boolean | A value indicating whether to automatically generate feature templates from the renderer. 
 | extrusion | [CIMFeatureExtrusion](CIMVectorLayers.md#cimfeatureextrusion) | The feature extrusion. 
 | featureElevationExpression | string | The feature elevation expression. 
-| featureHyperlinks | [CIMFeatureHyperlink](CIMVectorLayers.md#cimfeaturehyperlink) | The feature hyperlinks. 
+| featureHyperlinks | [[CIMFeatureHyperlink]](CIMVectorLayers.md#cimfeaturehyperlink) | The feature hyperlinks. 
 | featureTable | [CIMFeatureTable](CIMVectorLayers.md#cimfeaturetable) | The feature table. 
-| featureTemplates | [CIMEditingTemplate](Types.md#editingtemplate) | The feature templates. 
+| featureTemplates | [[CIMEditingTemplate]](Types.md#cimeditingtemplate) | The feature templates. 
 | hotlinkField | string | The field containing hotlink URLs. 
 | htmlPopupEnabled | boolean | A value indicating whether HTML pop-ups are enabled. 
 | htmlPopupFormat | [CIMHtmlPopupFormat](CIMVectorLayers.md#cimhtmlpopupformat) | The HTML pop-ups format. 
@@ -123,7 +123,7 @@
 | pageDefinition | [CIMPageDefinition](CIMVectorLayers.md#cimpagedefinition) | The page definition which allows for using current map series page to filter features. 
 | featureCacheType | [enumeration FeatureCacheType](CIMVectorLayers.md#enumeration-featurecachetype) | The feature cache type. 
 | enableDisplayFilters | boolean | A value indicating whether the current set of display filters are honored during drawing. 
-| displayFilters | [CIMDisplayFilter](CIMVectorLayers.md#cimdisplayfilter) | The current set of display filters. 
+| displayFilters | [[CIMDisplayFilter]](CIMVectorLayers.md#cimdisplayfilter) | The current set of display filters. 
 | featureElevationExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression for setting the feature elevation. 
 
 
@@ -131,12 +131,12 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| actions | [CIMLayerAction](CIMVectorLayers.md#cimlayeraction) | The layer actions. 
+| actions | [[CIMLayerAction]](CIMVectorLayers.md#cimlayeraction) | The layer actions. 
 | exclusionSet | [long long] | The set of excluded features. 
-| featureMasks | [CIMDataConnection](Types.md#dataconnection) | The data connection of the masking data. 
-| labelClasses | [CIMLabelClass](CIMLabelPlacement.md#cimlabelclass) | The collection of label class definitions. 
+| featureMasks | [[CIMDataConnection]](Types.md#cimdataconnection) | The data connection of the masking data. 
+| labelClasses | [[CIMLabelClass]](CIMLabelPlacement.md#cimlabelclass) | The collection of label class definitions. 
 | labelVisibility | boolean | A value indicating whether to display labels for this layer's label classes. 
-| maskedSymbolLayers | [CIMSymbolLayerMasking](CIMVectorLayers.md#cimsymbollayermasking) | The masked symbol layers. Each SymbolLayerMasking gives the symbol layers that are masked by that masking layer. 
+| maskedSymbolLayers | [[CIMSymbolLayerMasking]](CIMVectorLayers.md#cimsymbollayermasking) | The masked symbol layers. Each SymbolLayerMasking gives the symbol layers that are masked by that masking layer. 
 | mostCurrentRenderer | [Renderer](Types.md#renderer) | The renderer used for the most current features when displaying tracks. Deprecated at 2.2, ignored in previous versions. 
 | renderer | [Renderer](Types.md#renderer) | The primary symbol renderer. 
 | scaleSymbols | boolean | A value indicating whether to scale the symbols in this layer based on the map's reference scale. 
@@ -211,12 +211,12 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
 | searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 ### CIMRasterLayerDefinition 
@@ -231,7 +231,7 @@
 | timeDefinition | [CIMTimeDataDefinition](CIMVectorLayers.md#cimtimedatadefinition) | The time definition. 
 | auxiliaryRasterProperties | [CIMAuxiliaryRasterProperties](CIMImageLayers.md#cimauxiliaryrasterproperties) | The auxiliary raster properties. 
 | autoComputeStatsHistogram | boolean | A value indicating whether or not to automatically compute the statistics histogram. 
-| rangeDefinitions | [CIMRangeDefinition](CIMVectorLayers.md#cimrangedefinition) | The range definitions. 
+| rangeDefinitions | [[CIMRangeDefinition]](CIMVectorLayers.md#cimrangedefinition) | The range definitions. 
 | activeRangeName | string | The name of the active range. 
 | activeVariables | [string] | The active variables. 
 
@@ -306,12 +306,12 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
 | searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 ### CIMRasterLayerDefinition 
@@ -326,7 +326,7 @@
 | timeDefinition | [CIMTimeDataDefinition](CIMVectorLayers.md#cimtimedatadefinition) | The time definition. 
 | auxiliaryRasterProperties | [CIMAuxiliaryRasterProperties](CIMImageLayers.md#cimauxiliaryrasterproperties) | The auxiliary raster properties. 
 | autoComputeStatsHistogram | boolean | A value indicating whether or not to automatically compute the statistics histogram. 
-| rangeDefinitions | [CIMRangeDefinition](CIMVectorLayers.md#cimrangedefinition) | The range definitions. 
+| rangeDefinitions | [[CIMRangeDefinition]](CIMVectorLayers.md#cimrangedefinition) | The range definitions. 
 | activeRangeName | string | The name of the active range. 
 | activeVariables | [string] | The active variables. 
 
@@ -394,12 +394,12 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
 | searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 ### CIMMosaicLayerDefinition 
@@ -416,8 +416,8 @@
 | timeFields | [CIMTimeTableDefinition](CIMVectorLayers.md#cimtimetabledefinition) | The time fields. 
 | definitionExpression | string | The definition expression. 
 | definitionExpressionName | string | The Name of definition expression. 
-| definitionFilterChoices | [CIMDefinitionFilter](CIMLayer.md#cimdefinitionfilter) | The definition filter choices. 
-| rangeDefinitions | [CIMRangeDefinition](CIMVectorLayers.md#cimrangedefinition) | The data connection of the mosaic dataset. 
+| definitionFilterChoices | [[CIMDefinitionFilter]](CIMLayer.md#cimdefinitionfilter) | The definition filter choices. 
+| rangeDefinitions | [[CIMRangeDefinition]](CIMVectorLayers.md#cimrangedefinition) | The data connection of the mosaic dataset. 
 | activeRangeName | string | The name of the active range. 
 | activeVariables | [string] | An array of the active variables. 
 
@@ -645,7 +645,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| classBreaks | [CIMRasterClassBreak](CIMImageLayers.md#cimrasterclassbreak) | The class breaks of the renderer. 
+| classBreaks | [[CIMRasterClassBreak]](CIMImageLayers.md#cimrasterclassbreak) | The class breaks of the renderer. 
 | classificationMethod | [enumeration ClassificationMethod](CIMRenderers.md#enumeration-classificationmethod) | The classification method. 
 | colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp. 
 | exclusionColor | [Color](Types.md#color) | The exclusion color. 
@@ -719,7 +719,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| colors | [CIMColor](Types.md#color) | Array of colors. 
+| colors | [[CIMColor]](Types.md#cimcolor) | Array of colors. 
 | bandID | long | The band ID. 
 | labels | [string] | The color labels as a string array. 
 | min | long | Minimum value. 
@@ -863,12 +863,12 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [CIMChart](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
 | searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
-| customProperties | [CIMStringMap](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 ### CIMRasterLayerDefinition 
@@ -883,7 +883,7 @@
 | timeDefinition | [CIMTimeDataDefinition](CIMVectorLayers.md#cimtimedatadefinition) | The time definition. 
 | auxiliaryRasterProperties | [CIMAuxiliaryRasterProperties](CIMImageLayers.md#cimauxiliaryrasterproperties) | The auxiliary raster properties. 
 | autoComputeStatsHistogram | boolean | A value indicating whether or not to automatically compute the statistics histogram. 
-| rangeDefinitions | [CIMRangeDefinition](CIMVectorLayers.md#cimrangedefinition) | The range definitions. 
+| rangeDefinitions | [[CIMRangeDefinition]](CIMVectorLayers.md#cimrangedefinition) | The range definitions. 
 | activeRangeName | string | The name of the active range. 
 | activeVariables | [string] | The active variables. 
 
@@ -1074,7 +1074,7 @@
 | standardDeviationParam | double | The standard deviation parameter value. 
 | statsHistogram | [StatsHistogram](ExternalReferences.md#statshistogram) | The statistics histogram. 
 | statsType | [enumeration RasterStretchStatsType](CIMEnumerations.md#enumeration-rasterstretchstatstype) | The type of raster stretch statistics. 
-| stretchClasses | [CIMRasterStretchClass](CIMImageLayers.md#cimrasterstretchclass) | The raster stretch classes. 
+| stretchClasses | [[CIMRasterStretchClass]](CIMImageLayers.md#cimrasterstretchclass) | The raster stretch classes. 
 | stretchStats | [StatsHistogram](ExternalReferences.md#statshistogram) | The raster stretch statistics. 
 | stretchType | [enumeration RasterStretchType](CIMEnumerations.md#enumeration-rasterstretchtype) | The raster stretch type. 
 | useCustomMinMax | boolean | A value indicating whether or not to use custom minimum and maximum. 
@@ -1143,7 +1143,7 @@
 | defaultColor | [Color](Types.md#color) | The default color. 
 | useDefaultColor | boolean | A value indicating whether or not to use the default color. 
 | fieldName | string | The field name to render. 
-| groups | [CIMRasterUniqueValueGroup](CIMImageLayers.md#cimrasteruniquevaluegroup) | The unique value groups. 
+| groups | [[CIMRasterUniqueValueGroup]](CIMImageLayers.md#cimrasteruniquevaluegroup) | The unique value groups. 
 | colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp. 
 | defaultLabel | string | The default label. 
 | defaultDescription | string | The default description. 
@@ -1162,7 +1162,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| classes | [CIMRasterUniqueValueClass](CIMImageLayers.md#cimrasteruniquevalueclass) | An array of classes making up the group. 
+| classes | [[CIMRasterUniqueValueClass]](CIMImageLayers.md#cimrasteruniquevalueclass) | An array of classes making up the group. 
 | heading | string | The group heading. 
 
 
@@ -1208,7 +1208,7 @@
 | symbolTileSizeUnits | [enumeration SymbolTileUnitType](CIMImageLayers.md#enumeration-symboltileunittype) | The symbol tile size units. 
 | symbolizationType | [enumeration SymbolizationType](CIMImageLayers.md#enumeration-symbolizationtype) | The symbolization type. 
 | symbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | Symbol. 
-| classBreaks | [CIMClassBreak](CIMRenderers.md#cimclassbreak) | The class breaks. 
+| classBreaks | [[CIMClassBreak]](CIMRenderers.md#cimclassbreak) | The class breaks. 
 | minimumClassBreak | double | The minimum class break. 
 | minimumMagnitude | double | The minimum magnitude. 
 | maximumMagnitude | double | The maximum magnitude. 

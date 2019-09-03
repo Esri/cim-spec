@@ -27,7 +27,7 @@
 |---------|--------|--------|
 | graphic | [Graphic](Types.md#graphic) | The graphic to be displayed. 
 | alias | string | An identifier for the user. 
-| keyframes | [CIMAnimationScreenGraphicKeyframe](CIMMap.md#cimanimationscreengraphickeyframe) | The graphic properties keyframes. 
+| keyframes | [[CIMAnimationScreenGraphicKeyframe]](CIMMap.md#cimanimationscreengraphickeyframe) | The graphic properties keyframes. 
 
 
 
@@ -182,7 +182,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| contents | [CIMEditingTemplateCollectionItem](Types.md#editingtemplatecollectionitem) | The array of items stored within this collection. 
+| contents | [[CIMEditingTemplateCollectionItem]](Types.md#cimeditingtemplatecollectionitem) | The array of items stored within this collection. 
 | expanded | boolean | A value indicating whether this collection is expanded in the user interface. 
 
 
@@ -532,8 +532,9 @@
 | mapType | [enumeration MapType](CIMMap.md#enumeration-maptype) | The map type. 
 | rangeSliderSettings | [CIMSliderSettings](CIMMap.md#cimslidersettings) | The range slider settings. 
 | timeSliderSettings | [CIMSliderSettings](CIMMap.md#cimslidersettings) | The time slider settings. 
-| animationViewTracks | [CIMViewTrack](CIMMap.md#cimviewtrack) | The collection of view tracks in the animation. 
-| locators | [CIMLocator](CIMMap.md#cimlocator) | The locators as an ordered array. 
+| animationViewTracks | [[CIMViewTrack]](CIMMap.md#cimviewtrack) | The collection of view tracks in the animation. 
+| locators | [[CIMLocator]](CIMMap.md#cimlocator) | The locators as an ordered array. 
+| validationRules | [[CIMValidationRule]](CIMMap.md#cimvalidationrule) | The validation rules used for validating the layer's features. 
 | mapContexts | [string] | An array string values used to provide a hint for the intended context for the map. 
 | standaloneVideos | [string] | The standalone videos as an array of video repository paths. 
 
@@ -543,17 +544,17 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | backgroundColor | [Color](Types.md#color) | The background color. 
-| bookmarks | [CIMBookmark](CIMMap.md#cimbookmark) | The bookmarks. 
+| bookmarks | [[CIMBookmark]](CIMMap.md#cimbookmark) | The bookmarks. 
 | clipToFullExtent | boolean | A value indicating whether or not to clip to full extent. 
 | attribution | string | The attribution text that will appear on the map when it is drawn. 
 | customFullExtent | [Polygon](ExternalReferences.md#polygon) | The custom full extent as a polygon. 
-| datumTransforms | [CIMDatumTransform](CIMMap.md#cimdatumtransform) | The set of geographic transformations used by the map for spatial references that do not have vertical coordinate system. 
+| datumTransforms | [[CIMDatumTransform]](CIMMap.md#cimdatumtransform) | The set of geographic transformations used by the map for spatial references that do not have vertical coordinate system. 
 | defaultExtent | [Envelope](ExternalReferences.md#envelope) | The extent shown when you open new views of the map. The application automatically updates this property whenever you save a project with an active map view. 
 | defaultScale | double | The scale used when you open new views of the map. When set, the application automatically applies this property after DefaultExtent to ensure the view is at the correct scale. 
 | defaultGlobeTransparency | double | The transparency of the spheroid's combined terrain mesh and draped content. 
 | defaultRotation | double | The default rotation. 
 | description | string | The long description of the map. 
-| elevationSurfaces | [CIMMapElevationSurface](CIMMap.md#cimmapelevationsurface) | The elevation surfaces. 
+| elevationSurfaces | [[CIMMapElevationSurface]](CIMMap.md#cimmapelevationsurface) | The elevation surfaces. 
 | generalPlacementProperties | [GeneralPlacementProperties](Types.md#generalplacementproperties) | The general label placement properties for dynamic labels in the map. 
 | scaleLevels | [double] | The scale levels of the map. 
 | snappingProperties | [CIMSnappingProperties](CIMMap.md#cimsnappingproperties) | The snapping properties of the map. 
@@ -565,7 +566,7 @@
 | enableWraparound | boolean | A value indicating whether or to enable wraparound when the coordinate system supports it. 
 | includeMaximumInScaleRanges | boolean | A value indicating whether or not to draw up to and including the maximum scale in scale ranges. 
 | colorModel | [enumeration ColorModel](CIMEnumerations.md#enumeration-colormodel) | The color model for a map. 
-| scales | [CIMScale](CIMMap.md#cimscale) | An array of CIMScale objects, describing the full list of named scales for the map. 
+| scales | [[CIMScale]](CIMMap.md#cimscale) | An array of CIMScale objects, describing the full list of named scales for the map. 
 | scaleFormat | [CIMScaleFormat](CIMMap.md#cimscaleformat) | The scale format describing the formatting of the scale value. 
 | scaleDisplayFormat | [enumeration ScaleDisplayFormat](CIMMap.md#enumeration-scaledisplayformat) | The display mode for the map's Scales in the user interface. 
 | HVDatumTransforms | [ArrayOfCompositeHVDatumTransformation](ExternalReferences.md#arrayofcompositehvdatumtransformation) | The set of geographic transformations used by the map for spatial references with vertical coordinate system. 
@@ -580,7 +581,7 @@
 | nearPlaneClipDistance | double | The near plane clip distance in meters for a scene. This property applies to only local and global viewing modes. 
 | editingElevation | [CIMEditingElevation](CIMMap.md#cimeditingelevation) | The editing elevation mode. 
 | editingTemplateCollection | [CIMEditingTemplateCollection](CIMMap.md#cimeditingtemplatecollection) | The collection of editing templates for a map. 
-| fieldMappings | [CIMFieldMapping](CIMMap.md#cimfieldmapping) | The collection of field mappings for a map. 
+| fieldMappings | [[CIMFieldMapping]](CIMMap.md#cimfieldmapping) | The collection of field mappings for a map. 
 | RGBColorProfile | string | The name of the RGB color profile for a map. 
 | CMYKColorProfile | string | The name of the CMYK color profile for a map. 
 
@@ -597,7 +598,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| baseSources | [CIMElevationSource](CIMMap.md#cimelevationsource) | The elevation sources. 
+| baseSources | [[CIMElevationSource]](CIMMap.md#cimelevationsource) | The elevation sources. 
 | elevationMode | [enumeration ElevationMode](CIMEnumerations.md#enumeration-elevationmode) | The elevation mode. 
 | name | string | The elevation name. 
 | verticalExaggeration | double | The vertical exaggeration. 
@@ -1076,11 +1077,11 @@
 |---------|--------|--------|
 | trackTime | double | The value of time in seconds that the keyframe exists in the track. 
 | camera | [CIMKeyframeCamera](CIMMap.md#cimkeyframecamera) | The camera keyframe. 
-| layers | [CIMKeyframeLayer](CIMMap.md#cimkeyframelayer) | The collection of layer keyframes. 
+| layers | [[CIMKeyframeLayer]](CIMMap.md#cimkeyframelayer) | The collection of layer keyframes. 
 | range | [CIMKeyframeRange](CIMMap.md#cimkeyframerange) | The range keyframe. 
 | time | [CIMKeyframeTime](CIMMap.md#cimkeyframetime) | The time keyframe. 
-| surfaces | [CIMKeyframeSurface](CIMMap.md#cimkeyframesurface) | The collection of surface keyframes. 
-| exploratoryAnalysis | [CIMKeyframeAnalysis](CIMMap.md#cimkeyframeanalysis) | The collection of exploratory analysis. 
+| surfaces | [[CIMKeyframeSurface]](CIMMap.md#cimkeyframesurface) | The collection of surface keyframes. 
+| exploratoryAnalysis | [[CIMKeyframeAnalysis]](CIMMap.md#cimkeyframeanalysis) | The collection of exploratory analysis. 
 
 
 
@@ -1096,8 +1097,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name of the track. 
-| keyframes | [CIMViewKeyframe](CIMMap.md#cimviewkeyframe) | The collection of view keyframes. 
-| screenGraphics | [CIMAnimationScreenGraphic](CIMMap.md#cimanimationscreengraphic) | The list of graphic overlays used in the animation. 
+| keyframes | [[CIMViewKeyframe]](CIMMap.md#cimviewkeyframe) | The collection of view keyframes. 
+| screenGraphics | [[CIMAnimationScreenGraphic]](CIMMap.md#cimanimationscreengraphic) | The list of graphic overlays used in the animation. 
 | referenceResolutionWidth | long | The desired pixel width the animation was made to export at. 
 | referenceResolutionHeight | long | The desired pixel height the animation was made to export at. 
 | exportType | string | The export MIME type. Supported formats: video/mp4, video/avi, image/gif, image/jpeg, or image/png. 
