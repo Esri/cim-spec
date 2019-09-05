@@ -724,8 +724,8 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| defaultValue | [any]| The variable's required default value. The array can have multiple values only if AllowMultiple is true. 
-| boundValue | [any]| The variable's currently-bound value. The array can have multiple values only if AllowMultiple is true. 
+| defaultValue | [[any]]| The variable's required default value. The array can have multiple values only if AllowMultiple is true. 
+| boundValue | [[any]]| The variable's currently-bound value. The array can have multiple values only if AllowMultiple is true. 
 | allowMultiple | boolean | A value indicating whether the variable will accept an array of values. 
 
 
@@ -1417,7 +1417,7 @@
 | invertRows | boolean | A value indicating whether or not to invert rows. 
 | selectedDimensionIndexes | [long] | The selected dimension indexes. 
 | selectedDimensions | [string] | The selected dimensions. 
-| selectedDimensionValues | [any]| The selected dimension values. 
+| selectedDimensionValues | [[any]]| The selected dimension values. 
 | variable | string | The variable. 
 | verticalDimension | string | The vertical dimension. 
 | verticalDimensionUnit | string | The vertical dimension unit. 
@@ -1462,7 +1462,7 @@
 | MDimension | string | The M dimension. 
 | selectedDimensions | [string] | The selected dimensions. 
 | selectedDimensionIndexes | [long] | The selected dimension indexes. 
-| selectedDimensionValues | [any]| The selected dimension values. 
+| selectedDimensionValues | [[any]]| The selected dimension values. 
 | shapeFieldName | string | The shape field name. 
 | verticalDimension | string | The vertical dimension. 
 | verticalDimensionUnit | string | The vertical dimension unit. 
