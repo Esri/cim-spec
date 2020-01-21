@@ -196,7 +196,6 @@
 | layerDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The layer definitions in the layer document. 
 | binaryReferences | [[CIMBinaryReference]](CIMDocument.md#cimbinaryreference) | The binary references of the document. 
 | elevationSurfaces | [[CIMMapElevationSurface]](CIMMap.md#cimmapelevationsurface) | The elevation surfaces used by layer definitions in the layer document. 
-| validationRules | [[CIMValidationRule]](CIMMap.md#cimvalidationrule) | The validation rules used by layer definitions in the layer document. 
 | RGBColorProfile | string | The name of the RGB color profile of this layer's source map. If the target map has color management enabled, this value will be used to transform the layer's RGB colors as it is imported into that map. 
 | CMYKColorProfile | string | The name of the CMYK color profile of this layer's source map. If the target map has color management enabled, this value will be used to transform the layer's CMYK colors as it is imported into that map. 
 

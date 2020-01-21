@@ -534,7 +534,6 @@
 | timeSliderSettings | [CIMSliderSettings](CIMMap.md#cimslidersettings) | The time slider settings. 
 | animationViewTracks | [[CIMViewTrack]](CIMMap.md#cimviewtrack) | The collection of view tracks in the animation. 
 | locators | [[CIMLocator]](CIMMap.md#cimlocator) | The locators as an ordered array. 
-| validationRules | [[CIMValidationRule]](CIMMap.md#cimvalidationrule) | The validation rules used for validating the layer's features. 
 | mapContexts | [string] | An array string values used to provide a hint for the intended context for the map. 
 | standaloneVideos | [string] | The standalone videos as an array of video repository paths. 
 
