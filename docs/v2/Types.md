@@ -104,6 +104,12 @@
 
 [CIMSuppressActivity](CIMVectorLayers.md#cimsuppressactivity)
 
+### AnimationScreenGraphic
+
+[CIMAnimationScreenGraphic](CIMMap.md#cimanimationscreengraphic)
+
+[CIMAnimationScreenGraphicGroup](CIMMap.md#cimanimationscreengraphicgroup)
+
 ### BindVariable
 
 [CIMDiscreteVariable](CIMVectorLayers.md#cimdiscretevariable)
@@ -290,6 +296,8 @@
 
 [CIMNetworkDatasetLayer](CIMNetworkLayers.md#cimnetworkdatasetlayer)
 
+[CIMTraceNetworkLayer](CIMNetworkLayers.md#cimtracenetworklayer)
+
 [CIMUtilityNetworkLayer](CIMNetworkLayers.md#cimutilitynetworklayer)
 
 [CIMSchematicLayer](CIMSchematics.md#cimschematiclayer)
@@ -357,6 +365,8 @@
 [CIMEditingTemplateReference](CIMMap.md#cimeditingtemplatereference)
 
 ### Element
+
+[CIMAttachmentFrame](CIMLayout.md#cimattachmentframe)
 
 [CIMChartFrame](CIMLayout.md#cimchartframe)
 
@@ -434,6 +444,8 @@
 
 ### ExploratoryAnalysisDefinition
 
+[CIMCutAndFillEADefinition](CIMMap.md#cimcutandfilleadefinition)
+
 [CIMLineOfSightEADefinition](CIMMap.md#cimlineofsighteadefinition)
 
 [CIMSliceBoxEADefinition](CIMMap.md#cimsliceboxeadefinition)
@@ -465,6 +477,8 @@
 [CIMFieldDescription](CIMVectorLayers.md#cimfielddescription)
 
 ### FrameElement
+
+[CIMAttachmentFrame](CIMLayout.md#cimattachmentframe)
 
 [CIMChartFrame](CIMLayout.md#cimchartframe)
 
@@ -592,6 +606,8 @@
 
 [CIMContiguousTabGridLine](CIMLayout.md#cimcontiguoustabgridline)
 
+[CIMGZDLabelGridLine](CIMLayout.md#cimgzdlabelgridline)
+
 [CIMGridLine](CIMLayout.md#cimgridline)
 
 [CIMLadderGridLine](CIMLayout.md#cimladdergridline)
@@ -659,6 +675,12 @@
 [CIMMeasuredGrid](CIMLayout.md#cimmeasuredgrid)
 
 [CIMReferenceGrid](CIMLayout.md#cimreferencegrid)
+
+### MapSeries
+
+[CIMBookmarkMapSeries](CIMLayout.md#cimbookmarkmapseries)
+
+[CIMSpatialMapSeries](CIMLayout.md#cimspatialmapseries)
 
 ### MapSurround
 
@@ -928,6 +950,8 @@
 
 ### Version
 
+[CIMHuffModelCalibrationDocument](CIMBusinessAnalyst.md#cimhuffmodelcalibrationdocument)
+
 [CIMSegmentationProfileDocument](CIMBusinessAnalyst.md#cimsegmentationprofiledocument)
 
 [CIMSegmentationTargetGroupDocument](CIMBusinessAnalyst.md#cimsegmentationtargetgroupdocument)
@@ -989,6 +1013,12 @@
 [CIMUniqueValueRenderer](CIMRenderers.md#cimuniquevaluerenderer)
 
 ## Index 
+
+[CIMHuffModelAttractivenessVariable](CIMBusinessAnalyst.md#CIMHuffModelAttractivenessVariable)
+
+[CIMHuffModelCalibrationDocument](CIMBusinessAnalyst.md#CIMHuffModelCalibrationDocument)
+
+[CIMHuffModelDistanceParameters](CIMBusinessAnalyst.md#CIMHuffModelDistanceParameters)
 
 [CIMSegmentationProfile](CIMBusinessAnalyst.md#CIMSegmentationProfile)
 
@@ -1124,11 +1154,17 @@
 
 [CIMRasterColorizerMapping](CIMImageLayers.md#CIMRasterColorizerMapping)
 
+[CIMRasterDimensionalDefinition](CIMImageLayers.md#CIMRasterDimensionalDefinition)
+
 [CIMRasterDiscreteColorColorizer](CIMImageLayers.md#CIMRasterDiscreteColorColorizer)
 
 [CIMRasterHistogramEditInfo](CIMImageLayers.md#CIMRasterHistogramEditInfo)
 
 [CIMRasterLayer](CIMImageLayers.md#CIMRasterLayer)
+
+[CIMRasterMultidimensionalDisplayDefinition](CIMImageLayers.md#CIMRasterMultidimensionalDisplayDefinition)
+
+[CIMRasterMultidimensionalExtentDefinition](CIMImageLayers.md#CIMRasterMultidimensionalExtentDefinition)
 
 [CIMRasterRGBColorizer](CIMImageLayers.md#CIMRasterRGBColorizer)
 
@@ -1270,7 +1306,13 @@
 
 [CIMTopologyLayer](CIMLayer.md#CIMTopologyLayer)
 
+[CIMAttachmentFrame](CIMLayout.md#CIMAttachmentFrame)
+
 [CIMAutoCamera](CIMLayout.md#CIMAutoCamera)
+
+[CIMBookmarkMapSeries](CIMLayout.md#CIMBookmarkMapSeries)
+
+[CIMBookmarkMapSeriesPage](CIMLayout.md#CIMBookmarkMapSeriesPage)
 
 [CIMChartFrame](CIMLayout.md#CIMChartFrame)
 
@@ -1286,6 +1328,8 @@
 
 [CIMExteriorTick](CIMLayout.md#CIMExteriorTick)
 
+[CIMGZDLabelGridLine](CIMLayout.md#CIMGZDLabelGridLine)
+
 [CIMGraphicElement](CIMLayout.md#CIMGraphicElement)
 
 [CIMGraticule](CIMLayout.md#CIMGraticule)
@@ -1295,6 +1339,8 @@
 [CIMGridLine](CIMLayout.md#CIMGridLine)
 
 [CIMGridPattern](CIMLayout.md#CIMGridPattern)
+
+[CIMGridZoneLabelPosition](CIMLayout.md#CIMGridZoneLabelPosition)
 
 [CIMGroupElement](CIMLayout.md#CIMGroupElement)
 
@@ -1412,9 +1458,13 @@
 
 [CIMAnimationScreenGraphic](CIMMap.md#CIMAnimationScreenGraphic)
 
+[CIMAnimationScreenGraphicGroup](CIMMap.md#CIMAnimationScreenGraphicGroup)
+
 [CIMAnimationScreenGraphicKeyframe](CIMMap.md#CIMAnimationScreenGraphicKeyframe)
 
 [CIMBookmark](CIMMap.md#CIMBookmark)
+
+[CIMCutAndFillEADefinition](CIMMap.md#CIMCutAndFillEADefinition)
 
 [CIMDatumTransform](CIMMap.md#CIMDatumTransform)
 
@@ -1435,6 +1485,8 @@
 [CIMKeyframeAnalysis](CIMMap.md#CIMKeyframeAnalysis)
 
 [CIMKeyframeCamera](CIMMap.md#CIMKeyframeCamera)
+
+[CIMKeyframeElevationSource](CIMMap.md#CIMKeyframeElevationSource)
 
 [CIMKeyframeLayer](CIMMap.md#CIMKeyframeLayer)
 
@@ -1513,6 +1565,8 @@
 [CIMNetworkDatasetTrafficRenderer](CIMNetworkLayers.md#CIMNetworkDatasetTrafficRenderer)
 
 [CIMNetworkSourceDisplayFilter](CIMNetworkLayers.md#CIMNetworkSourceDisplayFilter)
+
+[CIMTraceNetworkLayer](CIMNetworkLayers.md#CIMTraceNetworkLayer)
 
 [CIMUtilityNetworkLayer](CIMNetworkLayers.md#CIMUtilityNetworkLayer)
 

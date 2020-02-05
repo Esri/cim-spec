@@ -234,6 +234,8 @@
 | rangeDefinitions | [[CIMRangeDefinition]](CIMVectorLayers.md#cimrangedefinition) | The range definitions. 
 | activeRangeName | string | The name of the active range. 
 | activeVariables | [string] | The active variables. 
+| multidimensionalExtent | [CIMRasterMultidimensionalExtentDefinition](CIMImageLayers.md#cimrastermultidimensionalextentdefinition) | A multidimensional extent definition describing the data cube(s) used for analysis. 
+| activeSlice | [CIMRasterMultidimensionalDisplayDefinition](CIMImageLayers.md#cimrastermultidimensionaldisplaydefinition) | A multidimensional display definition describing the current display slice. 
 
 
 ### CIMImageServiceLayerDefinition 
@@ -329,6 +331,8 @@
 | rangeDefinitions | [[CIMRangeDefinition]](CIMVectorLayers.md#cimrangedefinition) | The range definitions. 
 | activeRangeName | string | The name of the active range. 
 | activeVariables | [string] | The active variables. 
+| multidimensionalExtent | [CIMRasterMultidimensionalExtentDefinition](CIMImageLayers.md#cimrastermultidimensionalextentdefinition) | A multidimensional extent definition describing the data cube(s) used for analysis. 
+| activeSlice | [CIMRasterMultidimensionalDisplayDefinition](CIMImageLayers.md#cimrastermultidimensionaldisplaydefinition) | A multidimensional display definition describing the current display slice. 
 
 
 ### CIMImageServiceLayerDefinition 
@@ -417,7 +421,7 @@
 | definitionExpression | string | The definition expression. 
 | definitionExpressionName | string | The Name of definition expression. 
 | definitionFilterChoices | [[CIMDefinitionFilter]](CIMLayer.md#cimdefinitionfilter) | The definition filter choices. 
-| rangeDefinitions | [[CIMRangeDefinition]](CIMVectorLayers.md#cimrangedefinition) | The data connection of the mosaic dataset. 
+| rangeDefinitions | [[CIMRangeDefinition]](CIMVectorLayers.md#cimrangedefinition) | The range definitions of the mosaic dataset. 
 | activeRangeName | string | The name of the active range. 
 | activeVariables | [string] | An array of the active variables. 
 
@@ -748,6 +752,24 @@
 
 
 
+## CIMRasterDimensionalDefinition
+#### Represents a set of criteria used to define the multidimensional extent of a raster layer. 
+
+
+### CIMRasterDimensionalDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| variableName | string | The name of the variable. 
+| dimensionName | string | The name of the dimension. 
+| minimumValues | [double] | The minimum dimension values. 
+| maximumValues | [double] | The maximum dimension values. 
+
+
+
+
+
+
 ## CIMRasterDiscreteColorColorizer
 #### Represents a raster discrete color colorizer. 
 
@@ -886,6 +908,8 @@
 | rangeDefinitions | [[CIMRangeDefinition]](CIMVectorLayers.md#cimrangedefinition) | The range definitions. 
 | activeRangeName | string | The name of the active range. 
 | activeVariables | [string] | The active variables. 
+| multidimensionalExtent | [CIMRasterMultidimensionalExtentDefinition](CIMImageLayers.md#cimrastermultidimensionalextentdefinition) | A multidimensional extent definition describing the data cube(s) used for analysis. 
+| activeSlice | [CIMRasterMultidimensionalDisplayDefinition](CIMImageLayers.md#cimrastermultidimensionaldisplaydefinition) | A multidimensional display definition describing the current display slice. 
 
 
 
@@ -919,6 +943,41 @@
 | Mean| 4| Mean. 
 | Blend| 5| Blend. 
 | Sum| 6| Sum. 
+
+
+
+
+## CIMRasterMultidimensionalDisplayDefinition
+#### Represents a multidimensional display definition for the current display slice. 
+
+
+### CIMRasterMultidimensionalDisplayDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| variableName | string | The name of the variable. 
+| timeValue | [TimeExtent](ExternalReferences.md#timeextent) | The time value for the current display slice. 
+| hasRangeDimension | boolean | A value indicating whether the active variable has a range dimension. 
+| rangeDimensionName | string | The name of the range dimension. 
+| rangeDimensionValue | [CIMRange](CIMVectorLayers.md#cimrange) | The range dimension value for the current display slice. 
+
+
+
+
+
+
+## CIMRasterMultidimensionalExtentDefinition
+#### Represents a multidimensional extent applicable to a raster layer. 
+
+
+### CIMRasterMultidimensionalExtentDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| subsetDefinitions | [[CIMRasterDimensionalDefinition]](CIMImageLayers.md#cimrasterdimensionaldefinition) | The dimensional definitions that define a multidimensional subset. 
+| areaOfInterest | [Geometry](ExternalReferences.md#geometry) | The area of interest for the multidimensional extent. 
+
+
 
 
 
@@ -1280,6 +1339,7 @@
 | dataConnection | [CIMVideoDataConnection](CIMImageLayers.md#cimvideodataconnection) | The data connection for the video. 
 | footprintColor | [Color](Types.md#color) | The footprint color. 
 | elapsedTime | double | The elapsed time in seconds. 
+| visibility | boolean | A value indicating whether the standalone video graphics is visible. 
 
 
 

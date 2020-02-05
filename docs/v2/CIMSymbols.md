@@ -82,6 +82,10 @@
 | balloonStyle | [enumeration BalloonCalloutStyle](CIMSymbols.md#enumeration-ballooncalloutstyle) | The balloon style. 
 | backgroundSymbol | [CIMPolygonSymbol](CIMSymbols.md#cimpolygonsymbol) | The symbol used to draw the background. 
 | margin | [CIMTextMargin](CIMSymbols.md#cimtextmargin) | The text margin defining the space around the text that is accounted for in balloon creation. 
+| useFixedDartWidth | boolean | A value indicating whether to use a fixed size when drawing the dart symbol. 
+| fixedDartWidth | double | The dart width. 
+| useDartSymbol | boolean | A value indicating whether the dart symbol is drawn differently to the background symbol. 
+| dartSymbol | [CIMPolygonSymbol](CIMSymbols.md#cimpolygonsymbol) | A symbol used to draw the dart. 
 
 
 
@@ -152,6 +156,7 @@
 | spacing | double | The spacing. 
 | verticalBars | boolean | A value indicating whether this bar chart marker has vertical bars. 
 | width | double | The width. 
+| showAxes | boolean | A value indicating whether or not to show the axes symbol. 
 
 
 
@@ -1955,6 +1960,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | clockwise | boolean | A value indicating whether the orientation of the wedges of the pie chart are clockwise or counterclockwise. 
+| showOutline | boolean | A value indicating whether or not to show the outline symbol. 
 | outlineSymbol | [CIMLineSymbol](CIMSymbols.md#cimlinesymbol) | The line symbol that is applied to outline of the whole pie chart. 
 
 
@@ -2414,6 +2420,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | fixedLength | boolean | A value indicating whether this chart is a fixed length. 
+| showOutline | boolean | A value indicating whether or not to show the outline symbol. 
 | outlineSymbol | [CIMLineSymbol](CIMSymbols.md#cimlinesymbol) | The outline symbol. 
 | verticalBar | boolean | A value indicating whether this chart has a vertical bar. 
 | width | double | The width. 

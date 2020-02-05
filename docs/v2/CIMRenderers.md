@@ -24,6 +24,11 @@
 | maxValue | double | Maximum value. 
 | preventChartOverlap | boolean | A value indicating whether or not to prevent chart overlap. 
 | proportionalPieSizeOptions | [CIMProportionalPieSizeOptions](CIMRenderers.md#cimproportionalpiesizeoptions) | The proportional pie size options. 
+| colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp. 
+| fieldLabels | [string] | The labels that will be shown next to fields in the legend. 
+| showSizeLegend | boolean | A value indicating whether or not to show a legend group illustrating the chart's size. 
+| sizeLegendOutlineColor | [Color](Types.md#color) | The color of the outline for the size legend group. 
+| sizeLegendLeaderlineColor | [Color](Types.md#color) | The color of the leader line for the size legend group. 
 
 
 ### CIMDataNormalization 
@@ -224,6 +229,7 @@
 |---------|--------|--------|
 | dictionaryName | string | The dictionary name. 
 | fieldMap | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The field map between expected fields and actual fields. 
+| scalingExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | ExpressionInfo that contains the Arcade expression that returns the symbol scaling ratio as a number. 
 
 
 
