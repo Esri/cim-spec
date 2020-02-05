@@ -19,6 +19,51 @@
 
 
 
+## CIMAttachmentFrame
+#### Represents an attachment graphic frame. 
+
+
+### CIMElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| anchor | [enumeration Anchor](CIMLayout.md#enumeration-anchor) | The anchor position of the element. 
+| locked | boolean | A value indicating whether the element is locked. Each element in the contents pane has a lock icon. If the icon is shown as locked, you can not select that feature in the layout using the select tool. 
+| name | string | The name of the element. 
+| visible | boolean | A value indicating whether the element is visible. 
+| rotation | double | The rotation of the element. 
+| rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
+| lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+
+
+### CIMFrameElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| frame | [Polygon](ExternalReferences.md#polygon) | The geometry of a frame for an element. 
+| graphicFrame | [CIMGraphicFrame](CIMGraphics.md#cimgraphicframe) | The graphic symbology of an element's frame. 
+
+
+### CIMAttachmentFrame 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| maxImages | long | Maximum number of image attachments to display. If -1, all images attachments will be available. 
+| sortFieldName | string | Field name to sort. 
+| sortOrder | [enumeration FieldSortInfo](CIMLayout.md#enumeration-fieldsortinfo) | Sort order of image attachments. 
+| imageFrame | [CIMGraphicFrame](CIMGraphics.md#cimgraphicframe) | The graphic symbology of each attachment image frame. 
+| gridRows | long | The number of attachment image rows. If less than 0, the number of rows is automatically calculated. 
+| gridColumns | long | The number of attachment image columns. 
+| gridRowDirection | boolean | A value indicating whether the grid layout is in row major order. 
+| imageHeight | double | The height of each attachment image. 
+| imageWidth | double | The width of each attachment image. 
+
+
+
+
+
+
 ## CIMAutoCamera
 #### Represents the camera settings associated with a map frame on a page layout. 
 
@@ -63,6 +108,53 @@
 | Scale| 1| Show the map at the specified scale. 
 | CenterAndScale| 2| Show the map at the specified center point and scale. 
 | Extent| 3| Show the map at a specified extent. 
+
+
+
+
+## CIMBookmarkMapSeries
+#### Bookmark map series is a means to create a series of map pages based on saved bookmarks. 
+
+
+### CIMMapSeries 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| enabled | boolean | A value indicating whether the map series is enabled on the layout. 
+| mapFrameName | string | The URI of the MapFrame to which MapSeries is linked. 
+| startingPageNumber | long | The starting page number. 
+| currentPageID | long | The current page Id. 
+
+
+### CIMBookmarkMapSeries 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| pages | [[CIMBookmarkMapSeriesPage]](CIMLayout.md#cimbookmarkmapseriespage) | The pages. 
+| scaleRounding | double | The specified value to which the scale rounds. 
+| extentOptions | [enumeration ExtentFitType](CIMLayout.md#enumeration-extentfittype) | The extent fitting options. 
+| marginType | [enumeration UnitType](CIMLayout.md#enumeration-unittype) | The type of margin. 
+| marginUnits | [LinearUnit](ExternalReferences.md#linearunit) | The units of the margin. 
+| margin | double | The value of the margin. 
+
+
+
+
+
+
+## CIMBookmarkMapSeriesPage
+#### A map series page based on a bookmark. 
+
+
+### CIMBookmarkMapSeriesPage 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| bookmarkName | string | The bookmark. 
+| mapURI | string | The map. 
+| category | string | The category. Category lets you organize your pages into groups. 
+
+
 
 
 
@@ -464,6 +556,42 @@
 
 
 
+## CIMGZDLabelGridLine
+#### Represents a UTM Grid Zone Designator Label definition for a MapGrid. 
+
+
+### CIMGridLine 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | Name of the grid line. 
+| elementType | [enumeration GridElementType](CIMLayout.md#enumeration-gridelementtype) | The type of the graticule element. 
+| gridLineOrientation | [enumeration GridLineOrientation](CIMLayout.md#enumeration-gridlineorientation) | The orientation of the gridLine with reference to the coordinate system of the spatial reference. For graticules it is latitudes and longitudes. For grids it is eastings and northings. 
+| symbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | Symbol of the grid line. 
+| pattern | [CIMGridPattern](CIMLayout.md#cimgridpattern) | The pattern of the grid lines. 
+| fromTick | [CIMExteriorTick](CIMLayout.md#cimexteriortick) | The properties of the tick that is at the start of the grid line it represents. 
+| toTick | [CIMExteriorTick](CIMLayout.md#cimexteriortick) | The properties of the tick that is at the end of the grid line it represents. 
+| interiorTicks | [[CIMInteriorTick]](CIMLayout.md#ciminteriortick) | The properties of the interior ticks for a grid line. 
+| visibleIndices | [long] | The visibility of the corner labels to edges by index. 
+
+
+### CIMGZDLabelGridLine 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| dynamicStringTemplate | string | The dynamic string used to represent the GZD label of the map grid. 
+| verticalTopPosition | [CIMGridZoneLabelPosition](CIMLayout.md#cimgridzonelabelposition) | The vertical position of the GZD label at the top of each UTM grid zone. 
+| verticalCenterPosition | [CIMGridZoneLabelPosition](CIMLayout.md#cimgridzonelabelposition) | The vertical position of the GZD label at the center of each UTM grid zone. 
+| verticalBottomPosition | [CIMGridZoneLabelPosition](CIMLayout.md#cimgridzonelabelposition) | The vertical position of the GZD label at the bottom of each UTM grid zone. 
+| horizontalLeftPosition | [CIMGridZoneLabelPosition](CIMLayout.md#cimgridzonelabelposition) | The horizontal position of the GZD label at the left of each UTM grid zone. 
+| horizontalCenterPosition | [CIMGridZoneLabelPosition](CIMLayout.md#cimgridzonelabelposition) | The horizontal position of the GZD label at the center of each UTM grid zone. 
+| horizontalRightPosition | [CIMGridZoneLabelPosition](CIMLayout.md#cimgridzonelabelposition) | The horizontal position of the GZD label at the right of each UTM grid zone. 
+
+
+
+
+
+
 ## CIMGraphicElement
 #### Represents the CIM representation of an element on a page layout. 
 
@@ -617,6 +745,23 @@
 
 
 
+## CIMGridZoneLabelPosition
+#### Represents the state of a label at a given position on a MapGrid. 
+
+
+### CIMGridZoneLabelPosition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| visible | boolean | A value indicating whether the label at this position is visible. 
+| offsetX | double | The offset in the X-Coordinate direction between the label and grid components. 
+| offsetY | double | The offset in the Y-Coordinate direction between the label and grid components. 
+
+
+
+
+
+
 ## CIMGroupElement
 #### Represents a collection of layout elements in a group element. 
 
@@ -653,7 +798,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [[CIMElement]](Types.md#cimelement) | A collection of layout elements. 
+| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
 
 
 
@@ -696,7 +841,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [[CIMElement]](Types.md#cimelement) | A collection of layout elements. 
+| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
 
 
 ### CIMReportSectionElement 
@@ -757,7 +902,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [[CIMElement]](Types.md#cimelement) | A collection of layout elements. 
+| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
 
 
 ### CIMReportSectionElement 
@@ -986,7 +1131,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [[CIMElement]](Types.md#cimelement) | A collection of layout elements. 
+| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
 
 
 ### CIMLayoutDefinition 
@@ -996,10 +1141,11 @@
 | page | [CIMPage](CIMLayout.md#cimpage) | The CIMPage for the layout. 
 | dateExported | [TimeInstant](ExternalReferences.md#timeinstant) | The date exported property for a layout. 
 | datePrinted | [TimeInstant](ExternalReferences.md#timeinstant) | The date printed property for a layout. 
-| mapSeries | [CIMMapSeries](CIMLayout.md#cimmapseries) | The map series for a layout. 
+| mapSeries | [MapSeries](Types.md#mapseries) | The map series for a layout. 
 | colorModel | [enumeration ColorModel](CIMEnumerations.md#enumeration-colormodel) | The color model for a layout. 
 | RGBColorProfile | string | The name of the RGB color profile for a layout. 
 | CMYKColorProfile | string | The name of the CMYK color profile for a layout. 
+| simulateOverprint | boolean | A value indicating whether to simulate overprint for a layout. 
 
 
 
@@ -1116,6 +1262,7 @@
 | columns | long | The number of legend columns when either of the following fitting strategies is in effect: SpecifyColumnsAndAdjustFrame or SpecifyColumnsAndAdjustSize. 
 | makeColumnsSameWidth | boolean | A value indicating whether to ensure all the columns are the same width. 
 | defaultLegendItem | [LegendItem](Types.md#legenditem) | The default legend item used as the basis for new legend item creation. 
+| excludedLayers | [string] | A collection of layer URIs from the associated map that are explicitly excluded from the legend. 
 
 
 
@@ -1652,6 +1799,8 @@
 | OISSurfaces | [[CIMProfileOIS]](CIMLayout.md#cimprofileois) | The display option for all the OIS surfaces shown in the profile. 
 | obstacles | [[CIMProfileObstacle]](Types.md#cimprofileobstacle) | The display option for all the point obstacles shown in the profile. 
 | profileType | [enumeration ProfileFrameType](CIMLayout.md#enumeration-profileframetype) | The option for profile type. 
+| profileStyle | [enumeration ProfileFrameStyle](CIMLayout.md#enumeration-profileframestyle) | The style of the profile frame. 
+| runwayEndLeftAsReference | boolean | A value indicating whether to use left end of runway as base elevation. 
 
 
 
@@ -1664,6 +1813,16 @@
 |---------|--------|--------|
 | ConstantHeight| 0| Adjust the cell height based on the overall height of element 
 | ConstantRatio| 1| Keeps a constant ratio between width to height of each cell 
+
+
+
+### Enumeration: ProfileFrameStyle
+#### Available styles for profile frames. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| AOC| 0| Aerodrome Obstacle Chart style. 
+| PATC| 1| Precision Approach Terrain Chart style. 
 
 
 
@@ -1702,6 +1861,8 @@
 | verticalScaleRightTextSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The text symbol for the vertical scale right. 
 | showEntireApproach | boolean | A value indicating whether to show the entire length of curved approach, or just show up to a particular distance. 
 | XMax | double | The horizontal length maximum value. 
+| verticalIntervalInMeters | long | The vertical interval for scale in meters. 
+| verticalIntervalInFeet | long | The vertical interval for scale in feet. 
 
 
 
@@ -1974,17 +2135,18 @@
 | page | [CIMPage](CIMLayout.md#cimpage) | The CIMPage for the layout. 
 | dateExported | [TimeInstant](ExternalReferences.md#timeinstant) | The date exported property for a layout. 
 | datePrinted | [TimeInstant](ExternalReferences.md#timeinstant) | The date printed property for a layout. 
-| mapSeries | [CIMMapSeries](CIMLayout.md#cimmapseries) | The map series for a layout. 
+| mapSeries | [MapSeries](Types.md#mapseries) | The map series for a layout. 
 | colorModel | [enumeration ColorModel](CIMEnumerations.md#enumeration-colormodel) | The color model for a layout. 
 | RGBColorProfile | string | The name of the RGB color profile for a layout. 
 | CMYKColorProfile | string | The name of the CMYK color profile for a layout. 
+| simulateOverprint | boolean | A value indicating whether to simulate overprint for a layout. 
 
 
 ### CIMElementContainer 
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [[CIMElement]](Types.md#cimelement) | A collection of layout elements. 
+| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
 
 
 ### CIMReport 
@@ -2055,7 +2217,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [[CIMElement]](Types.md#cimelement) | A collection of layout elements. 
+| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
 
 
 ### CIMReportSectionElement 
@@ -2190,7 +2352,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [[CIMElement]](Types.md#cimelement) | A collection of layout elements. 
+| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
 
 
 ### CIMReportSectionElement 
@@ -2250,7 +2412,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [[CIMElement]](Types.md#cimelement) | A collection of layout elements. 
+| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
 
 
 ### CIMReportSectionElement 
@@ -2311,7 +2473,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [[CIMElement]](Types.md#cimelement) | A collection of layout elements. 
+| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
 
 
 ### CIMReportSectionElement 
@@ -2371,7 +2533,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [[CIMElement]](Types.md#cimelement) | A collection of layout elements. 
+| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
 
 
 ### CIMReportSectionElement 
@@ -2431,7 +2593,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [[CIMElement]](Types.md#cimelement) | A collection of layout elements. 
+| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
 
 
 ### CIMReportSectionElement 
@@ -2492,7 +2654,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [[CIMElement]](Types.md#cimelement) | A collection of layout elements. 
+| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
 
 
 ### CIMReportSectionElement 

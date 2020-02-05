@@ -54,6 +54,20 @@
 
 
 
+### Enumeration: ChartAggregationType
+#### Options for choosing what aggregation type is to be used while calculating values. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| None| 0| No aggregation is performed. 
+| Minimum| 1| The minimum value is used. 
+| Maximum| 2| The maximum value is used. 
+| Mean| 3| The mean value is used. 
+| Median| 4| The median value is used. 
+| Sum| 5| The sum of values is used. 
+
+
+
 
 ## CIMChartAxis
 #### Provides access to members that control chart axis properties. 
@@ -67,6 +81,7 @@
 | isLogarithmic | boolean | A value indicating whether the chart axis has logarithmic scale. 
 | title | string | The title of an axis. 
 | showTitle | boolean | A value indicating whether the axis title is visible. 
+| useAutomaticTitle | boolean | A value indicating whether the axis title is auto generated. 
 | valueFormat | string | The format string for axis value labels. 
 | valueNumberFormat | [NumberFormat](Types.md#numberformat) | The number format of the axis labels. ValueNumberFormat takes precedence over ValueFormat when both are specified. 
 | dateTimeFormat | string | The format string for axis date/time labels. 
@@ -78,6 +93,9 @@
 | labelText | [CIMChartTextProperties](CIMLayer.md#cimcharttextproperties) | The label symbol properties. 
 | axisLineSymbolProperties | [CIMChartLineSymbolProperties](CIMLayer.md#cimchartlinesymbolproperties) | The line symbol properties for axis. 
 | guides | [[CIMChartGuide]](CIMLayer.md#cimchartguide) | The array of guides. 
+| labelCharacterLimit | long | The character limit for axis labels. 
+| navigationScaleFactor | double | The scale factor for zoom/pan navigation. The value should be positive. This property can have a value more than 0 and less or equal to 1. 
+| navigationPosition | double | The relative start position for zoom/pan navigation. The value range is normalized between 0 and 1. This property can have a value between 0 and 1. 
 
 
 
@@ -320,6 +338,7 @@
 |---------|--------|--------|
 | title | string | The title of the chart. 
 | showTitle | boolean | A value indicating whether the chart title is visible. 
+| useAutomaticTitle | boolean | A value indicating whether the chart title is auto generated. 
 | subTitle | string | The subtitle of the chart. 
 | showSubTitle | boolean | A value indicating whether the chart subtitle is visible. 
 | footer | string | The footer of the chart. 
@@ -799,7 +818,7 @@
 | trendLineSymbolProperties | [CIMChartLineSymbolProperties](CIMLayer.md#cimchartlinesymbolproperties) | The symbol properties for the trend line symbol. 
 | trendLineFitType | [enumeration ChartTrendLineFitType](CIMLayer.md#enumeration-charttrendlinefittype) | A trend line fit type. 
 | trendOrder | long | The number of terms in a polynomial or Fourier equation. 
-| showTrendEquation | boolean | A value indicating whether or not to hows a trend equation overlay. 
+| showTrendEquation | boolean | A value indicating whether or not to have a trend equation overlay. 
 | bubbleMinimumSize | double | Minimum size of the bubbles. 
 | bubbleMaximumSize | double | Maximum size of the bubbles. 
 
@@ -969,6 +988,12 @@
 | timeAggregationType | [enumeration ChartTimeAggregationType](CIMLayer.md#enumeration-charttimeaggregationtype) | The type of grouping to be applied on the time values plotted on the x axis. 
 | trimIncompleteTimeInterval | boolean | A value indicating whether incomplete time intervals at the ends of time interval ranges are trimmed in order to avoid bias. 
 | dateTimeFormat | string | The format of the date plotted on the x axis. 
+| trendLineSymbolProperties | [CIMChartLineSymbolProperties](CIMLayer.md#cimchartlinesymbolproperties) | The symbol properties for the trend line. 
+| showTrendLine | boolean | A value indicating whether to show the trend line or not. 
+| trendLineFitType | [enumeration ChartTrendLineFitType](CIMLayer.md#enumeration-charttrendlinefittype) | A trend line fit type. 
+| trendOrder | long | The order of the equation when a polynomial or Fourier fit type is used. 
+| showTrendEquation | boolean | A value indicating whether or not to have a trend equation overlay. 
+| spatialAggregationType | [enumeration ChartAggregationType](CIMLayer.md#enumeration-chartaggregationtype) | The spatial aggregation type to be used to calculate cell values. 
 
 
 
@@ -988,6 +1013,7 @@
 | label | string | The label. 
 | dimension | string | The dimension to be plotted on the y axis. 
 | dimensionValues | [double] | The dimension values corresponding to the dimension to be plotted on the y axis. 
+| dimensionValuesSymbols | [[CIMSymbolReference]](CIMRenderers.md#cimsymbolreference) | The symbols for dimension values. 
 
 
 

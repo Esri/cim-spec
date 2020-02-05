@@ -1666,7 +1666,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | title | string | The title. 
-| expressionInfos | [[CIMExpressionInfo]](CIMRenderers.md#cimexpressioninfo) | The media infos. 
+| expressionInfos | [[CIMExpressionInfo]](CIMRenderers.md#cimexpressioninfo) | Arcade expressions that are referenced as fields in one or more elements in MediaInfos. 
 | mediaInfos | [[CIMMediaInfo]](Types.md#cimmediainfo) | The media infos. 
 
 

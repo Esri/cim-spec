@@ -34,6 +34,30 @@
 
 
 
+## CIMAnimationScreenGraphicGroup
+#### Represents an animation screen graphic group container. 
+
+
+### CIMAnimationScreenGraphic 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| graphic | [Graphic](Types.md#graphic) | The graphic to be displayed. 
+| alias | string | An identifier for the user. 
+| keyframes | [[CIMAnimationScreenGraphicKeyframe]](CIMMap.md#cimanimationscreengraphickeyframe) | The graphic properties keyframes. 
+
+
+### CIMAnimationScreenGraphicGroup 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| children | [[CIMAnimationScreenGraphic]](Types.md#cimanimationscreengraphic) | The children. 
+
+
+
+
+
+
 ## CIMAnimationScreenGraphicKeyframe
 #### Properties defining the graphic at a single point in time for the animation. 
 
@@ -47,6 +71,9 @@
 | anchorY | double | The vertical placement percent of the graphic anchor position on the viewer (0 is top edge, 1 is bottom edge). 
 | transparency | double | The transparency of the graphic. 
 | scale | double | The size multiplier for the graphic. 
+| elementWidth | double | The pixel width for the graphic. It applies only to the animation screen graphic that contains a polygon graphic. 
+| elementHeight | double | The pixel height for the graphic. It applies only to the animation screen graphic that contains a polygon graphic. 
+| rotation | double | The angle of rotation (in degrees) for the graphic. It applies only to the animation screen graphic that contains a polygon graphic. 
 
 
 
@@ -119,6 +146,28 @@
 | Inward| 0| Clip the inside or forward. 
 | Outward| 1| Clip the outside or backwards. 
 | Camera| 2| Clip from the side that is closest to the camera. 
+
+
+
+
+## CIMCutAndFillEADefinition
+#### Represents a slice box exploratory analysis definition. 
+
+
+### CIMExploratoryAnalysisDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| ID | long | The id. 
+
+
+### CIMCutAndFillEADefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| cutFillPlane | [Polygon](ExternalReferences.md#polygon) | The polygon indicating the area to cut the ground above and fill the ground below. Should be a level plane for best results. 
+
+
 
 
 
@@ -364,6 +413,24 @@
 | ZTransition | [enumeration AnimationTransition](CIMEnumerations.md#enumeration-animationtransition) | The method of transition for the z of the camera. 
 | transitionScale | double | The value of adjustable transitions. The value must be between 0.0 and 1.0. Smaller values will result in a tighter / smaller curve than larger values. 
 | cameraTransitionMode | [enumeration esriAnimationTransitionMode](ExternalReferences.md#enumeration-esrianimationtransitionmode) | The transition mode determines whether the camera path follows a Geodesic or Cartesian interpolation. 
+| lookAt | [Geometry](ExternalReferences.md#geometry) | A geometry for the camera to look at. When a geometry is set it overrides the camera's heading and pitch. Must be in the map's spatial reference. 
+| adjustedCameraPath | [Multipoint](ExternalReferences.md#multipoint) | The bezier control points between the previous camera position and the current camera position. Used to define the camera path for the AdjustableArc transition. When the value is null or empty, a default path is used. Must be in the map's spatial reference. 
+
+
+
+
+
+
+## CIMKeyframeElevationSource
+#### Represents an elevation source keyframe. 
+
+
+### CIMKeyframeElevationSource 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| sourceID | string | The id for the elevation source. 
+| visible | boolean | A value indicating whether the elevation source is visible. 
 
 
 
@@ -424,6 +491,7 @@
 | visible | boolean | A value indicating whether the surface is visible. 
 | swipeDirection | [enumeration SwipeDirection](CIMMap.md#enumeration-swipedirection) | The direction to clip from an edge. 
 | swipePercent | double | The amount of the visible area to clip. 
+| baseSources | [[CIMKeyframeElevationSource]](CIMMap.md#cimkeyframeelevationsource) | The elevation sources. 
 
 
 
@@ -583,6 +651,7 @@
 | fieldMappings | [[CIMFieldMapping]](CIMMap.md#cimfieldmapping) | The collection of field mappings for a map. 
 | RGBColorProfile | string | The name of the RGB color profile for a map. 
 | CMYKColorProfile | string | The name of the CMYK color profile for a map. 
+| simulateOverprint | boolean | A value indicating whether to simulate overprint for a map. 
 
 
 
@@ -1097,7 +1166,7 @@
 |---------|--------|--------|
 | name | string | The name of the track. 
 | keyframes | [[CIMViewKeyframe]](CIMMap.md#cimviewkeyframe) | The collection of view keyframes. 
-| screenGraphics | [[CIMAnimationScreenGraphic]](CIMMap.md#cimanimationscreengraphic) | The list of graphic overlays used in the animation. 
+| screenGraphics | [[CIMAnimationScreenGraphic]](Types.md#cimanimationscreengraphic) | The list of graphic overlays used in the animation. 
 | referenceResolutionWidth | long | The desired pixel width the animation was made to export at. 
 | referenceResolutionHeight | long | The desired pixel height the animation was made to export at. 
 | exportType | string | The export MIME type. Supported formats: video/mp4, video/avi, image/gif, image/jpeg, or image/png. 

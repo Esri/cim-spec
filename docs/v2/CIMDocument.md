@@ -9,8 +9,9 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| URI | string | The URI or the binary reference. Typically set by the system but used as a reference path. 
+| URI | string | The URI of the binary reference. Typically set by the system but used as a reference path. 
 | data | string | The base64 encoded data of the binary reference. 
+| object | [CIMObject](ExternalReferences.md#cimobject) | The stored CIM object. This property is meant to be used as an alternative to the Data property. 
 
 
 
@@ -455,6 +456,7 @@
 | datasetID | string | The DatasetID which is used for getting the information about which points layer will be available and which apportionment methods will be used. If DatasetID is empty, only Area Apportionment method is available. 
 | dataConnection | [DataConnection](Types.md#dataconnection) | The data connection to the source. 
 | fields | [[CIMStatisticalDataCollectionField]](CIMDocument.md#cimstatisticaldatacollectionfield) | The regular fields of the calculator. 
+| apportionmentDatasetConnection | [DataConnection](Types.md#dataconnection) | The data connection to apportionment dataset. This property is optional. 
 
 
 
