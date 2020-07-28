@@ -18,7 +18,7 @@ This CIM specification is documented via Markdown documents that contain definit
 
 ## Versioning
 
-The Cartographic Information Model uses [Semantic Versioning](https://semver.org/) and this documentation corresponds to version 2.5.0.
+The Cartographic Information Model uses [Semantic Versioning](https://semver.org/) and this documentation corresponds to version 2.6.0.
 
 ## Licensing
 
