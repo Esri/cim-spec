@@ -1,6 +1,101 @@
 
 
 
+## CIMBivariateFieldInfo
+#### Contains a collection of properties that describe a bivariate attribute field. 
+
+
+### CIMDataNormalization 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| normalizationField | string | The normalization field. 
+| normalizationTotal | double | The normalization total. 
+| normalizationType | [enumeration DataNormalizationMethod](CIMRenderers.md#enumeration-datanormalizationmethod) | The normalization type. 
+
+
+### CIMBivariateFieldInfo 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| classificationMethod | [enumeration ClassificationMethod](CIMRenderers.md#enumeration-classificationmethod) | The classification method. 
+| field | string | The field for rendering. 
+| valueExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | ExpressionInfo that contains the Arcade expression that returns value as a number. When both Field and ValueExpressionInfo are present ValueExpressionInfo is used. 
+| defaultLabel | string | The default label used for the legend. 
+| minimumBreak | double | The minimum break. 
+| upperBounds | [double] | The collection of upper bounds. 
+
+
+
+
+
+### Enumeration: BivariateGridLegendLabelStrategy
+#### Bivariate grid label strategy. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Corners| 0| The labels for the legend are placed at each corner of the grid. 
+| Sides| 1| The labels for the legend are placed at bottom and left side of the grid. 
+
+
+
+### Enumeration: BivariateGridLegendOrientationType
+#### Bivariate grid orientation type. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| None| 0| The legend is a square without focusing on any particular corner. 
+| High| 1| The legend is a diamond with focus on features with high values for both bivariate fields. 
+| Low| 2| The legend is a diamond with focus on features with low values for both bivariate fields. 
+| HighLow| 3| The legend is a diamond with focus on features with high values in the first bivariate field and low values in the second bivariate field. 
+| LowHigh| 4| The legend is a diamond with focus on features with low values in the first bivariate field and high values in the second bivariate field. 
+
+
+
+### Enumeration: BivariateGridSizeOption
+#### Bivariate grid size option. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| TwoByTwo| 0| A grid with two rows and two columns. 
+| ThreeByThree| 1| A grid with three rows and three columns. 
+| FourByFour| 2| A grid with four rows and four columns. 
+
+
+
+
+## CIMBivariateRendererAuthoringInfo
+#### Represents additional authoring properties used by a bivariate choropleth renderer. 
+
+
+### CIMRendererAuthoringInfo 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMUniqueValueRendererAuthoringInfo 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMBivariateRendererAuthoringInfo 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| fieldInfos | [[CIMBivariateFieldInfo]](CIMRenderers.md#cimbivariatefieldinfo) | The field related properties used to generate the breaks. 
+| gridSize | [enumeration BivariateGridSizeOption](CIMRenderers.md#enumeration-bivariategridsizeoption) | The grid size. 
+| gridOrientation | [enumeration BivariateGridLegendOrientationType](CIMRenderers.md#enumeration-bivariategridlegendorientationtype) | The grid orientation. 
+| gridLabelOption | [enumeration BivariateGridLegendLabelStrategy](CIMRenderers.md#enumeration-bivariategridlegendlabelstrategy) | The grid label option. 
+| sampleSize | long | The sample size used for creating the classification. 
+| templateSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The template symbol. 
+
+
+
+
+
+
 ## CIMChartRenderer
 #### Represents chart renderer which contains properties common to all symbolizers that depict some feature value as a chart drawn on top of the feature itself. 
 
@@ -9,6 +104,15 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+
+
+### CIMDataNormalization 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| normalizationField | string | The normalization field. 
+| normalizationTotal | double | The normalization total. 
+| normalizationType | [enumeration DataNormalizationMethod](CIMRenderers.md#enumeration-datanormalizationmethod) | The normalization type. 
 
 
 ### CIMChartRenderer 
@@ -29,15 +133,6 @@
 | showSizeLegend | boolean | A value indicating whether or not to show a legend group illustrating the chart's size. 
 | sizeLegendOutlineColor | [Color](Types.md#color) | The color of the outline for the size legend group. 
 | sizeLegendLeaderlineColor | [Color](Types.md#color) | The color of the leader line for the size legend group. 
-
-
-### CIMDataNormalization 
-
-|Property | Type | Description | 
-|---------|--------|--------|
-| normalizationField | string | The normalization field. 
-| normalizationTotal | double | The normalization total. 
-| normalizationType | [enumeration DataNormalizationMethod](CIMRenderers.md#enumeration-datanormalizationmethod) | The normalization type. 
 
 
 ### CIMDataExclusion 
@@ -410,6 +505,9 @@
 | AreaBoundary| 18| An area boundary. 
 | AreaHydroPoly| 19| An area hydro polygon. 
 | AreaNaturalPoly| 20| A natural area polygon. 
+| AreaSquare| 21| A square polygon. 
+| AreaHexagonFlat| 22| A flat hexagon. 
+| AreaHexagonPointy| 23| A pointy hexagon. 
 
 
 
@@ -882,6 +980,7 @@
 | styleGallery | string | The style item name for the color ramp. 
 | valueExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | ExpressionInfo that contains the Arcade expression that returns value as a string. When both Fields and ValueExpressionInfo are present ValueExpressionInfo is used. 
 | polygonSymbolColorTarget | [enumeration PolygonSymbolColorTarget](CIMRenderers.md#enumeration-polygonsymbolcolortarget) | The property that controls how the color ramp is applied to polygon symbols. 
+| authoringInfo | [CIMUniqueValueRendererAuthoringInfo](CIMRenderers.md#cimuniquevaluerendererauthoringinfo) | The property that controls how the color ramp is applied to polygon symbols. 
 
 
 

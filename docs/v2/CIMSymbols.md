@@ -327,6 +327,69 @@
 
 
 
+
+## CIMCompositeCallout
+#### Represents a composite callout. Composite callouts are a filled background along with an optional shadow, which is placed behind text. They may also have a leader line (consisting of one or both of a simple line, and filled dart) connecting the callout to an anchor point. Composite callouts may have additional surrounding text elements. The text representing these parts is specified in the text string using tags. Their relative position properties are specified in the CIMCompositeCallout through their corresponding CIMCompositeTextPartPosition elements specified below, but these properties can also be overridden with tag attributes. 
+
+
+### CIMCallout 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| leaderTolerance | double | The leader tolerance which is the closest distance (in points) to the text the anchor point can be for the callout to draw. 
+| leaderOffset | double | The leader offset which is an offset value defining the distance (in points) between the anchor point and the beginning of the drawn leader. 
+
+
+### CIMCompositeCallout 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| cornerRadius | double | The callout corner radius in points. 0.0 corresponds to a rectangle corner. 
+| backgroundSymbol | [CIMPolygonSymbol](CIMSymbols.md#cimpolygonsymbol) | The symbol used to draw the background. 
+| margin | [CIMTextMargin](CIMSymbols.md#cimtextmargin) | The text margin defining the space around the text that is accounted for in balloon creation. 
+| dartWidth | double | The dart width. 
+| dartSymbol | [CIMPolygonSymbol](CIMSymbols.md#cimpolygonsymbol) | A symbol used to draw the dart. This is only used if LeaderLinePercentage is less than 100%. 
+| snapLeaderToCornersOnly | boolean | A value indicating whether the leader line should snap only to corners. 
+| leaderLinePercentage | double | The percentage of the leader line which is drawn as a line as opposed to a solid dart. 
+| leaderLineSymbol | [CIMLineSymbol](CIMSymbols.md#cimlinesymbol) | The leader line symbol. This is only used if LeaderLinePercentage is greater than 0%. 
+| shadowSymbol | [CIMPolygonSymbol](CIMSymbols.md#cimpolygonsymbol) | The shadow symbol for the callout. 
+| shadowXOffset | double | The shadow offset from the callout symbol in the horizontal direction. If X and Y are zero, no shadow is drawn. 
+| shadowYOffset | double | The shadow offset from the callout symbol in the vertical direction. If X and Y are zero, no shadow is drawn. 
+| middle | [CIMCompositeTextPartPosition](CIMSymbols.md#cimcompositetextpartposition) | The text part position properties for the middle part of the callout text. This contains the relative positioning information. Split offset and box will have no effect on this text part, since it is required that that the middle part is in the center of the callout. 
+| topLeft | [CIMCompositeTextPartPosition](CIMSymbols.md#cimcompositetextpartposition) | The text part position properties for the top left part of the callout text. This contains the relative positioning information, as well as split offset indicating the extent to which the callout part will mask the callout outline, and whether or not the part should be boxed in by the overall callout, or not. 
+| top | [CIMCompositeTextPartPosition](CIMSymbols.md#cimcompositetextpartposition) | The text part position properties for the top part of the callout text. This contains the relative positioning information, as well as split offset indicating the extent to which the callout part will mask the callout outline, and whether or not the part should be boxed in by the overall callout, or not. 
+| topRight | [CIMCompositeTextPartPosition](CIMSymbols.md#cimcompositetextpartposition) | The text part position properties for the top right part of the callout text. This contains the relative positioning information, as well as split offset indicating the extent to which the callout part will mask the callout outline, and whether or not the part should be boxed in by the overall callout, or not. 
+| right | [CIMCompositeTextPartPosition](CIMSymbols.md#cimcompositetextpartposition) | The text part position properties for the right part of the callout text. This contains the relative positioning information, as well as split offset indicating the extent to which the callout part will mask the callout outline, and whether or not the part should be boxed in by the overall callout, or not. 
+| left | [CIMCompositeTextPartPosition](CIMSymbols.md#cimcompositetextpartposition) | The text part position properties for the left part of the callout text. This contains the relative positioning information, as well as split offset indicating the extent to which the callout part will mask the callout outline, and whether or not the part should be boxed in by the overall callout, or not. 
+| bottomLeft | [CIMCompositeTextPartPosition](CIMSymbols.md#cimcompositetextpartposition) | The text part position properties for the bottom left part of the callout text. This contains the relative positioning information, as well as split offset indicating the extent to which the callout part will mask the callout outline, and whether or not the part should be boxed in by the overall callout, or not. 
+| bottom | [CIMCompositeTextPartPosition](CIMSymbols.md#cimcompositetextpartposition) | The text part position properties for the bottom part of the callout text. This contains the relative positioning information, as well as split offset indicating the extent to which the callout part will mask the callout outline, and whether or not the part should be boxed in by the overall callout, or not. 
+| bottomRight | [CIMCompositeTextPartPosition](CIMSymbols.md#cimcompositetextpartposition) | The text part position properties for the bottom right part of the callout text. This contains the relative positioning information, as well as split offset indicating the extent to which the callout part will mask the callout outline, and whether or not the part should be boxed in by the overall callout, or not. 
+| floating | [CIMCompositeTextPartPosition](CIMSymbols.md#cimcompositetextpartposition) | The text part position properties for the floating part of the callout text. This contains the relative positioning information, as well as split offset indicating the extent to which the callout part will mask the callout outline, and whether or not the part should be boxed in by the overall callout, or not. The floating part is anchored below the bottom text part. If there is no bottom text part it is anchored below the middle text part plus margins. 
+
+
+
+
+
+
+## CIMCompositeTextPartPosition
+#### Represents the text part position properties on a callout part. 
+
+
+### CIMCompositeTextPartPosition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| horizontalAlignment | [enumeration HorizontalAlignment](CIMSymbols.md#enumeration-horizontalalignment) | The horizontal alignment of the text part. 
+| verticalAlignment | [enumeration VerticalAlignment](CIMSymbols.md#enumeration-verticalalignment) | The vertical alignment of the text part. 
+| XOffset | double | The X offset of the text part. 
+| YOffset | double | The Y offset of the text part. 
+| splitOffset | double | The split offset of the text part. This determines how much of a gap there is between the callout border and any part of the text part intersecting the border If this is set to wider than the callout width, none of the associated callout line will draw. 
+| isPartWithinCalloutBox | boolean | A value indicating whether the text part will be contained within the main callout. If this is set to true, the main callout will expand to encompass this text part, and a line will be draw separating the part from the rest of the callout. This line will have the same symbol as the callout outline and will only draw if the text part is above or below the top and bottom margins of the middle text. 
+
+
+
+
+
 ### Enumeration: ExternalColorMixMode
 #### Options to control how material combines with externally defined colors. 
 
@@ -652,6 +715,42 @@
 
 
 
+## CIMGeometricEffectLocalizerFeather
+#### Represents a geometric effect which creates a localizer feather for aeronautical charts. 
+
+
+### CIMGeometricEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| primitiveName | string | The primitive name. 
+
+
+### CIMGeometricEffectLocalizerFeather 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| style | [enumeration GeometricEffectLocalizerFeatherStyle](CIMSymbols.md#enumeration-geometriceffectlocalizerfeatherstyle) | The localizer feather style. 
+| length | double | The length of the localizer feather. 
+| width | double | The width of the localizer feather. 
+| angle | double | The angle of the localizer feather. 
+
+
+
+
+
+### Enumeration: GeometricEffectLocalizerFeatherStyle
+#### Geometric effect localizer feather styles. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Complete| 0| Displays a complete localizer feather. 
+| Left| 1| Displays the left side of a localizer feather. 
+| Right| 2| Displays the right side of a localizer feather. 
+
+
+
+
 ## CIMGeometricEffectMove
 #### Represents the move geometric effect which creates a point, line or polygon that is offset a specified distance in X and Y. 
 
@@ -693,6 +792,29 @@
 | method | [enumeration GeometricEffectOffsetMethod](CIMSymbols.md#enumeration-geometriceffectoffsetmethod) | The way the strokes or fills are displayed at corners. 
 | offset | double | The distance of the symbol perpendicular to the feature geometry. 
 | option | [enumeration GeometricEffectOffsetOption](CIMSymbols.md#enumeration-geometriceffectoffsetoption) | The way the symbol handles complex geometries. 
+
+
+
+
+
+
+## CIMGeometricEffectOffsetHatch
+#### Represents a geometric effect which creates a hatch pattern to depict special use airspace for aeronautical charts. 
+
+
+### CIMGeometricEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| primitiveName | string | The primitive name. 
+
+
+### CIMGeometricEffectOffsetHatch 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| length | double | The length of the offset hatch. 
+| spacing | double | The spacing of the offset hatch. 
 
 
 
@@ -2530,8 +2652,8 @@
 | offsetY | double | The Y offset. 
 | offsetZ | double | The Z offset. 
 | shadowColor | [Color](Types.md#color) | The color of the shadow that is defined for the text symbol. The shadow is drawn as an offset copy of the text. 
-| shadowOffsetX | double | The shadow offset from the text symbol in the horizontal direction. If X and Y are zero, not shadow is drawn. 
-| shadowOffsetY | double | The shadow offset from the text symbol in the vertical direction. If X and Y are zero, not shadow is drawn. 
+| shadowOffsetX | double | The shadow offset from the text symbol in the horizontal direction. If X and Y are zero, no shadow is drawn. 
+| shadowOffsetY | double | The shadow offset from the text symbol in the vertical direction. If X and Y are zero, no shadow is drawn. 
 | smallCaps | boolean | A value indicating whether the text should be drawn as Small Capitals, where lower case text is converted to small caps and upper case text is left as upper case. 
 | strikethrough | boolean | A value indicating whether to draw the text with a strike through it. 
 | symbol | [CIMPolygonSymbol](CIMSymbols.md#cimpolygonsymbol) | The polygon symbol that is used to draw the glyphs of the text. 

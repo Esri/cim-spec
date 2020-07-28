@@ -93,6 +93,7 @@
 | camera | [CIMViewCamera](CIMMap.md#cimviewcamera) | The camera. 
 | location | [Envelope](ExternalReferences.md#envelope) | The location. 
 | timeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The time extent. 
+| timeRelation | [enumeration esriTimeRelation](ExternalReferences.md#enumeration-esritimerelation) | The time relation. 
 | rangeExtent | [CIMLayerRange](CIMVectorLayers.md#cimlayerrange) | The range extent. RangeExtent.LayerURI is not currently being used. 
 | description | string | The bookmark description. 
 | videoURI | string | The URI to the standalone video. 
@@ -415,6 +416,8 @@
 | cameraTransitionMode | [enumeration esriAnimationTransitionMode](ExternalReferences.md#enumeration-esrianimationtransitionmode) | The transition mode determines whether the camera path follows a Geodesic or Cartesian interpolation. 
 | lookAt | [Geometry](ExternalReferences.md#geometry) | A geometry for the camera to look at. When a geometry is set it overrides the camera's heading and pitch. Must be in the map's spatial reference. 
 | adjustedCameraPath | [Multipoint](ExternalReferences.md#multipoint) | The bezier control points between the previous camera position and the current camera position. Used to define the camera path for the AdjustableArc transition. When the value is null or empty, a default path is used. Must be in the map's spatial reference. 
+| fieldOfView | double | The field of view angle. Only applies to scene views. 
+| fieldOfViewTransition | [enumeration AnimationTransition](CIMEnumerations.md#enumeration-animationtransition) | The method of transition for the field of view of the camera. 
 
 
 
@@ -507,6 +510,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | time | [TimeExtent](ExternalReferences.md#timeextent) | The value of the time extent. 
+| timeRelation | [enumeration esriTimeRelation](ExternalReferences.md#enumeration-esritimerelation) | The time relation. 
 | endTimeTransition | [enumeration AnimationTransition](CIMEnumerations.md#enumeration-animationtransition) | The method of transition for the end value of the time extent. 
 | startTimeTransition | [enumeration AnimationTransition](CIMEnumerations.md#enumeration-animationtransition) | The method of transition for the start value of the time extent. 
 
@@ -581,7 +585,7 @@
 | name | string | The name. 
 | URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
-| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
 | sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
@@ -594,7 +598,6 @@
 | defaultCamera | [CIMViewCamera](CIMMap.md#cimviewcamera) | The default camera. 
 | illumination | [CIMIlluminationProperties](CIMMap.md#cimilluminationproperties) | The illumination properties. 
 | layers | [string] | The layers as an array of layer repository paths. 
-| standaloneTables | [string] | The standalone tables as an array of table repository paths. 
 | stereoProperties | [CIMMapStereoProperties](CIMMap.md#cimmapstereoproperties) | The stereo properties. 
 | defaultViewingMode | [enumeration MapViewingMode](CIMEnumerations.md#enumeration-mapviewingmode) | The default viewing mode. 
 | mapType | [enumeration MapType](CIMMap.md#enumeration-maptype) | The map type. 
@@ -602,8 +605,18 @@
 | timeSliderSettings | [CIMSliderSettings](CIMMap.md#cimslidersettings) | The time slider settings. 
 | animationViewTracks | [[CIMViewTrack]](CIMMap.md#cimviewtrack) | The collection of view tracks in the animation. 
 | locators | [[CIMLocator]](CIMMap.md#cimlocator) | The locators as an ordered array. 
+| validationRules | [[CIMValidationRule]](CIMMap.md#cimvalidationrule) | The validation rules used for validating the layer's features. 
 | mapContexts | [string] | An array string values used to provide a hint for the intended context for the map. 
 | standaloneVideos | [string] | The standalone videos as an array of video repository paths. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the map. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| linkCharts | [string] | The link charts as an array of link chart repository paths. 
+
+
+### CIMStandaloneTableContainer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| standaloneTables | [string] | The standalone tables as an array of table repository paths. 
 
 
 ### CIMMapDefinition 
@@ -957,6 +970,7 @@
 | stepIntervalUnit | string | The unit the interval value is in (for time it could by days, weeks, months, etc..) 
 | stepCount | double | The number of steps to divide the slider extent into. 
 | stepOption | [enumeration SliderStepType](CIMMap.md#enumeration-slidersteptype) | The chosen method of determining the step size. 
+| stepLayerURI | string | The URI of the layer to get step information from. 
 | playWaitSeconds | double | The amount of time to wait between steps. 
 | playForward | boolean | A value indicating whether the play direction is forward. 
 | playRepeats | boolean | A value indicating whether play continuously repeats until interrupted by user interaction. 
@@ -971,6 +985,8 @@
 | aliasExpressionLayerURI | string | The string containing URI of the layer that contains the alias definition. 
 | isMinimized | boolean | A value indicating whether to collapse the slider over the map view. 
 | ignoreInactiveValues | boolean | A value indicating whether to ignore values not currently set to show on the slider. 
+| liveMode | boolean | A value indicating whether the slider should continuously progress the slider to the current time. 
+| liveModeOffsetDirection | [enumeration TimeOffsetDirection](CIMMap.md#enumeration-timeoffsetdirection) | The direction to offset the time span relative to the current time. 
 
 
 
@@ -1021,11 +1037,12 @@
 | XYTolerance | double | The XY tolerance. 
 | XYToleranceUnit | [enumeration SnapXYToleranceUnit](CIMMap.md#enumeration-snapxytoleranceunit) | The XY tolerance unit. 
 | ZTolerance | double | The Z tolerance. 
-| ZToleranceEnabled | boolean | A value indicating whether Z tolerance is enabled. 
+| ZToleranceEnabled | boolean | A value indicating whether Z tolerance is enabled. When enabled, the value is used to evaluate Z snapping. When disabled, the is considered to be infinite. The value is considered to be false (disabled) in 3D views. 
 | snapToSketchEnabled | boolean | A value indicating whether snapping to the sketch is enabled. 
 | snapRequestType | [enumeration SnapRequestType](CIMMap.md#enumeration-snaprequesttype) | The snap request type. 
 | geometricFeedbackColor | [Color](Types.md#color) | Geometric feedback color. 
 | visualFeedbackColor | [Color](Types.md#color) | The visual feedback color. 
+| isZSnappingEnabled | boolean | A value indicating whether Z snapping is enabled. When enabled, snapping to a feature Z value may occur if the feature is within the Z tolerance from the current cursor Z value. The Z tolerance is specified by is true. Otherwise, the Z tolerance is infinite. Z snapping is always enabled for Stereo and 3D views. 
 
 
 
@@ -1073,6 +1090,17 @@
 | Bottom| 2| Bottom 
 | Left| 3| Left 
 | Right| 4| Right 
+
+
+
+### Enumeration: TimeOffsetDirection
+#### Time offset direction. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Past| 0| Past. 
+| Future| 1| Future. 
+| PastAndFuture| 2| Past and future. 
 
 
 

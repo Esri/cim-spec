@@ -55,8 +55,19 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | colors | [[CIMColor]](Types.md#cimcolor) | The ordered list of colors in the color scheme. 
+| arrangement | [enumeration FixedColorRampArrangementType](CIMColor.md#enumeration-fixedcolorramparrangementtype) | The arrangement type. 
 
 
+
+
+
+### Enumeration: FixedColorRampArrangementType
+#### Specifies the arrangement type for fixed color ramp. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Default| 1| A fixed list of colors, typically used for unique value renderer. 
+| Bivariate| 2| A fixed list of colors for bivariate renderering. The count of colors should be equal to the number of breaks for each axis multiplied. For example, a 3x3 bivariate fixed list should have 9 colors in the order of A1, A2, A3, B1, B2, B3, C1, C2, C3 where values 1,2, and 3 correspond to classes in variable 1 and A, B, and C correspond to classes in variable 2. 
 
 
 

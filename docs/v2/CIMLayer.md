@@ -23,6 +23,7 @@
 | textureDownscalingFactor | long | The downscaling factor. All textures for this layer are downscaled by this additional factor on loading. 
 | useCompressedTextures | boolean | A value indicating whether uncompressed textures are compressed using DXT5 at load time. 
 | verticalExaggeration | double | The layer's vertical exaggeration. 
+| exaggerationMode | [enumeration ExaggerationMode](CIMLayer.md#enumeration-exaggerationmode) | The layer's exaggeration mode. 
 | verticalUnit | [Unit](ExternalReferences.md#unit) | The layer's vertical unit. 
 | depthPriority | long | The depth priority of a 3D layer. 
 | lighting | [enumeration Lighting3D](CIMLayer.md#enumeration-lighting3d) | The layer's lighting setting. 
@@ -65,6 +66,8 @@
 | Mean| 3| The mean value is used. 
 | Median| 4| The median value is used. 
 | Sum| 5| The sum of values is used. 
+| Majority| 6| The majority of values is used. 
+| Minority| 7| The minority of values is used. 
 
 
 
@@ -94,8 +97,8 @@
 | axisLineSymbolProperties | [CIMChartLineSymbolProperties](CIMLayer.md#cimchartlinesymbolproperties) | The line symbol properties for axis. 
 | guides | [[CIMChartGuide]](CIMLayer.md#cimchartguide) | The array of guides. 
 | labelCharacterLimit | long | The character limit for axis labels. 
-| navigationScaleFactor | double | The scale factor for zoom/pan navigation. The value should be positive. This property can have a value more than 0 and less or equal to 1. 
-| navigationPosition | double | The relative start position for zoom/pan navigation. The value range is normalized between 0 and 1. This property can have a value between 0 and 1. 
+| navigationScaleFactor | double | The scale factor for zoom/pan navigation. The value should be positive. This property can have a value more than 0 and less or equal to 1. Deprecated at 2.6. 
+| navigationPosition | double | The relative start position for zoom/pan navigation. The value range is normalized between 0 and 1. This property can have a value between 0 and 1. Deprecated at 2.6. 
 
 
 
@@ -136,6 +139,7 @@
 | barSize | long | The relative width of the bar. 
 | fillSymbolProperties | [CIMChartFillSymbolProperties](CIMLayer.md#cimchartfillsymbolproperties) | The properties of the fill symbol border. 
 | verticalOrientation | boolean | A value indicating whether this bar chart is vertically oriented. 
+| sortedCategoryValues | [string] | The array of sorted category values for custom sort. 
 
 
 
@@ -178,6 +182,7 @@
 | showInnerPoints | boolean | A value indicating whether to show the box plot inner points. 
 | showMean | boolean | A value indicating whether to show the box plot mean marker. 
 | standardizeValues | boolean | A value indicating whether to calculate standardized values for box plot. 
+| sortedCategoryValues | [string] | The array of sorted category values for custom sort. 
 
 
 
@@ -234,8 +239,9 @@
 
 |Property | Value | Description | 
 |---------|--------|--------|
-| SingleColor| 0| Uses a single color for series. 
+| SingleColor| 0| Uses a single color from the palette for series. 
 | ColorMatch| 1| Matches series colors with the layer. 
+| CustomColor| 2| Uses the user-picked color for series. 
 
 
 
@@ -525,6 +531,7 @@
 | trimIncompleteTimeInterval | boolean | A value indicating whether incomplete time intervals at the ends of time interval ranges are trimmed in order to avoid bias. 
 | nullPolicy | [enumeration ChartNullPolicy](CIMLayer.md#enumeration-chartnullpolicy) | The policy for handling missing data. 
 | verticalOrientation | boolean | A value indicating whether this is a vertical (true) or horizontal (false) orientation of a line series. 
+| sortedCategoryValues | [string] | The array of sorted category values for custom sort. 
 
 
 
@@ -1157,6 +1164,39 @@
 
 
 
+## CIMElementStorage
+#### Represents a series of graphic elements stored offline. 
+
+
+### CIMElementContainer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
+
+
+### CIMElementStorage 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| spatialReference | [SpatialReference](ExternalReferences.md#spatialreference) | The graphics' spatial reference. 
+| symbols | [[CIMSymbolIdentifier]](CIMVectorLayers.md#cimsymbolidentifier) | The symbols used by graphic elements. The symbol reference inside graphic elements will have a null Symbol, and instead refer to a symbol in this collection by name. The names are generated programmatically. 
+
+
+
+
+
+### Enumeration: ExaggerationMode
+#### Represents the exaggeration modes. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| ScaleZ| 0| Multiply z-coordinate by the exaggeration factor. 
+| ScaleVoxelHeight| 1| Multiply the height (z-dimension) of a voxel by the exaggeration factor. The origin of the layer will remain unchanged. This option is valid for Voxel layer. 
+
+
+
+
 ## CIMEyeDomeLighting
 #### Represents eye-dome lighting properties. 
 
@@ -1185,7 +1225,7 @@
 | name | string | The name. 
 | URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
-| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
 | sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
@@ -1219,6 +1259,7 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 
 
 ### CIMGeodatabaseErrorLayerDefinition 
@@ -1236,8 +1277,8 @@
 
 
 
-## CIMGroupLayer
-#### Represents a group layer which is a simple ordered collection of other layers. 
+## CIMGraphicsLayer
+#### Represents a layer of simple graphic elements. 
 
 
 ### CIMDefinition 
@@ -1247,7 +1288,7 @@
 | name | string | The name. 
 | URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
-| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
 | sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
@@ -1281,6 +1322,72 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
+
+
+### CIMGraphicsLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| elementStorageURI | string | The URI of the storage for the graphic elements themselves. 
+| referenceScale | double | The graphics' reference scale. This value takes precedence over any reference scale on the map. 
+| barrierWeight | [enumeration BarrierWeight](CIMVectorLayers.md#enumeration-barrierweight) | The weight of graphics in this layer when considered as barriers to labeling. 
+| snappable | boolean | A value indicating whether this layer participates in snapping. 
+| selectable | boolean | A value indicating whether this layer is selectable. 
+| showInvisibleGraphics | boolean | A value indicating whether this layer should show invisible graphics. 
+| invisibleGraphicsColor | [Color](Types.md#color) | The color of invisible graphics. 
+
+
+
+
+
+
+## CIMGroupLayer
+#### Represents a group layer which is a simple ordered collection of other layers. 
+
+
+### CIMDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name. 
+| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
+| metadataURI | string | The metadata URI. 
+| useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
+
+
+### CIMLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| attribution | string | The attribution text that appears on a map that draws this layer. 
+| description | string | The description. 
+| layerElevation | [CIMLayerElevationSurface](CIMLayer.md#cimlayerelevationsurface) | The layer elevation. 
+| expanded | boolean | A value indicating whether this layer is expanded in the contents pane. 
+| layer3DProperties | [CIM3DLayerProperties](CIMLayer.md#cim3dlayerproperties) | The 3D layer properties. 
+| layerMasks | [string] | The layer masks. 
+| layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
+| maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| showLegends | boolean | A value indicating whether or not to show legends. 
+| transparency | double | The transparency of the layer. 
+| visibility | boolean | A value indicating whether or not this layer is visible. 
+| displayCacheType | [enumeration DisplayCacheType](CIMLayer.md#enumeration-displaycachetype) | The display cache type. 
+| maxDisplayCacheAge | double | The maximum display cache age. 
+| layerTemplate | [CIMLayerTemplate](CIMLayer.md#cimlayertemplate) | The layer template. 
+| popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
+| showPopups | boolean | A value indicating whether or not to show pop-ups. 
+| serviceLayerID | long | Identifier that will be used to identify the layer in server. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
+| refreshRate | double | The amount of time to wait between refreshing the layer. 
+| refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
+| showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 
 
 ### CIMGroupLayerDefinition 
@@ -1327,7 +1434,7 @@
 | name | string | The name. 
 | URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
-| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
 | sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
@@ -1361,6 +1468,7 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 
 
 ### CIMKMLLayerDefinition 
@@ -1422,6 +1530,227 @@
 | TwoSideResetNormal| 3| Lights both sides of each face using recalculated normals. 
 | TwoSideDataNormalFromWindingOrder| 4| Lights both sides of each face using original data normals, and the winding order for the "out" direction. 
 | TwoSideResetNormalFromWindingOrder| 5| Lights both sides of each face using recalculated normal, and the winding order for the "out" direction. 
+
+
+
+
+## CIMLinkChart
+#### Represents a link chart. 
+
+
+### CIMDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name. 
+| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
+| metadataURI | string | The metadata URI. 
+| useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
+
+
+### CIMLinkChartBaseDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMLinkChartDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| entities | [[CIMLinkChartEntity]](CIMLayer.md#cimlinkchartentity) | The link chart entities. 
+| relationships | [[CIMLinkChartRelationship]](CIMLayer.md#cimlinkchartrelationship) | The link chart relationships. 
+| layout | [enumeration LinkChartLayoutAlgorithm](CIMLayer.md#enumeration-linkchartlayoutalgorithm) | The link chart layout algorithm. 
+| graphMLURI | string | The GraphML CIMPath. 
+
+
+
+
+
+
+## CIMLinkChartEntity
+#### Represents a link chart entity. 
+
+
+### CIMLinkChartEntity 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| ID | string | The Id of for the entity. 
+| name | string | The name of the entity. 
+| layerURI | string | The CIMPath for the layer used to create the entity. 
+| keyFieldName | string | The field used to uniquely identify nodes. If duplicate values exist you can CollapseDuplicates. 
+| labelFieldName | string | The field used to label nodes. 
+| nonSpatial | boolean | A value indicating whether the entity is non spatial. Where it has coordinates on the map. This is used to prevent drawing links on the map to the wrong nodes. 
+| drawingInfo | [CIMLinkChartNodeDrawingInfo](CIMLayer.md#cimlinkchartnodedrawinginfo) | The node drawing information. 
+| labelingInfo | [CIMLinkChartNodeLabelingInfo](CIMLayer.md#cimlinkchartnodelabelinginfo) | The node labeling information. 
+
+
+
+
+
+### Enumeration: LinkChartLayoutAlgorithm
+#### Link chart layout algorithm. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Clustered| 0| Clustered layout. 
+| Organic| 1| Organic layout. 
+| Hierarchy_TopToBottom| 2| Hierarchy layout oriented top to bottom. 
+| Hierarchy_BottomToTop| 3| Hierarchy layout oriented bottom to top. 
+| Hierarchy_LeftToRight| 4| Hierarchy layout oriented left to right. 
+| Hierarchy_RightToLeft| 5| Hierarchy layout oriented right to left. 
+
+
+
+### Enumeration: LinkChartLinkDashStyle
+#### Link chart link dash style. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Solid| 0| Uses solid line to draw the link chart link. 
+| Dot| 1| Uses dotted line to draw the link chart link. 
+| Dash| 2| Uses dashed line to draw the chart line. 
+| DashDot| 3| Uses dash-dotted line to draw the link chart link. 
+| DashDotDot| 4| Uses dash-dot-dot line to draw link chart link. 
+
+
+
+
+## CIMLinkChartLinkDrawingInfo
+#### Represents the link chart link drawing information. 
+
+
+### CIMLinkChartLinkDrawingInfo 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| linkColor | [Color](Types.md#color) | Link color. 
+| linkWidth | long | A value for the link width. 
+| linkDashStyle | [enumeration LinkChartLinkDashStyle](CIMLayer.md#enumeration-linkchartlinkdashstyle) | A value for the link dash style. 
+| showDirection | boolean | A value indicating whether to show the directional arrowhead of a link. 
+
+
+
+
+
+### Enumeration: LinkChartLinkLabelPlacement
+#### Link chart link label placement. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Parallel| 0| Parallel to link. 
+| Perpendicular| 1| Perpendicular to link. 
+
+
+
+
+## CIMLinkChartLinkLabelingInfo
+#### Represents the link chart link labeling information. 
+
+
+### CIMLinkChartLabelingInfo 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| showLabels | boolean | A value indicating whether the labels are shown. 
+| labelFontFamilyName | string | The link label font family name of the font. e.g. Comic Sans. 
+| labelFontStyleName | string | The style name for the link label font family. e.g. Regular, Bold, or Italic. 
+| labelFontType | [enumeration FontType](CIMSymbols.md#enumeration-fonttype) | Link label font type. 
+| labelFontSize | double | Link label font size. 
+| labelFontColor | [Color](Types.md#color) | Link Label font color. 
+| labelBackgroundColor | [Color](Types.md#color) | Link label background color. 
+
+
+### CIMLinkChartLinkLabelingInfo 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| labelPlacement | [enumeration LinkChartLinkLabelPlacement](CIMLayer.md#enumeration-linkchartlinklabelplacement) | The link label placement. 
+
+
+
+
+
+
+## CIMLinkChartNodeDrawingInfo
+#### Represents the link chart node drawing information. 
+
+
+### CIMLinkChartNodeDrawingInfo 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| collapseDuplicates | boolean | A value indicating whether the entity whether duplicate node values are consolidated. The result is one node for multiple values. 
+| nodeSymbology | [enumeration LinkChartSymbolizationSource](CIMLayer.md#enumeration-linkchartsymbolizationsource) | The entity symbology preference. 
+| overrideSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The override symbol. 
+| overrideOverviewSymbolColor | boolean | A value indicating whether the overview symbol color is calculated or specified. 
+| overviewSymbolColor | [Color](Types.md#color) | The override overview symbol color. 
+| showNodeFrames | boolean | A value indicating whether the node frames are shown. 
+
+
+
+
+
+
+## CIMLinkChartNodeLabelingInfo
+#### Represents the link chart node labeling information. 
+
+
+### CIMLinkChartLabelingInfo 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| showLabels | boolean | A value indicating whether the labels are shown. 
+| labelFontFamilyName | string | The link label font family name of the font. e.g. Comic Sans. 
+| labelFontStyleName | string | The style name for the link label font family. e.g. Regular, Bold, or Italic. 
+| labelFontType | [enumeration FontType](CIMSymbols.md#enumeration-fonttype) | Link label font type. 
+| labelFontSize | double | Link label font size. 
+| labelFontColor | [Color](Types.md#color) | Link Label font color. 
+| labelBackgroundColor | [Color](Types.md#color) | Link label background color. 
+
+
+### CIMLinkChartNodeLabelingInfo 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+
+
+
+
+## CIMLinkChartRelationship
+#### Represents a link chart relationship. 
+
+
+### CIMLinkChartRelationship 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| ID | string | The Id of for the relationship. 
+| name | string | The name of the relationship. 
+| sourceEntityId | string | The source entity id for the relationship. 
+| sourceEntityBackingField | string | The source entity backing field for the relationship. 
+| targetEntityId | string | The target entity id for the relationship. 
+| targetEntityBackingField | string | The target entity backing field for the relationship. 
+| drawingInfo | [CIMLinkChartLinkDrawingInfo](CIMLayer.md#cimlinkchartlinkdrawinginfo) | The link drawing information. This specifies the link color, width, and dash style. 
+| labelingInfo | [CIMLinkChartLinkLabelingInfo](CIMLayer.md#cimlinkchartlinklabelinginfo) | The link labeling information. 
+
+
+
+
+
+### Enumeration: LinkChartSymbolizationSource
+#### Link chart node and entity symbolization source. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| MapSymbology| 0| Use default symbology for the nodes in the entity as defined by the associated layer. 
+| SingleSymbology| 1| Use overriden single symbology for the nodes in the entity. 
 
 
 
@@ -1513,7 +1842,7 @@
 | name | string | The name. 
 | URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
-| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
 | sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
@@ -1547,6 +1876,7 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 
 
 ### CIMTopologyLayerDefinition 

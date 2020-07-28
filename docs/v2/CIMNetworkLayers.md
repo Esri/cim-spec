@@ -54,7 +54,7 @@
 | name | string | The name. 
 | URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
-| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
 | sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
@@ -88,6 +88,14 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
+
+
+### CIMStandaloneTableContainer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| standaloneTables | [string] | The standalone tables as an array of table repository paths. 
 
 
 ### CIMGroupLayerDefinition 
@@ -104,7 +112,6 @@
 |---------|--------|--------|
 | NAWorkspace | [DataConnection](Types.md#dataconnection) | Data connection for the NA workspace. 
 | networkDataset | [DataConnection](Types.md#dataconnection) | Data connection for the network dataset. 
-| standaloneTables | [string] | An array of standalone table paths. 
 | solver | [NASolverDefinition](ExternalReferences.md#nasolverdefinition) | The NA solver. 
 | locator | [NALocatorDefinition](ExternalReferences.md#nalocatordefinition) | The locator. 
 | agents | [NAAgentDefinition](ExternalReferences.md#naagentdefinition)| The agents. 
@@ -151,7 +158,7 @@
 | name | string | The name. 
 | URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
-| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
 | sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
@@ -185,6 +192,7 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 
 
 ### CIMNetworkDatasetLayerDefinition 
@@ -306,7 +314,7 @@
 | name | string | The name. 
 | URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
-| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
 | sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
@@ -340,6 +348,7 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 
 
 ### CIMTraceNetworkLayerDefinition 
@@ -369,7 +378,7 @@
 | name | string | The name. 
 | URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
-| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
 | sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
@@ -403,6 +412,7 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 
 
 ### CIMUtilityNetworkLayerDefinition 

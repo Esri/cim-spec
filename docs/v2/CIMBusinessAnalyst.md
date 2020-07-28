@@ -1,6 +1,55 @@
 
 
 
+## CIMBAVariableList
+#### Represents Business Analyst variable list. 
+
+
+### CIMBAVariableList 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | Name of variable list. 
+| iconData | string | Base64 encoded icon. 
+| author | string | The name of the author of the variable list. 
+| dataSource | string | Data source of the variable list. Structure of the value is TYPE;COUNTRY_INFO;LOCAL_DATA_INFO where TYPE can be ONLINE, LOCAL, or CUSTOM. COUNTRY_INFO is country_id{|hierarchy}. For example, US|census or US. LOCAL_DATA_INFO is ID of local dataset. For example, USA_ESRI_2019. For example, for local US 2019 dataset it will be: "LOCAL;;USA_ESRI_2019". If online US data source is used, it may be "ONLINE;US|census;". Can be value of baDataSource GP GPEnvironment variable. https://pro.arcgis.com/en/pro-app/tool-reference/environment-settings/ba-data-source.htm. 
+| creationDate | [TimeInstant](ExternalReferences.md#timeinstant) | Creation date of the variable list. 
+| lastRevisionDate | [TimeInstant](ExternalReferences.md#timeinstant) | Last revision date of the variable list. 
+| variables | [[CIMBAVariableListVariable]](CIMBusinessAnalyst.md#cimbavariablelistvariable) | Variables. 
+
+
+
+
+
+### Enumeration: BAVariableListValueType
+#### Represents variable value type. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Number| 0| Number value type. 
+| Percent| 1| Percent value type. 
+| Average| 2| Average value type. 
+| Index| 3| Index value type. 
+
+
+
+
+## CIMBAVariableListVariable
+#### Represents variable of at variable list. 
+
+
+### CIMBAVariableListVariable 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| names | [string] | Names of the variable. 
+| valueTypes | [[CIMBAVariableListValueType]](CIMBusinessAnalyst.md#cimbavariablelistvaluetype) | Value types of the variable. If null, Number value type is used. 
+
+
+
+
+
+
 ## CIMHuffModelAttractivenessVariable
 #### Represents attractiveness variable used in Huff Model. 
 
@@ -62,7 +111,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | exponent | double | The exponent. 
-| dataSource | string | Data source used in calculation of distances. 
+| dataSource | string | Data source used in calculation of distances. Structure of the value is TYPE;COUNTRY_INFO;LOCAL_DATA_INFO where TYPE can be ONLINE, LOCAL, or CUSTOM. COUNTRY_INFO is country_id{|hierarchy}. For example, US|census or US. LOCAL_DATA_INFO is ID of local dataset. For example, USA_ESRI_2019. For example, for local US 2019 dataset it will be: "LOCAL;;USA_ESRI_2019". If online US data source is used, it may be "ONLINE;US|census;". Can be value of baDataSource GP GPEnvironment variable. https://pro.arcgis.com/en/pro-app/tool-reference/environment-settings/ba-data-source.htm. 
 | distanceUnits | [enumeration esriUnits](ExternalReferences.md#enumeration-esriunits) | Distance units used in calculation of distances. 
 | useTimeUnits | boolean | A value indicating whether to use time units. 
 | timeUnits | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | Time units used in calculation of distances. 
@@ -134,6 +183,7 @@
 |---------|--------|--------|
 | name | string | The name of target. 
 | segmentIDs | [string] | The segment IDs of the target. 
+| color | [Color](Types.md#color) | The color of the target. 
 
 
 
@@ -155,6 +205,7 @@
 | creationDate | [TimeInstant](ExternalReferences.md#timeinstant) | Creation date of the target group. 
 | lastRevisionDate | [TimeInstant](ExternalReferences.md#timeinstant) | Last revision date of the target group. 
 | targets | [[CIMSegmentationTarget]](CIMBusinessAnalyst.md#cimsegmentationtarget) | The targets of the target group. 
+| visualizationProperties | [CIMSegmentationTargetGroupVisualizationProperties](CIMBusinessAnalyst.md#cimsegmentationtargetgroupvisualizationproperties) | Visualization properties of the target group. 
 
 
 
@@ -178,6 +229,24 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | targetGroup | [CIMSegmentationTargetGroup](CIMBusinessAnalyst.md#cimsegmentationtargetgroup) | The target group. 
+
+
+
+
+
+
+## CIMSegmentationTargetGroupVisualizationProperties
+#### Visualization properties of Business Analyst Segmentation target group. 
+
+
+### CIMSegmentationTargetGroupVisualizationProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| targetProfile | [CIMSegmentationProfile](CIMBusinessAnalyst.md#cimsegmentationprofile) | The target profile of the target group. 
+| baseProfile | [CIMSegmentationProfile](CIMBusinessAnalyst.md#cimsegmentationprofile) | The base profile of the target group. 
+| thresholdIndex | double | The Threshold Index of the target group. 
+| thresholdComposition | double | The Threshold Composition of the target group. 
 
 
 

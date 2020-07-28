@@ -43,7 +43,7 @@
 | name | string | The name. 
 | URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
-| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
 | sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
@@ -77,6 +77,7 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -100,7 +101,10 @@
 | pageDefinition | [CIMPageDefinition](CIMVectorLayers.md#cimpagedefinition) | The page definition which allows for using current map series page to filter features. 
 | featureCacheType | [enumeration FeatureCacheType](CIMVectorLayers.md#enumeration-featurecachetype) | The feature cache type. 
 | enableDisplayFilters | boolean | A value indicating whether the current set of display filters are honored during drawing. 
-| displayFilters | [[CIMDisplayFilter]](CIMVectorLayers.md#cimdisplayfilter) | The current set of display filters. 
+| displayFilters | [[CIMDisplayFilter]](CIMVectorLayers.md#cimdisplayfilter) | The current set of scale based display filters. 
+| displayFiltersType | [enumeration DisplayFilterType](CIMVectorLayers.md#enumeration-displayfiltertype) | DisplayFiltersType value. 
+| displayFilterName | string | The active display filter. 
+| displayFilterChoices | [[CIMDisplayFilter]](CIMVectorLayers.md#cimdisplayfilter) | The current set of display filters. 
 | featureElevationExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression for setting the feature elevation. 
 
 
@@ -177,6 +181,8 @@
 | column | long | The column. 
 | refreshRate | double | The amount of time in RefreshRateUnit to wait between refreshing the media info. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the media. 
+| rowSpan | long | The row span. 
+| columnSpan | long | The column span. 
 
 
 ### CIMAttachmentsMediaInfo 
@@ -226,6 +232,8 @@
 | column | long | The column. 
 | refreshRate | double | The amount of time in RefreshRateUnit to wait between refreshing the media info. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the media. 
+| rowSpan | long | The row span. 
+| columnSpan | long | The column span. 
 
 
 ### CIMChartMediaInfo 
@@ -341,7 +349,7 @@
 | name | string | The name. 
 | URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
-| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
 | sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
@@ -375,6 +383,7 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 
 
 ### CIMBuildingDisciplineLayerDefinition 
@@ -400,7 +409,7 @@
 | name | string | The name. 
 | URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
-| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
 | sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
@@ -434,6 +443,15 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
+
+
+### CIMObject3DRenderingFilters 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| filters | [[CIMObject3DRenderingFilter]](CIMServiceLayers.md#cimobject3drenderingfilter) | The 3D object rendering filters. 
+| activeFilterID | string | The ID of the filter currently used for rendering. 
 
 
 ### CIMBuildingLayerDefinition 
@@ -444,6 +462,7 @@
 | exteriorLayer | string | The exterior shell feature layer in the project. 
 | buildingID | string | The building ID to filter by building. 
 | dataConnection | [DataConnection](Types.md#dataconnection) | The data connection to the workspace. 
+| summaryStatisticsURI | string | The URI to the summary statistics. 
 
 
 
@@ -462,6 +481,8 @@
 | column | long | The column. 
 | refreshRate | double | The amount of time in RefreshRateUnit to wait between refreshing the media info. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the media. 
+| rowSpan | long | The row span. 
+| columnSpan | long | The column span. 
 
 
 ### CIMChartMediaInfo 
@@ -505,7 +526,7 @@
 | name | string | The name. 
 | URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
-| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
 | sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
@@ -539,6 +560,7 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -562,7 +584,10 @@
 | pageDefinition | [CIMPageDefinition](CIMVectorLayers.md#cimpagedefinition) | The page definition which allows for using current map series page to filter features. 
 | featureCacheType | [enumeration FeatureCacheType](CIMVectorLayers.md#enumeration-featurecachetype) | The feature cache type. 
 | enableDisplayFilters | boolean | A value indicating whether the current set of display filters are honored during drawing. 
-| displayFilters | [[CIMDisplayFilter]](CIMVectorLayers.md#cimdisplayfilter) | The current set of display filters. 
+| displayFilters | [[CIMDisplayFilter]](CIMVectorLayers.md#cimdisplayfilter) | The current set of scale based display filters. 
+| displayFiltersType | [enumeration DisplayFilterType](CIMVectorLayers.md#enumeration-displayfiltertype) | DisplayFiltersType value. 
+| displayFilterName | string | The active display filter. 
+| displayFilterChoices | [[CIMDisplayFilter]](CIMVectorLayers.md#cimdisplayfilter) | The current set of display filters. 
 | featureElevationExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression for setting the feature elevation. 
 
 
@@ -701,7 +726,7 @@
 | Architectural| 0| Architectural. 
 | Electrical| 1| Electrical. 
 | Mechanical| 2| Mechanical. 
-| Piping| 3| Piping 
+| Piping| 3| Piping. 
 | Structural| 4| Structural. 
 
 
@@ -747,6 +772,16 @@
 | maxScale | double | The maximum scale for this display filter. 
 
 
+
+
+
+### Enumeration: DisplayFilterType
+#### DisplayFilterType. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| ByChoice| 0| DisplayFilter independent of scale. 
+| ByScale| 1| Scale based DisplayFilter. 
 
 
 
@@ -881,7 +916,7 @@
 | name | string | The name. 
 | URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
-| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
 | sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
@@ -915,6 +950,7 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -938,7 +974,10 @@
 | pageDefinition | [CIMPageDefinition](CIMVectorLayers.md#cimpagedefinition) | The page definition which allows for using current map series page to filter features. 
 | featureCacheType | [enumeration FeatureCacheType](CIMVectorLayers.md#enumeration-featurecachetype) | The feature cache type. 
 | enableDisplayFilters | boolean | A value indicating whether the current set of display filters are honored during drawing. 
-| displayFilters | [[CIMDisplayFilter]](CIMVectorLayers.md#cimdisplayfilter) | The current set of display filters. 
+| displayFilters | [[CIMDisplayFilter]](CIMVectorLayers.md#cimdisplayfilter) | The current set of scale based display filters. 
+| displayFiltersType | [enumeration DisplayFilterType](CIMVectorLayers.md#enumeration-displayfiltertype) | DisplayFiltersType value. 
+| displayFilterName | string | The active display filter. 
+| displayFilterChoices | [[CIMDisplayFilter]](CIMVectorLayers.md#cimdisplayfilter) | The current set of display filters. 
 | featureElevationExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression for setting the feature elevation. 
 
 
@@ -1231,6 +1270,8 @@
 | column | long | The column. 
 | refreshRate | double | The amount of time in RefreshRateUnit to wait between refreshing the media info. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the media. 
+| rowSpan | long | The row span. 
+| columnSpan | long | The column span. 
 
 
 ### CIMImageMediaInfo 
@@ -1294,6 +1335,8 @@
 | column | long | The column. 
 | refreshRate | double | The amount of time in RefreshRateUnit to wait between refreshing the media info. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the media. 
+| rowSpan | long | The row span. 
+| columnSpan | long | The column span. 
 
 
 ### CIMChartMediaInfo 
@@ -1500,7 +1543,7 @@
 | name | string | The name. 
 | URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
-| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
 | sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
@@ -1534,6 +1577,7 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 
 
 ### CIMParcelFabricLayerDefinition 
@@ -1571,7 +1615,7 @@
 | name | string | The name. 
 | URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
-| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
 | sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
@@ -1605,6 +1649,7 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 
 
 ### CIMParcelLayerDefinition 
@@ -1635,6 +1680,8 @@
 | column | long | The column. 
 | refreshRate | double | The amount of time in RefreshRateUnit to wait between refreshing the media info. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the media. 
+| rowSpan | long | The row span. 
+| columnSpan | long | The column span. 
 
 
 ### CIMChartMediaInfo 
@@ -1668,6 +1715,25 @@
 | title | string | The title. 
 | expressionInfos | [[CIMExpressionInfo]](CIMRenderers.md#cimexpressioninfo) | Arcade expressions that are referenced as fields in one or more elements in MediaInfos. 
 | mediaInfos | [[CIMMediaInfo]](Types.md#cimmediainfo) | The media infos. 
+| relatedRecordSortOrder | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The field name and the sort order by which the related records will be ordered. The items are defined by the related field name (Format: RelationshipName\\FieldName) as the Keys and the sort order (Enum: Asc, Desc) as the Values. 
+| gridLayout | [CIMPopupLayout](CIMVectorLayers.md#cimpopuplayout) | The grid layout for the media infos. 
+
+
+
+
+
+
+## CIMPopupLayout
+#### Represents a grid layout for pop-up media infos. 
+
+
+### CIMPopupLayout 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| columnWidths | [double] | The array of column width values in percentage of the table width (0-100). The sum of the array of width percentage values should be equal to 100. 
+| borderWidth | double | The border width in points. 
+| borderColor | [Color](Types.md#color) | The border color. 
 
 
 
@@ -1915,7 +1981,7 @@
 | name | string | The name. 
 | URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
-| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
 | sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
@@ -1960,6 +2026,7 @@
 | charts | [[CIMChart]](CIMLayer.md#cimchart) | The table's charts. 
 | pageDefinition | [CIMPageDefinition](CIMVectorLayers.md#cimpagedefinition) | The page definition which allows for using current map series page to filter rows. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the standalone table. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapTableID | string | An identifier that will be used to identify the standalone table in a web map. This value is present if the standalone table originated in a web map and facilitates matching the standalone table back to its origin when updating the web map. 
 
 
 
@@ -2036,7 +2103,7 @@
 | name | string | The name. 
 | URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
-| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
 | sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
@@ -2070,6 +2137,7 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -2093,7 +2161,10 @@
 | pageDefinition | [CIMPageDefinition](CIMVectorLayers.md#cimpagedefinition) | The page definition which allows for using current map series page to filter features. 
 | featureCacheType | [enumeration FeatureCacheType](CIMVectorLayers.md#enumeration-featurecachetype) | The feature cache type. 
 | enableDisplayFilters | boolean | A value indicating whether the current set of display filters are honored during drawing. 
-| displayFilters | [[CIMDisplayFilter]](CIMVectorLayers.md#cimdisplayfilter) | The current set of display filters. 
+| displayFilters | [[CIMDisplayFilter]](CIMVectorLayers.md#cimdisplayfilter) | The current set of scale based display filters. 
+| displayFiltersType | [enumeration DisplayFilterType](CIMVectorLayers.md#enumeration-displayfiltertype) | DisplayFiltersType value. 
+| displayFilterName | string | The active display filter. 
+| displayFilterChoices | [[CIMDisplayFilter]](CIMVectorLayers.md#cimdisplayfilter) | The current set of display filters. 
 | featureElevationExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression for setting the feature elevation. 
 
 
@@ -2184,6 +2255,8 @@
 | column | long | The column. 
 | refreshRate | double | The amount of time in RefreshRateUnit to wait between refreshing the media info. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the media. 
+| rowSpan | long | The row span. 
+| columnSpan | long | The column span. 
 
 
 ### CIMTableMediaInfo 
@@ -2191,6 +2264,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | fields | [string] | The fields. 
+| useLayerFields | boolean | A value indicating whether or not the table is generated using the layer's visible fields. 
 
 
 
@@ -2308,6 +2382,8 @@
 | column | long | The column. 
 | refreshRate | double | The amount of time in RefreshRateUnit to wait between refreshing the media info. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the media. 
+| rowSpan | long | The row span. 
+| columnSpan | long | The column span. 
 
 
 ### CIMTextMediaInfo 
@@ -2369,6 +2445,7 @@
 | timeIntervalUnits | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The time interval units. 
 | timeOffset | double | The time offset. 
 | timeOffsetUnits | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The time offset units. 
+| uniqueTimes | [double] | A cached set of unique OLE date values. 
 
 
 
@@ -2462,7 +2539,7 @@
 | name | string | The name. 
 | URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
-| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
 | sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
@@ -2496,6 +2573,7 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 
 
 ### CIMVectorTileLayerDefinition 
@@ -2561,6 +2639,7 @@
 | BIMFile| 20| BIM file. 
 | InMemoryDB| 21| In memory database. 
 | NoSQL| 22| NoSQL. 
+| BigDataConnection| 23| Big Data connection. 
 
 
 

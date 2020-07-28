@@ -307,6 +307,57 @@
 
 
 
+## CIMCustomGrid
+#### Represents a custom grid of the mapFrame. 
+
+
+### CIMMapGrid 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name of the Grid or Graticule. 
+| isVisible | boolean | A value indicating whether the grid or graticule is visible. 
+| neatlineSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The neat line symbol of the Grid or Graticule. 
+| maxInteriorAngle | double | The maximum value of the interior angle that determines the edge of the mapFrame polygon. The angle is defined in degrees. 
+| edgeMinimumLength | double | The minimum length of the edge of the mapFrame polygon in page units. 
+| mapGridEdges | [[CIMMapGridEdge]](CIMLayout.md#cimmapgridedge) | The map grid edges. 
+
+
+### CIMCustomGrid 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| layerURI | string | The path to the layer used to define the grid lines. 
+| gridLines | [[CIMGridLine]](Types.md#cimgridline) | The gridLines of the custom grid. These are limited to ticks, labels, and tabs. 
+
+
+
+
+
+
+## CIMCustomGridLabelTemplate
+#### Defines the label template for custom grids. 
+
+
+### CIMGridLabelTemplate 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMCustomGridLabelTemplate 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| labelExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The label expression. Either a simple field name or an Arcade expression. 
+| edgeLabelAngles | [double] | The list of label angles to set the text symbol angle for each grid edge. 
+| symbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol of the label. 
+
+
+
+
+
+
 ## CIMDeclination
 #### Represents the properties of a declination calculated using World Magnetic Model. 
 
@@ -1121,7 +1172,7 @@
 | name | string | The name. 
 | URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
-| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
 | sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
@@ -1146,6 +1197,7 @@
 | RGBColorProfile | string | The name of the RGB color profile for a layout. 
 | CMYKColorProfile | string | The name of the CMYK color profile for a layout. 
 | simulateOverprint | boolean | A value indicating whether to simulate overprint for a layout. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layout. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 
@@ -1715,6 +1767,7 @@
 | showGuides | boolean | A value indicating whether guides should be displayed on the layout. 
 | smallestRulerDivision | double | The smallest ruler division. 
 | margin | [CIMMargin](CIMLayout.md#cimmargin) | The margin for the page. 
+| showMargin | boolean | A value indicating whether the printer margin should be displayed on the layout. 
 
 
 
@@ -2111,6 +2164,68 @@
 
 
 
+## CIMRelatedReportSection
+#### Represents a Related Report section of a report. 
+
+
+### CIMElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| anchor | [enumeration Anchor](CIMLayout.md#enumeration-anchor) | The anchor position of the element. 
+| locked | boolean | A value indicating whether the element is locked. Each element in the contents pane has a lock icon. If the icon is shown as locked, you can not select that feature in the layout using the select tool. 
+| name | string | The name of the element. 
+| visible | boolean | A value indicating whether the element is visible. 
+| rotation | double | The rotation of the element. 
+| rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
+| lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+
+
+### CIMFrameElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| frame | [Polygon](ExternalReferences.md#polygon) | The geometry of a frame for an element. 
+| graphicFrame | [CIMGraphicFrame](CIMGraphics.md#cimgraphicframe) | The graphic symbology of an element's frame. 
+
+
+### CIMGroupElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMElementContainer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
+
+
+### CIMReportSectionElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| autoSize | boolean | A value indicating whether the section height will grow and shrink to fit the content of the section. 
+| elementFieldProperties | [[CIMReportElementFieldProperties]](CIMLayout.md#cimreportelementfieldproperties) | The field properties that will be applied to the elements. 
+| excludePageNumberPages | string | The comma delimited list of pages to exclude the page number from. 
+| excludeSectionPages | string | The comma delimited list of pages to exclude the section from. 
+| startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
+
+
+### CIMRelatedReportSection 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| dataSource | [CIMReportDataSource](CIMLayout.md#cimreportdatasource) | The data source for a Related Report. 
+| relateName | string | The relate or relationship class name. 
+
+
+
+
+
+
 ## CIMReport
 #### Represents a report in a project. 
 
@@ -2122,7 +2237,7 @@
 | name | string | The name. 
 | URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
-| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
 | sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
@@ -2140,6 +2255,7 @@
 | RGBColorProfile | string | The name of the RGB color profile for a layout. 
 | CMYKColorProfile | string | The name of the CMYK color profile for a layout. 
 | simulateOverprint | boolean | A value indicating whether to simulate overprint for a layout. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layout. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 ### CIMElementContainer 

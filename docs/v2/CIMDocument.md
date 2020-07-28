@@ -42,6 +42,45 @@
 
 
 
+## CIMColorReplacementDocument
+#### Represents list of color replacement rules. 
+
+
+### CIMVersion 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| version | string | Document version. Set by the system. 
+| build | long | The build an item was created with. Set by the system. 
+
+
+### CIMColorReplacementDocument 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| replacementRules | [[CIMColorReplacementRule]](CIMDocument.md#cimcolorreplacementrule) | The list of color replacement rules. 
+
+
+
+
+
+
+## CIMColorReplacementRule
+#### Represents a color replacement rule. 
+
+
+### CIMColorReplacementRule 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| inputColor | [Color](Types.md#color) | The color that needs to be replaced. 
+| outputColor | [Color](Types.md#color) | The color that will replace the input color. 
+
+
+
+
+
+
 ## CIMDocumentInfo
 #### Represents high level information for a document. 
 
@@ -197,6 +236,8 @@
 | layerDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The layer definitions in the layer document. 
 | binaryReferences | [[CIMBinaryReference]](CIMDocument.md#cimbinaryreference) | The binary references of the document. 
 | elevationSurfaces | [[CIMMapElevationSurface]](CIMMap.md#cimmapelevationsurface) | The elevation surfaces used by layer definitions in the layer document. 
+| validationRules | [[CIMValidationRule]](CIMMap.md#cimvalidationrule) | The validation rules used by layer definitions in the layer document. 
+| tableDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The table definitions in the layer document. 
 | RGBColorProfile | string | The name of the RGB color profile of this layer's source map. If the target map has color management enabled, this value will be used to transform the layer's RGB colors as it is imported into that map. 
 | CMYKColorProfile | string | The name of the CMYK color profile of this layer's source map. If the target map has color management enabled, this value will be used to transform the layer's CMYK colors as it is imported into that map. 
 
@@ -252,6 +293,7 @@
 | layerDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The layer definitions of the map document. 
 | binaryReferences | [[CIMBinaryReference]](CIMDocument.md#cimbinaryreference) | The binary references of the document. 
 | tableDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The table definitions of the map document. 
+| linkChartDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The link chart definitions of the map document. 
 
 
 
@@ -405,7 +447,7 @@
 | author | string | Author of the data collection. 
 | creationDate | [TimeInstant](ExternalReferences.md#timeinstant) | Creation date of the data collection. 
 | lastRevisionDate | [TimeInstant](ExternalReferences.md#timeinstant) | Last revision date of the data collection. 
-| calculators | [[CIMStatisticalDataCollectionCalculator]](CIMDocument.md#cimstatisticaldatacollectioncalculator) | The Calculators of the data collection. 
+| calculators | [[CIMStatisticalDataCollectionCalculator]](Types.md#cimstatisticaldatacollectioncalculator) | The Calculators of the data collection. 
 | dataVintage | string | Vintage of used data (for example, "Q3_2018"). 
 | dataVintageDescription | string | Description of used data ("2018 US Data Update"). 
 | icon | string | Data collection image. 
@@ -483,6 +525,66 @@
 | script | string | The additional attribute for 'Script' summary type that defines script which should be calculated. 
 | scriptLanguage | [enumeration LabelExpressionEngine](CIMLabelPlacement.md#enumeration-labelexpressionengine) | The additional attribute for 'Script' summary type that defines script language used by 'Script' attribute. 
 | usedFields | [string] | The additional attribute for 'Script' summary type that defines another fields used by script. These may include featureclass fields (even non-existing in calculator?) and another scripts. 
+
+
+
+
+
+
+## CIMStatisticalDataCollectionScriptCalculator
+#### Statistical data collection calculator based on a scripts that use fields from other calculators. 
+
+
+### CIMStatisticalDataCollectionCalculator 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The Name of the calculator. 
+
+
+### CIMStatisticalDataCollectionScriptCalculator 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| scripts | [[CIMStatisticalDataCollectionField]](CIMDocument.md#cimstatisticaldatacollectionfield) | The scripts of the calculator. 
+
+
+
+
+
+
+## CIMStatisticalDataCollectionStandardDataCalculator
+#### Statistical data collection calculator based on a standard local data. 
+
+
+### CIMStatisticalDataCollectionCalculator 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The Name of the calculator. 
+
+
+### CIMStatisticalDataCollectionStandardDataCalculator 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| datasetID | string | The DatasetID which is used for getting the information about which points layer will be available and which apportionment methods will be used. For example, for US 2019 dataset it will be ID of the dataset: "USA_ESRI_2019". 
+| variables | [[CIMStatisticalDataCollectionStandardVariable]](CIMDocument.md#cimstatisticaldatacollectionstandardvariable) | The variables of the calculator. 
+
+
+
+
+
+
+## CIMStatisticalDataCollectionStandardVariable
+#### Represents a field of a statistical data collection that matches to an existing variable in referenced feature dataset. 
+
+
+### CIMStatisticalDataCollectionStandardVariable 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name of the variable. 
 
 
 

@@ -45,7 +45,7 @@
 | name | string | The name. 
 | URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
-| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
 | sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
@@ -79,6 +79,7 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 
 
 ### CIMBuildingDisciplineSceneLayerDefinition 
@@ -104,7 +105,7 @@
 | name | string | The name. 
 | URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
-| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
 | sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
@@ -138,6 +139,7 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 
 
 ### CIMBuildingSceneLayerDefinition 
@@ -152,8 +154,8 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| filters | [[CIMObject3DRenderingFilter]](CIMServiceLayers.md#cimobject3drenderingfilter) | The filters. 
-| activeFilterID | string | The active filter id. 
+| filters | [[CIMObject3DRenderingFilter]](CIMServiceLayers.md#cimobject3drenderingfilter) | The 3D object rendering filters. 
+| activeFilterID | string | The ID of the filter currently used for rendering. 
 
 
 
@@ -219,7 +221,7 @@
 | name | string | The name. 
 | URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
-| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
 | sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
@@ -253,6 +255,7 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 
 
 ### CIMServiceLayerDefinition 
@@ -329,7 +332,7 @@
 | name | string | The name. 
 | URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
-| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
 | sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
@@ -363,6 +366,7 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 
 
 ### CIMServiceLayerDefinition 
@@ -406,6 +410,59 @@
 | password | string | The password. 
 | URL | string | The URL. 
 | user | string | The user. 
+
+
+
+
+
+
+## CIMIsosurface
+#### Represents a isosurface. 
+
+
+### CIMIsosurface 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| color | [Color](Types.md#color) | The isosurface color. 
+| isCustomColor | boolean | A value indicating whether the color was set by user. 
+| value | double | The variable value. 
+| variable | string | The variable. 
+| name | string | The isosurface name. 
+| visible | boolean | A value indicating whether the isosurface is visible. 
+
+
+
+
+
+
+## CIMIsosurfaceGroup
+#### Represents a isosurface group. 
+
+
+### CIMIsosurfaceGroup 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| isosurfaces | [[CIMIsosurface]](CIMServiceLayers.md#cimisosurface) | A collection of isosurfaces. 
+| variable | string | The variable. 
+
+
+
+
+
+
+## CIMIsosurfaceGroupContainer
+#### Represents a isosurface group container. 
+
+
+### CIMIsosurfaceGroupContainer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| groups | [[CIMIsosurfaceGroup]](CIMServiceLayers.md#cimisosurfacegroup) | A collection of isosurface groups. 
+| visible | boolean | A value indicating whether the isosurface container is visible. 
+| expanded | boolean | A value indicating whether the isosurface container is expanded in the contents pane. 
 
 
 
@@ -552,7 +609,7 @@
 | name | string | The name. 
 | URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
-| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
 | sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
@@ -586,6 +643,7 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 
 
 ### CIMSceneServiceLayerDefinition 
@@ -608,6 +666,8 @@
 | sceneServiceLayerType | [enumeration SceneServiceLayerType](CIMServiceLayers.md#enumeration-sceneservicelayertype) | The scene service layer type. Typically set by the system and should not be modified. 
 | selectable | boolean | A value indicating whether the layer is selectable. 
 | selectionSetURI | string | The URI of the selection set for the layer. 
+| modificationLayerURI | string | The URI of the modification layer. 
+| modificationLayerEnabled | boolean | A value indicating whether the integrated mesh modification is enabled. 
 
 
 
@@ -680,7 +740,7 @@
 | name | string | The name. 
 | URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
-| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the definition was last modified. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
 | useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
 | sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
@@ -714,6 +774,7 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 
 
 ### CIMServiceLayerDefinition 
@@ -733,6 +794,526 @@
 | associatedFeatureLayerURI | string | The URI for a feature service or portal item that provides pop-up support for the layer. 
 
 
+
+
+
+
+## CIMVoxelColorUniqueValue
+#### Represents a voxel color unique value. 
+
+
+### CIMVoxelColorUniqueValue 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| value | long | The class value as a integer. 
+| label | string | The class label. 
+| color | [Color](Types.md#color) | The class color. 
+| visible | boolean | A value indicating whether this class is visible. 
+| description | string | The description. 
+
+
+
+
+
+
+## CIMVoxelContinuousStatistics
+#### Represents continuous voxel volume statistics. 
+
+
+### CIMVoxelStatistics 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| status | [enumeration VoxelStatisticsStatus](CIMServiceLayers.md#enumeration-voxelstatisticsstatus) | A value indicating whether the voxel section container is visible. 
+| revision | long | A value indicating the statistics revision. 
+| variable | string | The variable that the statistics are associated with. 
+| minimumValue | double | The minimum value of the data. 
+| maximumValue | double | The maximum value of the data. 
+
+
+### CIMVoxelContinuousStatistics 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| distributionMinimumValue | double | The minimum value of the quantized data. 
+| distributionMaximumValue | double | The maximum value of the quantized data. 
+| distribution | [double] | The quantized values of the data. 
+| mean | double | The average value. 
+| standardDeviation | double | The standard deviation value. 
+
+
+
+
+
+
+## CIMVoxelDataConnection
+#### Represents a voxel data connection. 
+
+
+### CIMDataConnection 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMVoxelDataConnection 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| URI | string | The URI. 
+
+
+
+
+
+
+## CIMVoxelDiscreteStatistics
+#### Represents discrete voxel volume statistics. 
+
+
+### CIMVoxelStatistics 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| status | [enumeration VoxelStatisticsStatus](CIMServiceLayers.md#enumeration-voxelstatisticsstatus) | A value indicating whether the voxel section container is visible. 
+| revision | long | A value indicating the statistics revision. 
+| variable | string | The variable that the statistics are associated with. 
+| minimumValue | double | The minimum value of the data. 
+| maximumValue | double | The maximum value of the data. 
+
+
+### CIMVoxelDiscreteStatistics 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| mostFrequentValues | [long] | An array of the most frequently occurring values. 
+| mostFrequentValuesCounts | [long] | An array of the counts of the most frequently occurring values. 
+
+
+
+
+
+
+## CIMVoxelFormat
+#### Represents a voxel format. 
+
+
+### CIMVoxelFormat 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| scale | double | The scaling factor for fixed point encoded data. 
+| offset | double | The offset for fixed point encoded data. 
+| useNoDataValue | boolean | A value indicating whether the native no data value should be used. 
+| noDataValue | double | The native no data value. 
+| scalarFormat | [enumeration VoxelScalarFormat](CIMServiceLayers.md#enumeration-voxelscalarformat) | The scalar format. 
+
+
+
+
+
+### Enumeration: VoxelInterpolationMode
+#### Voxel interpolation mode. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Linear| 0| Linear interpolation 
+| Nearest| 1| Nearest interpolation 
+
+
+
+
+## CIMVoxelLayer
+#### Represents a voxel layer. 
+
+
+### CIMDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name. 
+| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
+| metadataURI | string | The metadata URI. 
+| useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
+
+
+### CIMLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| attribution | string | The attribution text that appears on a map that draws this layer. 
+| description | string | The description. 
+| layerElevation | [CIMLayerElevationSurface](CIMLayer.md#cimlayerelevationsurface) | The layer elevation. 
+| expanded | boolean | A value indicating whether this layer is expanded in the contents pane. 
+| layer3DProperties | [CIM3DLayerProperties](CIMLayer.md#cim3dlayerproperties) | The 3D layer properties. 
+| layerMasks | [string] | The layer masks. 
+| layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
+| maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| showLegends | boolean | A value indicating whether or not to show legends. 
+| transparency | double | The transparency of the layer. 
+| visibility | boolean | A value indicating whether or not this layer is visible. 
+| displayCacheType | [enumeration DisplayCacheType](CIMLayer.md#enumeration-displaycachetype) | The display cache type. 
+| maxDisplayCacheAge | double | The maximum display cache age. 
+| layerTemplate | [CIMLayerTemplate](CIMLayer.md#cimlayertemplate) | The layer template. 
+| popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
+| showPopups | boolean | A value indicating whether or not to show pop-ups. 
+| serviceLayerID | long | Identifier that will be used to identify the layer in server. 
+| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
+| searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
+| refreshRate | double | The amount of time to wait between refreshing the layer. 
+| refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
+| showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
+
+
+### CIMVoxelLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| dataConnection | [DataConnection](Types.md#dataconnection) | The data connection. 
+| snappable | boolean | A value indicating whether this layer participates in snapping in the editor. 
+| selectedVariableProfileIndex | long | The selected variable profile index. 
+| variableProfiles | [[CIMVoxelVariableProfile]](CIMServiceLayers.md#cimvoxelvariableprofile) | The variable profiles. 
+| optimization | [enumeration VoxelLayerOptimization](CIMServiceLayers.md#enumeration-voxellayeroptimization) | The voxel layer optimization. 
+| isosurfaceGroupContainer | [CIMIsosurfaceGroupContainer](CIMServiceLayers.md#cimisosurfacegroupcontainer) | The isosurface group container. 
+| sliceContainer | [CIMVoxelSliceContainer](CIMServiceLayers.md#cimvoxelslicecontainer) | The slice container. 
+| sectionContainer | [CIMVoxelSectionContainer](CIMServiceLayers.md#cimvoxelsectioncontainer) | The section container. 
+| staticSectionContainer | [CIMVoxelStaticSectionContainer](CIMServiceLayers.md#cimvoxelstaticsectioncontainer) | The static section container. 
+| visualization | [enumeration VoxelVisualization](CIMServiceLayers.md#enumeration-voxelvisualization) | The voxel visualization. 
+| surfaceContainerExpanded | boolean | A value indicating whether the surface container is expanded in the contents pane. 
+| lighting | [CIMVoxelLighting](CIMServiceLayers.md#cimvoxellighting) | The lighting. 
+
+
+
+
+
+### Enumeration: VoxelLayerOptimization
+#### Represents voxel layer optimization. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Visualization| 0| Voxel layer is optimized to maximize visualization performance. 
+| Size| 1| Voxel layer is optimized to minimize size on disk. 
+
+
+
+
+## CIMVoxelLighting
+#### Represents voxel lighting. 
+
+
+### CIMVoxelLighting 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| isDiffuseEnabled | boolean | A value indicating whether diffuse lighting is enabled. 
+| diffuse | double | The diffuse value. This property can have a value between 0 and 1. 
+| isSpecularEnabled | boolean | A value indicating whether specular lighting is enabled. 
+| specular | double | The specular value. This property can have a value between 0 and 1. 
+
+
+
+
+
+
+## CIMVoxelPlane
+#### Represents a voxel plane. 
+
+
+### CIMVoxelPlane 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The plane's name. 
+| visible | boolean | A value indicating whether the plane is visible. 
+| position | [Point](ExternalReferences.md#point) | A point on the plane, specified in voxel coordinates. 
+| normal | [Point](ExternalReferences.md#point) | The direction vector of the plane, which is a unit vector representing the normal to the plane. This vector is perpendicular to the plane you are defining, and it points in the direction of what you want to remove with the plane. The X, Y, and Z values should all be between 0 and 1. For example a Normal of (0,0,1) is pointing away from the earth's surface, and this defines a horizontal plane. 
+
+
+
+
+
+
+## CIMVoxelRangeValueFilter
+#### Represents a voxel value filter. Filter based on the value of an specified variable. 
+
+
+### CIMVoxelFilter 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| variable | string | The variable. 
+
+
+### CIMVoxelRangeValueFilter 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| min | double | The min value. 
+| max | double | The max value. 
+
+
+
+
+
+### Enumeration: VoxelScalarFormat
+#### Voxel scalar formats. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| I1| 0| 1 byte signed integer 
+| U1| 1| 1 byte unsigned integer 
+| I2| 2| 2 byte signed integer 
+| U2| 3| 2 byte unsigned integer 
+| I4| 4| 4 byte signed integer 
+| U4| 5| 4 byte unsigned integer 
+| I8| 6| 8 byte signed integer 
+| U8| 7| 8 byte unsigned integer 
+| F4| 8| 4 byte floating point 
+| F8| 9| 8 byte floating point 
+
+
+
+
+## CIMVoxelSectionContainer
+#### Represents a voxel section container. 
+
+
+### CIMVoxelSectionContainer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| dynamicSections | [[CIMVoxelPlane]](CIMServiceLayers.md#cimvoxelplane) | A collection of dynamic sections. 
+| expanded | boolean | A value indicating whether this voxel section container is expanded in the contents pane. 
+| visible | boolean | A value indicating whether the voxel section container is visible. 
+
+
+
+
+
+
+## CIMVoxelSliceContainer
+#### Represents a voxel slice container. 
+
+
+### CIMVoxelSliceContainer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| slices | [[CIMVoxelPlane]](CIMServiceLayers.md#cimvoxelplane) | A collection of slices. 
+| expanded | boolean | A value indicating whether this voxel slice container is expanded in the contents pane. 
+| visible | boolean | A value indicating whether the voxel slice container is visible. 
+
+
+
+
+
+
+## CIMVoxelStaticSection
+#### Represents a voxel static section. 
+
+
+### CIMVoxelStaticSection 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| ID | long | The section ID, which must be unique among all sections in the layer. 
+| name | string | The section name. 
+| visible | boolean | A value indicating whether the section is visible. 
+| expanded | boolean | A value indicating whether this section is expanded in the contents pane. 
+| variable | string | The variable that the section is associated with. 
+| slices | [[CIMVoxelPlane]](CIMServiceLayers.md#cimvoxelplane) | A collection of slices which define the volume for the section. 
+| plane | [CIMVoxelPlane](CIMServiceLayers.md#cimvoxelplane) | The section plane. 
+| rasterURI | string | The URI of the binary reference containing the raster. 
+| format | [CIMVoxelFormat](CIMServiceLayers.md#cimvoxelformat) | The section format. 
+| height | long | The height. 
+| width | long | The width. 
+| timeIndex | long | The time index that this section was created from for the variable. 
+
+
+
+
+
+
+## CIMVoxelStaticSectionContainer
+#### Represents a voxel static section container. 
+
+
+### CIMVoxelStaticSectionContainer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| staticSections | [[CIMVoxelStaticSection]](CIMServiceLayers.md#cimvoxelstaticsection) | A collection of static sections. 
+| expanded | boolean | A value indicating whether this voxel section container is expanded in the contents pane. 
+| visible | boolean | A value indicating whether the voxel section container is visible. 
+
+
+
+
+
+### Enumeration: VoxelStatisticsStatus
+#### Specifies the status of statistics creation. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Final| 0| Finalized statistics. 
+| Partial| 1| Partial statistics. 
+| NotSet| 2| Uninitialized statistics. 
+
+
+
+
+## CIMVoxelStretchRenderer
+#### Represents a stretch renderer. 
+
+
+### CIMVoxelRenderer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMVoxelStretchRenderer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp of the renderer. 
+| minLabel | string | The legend label for the minimum color range value. 
+| maxLabel | string | The legend label for the maximum color range value. 
+| isDataFilterEnabled | boolean | A value indicating whether data filter is enabled. 
+| dataFilterMin | double | The minimum value. 
+| dataFilterMax | double | The maximum value. 
+| colorRangeMin | double | The minimum value. 
+| colorRangeMax | double | The maximum value. 
+| useTransparencyStops | boolean | A value indicating whether transparency stops are used. 
+| transparencyStopPositions | [double] | The transparency stop positions. 
+| transparencyStopValues | [double] | The transparency stop values. 
+| heading | string | The heading. 
+| interpolation | [enumeration VoxelInterpolationMode](CIMServiceLayers.md#enumeration-voxelinterpolationmode) | The interpolation mode. 
+| showFullDataRange | boolean | A value indicating whether the histogram shows the full data range. 
+
+
+
+
+
+
+## CIMVoxelUniqueValueRenderer
+#### Represents a unique value renderer. 
+
+
+### CIMVoxelRenderer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMVoxelUniqueValueRenderer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| classes | [[CIMVoxelColorUniqueValue]](CIMServiceLayers.md#cimvoxelcoloruniquevalue) | The unique color classes of the renderer. 
+| colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp. 
+| heading | string | The heading. 
+| useDefaultColor | boolean | A value indicating whether of not to use the default color. 
+| defaultColor | [Color](Types.md#color) | The default color. 
+| defaultLabel | string | The default label. 
+| defaultDescription | string | The default description. 
+
+
+
+
+
+
+## CIMVoxelValueFilter
+#### Represents a voxel value filter. Filter based on the value of an specified variable. 
+
+
+### CIMVoxelFilter 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| variable | string | The variable. 
+
+
+### CIMVoxelValueFilter 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| values | [double] | The values used as exclude or include list. 
+| mode | [enumeration VoxelValueFilterMode](CIMServiceLayers.md#enumeration-voxelvaluefiltermode) | The mode that determines if the ValueList is an include list or an exclude list. 
+
+
+
+
+
+### Enumeration: VoxelValueFilterMode
+#### Voxel value filter modes. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Exclude| 0| List of values in the exclude list 
+| Include| 1| List of values in the include list 
+
+
+
+### Enumeration: VoxelVariableDataType
+#### Voxel variable data types. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Continuous| 0| Continuous 
+| Discrete| 1| Discrete 
+
+
+
+### Enumeration: VoxelVariablePrecision
+#### Voxel variable precision. The lower the precision the smaller the data size of the voxel layer. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| InputData| 0| Variable data is unchanged. 
+| Low| 1| Low precision. 
+| Medium| 2| Medium precision. 
+| High| 3| High precision. 
+
+
+
+
+## CIMVoxelVariableProfile
+#### Represents a voxel layer variable profile. 
+
+
+### CIMVoxelVariableProfile 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| variable | string | The variable that the profile is associated with. 
+| description | string | The variable description. 
+| dataType | [enumeration VoxelVariableDataType](CIMServiceLayers.md#enumeration-voxelvariabledatatype) | The variable data type. 
+| filters | [[CIMVoxelFilter]](Types.md#cimvoxelfilter) | The filters. 
+| renderer | [VoxelRenderer](Types.md#voxelrenderer) | The symbol renderer. 
+| precision | [enumeration VoxelVariablePrecision](CIMServiceLayers.md#enumeration-voxelvariableprecision) | The variable precision. 
+| statistics | [VoxelStatistics](Types.md#voxelstatistics) | The statistics for the variable. 
+| signature | string | The signature for the variable. 
+| signatureVersion | long | The signature version for the variable. 
+
+
+
+
+
+### Enumeration: VoxelVisualization
+#### Represents voxel visualization. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Volume| 0| Voxel is visualized using volume mode. 
+| Surface| 1| Voxel is visualized using surface mode. 
 
 
 

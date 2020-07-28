@@ -186,6 +186,7 @@
 | belowCenter | long | Priority for this position. 
 | belowLeft | long | Priority for this position. 
 | centerLeft | long | Priority for this position. 
+| center | long | Priority for this position. 
 
 
 
@@ -417,6 +418,7 @@
 | truncationMinimumLength | long | The minimum length of a label used by the truncation strategy. 
 | truncationPreferredCharacters | string | The preferred characters used by the truncation strategy. These characters will be removed as needed. 
 | useExactSymbolOutline | boolean | A value indicating whether to use the exact polygon outline of a symbol when measuring the label offset. 
+| truncationExcludedCharacters | string | The excluded characters used by the truncation strategy. These characters will never be removed by truncation. 
 
 
 

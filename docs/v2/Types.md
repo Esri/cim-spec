@@ -122,6 +122,8 @@
 
 [CIMBalloonCallout](CIMSymbols.md#cimballooncallout)
 
+[CIMCompositeCallout](CIMSymbols.md#cimcompositecallout)
+
 [CIMPointSymbolCallout](CIMSymbols.md#cimpointsymbolcallout)
 
 [CIMSimpleLineCallout](CIMSymbols.md#cimsimplelinecallout)
@@ -202,6 +204,8 @@
 
 [CIMStandardServiceConnection](CIMServiceLayers.md#cimstandardserviceconnection)
 
+[CIMVoxelDataConnection](CIMServiceLayers.md#cimvoxeldataconnection)
+
 [CIMWCSServiceConnection](CIMServiceLayers.md#cimwcsserviceconnection)
 
 [CIMWFSServiceConnection](CIMServiceLayers.md#cimwfsserviceconnection)
@@ -254,6 +258,8 @@
 
 [CIMRasterClassifyColorizer](CIMImageLayers.md#cimrasterclassifycolorizer)
 
+[CIMBivariateFieldInfo](CIMRenderers.md#cimbivariatefieldinfo)
+
 [CIMChartRenderer](CIMRenderers.md#cimchartrenderer)
 
 [CIMClassBreaksRenderer](CIMRenderers.md#cimclassbreaksrenderer)
@@ -272,15 +278,23 @@
 
 [CIMMosaicLayer](CIMImageLayers.md#cimmosaiclayer)
 
+[CIMNitfImageSubLayer](CIMImageLayers.md#cimnitfimagesublayer)
+
+[CIMNitfLayer](CIMImageLayers.md#cimnitflayer)
+
 [CIMRasterLayer](CIMImageLayers.md#cimrasterlayer)
 
 [CIMStandaloneVideo](CIMImageLayers.md#cimstandalonevideo)
 
 [CIMGeodatabaseErrorLayer](CIMLayer.md#cimgeodatabaseerrorlayer)
 
+[CIMGraphicsLayer](CIMLayer.md#cimgraphicslayer)
+
 [CIMGroupLayer](CIMLayer.md#cimgrouplayer)
 
 [CIMKMLLayer](CIMLayer.md#cimkmllayer)
+
+[CIMLinkChart](CIMLayer.md#cimlinkchart)
 
 [CIMTopologyLayer](CIMLayer.md#cimtopologylayer)
 
@@ -313,6 +327,8 @@
 [CIMSceneServiceLayer](CIMServiceLayers.md#cimsceneservicelayer)
 
 [CIMTiledServiceLayer](CIMServiceLayers.md#cimtiledservicelayer)
+
+[CIMVoxelLayer](CIMServiceLayers.md#cimvoxellayer)
 
 [CIMLASDatasetLayer](CIMTerrainLayers.md#cimlasdatasetlayer)
 
@@ -390,6 +406,8 @@
 
 [CIMProfileFrame](CIMLayout.md#cimprofileframe)
 
+[CIMRelatedReportSection](CIMLayout.md#cimrelatedreportsection)
+
 [CIMReportDetails](CIMLayout.md#cimreportdetails)
 
 [CIMReportFooter](CIMLayout.md#cimreportfooter)
@@ -418,6 +436,8 @@
 
 ### ElementContainer
 
+[CIMElementStorage](CIMLayer.md#cimelementstorage)
+
 [CIMGroupElement](CIMLayout.md#cimgroupelement)
 
 [CIMGroupFooter](CIMLayout.md#cimgroupfooter)
@@ -425,6 +445,8 @@
 [CIMGroupHeader](CIMLayout.md#cimgroupheader)
 
 [CIMLayout](CIMLayout.md#cimlayout)
+
+[CIMRelatedReportSection](CIMLayout.md#cimrelatedreportsection)
 
 [CIMReport](CIMLayout.md#cimreport)
 
@@ -500,6 +522,8 @@
 
 [CIMProfileFrame](CIMLayout.md#cimprofileframe)
 
+[CIMRelatedReportSection](CIMLayout.md#cimrelatedreportsection)
+
 [CIMReportDetails](CIMLayout.md#cimreportdetails)
 
 [CIMReportFooter](CIMLayout.md#cimreportfooter)
@@ -552,9 +576,13 @@
 
 [CIMGeometricEffectJog](CIMSymbols.md#cimgeometriceffectjog)
 
+[CIMGeometricEffectLocalizerFeather](CIMSymbols.md#cimgeometriceffectlocalizerfeather)
+
 [CIMGeometricEffectMove](CIMSymbols.md#cimgeometriceffectmove)
 
 [CIMGeometricEffectOffset](CIMSymbols.md#cimgeometriceffectoffset)
+
+[CIMGeometricEffectOffsetHatch](CIMSymbols.md#cimgeometriceffectoffsethatch)
 
 [CIMGeometricEffectOffsetTangent](CIMSymbols.md#cimgeometriceffectoffsettangent)
 
@@ -596,6 +624,8 @@
 
 ### GridLabelTemplate
 
+[CIMCustomGridLabelTemplate](CIMLayout.md#cimcustomgridlabeltemplate)
+
 [CIMReferenceGridLabelTemplate](CIMLayout.md#cimreferencegridlabeltemplate)
 
 [CIMSimpleGridLabelTemplate](CIMLayout.md#cimsimplegridlabeltemplate)
@@ -621,6 +651,8 @@
 [CIMGroupFooter](CIMLayout.md#cimgroupfooter)
 
 [CIMGroupHeader](CIMLayout.md#cimgroupheader)
+
+[CIMRelatedReportSection](CIMLayout.md#cimrelatedreportsection)
 
 [CIMReportDetails](CIMLayout.md#cimreportdetails)
 
@@ -664,11 +696,19 @@
 
 [CIMVerticalLegendItem](CIMLayout.md#cimverticallegenditem)
 
+### LinkChartLabelingInfo
+
+[CIMLinkChartLinkLabelingInfo](CIMLayer.md#cimlinkchartlinklabelinginfo)
+
+[CIMLinkChartNodeLabelingInfo](CIMLayer.md#cimlinkchartnodelabelinginfo)
+
 ### MapDefinition
 
 [CIMMap](CIMMap.md#cimmap)
 
 ### MapGrid
+
+[CIMCustomGrid](CIMLayout.md#cimcustomgrid)
 
 [CIMGraticule](CIMLayout.md#cimgraticule)
 
@@ -790,6 +830,12 @@
 
 [CIMScientificNumberFormat](CIMNumberFormat.md#cimscientificnumberformat)
 
+### Object3DRenderingFilters
+
+[CIMBuildingSceneLayer](CIMServiceLayers.md#cimbuildingscenelayer)
+
+[CIMBuildingLayer](CIMVectorLayers.md#cimbuildinglayer)
+
 ### OrthoRectification
 
 [CIMRasterCMYKColorizer](CIMImageLayers.md#cimrastercmykcolorizer)
@@ -846,6 +892,8 @@
 
 [CIMGroupHeader](CIMLayout.md#cimgroupheader)
 
+[CIMRelatedReportSection](CIMLayout.md#cimrelatedreportsection)
+
 [CIMReportDetails](CIMLayout.md#cimreportdetails)
 
 [CIMReportFooter](CIMLayout.md#cimreportfooter)
@@ -881,6 +929,20 @@
 [CIMInternetServerConnection](CIMServiceLayers.md#ciminternetserverconnection)
 
 [CIMProjectServerConnection](CIMServiceLayers.md#cimprojectserverconnection)
+
+### StandaloneTableContainer
+
+[CIMMap](CIMMap.md#cimmap)
+
+[CIMNALayer](CIMNetworkLayers.md#cimnalayer)
+
+### StatisticalDataCollectionCalculator
+
+[CIMStatisticalDataCollectionFeatureLayerCalculator](CIMDocument.md#cimstatisticaldatacollectionfeaturelayercalculator)
+
+[CIMStatisticalDataCollectionScriptCalculator](CIMDocument.md#cimstatisticaldatacollectionscriptcalculator)
+
+[CIMStatisticalDataCollectionStandardDataCalculator](CIMDocument.md#cimstatisticaldatacollectionstandarddatacalculator)
 
 ### SubLayer
 
@@ -958,6 +1020,8 @@
 
 [CIMBookmarkDocument](CIMDocument.md#cimbookmarkdocument)
 
+[CIMColorReplacementDocument](CIMDocument.md#cimcolorreplacementdocument)
+
 [CIMDocumentInfo](CIMDocument.md#cimdocumentinfo)
 
 [CIMLayerDocument](CIMDocument.md#cimlayerdocument)
@@ -1012,7 +1076,29 @@
 
 [CIMUniqueValueRenderer](CIMRenderers.md#cimuniquevaluerenderer)
 
+### VoxelFilter
+
+[CIMVoxelRangeValueFilter](CIMServiceLayers.md#cimvoxelrangevaluefilter)
+
+[CIMVoxelValueFilter](CIMServiceLayers.md#cimvoxelvaluefilter)
+
+### VoxelRenderer
+
+[CIMVoxelStretchRenderer](CIMServiceLayers.md#cimvoxelstretchrenderer)
+
+[CIMVoxelUniqueValueRenderer](CIMServiceLayers.md#cimvoxeluniquevaluerenderer)
+
+### VoxelStatistics
+
+[CIMVoxelContinuousStatistics](CIMServiceLayers.md#cimvoxelcontinuousstatistics)
+
+[CIMVoxelDiscreteStatistics](CIMServiceLayers.md#cimvoxeldiscretestatistics)
+
 ## Index 
+
+[CIMBAVariableList](CIMBusinessAnalyst.md#CIMBAVariableList)
+
+[CIMBAVariableListVariable](CIMBusinessAnalyst.md#CIMBAVariableListVariable)
 
 [CIMHuffModelAttractivenessVariable](CIMBusinessAnalyst.md#CIMHuffModelAttractivenessVariable)
 
@@ -1029,6 +1115,8 @@
 [CIMSegmentationTargetGroup](CIMBusinessAnalyst.md#CIMSegmentationTargetGroup)
 
 [CIMSegmentationTargetGroupDocument](CIMBusinessAnalyst.md#CIMSegmentationTargetGroupDocument)
+
+[CIMSegmentationTargetGroupVisualizationProperties](CIMBusinessAnalyst.md#CIMSegmentationTargetGroupVisualizationProperties)
 
 [CIMCMYKColor](CIMColor.md#CIMCMYKColor)
 
@@ -1064,6 +1152,10 @@
 
 [CIMBookmarkDocument](CIMDocument.md#CIMBookmarkDocument)
 
+[CIMColorReplacementDocument](CIMDocument.md#CIMColorReplacementDocument)
+
+[CIMColorReplacementRule](CIMDocument.md#CIMColorReplacementRule)
+
 [CIMDocumentInfo](CIMDocument.md#CIMDocumentInfo)
 
 [CIMExternalTableView](CIMDocument.md#CIMExternalTableView)
@@ -1093,6 +1185,12 @@
 [CIMStatisticalDataCollectionFeatureLayerCalculator](CIMDocument.md#CIMStatisticalDataCollectionFeatureLayerCalculator)
 
 [CIMStatisticalDataCollectionField](CIMDocument.md#CIMStatisticalDataCollectionField)
+
+[CIMStatisticalDataCollectionScriptCalculator](CIMDocument.md#CIMStatisticalDataCollectionScriptCalculator)
+
+[CIMStatisticalDataCollectionStandardDataCalculator](CIMDocument.md#CIMStatisticalDataCollectionStandardDataCalculator)
+
+[CIMStatisticalDataCollectionStandardVariable](CIMDocument.md#CIMStatisticalDataCollectionStandardVariable)
 
 [CIMGADataConnection](CIMGALayer.md#CIMGADataConnection)
 
@@ -1137,6 +1235,10 @@
 [CIMMosaicLayer](CIMImageLayers.md#CIMMosaicLayer)
 
 [CIMMosaicRule](CIMImageLayers.md#CIMMosaicRule)
+
+[CIMNitfImageSubLayer](CIMImageLayers.md#CIMNitfImageSubLayer)
+
+[CIMNitfLayer](CIMImageLayers.md#CIMNitfLayer)
 
 [CIMPansharpeningFilter](CIMImageLayers.md#CIMPansharpeningFilter)
 
@@ -1284,9 +1386,13 @@
 
 [CIMDefinitionFilter](CIMLayer.md#CIMDefinitionFilter)
 
+[CIMElementStorage](CIMLayer.md#CIMElementStorage)
+
 [CIMEyeDomeLighting](CIMLayer.md#CIMEyeDomeLighting)
 
 [CIMGeodatabaseErrorLayer](CIMLayer.md#CIMGeodatabaseErrorLayer)
+
+[CIMGraphicsLayer](CIMLayer.md#CIMGraphicsLayer)
 
 [CIMGroupLayer](CIMLayer.md#CIMGroupLayer)
 
@@ -1297,6 +1403,20 @@
 [CIMLayerElevationSurface](CIMLayer.md#CIMLayerElevationSurface)
 
 [CIMLayerTemplate](CIMLayer.md#CIMLayerTemplate)
+
+[CIMLinkChart](CIMLayer.md#CIMLinkChart)
+
+[CIMLinkChartEntity](CIMLayer.md#CIMLinkChartEntity)
+
+[CIMLinkChartLinkDrawingInfo](CIMLayer.md#CIMLinkChartLinkDrawingInfo)
+
+[CIMLinkChartLinkLabelingInfo](CIMLayer.md#CIMLinkChartLinkLabelingInfo)
+
+[CIMLinkChartNodeDrawingInfo](CIMLayer.md#CIMLinkChartNodeDrawingInfo)
+
+[CIMLinkChartNodeLabelingInfo](CIMLayer.md#CIMLinkChartNodeLabelingInfo)
+
+[CIMLinkChartRelationship](CIMLayer.md#CIMLinkChartRelationship)
 
 [CIMSubLayer](CIMLayer.md#CIMSubLayer)
 
@@ -1319,6 +1439,10 @@
 [CIMCondensedTabGridLine](CIMLayout.md#CIMCondensedTabGridLine)
 
 [CIMContiguousTabGridLine](CIMLayout.md#CIMContiguousTabGridLine)
+
+[CIMCustomGrid](CIMLayout.md#CIMCustomGrid)
+
+[CIMCustomGridLabelTemplate](CIMLayout.md#CIMCustomGridLabelTemplate)
 
 [CIMDeclination](CIMLayout.md#CIMDeclination)
 
@@ -1407,6 +1531,8 @@
 [CIMReferenceGrid](CIMLayout.md#CIMReferenceGrid)
 
 [CIMReferenceGridLabelTemplate](CIMLayout.md#CIMReferenceGridLabelTemplate)
+
+[CIMRelatedReportSection](CIMLayout.md#CIMRelatedReportSection)
 
 [CIMReport](CIMLayout.md#CIMReport)
 
@@ -1628,6 +1754,12 @@
 
 [CIMInternetServerConnection](CIMServiceLayers.md#CIMInternetServerConnection)
 
+[CIMIsosurface](CIMServiceLayers.md#CIMIsosurface)
+
+[CIMIsosurfaceGroup](CIMServiceLayers.md#CIMIsosurfaceGroup)
+
+[CIMIsosurfaceGroupContainer](CIMServiceLayers.md#CIMIsosurfaceGroupContainer)
+
 [CIMObject3DRenderingFilter](CIMServiceLayers.md#CIMObject3DRenderingFilter)
 
 [CIMObject3DRenderingFilterAuthoringInfo](CIMServiceLayers.md#CIMObject3DRenderingFilterAuthoringInfo)
@@ -1646,6 +1778,40 @@
 
 [CIMTiledServiceLayer](CIMServiceLayers.md#CIMTiledServiceLayer)
 
+[CIMVoxelColorUniqueValue](CIMServiceLayers.md#CIMVoxelColorUniqueValue)
+
+[CIMVoxelContinuousStatistics](CIMServiceLayers.md#CIMVoxelContinuousStatistics)
+
+[CIMVoxelDataConnection](CIMServiceLayers.md#CIMVoxelDataConnection)
+
+[CIMVoxelDiscreteStatistics](CIMServiceLayers.md#CIMVoxelDiscreteStatistics)
+
+[CIMVoxelFormat](CIMServiceLayers.md#CIMVoxelFormat)
+
+[CIMVoxelLayer](CIMServiceLayers.md#CIMVoxelLayer)
+
+[CIMVoxelLighting](CIMServiceLayers.md#CIMVoxelLighting)
+
+[CIMVoxelPlane](CIMServiceLayers.md#CIMVoxelPlane)
+
+[CIMVoxelRangeValueFilter](CIMServiceLayers.md#CIMVoxelRangeValueFilter)
+
+[CIMVoxelSectionContainer](CIMServiceLayers.md#CIMVoxelSectionContainer)
+
+[CIMVoxelSliceContainer](CIMServiceLayers.md#CIMVoxelSliceContainer)
+
+[CIMVoxelStaticSection](CIMServiceLayers.md#CIMVoxelStaticSection)
+
+[CIMVoxelStaticSectionContainer](CIMServiceLayers.md#CIMVoxelStaticSectionContainer)
+
+[CIMVoxelStretchRenderer](CIMServiceLayers.md#CIMVoxelStretchRenderer)
+
+[CIMVoxelUniqueValueRenderer](CIMServiceLayers.md#CIMVoxelUniqueValueRenderer)
+
+[CIMVoxelValueFilter](CIMServiceLayers.md#CIMVoxelValueFilter)
+
+[CIMVoxelVariableProfile](CIMServiceLayers.md#CIMVoxelVariableProfile)
+
 [CIMWCSServiceConnection](CIMServiceLayers.md#CIMWCSServiceConnection)
 
 [CIMWFSServiceConnection](CIMServiceLayers.md#CIMWFSServiceConnection)
@@ -1655,6 +1821,10 @@
 [CIMWMSSubLayer](CIMServiceLayers.md#CIMWMSSubLayer)
 
 [CIMWMTSServiceConnection](CIMServiceLayers.md#CIMWMTSServiceConnection)
+
+[CIMBivariateFieldInfo](CIMRenderers.md#CIMBivariateFieldInfo)
+
+[CIMBivariateRendererAuthoringInfo](CIMRenderers.md#CIMBivariateRendererAuthoringInfo)
 
 [CIMChartRenderer](CIMRenderers.md#CIMChartRenderer)
 
@@ -1732,6 +1902,10 @@
 
 [CIMColorSubstitution](CIMSymbols.md#CIMColorSubstitution)
 
+[CIMCompositeCallout](CIMSymbols.md#CIMCompositeCallout)
+
+[CIMCompositeTextPartPosition](CIMSymbols.md#CIMCompositeTextPartPosition)
+
 [CIMGeometricEffectAddControlPoints](CIMSymbols.md#CIMGeometricEffectAddControlPoints)
 
 [CIMGeometricEffectArrow](CIMSymbols.md#CIMGeometricEffectArrow)
@@ -1750,9 +1924,13 @@
 
 [CIMGeometricEffectJog](CIMSymbols.md#CIMGeometricEffectJog)
 
+[CIMGeometricEffectLocalizerFeather](CIMSymbols.md#CIMGeometricEffectLocalizerFeather)
+
 [CIMGeometricEffectMove](CIMSymbols.md#CIMGeometricEffectMove)
 
 [CIMGeometricEffectOffset](CIMSymbols.md#CIMGeometricEffectOffset)
+
+[CIMGeometricEffectOffsetHatch](CIMSymbols.md#CIMGeometricEffectOffsetHatch)
 
 [CIMGeometricEffectOffsetTangent](CIMSymbols.md#CIMGeometricEffectOffsetTangent)
 
@@ -2011,6 +2189,8 @@
 [CIMPieChartMediaInfo](CIMVectorLayers.md#CIMPieChartMediaInfo)
 
 [CIMPopupInfo](CIMVectorLayers.md#CIMPopupInfo)
+
+[CIMPopupLayout](CIMVectorLayers.md#CIMPopupLayout)
 
 [CIMRange](CIMVectorLayers.md#CIMRange)
 
