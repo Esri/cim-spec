@@ -130,29 +130,31 @@
 
 ### ChartSeries
 
-[CIMChartBarSeries](CIMLayer.md#cimchartbarseries)
+[CIMChartBarSeries](CIMCharts.md#cimchartbarseries)
 
-[CIMChartBoxPlotSeries](CIMLayer.md#cimchartboxplotseries)
+[CIMChartBoxPlotSeries](CIMCharts.md#cimchartboxplotseries)
 
-[CIMChartCalendarHeatSeries](CIMLayer.md#cimchartcalendarheatseries)
+[CIMChartCalendarHeatSeries](CIMCharts.md#cimchartcalendarheatseries)
 
-[CIMChartDataClockSeries](CIMLayer.md#cimchartdataclockseries)
+[CIMChartDataClockSeries](CIMCharts.md#cimchartdataclockseries)
 
-[CIMChartHistogramSeries](CIMLayer.md#cimcharthistogramseries)
+[CIMChartHistogramSeries](CIMCharts.md#cimcharthistogramseries)
 
-[CIMChartLineSeries](CIMLayer.md#cimchartlineseries)
+[CIMChartLineSeries](CIMCharts.md#cimchartlineseries)
 
-[CIMChartProbabilityPlotSeries](CIMLayer.md#cimchartprobabilityplotseries)
+[CIMChartMatrixHeatSeries](CIMCharts.md#cimchartmatrixheatseries)
 
-[CIMChartProfileGraphSeries](CIMLayer.md#cimchartprofilegraphseries)
+[CIMChartProbabilityPlotSeries](CIMCharts.md#cimchartprobabilityplotseries)
 
-[CIMChartScatterPlotMatrixSeries](CIMLayer.md#cimchartscatterplotmatrixseries)
+[CIMChartProfileGraphSeries](CIMCharts.md#cimchartprofilegraphseries)
 
-[CIMChartScatterSeries](CIMLayer.md#cimchartscatterseries)
+[CIMChartScatterPlotMatrixSeries](CIMCharts.md#cimchartscatterplotmatrixseries)
 
-[CIMChartSpectralProfileSeries](CIMLayer.md#cimchartspectralprofileseries)
+[CIMChartScatterSeries](CIMCharts.md#cimchartscatterseries)
 
-[CIMChartTemporalProfileSeries](CIMLayer.md#cimcharttemporalprofileseries)
+[CIMChartSpectralProfileSeries](CIMCharts.md#cimchartspectralprofileseries)
+
+[CIMChartTemporalProfileSeries](CIMCharts.md#cimcharttemporalprofileseries)
 
 ### ColorRamp
 
@@ -182,9 +184,15 @@
 
 [CIMGADataConnection](CIMGALayer.md#cimgadataconnection)
 
+[CIMNITFDataConnection](CIMImageLayers.md#cimnitfdataconnection)
+
 [CIMRasterBandDataConnection](CIMImageLayers.md#cimrasterbanddataconnection)
 
 [CIMVideoDataConnection](CIMImageLayers.md#cimvideodataconnection)
+
+[CIMKnowledgeGraphDataConnection](CIMKnowledgeGraph.md#cimknowledgegraphdataconnection)
+
+[CIMKnowledgeGraphTableDataConnection](CIMKnowledgeGraph.md#cimknowledgegraphtabledataconnection)
 
 [CIMKMLDataConnection](CIMLayer.md#cimkmldataconnection)
 
@@ -201,6 +209,8 @@
 [CIMSchematicDataConnection](CIMSchematics.md#cimschematicdataconnection)
 
 [CIMAGSServiceConnection](CIMServiceLayers.md#cimagsserviceconnection)
+
+[CIMOGCAPIServiceConnection](CIMServiceLayers.md#cimogcapiserviceconnection)
 
 [CIMStandardServiceConnection](CIMServiceLayers.md#cimstandardserviceconnection)
 
@@ -278,6 +288,8 @@
 
 [CIMMosaicLayer](CIMImageLayers.md#cimmosaiclayer)
 
+[CIMNitfFeatureSubLayer](CIMImageLayers.md#cimnitffeaturesublayer)
+
 [CIMNitfImageSubLayer](CIMImageLayers.md#cimnitfimagesublayer)
 
 [CIMNitfLayer](CIMImageLayers.md#cimnitflayer)
@@ -285,6 +297,8 @@
 [CIMRasterLayer](CIMImageLayers.md#cimrasterlayer)
 
 [CIMStandaloneVideo](CIMImageLayers.md#cimstandalonevideo)
+
+[CIMKnowledgeGraphLayer](CIMKnowledgeGraph.md#cimknowledgegraphlayer)
 
 [CIMGeodatabaseErrorLayer](CIMLayer.md#cimgeodatabaseerrorlayer)
 
@@ -294,13 +308,13 @@
 
 [CIMKMLLayer](CIMLayer.md#cimkmllayer)
 
-[CIMLinkChart](CIMLayer.md#cimlinkchart)
-
 [CIMTopologyLayer](CIMLayer.md#cimtopologylayer)
 
 [CIMLayout](CIMLayout.md#cimlayout)
 
 [CIMReport](CIMLayout.md#cimreport)
+
+[CIMLinkChart](CIMLinkCharts.md#cimlinkchart)
 
 [CIMMap](CIMMap.md#cimmap)
 
@@ -337,6 +351,8 @@
 [CIMTerrainLayer](CIMTerrainLayers.md#cimterrainlayer)
 
 [CIMTinLayer](CIMTerrainLayers.md#cimtinlayer)
+
+[CIMTimeline](CIMTimelines.md#cimtimeline)
 
 [CIMAnnotationLayer](CIMVectorLayers.md#cimannotationlayer)
 
@@ -414,9 +430,13 @@
 
 [CIMReportHeader](CIMLayout.md#cimreportheader)
 
+[CIMReportLayoutPageSection](CIMLayout.md#cimreportlayoutpagesection)
+
 [CIMReportPageFooter](CIMLayout.md#cimreportpagefooter)
 
 [CIMReportPageHeader](CIMLayout.md#cimreportpageheader)
+
+[CIMReportPageSection](CIMLayout.md#cimreportpagesection)
 
 [CIMReportSection](CIMLayout.md#cimreportsection)
 
@@ -456,9 +476,13 @@
 
 [CIMReportHeader](CIMLayout.md#cimreportheader)
 
+[CIMReportLayoutPageSection](CIMLayout.md#cimreportlayoutpagesection)
+
 [CIMReportPageFooter](CIMLayout.md#cimreportpagefooter)
 
 [CIMReportPageHeader](CIMLayout.md#cimreportpageheader)
+
+[CIMReportPageSection](CIMLayout.md#cimreportpagesection)
 
 [CIMReportSection](CIMLayout.md#cimreportsection)
 
@@ -530,9 +554,13 @@
 
 [CIMReportHeader](CIMLayout.md#cimreportheader)
 
+[CIMReportLayoutPageSection](CIMLayout.md#cimreportlayoutpagesection)
+
 [CIMReportPageFooter](CIMLayout.md#cimreportpagefooter)
 
 [CIMReportPageHeader](CIMLayout.md#cimreportpageheader)
+
+[CIMReportPageSection](CIMLayout.md#cimreportpagesection)
 
 [CIMReportSection](CIMLayout.md#cimreportsection)
 
@@ -563,6 +591,8 @@
 [CIMGeometricEffectArrow](CIMSymbols.md#cimgeometriceffectarrow)
 
 [CIMGeometricEffectBuffer](CIMSymbols.md#cimgeometriceffectbuffer)
+
+[CIMGeometricEffectCircularSector](CIMSymbols.md#cimgeometriceffectcircularsector)
 
 [CIMGeometricEffectCut](CIMSymbols.md#cimgeometriceffectcut)
 
@@ -660,9 +690,13 @@
 
 [CIMReportHeader](CIMLayout.md#cimreportheader)
 
+[CIMReportLayoutPageSection](CIMLayout.md#cimreportlayoutpagesection)
+
 [CIMReportPageFooter](CIMLayout.md#cimreportpagefooter)
 
 [CIMReportPageHeader](CIMLayout.md#cimreportpageheader)
+
+[CIMReportPageSection](CIMLayout.md#cimreportpagesection)
 
 [CIMReportSection](CIMLayout.md#cimreportsection)
 
@@ -673,6 +707,18 @@
 [CIMHorizontalLegendItem](CIMLayout.md#cimhorizontallegenditem)
 
 [CIMNestedLegendItem](CIMLayout.md#cimnestedlegenditem)
+
+### KeyframeLayer
+
+[CIMKeyframeLayer](CIMMap.md#cimkeyframelayer)
+
+[CIMKeyframeVoxelLayer](CIMMap.md#cimkeyframevoxellayer)
+
+### KnowledgeGraphDataConnection
+
+[CIMKnowledgeGraphDataConnection](CIMKnowledgeGraph.md#cimknowledgegraphdataconnection)
+
+[CIMKnowledgeGraphTableDataConnection](CIMKnowledgeGraph.md#cimknowledgegraphtabledataconnection)
 
 ### LabelPlacementProperties
 
@@ -698,9 +744,9 @@
 
 ### LinkChartLabelingInfo
 
-[CIMLinkChartLinkLabelingInfo](CIMLayer.md#cimlinkchartlinklabelinginfo)
+[CIMLinkChartLinkLabelingInfo](CIMLinkCharts.md#cimlinkchartlinklabelinginfo)
 
-[CIMLinkChartNodeLabelingInfo](CIMLayer.md#cimlinkchartnodelabelinginfo)
+[CIMLinkChartNodeLabelingInfo](CIMLinkCharts.md#cimlinkchartnodelabelinginfo)
 
 ### MapDefinition
 
@@ -756,6 +802,8 @@
 
 [CIMMarkerPlacementAlongLineVariableSize](CIMSymbols.md#cimmarkerplacementalonglinevariablesize)
 
+[CIMMarkerPlacementAroundPolygon](CIMSymbols.md#cimmarkerplacementaroundpolygon)
+
 [CIMMarkerPlacementAtExtremities](CIMSymbols.md#cimmarkerplacementatextremities)
 
 [CIMMarkerPlacementAtMeasuredUnits](CIMSymbols.md#cimmarkerplacementatmeasuredunits)
@@ -801,6 +849,12 @@
 [CIMNetworkDatasetSimpleRenderer](CIMNetworkLayers.md#cimnetworkdatasetsimplerenderer)
 
 [CIMNetworkDatasetTrafficRenderer](CIMNetworkLayers.md#cimnetworkdatasettrafficrenderer)
+
+### NitfSubLayerDefinition
+
+[CIMNitfFeatureSubLayer](CIMImageLayers.md#cimnitffeaturesublayer)
+
+[CIMNitfImageSubLayer](CIMImageLayers.md#cimnitfimagesublayer)
 
 ### NorthArrow
 
@@ -886,6 +940,12 @@
 
 [CIMProfilePolyObstacle](CIMLayout.md#cimprofilepolyobstacle)
 
+### ReportPageSection
+
+[CIMReportLayoutPageSection](CIMLayout.md#cimreportlayoutpagesection)
+
+[CIMReportPageSection](CIMLayout.md#cimreportpagesection)
+
 ### ReportSectionElement
 
 [CIMGroupFooter](CIMLayout.md#cimgroupfooter)
@@ -900,9 +960,13 @@
 
 [CIMReportHeader](CIMLayout.md#cimreportheader)
 
+[CIMReportLayoutPageSection](CIMLayout.md#cimreportlayoutpagesection)
+
 [CIMReportPageFooter](CIMLayout.md#cimreportpagefooter)
 
 [CIMReportPageHeader](CIMLayout.md#cimreportpageheader)
+
+[CIMReportPageSection](CIMLayout.md#cimreportpagesection)
 
 [CIMReportSection](CIMLayout.md#cimreportsection)
 
@@ -931,6 +995,8 @@
 [CIMProjectServerConnection](CIMServiceLayers.md#cimprojectserverconnection)
 
 ### StandaloneTableContainer
+
+[CIMKnowledgeGraphLayer](CIMKnowledgeGraph.md#cimknowledgegraphlayer)
 
 [CIMMap](CIMMap.md#cimmap)
 
@@ -1040,6 +1106,12 @@
 
 [CIMVerticalLegendItem](CIMLayout.md#cimverticallegenditem)
 
+### VideoTimelineIndicator
+
+[CIMVideoTimelineEventIndicator](CIMImageLayers.md#cimvideotimelineeventindicator)
+
+[CIMVideoTimelineRangeIndicator](CIMImageLayers.md#cimvideotimelinerangeindicator)
+
 ### View
 
 [CIMExternalTableView](CIMDocument.md#cimexternaltableview)
@@ -1117,6 +1189,62 @@
 [CIMSegmentationTargetGroupDocument](CIMBusinessAnalyst.md#CIMSegmentationTargetGroupDocument)
 
 [CIMSegmentationTargetGroupVisualizationProperties](CIMBusinessAnalyst.md#CIMSegmentationTargetGroupVisualizationProperties)
+
+[CIMChart](CIMCharts.md#CIMChart)
+
+[CIMChartAxis](CIMCharts.md#CIMChartAxis)
+
+[CIMChartBarSeries](CIMCharts.md#CIMChartBarSeries)
+
+[CIMChartBoxPlotSeries](CIMCharts.md#CIMChartBoxPlotSeries)
+
+[CIMChartCalendarHeatSeries](CIMCharts.md#CIMChartCalendarHeatSeries)
+
+[CIMChartDataClockSeries](CIMCharts.md#CIMChartDataClockSeries)
+
+[CIMChartFillSymbolProperties](CIMCharts.md#CIMChartFillSymbolProperties)
+
+[CIMChartGeneralProperties](CIMCharts.md#CIMChartGeneralProperties)
+
+[CIMChartGuide](CIMCharts.md#CIMChartGuide)
+
+[CIMChartHistogramSeries](CIMCharts.md#CIMChartHistogramSeries)
+
+[CIMChartLegend](CIMCharts.md#CIMChartLegend)
+
+[CIMChartLineSeries](CIMCharts.md#CIMChartLineSeries)
+
+[CIMChartLineSymbolProperties](CIMCharts.md#CIMChartLineSymbolProperties)
+
+[CIMChartLocationDefinition](CIMCharts.md#CIMChartLocationDefinition)
+
+[CIMChartMarkerSymbolProperties](CIMCharts.md#CIMChartMarkerSymbolProperties)
+
+[CIMChartMatrixHeatSeries](CIMCharts.md#CIMChartMatrixHeatSeries)
+
+[CIMChartProbabilityPlotSeries](CIMCharts.md#CIMChartProbabilityPlotSeries)
+
+[CIMChartProfileGraphSeries](CIMCharts.md#CIMChartProfileGraphSeries)
+
+[CIMChartScatterPlotMatrixSeries](CIMCharts.md#CIMChartScatterPlotMatrixSeries)
+
+[CIMChartScatterSeries](CIMCharts.md#CIMChartScatterSeries)
+
+[CIMChartSpectralProfileSeries](CIMCharts.md#CIMChartSpectralProfileSeries)
+
+[CIMChartTemporalProfileBand](CIMCharts.md#CIMChartTemporalProfileBand)
+
+[CIMChartTemporalProfileBands](CIMCharts.md#CIMChartTemporalProfileBands)
+
+[CIMChartTemporalProfileDimensionValue](CIMCharts.md#CIMChartTemporalProfileDimensionValue)
+
+[CIMChartTemporalProfileDimensionValues](CIMCharts.md#CIMChartTemporalProfileDimensionValues)
+
+[CIMChartTemporalProfileSeries](CIMCharts.md#CIMChartTemporalProfileSeries)
+
+[CIMChartTemporalProfileVariable](CIMCharts.md#CIMChartTemporalProfileVariable)
+
+[CIMChartTextProperties](CIMCharts.md#CIMChartTextProperties)
 
 [CIMCMYKColor](CIMColor.md#CIMCMYKColor)
 
@@ -1236,6 +1364,10 @@
 
 [CIMMosaicRule](CIMImageLayers.md#CIMMosaicRule)
 
+[CIMNITFDataConnection](CIMImageLayers.md#CIMNITFDataConnection)
+
+[CIMNitfFeatureSubLayer](CIMImageLayers.md#CIMNitfFeatureSubLayer)
+
 [CIMNitfImageSubLayer](CIMImageLayers.md#CIMNitfImageSubLayer)
 
 [CIMNitfLayer](CIMImageLayers.md#CIMNitfLayer)
@@ -1288,6 +1420,16 @@
 
 [CIMVideoDataConnection](CIMImageLayers.md#CIMVideoDataConnection)
 
+[CIMVideoTimelineEventIndicator](CIMImageLayers.md#CIMVideoTimelineEventIndicator)
+
+[CIMVideoTimelineRangeIndicator](CIMImageLayers.md#CIMVideoTimelineRangeIndicator)
+
+[CIMKnowledgeGraphDataConnection](CIMKnowledgeGraph.md#CIMKnowledgeGraphDataConnection)
+
+[CIMKnowledgeGraphLayer](CIMKnowledgeGraph.md#CIMKnowledgeGraphLayer)
+
+[CIMKnowledgeGraphTableDataConnection](CIMKnowledgeGraph.md#CIMKnowledgeGraphTableDataConnection)
+
 [CIMLabelClass](CIMLabelPlacement.md#CIMLabelClass)
 
 [CIMLabelClassProperties](CIMLabelPlacement.md#CIMLabelClassProperties)
@@ -1328,60 +1470,6 @@
 
 [CIM3DLayerProperties](CIMLayer.md#CIM3DLayerProperties)
 
-[CIMChart](CIMLayer.md#CIMChart)
-
-[CIMChartAxis](CIMLayer.md#CIMChartAxis)
-
-[CIMChartBarSeries](CIMLayer.md#CIMChartBarSeries)
-
-[CIMChartBoxPlotSeries](CIMLayer.md#CIMChartBoxPlotSeries)
-
-[CIMChartCalendarHeatSeries](CIMLayer.md#CIMChartCalendarHeatSeries)
-
-[CIMChartDataClockSeries](CIMLayer.md#CIMChartDataClockSeries)
-
-[CIMChartFillSymbolProperties](CIMLayer.md#CIMChartFillSymbolProperties)
-
-[CIMChartGeneralProperties](CIMLayer.md#CIMChartGeneralProperties)
-
-[CIMChartGuide](CIMLayer.md#CIMChartGuide)
-
-[CIMChartHistogramSeries](CIMLayer.md#CIMChartHistogramSeries)
-
-[CIMChartLegend](CIMLayer.md#CIMChartLegend)
-
-[CIMChartLineSeries](CIMLayer.md#CIMChartLineSeries)
-
-[CIMChartLineSymbolProperties](CIMLayer.md#CIMChartLineSymbolProperties)
-
-[CIMChartLocationDefinition](CIMLayer.md#CIMChartLocationDefinition)
-
-[CIMChartMarkerSymbolProperties](CIMLayer.md#CIMChartMarkerSymbolProperties)
-
-[CIMChartProbabilityPlotSeries](CIMLayer.md#CIMChartProbabilityPlotSeries)
-
-[CIMChartProfileGraphSeries](CIMLayer.md#CIMChartProfileGraphSeries)
-
-[CIMChartScatterPlotMatrixSeries](CIMLayer.md#CIMChartScatterPlotMatrixSeries)
-
-[CIMChartScatterSeries](CIMLayer.md#CIMChartScatterSeries)
-
-[CIMChartSpectralProfileSeries](CIMLayer.md#CIMChartSpectralProfileSeries)
-
-[CIMChartTemporalProfileBand](CIMLayer.md#CIMChartTemporalProfileBand)
-
-[CIMChartTemporalProfileBands](CIMLayer.md#CIMChartTemporalProfileBands)
-
-[CIMChartTemporalProfileDimensionValue](CIMLayer.md#CIMChartTemporalProfileDimensionValue)
-
-[CIMChartTemporalProfileDimensionValues](CIMLayer.md#CIMChartTemporalProfileDimensionValues)
-
-[CIMChartTemporalProfileSeries](CIMLayer.md#CIMChartTemporalProfileSeries)
-
-[CIMChartTemporalProfileVariable](CIMLayer.md#CIMChartTemporalProfileVariable)
-
-[CIMChartTextProperties](CIMLayer.md#CIMChartTextProperties)
-
 [CIMCompositeSubLayer](CIMLayer.md#CIMCompositeSubLayer)
 
 [CIMDefinitionFilter](CIMLayer.md#CIMDefinitionFilter)
@@ -1403,20 +1491,6 @@
 [CIMLayerElevationSurface](CIMLayer.md#CIMLayerElevationSurface)
 
 [CIMLayerTemplate](CIMLayer.md#CIMLayerTemplate)
-
-[CIMLinkChart](CIMLayer.md#CIMLinkChart)
-
-[CIMLinkChartEntity](CIMLayer.md#CIMLinkChartEntity)
-
-[CIMLinkChartLinkDrawingInfo](CIMLayer.md#CIMLinkChartLinkDrawingInfo)
-
-[CIMLinkChartLinkLabelingInfo](CIMLayer.md#CIMLinkChartLinkLabelingInfo)
-
-[CIMLinkChartNodeDrawingInfo](CIMLayer.md#CIMLinkChartNodeDrawingInfo)
-
-[CIMLinkChartNodeLabelingInfo](CIMLayer.md#CIMLinkChartNodeLabelingInfo)
-
-[CIMLinkChartRelationship](CIMLayer.md#CIMLinkChartRelationship)
 
 [CIMSubLayer](CIMLayer.md#CIMSubLayer)
 
@@ -1550,9 +1624,13 @@
 
 [CIMReportHeader](CIMLayout.md#CIMReportHeader)
 
+[CIMReportLayoutPageSection](CIMLayout.md#CIMReportLayoutPageSection)
+
 [CIMReportPageFooter](CIMLayout.md#CIMReportPageFooter)
 
 [CIMReportPageHeader](CIMLayout.md#CIMReportPageHeader)
+
+[CIMReportPageSection](CIMLayout.md#CIMReportPageSection)
 
 [CIMReportSection](CIMLayout.md#CIMReportSection)
 
@@ -1579,6 +1657,20 @@
 [CIMTopoNorthArrow](CIMLayout.md#CIMTopoNorthArrow)
 
 [CIMVerticalLegendItem](CIMLayout.md#CIMVerticalLegendItem)
+
+[CIMLinkChart](CIMLinkCharts.md#CIMLinkChart)
+
+[CIMLinkChartEntity](CIMLinkCharts.md#CIMLinkChartEntity)
+
+[CIMLinkChartLinkDrawingInfo](CIMLinkCharts.md#CIMLinkChartLinkDrawingInfo)
+
+[CIMLinkChartLinkLabelingInfo](CIMLinkCharts.md#CIMLinkChartLinkLabelingInfo)
+
+[CIMLinkChartNodeDrawingInfo](CIMLinkCharts.md#CIMLinkChartNodeDrawingInfo)
+
+[CIMLinkChartNodeLabelingInfo](CIMLinkCharts.md#CIMLinkChartNodeLabelingInfo)
+
+[CIMLinkChartRelationship](CIMLinkCharts.md#CIMLinkChartRelationship)
 
 [CIMAltitudeParams](CIMMap.md#CIMAltitudeParams)
 
@@ -1621,6 +1713,10 @@
 [CIMKeyframeSurface](CIMMap.md#CIMKeyframeSurface)
 
 [CIMKeyframeTime](CIMMap.md#CIMKeyframeTime)
+
+[CIMKeyframeVoxelLayer](CIMMap.md#CIMKeyframeVoxelLayer)
+
+[CIMKeyframeVoxelPlane](CIMMap.md#CIMKeyframeVoxelPlane)
 
 [CIMLineOfSightEADefinition](CIMMap.md#CIMLineOfSightEADefinition)
 
@@ -1692,6 +1788,8 @@
 
 [CIMNetworkSourceDisplayFilter](CIMNetworkLayers.md#CIMNetworkSourceDisplayFilter)
 
+[CIMNetworkTraceConfiguration](CIMNetworkLayers.md#CIMNetworkTraceConfiguration)
+
 [CIMTraceNetworkLayer](CIMNetworkLayers.md#CIMTraceNetworkLayer)
 
 [CIMUtilityNetworkLayer](CIMNetworkLayers.md#CIMUtilityNetworkLayer)
@@ -1759,6 +1857,8 @@
 [CIMIsosurfaceGroup](CIMServiceLayers.md#CIMIsosurfaceGroup)
 
 [CIMIsosurfaceGroupContainer](CIMServiceLayers.md#CIMIsosurfaceGroupContainer)
+
+[CIMOGCAPIServiceConnection](CIMServiceLayers.md#CIMOGCAPIServiceConnection)
 
 [CIMObject3DRenderingFilter](CIMServiceLayers.md#CIMObject3DRenderingFilter)
 
@@ -1906,11 +2006,15 @@
 
 [CIMCompositeTextPartPosition](CIMSymbols.md#CIMCompositeTextPartPosition)
 
+[CIMFontVariation](CIMSymbols.md#CIMFontVariation)
+
 [CIMGeometricEffectAddControlPoints](CIMSymbols.md#CIMGeometricEffectAddControlPoints)
 
 [CIMGeometricEffectArrow](CIMSymbols.md#CIMGeometricEffectArrow)
 
 [CIMGeometricEffectBuffer](CIMSymbols.md#CIMGeometricEffectBuffer)
+
+[CIMGeometricEffectCircularSector](CIMSymbols.md#CIMGeometricEffectCircularSector)
 
 [CIMGeometricEffectCut](CIMSymbols.md#CIMGeometricEffectCut)
 
@@ -1965,6 +2069,8 @@
 [CIMMarkerPlacementAlongLineSameSize](CIMSymbols.md#CIMMarkerPlacementAlongLineSameSize)
 
 [CIMMarkerPlacementAlongLineVariableSize](CIMSymbols.md#CIMMarkerPlacementAlongLineVariableSize)
+
+[CIMMarkerPlacementAroundPolygon](CIMSymbols.md#CIMMarkerPlacementAroundPolygon)
 
 [CIMMarkerPlacementAtExtremities](CIMSymbols.md#CIMMarkerPlacementAtExtremities)
 
@@ -2101,6 +2207,12 @@
 [CIMTinNodeRenderer](CIMTerrainLayers.md#CIMTinNodeRenderer)
 
 [CIMTinNodeValueRenderer](CIMTerrainLayers.md#CIMTinNodeValueRenderer)
+
+[CIMTimeline](CIMTimelines.md#CIMTimeline)
+
+[CIMTimelineLayer](CIMTimelines.md#CIMTimelineLayer)
+
+[CIMTimelineSwimlane](CIMTimelines.md#CIMTimelineSwimlane)
 
 [CIMAggregateField](CIMVectorLayers.md#CIMAggregateField)
 

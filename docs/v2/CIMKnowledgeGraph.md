@@ -1,27 +1,8 @@
 
 
 
-## CIMDiagramBuilderDefinition
-#### Represents a diagram builder definition. 
-
-
-### CIMDiagramBuilderDefinition 
-
-|Property | Type | Description | 
-|---------|--------|--------|
-| rules | [[CIMDiagramRuleDefinition]](CIMNetworkDiagrams.md#cimdiagramruledefinition) | The diagram rules. 
-| layouts | [[CIMDiagramLayoutDefinition]](CIMNetworkDiagrams.md#cimdiagramlayoutdefinition) | The diagram layouts. 
-| keepEdgeVertices | boolean | A value indicating whether to keep edge vertices. 
-| containerMargin | double | The container margin. 
-| network | string | The network. 
-
-
-
-
-
-
-## CIMDiagramDatasetDataConnection
-#### Represents a diagram dataset data connection. 
+## CIMKnowledgeGraphDataConnection
+#### Represents a Knowledge Graph data connection. 
 
 
 ### CIMDataConnection 
@@ -41,26 +22,19 @@
 | datasetType | [enumeration esriDatasetType](ExternalReferences.md#enumeration-esridatasettype) | The dataset type. 
 
 
-### CIMFeatureDatasetDataConnection 
+### CIMKnowledgeGraphDataConnection 
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| featureDataset | string | Feature dataset. 
-
-
-### CIMDiagramDatasetDataConnection 
-
-|Property | Type | Description | 
-|---------|--------|--------|
-| diagramDataset | string | The diagram dataset name. 
+| definitionQuery | string | The OpenCypher definition query. 
 
 
 
 
 
 
-## CIMDiagramLayer
-#### Represents a diagram layer. 
+## CIMKnowledgeGraphLayer
+#### Provides access to properties of a Knowledge Graph layer. 
 
 
 ### CIMDefinition 
@@ -108,45 +82,27 @@
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 
 
-### CIMGroupLayerDefinition 
+### CIMStandaloneTableContainer 
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| layers | [string] | The layer URIs of the layers in the group layer. 
-| symbolLayerDrawing | [CIMSymbolLayerDrawing](CIMLayer.md#cimsymbollayerdrawing) | The symbol layer drawing definition. 
+| standaloneTables | [string] | The standalone tables as an array of table repository paths. 
 
 
-### CIMDiagramLayerDefinition 
-
-|Property | Type | Description | 
-|---------|--------|--------|
-| referenceScale | double | The digram layer's reference scale. 
-| dataConnection | [CIMNetworkDiagramDataConnection](CIMNetworkDiagrams.md#cimnetworkdiagramdataconnection) | The data connection to the network diagram. 
-
-
-
-
-
-
-## CIMDiagramLayoutDefinition
-#### Represents a diagram layout definition. 
-
-
-### CIMDiagramLayoutDefinition 
+### CIMKnowledgeGraphLayerDefinition 
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| name | string | The diagram layout name. 
-| description | string | The diagram layout description. 
-| properties | {JSON_object}| The diagram layout properties. 
+| dataConnection | [DataConnection](Types.md#dataconnection) | The data connection. 
+| layers | [string] | The layer URIs of the layers in the composite layer. 
 
 
 
 
 
 
-## CIMDiagramRelQueryDataConnection
-#### Represents a diagram rel query data connection. 
+## CIMKnowledgeGraphTableDataConnection
+#### Represents a Knowledge Graph data connection. 
 
 
 ### CIMDataConnection 
@@ -166,99 +122,19 @@
 | datasetType | [enumeration esriDatasetType](ExternalReferences.md#enumeration-esridatasettype) | The dataset type. 
 
 
-### CIMFeatureDatasetDataConnection 
+### CIMKnowledgeGraphDataConnection 
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| featureDataset | string | Feature dataset. 
+| definitionQuery | string | The OpenCypher definition query. 
 
 
-### CIMDiagramRelQueryDataConnection 
-
-|Property | Type | Description | 
-|---------|--------|--------|
-| diagramDatasetFeatureClass | [enumeration esriDiagramDatasetFeatureClass](ExternalReferences.md#enumeration-esridiagramdatasetfeatureclass) | The diagram dataset feature class. 
-| networkSourceID | long | The network source id. 
-
-
-
-
-
-
-## CIMDiagramRuleDefinition
-#### Represents a diagram rule definition. 
-
-
-### CIMDiagramRuleDefinition 
+### CIMKnowledgeGraphTableDataConnection 
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| name | string | The diagram rule name. 
-| description | string | The diagram rule description. 
-| isActive | boolean | A value indicating whether the rule is active. 
-| properties | {JSON_object}| The diagram rule properties. 
-
-
-
-
-
-
-## CIMNetworkDiagram
-#### Represents a network diagram. 
-
-
-### CIMNetworkDiagram 
-
-|Property | Type | Description | 
-|---------|--------|--------|
-| name | string | The network diagram name. 
-| ID | string | The network diagram id. 
-| isTransient | boolean | A value indicating whether the diagram is transient. 
-| isConsistent | boolean | A value indicating whether the diagram is consistent. 
-| templateString | string | The template string. 
-| network | string | The network name. 
-| layerURI | string | The layer URI. 
-
-
-
-
-
-
-## CIMNetworkDiagramDataConnection
-#### Represents a network diagram data connection. 
-
-
-### CIMDataConnection 
-
-|Property | Type | Description | 
-|---------|--------|--------|
-
-
-### CIMStandardDataConnection 
-
-|Property | Type | Description | 
-|---------|--------|--------|
-| workspaceConnectionString | string | The workspace connection string. 
-| workspaceFactory | [enumeration WorkspaceFactory](CIMVectorLayers.md#enumeration-workspacefactory) | The workspace factory. 
-| customWorkspaceFactoryCLSID | string | The classID of the custom workspace factory. 
-| dataset | string | The dataset name. 
-| datasetType | [enumeration esriDatasetType](ExternalReferences.md#enumeration-esridatasettype) | The dataset type. 
-
-
-### CIMFeatureDatasetDataConnection 
-
-|Property | Type | Description | 
-|---------|--------|--------|
-| featureDataset | string | Feature dataset. 
-
-
-### CIMNetworkDiagramDataConnection 
-
-|Property | Type | Description | 
-|---------|--------|--------|
-| diagram | string | The diagram. 
-| isStored | boolean | A value indicating whether or not the diagram is stored. 
-| table | string | The diagram table name. 
+| inclusionSetURI | string | The InclusionSet for the table. 
+| exclusionSetURI | string | The ExclusionSet for the table. 
 
 
 

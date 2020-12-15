@@ -370,6 +370,8 @@
 | name | string | The defined ink name for the spot color. Usually this is a well-known color standard name. 
 | alternativeColor | [Color](Types.md#color) | The standard (non-spot) color that is used to display the color on-screen. 
 | bookColor | [Color](Types.md#color) | The if present, the color used during output. 
+| bookID | string | The ID of the book the color name belongs to. 
+| isReferencedColor | boolean | A value indicating whether or not the color is a referenced color. When this property is true, the alternative color will be looked up from the color book based on the BookID and Name. 
 
 
 

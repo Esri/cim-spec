@@ -89,6 +89,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The bookmark name. 
+| groupName | string | The bookmark group name. 
 | thumbnailImagePath | string | The thumbnail image path. 
 | camera | [CIMViewCamera](CIMMap.md#cimviewcamera) | The camera. 
 | location | [Envelope](ExternalReferences.md#envelope) | The location. 
@@ -200,6 +201,7 @@
 | captureMode | [enumeration EditingElevationCaptureMode](CIMMap.md#enumeration-editingelevationcapturemode) | The elevation capture mode. 
 | constantValue | double | The the value used when CaptureMode is Constant. 
 | surfaceID | string | The GUID of the map elevation surface to be used when CaptureMode is Surface. 
+| constantValueUnit | [LinearUnit](ExternalReferences.md#linearunit) | The Unit used when CaptureMode is Constant. 
 
 
 
@@ -519,6 +521,60 @@
 
 
 
+## CIMKeyframeVoxelLayer
+#### Represents a voxel layer keyframe. 
+
+
+### CIMKeyframeLayer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| layerURI | string | The path to the layer. 
+| transparency | double | The method of transition for the visibility of the layer. 
+| transparencyTransition | [enumeration AnimationTransition](CIMEnumerations.md#enumeration-animationtransition) | The method of transition for the transparency of the layer. 
+| visible | boolean | A value indicating whether the layer is visible. 
+| swipeDirection | [enumeration SwipeDirection](CIMMap.md#enumeration-swipedirection) | The direction to clip from an edge. 
+| swipePercent | double | The amount of the visible area to clip. 
+| verticalExaggeration | double | The vertical exaggeration. 
+| ZOffset | double | The vertical exaggeration. 
+
+
+### CIMKeyframeVoxelLayer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| variableName | string | The name of the current symbolizer variable. 
+| showSurface | boolean | A value indicating whether the surface is shown instead of the volume. 
+| dataFilterMax | double | The maximum data value. 
+| dataFilterMin | double | The minimum data value. 
+| isosurfaces | [[CIMIsosurface]](CIMServiceLayers.md#cimisosurface) | The voxel surfaces. 
+| sections | [[CIMKeyframeVoxelPlane]](CIMMap.md#cimkeyframevoxelplane) | The dynamic cross section planes. 
+| lockedSections | [[CIMKeyframeVoxelPlane]](CIMMap.md#cimkeyframevoxelplane) | The static cross section planes. 
+| slices | [[CIMKeyframeVoxelPlane]](CIMMap.md#cimkeyframevoxelplane) | The slice planes. 
+
+
+
+
+
+
+## CIMKeyframeVoxelPlane
+#### Represents a voxel plane keyframe. 
+
+
+### CIMKeyframeVoxelPlane 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| visible | boolean | A value indicating whether the plane is visible. 
+| position | double | The position of the plane relative to the edge of the voxel. 
+| orientation | double | The orientation of the plane around the z axis. 
+| tilt | double | The tilt of the plane. 
+
+
+
+
+
+
 ## CIMLineOfSightEADefinition
 #### Represents a line of sight exploratory analysis definition. 
 
@@ -570,6 +626,7 @@
 |---------|--------|--------|
 | Locator| 0| Locator is based on local locator file or URL. 
 | Layer| 1| LocatorURI is based on a Layer in the map 
+| Table| 2| LocatorURI is based on a Table in the map 
 
 
 
@@ -610,6 +667,7 @@
 | standaloneVideos | [string] | The standalone videos as an array of video repository paths. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the map. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 | linkCharts | [string] | The link charts as an array of link chart repository paths. 
+| timelines | [string] | The timelines as an array of timeline repository paths. 
 
 
 ### CIMStandaloneTableContainer 
@@ -647,6 +705,7 @@
 | includeMaximumInScaleRanges | boolean | A value indicating whether or not to draw up to and including the maximum scale in scale ranges. 
 | colorModel | [enumeration ColorModel](CIMEnumerations.md#enumeration-colormodel) | The color model for a map. 
 | scales | [[CIMScale]](CIMMap.md#cimscale) | An array of CIMScale objects, describing the full list of named scales for the map. 
+| snapToScales | boolean | A value indicating whether to snap only to the map's list of named scales when zooming. 
 | scaleFormat | [CIMScaleFormat](CIMMap.md#cimscaleformat) | The scale format describing the formatting of the scale value. 
 | scaleDisplayFormat | [enumeration ScaleDisplayFormat](CIMMap.md#enumeration-scaledisplayformat) | The display mode for the map's Scales in the user interface. 
 | HVDatumTransforms | [ArrayOfCompositeHVDatumTransformation](ExternalReferences.md#arrayofcompositehvdatumtransformation) | The set of geographic transformations used by the map for spatial references with vertical coordinate system. 
@@ -716,6 +775,7 @@
 | adjustColorizersInSync | boolean | A value indicating whether adjustments to either colorizer should be synced to the other. 
 | isInverted | boolean | A value indicating whether the left and right images of the stereo model should be swapped. 
 | stereoModelDisplayMode | [enumeration StereoModelDisplayMode](CIMMap.md#enumeration-stereomodeldisplaymode) | The stereo model display mode. 
+| orientation | [enumeration StereoOrientation](CIMMap.md#enumeration-stereoorientation) | The stereo model display orientation. 
 
 
 
@@ -754,6 +814,7 @@
 | Basemap| 2| A basemap. 
 | NetworkDiagram| 3| A network diagram. 
 | ContainmentMap| 4| A containment map. 
+| LinkChart| 5| A link chart. 
 
 
 
@@ -1060,6 +1121,18 @@
 
 
 
+### Enumeration: StereoOrientation
+#### Stereo model orientation. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| UpOrRight| 0| North pointing to up (for east-west or west-east images) or to right (for north-south or south-north images) in stereo view. 
+| UpOrLeft| 1| North pointing to up (for east-west or west-east images) or to left (for north-south or south-north images) in stereo view.. 
+| DownOrRight| 2| North pointing to down (for east-west or west-east images) or to right (for north-south or south-north images) in stereo view.. 
+| DownOrLeft| 3| North pointing to down (for east-west or west-east images) or to left (for north-south or south-north images) in stereo view.. 
+
+
+
 ### Enumeration: StereoSourceType
 #### Stereo source types. 
 
@@ -1173,7 +1246,7 @@
 |---------|--------|--------|
 | trackTime | double | The value of time in seconds that the keyframe exists in the track. 
 | camera | [CIMKeyframeCamera](CIMMap.md#cimkeyframecamera) | The camera keyframe. 
-| layers | [[CIMKeyframeLayer]](CIMMap.md#cimkeyframelayer) | The collection of layer keyframes. 
+| layers | [[CIMKeyframeLayer]](Types.md#cimkeyframelayer) | The collection of layer keyframes. 
 | range | [CIMKeyframeRange](CIMMap.md#cimkeyframerange) | The range keyframe. 
 | time | [CIMKeyframeTime](CIMMap.md#cimkeyframetime) | The time keyframe. 
 | surfaces | [[CIMKeyframeSurface]](CIMMap.md#cimkeyframesurface) | The collection of surface keyframes. 

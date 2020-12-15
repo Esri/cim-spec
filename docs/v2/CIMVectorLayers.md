@@ -71,13 +71,14 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
-| searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
+| charts | [[CIMChart]](CIMCharts.md#cimchart) | Identifier the layer's charts. 
+| searchable | boolean | A value indicating whether or not this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
+| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -106,6 +107,7 @@
 | displayFilterName | string | The active display filter. 
 | displayFilterChoices | [[CIMDisplayFilter]](CIMVectorLayers.md#cimdisplayfilter) | The current set of display filters. 
 | featureElevationExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression for setting the feature elevation. 
+| featureBlendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The per-feature blending mode which allows features in a layer to blend against other features in the same layer that have already drawn. 
 
 
 ### CIMAnnotationLayerDefinition 
@@ -377,13 +379,14 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
-| searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
+| charts | [[CIMChart]](CIMCharts.md#cimchart) | Identifier the layer's charts. 
+| searchable | boolean | A value indicating whether or not this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
+| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 
 
 ### CIMBuildingDisciplineLayerDefinition 
@@ -437,13 +440,14 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
-| searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
+| charts | [[CIMChart]](CIMCharts.md#cimchart) | Identifier the layer's charts. 
+| searchable | boolean | A value indicating whether or not this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
+| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 
 
 ### CIMObject3DRenderingFilters 
@@ -554,13 +558,14 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
-| searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
+| charts | [[CIMChart]](CIMCharts.md#cimchart) | Identifier the layer's charts. 
+| searchable | boolean | A value indicating whether or not this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
+| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -589,6 +594,7 @@
 | displayFilterName | string | The active display filter. 
 | displayFilterChoices | [[CIMDisplayFilter]](CIMVectorLayers.md#cimdisplayfilter) | The current set of display filters. 
 | featureElevationExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression for setting the feature elevation. 
+| featureBlendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The per-feature blending mode which allows features in a layer to blend against other features in the same layer that have already drawn. 
 
 
 ### CIMDimensionLayerDefinition 
@@ -944,13 +950,14 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
-| searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
+| charts | [[CIMChart]](CIMCharts.md#cimchart) | Identifier the layer's charts. 
+| searchable | boolean | A value indicating whether or not this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
+| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -979,6 +986,7 @@
 | displayFilterName | string | The active display filter. 
 | displayFilterChoices | [[CIMDisplayFilter]](CIMVectorLayers.md#cimdisplayfilter) | The current set of display filters. 
 | featureElevationExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression for setting the feature elevation. 
+| featureBlendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The per-feature blending mode which allows features in a layer to blend against other features in the same layer that have already drawn. 
 
 
 ### CIMGeoFeatureLayerDefinition 
@@ -1571,13 +1579,14 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
-| searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
+| charts | [[CIMChart]](CIMCharts.md#cimchart) | Identifier the layer's charts. 
+| searchable | boolean | A value indicating whether or not this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
+| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 
 
 ### CIMParcelFabricLayerDefinition 
@@ -1643,13 +1652,14 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
-| searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
+| charts | [[CIMChart]](CIMCharts.md#cimchart) | Identifier the layer's charts. 
+| searchable | boolean | A value indicating whether or not this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
+| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 
 
 ### CIMParcelLayerDefinition 
@@ -2023,10 +2033,11 @@
 | serviceTableID | long | Identifier that will be used to identify the layer in server. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
-| charts | [[CIMChart]](CIMLayer.md#cimchart) | The table's charts. 
+| charts | [[CIMChart]](CIMCharts.md#cimchart) | The table's charts. 
 | pageDefinition | [CIMPageDefinition](CIMVectorLayers.md#cimpagedefinition) | The page definition which allows for using current map series page to filter rows. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the standalone table. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 | webMapTableID | string | An identifier that will be used to identify the standalone table in a web map. This value is present if the standalone table originated in a web map and facilitates matching the standalone table back to its origin when updating the web map. 
+| searchable | boolean | A value indicating whether or not this table should be included in the search. This property is honored only by tables that support search. 
 
 
 
@@ -2131,13 +2142,14 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
-| searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
+| charts | [[CIMChart]](CIMCharts.md#cimchart) | Identifier the layer's charts. 
+| searchable | boolean | A value indicating whether or not this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
+| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -2166,6 +2178,7 @@
 | displayFilterName | string | The active display filter. 
 | displayFilterChoices | [[CIMDisplayFilter]](CIMVectorLayers.md#cimdisplayfilter) | The current set of display filters. 
 | featureElevationExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression for setting the feature elevation. 
+| featureBlendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The per-feature blending mode which allows features in a layer to blend against other features in the same layer that have already drawn. 
 
 
 ### CIMSubtypeGroupLayerDefinition 
@@ -2567,13 +2580,14 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
-| searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
+| charts | [[CIMChart]](CIMCharts.md#cimchart) | Identifier the layer's charts. 
+| searchable | boolean | A value indicating whether or not this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
+| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 
 
 ### CIMVectorTileLayerDefinition 
@@ -2640,6 +2654,7 @@
 | InMemoryDB| 21| In memory database. 
 | NoSQL| 22| NoSQL. 
 | BigDataConnection| 23| Big Data connection. 
+| KnowledgeGraph| 24| Knowledge Graph connection. 
 
 
 
