@@ -19,6 +19,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+| expressionTitle | string | The human readable text title that describes the label expression. 
 | expression | string | The label expression. 
 | expressionEngine | [enumeration LabelExpressionEngine](CIMLabelPlacement.md#enumeration-labelexpressionengine) | The label expression engine (the language the expression is written in). 
 | featuresToLabel | [enumeration FeaturesToLabel](CIMLabelPlacement.md#enumeration-featurestolabel) | A parameter indicating which features to label. 
@@ -122,6 +123,7 @@
 |---------|--------|--------|
 | Uphill| 0| Align labels according to the terrain so the tops point uphill. 
 | Page| 1| Align labels according to the page (or display). 
+| Downhill| 2| Align labels according to the terrain so the tops point downhill. 
 
 
 
@@ -270,6 +272,7 @@
 | minimumNumberOfLines | long | The minimum number of lines. 
 | name | string | The name of the group. 
 | numberResetType | [enumeration MaplexKeyNumberResetType](CIMLabelPlacement.md#enumeration-maplexkeynumberresettype) | The number reset type. 
+| keyNumberMethod | [enumeration MaplexKeyNumberMethod](CIMLabelPlacement.md#enumeration-maplexkeynumbermethod) | The key numbering method. 
 
 
 
@@ -283,6 +286,16 @@
 | Auto| 0| Automatic alignment. 
 | Left| 1| Left alignment. 
 | Right| 2| Right alignment. 
+
+
+
+### Enumeration: MaplexKeyNumberMethod
+#### Options that describe how a key numbering group is used. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| PreventUnplacedLabels| 0| Use key numbers to prevent unplaced labels. 
+| AlwaysNumber| 1| Always place labels with key numbering. 
 
 
 
@@ -419,6 +432,8 @@
 | truncationPreferredCharacters | string | The preferred characters used by the truncation strategy. These characters will be removed as needed. 
 | useExactSymbolOutline | boolean | A value indicating whether to use the exact polygon outline of a symbol when measuring the label offset. 
 | truncationExcludedCharacters | string | The excluded characters used by the truncation strategy. These characters will never be removed by truncation. 
+| polygonAnchorPointPerimeterInset | double | The inset value for perimeter polygon anchor leader anchor points. 
+| polygonAnchorPointPerimeterInsetUnit | [enumeration MaplexUnit](CIMLabelPlacement.md#enumeration-maplexunit) | The unit of the inset value for perimeter polygon anchor points. 
 
 
 

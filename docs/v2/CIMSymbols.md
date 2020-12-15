@@ -172,6 +172,25 @@
 | Screen| 2| Screen. 
 | Multiply| 3| Multiply. 
 | Add| 4| Add. 
+| Color| 5| Color. 
+| ColorBurn| 6| Color Burn. 
+| ColorDodge| 7| Color Dodge. 
+| Darken| 8| Darken. 
+| Difference| 9| Difference 
+| Exclusion| 10| Exclusion 
+| HardLight| 11| Hard Light 
+| Hue| 12| Hue 
+| Lighten| 13| Lighten 
+| Luminosity| 14| Luminosity 
+| Normal| 15| Normal 
+| Overlay| 16| Overlay 
+| Saturation| 17| Saturation 
+| SoftLight| 18| Soft Light 
+| LinearBurn| 19| Linear Burn 
+| LinearDodge| 20| Linear Dodge 
+| LinearLight| 21| Linear Light 
+| PinLight| 22| Pin Light 
+| VividLight| 23| Vivid Light 
 
 
 
@@ -197,7 +216,8 @@
 |---------|--------|--------|
 | name | string | The name. 
 | CGAAttributeType | [enumeration CGAAttributeType](CIMSymbols.md#enumeration-cgaattributetype) | The CGA attribute type. 
-| value | any | The value. 
+| value | any | The value. Used when CGAAttributeType is Float, String and Boolean. 
+| values | [[any]]| The values in the array. Used when CGAAttributeType is Float_Array, String_Array and Boolean_Array. 
 
 
 
@@ -211,6 +231,9 @@
 | Float| 0| Float - Attribute is a numeric attribute that is a float value 
 | String| 1| String - Attribute is a string 
 | Boolean| 2| Boolean - Attribute is a boolean 
+| Float_Array| 3| Float_Array - Attribute is an array of float values 
+| String_Array| 4| String_Array - Attribute is an array of string values 
+| Boolean_Array| 5| Boolean_Array - Attribute is an array of boolean values 
 
 
 
@@ -259,6 +282,7 @@
 | fontFamilyName | string | The font family name of the font. e.g. Comic Sans. 
 | fontStyleName | string | The style name for the font family. e.g. Regular, Bold, or Italic. 
 | fontType | [enumeration FontType](CIMSymbols.md#enumeration-fonttype) | The font type. 
+| fontVariationSettings | [[CIMFontVariation]](CIMSymbols.md#cimfontvariation) | An array of CIM font variation objects, describing a particular instance of a variable font through the font axis tags and their values. The number of CIM font variations will correspond to the number of variation axes specified by the font. This is only used for variable fonts. 
 | scaleX | double | The width of the symbol without changing the height (or depth in 3D), as a ratio. 
 | symbol | [CIMPolygonSymbol](CIMSymbols.md#cimpolygonsymbol) | The polygon symbol that is used to renderer the marker. 
 | verticalOrientation3D | boolean | A value indicating whether the marker stands a marker upright as though locked in place. The marker can be viewed from all angles. 
@@ -458,6 +482,22 @@
 
 
 
+## CIMFontVariation
+#### Represents a font variation tag name and value. This is sometimes referred to as a variation-axis tag and variation-axis value. 
+
+
+### CIMFontVariation 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| tagName | string | The font variation tag name. This is a four letter identifier for a particular axis of variation, specified in the font. 
+| value | double | The numeric value representing a particular font variation value. 
+
+
+
+
+
+
 ## CIMGeometricEffectAddControlPoints
 #### Represents the add control points geometric effect. Dynamically adds geometry control points to a feature to dictate the placement of markers or other effect properties that leverage control points. Control points are placed at angles or deflection based on the AngleTolerance value. 
 
@@ -530,6 +570,30 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | size | double | The distance from the feature. This distance is either from the edge of the marker, the edge of the stroke or the edge of the polygon outline. 
+
+
+
+
+
+
+## CIMGeometricEffectCircularSector
+#### Represents the circular sector geometric effect which creates a circular sector of a specified radius and start/end angles originating from a point feature. 
+
+
+### CIMGeometricEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| primitiveName | string | The primitive name. 
+
+
+### CIMGeometricEffectCircularSector 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| startAngle | double | The start angle of the circular sector. The angle is calculated in a counterclockwise manner with 0 degrees equal to due east. 
+| endAngle | double | The end angle of the circular sector. The angle is calculated in a counterclockwise manner with 0 degrees equal to due east. 
+| radius | double | The radius of the circular sector. 
 
 
 
@@ -1384,6 +1448,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | primitiveName | string | The primitive name. 
+| placePerPart | boolean | A value indicating whether to consider individual geometry parts or the whole geometry. 
 
 
 ### CIMMarkerStrokePlacement 
@@ -1426,6 +1491,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | primitiveName | string | The primitive name. 
+| placePerPart | boolean | A value indicating whether to consider individual geometry parts or the whole geometry. 
 
 
 ### CIMMarkerStrokePlacement 
@@ -1466,6 +1532,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | primitiveName | string | The primitive name. 
+| placePerPart | boolean | A value indicating whether to consider individual geometry parts or the whole geometry. 
 
 
 ### CIMMarkerStrokePlacement 
@@ -1503,6 +1570,36 @@
 
 
 
+## CIMMarkerPlacementAroundPolygon
+#### Represents marker placement around polygon which places a marker on a specific position on the polygon outline. 
+
+
+### CIMMarkerPlacement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| primitiveName | string | The primitive name. 
+| placePerPart | boolean | A value indicating whether to consider individual geometry parts or the whole geometry. 
+
+
+### CIMMarkerFillPlacement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMMarkerPlacementAroundPolygon 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| position | [enumeration PlacementAroundPolygonPosition](CIMSymbols.md#enumeration-placementaroundpolygonposition) | The position of the marker around the polygon. 
+| offset | double | The offset from the polygon edge. Negative numbers offset toward the inside of the polygon. 
+
+
+
+
+
+
 ## CIMMarkerPlacementAtExtremities
 #### Represents marker placement at extremities which places markers at only one or both endpoints of a line. 
 
@@ -1512,6 +1609,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | primitiveName | string | The primitive name. 
+| placePerPart | boolean | A value indicating whether to consider individual geometry parts or the whole geometry. 
 
 
 ### CIMMarkerStrokePlacement 
@@ -1543,6 +1641,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | primitiveName | string | The primitive name. 
+| placePerPart | boolean | A value indicating whether to consider individual geometry parts or the whole geometry. 
 
 
 ### CIMMarkerStrokePlacement 
@@ -1575,6 +1674,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | primitiveName | string | The primitive name. 
+| placePerPart | boolean | A value indicating whether to consider individual geometry parts or the whole geometry. 
 
 
 ### CIMMarkerStrokePlacement 
@@ -1608,6 +1708,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | primitiveName | string | The primitive name. 
+| placePerPart | boolean | A value indicating whether to consider individual geometry parts or the whole geometry. 
 
 
 ### CIMMarkerFillPlacement 
@@ -1645,6 +1746,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | primitiveName | string | The primitive name. 
+| placePerPart | boolean | A value indicating whether to consider individual geometry parts or the whole geometry. 
 
 
 ### CIMMarkerStrokePlacement 
@@ -1676,6 +1778,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | primitiveName | string | The primitive name. 
+| placePerPart | boolean | A value indicating whether to consider individual geometry parts or the whole geometry. 
 
 
 ### CIMMarkerStrokePlacement 
@@ -1708,6 +1811,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | primitiveName | string | The primitive name. 
+| placePerPart | boolean | A value indicating whether to consider individual geometry parts or the whole geometry. 
 
 
 ### CIMMarkerFillPlacement 
@@ -2086,6 +2190,22 @@
 | outlineSymbol | [CIMLineSymbol](CIMSymbols.md#cimlinesymbol) | The line symbol that is applied to outline of the whole pie chart. 
 
 
+
+
+
+### Enumeration: PlacementAroundPolygonPosition
+#### Options for how markers are placed in a uniform grid or randomly. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Top| 0| The marker is placed above the polygon. 
+| Bottom| 1| The marker is placed below the polygon. 
+| Left| 2| The marker is placed on the left of the polygon. 
+| Right| 3| The marker is placed on the right of the polygon. 
+| TopLeft| 4| The marker is placed on the upper left side of the polygon. 
+| TopRight| 5| The marker is placed on the upper right side of the polygon. 
+| BottomLeft| 6| The marker is placed on the lower left side of the polygon. 
+| BottomRight| 7| The marker is placed on the lower right side of the polygon. 
 
 
 
@@ -2632,6 +2752,7 @@
 | fontFamilyName | string | The font family name of the font. e.g. Comic Sans. 
 | fontStyleName | string | The style name for the font family. e.g. Regular, Bold, or Italic. 
 | fontType | [enumeration FontType](CIMSymbols.md#enumeration-fonttype) | The type of font that the font family/style name reference. 
+| fontVariationSettings | [[CIMFontVariation]](CIMSymbols.md#cimfontvariation) | An array of CIM font variation objects, describing a particular instance of a variable font through the font axis tags and their values. The number of CIM font variations will correspond to the number of variation axes specified by the font. This is only used for variable fonts. 
 | glyphRotation | double | An additional rotation that is applied to the individual glyphs contained in the text. This is applied to the individual glyphs whereas Angle, AngleX and AngleY are affect how the entire text string is oriented. 
 | haloSize | double | The size of the halo that extends beyond the symbol shape. 
 | haloSymbol | [CIMPolygonSymbol](CIMSymbols.md#cimpolygonsymbol) | The polygon symbol that is used to draw the halo for a text symbol. 

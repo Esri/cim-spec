@@ -82,13 +82,14 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
-| searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
+| charts | [[CIMChart]](CIMCharts.md#cimchart) | Identifier the layer's charts. 
+| searchable | boolean | A value indicating whether or not this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
+| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 
 
 ### CIMStandaloneTableContainer 
@@ -186,13 +187,14 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
-| searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
+| charts | [[CIMChart]](CIMCharts.md#cimchart) | Identifier the layer's charts. 
+| searchable | boolean | A value indicating whether or not this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
+| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 
 
 ### CIMNetworkDatasetLayerDefinition 
@@ -303,6 +305,22 @@
 
 
 
+## CIMNetworkTraceConfiguration
+#### Represents a Trace Configuration. 
+
+
+### CIMNetworkTraceConfiguration 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name of trace configuration. 
+| ID | string | Global id of trace configuration. 
+
+
+
+
+
+
 ## CIMTraceNetworkLayer
 #### Represents a trace network layer. 
 
@@ -342,13 +360,14 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
-| searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
+| charts | [[CIMChart]](CIMCharts.md#cimchart) | Identifier the layer's charts. 
+| searchable | boolean | A value indicating whether or not this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
+| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 
 
 ### CIMTraceNetworkLayerDefinition 
@@ -361,6 +380,7 @@
 | systemJunctionsLayer | string | The path to the junction layer. 
 | dirtyAreaLayer | string | The path to the dirty area layer. 
 | connectivityAssociationSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol used to draw the connectivity associations of the trace network. 
+| activeTraceConfigurations | [[CIMNetworkTraceConfiguration]](CIMNetworkLayers.md#cimnetworktraceconfiguration) | The active trace configurations. 
 
 
 
@@ -406,13 +426,14 @@
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
-| charts | [[CIMChart]](CIMLayer.md#cimchart) | Identifier the layer's charts. 
-| searchable | boolean | A value indicating whether or not to this layer should be included in the search. This property is honored only by layers that support search. 
+| charts | [[CIMChart]](CIMCharts.md#cimchart) | Identifier the layer's charts. 
+| searchable | boolean | A value indicating whether or not this layer should be included in the search. This property is honored only by layers that support search. 
 | refreshRate | double | The amount of time to wait between refreshing the layer. 
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
 | showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
+| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 
 
 ### CIMUtilityNetworkLayerDefinition 
@@ -427,6 +448,7 @@
 | connectivityAssociationSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol used to draw the connectivity associations of the utility network. 
 | structuralAttachmentAssociationSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol used to draw the structural attachment associations of the utility network. 
 | containerAssociationSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol used to draw the container associations of the utility network. 
+| activeTraceConfigurations | [[CIMNetworkTraceConfiguration]](CIMNetworkLayers.md#cimnetworktraceconfiguration) | The active trace configurations. 
 
 
 

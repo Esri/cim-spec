@@ -443,18 +443,22 @@
 | useFractionCharacters | boolean | A value indicating whether fractional characters should be used. 
 | zeroPoint | [Point](ExternalReferences.md#point) | The zero location for the scale bar. 
 | computeAtCenter | boolean | A value indicating whether to compute the scale at map center. 
+| displayFirstOutside | boolean | A value indicating whether to display the first numeric value outside the bar. 
+| displayLastOutside | boolean | A value indicating whether to display the last numeric value outside the bar. 
 
 
 ### CIMScaleMarks 
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| divisionMarkHeight | double | The division marker height value. 
-| divisionMarkSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The division marker symbol. 
-| markFrequency | [enumeration ScaleBarFrequency](CIMLayout.md#enumeration-scalebarfrequency) | The division marker frequency. 
-| markPosition | [enumeration ScaleBarVerticalPosition](CIMLayout.md#enumeration-scalebarverticalposition) | The division marker position. 
-| subdivisionMarkHeight | double | The subdivision marker height. 
-| subdivisionMarkSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The subdivision marker symbol. 
+| divisionMarkHeight | double | The division mark height value. 
+| divisionMarkSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The division mark line symbol. 
+| markFrequency | [enumeration ScaleBarFrequency](CIMLayout.md#enumeration-scalebarfrequency) | The division mark frequency. 
+| markPosition | [enumeration ScaleBarVerticalPosition](CIMLayout.md#enumeration-scalebarverticalposition) | The division mark position. 
+| subdivisionMarkHeight | double | The subdivision mark height. 
+| subdivisionMarkSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The subdivision mark line symbol. 
+| midpointMarkHeight | double | The midpoint mark height. 
+| midpointMarkSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The midpoint mark line symbol. 
 
 
 ### CIMDoubleFillScaleBar 
@@ -1329,6 +1333,7 @@
 | AdjustColumns| 1| Adjust the number of columns within the frame. 
 | AdjustColumnsAndSize| 2| Adjust the number of columns and size of the text. 
 | AdjustFrame| 3| Adjust the size of the legend frame. 
+| ManualColumns| 4| Adjust the columns manually. 
 
 
 
@@ -2553,6 +2558,73 @@
 
 
 
+## CIMReportLayoutPageSection
+#### Represents a layout supplemental page section of a report. 
+
+
+### CIMElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| anchor | [enumeration Anchor](CIMLayout.md#enumeration-anchor) | The anchor position of the element. 
+| locked | boolean | A value indicating whether the element is locked. Each element in the contents pane has a lock icon. If the icon is shown as locked, you can not select that feature in the layout using the select tool. 
+| name | string | The name of the element. 
+| visible | boolean | A value indicating whether the element is visible. 
+| rotation | double | The rotation of the element. 
+| rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
+| lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+
+
+### CIMFrameElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| frame | [Polygon](ExternalReferences.md#polygon) | The geometry of a frame for an element. 
+| graphicFrame | [CIMGraphicFrame](CIMGraphics.md#cimgraphicframe) | The graphic symbology of an element's frame. 
+
+
+### CIMGroupElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMElementContainer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
+
+
+### CIMReportSectionElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| autoSize | boolean | A value indicating whether the section height will grow and shrink to fit the content of the section. 
+| elementFieldProperties | [[CIMReportElementFieldProperties]](CIMLayout.md#cimreportelementfieldproperties) | The field properties that will be applied to the elements. 
+| excludePageNumberPages | string | The comma delimited list of pages to exclude the page number from. 
+| excludeSectionPages | string | The comma delimited list of pages to exclude the section from. 
+| startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
+
+
+### CIMReportPageSection 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMReportLayoutPageSection 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| layoutURI | string | The layout URI. 
+
+
+
+
+
+
 ## CIMReportPageFooter
 #### Represents a page footer in a report. 
 
@@ -2664,6 +2736,66 @@
 
 
 ### CIMReportPageHeader 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+
+
+
+
+## CIMReportPageSection
+#### Represents a supplemental page section of a report. 
+
+
+### CIMElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| anchor | [enumeration Anchor](CIMLayout.md#enumeration-anchor) | The anchor position of the element. 
+| locked | boolean | A value indicating whether the element is locked. Each element in the contents pane has a lock icon. If the icon is shown as locked, you can not select that feature in the layout using the select tool. 
+| name | string | The name of the element. 
+| visible | boolean | A value indicating whether the element is visible. 
+| rotation | double | The rotation of the element. 
+| rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
+| lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+
+
+### CIMFrameElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| frame | [Polygon](ExternalReferences.md#polygon) | The geometry of a frame for an element. 
+| graphicFrame | [CIMGraphicFrame](CIMGraphics.md#cimgraphicframe) | The graphic symbology of an element's frame. 
+
+
+### CIMGroupElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMElementContainer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
+
+
+### CIMReportSectionElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| autoSize | boolean | A value indicating whether the section height will grow and shrink to fit the content of the section. 
+| elementFieldProperties | [[CIMReportElementFieldProperties]](CIMLayout.md#cimreportelementfieldproperties) | The field properties that will be applied to the elements. 
+| excludePageNumberPages | string | The comma delimited list of pages to exclude the page number from. 
+| excludeSectionPages | string | The comma delimited list of pages to exclude the section from. 
+| startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
+
+
+### CIMReportPageSection 
 
 |Property | Type | Description | 
 |---------|--------|--------|
@@ -2813,6 +2945,8 @@
 | AdjustDivisions| 1| Adjust the number of divisions. 
 | AdjustDivisionAndDivisions| 2| Adjust the division value and number of divisions. 
 | AdjustFrame| 3| Adjust the size of the scale bar frame. 
+| FixedWidth| 4| Preserve the width of the scale bar in page units. 
+| FixedHeight| 5| Preserve the total distance shown in the scale bar. 
 
 
 
@@ -2828,6 +2962,7 @@
 | DivisionsAndFirstMidpoint| 4| Divisions and first mid point. 
 | DivisionsAndFirstSubdivisions| 5| Divisions and first subdivisions. 
 | DivisionsAndSubdivisions| 6| Divisions and subdivisions. 
+| DivisionsFirstSubdivisionFirstMidpoint| 7| Divisions first subdivision and first midpoint. 
 
 
 
@@ -2850,6 +2985,7 @@
 | BelowLeft| 11| Below the scale bar and to the left. 
 | BelowRight| 12| Below the scale bar and to the right. 
 | BelowEnds| 13| Below the scale bar and on the ends. 
+| OnBarAfterFirstDivision| 14| On the scale bar after the first division. 
 
 
 
@@ -2863,6 +2999,8 @@
 | On| 2| On. 
 | Bottom| 3| Bottom. 
 | Below| 4| Below. 
+| OnRight| 5| On right. 
+| OnLeft| 6| On left. 
 
 
 
@@ -2924,18 +3062,22 @@
 | useFractionCharacters | boolean | A value indicating whether fractional characters should be used. 
 | zeroPoint | [Point](ExternalReferences.md#point) | The zero location for the scale bar. 
 | computeAtCenter | boolean | A value indicating whether to compute the scale at map center. 
+| displayFirstOutside | boolean | A value indicating whether to display the first numeric value outside the bar. 
+| displayLastOutside | boolean | A value indicating whether to display the last numeric value outside the bar. 
 
 
 ### CIMScaleMarks 
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| divisionMarkHeight | double | The division marker height value. 
-| divisionMarkSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The division marker symbol. 
-| markFrequency | [enumeration ScaleBarFrequency](CIMLayout.md#enumeration-scalebarfrequency) | The division marker frequency. 
-| markPosition | [enumeration ScaleBarVerticalPosition](CIMLayout.md#enumeration-scalebarverticalposition) | The division marker position. 
-| subdivisionMarkHeight | double | The subdivision marker height. 
-| subdivisionMarkSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The subdivision marker symbol. 
+| divisionMarkHeight | double | The division mark height value. 
+| divisionMarkSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The division mark line symbol. 
+| markFrequency | [enumeration ScaleBarFrequency](CIMLayout.md#enumeration-scalebarfrequency) | The division mark frequency. 
+| markPosition | [enumeration ScaleBarVerticalPosition](CIMLayout.md#enumeration-scalebarverticalposition) | The division mark position. 
+| subdivisionMarkHeight | double | The subdivision mark height. 
+| subdivisionMarkSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The subdivision mark line symbol. 
+| midpointMarkHeight | double | The midpoint mark height. 
+| midpointMarkSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The midpoint mark line symbol. 
 
 
 ### CIMScaleLine 
@@ -3029,18 +3171,22 @@
 | useFractionCharacters | boolean | A value indicating whether fractional characters should be used. 
 | zeroPoint | [Point](ExternalReferences.md#point) | The zero location for the scale bar. 
 | computeAtCenter | boolean | A value indicating whether to compute the scale at map center. 
+| displayFirstOutside | boolean | A value indicating whether to display the first numeric value outside the bar. 
+| displayLastOutside | boolean | A value indicating whether to display the last numeric value outside the bar. 
 
 
 ### CIMScaleMarks 
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| divisionMarkHeight | double | The division marker height value. 
-| divisionMarkSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The division marker symbol. 
-| markFrequency | [enumeration ScaleBarFrequency](CIMLayout.md#enumeration-scalebarfrequency) | The division marker frequency. 
-| markPosition | [enumeration ScaleBarVerticalPosition](CIMLayout.md#enumeration-scalebarverticalposition) | The division marker position. 
-| subdivisionMarkHeight | double | The subdivision marker height. 
-| subdivisionMarkSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The subdivision marker symbol. 
+| divisionMarkHeight | double | The division mark height value. 
+| divisionMarkSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The division mark line symbol. 
+| markFrequency | [enumeration ScaleBarFrequency](CIMLayout.md#enumeration-scalebarfrequency) | The division mark frequency. 
+| markPosition | [enumeration ScaleBarVerticalPosition](CIMLayout.md#enumeration-scalebarverticalposition) | The division mark position. 
+| subdivisionMarkHeight | double | The subdivision mark height. 
+| subdivisionMarkSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The subdivision mark line symbol. 
+| midpointMarkHeight | double | The midpoint mark height. 
+| midpointMarkSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The midpoint mark line symbol. 
 
 
 ### CIMSingleFillScaleBar 

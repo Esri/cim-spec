@@ -12,6 +12,7 @@
 | name | string | Name of variable list. 
 | iconData | string | Base64 encoded icon. 
 | author | string | The name of the author of the variable list. 
+| tags | string | The tags for the variable list. Tags are keywords or short phrases that facilitate discovery of the variable list. Separate terms with commas. 
 | dataSource | string | Data source of the variable list. Structure of the value is TYPE;COUNTRY_INFO;LOCAL_DATA_INFO where TYPE can be ONLINE, LOCAL, or CUSTOM. COUNTRY_INFO is country_id{|hierarchy}. For example, US|census or US. LOCAL_DATA_INFO is ID of local dataset. For example, USA_ESRI_2019. For example, for local US 2019 dataset it will be: "LOCAL;;USA_ESRI_2019". If online US data source is used, it may be "ONLINE;US|census;". Can be value of baDataSource GP GPEnvironment variable. https://pro.arcgis.com/en/pro-app/tool-reference/environment-settings/ba-data-source.htm. 
 | creationDate | [TimeInstant](ExternalReferences.md#timeinstant) | Creation date of the variable list. 
 | lastRevisionDate | [TimeInstant](ExternalReferences.md#timeinstant) | Last revision date of the variable list. 

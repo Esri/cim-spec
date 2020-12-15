@@ -267,6 +267,9 @@
 | mapDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The map definitions of the layout document. 
 | tableDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The table definitions of the layout document. 
 | layoutDefinition | [CIMLayout](CIMLayout.md#cimlayout) | The layout definition of the layout document. 
+| linkChartDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The link chart definitions of the layout document. 
+| timelineDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The timeline definitions of the layout document. 
+| videoDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The video definitions of the layout document. 
 
 
 
@@ -294,6 +297,8 @@
 | binaryReferences | [[CIMBinaryReference]](CIMDocument.md#cimbinaryreference) | The binary references of the document. 
 | tableDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The table definitions of the map document. 
 | linkChartDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The link chart definitions of the map document. 
+| timelineDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The timeline definitions of the map document. 
+| videoDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The video definitions of the map document. 
 
 
 
@@ -404,7 +409,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | catalogPath | string | Catalog path of the project item. 
-| pathHint | string | The path hint of the project item. 
+| pathHint | string | The path hint of the project item. Contains the absolute path of the item. Used as a fallback in case the relative path cannot be resolved. 
 | itemType | string | The item type of the project item. 
 | name | string | The name of the project item. 
 | propertiesXML | string | Properties of the item as XML. 
