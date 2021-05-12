@@ -272,6 +272,8 @@
 | None| 0| No data transformations. 
 | Logarithmic| 1| Apply logarithmic data transformation. 
 | SquareRoot| 2| Apply square root for data transformation. 
+| Inverse| 3| Apply inverse data transformation. 
+| BoxCox| 4| Apply Box-Cox data transformation. 
 
 
 
@@ -407,6 +409,7 @@
 | standardDeviationLineSymbolProperties | [CIMChartLineSymbolProperties](CIMCharts.md#cimchartlinesymbolproperties) | The line symbol for the standard deviation. 
 | showComparisonDistribution | boolean | A value indicating whether to show a comparison distribution line overlay for the histogram chart. 
 | dataTransformationType | [enumeration ChartDataTransformationType](CIMCharts.md#enumeration-chartdatatransformationtype) | The type of a data transformation to apply before calculating histogram bins and counts. 
+| dataTransformationParameters | [double] | Parameters of a data transformation. 
 | distributionLineSymbolProperties | [CIMChartLineSymbolProperties](CIMCharts.md#cimchartlinesymbolproperties) | The line symbol for the comparison distribution. 
 | countField | string | A raster attribute table count field in order to calculate a histogram and statistics for fields that have to be adjusted for counts. 
 
@@ -699,6 +702,7 @@
 |---------|--------|--------|
 | probabilityPlotType | [enumeration ChartProbabilityPlotType](CIMCharts.md#enumeration-chartprobabilityplottype) | The type of a probability plot. 
 | dataTransformationType | [enumeration ChartDataTransformationType](CIMCharts.md#enumeration-chartdatatransformationtype) | The type of data transformation to apply before calculating Normal Q-Q Plot. 
+| dataTransformationParameters | [double] | Parameters of a data transformation. 
 | showReferenceLine | boolean | A value indicating whether to show a reference line overlay for the probability plot. 
 | markerSymbolProperties | [CIMChartMarkerSymbolProperties](CIMCharts.md#cimchartmarkersymbolproperties) | The marker symbol properties of the probability plot series. 
 | referenceLineSymbolProperties | [CIMChartLineSymbolProperties](CIMCharts.md#cimchartlinesymbolproperties) | The line symbol properties of the probability plot series' reference line. 
@@ -757,6 +761,17 @@
 
 
 
+### Enumeration: ChartSPMDiagonalOption
+#### Scatter plot matrix diagonal display options. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| None| 0| Display nothing in the diagonal. 
+| Histogram| 1| Display the histogram in the diagonal. 
+| FieldName| 2| Display the field names in the diagonal. 
+
+
+
 ### Enumeration: ChartSPMDisplayOption
 #### Scatter plot matrix display options. 
 
@@ -767,6 +782,18 @@
 | ScatterPlots| 2| Display the mirrored scatter plots in the other half. 
 | RSquared| 3| Display the R squared values in the other half. 
 | PearsonsR| 4| Display the Pearson's R values in the other half. 
+
+
+
+### Enumeration: ChartSPMSortByType
+#### Scatter plot matrix sort-by type. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| RSquared| 0| Sort by R Squared value. 
+| PearsonsR| 1| Sort by Pearson's R value. 
+| Alphabetical| 2| Sort by alphabetical value. 
+| Custom| 3| Sort by custom order. 
 
 
 
@@ -801,9 +828,9 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| showHistograms | boolean | A value indicating whether to show histograms for all fields. 
+| showHistograms | boolean | A value indicating whether to show histograms for all fields. Deprecated at 2.8. Use DiagonalOption instead. 
 | showTrendLine | boolean | A value indicating whether to show a trend line overlay for all scatter plots. 
-| showAsRSquared | boolean | A value indicating whether show scatter plots as R squared values. 
+| showAsRSquared | boolean | A value indicating whether show scatter plots as R squared values. Deprecated at 2.8. Use LowerLeftDisplayOption instead. 
 | fieldLabels | [string] | The labels for scatter plot and histogram series' axes. 
 | scatterMarkerSymbolProperties | [CIMChartMarkerSymbolProperties](CIMCharts.md#cimchartmarkersymbolproperties) | The marker symbol properties of scatter plot series. 
 | trendLineSymbolProperties | [CIMChartLineSymbolProperties](CIMCharts.md#cimchartlinesymbolproperties) | The line symbol properties of the scatter plot series' trend line. 
@@ -811,7 +838,15 @@
 | selectedMiniPlot | long | The index of the selected mini plot (-1 stands for non selected, -2 for uninitialized). 
 | RSquareText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text symbol properties for the RSquare. 
 | selectionLineSymbolProperties | [CIMChartLineSymbolProperties](CIMCharts.md#cimchartlinesymbolproperties) | The line symbol properties of the selection line for the mini plot. 
-| displayOption | [enumeration ChartSPMDisplayOption](CIMCharts.md#enumeration-chartspmdisplayoption) | The display option for the other half of the scatter plot matrix. 
+| displayOption | [enumeration ChartSPMDisplayOption](CIMCharts.md#enumeration-chartspmdisplayoption) | The display option for the upper right of the scatter plot matrix. 
+| lowerLeftDisplayOption | [enumeration ChartSPMDisplayOption](CIMCharts.md#enumeration-chartspmdisplayoption) | The display option for the lower left of the scatter plot matrix. PreviewPlot currently is not supported in lower left. 
+| lowerLeftColorRamp | [ColorRamp](Types.md#colorramp) | The color ramp for the lower left when RSquared or Pearson's R is selected. 
+| lowerLeftBreakColors | [[CIMColor]](Types.md#cimcolor) | The color for each break in the lower left. 
+| upperRightColorRamp | [ColorRamp](Types.md#colorramp) | The color ramp for the upper right when RSquared or Pearson's R is selected. 
+| upperRightBreakColors | [[CIMColor]](Types.md#cimcolor) | The color for each break in the upper right. 
+| diagonalOption | [enumeration ChartSPMDiagonalOption](CIMCharts.md#enumeration-chartspmdiagonaloption) | The display option for the diagonal. 
+| sortByType | [enumeration ChartSPMSortByType](CIMCharts.md#enumeration-chartspmsortbytype) | The sort by type. 
+| sortDirection | [enumeration ChartSortDirection](CIMCharts.md#enumeration-chartsortdirection) | The direction type of sort order. 
 
 
 
@@ -858,6 +893,16 @@
 | bubbleMaximumSize | double | Maximum size of the bubbles. 
 
 
+
+
+
+### Enumeration: ChartSortDirection
+#### Chart sort direction. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Ascending| 0| Ascending sort. 
+| Descending| 1| Descending sort. 
 
 
 
@@ -937,6 +982,25 @@
 
 
 
+## CIMChartTemporalProfileCCDCArguments
+#### Represents arguments to be used to plot change detection over time. 
+
+
+### CIMChartTemporalProfileCCDCArguments 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| bands | [[CIMChartTemporalProfileBand]](CIMCharts.md#cimcharttemporalprofileband) | The bands to be used for change detection. 
+| temporalMaskBandIDs | [long] | The bandIDs for temporal masking. 
+| updatingFrequency | double | The frequency in years at which to update the time series model with new observations. 
+| chiSquaredThreshold | double | The chi squared statictic change probablity threshold. 
+| minimumAnomaly | long | The minimum number of consecutive anomaly observations that must occur before an event is considered a change. 
+
+
+
+
+
+
 ## CIMChartTemporalProfileDimensionValue
 #### Represents a dimension value for a given variable to be plotted over time. 
 
@@ -971,6 +1035,32 @@
 
 
 
+
+## CIMChartTemporalProfileLandTrendRArguments
+#### Represents arguments to be used to plot change detection over time. 
+
+
+### CIMChartTemporalProfileLandTrendRArguments 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| band | [CIMChartTemporalProfileBand](CIMCharts.md#cimcharttemporalprofileband) | The the band to use for segmenting the pixel value trajectories over time. 
+| snappingDate | string | The date in the format MM-DD used to select a slice for each year. 
+| maximumSegments | long | The maximum number of segments to be fitted to the time series for each pixel. 
+| vertexCountOvershoot | long | The the number of additional vertices beyond MaximumSegments + 1 that can be used to fit the model during the initial stage of identifying vertices. 
+| spikeThreshold | double | The threshold to use for dampening spikes or anomalies in the pixel value trajectory. 
+| recoveryThreshold | double | The recovery threshold value in years. 
+| preventOneYearRecovery | boolean | A value indicating whether segments that exhibit a one year recovery will be excluded. 
+| recoveryIncreasingTrend | boolean | A value indicating whether the recovery has an increasing (positive) trend. 
+| outputOtherBands | boolean | A value indicating whether other bands will be included in the segmentation process. 
+| minimumObservations | long | The minimum number of valid observations required to perform fitting. 
+| bestModelProportion | double | The best model proportion value. 
+| PValueThreshold | double | The p-value threshold for a model to be selected. 
+
+
+
+
+
 ### Enumeration: ChartTemporalProfilePlotType
 #### Represents the temporal profile plot type. 
 
@@ -981,6 +1071,8 @@
 | DimensionValues| 2| Plot of a variable with specific dimension values over time at multiple locations. 
 | Variable| 3| Plot of one variable over time at multiple locations. 
 | Band| 4| Plot of one band of a variable over time at multiple locations. 
+| CCDC| 5| Plot of the result of CCDC analysis over one or more bands. 
+| LandTrendR| 6| Plot of the result of LandTrendR analysis over one band. 
 
 
 
@@ -1031,6 +1123,8 @@
 | trendOrder | long | The order of the equation when a polynomial or Fourier fit type is used. 
 | showTrendEquation | boolean | A value indicating whether or not to have a trend equation overlay. 
 | spatialAggregationType | [enumeration ChartAggregationType](CIMCharts.md#enumeration-chartaggregationtype) | The spatial aggregation type to be used to calculate cell values. 
+| CCDCArguments | [CIMChartTemporalProfileCCDCArguments](CIMCharts.md#cimcharttemporalprofileccdcarguments) | The CCDC options. 
+| landTrendRArguments | [CIMChartTemporalProfileLandTrendRArguments](CIMCharts.md#cimcharttemporalprofilelandtrendrarguments) | The LandTrendR options. 
 
 
 

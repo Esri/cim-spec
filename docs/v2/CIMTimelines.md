@@ -30,6 +30,9 @@
 | honorTimeSlider | boolean | A value indicating whether the timeline syncs with the map time slider. 
 | expanded | boolean | A value indicating whether the timeline is expanded in the contents pane. 
 | swimlanes | [[CIMTimelineSwimlane]](CIMTimelines.md#cimtimelineswimlane) | The timeline swimlanes. 
+| honorSelection | boolean | A value indicating whether the items in the timeline are visible based on the map selection. 
+| honorExtent | boolean | A value indicating whether the items in the timeline are visible based on the map extent. 
+| honorRange | boolean | A value indicating whether the items in the timeline are visible based on range. 
 
 
 

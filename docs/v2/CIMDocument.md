@@ -374,6 +374,7 @@
 | layerRanges | [[CIMLayerRange]](CIMVectorLayers.md#cimlayerrange) | The layer ranges of the view. 
 | rangeSliderSettings | [CIMSliderSettings](CIMMap.md#cimslidersettings) | The range slider settings of the view. 
 | timeSliderSettings | [CIMSliderSettings](CIMMap.md#cimslidersettings) | The time slider settings of the view. 
+| floorFilterSettings | [CIMFloorFilterSettings](CIMMap.md#cimfloorfiltersettings) | The floor filter settings of the view. 
 | sceneDrawingMode | [enumeration SceneDrawingMode](CIMDocument.md#enumeration-scenedrawingmode) | The scene's drawing mode. 
 | fieldOfView | double | The scene's field-of-view in degrees (value must be between 35 and 70). Only used when the scene is in Perspective draw mode. 
 | pauseDrawing | boolean | A value indicating whether drawing is in paused state for the view. 
@@ -528,8 +529,9 @@
 | fieldFormat | [enumeration StatisticalReportFieldFormat](CIMDocument.md#enumeration-statisticalreportfieldformat) | How to display values of the field in reports. 
 | vintage | string | The description of vintage of the data (For example, "US2018 Q4"). 
 | script | string | The additional attribute for 'Script' summary type that defines script which should be calculated. 
-| scriptLanguage | [enumeration LabelExpressionEngine](CIMLabelPlacement.md#enumeration-labelexpressionengine) | The additional attribute for 'Script' summary type that defines script language used by 'Script' attribute. 
+| scriptLanguage | [enumeration LabelExpressionEngine](CIMLabelPlacement.md#enumeration-labelexpressionengine) | The additional attribute for 'Script' summary type that defines script language used by 'Script' attribute. Currently only Python is supported. 
 | usedFields | [string] | The additional attribute for 'Script' summary type that defines another fields used by script. These may include featureclass fields (even non-existing in calculator?) and another scripts. 
+| showInDataBrowser | boolean | A value indicating whether the field will be shown in the Data Browser control in ArcGIS Pro. 
 
 
 
@@ -590,6 +592,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name of the variable. 
+| showInDataBrowser | boolean | A value indicating whether the variable will be shown in the Data Browser control in ArcGIS Pro. 
 
 
 

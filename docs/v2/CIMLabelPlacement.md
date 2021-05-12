@@ -465,6 +465,7 @@
 | minimumNumberOfCharsPerLine | long | The minimum number of characters per line. 
 | maximumNumberOfCharsPerLine | long | The maximum number of characters per line. 
 | separators | [[CIMMaplexStackingSeparator]](CIMLabelPlacement.md#cimmaplexstackingseparator) | The stacking separators. 
+| trimStackingSeparators | boolean | A value indicating whether leading and trailing stacking separators are trimmed from the label string. 
 
 
 

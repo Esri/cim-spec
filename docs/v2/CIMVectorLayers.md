@@ -79,6 +79,7 @@
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
+| allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -96,7 +97,8 @@
 | htmlPopupFormat | [CIMHtmlPopupFormat](CIMVectorLayers.md#cimhtmlpopupformat) | The HTML pop-ups format. 
 | isFlattened | boolean | A value indicating whether the layer is flattened. 
 | selectable | boolean | A value indicating whether the layer is selectable. 
-| selectionColor | [Color](Types.md#color) | The selection color. 
+| selectionColor | [Color](Types.md#color) | The selection color. For polygons, this is used as the outline color. 
+| polygonSelectionFillColor | [Color](Types.md#color) | The selection fill color. Only used for polygons. 
 | selectionSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The selection symbol. 
 | useSelectionSymbol | boolean | A value indicating whether to use the selection symbol. 
 | pageDefinition | [CIMPageDefinition](CIMVectorLayers.md#cimpagedefinition) | The page definition which allows for using current map series page to filter features. 
@@ -387,6 +389,7 @@
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
+| allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
 
 
 ### CIMBuildingDisciplineLayerDefinition 
@@ -448,6 +451,7 @@
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
+| allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
 
 
 ### CIMObject3DRenderingFilters 
@@ -566,6 +570,7 @@
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
+| allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -583,7 +588,8 @@
 | htmlPopupFormat | [CIMHtmlPopupFormat](CIMVectorLayers.md#cimhtmlpopupformat) | The HTML pop-ups format. 
 | isFlattened | boolean | A value indicating whether the layer is flattened. 
 | selectable | boolean | A value indicating whether the layer is selectable. 
-| selectionColor | [Color](Types.md#color) | The selection color. 
+| selectionColor | [Color](Types.md#color) | The selection color. For polygons, this is used as the outline color. 
+| polygonSelectionFillColor | [Color](Types.md#color) | The selection fill color. Only used for polygons. 
 | selectionSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The selection symbol. 
 | useSelectionSymbol | boolean | A value indicating whether to use the selection symbol. 
 | pageDefinition | [CIMPageDefinition](CIMVectorLayers.md#cimpagedefinition) | The page definition which allows for using current map series page to filter features. 
@@ -602,6 +608,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | barrierWeight | [enumeration BarrierWeight](CIMVectorLayers.md#enumeration-barrierweight) | The weight of features in this layer when considered as barriers to labeling. 
+| snappable | boolean | A value indicating whether or not geometries are snappable. 
 
 
 
@@ -671,6 +678,7 @@
 | endMarkerSymbol | [CIMPointSymbol](CIMSymbols.md#cimpointsymbol) | The symbol used for the end arrow. 
 | expression | string | The text expression for the style. 
 | expressionParserName | string | The text expression parser for the text expression for the style. 
+| expressionTitle | string | The human readable text title that describes the dimension expression. 
 | extendLineOnFit | boolean | A value indicating whether the dimension line will be extended to underline the text on inward dimensions. 
 | extensionLineOffset | double | The length of the extension line offset. 
 | extensionLineOption | [enumeration DimensionPartOptions](CIMVectorLayers.md#enumeration-dimensionpartoptions) | The extension line display options of the style. 
@@ -863,6 +871,13 @@
 | datasetType | [enumeration esriDatasetType](ExternalReferences.md#enumeration-esridatasettype) | The dataset type. 
 
 
+### CIMServiceDataConnectionProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| customParameters | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | Vendor specific parameters. 
+
+
 
 
 
@@ -958,6 +973,7 @@
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
+| allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -975,7 +991,8 @@
 | htmlPopupFormat | [CIMHtmlPopupFormat](CIMVectorLayers.md#cimhtmlpopupformat) | The HTML pop-ups format. 
 | isFlattened | boolean | A value indicating whether the layer is flattened. 
 | selectable | boolean | A value indicating whether the layer is selectable. 
-| selectionColor | [Color](Types.md#color) | The selection color. 
+| selectionColor | [Color](Types.md#color) | The selection color. For polygons, this is used as the outline color. 
+| polygonSelectionFillColor | [Color](Types.md#color) | The selection fill color. Only used for polygons. 
 | selectionSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The selection symbol. 
 | useSelectionSymbol | boolean | A value indicating whether to use the selection symbol. 
 | pageDefinition | [CIMPageDefinition](CIMVectorLayers.md#cimpagedefinition) | The page definition which allows for using current map series page to filter features. 
@@ -1044,6 +1061,7 @@
 | useSubtypeValue | boolean | A value indicating whether or not the SubtypeValue should be used. 
 | displayExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression information used for coming up with a string that represents a row or a feature. 
 | selectionSetURI | string | The URI of the selection set for the table. 
+| floorAwareTableProperties | [CIMFloorAwareTableProperties](CIMVectorLayers.md#cimfloorawaretableproperties) | Floor-aware properties for the layer/table used in floor filtering. 
 
 
 ### CIMFeatureTableDefinition 
@@ -1117,6 +1135,34 @@
 | searchMode | [enumeration DataSearchMode](CIMVectorLayers.md#enumeration-datasearchmode) | Search mode to use when searching for values in this field. 
 
 
+
+
+
+
+## CIMFloorAwareTableProperties
+#### Represents floor-aware properties for the layer/table used in floor filtering. 
+
+
+### CIMFloorAwareTableProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| floorFilterRank | [enumeration FloorFilterRank](CIMVectorLayers.md#enumeration-floorfilterrank) | Rank or "level" at which the layer/table participates in filtering for Indoors or floor-aware layers/tables. 
+| floorField | string | The name of the field that carries the floor value used for floor filtering. 
+
+
+
+
+
+### Enumeration: FloorFilterRank
+#### Represents the rank or "level" at which the layer participates in filtering for Indoors or floor-aware layers. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| None| 0| Does not participate in floor filtering. 
+| Site| 1| Layer is an Indoors Site layer and will be filtered according to the selected site. 
+| Facility| 2| Layer is an Indoors Facility layer and will be filtered according to the selected facility or facilities within the selected site. 
+| Level| 3| Layer is a "floor-aware" layer and will be filtered according to the selected level or levels within the selected site. 
 
 
 
@@ -1587,6 +1633,7 @@
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
+| allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
 
 
 ### CIMParcelFabricLayerDefinition 
@@ -1660,6 +1707,7 @@
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
+| allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
 
 
 ### CIMParcelLayerDefinition 
@@ -1714,6 +1762,23 @@
 
 
 
+## CIMPopupFieldDescription
+#### Represents a pop-up field description. 
+
+
+### CIMPopupFieldDescription 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| alias | string | The field alias. 
+| fieldName | string | The field name. 
+| numberFormat | [NumberFormat](Types.md#numberformat) | The number format. 
+
+
+
+
+
+
 ## CIMPopupInfo
 #### Represents pop-up info. 
 
@@ -1727,6 +1792,7 @@
 | mediaInfos | [[CIMMediaInfo]](Types.md#cimmediainfo) | The media infos. 
 | relatedRecordSortOrder | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The field name and the sort order by which the related records will be ordered. The items are defined by the related field name (Format: RelationshipName\\FieldName) as the Keys and the sort order (Enum: Asc, Desc) as the Values. 
 | gridLayout | [CIMPopupLayout](CIMVectorLayers.md#cimpopuplayout) | The grid layout for the media infos. 
+| fieldDescriptions | [[CIMPopupFieldDescription]](CIMVectorLayers.md#cimpopupfielddescription) | The pop-up field descriptions. 
 
 
 
@@ -1842,6 +1908,7 @@
 | useSubtypeValue | boolean | A value indicating whether or not the SubtypeValue should be used. 
 | displayExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression information used for coming up with a string that represents a row or a feature. 
 | selectionSetURI | string | The URI of the selection set for the table. 
+| floorAwareTableProperties | [CIMFloorAwareTableProperties](CIMVectorLayers.md#cimfloorawaretableproperties) | Floor-aware properties for the layer/table used in floor filtering. 
 
 
 ### CIMRasterTableDefinition 
@@ -2020,6 +2087,7 @@
 | useSubtypeValue | boolean | A value indicating whether or not the SubtypeValue should be used. 
 | displayExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression information used for coming up with a string that represents a row or a feature. 
 | selectionSetURI | string | The URI of the selection set for the table. 
+| floorAwareTableProperties | [CIMFloorAwareTableProperties](CIMVectorLayers.md#cimfloorawaretableproperties) | Floor-aware properties for the layer/table used in floor filtering. 
 
 
 ### CIMStandaloneTableDefinition 
@@ -2052,6 +2120,13 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+
+
+### CIMServiceDataConnectionProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| customParameters | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | Vendor specific parameters. 
 
 
 ### CIMStandardDataConnection 
@@ -2150,6 +2225,7 @@
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
+| allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -2167,7 +2243,8 @@
 | htmlPopupFormat | [CIMHtmlPopupFormat](CIMVectorLayers.md#cimhtmlpopupformat) | The HTML pop-ups format. 
 | isFlattened | boolean | A value indicating whether the layer is flattened. 
 | selectable | boolean | A value indicating whether the layer is selectable. 
-| selectionColor | [Color](Types.md#color) | The selection color. 
+| selectionColor | [Color](Types.md#color) | The selection color. For polygons, this is used as the outline color. 
+| polygonSelectionFillColor | [Color](Types.md#color) | The selection fill color. Only used for polygons. 
 | selectionSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The selection symbol. 
 | useSelectionSymbol | boolean | A value indicating whether to use the selection symbol. 
 | pageDefinition | [CIMPageDefinition](CIMVectorLayers.md#cimpagedefinition) | The page definition which allows for using current map series page to filter features. 
@@ -2529,6 +2606,13 @@
 |---------|--------|--------|
 
 
+### CIMServiceDataConnectionProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| customParameters | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | Vendor specific parameters. 
+
+
 ### CIMVectorTileDataConnection 
 
 |Property | Type | Description | 
@@ -2588,6 +2672,7 @@
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
+| allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
 
 
 ### CIMVectorTileLayerDefinition 
