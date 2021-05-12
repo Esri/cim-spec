@@ -77,6 +77,27 @@
 
 
 
+## CIMDateFormat
+#### Represents a standard date and time format. https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings. Examples: "MM/dd/yyyy" 06/12/2020 "dddd, dd MMMM yyyy" Friday, 12 June 2020 "dddd, dd MMMM yyyy HH:mm:ss" Friday, 12 June 2020 08:30:01 "MM/dd/yyyy HH:mm" 06/12/2020 08:30 "MM/dd/yyyy hh:mm tt" 06/12/2020 08:30 AM "MMMM dd" June 12 "hh:mm tt" 08:30 AM "HH:mm:ss" 08:30:06. 
+
+
+### CIMNumberFormat 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMDateFormat 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| format | string | The date format string. 
+
+
+
+
+
+
 ## CIMDirectionFormat
 #### Represents a direction format. 
 

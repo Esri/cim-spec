@@ -112,6 +112,115 @@
 
 
 
+## CIMAviationArrow
+#### Represents an individual arrow in CIMAviationNorthArrow. 
+
+
+### CIMAviationArrow 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| lineIndicatorTextSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The indicator text symbol for the arrow. 
+| lineSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The line symbol for the arrow. 
+| defaultPointSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The default point symbol for the arrow. 
+| positivePointSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The positive point symbol for the arrow. 
+| negativePointSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The negative point symbol for the arrow. 
+| enableArrow | boolean | A value indicating whether the arrow is enabled. 
+| enableLineIndicator | boolean | A value indicating whether the arrow's line indicator is enabled. 
+| arrowLength | double | The line length for the arrow, internally units will always be of type points. 
+| lineIndicatorText | string | The text for the line indicator text symbol. 
+
+
+
+
+
+
+## CIMAviationNorthArrow
+#### Represents a aviation north arrow which displays declination of true, grid and magnetic north. 
+
+
+### CIMElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| anchor | [enumeration Anchor](CIMLayout.md#enumeration-anchor) | The anchor position of the element. 
+| locked | boolean | A value indicating whether the element is locked. Each element in the contents pane has a lock icon. If the icon is shown as locked, you can not select that feature in the layout using the select tool. 
+| name | string | The name of the element. 
+| visible | boolean | A value indicating whether the element is visible. 
+| rotation | double | The rotation of the element. 
+| rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
+| lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+
+
+### CIMFrameElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| frame | [Polygon](ExternalReferences.md#polygon) | The geometry of a frame for an element. 
+| graphicFrame | [CIMGraphicFrame](CIMGraphics.md#cimgraphicframe) | The graphic symbology of an element's frame. 
+
+
+### CIMMapSurround 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| mapFrame | string | The map frame associated with the map surround. 
+
+
+### CIMNorthArrow 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| referenceLocation | [Point](ExternalReferences.md#point) | The reference location for a north arrow. 
+| calibrationAngle | double | The calibration angle for a north arrow. 
+
+
+### CIMAviationNorthArrow 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| date | [TimeInstant](ExternalReferences.md#timeinstant) | The date used when calculating declination using world magnetic model. 
+| declinationSpatialReference | [SpatialReference](ExternalReferences.md#spatialreference) | The spatial reference used for calculating declination, typically a UTM zone. 
+| GMAngle | [CIMDeclination](CIMLayout.md#cimdeclination) | The Grid Magnetic declination. 
+| gridConvergence | [CIMDeclination](CIMLayout.md#cimdeclination) | The Grid Convergence declination. 
+| trueNorthArrow | [CIMAviationArrow](CIMLayout.md#cimaviationarrow) | The true north arrow for aviation north arrow. 
+| magneticNorthArrow | [CIMAviationArrow](CIMLayout.md#cimaviationarrow) | The magnetic north arrow for the aviation north arrow. 
+| gridNorthArrow | [CIMAviationArrow](CIMLayout.md#cimaviationarrow) | The grid north arrow for the aviation north arrow. 
+| variation | [CIMAviationVariation](CIMLayout.md#cimaviationvariation) | The variation for the aviation north arrow. 
+| rateOfChangeTextSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The rate of change text symbol for the north arrow. 
+| displayVariationDate | boolean | A value indicating whether to display the variation date. 
+| displayRateOfChange | boolean | A value indicating whether to display the rate of change text. 
+| autoUpdate | boolean | A value indicating whether the north arrow auto updates. 
+| rateOfChangeText | string | The rate of change text dispalyed. 
+
+
+
+
+
+
+## CIMAviationVariation
+#### Represents the properties for the variation text which is displayed in aviation north arrow. 
+
+
+### CIMAviationVariation 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| variationTextSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The text symbol used for variation text in aviation north arrow. 
+| alignVariationToLine | boolean | A value indicating whether to align text to line or display on side. 
+| variationTextOnLeft | boolean | A value indicating whether the variation text will be displayed on the left side of aviation north arrow, if false will display on the right side. 
+| showYear | boolean | A value indicating whether to show the variation year in the variation text. 
+| showYearInParenthesis | boolean | A value indicating whether to show the variation year enclosed in paranthesis. 
+| variationYearSeparator | string | The string separator that goes between the variation text and the variation year. 
+| magneticVariationIdentifier | string | The magnetic north identifier for the variation text. 
+| gridVariationIdentifier | string | The grid north identifier for the variation text. 
+
+
+
+
+
+
 ## CIMBookmarkMapSeries
 #### Bookmark map series is a means to create a series of map pages based on saved bookmarks. 
 
@@ -303,6 +412,71 @@
 | Continuous| 0| Represents a continuous tab. 
 | Rounded| 1| Represents a rounded tab. 
 | Squared| 2| Represents a squared tab. 
+
+
+
+
+## CIMCruisingAltitudeDiagram
+#### Represents a Cruising Altitude Diagram. 
+
+
+### CIMElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| anchor | [enumeration Anchor](CIMLayout.md#enumeration-anchor) | The anchor position of the element. 
+| locked | boolean | A value indicating whether the element is locked. Each element in the contents pane has a lock icon. If the icon is shown as locked, you can not select that feature in the layout using the select tool. 
+| name | string | The name of the element. 
+| visible | boolean | A value indicating whether the element is visible. 
+| rotation | double | The rotation of the element. 
+| rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
+| lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+
+
+### CIMFrameElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| frame | [Polygon](ExternalReferences.md#polygon) | The geometry of a frame for an element. 
+| graphicFrame | [CIMGraphicFrame](CIMGraphics.md#cimgraphicframe) | The graphic symbology of an element's frame. 
+
+
+### CIMCruisingAltitudeDiagram 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| diagramType | [enumeration CruisingAltitudeDiagramType](CIMLayout.md#enumeration-cruisingaltitudediagramtype) | The diagram type which should be created. 
+| altitudeTextSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The text symbol used for the altitude values on the diagram. 
+| bearingTextSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The text symbol used for the bearing values for each part of the diagram. 
+| titleTextSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The text symbol used for the diagram title, which appears above the element. 
+| bearingArrowLineSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The line symbol used for the arrow that leads from the starting bearing to the ending bearing for a part of the diagram. 
+| lineSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The line symbol used for the outline of the circle sections on the diagram. 
+| diameterUnits | [LinearUnit](ExternalReferences.md#linearunit) | The page units used to determinte the diameter of the cruising altitude diagram. 
+| diagramDiameter | double | The diameter of the cruising altitude diagram in page units. 
+| diagramTitle | string | The text for the diagram title. 
+| verticalLeftText | string | The text for the left side of the vertical diagram. 
+| verticalRightText | string | The text for the right side of the vertical diagram. 
+| horizontalTopText | string | The text for the top of the horizontal diagram. 
+| horizontalBottomText | string | The text for the bottom of the horizontal diagram. 
+| quadrantalTopLeftText | string | The text for the top left of the quadrantal diagram. 
+| quadrantalTopRightText | string | The text for the top right of the quadrantal diagram. 
+| quadrantalBottomLeftText | string | The text for the bottom left of the quadrantal diagram. 
+| quadrantalBottomRightText | string | The text for the bottom right of the quadrantal diagram. 
+| autoResizeText | boolean | A value indicating whether to auto resize the text. 
+
+
+
+
+
+### Enumeration: CruisingAltitudeDiagramType
+#### A list of Cruising Altitude Diagram types. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Vertical| 1| Vertical. 
+| Horizontal| 2| Horizontal. 
+| Quadrantal| 3| Quadrantal. 
 
 
 
@@ -574,6 +748,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | edgeAffinity | [long] | The collection of edges the ticks or the labels draw on. If the collection is empty, the drawing is made on the entire area of interest. 
+| drawPerpendicular | boolean | A value indicating whether to the draw the ticks perpendicular to the map grid edges. 
 
 
 
@@ -732,6 +907,7 @@
 | offset | double | The offset of the labels. 
 | position | long | The position of the labels of the end points. 
 | lineSelection | long | The end point selection. 
+| drawLabelsParallel | boolean | A value indicating whether to draw the labels parallel to the map grid edges. 
 
 
 
@@ -2386,6 +2562,10 @@
 | mapDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The map definitions of the report document. 
 | reportDefinition | [CIMReport](CIMLayout.md#cimreport) | The report definition of the report document. 
 | tableDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The table definitions of the report document. 
+| layoutDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The layout definitions referenced by supplemental pages of the report document. 
+| linkChartDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The link chart definitions of the report document. 
+| timelineDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The timeline definitions of the report document. 
+| videoDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The video definitions of the report document. 
 
 
 
@@ -2612,6 +2792,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+| includePageNumber | boolean | A value indicating whether to include page number elements. 
 
 
 ### CIMReportLayoutPageSection 
@@ -2799,6 +2980,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+| includePageNumber | boolean | A value indicating whether to include page number elements. 
 
 
 

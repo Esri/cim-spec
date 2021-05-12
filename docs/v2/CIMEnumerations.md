@@ -161,6 +161,21 @@
 
 
 
+### Enumeration: PrimitiveShapeType
+#### Indicates the types of primitive shapes. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Unknown| 0| Unknown. 
+| Cone| 1| A cone. 
+| Cube| 2| A cube. 
+| Cylinder| 3| A cylinder. 
+| Diamond| 4| A diamond. 
+| Sphere| 5| A sphere. 
+| Tetrahedron| 6| A tetrahedron. 
+
+
+
 ### Enumeration: PrimitiveType3D
 #### Indicates the types of 3D primitives. 
 

@@ -285,6 +285,24 @@
 
 
 
+## CIMFacilityLayerProperties
+#### Defines the URI and required field properties for the Indoors Facility layer required for floor filtering operations. 
+
+
+### CIMFacilityLayerProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| layerURI | string | The URI for the Indoors Facility layer in the map CIM. 
+| siteIDField | string | The name of the field containing the site id (a foreign key back to the Site feature class). 
+| facilityIDField | string | The name of the field containing the facility id. 
+| nameField | string | The name of the field containing the facility name. 
+
+
+
+
+
+
 ## CIMFieldMapping
 #### Represents a field mapping that maps fields from source layer or table to target layer or table. 
 
@@ -296,6 +314,47 @@
 | sourceURI | string | The URI of the source layer or table. 
 | targetURI | string | The URI of the target layer or table. 
 | mappingExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression for mapping from source layer or table to target layer or table. 
+
+
+
+
+
+
+## CIMFloorAwareMapProperties
+#### Defines the properties needed to identify the Indoors layers and some required fields for each layer which are used for floor filtering operations, as well as properties for the map's floor filter. 
+
+
+### CIMFloorAwareMapProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| siteLayerProperties | [CIMSiteLayerProperties](CIMMap.md#cimsitelayerproperties) | The properties for the Indoors Sites layer in the map. 
+| facilityLayerProperties | [CIMFacilityLayerProperties](CIMMap.md#cimfacilitylayerproperties) | The properties for the Indoors Facilities layer in the map. 
+| levelLayerProperties | [CIMLevelLayerProperties](CIMMap.md#cimlevellayerproperties) | The properties for the Indoors Levels layer in the map. 
+| defaultFloorFilterSettings | [CIMFloorFilterSettings](CIMMap.md#cimfloorfiltersettings) | The default properties for the map's floor filter control. Used as default when creating new map views. 
+
+
+
+
+
+
+## CIMFloorFilterSettings
+#### Represents floor filter settings. 
+
+
+### CIMFloorFilterSettings 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| selectedSiteID | string | The site ID for the selected site, which is used when filtering layers by SITE_ID (optional). 
+| selectedFacilityID | string | The facility ID for the selected facility, which is used when filtering layers by FACILITY_ID. 
+| selectedLevelID | string | The level ID for the selected level, which is used when filtering layers by LEVEL_ID or the layer's configured floor-aware properties. 
+| enabled | boolean | A value indicating whether or not the floor filter is enabled and filtering the displayed content according to the floor filter selections. 
+| minimized | boolean | A value indicating whether the floor filter has been minimized to show only the levels list or if it is showing the full set of breadcrumbs. 
+| longNames | boolean | A value indicating whether the levels lists are showing the long names from the NAME field or showing the short names from the NAME_SHORT field. 
+| pinnedLevels | boolean | A value indicating whether the levels portion of the floor filter have been pinned to show the levels lists or the floor filter includes the levels as a breadcrumb dropdown. 
+| siteFacilityIDs | [string] | The array of facility ids belonging to the selected site (only if just site has been selected). 
+| siteLevelIDs | [string] | The array of level ids belonging to the selected site (only if just site has been selected). 
 
 
 
@@ -575,6 +634,27 @@
 
 
 
+## CIMLevelLayerProperties
+#### Defines the URI and required field properties for the Indoors Level layer required for floor filtering operations. 
+
+
+### CIMLevelLayerProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| layerURI | string | The URI for the Indoors Level layer in the map CIM. 
+| facilityIDField | string | The name of the field containing the facility id (a foreign key back to the Facility feature class). 
+| levelIDField | string | The name of the field containing the level id. 
+| shortNameField | string | The name of the field containing the level "short" name. 
+| longNameField | string | The name of the field containing the level "long" name. 
+| levelNumberField | string | The name of the field containing the level number. 
+| verticalOrderField | string | The name of the field containing the vertical order for the level. 
+
+
+
+
+
+
 ## CIMLineOfSightEADefinition
 #### Represents a line of sight exploratory analysis definition. 
 
@@ -661,6 +741,7 @@
 | rangeSliderSettings | [CIMSliderSettings](CIMMap.md#cimslidersettings) | The range slider settings. 
 | timeSliderSettings | [CIMSliderSettings](CIMMap.md#cimslidersettings) | The time slider settings. 
 | animationViewTracks | [[CIMViewTrack]](CIMMap.md#cimviewtrack) | The collection of view tracks in the animation. 
+| animationActiveTrackName | string | The name of the currently active animation track. 
 | locators | [[CIMLocator]](CIMMap.md#cimlocator) | The locators as an ordered array. 
 | validationRules | [[CIMValidationRule]](CIMMap.md#cimvalidationrule) | The validation rules used for validating the layer's features. 
 | mapContexts | [string] | An array string values used to provide a hint for the intended context for the map. 
@@ -668,6 +749,7 @@
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the map. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 | linkCharts | [string] | The link charts as an array of link chart repository paths. 
 | timelines | [string] | The timelines as an array of timeline repository paths. 
+| knowledgeGraphLinkChartProperties | CIMKnowledgeGraphLinkChartProperties | The Knowledge Graph Link Chart properties of this map. This property is only applicable if the MapType is LinkChart. 
 
 
 ### CIMStandaloneTableContainer 
@@ -724,6 +806,7 @@
 | RGBColorProfile | string | The name of the RGB color profile for a map. 
 | CMYKColorProfile | string | The name of the CMYK color profile for a map. 
 | simulateOverprint | boolean | A value indicating whether to simulate overprint for a map. 
+| floorAwareMapProperties | [CIMFloorAwareMapProperties](CIMMap.md#cimfloorawaremapproperties) | The floor-aware properties of the map. 
 
 
 
@@ -799,6 +882,7 @@
 | timeValue | [TimeValue](ExternalReferences.md#timevalue) | The time value. 
 | hasLiveData | boolean | A value indicating whether or not this map has live data. 
 | timeRelation | [enumeration esriTimeRelation](ExternalReferences.md#enumeration-esritimerelation) | The time relation. 
+| uniqueTimes | [double] | A cached set of unique OLE date values. Expected to be in the CIMMapTimeDisplay's TimeReference. 
 
 
 
@@ -879,6 +963,23 @@
 |---------|--------|--------|
 | Absolute| 0| Display absolute format, e.g. 1:20000. 
 | Imperial| 1| Display imperial format, e.g. 1 in = 1 mi. 
+
+
+
+
+## CIMSiteLayerProperties
+#### Defines the URI and required field properties for the Indoors Site layer required for floor filtering operations. 
+
+
+### CIMSiteLayerProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| layerURI | string | The URI for the Indoors Site layer in the map CIM. 
+| siteIDField | string | The name of the field containing the site id. 
+| nameField | string | The name of the field containing the site name. 
+
+
 
 
 
@@ -1103,6 +1204,7 @@
 | snapRequestType | [enumeration SnapRequestType](CIMMap.md#enumeration-snaprequesttype) | The snap request type. 
 | geometricFeedbackColor | [Color](Types.md#color) | Geometric feedback color. 
 | visualFeedbackColor | [Color](Types.md#color) | The visual feedback color. 
+| showSnapTip | boolean | A value indicating whether the snap tip is visible. 
 | isZSnappingEnabled | boolean | A value indicating whether Z snapping is enabled. When enabled, snapping to a feature Z value may occur if the feature is within the Z tolerance from the current cursor Z value. The Z tolerance is specified by is true. Otherwise, the Z tolerance is infinite. Z snapping is always enabled for Stereo and 3D views. 
 
 

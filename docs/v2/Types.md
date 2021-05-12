@@ -298,6 +298,8 @@
 
 [CIMStandaloneVideo](CIMImageLayers.md#cimstandalonevideo)
 
+[CIMKnowledgeGraphInvestigation](CIMKnowledgeGraph.md#cimknowledgegraphinvestigation)
+
 [CIMKnowledgeGraphLayer](CIMKnowledgeGraph.md#cimknowledgegraphlayer)
 
 [CIMGeodatabaseErrorLayer](CIMLayer.md#cimgeodatabaseerrorlayer)
@@ -400,7 +402,11 @@
 
 [CIMAttachmentFrame](CIMLayout.md#cimattachmentframe)
 
+[CIMAviationNorthArrow](CIMLayout.md#cimaviationnortharrow)
+
 [CIMChartFrame](CIMLayout.md#cimchartframe)
+
+[CIMCruisingAltitudeDiagram](CIMLayout.md#cimcruisingaltitudediagram)
 
 [CIMDoubleFillScaleBar](CIMLayout.md#cimdoublefillscalebar)
 
@@ -526,7 +532,11 @@
 
 [CIMAttachmentFrame](CIMLayout.md#cimattachmentframe)
 
+[CIMAviationNorthArrow](CIMLayout.md#cimaviationnortharrow)
+
 [CIMChartFrame](CIMLayout.md#cimchartframe)
+
+[CIMCruisingAltitudeDiagram](CIMLayout.md#cimcruisingaltitudediagram)
 
 [CIMDoubleFillScaleBar](CIMLayout.md#cimdoublefillscalebar)
 
@@ -770,6 +780,8 @@
 
 ### MapSurround
 
+[CIMAviationNorthArrow](CIMLayout.md#cimaviationnortharrow)
+
 [CIMChartFrame](CIMLayout.md#cimchartframe)
 
 [CIMDoubleFillScaleBar](CIMLayout.md#cimdoublefillscalebar)
@@ -858,6 +870,8 @@
 
 ### NorthArrow
 
+[CIMAviationNorthArrow](CIMLayout.md#cimaviationnortharrow)
+
 [CIMMarkerNorthArrow](CIMLayout.md#cimmarkernortharrow)
 
 [CIMTopoNorthArrow](CIMLayout.md#cimtoponortharrow)
@@ -869,6 +883,8 @@
 [CIMCurrencyFormat](CIMNumberFormat.md#cimcurrencyformat)
 
 [CIMCustomNumberFormat](CIMNumberFormat.md#cimcustomnumberformat)
+
+[CIMDateFormat](CIMNumberFormat.md#cimdateformat)
 
 [CIMDirectionFormat](CIMNumberFormat.md#cimdirectionformat)
 
@@ -994,6 +1010,18 @@
 
 [CIMProjectServerConnection](CIMServiceLayers.md#cimprojectserverconnection)
 
+### ServiceDataConnectionProperties
+
+[CIMKMLDataConnection](CIMLayer.md#cimkmldataconnection)
+
+[CIMAGSServiceConnection](CIMServiceLayers.md#cimagsserviceconnection)
+
+[CIMFeatureDatasetDataConnection](CIMVectorLayers.md#cimfeaturedatasetdataconnection)
+
+[CIMStandardDataConnection](CIMVectorLayers.md#cimstandarddataconnection)
+
+[CIMVectorTileDataConnection](CIMVectorLayers.md#cimvectortiledataconnection)
+
 ### StandaloneTableContainer
 
 [CIMKnowledgeGraphLayer](CIMKnowledgeGraph.md#cimknowledgegraphlayer)
@@ -1113,6 +1141,8 @@
 [CIMVideoTimelineRangeIndicator](CIMImageLayers.md#cimvideotimelinerangeindicator)
 
 ### View
+
+[CIMDataEngineeringView](CIMDataEngineeringView.md#cimdataengineeringview)
 
 [CIMExternalTableView](CIMDocument.md#cimexternaltableview)
 
@@ -1236,9 +1266,13 @@
 
 [CIMChartTemporalProfileBands](CIMCharts.md#CIMChartTemporalProfileBands)
 
+[CIMChartTemporalProfileCCDCArguments](CIMCharts.md#CIMChartTemporalProfileCCDCArguments)
+
 [CIMChartTemporalProfileDimensionValue](CIMCharts.md#CIMChartTemporalProfileDimensionValue)
 
 [CIMChartTemporalProfileDimensionValues](CIMCharts.md#CIMChartTemporalProfileDimensionValues)
+
+[CIMChartTemporalProfileLandTrendRArguments](CIMCharts.md#CIMChartTemporalProfileLandTrendRArguments)
 
 [CIMChartTemporalProfileSeries](CIMCharts.md#CIMChartTemporalProfileSeries)
 
@@ -1275,6 +1309,16 @@
 [CIMSpotColorSpace](CIMColor.md#CIMSpotColorSpace)
 
 [CIMXYZColor](CIMColor.md#CIMXYZColor)
+
+[CIMDataEngineeringFieldStatistics](CIMDataEngineeringView.md#CIMDataEngineeringFieldStatistics)
+
+[CIMDataEngineeringPreviewChart](CIMDataEngineeringView.md#CIMDataEngineeringPreviewChart)
+
+[CIMDataEngineeringStatisticColumn](CIMDataEngineeringView.md#CIMDataEngineeringStatisticColumn)
+
+[CIMDataEngineeringStatisticValue](CIMDataEngineeringView.md#CIMDataEngineeringStatisticValue)
+
+[CIMDataEngineeringView](CIMDataEngineeringView.md#CIMDataEngineeringView)
 
 [CIMBinaryReference](CIMDocument.md#CIMBinaryReference)
 
@@ -1426,7 +1470,13 @@
 
 [CIMKnowledgeGraphDataConnection](CIMKnowledgeGraph.md#CIMKnowledgeGraphDataConnection)
 
+[CIMKnowledgeGraphInvestigation](CIMKnowledgeGraph.md#CIMKnowledgeGraphInvestigation)
+
 [CIMKnowledgeGraphLayer](CIMKnowledgeGraph.md#CIMKnowledgeGraphLayer)
+
+[CIMKnowledgeGraphList](CIMKnowledgeGraph.md#CIMKnowledgeGraphList)
+
+[CIMKnowledgeGraphQuery](CIMKnowledgeGraph.md#CIMKnowledgeGraphQuery)
 
 [CIMKnowledgeGraphTableDataConnection](CIMKnowledgeGraph.md#CIMKnowledgeGraphTableDataConnection)
 
@@ -1504,6 +1554,12 @@
 
 [CIMAutoCamera](CIMLayout.md#CIMAutoCamera)
 
+[CIMAviationArrow](CIMLayout.md#CIMAviationArrow)
+
+[CIMAviationNorthArrow](CIMLayout.md#CIMAviationNorthArrow)
+
+[CIMAviationVariation](CIMLayout.md#CIMAviationVariation)
+
 [CIMBookmarkMapSeries](CIMLayout.md#CIMBookmarkMapSeries)
 
 [CIMBookmarkMapSeriesPage](CIMLayout.md#CIMBookmarkMapSeriesPage)
@@ -1513,6 +1569,8 @@
 [CIMCondensedTabGridLine](CIMLayout.md#CIMCondensedTabGridLine)
 
 [CIMContiguousTabGridLine](CIMLayout.md#CIMContiguousTabGridLine)
+
+[CIMCruisingAltitudeDiagram](CIMLayout.md#CIMCruisingAltitudeDiagram)
 
 [CIMCustomGrid](CIMLayout.md#CIMCustomGrid)
 
@@ -1672,6 +1730,8 @@
 
 [CIMLinkChartRelationship](CIMLinkCharts.md#CIMLinkChartRelationship)
 
+[CIMLinkChartViewport](CIMLinkCharts.md#CIMLinkChartViewport)
+
 [CIMAltitudeParams](CIMMap.md#CIMAltitudeParams)
 
 [CIMAnimationScreenGraphic](CIMMap.md#CIMAnimationScreenGraphic)
@@ -1694,7 +1754,13 @@
 
 [CIMElevationSource](CIMMap.md#CIMElevationSource)
 
+[CIMFacilityLayerProperties](CIMMap.md#CIMFacilityLayerProperties)
+
 [CIMFieldMapping](CIMMap.md#CIMFieldMapping)
+
+[CIMFloorAwareMapProperties](CIMMap.md#CIMFloorAwareMapProperties)
+
+[CIMFloorFilterSettings](CIMMap.md#CIMFloorFilterSettings)
 
 [CIMGroundToGridCorrection](CIMMap.md#CIMGroundToGridCorrection)
 
@@ -1718,6 +1784,8 @@
 
 [CIMKeyframeVoxelPlane](CIMMap.md#CIMKeyframeVoxelPlane)
 
+[CIMLevelLayerProperties](CIMMap.md#CIMLevelLayerProperties)
+
 [CIMLineOfSightEADefinition](CIMMap.md#CIMLineOfSightEADefinition)
 
 [CIMLocator](CIMMap.md#CIMLocator)
@@ -1733,6 +1801,8 @@
 [CIMScale](CIMMap.md#CIMScale)
 
 [CIMScaleFormat](CIMMap.md#CIMScaleFormat)
+
+[CIMSiteLayerProperties](CIMMap.md#CIMSiteLayerProperties)
 
 [CIMSliceBoxEADefinition](CIMMap.md#CIMSliceBoxEADefinition)
 
@@ -1799,6 +1869,8 @@
 [CIMCurrencyFormat](CIMNumberFormat.md#CIMCurrencyFormat)
 
 [CIMCustomNumberFormat](CIMNumberFormat.md#CIMCustomNumberFormat)
+
+[CIMDateFormat](CIMNumberFormat.md#CIMDateFormat)
 
 [CIMDirectionFormat](CIMNumberFormat.md#CIMDirectionFormat)
 
@@ -2264,6 +2336,8 @@
 
 [CIMFieldDescription](CIMVectorLayers.md#CIMFieldDescription)
 
+[CIMFloorAwareTableProperties](CIMVectorLayers.md#CIMFloorAwareTableProperties)
+
 [CIMFolderConnection](CIMVectorLayers.md#CIMFolderConnection)
 
 [CIMGeometryLocationCondition](CIMVectorLayers.md#CIMGeometryLocationCondition)
@@ -2299,6 +2373,8 @@
 [CIMParcelLayer](CIMVectorLayers.md#CIMParcelLayer)
 
 [CIMPieChartMediaInfo](CIMVectorLayers.md#CIMPieChartMediaInfo)
+
+[CIMPopupFieldDescription](CIMVectorLayers.md#CIMPopupFieldDescription)
 
 [CIMPopupInfo](CIMVectorLayers.md#CIMPopupInfo)
 

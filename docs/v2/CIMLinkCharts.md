@@ -35,6 +35,12 @@
 | expanded | boolean | A value indicating whether this link chart is expanded in the contents pane. 
 | locked | boolean | A value indicating whether this link chart is locked. 
 | interactiveLayoutMode | boolean | A value indicating whether this link chart layout updates when the user moves nodes or links. 
+| viewport | [CIMLinkChartViewport](CIMLinkCharts.md#cimlinkchartviewport) | The link chart viewport. 
+| filterByMinLinks | boolean | A value indicating whether this link chart is filtered by the minimum number of links. 
+| filterByMaxLinks | boolean | A value indicating whether this link chart is filtered by the maximum number of links. 
+| minLinks | long | The minimum number of links allowed in the filter. 
+| maxLinks | long | The maximum number of links allowed in the filter. 
+| notesURI | string | The URI of the binary reference containing the notes. 
 
 
 
@@ -58,6 +64,7 @@
 | drawingInfo | [CIMLinkChartNodeDrawingInfo](CIMLinkCharts.md#cimlinkchartnodedrawinginfo) | The node drawing information. 
 | labelingInfo | [CIMLinkChartNodeLabelingInfo](CIMLinkCharts.md#cimlinkchartnodelabelinginfo) | The node labeling information. 
 | expanded | boolean | A value indicating whether this entity is expanded in the contents pane. 
+| keyFieldNames | [string] | The fields used to uniquely identify nodes. If duplicate values exist you can CollapseDuplicates. 
 
 
 
@@ -103,6 +110,7 @@
 | linkWidth | long | A value for the link width. 
 | linkDashStyle | [enumeration LinkChartLinkDashStyle](CIMLinkCharts.md#enumeration-linkchartlinkdashstyle) | A value for the link dash style. 
 | showDirection | boolean | A value indicating whether to show the directional arrowhead of a link. 
+| aggregateLinks | boolean | A value indicating whether to visually aggregate links. 
 
 
 
@@ -141,6 +149,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | labelPlacement | [enumeration LinkChartLinkLabelPlacement](CIMLinkCharts.md#enumeration-linkchartlinklabelplacement) | The link label placement. 
+| defaultLabel | string | The default label. 
 
 
 
@@ -211,8 +220,23 @@
 | drawingInfo | [CIMLinkChartLinkDrawingInfo](CIMLinkCharts.md#cimlinkchartlinkdrawinginfo) | The link drawing information. This specifies the link color, width, and dash style. 
 | labelingInfo | [CIMLinkChartLinkLabelingInfo](CIMLinkCharts.md#cimlinkchartlinklabelinginfo) | The link labeling information. 
 | expanded | boolean | A value indicating whether this relationship is expanded in the contents pane. 
+| keyType | [enumeration LinkChartRelationshipKeyType](CIMLinkCharts.md#enumeration-linkchartrelationshipkeytype) | The KeyType. This specifies where the key fields are located. 
+| mapMemberURI | string | The path to the foreign table or layer used to create the relationship. 
+| sourceEntityKeyField | string | The source entity key field for the relationship. 
+| targetEntityKeyField | string | The target entity key field for the relationship. 
 
 
+
+
+
+### Enumeration: LinkChartRelationshipKeyType
+#### Link chart relationship key type. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| None| 0| Link chart relationship has no keys. 
+| Entities| 1| Link chart relationship has keys from entities. 
+| Foreign| 2| Link chart relationship has foreign keys. 
 
 
 
@@ -223,4 +247,21 @@
 |---------|--------|--------|
 | MapSymbology| 0| Use default symbology for the nodes in the entity as defined by the associated layer. 
 | SingleSymbology| 1| Use overriden single symbology for the nodes in the entity. 
+
+
+
+
+## CIMLinkChartViewport
+#### Represents the link chart viewport. 
+
+
+### CIMLinkChartViewport 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| centerX | double | The center X coordinate in the world coordinate system. 
+| centerY | double | The center Y coordinate in the world coordinate system. 
+| zoomLevel | double | The zoom level. 
+
+
 

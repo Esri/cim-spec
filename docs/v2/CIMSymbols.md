@@ -1978,6 +1978,7 @@
 | thumbnail | string | The representative image of the marker. 
 | useAnchorPoint | boolean | A value indicating whether or not to ignore the marker anchor point and insert the model directly at the data point. 
 | LODs | [[CIMObjectMarker3DLOD]](CIMSymbols.md#cimobjectmarker3dlod) | The array of levels of detail. 
+| primitiveShapeType | [enumeration PrimitiveShapeType](CIMEnumerations.md#enumeration-primitiveshapetype) | The PrimitiveShapeType. 
 
 
 
