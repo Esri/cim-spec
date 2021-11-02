@@ -395,7 +395,7 @@ Elliptic Arc is defined by end point, center point, axis, arc orientation, angle
 
 |Property | Type | Description |
 |---------|--------|--------|
-|a|[[Point](ExternalReferences.md#point), [Point](ExternalReferences.md#point)}, number(axis), number(orientation), number(rotation), number(axis),number(ratio)]| <br>Array elements should be in the following order : <ul><li>`End point`</li><li>`Center Point`</li><li>`orientation(0: major, 1: minor)`</li><li>`rotation(0: counter clockwise, 1: clockwise`)</li> <li>axis: length of the semi-major axis</li><li>ratio: ratio of the minor axis to major axis</li></ul>|
+|a|[[Point](ExternalReferences.md#point)(end point), [Point](ExternalReferences.md#point)(center point), number(minor), number(clockwise), number(rotation), number(semi major axis),number(ratio)]| <br>Array elements should be in the following order : <ul><li>`End point`</li><li>`Center Point`</li><li>`minor` (0: major, 1: minor)</li><li>arc orientation` (0: counter clockwise, 1: clockwise)</li><li>`rotation` (angle from major axis)</li><li>`axis`: length of the semi-major axis</li><li>`ratio`: ratio of the minor axis to major axis</li></ul>|
 
 ### BézierCurve
 
