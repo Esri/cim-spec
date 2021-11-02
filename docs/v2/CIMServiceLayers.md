@@ -1353,7 +1353,7 @@
 | variable | string | The variable that the profile is associated with. 
 | description | string | The variable description. 
 | dataType | [enumeration VoxelVariableDataType](CIMServiceLayers.md#enumeration-voxelvariabledatatype) | The variable data type. 
-| filters | [[CIMVoxelFilter]](Types.md#cimvoxelfilter) | The filters. 
+| filters | [[CIMVoxelFilter]](Types.md#voxelfilter) | The filters. 
 | renderer | [VoxelRenderer](Types.md#voxelrenderer) | The symbol renderer. 
 | precision | [enumeration VoxelVariablePrecision](CIMServiceLayers.md#enumeration-voxelvariableprecision) | The variable precision. 
 | statistics | [VoxelStatistics](Types.md#voxelstatistics) | The statistics for the variable. 

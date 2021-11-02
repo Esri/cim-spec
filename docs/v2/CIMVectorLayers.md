@@ -91,7 +91,7 @@
 | featureElevationExpression | string | The feature elevation expression. 
 | featureHyperlinks | [[CIMFeatureHyperlink]](CIMVectorLayers.md#cimfeaturehyperlink) | The feature hyperlinks. 
 | featureTable | [CIMFeatureTable](CIMVectorLayers.md#cimfeaturetable) | The feature table. 
-| featureTemplates | [[CIMEditingTemplate]](Types.md#cimeditingtemplate) | The feature templates. 
+| featureTemplates | [[CIMEditingTemplate]](Types.md#editingtemplate) | The feature templates. 
 | hotlinkField | string | The field containing hotlink URLs. 
 | htmlPopupEnabled | boolean | A value indicating whether HTML pop-ups are enabled. 
 | htmlPopupFormat | [CIMHtmlPopupFormat](CIMVectorLayers.md#cimhtmlpopupformat) | The HTML pop-ups format. 
@@ -582,7 +582,7 @@
 | featureElevationExpression | string | The feature elevation expression. 
 | featureHyperlinks | [[CIMFeatureHyperlink]](CIMVectorLayers.md#cimfeaturehyperlink) | The feature hyperlinks. 
 | featureTable | [CIMFeatureTable](CIMVectorLayers.md#cimfeaturetable) | The feature table. 
-| featureTemplates | [[CIMEditingTemplate]](Types.md#cimeditingtemplate) | The feature templates. 
+| featureTemplates | [[CIMEditingTemplate]](Types.md#editingtemplate) | The feature templates. 
 | hotlinkField | string | The field containing hotlink URLs. 
 | htmlPopupEnabled | boolean | A value indicating whether HTML pop-ups are enabled. 
 | htmlPopupFormat | [CIMHtmlPopupFormat](CIMVectorLayers.md#cimhtmlpopupformat) | The HTML pop-ups format. 
@@ -985,7 +985,7 @@
 | featureElevationExpression | string | The feature elevation expression. 
 | featureHyperlinks | [[CIMFeatureHyperlink]](CIMVectorLayers.md#cimfeaturehyperlink) | The feature hyperlinks. 
 | featureTable | [CIMFeatureTable](CIMVectorLayers.md#cimfeaturetable) | The feature table. 
-| featureTemplates | [[CIMEditingTemplate]](Types.md#cimeditingtemplate) | The feature templates. 
+| featureTemplates | [[CIMEditingTemplate]](Types.md#editingtemplate) | The feature templates. 
 | hotlinkField | string | The field containing hotlink URLs. 
 | htmlPopupEnabled | boolean | A value indicating whether HTML pop-ups are enabled. 
 | htmlPopupFormat | [CIMHtmlPopupFormat](CIMVectorLayers.md#cimhtmlpopupformat) | The HTML pop-ups format. 
@@ -1012,7 +1012,7 @@
 |---------|--------|--------|
 | actions | [[CIMLayerAction]](CIMVectorLayers.md#cimlayeraction) | The layer actions. 
 | exclusionSet | [long long] | The set of excluded features. 
-| featureMasks | [[CIMDataConnection]](Types.md#cimdataconnection) | The data connection of the masking data. 
+| featureMasks | [[CIMDataConnection]](Types.md#dataconnection) | The data connection of the masking data. 
 | labelClasses | [[CIMLabelClass]](CIMLabelPlacement.md#cimlabelclass) | The collection of label class definitions. 
 | labelVisibility | boolean | A value indicating whether to display labels for this layer's label classes. 
 | maskedSymbolLayers | [[CIMSymbolLayerMasking]](CIMVectorLayers.md#cimsymbollayermasking) | The masked symbol layers. Each SymbolLayerMasking gives the symbol layers that are masked by that masking layer. 
@@ -1048,7 +1048,7 @@
 | displayField | string | The name of the attribute field that will be used as a label that represents each row in the table. The display field must be able to be represented as a string (string or numeric). 
 | editable | boolean | A value indicating whether or not the table can be edited. 
 | relates | [[CIMRelateInfoBase]](CIMVectorLayers.md#cimrelateinfobase) | The relates. 
-| fieldDescriptions | [[CIMFieldDescription]](Types.md#cimfielddescription) | The field descriptions. Field descriptions for fields may only be written if values are overridden from defaults. 
+| fieldDescriptions | [[CIMFieldDescription]](Types.md#fielddescription) | The field descriptions. Field descriptions for fields may only be written if values are overridden from defaults. 
 | timeFields | [CIMTimeTableDefinition](CIMVectorLayers.md#cimtimetabledefinition) | The time fields. 
 | timeDefinition | [CIMTimeDataDefinition](CIMVectorLayers.md#cimtimedatadefinition) | The time definition. 
 | timeDisplayDefinition | [CIMTimeDisplayDefinition](CIMVectorLayers.md#cimtimedisplaydefinition) | The time display definition. 
@@ -1056,7 +1056,7 @@
 | rangeDefinitions | [[CIMRangeDefinition]](CIMVectorLayers.md#cimrangedefinition) | The range definitions. 
 | activeRangeName | string | The active range name. 
 | selectRelatedData | boolean | A value indicating whether related data should be selected when creating a new selection. 
-| bindVariables | [[CIMBindVariable]](Types.md#cimbindvariable) | The bind variables. 
+| bindVariables | [[CIMBindVariable]](Types.md#bindvariable) | The bind variables. 
 | subtypeValue | long | The subtype value that should be used in the feature layer definition. This property is honored only when feature layer is a member of SubtypeLayer. 
 | useSubtypeValue | boolean | A value indicating whether or not the SubtypeValue should be used. 
 | displayExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression information used for coming up with a string that represents a row or a feature. 
@@ -1351,8 +1351,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| activities | [[CIMActivity]](Types.md#cimactivity) | Activities. 
-| conditions | [[CIMCondition]](Types.md#cimcondition) | Conditions. 
+| activities | [[CIMActivity]](Types.md#activity) | Activities. 
+| conditions | [[CIMCondition]](Types.md#condition) | Conditions. 
 
 
 
@@ -1789,7 +1789,7 @@
 |---------|--------|--------|
 | title | string | The title. 
 | expressionInfos | [[CIMExpressionInfo]](CIMRenderers.md#cimexpressioninfo) | Arcade expressions that are referenced as fields in one or more elements in MediaInfos. 
-| mediaInfos | [[CIMMediaInfo]](Types.md#cimmediainfo) | The media infos. 
+| mediaInfos | [[CIMMediaInfo]](Types.md#mediainfo) | The media infos. 
 | relatedRecordSortOrder | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The field name and the sort order by which the related records will be ordered. The items are defined by the related field name (Format: RelationshipName\\FieldName) as the Keys and the sort order (Enum: Asc, Desc) as the Values. 
 | gridLayout | [CIMPopupLayout](CIMVectorLayers.md#cimpopuplayout) | The grid layout for the media infos. 
 | fieldDescriptions | [[CIMPopupFieldDescription]](CIMVectorLayers.md#cimpopupfielddescription) | The pop-up field descriptions. 
@@ -1895,7 +1895,7 @@
 | displayField | string | The name of the attribute field that will be used as a label that represents each row in the table. The display field must be able to be represented as a string (string or numeric). 
 | editable | boolean | A value indicating whether or not the table can be edited. 
 | relates | [[CIMRelateInfoBase]](CIMVectorLayers.md#cimrelateinfobase) | The relates. 
-| fieldDescriptions | [[CIMFieldDescription]](Types.md#cimfielddescription) | The field descriptions. Field descriptions for fields may only be written if values are overridden from defaults. 
+| fieldDescriptions | [[CIMFieldDescription]](Types.md#fielddescription) | The field descriptions. Field descriptions for fields may only be written if values are overridden from defaults. 
 | timeFields | [CIMTimeTableDefinition](CIMVectorLayers.md#cimtimetabledefinition) | The time fields. 
 | timeDefinition | [CIMTimeDataDefinition](CIMVectorLayers.md#cimtimedatadefinition) | The time definition. 
 | timeDisplayDefinition | [CIMTimeDisplayDefinition](CIMVectorLayers.md#cimtimedisplaydefinition) | The time display definition. 
@@ -1903,7 +1903,7 @@
 | rangeDefinitions | [[CIMRangeDefinition]](CIMVectorLayers.md#cimrangedefinition) | The range definitions. 
 | activeRangeName | string | The active range name. 
 | selectRelatedData | boolean | A value indicating whether related data should be selected when creating a new selection. 
-| bindVariables | [[CIMBindVariable]](Types.md#cimbindvariable) | The bind variables. 
+| bindVariables | [[CIMBindVariable]](Types.md#bindvariable) | The bind variables. 
 | subtypeValue | long | The subtype value that should be used in the feature layer definition. This property is honored only when feature layer is a member of SubtypeLayer. 
 | useSubtypeValue | boolean | A value indicating whether or not the SubtypeValue should be used. 
 | displayExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression information used for coming up with a string that represents a row or a feature. 
@@ -2074,7 +2074,7 @@
 | displayField | string | The name of the attribute field that will be used as a label that represents each row in the table. The display field must be able to be represented as a string (string or numeric). 
 | editable | boolean | A value indicating whether or not the table can be edited. 
 | relates | [[CIMRelateInfoBase]](CIMVectorLayers.md#cimrelateinfobase) | The relates. 
-| fieldDescriptions | [[CIMFieldDescription]](Types.md#cimfielddescription) | The field descriptions. Field descriptions for fields may only be written if values are overridden from defaults. 
+| fieldDescriptions | [[CIMFieldDescription]](Types.md#fielddescription) | The field descriptions. Field descriptions for fields may only be written if values are overridden from defaults. 
 | timeFields | [CIMTimeTableDefinition](CIMVectorLayers.md#cimtimetabledefinition) | The time fields. 
 | timeDefinition | [CIMTimeDataDefinition](CIMVectorLayers.md#cimtimedatadefinition) | The time definition. 
 | timeDisplayDefinition | [CIMTimeDisplayDefinition](CIMVectorLayers.md#cimtimedisplaydefinition) | The time display definition. 
@@ -2082,7 +2082,7 @@
 | rangeDefinitions | [[CIMRangeDefinition]](CIMVectorLayers.md#cimrangedefinition) | The range definitions. 
 | activeRangeName | string | The active range name. 
 | selectRelatedData | boolean | A value indicating whether related data should be selected when creating a new selection. 
-| bindVariables | [[CIMBindVariable]](Types.md#cimbindvariable) | The bind variables. 
+| bindVariables | [[CIMBindVariable]](Types.md#bindvariable) | The bind variables. 
 | subtypeValue | long | The subtype value that should be used in the feature layer definition. This property is honored only when feature layer is a member of SubtypeLayer. 
 | useSubtypeValue | boolean | A value indicating whether or not the SubtypeValue should be used. 
 | displayExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression information used for coming up with a string that represents a row or a feature. 
@@ -2097,7 +2097,7 @@
 | dataConnection | [DataConnection](Types.md#dataconnection) | The data connection for the table. 
 | description | string | The description. 
 | autoGenerateRowTemplates | boolean | A value indicating whether to automatically generate row templates from the renderer. 
-| rowTemplates | [[CIMEditingTemplate]](Types.md#cimeditingtemplate) | The row templates. 
+| rowTemplates | [[CIMEditingTemplate]](Types.md#editingtemplate) | The row templates. 
 | serviceTableID | long | Identifier that will be used to identify the layer in server. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | popupInfo | [CIMPopupInfo](CIMVectorLayers.md#cimpopupinfo) | The pop-up info. 
@@ -2237,7 +2237,7 @@
 | featureElevationExpression | string | The feature elevation expression. 
 | featureHyperlinks | [[CIMFeatureHyperlink]](CIMVectorLayers.md#cimfeaturehyperlink) | The feature hyperlinks. 
 | featureTable | [CIMFeatureTable](CIMVectorLayers.md#cimfeaturetable) | The feature table. 
-| featureTemplates | [[CIMEditingTemplate]](Types.md#cimeditingtemplate) | The feature templates. 
+| featureTemplates | [[CIMEditingTemplate]](Types.md#editingtemplate) | The feature templates. 
 | hotlinkField | string | The field containing hotlink URLs. 
 | htmlPopupEnabled | boolean | A value indicating whether HTML pop-ups are enabled. 
 | htmlPopupFormat | [CIMHtmlPopupFormat](CIMVectorLayers.md#cimhtmlpopupformat) | The HTML pop-ups format. 

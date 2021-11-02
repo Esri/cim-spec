@@ -114,7 +114,7 @@
 | featureElevationExpression | string | The feature elevation expression. 
 | featureHyperlinks | [[CIMFeatureHyperlink]](CIMVectorLayers.md#cimfeaturehyperlink) | The feature hyperlinks. 
 | featureTable | [CIMFeatureTable](CIMVectorLayers.md#cimfeaturetable) | The feature table. 
-| featureTemplates | [[CIMEditingTemplate]](Types.md#cimeditingtemplate) | The feature templates. 
+| featureTemplates | [[CIMEditingTemplate]](Types.md#editingtemplate) | The feature templates. 
 | hotlinkField | string | The field containing hotlink URLs. 
 | htmlPopupEnabled | boolean | A value indicating whether HTML pop-ups are enabled. 
 | htmlPopupFormat | [CIMHtmlPopupFormat](CIMVectorLayers.md#cimhtmlpopupformat) | The HTML pop-ups format. 
@@ -141,7 +141,7 @@
 |---------|--------|--------|
 | actions | [[CIMLayerAction]](CIMVectorLayers.md#cimlayeraction) | The layer actions. 
 | exclusionSet | [long long] | The set of excluded features. 
-| featureMasks | [[CIMDataConnection]](Types.md#cimdataconnection) | The data connection of the masking data. 
+| featureMasks | [[CIMDataConnection]](Types.md#dataconnection) | The data connection of the masking data. 
 | labelClasses | [[CIMLabelClass]](CIMLabelPlacement.md#cimlabelclass) | The collection of label class definitions. 
 | labelVisibility | boolean | A value indicating whether to display labels for this layer's label classes. 
 | maskedSymbolLayers | [[CIMSymbolLayerMasking]](CIMVectorLayers.md#cimsymbollayermasking) | The masked symbol layers. Each SymbolLayerMasking gives the symbol layers that are masked by that masking layer. 
@@ -563,7 +563,7 @@
 | featureElevationExpression | string | The feature elevation expression. 
 | featureHyperlinks | [[CIMFeatureHyperlink]](CIMVectorLayers.md#cimfeaturehyperlink) | The feature hyperlinks. 
 | featureTable | [CIMFeatureTable](CIMVectorLayers.md#cimfeaturetable) | The feature table. 
-| featureTemplates | [[CIMEditingTemplate]](Types.md#cimeditingtemplate) | The feature templates. 
+| featureTemplates | [[CIMEditingTemplate]](Types.md#editingtemplate) | The feature templates. 
 | hotlinkField | string | The field containing hotlink URLs. 
 | htmlPopupEnabled | boolean | A value indicating whether HTML pop-ups are enabled. 
 | htmlPopupFormat | [CIMHtmlPopupFormat](CIMVectorLayers.md#cimhtmlpopupformat) | The HTML pop-ups format. 
@@ -590,7 +590,7 @@
 |---------|--------|--------|
 | actions | [[CIMLayerAction]](CIMVectorLayers.md#cimlayeraction) | The layer actions. 
 | exclusionSet | [long long] | The set of excluded features. 
-| featureMasks | [[CIMDataConnection]](Types.md#cimdataconnection) | The data connection of the masking data. 
+| featureMasks | [[CIMDataConnection]](Types.md#dataconnection) | The data connection of the masking data. 
 | labelClasses | [[CIMLabelClass]](CIMLabelPlacement.md#cimlabelclass) | The collection of label class definitions. 
 | labelVisibility | boolean | A value indicating whether to display labels for this layer's label classes. 
 | maskedSymbolLayers | [[CIMSymbolLayerMasking]](CIMVectorLayers.md#cimsymbollayermasking) | The masked symbol layers. Each SymbolLayerMasking gives the symbol layers that are masked by that masking layer. 
@@ -1017,7 +1017,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| colors | [[CIMColor]](Types.md#cimcolor) | Array of colors. 
+| colors | [[CIMColor]](Types.md#color) | Array of colors. 
 | bandID | long | The band ID. 
 | labels | [string] | The color labels as a string array. 
 | min | long | Minimum value. 

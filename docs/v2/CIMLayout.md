@@ -502,7 +502,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | layerURI | string | The path to the layer used to define the grid lines. 
-| gridLines | [[CIMGridLine]](Types.md#cimgridline) | The gridLines of the custom grid. These are limited to ticks, labels, and tabs. 
+| gridLines | [[CIMGridLine]](Types.md#gridline) | The gridLines of the custom grid. These are limited to ticks, labels, and tabs. 
 
 
 
@@ -873,7 +873,7 @@
 |---------|--------|--------|
 | customOrigin | [Point](ExternalReferences.md#point) | The custom origin of a graticule. 
 | geographicCoordinateSystem | [GeographicCoordinateSystem](ExternalReferences.md#geographiccoordinatesystem) | The spatial reference of a graticule. 
-| gridLines | [[CIMGridLine]](Types.md#cimgridline) | The collection of latitudes and longitudes for a graticule. 
+| gridLines | [[CIMGridLine]](Types.md#gridline) | The collection of latitudes and longitudes for a graticule. 
 | isAutoScaled | boolean | A value indicating whether to automatically adjust the interval of the graticules based on scale of the map. 
 | useMapClipShape | boolean | A value indicating whether to use the clip shape of the map (if set) as the grid boundary. 
 
@@ -1029,7 +1029,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
+| elements | [[CIMElement]](Types.md#element) | A collection of elements. 
 
 
 
@@ -1072,7 +1072,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
+| elements | [[CIMElement]](Types.md#element) | A collection of elements. 
 
 
 ### CIMReportSectionElement 
@@ -1133,7 +1133,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
+| elements | [[CIMElement]](Types.md#element) | A collection of elements. 
 
 
 ### CIMReportSectionElement 
@@ -1362,7 +1362,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
+| elements | [[CIMElement]](Types.md#element) | A collection of elements. 
 
 
 ### CIMLayoutDefinition 
@@ -1474,7 +1474,7 @@
 | headingGap | double | The heading gap. Units in points. 
 | horizontalItemGap | double | The gap between horizontal items. Units in points. 
 | horizontalPatchGap | double | The horizontal gap between patches. Units in points. 
-| items | [[CIMLegendItem]](Types.md#cimlegenditem) | A collection of items in a layout. 
+| items | [[CIMLegendItem]](Types.md#legenditem) | A collection of items in a layout. 
 | labelWidth | double | The label width. Units in points. 
 | minFontSize | double | The minimum font size. Units in points. 
 | rightToLeft | boolean | A value indicating whether right to left orientation should be applied. 
@@ -1604,7 +1604,7 @@
 | URI | string | The path to the map frame in the project. 
 | view | [CIMMapView](CIMDocument.md#cimmapview) | The view associated with the map frame. 
 | extentIndicators | [[CIMExtentIndicator]](CIMLayout.md#cimextentindicator) | The extent indicators associated with the map frame. 
-| grids | [[CIMMapGrid]](Types.md#cimmapgrid) | The Grids and Graticules associated with the MapFrame. 
+| grids | [[CIMMapGrid]](Types.md#mapgrid) | The Grids and Graticules associated with the MapFrame. 
 
 
 
@@ -1732,7 +1732,7 @@
 |---------|--------|--------|
 | customOrigin | [Point](ExternalReferences.md#point) | The custom origin of the measured grid. 
 | projectedCoordinateSystem | [ProjectedCoordinateSystem](ExternalReferences.md#projectedcoordinatesystem) | The projected coordinate system of the grid. 
-| gridLines | [[CIMGridLine]](Types.md#cimgridline) | The gridLines of the measured grid. 
+| gridLines | [[CIMGridLine]](Types.md#gridline) | The gridLines of the measured grid. 
 | isAutoScaled | boolean | A value indicating whether to auto-scale the grid. 
 | clipUTMZone | boolean | A value indicating whether to clip the grid to the UTM zone. If the measured grid is not defined in one of the UTM coordinates, then this property is irrelevant. 
 | useMapClipShape | boolean | A value indicating whether to use the clip shape of the map (if set) as the grid boundary. 
@@ -2031,7 +2031,7 @@
 | terrain | [CIMProfileTerrain](CIMLayout.md#cimprofileterrain) | Display options for terrain. 
 | runway | [CIMProfileRunway](CIMLayout.md#cimprofilerunway) | The text symbol for runway elevation. 
 | OISSurfaces | [[CIMProfileOIS]](CIMLayout.md#cimprofileois) | The display option for all the OIS surfaces shown in the profile. 
-| obstacles | [[CIMProfileObstacle]](Types.md#cimprofileobstacle) | The display option for all the point obstacles shown in the profile. 
+| obstacles | [[CIMProfileObstacle]](Types.md#profileobstacle) | The display option for all the point obstacles shown in the profile. 
 | profileType | [enumeration ProfileFrameType](CIMLayout.md#enumeration-profileframetype) | The option for profile type. 
 | profileStyle | [enumeration ProfileFrameStyle](CIMLayout.md#enumeration-profileframestyle) | The style of the profile frame. 
 | runwayEndLeftAsReference | boolean | A value indicating whether to use left end of runway as base elevation. 
@@ -2314,7 +2314,7 @@
 | isAutoScaled | boolean | A value indicating whether to auto-adjust the grid according to the size of the map frame. 
 | rowCount | long | The number of rows for the reference grids. 
 | columnCount | long | The number of columns for the reference grids. 
-| gridLines | [[CIMGridLine]](Types.md#cimgridline) | The collection of the grid lines. 
+| gridLines | [[CIMGridLine]](Types.md#gridline) | The collection of the grid lines. 
 
 
 
@@ -2381,7 +2381,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
+| elements | [[CIMElement]](Types.md#element) | A collection of elements. 
 
 
 ### CIMReportSectionElement 
@@ -2443,7 +2443,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
+| elements | [[CIMElement]](Types.md#element) | A collection of elements. 
 
 
 ### CIMReport 
@@ -2514,7 +2514,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
+| elements | [[CIMElement]](Types.md#element) | A collection of elements. 
 
 
 ### CIMReportSectionElement 
@@ -2533,7 +2533,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | columns | long | The number of columns for the details section. 
-| rowBackgroundColors | [[CIMColor]](Types.md#cimcolor) | The collection of background colors for each of the repeating rows. 
+| rowBackgroundColors | [[CIMColor]](Types.md#color) | The collection of background colors for each of the repeating rows. 
 | rowBackgroundCount | long | The number of consecutive rows for each background color. 
 
 
@@ -2558,14 +2558,14 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | binaryReferences | [[CIMBinaryReference]](CIMDocument.md#cimbinaryreference) | The binary references of the document. 
-| layerDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The layer definitions in the report document. 
-| mapDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The map definitions of the report document. 
+| layerDefinitions | [[CIMDefinition]](Types.md#definition) | The layer definitions in the report document. 
+| mapDefinitions | [[CIMDefinition]](Types.md#definition) | The map definitions of the report document. 
 | reportDefinition | [CIMReport](CIMLayout.md#cimreport) | The report definition of the report document. 
-| tableDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The table definitions of the report document. 
-| layoutDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The layout definitions referenced by supplemental pages of the report document. 
-| linkChartDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The link chart definitions of the report document. 
-| timelineDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The timeline definitions of the report document. 
-| videoDefinitions | [[CIMDefinition]](Types.md#cimdefinition) | The video definitions of the report document. 
+| tableDefinitions | [[CIMDefinition]](Types.md#definition) | The table definitions of the report document. 
+| layoutDefinitions | [[CIMDefinition]](Types.md#definition) | The layout definitions referenced by supplemental pages of the report document. 
+| linkChartDefinitions | [[CIMDefinition]](Types.md#definition) | The link chart definitions of the report document. 
+| timelineDefinitions | [[CIMDefinition]](Types.md#definition) | The timeline definitions of the report document. 
+| videoDefinitions | [[CIMDefinition]](Types.md#definition) | The video definitions of the report document. 
 
 
 
@@ -2653,7 +2653,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
+| elements | [[CIMElement]](Types.md#element) | A collection of elements. 
 
 
 ### CIMReportSectionElement 
@@ -2713,7 +2713,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
+| elements | [[CIMElement]](Types.md#element) | A collection of elements. 
 
 
 ### CIMReportSectionElement 
@@ -2774,7 +2774,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
+| elements | [[CIMElement]](Types.md#element) | A collection of elements. 
 
 
 ### CIMReportSectionElement 
@@ -2842,7 +2842,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
+| elements | [[CIMElement]](Types.md#element) | A collection of elements. 
 
 
 ### CIMReportSectionElement 
@@ -2902,7 +2902,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
+| elements | [[CIMElement]](Types.md#element) | A collection of elements. 
 
 
 ### CIMReportSectionElement 
@@ -2962,7 +2962,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
+| elements | [[CIMElement]](Types.md#element) | A collection of elements. 
 
 
 ### CIMReportSectionElement 
@@ -3023,7 +3023,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
+| elements | [[CIMElement]](Types.md#element) | A collection of elements. 
 
 
 ### CIMReportSectionElement 
@@ -3084,7 +3084,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
+| elements | [[CIMElement]](Types.md#element) | A collection of elements. 
 
 
 ### CIMReportSectionElement 

@@ -15,7 +15,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| dataConnections | [[CIMDataConnection]](Types.md#cimdataconnection) | A collection of data connections. 
+| dataConnections | [[CIMDataConnection]](Types.md#dataconnection) | A collection of data connections. 
 | spatialReference | [SpatialReference](ExternalReferences.md#spatialreference) | The spatial reference. 
 | metaData | string | The data connection metadata. 
 
@@ -131,7 +131,7 @@
 |---------|--------|--------|
 | AOI | [Envelope](ExternalReferences.md#envelope) | The area of interest. 
 | method | [CIMGAMethod](CIMGALayer.md#cimgamethod) | The GA method. 
-| renderers | [[CIMRenderer]](Types.md#cimrenderer) | The renderers. 
+| renderers | [[CIMRenderer]](Types.md#renderer) | The renderers. 
 | rangeDefinitions | [[CIMRangeDefinition]](CIMVectorLayers.md#cimrangedefinition) | The range definitions. 
 | activeRangeName | string | The name of the active range. 
 | isFlattened | boolean | A value indicating whether the layer is flattened. 

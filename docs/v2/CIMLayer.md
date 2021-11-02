@@ -101,7 +101,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| elements | [[CIMElement]](Types.md#cimelement) | A collection of elements. 
+| elements | [[CIMElement]](Types.md#element) | A collection of elements. 
 
 
 ### CIMElementStorage 

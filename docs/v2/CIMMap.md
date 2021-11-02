@@ -51,7 +51,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| children | [[CIMAnimationScreenGraphic]](Types.md#cimanimationscreengraphic) | The children. 
+| children | [[CIMAnimationScreenGraphic]](Types.md#animationscreengraphic) | The children. 
 
 
 
@@ -234,7 +234,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| contents | [[CIMEditingTemplateCollectionItem]](Types.md#cimeditingtemplatecollectionitem) | The array of items stored within this collection. 
+| contents | [[CIMEditingTemplateCollectionItem]](Types.md#editingtemplatecollectionitem) | The array of items stored within this collection. 
 | expanded | boolean | A value indicating whether this collection is expanded in the user interface. 
 
 
@@ -1348,7 +1348,7 @@
 |---------|--------|--------|
 | trackTime | double | The value of time in seconds that the keyframe exists in the track. 
 | camera | [CIMKeyframeCamera](CIMMap.md#cimkeyframecamera) | The camera keyframe. 
-| layers | [[CIMKeyframeLayer]](Types.md#cimkeyframelayer) | The collection of layer keyframes. 
+| layers | [[CIMKeyframeLayer]](Types.md#keyframelayer) | The collection of layer keyframes. 
 | range | [CIMKeyframeRange](CIMMap.md#cimkeyframerange) | The range keyframe. 
 | time | [CIMKeyframeTime](CIMMap.md#cimkeyframetime) | The time keyframe. 
 | surfaces | [[CIMKeyframeSurface]](CIMMap.md#cimkeyframesurface) | The collection of surface keyframes. 
@@ -1369,7 +1369,7 @@
 |---------|--------|--------|
 | name | string | The name of the track. 
 | keyframes | [[CIMViewKeyframe]](CIMMap.md#cimviewkeyframe) | The collection of view keyframes. 
-| screenGraphics | [[CIMAnimationScreenGraphic]](Types.md#cimanimationscreengraphic) | The list of graphic overlays used in the animation. 
+| screenGraphics | [[CIMAnimationScreenGraphic]](Types.md#animationscreengraphic) | The list of graphic overlays used in the animation. 
 | referenceResolutionWidth | long | The desired pixel width the animation was made to export at. 
 | referenceResolutionHeight | long | The desired pixel height the animation was made to export at. 
 | exportType | string | The export MIME type. Supported formats: video/mp4, video/avi, image/gif, image/jpeg, or image/png. 

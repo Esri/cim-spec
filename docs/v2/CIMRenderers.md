@@ -245,7 +245,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| visualVariables | [[CIMVisualVariable]](Types.md#cimvisualvariable) | The visual variables. 
+| visualVariables | [[CIMVisualVariable]](Types.md#visualvariable) | The visual variables. 
 
 
 
@@ -345,7 +345,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| visualVariables | [[CIMVisualVariable]](Types.md#cimvisualvariable) | The visual variables. 
+| visualVariables | [[CIMVisualVariable]](Types.md#visualvariable) | The visual variables. 
 
 
 ### CIMDataExclusion 
@@ -574,7 +574,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| visualVariables | [[CIMVisualVariable]](Types.md#cimvisualvariable) | The visual variables. 
+| visualVariables | [[CIMVisualVariable]](Types.md#visualvariable) | The visual variables. 
 
 
 ### CIMDataNormalization 
@@ -724,7 +724,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| visualVariables | [[CIMVisualVariable]](Types.md#cimvisualvariable) | The visual variables. 
+| visualVariables | [[CIMVisualVariable]](Types.md#visualvariable) | The visual variables. 
 
 
 ### CIMSimpleRenderer 
@@ -962,7 +962,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| visualVariables | [[CIMVisualVariable]](Types.md#cimvisualvariable) | The visual variables. 
+| visualVariables | [[CIMVisualVariable]](Types.md#visualvariable) | The visual variables. 
 
 
 ### CIMUniqueValueRenderer 
