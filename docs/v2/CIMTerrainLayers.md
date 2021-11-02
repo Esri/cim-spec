@@ -120,7 +120,7 @@
 | maintainCurrentSurface | boolean | A value indicating whether the current surface should be maintained. 
 | pointBudget | long | The point budget. 
 | pointCountPerCentimeter | long | The point count per centimeter. 
-| renderers | [[CIMTinRenderer]](Types.md#cimtinrenderer) | The renderers. 
+| renderers | [[CIMTinRenderer]](Types.md#tinrenderer) | The renderers. 
 | scaleSymbols | boolean | A value indicating whether to scale symbols. 
 | showFileExtent | boolean | A value indicating whether to show the file extent. 
 | showFileName | boolean | A value indicating whether to show the file name. 
@@ -531,7 +531,7 @@
 | dataConnection | [CIMSceneDataConnection](CIMTerrainLayers.md#cimscenedataconnection) | The data connection. 
 | pointsPerInch | double | The double value that determines the number of points to draw per display inch. 
 | pointsBudget | long | The double value to determine the upper limit on the number of points drawn. 
-| filters | [[CIMPointCloudFilter]](Types.md#cimpointcloudfilter) | The filter used to filter the points being drawn. 
+| filters | [[CIMPointCloudFilter]](Types.md#pointcloudfilter) | The filter used to filter the points being drawn. 
 | snappable | boolean | A value indicating whether this layer participates in snapping in the editor. 
 | eyeDomeLighting | [CIMEyeDomeLighting](CIMLayer.md#cimeyedomelighting) | Eye-dome lighting properties. 
 
@@ -851,7 +851,7 @@
 | pyramidHonored | boolean | A value indicating whether the current surface resolution honors the scale/resolution relationship in the pyramid definition. 
 | scaleSymbols | boolean | A value indicating whether symbols should be scaled. 
 | showResolution | boolean | A value indicating whether the resolution should be shown in the contents pane. 
-| renderers | [[CIMTinRenderer]](Types.md#cimtinrenderer) | The renderers. 
+| renderers | [[CIMTinRenderer]](Types.md#tinrenderer) | The renderers. 
 | targetResolution | double | The target resolution. 
 | useOverviewTerrain | boolean | A value indicating whether the terrain overview should be used. 
 | usePointBudget | boolean | A value indicating whether the point budget should be used. 
@@ -1229,7 +1229,7 @@
 |---------|--------|--------|
 | dataConnection | [DataConnection](Types.md#dataconnection) | The data connection. 
 | displayField | string | The display field. 
-| renderers | [[CIMTinRenderer]](Types.md#cimtinrenderer) | The renderers. 
+| renderers | [[CIMTinRenderer]](Types.md#tinrenderer) | The renderers. 
 | scaleSymbols | boolean | A value indicating whether or not to scale symbols. 
 
 

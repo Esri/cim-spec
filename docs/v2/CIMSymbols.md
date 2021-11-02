@@ -111,7 +111,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| effects | [[CIMGeometricEffect]](Types.md#cimgeometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
+| effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
 | colorLocked | boolean | A value indicating whether the color set at the basic properties level is applied to the symbol layer. If the symbol layer is color locked then changes made to the color in the basic properties will not be applied to the symbol layer. 
@@ -246,7 +246,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| effects | [[CIMGeometricEffect]](Types.md#cimgeometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
+| effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
 | colorLocked | boolean | A value indicating whether the color set at the basic properties level is applied to the symbol layer. If the symbol layer is color locked then changes made to the color in the basic properties will not be applied to the symbol layer. 
@@ -1169,7 +1169,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| effects | [[CIMGeometricEffect]](Types.md#cimgeometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
+| effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
 | colorLocked | boolean | A value indicating whether the color set at the basic properties level is applied to the symbol layer. If the symbol layer is color locked then changes made to the color in the basic properties will not be applied to the symbol layer. 
@@ -1220,7 +1220,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| effects | [[CIMGeometricEffect]](Types.md#cimgeometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
+| effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
 | colorLocked | boolean | A value indicating whether the color set at the basic properties level is applied to the symbol layer. If the symbol layer is color locked then changes made to the color in the basic properties will not be applied to the symbol layer. 
@@ -1274,7 +1274,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| effects | [[CIMGeometricEffect]](Types.md#cimgeometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
+| effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
 | colorLocked | boolean | A value indicating whether the color set at the basic properties level is applied to the symbol layer. If the symbol layer is color locked then changes made to the color in the basic properties will not be applied to the symbol layer. 
@@ -1405,8 +1405,8 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| effects | [[CIMGeometricEffect]](Types.md#cimgeometriceffect) | The geometric effects that are applied to the symbol. 
-| symbolLayers | [[CIMSymbolLayer]](Types.md#cimsymbollayer) | The symbol layers. Symbol layers are the components that make up a symbol. A symbol layer is represented by a stroke, fill, marker, or procedural symbol layer. 
+| effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | The geometric effects that are applied to the symbol. 
+| symbolLayers | [[CIMSymbolLayer]](Types.md#symbollayer) | The symbol layers. Symbol layers are the components that make up a symbol. A symbol layer is represented by a stroke, fill, marker, or procedural symbol layer. 
 | thumbnailURI | string | The representative image of the symbol. 
 | useRealWorldSymbolSizes | boolean | A value indicating whether the symbol size properties are rendered using real world units or page units. When set to true the symbol will draw using real world units (e.g. meters). 
 
@@ -1881,7 +1881,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| effects | [[CIMGeometricEffect]](Types.md#cimgeometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
+| effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
 | colorLocked | boolean | A value indicating whether the color set at the basic properties level is applied to the symbol layer. If the symbol layer is color locked then changes made to the color in the basic properties will not be applied to the symbol layer. 
@@ -1915,8 +1915,8 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| effects | [[CIMGeometricEffect]](Types.md#cimgeometriceffect) | The geometric effects that are applied to the symbol. 
-| symbolLayers | [[CIMSymbolLayer]](Types.md#cimsymbollayer) | The symbol layers. Symbol layers are the components that make up a symbol. A symbol layer is represented by a stroke, fill, marker, or procedural symbol layer. 
+| effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | The geometric effects that are applied to the symbol. 
+| symbolLayers | [[CIMSymbolLayer]](Types.md#symbollayer) | The symbol layers. Symbol layers are the components that make up a symbol. A symbol layer is represented by a stroke, fill, marker, or procedural symbol layer. 
 | thumbnailURI | string | The representative image of the symbol. 
 | useRealWorldSymbolSizes | boolean | A value indicating whether the symbol size properties are rendered using real world units or page units. When set to true the symbol will draw using real world units (e.g. meters). 
 
@@ -1939,7 +1939,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| effects | [[CIMGeometricEffect]](Types.md#cimgeometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
+| effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
 | colorLocked | boolean | A value indicating whether the color set at the basic properties level is applied to the symbol layer. If the symbol layer is color locked then changes made to the color in the basic properties will not be applied to the symbol layer. 
@@ -2009,7 +2009,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| effects | [[CIMGeometricEffect]](Types.md#cimgeometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
+| effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
 | colorLocked | boolean | A value indicating whether the color set at the basic properties level is applied to the symbol layer. If the symbol layer is color locked then changes made to the color in the basic properties will not be applied to the symbol layer. 
@@ -2050,7 +2050,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| effects | [[CIMGeometricEffect]](Types.md#cimgeometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
+| effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
 | colorLocked | boolean | A value indicating whether the color set at the basic properties level is applied to the symbol layer. If the symbol layer is color locked then changes made to the color in the basic properties will not be applied to the symbol layer. 
@@ -2103,7 +2103,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| effects | [[CIMGeometricEffect]](Types.md#cimgeometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
+| effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
 | colorLocked | boolean | A value indicating whether the color set at the basic properties level is applied to the symbol layer. If the symbol layer is color locked then changes made to the color in the basic properties will not be applied to the symbol layer. 
@@ -2145,7 +2145,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| effects | [[CIMGeometricEffect]](Types.md#cimgeometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
+| effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
 | colorLocked | boolean | A value indicating whether the color set at the basic properties level is applied to the symbol layer. If the symbol layer is color locked then changes made to the color in the basic properties will not be applied to the symbol layer. 
@@ -2305,8 +2305,8 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| effects | [[CIMGeometricEffect]](Types.md#cimgeometriceffect) | The geometric effects that are applied to the symbol. 
-| symbolLayers | [[CIMSymbolLayer]](Types.md#cimsymbollayer) | The symbol layers. Symbol layers are the components that make up a symbol. A symbol layer is represented by a stroke, fill, marker, or procedural symbol layer. 
+| effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | The geometric effects that are applied to the symbol. 
+| symbolLayers | [[CIMSymbolLayer]](Types.md#symbollayer) | The symbol layers. Symbol layers are the components that make up a symbol. A symbol layer is represented by a stroke, fill, marker, or procedural symbol layer. 
 | thumbnailURI | string | The representative image of the symbol. 
 | useRealWorldSymbolSizes | boolean | A value indicating whether the symbol size properties are rendered using real world units or page units. When set to true the symbol will draw using real world units (e.g. meters). 
 
@@ -2389,8 +2389,8 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| effects | [[CIMGeometricEffect]](Types.md#cimgeometriceffect) | The geometric effects that are applied to the symbol. 
-| symbolLayers | [[CIMSymbolLayer]](Types.md#cimsymbollayer) | The symbol layers. Symbol layers are the components that make up a symbol. A symbol layer is represented by a stroke, fill, marker, or procedural symbol layer. 
+| effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | The geometric effects that are applied to the symbol. 
+| symbolLayers | [[CIMSymbolLayer]](Types.md#symbollayer) | The symbol layers. Symbol layers are the components that make up a symbol. A symbol layer is represented by a stroke, fill, marker, or procedural symbol layer. 
 | thumbnailURI | string | The representative image of the symbol. 
 | useRealWorldSymbolSizes | boolean | A value indicating whether the symbol size properties are rendered using real world units or page units. When set to true the symbol will draw using real world units (e.g. meters). 
 
@@ -2413,7 +2413,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| effects | [[CIMGeometricEffect]](Types.md#cimgeometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
+| effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
 | colorLocked | boolean | A value indicating whether the color set at the basic properties level is applied to the symbol layer. If the symbol layer is color locked then changes made to the color in the basic properties will not be applied to the symbol layer. 
@@ -2522,7 +2522,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| effects | [[CIMGeometricEffect]](Types.md#cimgeometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
+| effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
 | colorLocked | boolean | A value indicating whether the color set at the basic properties level is applied to the symbol layer. If the symbol layer is color locked then changes made to the color in the basic properties will not be applied to the symbol layer. 
@@ -2555,7 +2555,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| effects | [[CIMGeometricEffect]](Types.md#cimgeometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
+| effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
 | colorLocked | boolean | A value indicating whether the color set at the basic properties level is applied to the symbol layer. If the symbol layer is color locked then changes made to the color in the basic properties will not be applied to the symbol layer. 
@@ -2582,7 +2582,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| effects | [[CIMGeometricEffect]](Types.md#cimgeometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
+| effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
 | colorLocked | boolean | A value indicating whether the color set at the basic properties level is applied to the symbol layer. If the symbol layer is color locked then changes made to the color in the basic properties will not be applied to the symbol layer. 
@@ -2621,7 +2621,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| effects | [[CIMGeometricEffect]](Types.md#cimgeometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
+| effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
 | colorLocked | boolean | A value indicating whether the color set at the basic properties level is applied to the symbol layer. If the symbol layer is color locked then changes made to the color in the basic properties will not be applied to the symbol layer. 
@@ -2813,7 +2813,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| effects | [[CIMGeometricEffect]](Types.md#cimgeometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
+| effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
 | colorLocked | boolean | A value indicating whether the color set at the basic properties level is applied to the symbol layer. If the symbol layer is color locked then changes made to the color in the basic properties will not be applied to the symbol layer. 
@@ -2887,7 +2887,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| effects | [[CIMGeometricEffect]](Types.md#cimgeometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
+| effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
 | colorLocked | boolean | A value indicating whether the color set at the basic properties level is applied to the symbol layer. If the symbol layer is color locked then changes made to the color in the basic properties will not be applied to the symbol layer. 
@@ -2947,7 +2947,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| effects | [[CIMGeometricEffect]](Types.md#cimgeometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
+| effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
 | colorLocked | boolean | A value indicating whether the color set at the basic properties level is applied to the symbol layer. If the symbol layer is color locked then changes made to the color in the basic properties will not be applied to the symbol layer. 

@@ -10,7 +10,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name of the chart. 
-| series | [[CIMChartSeries]](Types.md#cimchartseries) | The series properties of the chart. 
+| series | [[CIMChartSeries]](Types.md#chartseries) | The series properties of the chart. 
 | generalProperties | [CIMChartGeneralProperties](CIMCharts.md#cimchartgeneralproperties) | The general properties of the chart. 
 | legend | [CIMChartLegend](CIMCharts.md#cimchartlegend) | The legend properties of the chart. 
 | axes | [[CIMChartAxis]](CIMCharts.md#cimchartaxis) | The properties of chart axis. 
@@ -196,7 +196,7 @@
 | breaksCount | long | The number of breaks for automatic breaks creation. 
 | minimumBreak | double | The lower bound of the first range. 
 | breaks | [double] | The upper bound breaks. 
-| breakColors | [[CIMColor]](Types.md#cimcolor) | The color for each break. 
+| breakColors | [[CIMColor]](Types.md#color) | The color for each break. 
 | colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp from which break colors are created. 
 | includeLeapDay | boolean | A value indicating whether a leap day (February 29) cell is a part of a chart. 
 
@@ -255,7 +255,7 @@
 | breaksCount | long | The number of breaks for automatic breaks creation. 
 | minimumBreak | double | The lower bound of the first range. 
 | breaks | [double] | The upper bound breaks. 
-| breakColors | [[CIMColor]](Types.md#cimcolor) | The color for each break. 
+| breakColors | [[CIMColor]](Types.md#color) | The color for each break. 
 | colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp from which break colors are created. 
 | showWedgeLabel | boolean | A value indicating whether the wedge label is visible. 
 | wedgeLabelText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text symbol properties for the wedge label. 
@@ -626,7 +626,7 @@
 | breaksCount | long | The number of breaks for automatic breaks creation. 
 | minimumBreak | double | The lower bound of the first range. 
 | breaks | [double] | The upper bound breaks. 
-| breakColors | [[CIMColor]](Types.md#cimcolor) | The color for each break. 
+| breakColors | [[CIMColor]](Types.md#color) | The color for each break. 
 | colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp from which break colors are created. 
 
 
@@ -841,9 +841,9 @@
 | displayOption | [enumeration ChartSPMDisplayOption](CIMCharts.md#enumeration-chartspmdisplayoption) | The display option for the upper right of the scatter plot matrix. 
 | lowerLeftDisplayOption | [enumeration ChartSPMDisplayOption](CIMCharts.md#enumeration-chartspmdisplayoption) | The display option for the lower left of the scatter plot matrix. PreviewPlot currently is not supported in lower left. 
 | lowerLeftColorRamp | [ColorRamp](Types.md#colorramp) | The color ramp for the lower left when RSquared or Pearson's R is selected. 
-| lowerLeftBreakColors | [[CIMColor]](Types.md#cimcolor) | The color for each break in the lower left. 
+| lowerLeftBreakColors | [[CIMColor]](Types.md#color) | The color for each break in the lower left. 
 | upperRightColorRamp | [ColorRamp](Types.md#colorramp) | The color ramp for the upper right when RSquared or Pearson's R is selected. 
-| upperRightBreakColors | [[CIMColor]](Types.md#cimcolor) | The color for each break in the upper right. 
+| upperRightBreakColors | [[CIMColor]](Types.md#color) | The color for each break in the upper right. 
 | diagonalOption | [enumeration ChartSPMDiagonalOption](CIMCharts.md#enumeration-chartspmdiagonaloption) | The display option for the diagonal. 
 | sortByType | [enumeration ChartSPMSortByType](CIMCharts.md#enumeration-chartspmsortbytype) | The sort by type. 
 | sortDirection | [enumeration ChartSortDirection](CIMCharts.md#enumeration-chartsortdirection) | The direction type of sort order. 

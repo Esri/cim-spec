@@ -230,7 +230,7 @@
 |---------|--------|--------|
 | text | string | The text string of the text graphic. 
 | shape | [Geometry](ExternalReferences.md#geometry) | The geometry of the text graphic. 
-| leaders | [[CIMLeader]](Types.md#cimleader) | A collection of leaders coming off of the graphic. 
+| leaders | [[CIMLeader]](Types.md#leader) | A collection of leaders coming off of the graphic. 
 
 
 ### CIMParagraphTextGraphic 
@@ -309,7 +309,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | location | [Point](ExternalReferences.md#point) | The location of the point graphic. 
-| leaders | [[CIMLeader]](Types.md#cimleader) | A collection of leaders coming off of the graphic. 
+| leaders | [[CIMLeader]](Types.md#leader) | A collection of leaders coming off of the graphic. 
 
 
 
@@ -375,7 +375,7 @@
 |---------|--------|--------|
 | text | string | The text string of the text graphic. 
 | shape | [Geometry](ExternalReferences.md#geometry) | The geometry of the text graphic. 
-| leaders | [[CIMLeader]](Types.md#cimleader) | A collection of leaders coming off of the graphic. 
+| leaders | [[CIMLeader]](Types.md#leader) | A collection of leaders coming off of the graphic. 
 
 
 
