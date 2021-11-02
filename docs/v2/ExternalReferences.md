@@ -382,7 +382,7 @@ The supported curve objects are as follows:
 A Circular Arc is an object that describes any portion of a circle. A CircularArc differs from an EllipticArc in that every point along the CircularArc must be a fixed distance (the Radius) from the center.
 
 Circular Arc is defined by an end point and an interior point. It is identified by the member "c" and can be represented in JSON as
-{"c": [[x, y, <z>, <m>],[interior_x, interior_y]]}
+{"c": [[x, y, &lt;z&gt;, &lt;m&gt;],[interior_x, interior_y]]}
 
 |Property | Type | Description |
 |---------|--------|--------|
@@ -391,11 +391,11 @@ Circular Arc is defined by an end point and an interior point. It is identified 
 ### EllipticArc
 An Elliptic Arc is an object that describes any portion of an ellipse.  
 
-Elliptic Arc is defined by end point, center point, axis, arc orientation, angle from major axis in radians, length of semi major axis and ratio of the minor axis to the major axis and can be represented in JSON as follows: {"a": [[x, y, <z>, <m>],[center_x, center_y], minor, clockwise, rotation, axis, ratio]}
+Elliptic Arc is defined by end point, center point, axis, arc orientation, angle from major axis in radians, length of semi major axis and ratio of the minor axis to the major axis and can be represented in JSON as follows: {"a": [[x, y, &lt;z&gt;, &lt;m&gt;],[center_x, center_y], minor, clockwise, rotation, axis, ratio]}
 
 |Property | Type | Description |
 |---------|--------|--------|
-|a|[[Point](ExternalReferences.md#point), [Point](ExternalReferences.md#point)}, number(axis), number(orientation), number(rotation), number(axis),number(ratio)]| <br>Array elements should be in the following order : <ul><li>`End point`</li><li>`Center Point`</li><li>`orientation(0: major, 1: minor)`</li><li>`rotation(0: counter clockwise, 1: clockwise`)</li> <li>axis: length of the semi-major axis</li><li>ratio: ratio of the minor axis to major axis</li></ul>|
+|a|[[Point](ExternalReferences.md#point) (end point), [Point](ExternalReferences.md#point) (center point), number(minor), number(clockwise), number(rotation), number(axis), number(ratio)]| <br>Array elements should be in the following order : <ul><li>`End point`</li><li>`Center Point`</li><li>`minor` (0: arc is major, 1: arc is minor - less than 180 degrees)</li><li>`clockwise`(0: counter clockwise, 1: clockwise)</li><li>`rotation`: angle of rotation of major axis in radians with a positive value being counterclockwise</li> <li>`axis`: length of the semi-major axis</li><li>`ratio`: ratio of the minor axis to major axis</li></ul>|
 
 ### BézierCurve
 
