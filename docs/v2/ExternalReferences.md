@@ -388,6 +388,9 @@ Circular Arc is defined by an end point and an interior point. It is identified 
 |---------|--------|--------|
 |c|[[Point](ExternalReferences.md#point)]|In the array, first element represents end point and the second element represents interior point|
 
+Alternatively, a Circular Arc may be defined as a special case of the [Elliptic Arc](ExternalReferences.md#ellipticarc) notation without rotation, axis, or ratio specified:
+{"a": [[x, y, &lt;z&gt;, &lt;m&gt;],[center_x, center_y],minor, clockwise]}
+
 ### EllipticArc
 An Elliptic Arc is an object that describes any portion of an ellipse.  
 
@@ -396,6 +399,8 @@ Elliptic Arc is defined by end point, center point, axis, arc orientation, angle
 |Property | Type | Description |
 |---------|--------|--------|
 |a|[[Point](ExternalReferences.md#point) (end point), [Point](ExternalReferences.md#point) (center point), number(minor), number(clockwise), number(rotation), number(axis), number(ratio)]| <br>Array elements should be in the following order : <ul><li>`End point`</li><li>`Center Point`</li><li>`minor` (0: arc is major, 1: arc is minor - less than 180 degrees)</li><li>`clockwise`(0: counter clockwise, 1: clockwise)</li><li>`rotation`: angle of rotation of major axis in radians with a positive value being counterclockwise</li> <li>`axis`: length of the semi-major axis</li><li>`ratio`: ratio of the minor axis to major axis</li></ul>|
+
+If rotation, axis, and ratio are not specified with the Elliptic Arc, the object is a special case of Elliptic Arc that is a [Circular Arc](ExternalReferences.md#circulararc).
 
 ### BézierCurve
 
