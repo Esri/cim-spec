@@ -87,6 +87,7 @@
 | isFrozen | boolean | A value indicating whether the column is frozen. 
 | isSorted | boolean | A value indicating whether the column is sorted. 
 | isVisible | boolean | A value indicating whether the column is visible. 
+| sortDirection | [enumeration SortOrderType](CIMLayer.md#enumeration-sortordertype) | A value indicating the sort direction. 
 
 
 

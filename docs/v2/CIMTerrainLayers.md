@@ -128,6 +128,7 @@
 | useFullResolutionScale | boolean | A value indicating whether to use the full resolution scale. 
 | selectable | boolean | A value indicating whether the layer is selectable. 
 | eyeDomeLighting | [CIMEyeDomeLighting](CIMLayer.md#cimeyedomelighting) | Eye-dome lighting properties. 
+| useDynamicLOD | boolean | A value indicating whether to use dynamic level-of-detail. 
 
 
 
@@ -727,6 +728,13 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+
+
+### CIMServiceDataConnectionProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| customParameters | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | Vendor specific parameters. 
 
 
 ### CIMSceneDataConnection 

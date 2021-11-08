@@ -16,6 +16,7 @@
 | axes | [[CIMChartAxis]](CIMCharts.md#cimchartaxis) | The properties of chart axis. 
 | mapSelectionHandling | [enumeration ChartMapSelectionHandling](CIMCharts.md#enumeration-chartmapselectionhandling) | A setting which indicates whether chart handles selection in the input layer by creating series only from the selected data or highlights selected values on the chart made from entire dataset. 
 | metaData | string | The client metadata about the chart. 
+| multiSeriesChartProperties | [MultiSeriesChartProperties](Types.md#multiserieschartproperties) | The multi series chart properties for supported chart types. 
 
 
 
@@ -93,7 +94,7 @@
 | orderFieldsSortTypes | [long] | The array of sort order types for fields in OrderFields property Allowed values 0(Ascending), 1(Descending). 
 | visible | boolean | A value indicating whether the series is visible or not. 
 | dataLabelText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text style for the data label. 
-| multiSeries | boolean | A value indicating whether this series is a multi-series. 
+| multiSeries | boolean | A value indicating whether this series is a multi series. 
 | locations | [[CIMChartLocationDefinition]](CIMCharts.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
 
 
@@ -137,7 +138,7 @@
 | orderFieldsSortTypes | [long] | The array of sort order types for fields in OrderFields property Allowed values 0(Ascending), 1(Descending). 
 | visible | boolean | A value indicating whether the series is visible or not. 
 | dataLabelText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text style for the data label. 
-| multiSeries | boolean | A value indicating whether this series is a multi-series. 
+| multiSeries | boolean | A value indicating whether this series is a multi series. 
 | locations | [[CIMChartLocationDefinition]](CIMCharts.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
 
 
@@ -180,7 +181,7 @@
 | orderFieldsSortTypes | [long] | The array of sort order types for fields in OrderFields property Allowed values 0(Ascending), 1(Descending). 
 | visible | boolean | A value indicating whether the series is visible or not. 
 | dataLabelText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text style for the data label. 
-| multiSeries | boolean | A value indicating whether this series is a multi-series. 
+| multiSeries | boolean | A value indicating whether this series is a multi series. 
 | locations | [[CIMChartLocationDefinition]](CIMCharts.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
 
 
@@ -238,7 +239,7 @@
 | orderFieldsSortTypes | [long] | The array of sort order types for fields in OrderFields property Allowed values 0(Ascending), 1(Descending). 
 | visible | boolean | A value indicating whether the series is visible or not. 
 | dataLabelText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text style for the data label. 
-| multiSeries | boolean | A value indicating whether this series is a multi-series. 
+| multiSeries | boolean | A value indicating whether this series is a multi series. 
 | locations | [[CIMChartLocationDefinition]](CIMCharts.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
 
 
@@ -391,7 +392,7 @@
 | orderFieldsSortTypes | [long] | The array of sort order types for fields in OrderFields property Allowed values 0(Ascending), 1(Descending). 
 | visible | boolean | A value indicating whether the series is visible or not. 
 | dataLabelText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text style for the data label. 
-| multiSeries | boolean | A value indicating whether this series is a multi-series. 
+| multiSeries | boolean | A value indicating whether this series is a multi series. 
 | locations | [[CIMChartLocationDefinition]](CIMCharts.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
 
 
@@ -487,7 +488,7 @@
 | orderFieldsSortTypes | [long] | The array of sort order types for fields in OrderFields property Allowed values 0(Ascending), 1(Descending). 
 | visible | boolean | A value indicating whether the series is visible or not. 
 | dataLabelText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text style for the data label. 
-| multiSeries | boolean | A value indicating whether this series is a multi-series. 
+| multiSeries | boolean | A value indicating whether this series is a multi series. 
 | locations | [[CIMChartLocationDefinition]](CIMCharts.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
 
 
@@ -612,7 +613,7 @@
 | orderFieldsSortTypes | [long] | The array of sort order types for fields in OrderFields property Allowed values 0(Ascending), 1(Descending). 
 | visible | boolean | A value indicating whether the series is visible or not. 
 | dataLabelText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text style for the data label. 
-| multiSeries | boolean | A value indicating whether this series is a multi-series. 
+| multiSeries | boolean | A value indicating whether this series is a multi series. 
 | locations | [[CIMChartLocationDefinition]](CIMCharts.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
 
 
@@ -692,7 +693,7 @@
 | orderFieldsSortTypes | [long] | The array of sort order types for fields in OrderFields property Allowed values 0(Ascending), 1(Descending). 
 | visible | boolean | A value indicating whether the series is visible or not. 
 | dataLabelText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text style for the data label. 
-| multiSeries | boolean | A value indicating whether this series is a multi-series. 
+| multiSeries | boolean | A value indicating whether this series is a multi series. 
 | locations | [[CIMChartLocationDefinition]](CIMCharts.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
 
 
@@ -744,7 +745,7 @@
 | orderFieldsSortTypes | [long] | The array of sort order types for fields in OrderFields property Allowed values 0(Ascending), 1(Descending). 
 | visible | boolean | A value indicating whether the series is visible or not. 
 | dataLabelText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text style for the data label. 
-| multiSeries | boolean | A value indicating whether this series is a multi-series. 
+| multiSeries | boolean | A value indicating whether this series is a multi series. 
 | locations | [[CIMChartLocationDefinition]](CIMCharts.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
 
 
@@ -820,7 +821,7 @@
 | orderFieldsSortTypes | [long] | The array of sort order types for fields in OrderFields property Allowed values 0(Ascending), 1(Descending). 
 | visible | boolean | A value indicating whether the series is visible or not. 
 | dataLabelText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text style for the data label. 
-| multiSeries | boolean | A value indicating whether this series is a multi-series. 
+| multiSeries | boolean | A value indicating whether this series is a multi series. 
 | locations | [[CIMChartLocationDefinition]](CIMCharts.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
 
 
@@ -875,7 +876,7 @@
 | orderFieldsSortTypes | [long] | The array of sort order types for fields in OrderFields property Allowed values 0(Ascending), 1(Descending). 
 | visible | boolean | A value indicating whether the series is visible or not. 
 | dataLabelText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text style for the data label. 
-| multiSeries | boolean | A value indicating whether this series is a multi-series. 
+| multiSeries | boolean | A value indicating whether this series is a multi series. 
 | locations | [[CIMChartLocationDefinition]](CIMCharts.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
 
 
@@ -929,7 +930,7 @@
 | orderFieldsSortTypes | [long] | The array of sort order types for fields in OrderFields property Allowed values 0(Ascending), 1(Descending). 
 | visible | boolean | A value indicating whether the series is visible or not. 
 | dataLabelText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text style for the data label. 
-| multiSeries | boolean | A value indicating whether this series is a multi-series. 
+| multiSeries | boolean | A value indicating whether this series is a multi series. 
 | locations | [[CIMChartLocationDefinition]](CIMCharts.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
 
 
@@ -1099,7 +1100,7 @@
 | orderFieldsSortTypes | [long] | The array of sort order types for fields in OrderFields property Allowed values 0(Ascending), 1(Descending). 
 | visible | boolean | A value indicating whether the series is visible or not. 
 | dataLabelText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text style for the data label. 
-| multiSeries | boolean | A value indicating whether this series is a multi-series. 
+| multiSeries | boolean | A value indicating whether this series is a multi series. 
 | locations | [[CIMChartLocationDefinition]](CIMCharts.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
 
 
@@ -1125,6 +1126,7 @@
 | spatialAggregationType | [enumeration ChartAggregationType](CIMCharts.md#enumeration-chartaggregationtype) | The spatial aggregation type to be used to calculate cell values. 
 | CCDCArguments | [CIMChartTemporalProfileCCDCArguments](CIMCharts.md#cimcharttemporalprofileccdcarguments) | The CCDC options. 
 | landTrendRArguments | [CIMChartTemporalProfileLandTrendRArguments](CIMCharts.md#cimcharttemporalprofilelandtrendrarguments) | The LandTrendR options. 
+| timeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The time extent used by the chart. 
 
 
 
@@ -1226,6 +1228,47 @@
 |---------|--------|--------|
 | ChartValueType_Numeric| 0| Value is numeric 
 | ChartValueType_Temporal| 1| Value is temporal 
+
+
+
+
+## CIMGridChartProperties
+#### Provides access to members that control grid chart properties. 
+
+
+### CIMMultiSeriesChartProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| enabled | boolean | A value indicating whether multi series chart properties are enabled. 
+
+
+### CIMGridChartProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| miniChartsPerRow | long | The number of mini charts per row of a grid chart. 
+| selectedMiniChart | long | The index of the selected mini chart. 
+| showPreviewChart | boolean | A value indicating whether to show a zoomed-in preview chart. 
+| useSeriesMinMaxForAxisX | boolean | A value indicating whether each mini chart will use corresponding series' minimum and maximum of x values for axis X. If false it will use the combined series' minimum and maximum. 
+| useSeriesMinMaxForAxisY | boolean | A value indicating whether each mini chart will use corresponding series' minimum and maximum of y values for axis Y. If false it will use the combined series' minimum and maximum. 
+
+
+
+
+
+
+## CIMMultiSeriesChartProperties
+#### Provides access to members that control multi series chart properties. 
+
+
+### CIMMultiSeriesChartProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| enabled | boolean | A value indicating whether multi series chart properties are enabled. 
+
+
 
 
 

@@ -54,6 +54,26 @@
 
 
 
+### Enumeration: ColorizerHillshadeType
+#### A list of hillshade types for colorizer. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Traditional| 0| Calculates hillshade from a single illumination direction. You can set the Azimuth and Altitude options to control the location of the light source. 
+| Multidirectional| 1| Combines light from multiple sources to represent an enhanced visualization of the terrain. 
+
+
+
+### Enumeration: ColorizerScalingType
+#### A list of scaling types for colorizer. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| None| 0| No scaling is applied. This is ideal for a single raster dataset covering a local area. 
+| Adjusted| 1| A nonlinear adjustment is applied using the default Pixel Size Power and Pixel Size Factor values, which accommodate a wide variety of altitude changes (scale) as the viewer zooms in and out. 
+
+
+
 
 ## CIMFeatureMosaicSubLayer
 #### Represents mosaic feature sub layer. 
@@ -155,7 +175,7 @@
 | previousObservationsCount | long | The previous observation count. 
 | useRealWorldSymbolSizes | boolean | A value indicating whether to use real world symbols sizes (meters) vs. points. 
 | showPreviousObservations | boolean | A value indicating whether previous observations are being drawn. 
-| featureReduction | [CIMFeatureReduction](CIMVectorLayers.md#cimfeaturereduction) | The feature reduction technique in use by this layer. 
+| featureReduction | [FeatureReduction](Types.md#featurereduction) | The feature reduction technique in use by this layer. 
 | showTracks | boolean | A value indicating whether track lines are being drawn. 
 
 
@@ -604,7 +624,7 @@
 | previousObservationsCount | long | The previous observation count. 
 | useRealWorldSymbolSizes | boolean | A value indicating whether to use real world symbols sizes (meters) vs. points. 
 | showPreviousObservations | boolean | A value indicating whether previous observations are being drawn. 
-| featureReduction | [CIMFeatureReduction](CIMVectorLayers.md#cimfeaturereduction) | The feature reduction technique in use by this layer. 
+| featureReduction | [FeatureReduction](Types.md#featurereduction) | The feature reduction technique in use by this layer. 
 | showTracks | boolean | A value indicating whether track lines are being drawn. 
 
 
@@ -1367,6 +1387,50 @@
 
 
 
+## CIMRasterShadedReliefColorizer
+#### Represents a raster shaded relief colorizer. 
+
+
+### CIMOrthoRectification 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| constantZ | double | The constant Z value in meters. 
+| ZFactor | double | The conversion factor from DEM Z unit to meters. 
+| ZOffset | double | The Z offset in meters applied to DEM. 
+| geoid | boolean | A value indicating whether Geoid correction is needed. 
+| DEM | [DataConnection](Types.md#dataconnection) | The data connection of the DEM used for orthorectification. 
+
+
+### CIMRasterColorizer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| resamplingType | [enumeration RasterResamplingType](CIMEnumerations.md#enumeration-rasterresamplingtype) | The raster resampling type. 
+| contrast | long | The contrast value. 
+| brightness | long | The brightness value. 
+| noDataColor | [Color](Types.md#color) | The no data color. 
+
+
+### CIMRasterShadedReliefColorizer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp. 
+| hillShadeType | [enumeration ColorizerHillshadeType](CIMImageLayers.md#enumeration-colorizerhillshadetype) | The hillshade type. 
+| scalingType | [enumeration ColorizerScalingType](CIMImageLayers.md#enumeration-colorizerscalingtype) | The scaling type. 
+| pixelSizePower | double | The pixel size power. 
+| pixelSizeFactor | double | The pixel size factor. 
+| azimuth | double | The azimuth. The value will be ignored if UseMapIlluminationProperties is set to true. 
+| altitude | double | The Altitude. The value will be ignored if UseMapIlluminationProperties is set to true. 
+| removeEdgeEffect | boolean | A value indicating whether or not to remove edge effect. 
+| useMapIlluminationProperties | boolean | A value indicating whether or not to use map level illumination properties of altitude and azimuth. 
+
+
+
+
+
+
 ## CIMRasterStretchClass
 #### Represents a raster stretch class. 
 
@@ -1639,6 +1703,11 @@
 | footprintColor | [Color](Types.md#color) | The footprint color. 
 | elapsedTime | double | The elapsed time in seconds. 
 | visibility | boolean | A value indicating whether the standalone video graphics is visible. 
+| expanded | boolean | A value indicating whether the standalone video is expanded in the contents pane. 
+| frameCenterGraphic | [CIMVideoGraphicElement](CIMImageLayers.md#cimvideographicelement) | The graphic element representing the frame center. 
+| frameOutlineGraphic | [CIMVideoGraphicElement](CIMImageLayers.md#cimvideographicelement) | The graphic element representing the frame outline. 
+| platformTrailGraphic | [CIMVideoGraphicElement](CIMImageLayers.md#cimvideographicelement) | The graphic element representing the platform trail. 
+| platformPositionGraphic | [CIMVideoGraphicElement](CIMImageLayers.md#cimvideographicelement) | The graphic element representing the platform position. 
 | bookmarkIndicators | [[CIMVideoTimelineEventIndicator]](CIMImageLayers.md#cimvideotimelineeventindicator) | The collection of event indicators for Bookmark. 
 | exportFrameIndicators | [[CIMVideoTimelineEventIndicator]](CIMImageLayers.md#cimvideotimelineeventindicator) | The collection of event indicators for ExportFrame. 
 | exportToPPTIndicators | [[CIMVideoTimelineEventIndicator]](CIMImageLayers.md#cimvideotimelineeventindicator) | The collection of event indicators for ExportToPPT. 
@@ -1727,6 +1796,42 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | URI | string | The URI of the video files. 
+
+
+
+
+
+
+## CIMVideoGraphicElement
+#### Represents video-related graphic being displayed on the map. 
+
+
+### CIMElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| anchor | [enumeration Anchor](CIMLayout.md#enumeration-anchor) | The anchor position of the element. 
+| locked | boolean | A value indicating whether the element is locked. Each element in the contents pane has a lock icon. If the icon is shown as locked, you can not select that feature in the layout using the select tool. 
+| name | string | The name of the element. 
+| visible | boolean | A value indicating whether the element is visible. 
+| rotation | double | The rotation of the element. 
+| rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
+| lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+
+
+### CIMGraphicElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| graphic | [Graphic](Types.md#graphic) | The CIMGraphic for an element on a page layout. 
+
+
+### CIMVideoGraphicElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| expanded | boolean | A value indicating whether the graphic is expanded in the contents pane. 
 
 
 

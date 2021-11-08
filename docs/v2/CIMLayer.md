@@ -325,6 +325,13 @@
 | allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
 
 
+### CIMStandaloneTableContainer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| standaloneTables | [string] | The standalone tables as an array of table repository paths. 
+
+
 ### CIMGroupLayerDefinition 
 
 |Property | Type | Description | 

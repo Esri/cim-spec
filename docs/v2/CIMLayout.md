@@ -221,6 +221,73 @@
 
 
 
+## CIMAviationVerticalScaleBar
+#### Represents an aviation-specific Vertical Scale Bar. 
+
+
+### CIMElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| anchor | [enumeration Anchor](CIMLayout.md#enumeration-anchor) | The anchor position of the element. 
+| locked | boolean | A value indicating whether the element is locked. Each element in the contents pane has a lock icon. If the icon is shown as locked, you can not select that feature in the layout using the select tool. 
+| name | string | The name of the element. 
+| visible | boolean | A value indicating whether the element is visible. 
+| rotation | double | The rotation of the element. 
+| rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
+| lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+
+
+### CIMFrameElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| frame | [Polygon](ExternalReferences.md#polygon) | The geometry of a frame for an element. 
+| graphicFrame | [CIMGraphicFrame](CIMGraphics.md#cimgraphicframe) | The graphic symbology of an element's frame. 
+
+
+### CIMAviationVerticalScaleBar 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| verticalLineSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The line symbol for the vertical line of the scale bar. 
+| feetScale | [CIMAviationVerticalScaleProperties](CIMLayout.md#cimaviationverticalscaleproperties) | The feet scale properties for the vertical scale bar. 
+| meterScale | [CIMAviationVerticalScaleProperties](CIMLayout.md#cimaviationverticalscaleproperties) | The meters scale properties for the vertical scale bar. 
+| divisionMarkHeight | double | The division marker's height. 
+| divisionsBeforeZero | boolean | A value indicating whether to show division symbols before zero. 
+| feetOnRight | boolean | A value indicating whether to show feet on the right, if false will show feet on the left and meters on the right. 
+
+
+
+
+
+
+## CIMAviationVerticalScaleProperties
+#### Represents a set of scale properties for aviation-specific Vertical Scale Bar, such as a feet scale or meter scale properties. 
+
+
+### CIMAviationVerticalScaleProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| unitTextSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The text symbol used for the scale unit. 
+| divisionMarkSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The line symbol for the divisions. 
+| subdivisionMarkSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The line symbol for the subdivisions. 
+| scaleTextSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The text symbol for the scale values. 
+| scaleBarHeight | double | The height for the scale bar. 
+| divisionLineLength | double | The division line length for the scale bar. The units are in points. 
+| subdivisionLineLength | double | The subdivision line length for the scale bar. The units are in points. 
+| scaleUnitText | string | The string value for the scale unit text. 
+| divisions | long | The division count for the scale. 
+| subdivisions | long | The subdivision count for the scale. 
+| visible | boolean | A value indicating whether to show this scale, if false no graphics will be shown. 
+
+
+
+
+
+
 ## CIMBookmarkMapSeries
 #### Bookmark map series is a means to create a series of map pages based on saved bookmarks. 
 
@@ -2134,6 +2201,7 @@
 |---------|--------|--------|
 | showPenetrating | boolean | A value indicating whether to the obstacle only if it penetrates OIS Surface. 
 | obstacleLayerName | string | The name connecting display options to obstacle layers coming from Obstacle JSON (read only). 
+| symbolSubstitutionType | [enumeration ProfileObstacleSymbolSubstitutionType](CIMLayout.md#enumeration-profileobstaclesymbolsubstitutiontype) | The type of substitution applied to the obstacle symbol. 
 
 
 
@@ -2162,6 +2230,17 @@
 
 
 
+### Enumeration: ProfileObstacleSymbolSubstitutionType
+#### Types of symbol substitution used to display obstacles. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| None| 0| No substitute symbols used to display obstacles 
+| Penetrating| 1| Penetrating obstacles are displayed with substitute symbols 
+| Protruding| 2| Protruding portion of penetrating obstacles is displayed with substitute symbols 
+
+
+
 
 ## CIMProfilePointObstacle
 #### Defines the properties for a Point obstacle. 
@@ -2173,6 +2252,7 @@
 |---------|--------|--------|
 | showPenetrating | boolean | A value indicating whether to the obstacle only if it penetrates OIS Surface. 
 | obstacleLayerName | string | The name connecting display options to obstacle layers coming from Obstacle JSON (read only). 
+| symbolSubstitutionType | [enumeration ProfileObstacleSymbolSubstitutionType](CIMLayout.md#enumeration-profileobstaclesymbolsubstitutiontype) | The type of substitution applied to the obstacle symbol. 
 
 
 ### CIMProfilePointObstacle 
@@ -2181,9 +2261,14 @@
 |---------|--------|--------|
 | markerLocation | [enumeration ProfileObstacleMarkerLocation](CIMLayout.md#enumeration-profileobstaclemarkerlocation) | The location of marker symbol for obstacle. 
 | obstacleBaseSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The line symbol to connect from base of the grid to base of the obstacle. 
-| obstacleHeightSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The line Symbol to display the height of the obstacle (base to top of obstacle). 
-| obstacleMarkerSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The point Symbol displayed based in the marker location. 
+| obstacleHeightSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The line symbol to display the height of the obstacle (base to top of obstacle). 
+| obstacleMarkerSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The point symbol displayed based in the marker location. 
 | obstacleTextSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The text symbol to display the number of obstacle at the marker location. 
+| showOnlyShadowingObstacles | boolean | A value indicating whether only shadowing obstacles are displayed. 
+| substituteObstacleBaseSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The substitute base symbol. 
+| substituteObstacleHeightSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The substitute height symbol. 
+| substituteObstacleMarkerSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The substitute marker symbol. 
+| substituteObstacleTextSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The substitute text symbol. 
 
 
 
@@ -2200,6 +2285,7 @@
 |---------|--------|--------|
 | showPenetrating | boolean | A value indicating whether to the obstacle only if it penetrates OIS Surface. 
 | obstacleLayerName | string | The name connecting display options to obstacle layers coming from Obstacle JSON (read only). 
+| symbolSubstitutionType | [enumeration ProfileObstacleSymbolSubstitutionType](CIMLayout.md#enumeration-profileobstaclesymbolsubstitutiontype) | The type of substitution applied to the obstacle symbol. 
 
 
 ### CIMProfilePolyObstacle 
@@ -2208,6 +2294,7 @@
 |---------|--------|--------|
 | groundDisplayOption | [enumeration ProfileObstacleGroundDisplayOption](CIMLayout.md#enumeration-profileobstaclegrounddisplayoption) | The option to display how the base of obstacle is shown. 
 | obstacleSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol used to draw the obstacle. 
+| substituteObstacleSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The substitute obstacle symbol. 
 
 
 

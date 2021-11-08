@@ -2,7 +2,7 @@
 
 
 ## CIMAggregateField
-#### A field holding the result of an aggregation of one or more other field values. 
+#### A field holding the result of an aggregation of multiple field values. 
 
 
 ### CIMFieldDescription 
@@ -26,6 +26,23 @@
 |---------|--------|--------|
 | aggregatedFieldName | string | The field name on which the aggregation was done. 
 | statisticType | [enumeration esriDataStatType](ExternalReferences.md#enumeration-esridatastattype) | The type of statistic used to aggregate data. 
+
+
+
+
+
+
+## CIMAggregateVisualization
+#### Describes the appearance of aggregated features. 
+
+
+### CIMAggregateVisualization 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| renderer | [Renderer](Types.md#renderer) | The renderer used by the aggregated features. 
+| labelClass | [CIMLabelClass](CIMLabelPlacement.md#cimlabelclass) | The label class used by the aggregated features. 
+| showLabels | boolean | A value indicating whether or not to show labels for the aggregated features. 
 
 
 
@@ -296,6 +313,13 @@
 | enabled | boolean | A value indicating whether feature reduction is enabled in the feature layer. 
 
 
+### CIMAggregationFeatureReduction 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| fields | [[CIMAggregateField]](CIMVectorLayers.md#cimaggregatefield) | The fields that should be shown with the aggregated features. 
+
+
 ### CIMBinningFeatureReduction 
 
 |Property | Type | Description | 
@@ -304,7 +328,6 @@
 | maximumScale | double | The maximum scale to use when . 
 | featureCount | long | The number of features to use when . 
 | minimumBinSize | double | The minimum size (in points) to maintain as the bins are drawn at different scales. 
-| fields | [[CIMAggregateField]](CIMVectorLayers.md#cimaggregatefield) | The aggregate fields that should be shown with the bins. 
 | visualization | [CIMBinningVisualization](CIMVectorLayers.md#cimbinningvisualization) | The visualization used by the bins. 
 | spatialReference | [SpatialReference](ExternalReferences.md#spatialreference) | The spatial reference in which features are aggregated. A dataset may be aggregated in one or more spatial references. These may differ from the spatial reference of the dataset itself (the Geohash scheme always uses WGS84, for example). This property is the user's choice from among those spatial references. 
 | fixedLevel | long | The bin level at which bins will be drawn. If -1, the bin level will be automatically chosen based on the minimum bin size. 
@@ -319,13 +342,19 @@
 #### Describes the appearance and application behavior of polygon aggregation bins. 
 
 
+### CIMAggregateVisualization 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| renderer | [Renderer](Types.md#renderer) | The renderer used by the aggregated features. 
+| labelClass | [CIMLabelClass](CIMLabelPlacement.md#cimlabelclass) | The label class used by the aggregated features. 
+| showLabels | boolean | A value indicating whether or not to show labels for the aggregated features. 
+
+
 ### CIMBinningVisualization 
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| renderer | [Renderer](Types.md#renderer) | The renderer used by the bins. 
-| labelClass | [CIMLabelClass](CIMLabelPlacement.md#cimlabelclass) | The label class used by the bins. Reserved for future use. 
-| showLabels | boolean | A value indicating whether or not to show labels for the bins. Reserved for future use. 
 
 
 
@@ -471,6 +500,37 @@
 | buildingID | string | The building ID to filter by building. 
 | dataConnection | [DataConnection](Types.md#dataconnection) | The data connection to the workspace. 
 | summaryStatisticsURI | string | The URI to the summary statistics. 
+
+
+
+
+
+
+## CIMClusteringFeatureReduction
+#### Represents a technique for reducing features by aggregating them into point clusters. 
+
+
+### CIMFeatureReduction 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| enabled | boolean | A value indicating whether feature reduction is enabled in the feature layer. 
+
+
+### CIMAggregationFeatureReduction 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| fields | [[CIMAggregateField]](CIMVectorLayers.md#cimaggregatefield) | The fields that should be shown with the aggregated features. 
+
+
+### CIMClusteringFeatureReduction 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| maximumScale | double | The maximum scale. Beyond this scale, unclustered points will be shown. 
+| clusterRadius | double | The radius within which points are clustered. Units are points. 
+| visualization | [AggregateVisualization](Types.md#aggregatevisualization) | The visualization used by the clusters. 
 
 
 
@@ -1026,7 +1086,7 @@
 | previousObservationsCount | long | The previous observation count. 
 | useRealWorldSymbolSizes | boolean | A value indicating whether to use real world symbols sizes (meters) vs. points. 
 | showPreviousObservations | boolean | A value indicating whether previous observations are being drawn. 
-| featureReduction | [CIMFeatureReduction](CIMVectorLayers.md#cimfeaturereduction) | The feature reduction technique in use by this layer. 
+| featureReduction | [FeatureReduction](Types.md#featurereduction) | The feature reduction technique in use by this layer. 
 | showTracks | boolean | A value indicating whether track lines are being drawn. 
 
 
@@ -1062,6 +1122,7 @@
 | displayExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression information used for coming up with a string that represents a row or a feature. 
 | selectionSetURI | string | The URI of the selection set for the table. 
 | floorAwareTableProperties | [CIMFloorAwareTableProperties](CIMVectorLayers.md#cimfloorawaretableproperties) | Floor-aware properties for the layer/table used in floor filtering. 
+| routeIDFieldName | string | The route identifier field of a route feature class. This property will only be set for route feature classes, namely line and polyline feature classes that are m-aware. 
 
 
 ### CIMFeatureTableDefinition 
@@ -1423,6 +1484,22 @@
 | Arrive| 3| Arrive. 
 | Cross| 4| Cross. 
 | Crossover| 5| Crossover. 
+
+
+
+
+## CIMMaterializedViewProperties
+#### Properties relevant to query layers based on materialized views. 
+
+
+### CIMMaterializedViewProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| materializedViewQuery | string | The original definition of the materialized view. 
+| materializedViewExpiration | long | The number of days after creating a materialized view that it is set to expire. 
+
+
 
 
 
@@ -1909,6 +1986,7 @@
 | displayExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression information used for coming up with a string that represents a row or a feature. 
 | selectionSetURI | string | The URI of the selection set for the table. 
 | floorAwareTableProperties | [CIMFloorAwareTableProperties](CIMVectorLayers.md#cimfloorawaretableproperties) | Floor-aware properties for the layer/table used in floor filtering. 
+| routeIDFieldName | string | The route identifier field of a route feature class. This property will only be set for route feature classes, namely line and polyline feature classes that are m-aware. 
 
 
 ### CIMRasterTableDefinition 
@@ -2041,6 +2119,10 @@
 | extent | [Envelope](ExternalReferences.md#envelope) | The extent. 
 | queryFields | Fields | 
 | spatialStorageType | long | The spatial storage type. 
+| sridType | long | The SRID type. Only used for query layers based on Oracle Spatial (SDO) storage. This property is managed by the system as an optimization. 
+| spatialIndexDimension | long | The spatial index dimension. Only used for query layers based on Oracle Spatial (SDO) storage. This property is managed by the system as an optimization. 
+| isTableBased | boolean | A value indicating whether the query is "table based" (retrieves all the columns from the table and has no where clause or postfix clause). This property is used as an optimization and is typically set by the system. 
+| materializedViewProperties | [CIMMaterializedViewProperties](CIMVectorLayers.md#cimmaterializedviewproperties) | The properties relevant to materialized view-based query layers. 
 
 
 
@@ -2088,6 +2170,7 @@
 | displayExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression information used for coming up with a string that represents a row or a feature. 
 | selectionSetURI | string | The URI of the selection set for the table. 
 | floorAwareTableProperties | [CIMFloorAwareTableProperties](CIMVectorLayers.md#cimfloorawaretableproperties) | Floor-aware properties for the layer/table used in floor filtering. 
+| routeIDFieldName | string | The route identifier field of a route feature class. This property will only be set for route feature classes, namely line and polyline feature classes that are m-aware. 
 
 
 ### CIMStandaloneTableDefinition 
@@ -2355,6 +2438,8 @@
 |---------|--------|--------|
 | fields | [string] | The fields. 
 | useLayerFields | boolean | A value indicating whether or not the table is generated using the layer's visible fields. 
+| caption | string | The caption. 
+| title | string | The title. 
 
 
 
@@ -2740,6 +2825,7 @@
 | NoSQL| 22| NoSQL. 
 | BigDataConnection| 23| Big Data connection. 
 | KnowledgeGraph| 24| Knowledge Graph connection. 
+| NITF| 25| NITF connection. 
 
 
 
