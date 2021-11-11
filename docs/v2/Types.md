@@ -104,6 +104,12 @@
 
 [CIMSuppressActivity](CIMVectorLayers.md#cimsuppressactivity)
 
+### AggregateVisualization
+
+[CIMAggregateVisualization](CIMVectorLayers.md#cimaggregatevisualization)
+
+[CIMBinningVisualization](CIMVectorLayers.md#cimbinningvisualization)
+
 ### AnimationScreenGraphic
 
 [CIMAnimationScreenGraphic](CIMMap.md#cimanimationscreengraphic)
@@ -127,6 +133,12 @@
 [CIMPointSymbolCallout](CIMSymbols.md#cimpointsymbolcallout)
 
 [CIMSimpleLineCallout](CIMSymbols.md#cimsimplelinecallout)
+
+### CameraEffect
+
+[CIMDepthOfFieldEffect](CIMDocument.md#cimdepthoffieldeffect)
+
+[CIMTiltShiftEffect](CIMDocument.md#cimtiltshifteffect)
 
 ### ChartSeries
 
@@ -400,9 +412,13 @@
 
 ### Element
 
+[CIMVideoGraphicElement](CIMImageLayers.md#cimvideographicelement)
+
 [CIMAttachmentFrame](CIMLayout.md#cimattachmentframe)
 
 [CIMAviationNorthArrow](CIMLayout.md#cimaviationnortharrow)
+
+[CIMAviationVerticalScaleBar](CIMLayout.md#cimaviationverticalscalebar)
 
 [CIMChartFrame](CIMLayout.md#cimchartframe)
 
@@ -522,6 +538,12 @@
 
 [CIMFeatureDatasetDataConnection](CIMVectorLayers.md#cimfeaturedatasetdataconnection)
 
+### FeatureReduction
+
+[CIMBinningFeatureReduction](CIMVectorLayers.md#cimbinningfeaturereduction)
+
+[CIMClusteringFeatureReduction](CIMVectorLayers.md#cimclusteringfeaturereduction)
+
 ### FieldDescription
 
 [CIMAggregateField](CIMVectorLayers.md#cimaggregatefield)
@@ -533,6 +555,8 @@
 [CIMAttachmentFrame](CIMLayout.md#cimattachmentframe)
 
 [CIMAviationNorthArrow](CIMLayout.md#cimaviationnortharrow)
+
+[CIMAviationVerticalScaleBar](CIMLayout.md#cimaviationverticalscalebar)
 
 [CIMChartFrame](CIMLayout.md#cimchartframe)
 
@@ -604,6 +628,8 @@
 
 [CIMGeometricEffectCircularSector](CIMSymbols.md#cimgeometriceffectcircularsector)
 
+[CIMGeometricEffectControlMeasureLine](CIMSymbols.md#cimgeometriceffectcontrolmeasureline)
+
 [CIMGeometricEffectCut](CIMSymbols.md#cimgeometriceffectcut)
 
 [CIMGeometricEffectDashes](CIMSymbols.md#cimgeometriceffectdashes)
@@ -661,6 +687,12 @@
 [CIMPolygonGraphic](CIMGraphics.md#cimpolygongraphic)
 
 [CIMTextGraphic](CIMGraphics.md#cimtextgraphic)
+
+### GraphicElement
+
+[CIMVideoGraphicElement](CIMImageLayers.md#cimvideographicelement)
+
+[CIMGraphicElement](CIMLayout.md#cimgraphicelement)
 
 ### GridLabelTemplate
 
@@ -854,6 +886,12 @@
 
 [CIMImageMosaicSubLayer](CIMImageLayers.md#cimimagemosaicsublayer)
 
+### MultiSeriesChartProperties
+
+[CIMGridChartProperties](CIMCharts.md#cimgridchartproperties)
+
+[CIMMultiSeriesChartProperties](CIMCharts.md#cimmultiserieschartproperties)
+
 ### NetworkDatasetRenderer
 
 [CIMNetworkDatasetElementCompositeRenderer](CIMNetworkLayers.md#cimnetworkdatasetelementcompositerenderer)
@@ -917,6 +955,8 @@
 [CIMRasterDiscreteColorColorizer](CIMImageLayers.md#cimrasterdiscretecolorcolorizer)
 
 [CIMRasterRGBColorizer](CIMImageLayers.md#cimrasterrgbcolorizer)
+
+[CIMRasterShadedReliefColorizer](CIMImageLayers.md#cimrastershadedreliefcolorizer)
 
 [CIMRasterStretchColorizer](CIMImageLayers.md#cimrasterstretchcolorizer)
 
@@ -1016,6 +1056,8 @@
 
 [CIMAGSServiceConnection](CIMServiceLayers.md#cimagsserviceconnection)
 
+[CIMSceneDataConnection](CIMTerrainLayers.md#cimscenedataconnection)
+
 [CIMFeatureDatasetDataConnection](CIMVectorLayers.md#cimfeaturedatasetdataconnection)
 
 [CIMStandardDataConnection](CIMVectorLayers.md#cimstandarddataconnection)
@@ -1026,7 +1068,11 @@
 
 [CIMKnowledgeGraphLayer](CIMKnowledgeGraph.md#cimknowledgegraphlayer)
 
+[CIMGroupLayer](CIMLayer.md#cimgrouplayer)
+
 [CIMMap](CIMMap.md#cimmap)
+
+[CIMDiagramLayer](CIMNetworkDiagrams.md#cimdiagramlayer)
 
 [CIMNALayer](CIMNetworkLayers.md#cimnalayer)
 
@@ -1051,6 +1097,12 @@
 [CIMWMSSubLayer](CIMServiceLayers.md#cimwmssublayer)
 
 [CIMAnnotationSubLayer](CIMVectorLayers.md#cimannotationsublayer)
+
+### SurfaceEffect
+
+[CIMBorderlandsEffect](CIMMap.md#cimborderlandseffect)
+
+[CIMContouringEffect](CIMMap.md#cimcontouringeffect)
 
 ### TabGridLine
 
@@ -1153,6 +1205,22 @@
 [CIMMapView](CIMDocument.md#cimmapview)
 
 [CIMLayoutView](CIMLayout.md#cimlayoutview)
+
+### VisualEffect
+
+[CIMBlackAndWhiteEffect](CIMDocument.md#cimblackandwhiteeffect)
+
+[CIMCrossMosaicEffect](CIMDocument.md#cimcrossmosaiceffect)
+
+[CIMHalftoneEffect](CIMDocument.md#cimhalftoneeffect)
+
+[CIMHexMosaicEffect](CIMDocument.md#cimhexmosaiceffect)
+
+[CIMMonochromaticEffect](CIMDocument.md#cimmonochromaticeffect)
+
+[CIMToonEffect](CIMDocument.md#cimtooneffect)
+
+[CIMWatercolorEffect](CIMDocument.md#cimwatercoloreffect)
 
 ### VisualVariable
 
@@ -1280,6 +1348,10 @@
 
 [CIMChartTextProperties](CIMCharts.md#CIMChartTextProperties)
 
+[CIMGridChartProperties](CIMCharts.md#CIMGridChartProperties)
+
+[CIMMultiSeriesChartProperties](CIMCharts.md#CIMMultiSeriesChartProperties)
+
 [CIMCMYKColor](CIMColor.md#CIMCMYKColor)
 
 [CIMFixedColorRamp](CIMColor.md#CIMFixedColorRamp)
@@ -1322,11 +1394,17 @@
 
 [CIMBinaryReference](CIMDocument.md#CIMBinaryReference)
 
+[CIMBlackAndWhiteEffect](CIMDocument.md#CIMBlackAndWhiteEffect)
+
 [CIMBookmarkDocument](CIMDocument.md#CIMBookmarkDocument)
 
 [CIMColorReplacementDocument](CIMDocument.md#CIMColorReplacementDocument)
 
 [CIMColorReplacementRule](CIMDocument.md#CIMColorReplacementRule)
+
+[CIMCrossMosaicEffect](CIMDocument.md#CIMCrossMosaicEffect)
+
+[CIMDepthOfFieldEffect](CIMDocument.md#CIMDepthOfFieldEffect)
 
 [CIMDocumentInfo](CIMDocument.md#CIMDocumentInfo)
 
@@ -1335,6 +1413,10 @@
 [CIMGISProject](CIMDocument.md#CIMGISProject)
 
 [CIMGenericView](CIMDocument.md#CIMGenericView)
+
+[CIMHalftoneEffect](CIMDocument.md#CIMHalftoneEffect)
+
+[CIMHexMosaicEffect](CIMDocument.md#CIMHexMosaicEffect)
 
 [CIMLayerDocument](CIMDocument.md#CIMLayerDocument)
 
@@ -1347,6 +1429,8 @@
 [CIMMapView](CIMDocument.md#CIMMapView)
 
 [CIMModuleSettings](CIMDocument.md#CIMModuleSettings)
+
+[CIMMonochromaticEffect](CIMDocument.md#CIMMonochromaticEffect)
 
 [CIMProjectItem](CIMDocument.md#CIMProjectItem)
 
@@ -1363,6 +1447,12 @@
 [CIMStatisticalDataCollectionStandardDataCalculator](CIMDocument.md#CIMStatisticalDataCollectionStandardDataCalculator)
 
 [CIMStatisticalDataCollectionStandardVariable](CIMDocument.md#CIMStatisticalDataCollectionStandardVariable)
+
+[CIMTiltShiftEffect](CIMDocument.md#CIMTiltShiftEffect)
+
+[CIMToonEffect](CIMDocument.md#CIMToonEffect)
+
+[CIMWatercolorEffect](CIMDocument.md#CIMWatercolorEffect)
 
 [CIMGADataConnection](CIMGALayer.md#CIMGADataConnection)
 
@@ -1446,6 +1536,8 @@
 
 [CIMRasterRGBColorizer](CIMImageLayers.md#CIMRasterRGBColorizer)
 
+[CIMRasterShadedReliefColorizer](CIMImageLayers.md#CIMRasterShadedReliefColorizer)
+
 [CIMRasterStretchClass](CIMImageLayers.md#CIMRasterStretchClass)
 
 [CIMRasterStretchColorizer](CIMImageLayers.md#CIMRasterStretchColorizer)
@@ -1463,6 +1555,8 @@
 [CIMStandaloneVideo](CIMImageLayers.md#CIMStandaloneVideo)
 
 [CIMVideoDataConnection](CIMImageLayers.md#CIMVideoDataConnection)
+
+[CIMVideoGraphicElement](CIMImageLayers.md#CIMVideoGraphicElement)
 
 [CIMVideoTimelineEventIndicator](CIMImageLayers.md#CIMVideoTimelineEventIndicator)
 
@@ -1559,6 +1653,10 @@
 [CIMAviationNorthArrow](CIMLayout.md#CIMAviationNorthArrow)
 
 [CIMAviationVariation](CIMLayout.md#CIMAviationVariation)
+
+[CIMAviationVerticalScaleBar](CIMLayout.md#CIMAviationVerticalScaleBar)
+
+[CIMAviationVerticalScaleProperties](CIMLayout.md#CIMAviationVerticalScaleProperties)
 
 [CIMBookmarkMapSeries](CIMLayout.md#CIMBookmarkMapSeries)
 
@@ -1741,6 +1839,10 @@
 [CIMAnimationScreenGraphicKeyframe](CIMMap.md#CIMAnimationScreenGraphicKeyframe)
 
 [CIMBookmark](CIMMap.md#CIMBookmark)
+
+[CIMBorderlandsEffect](CIMMap.md#CIMBorderlandsEffect)
+
+[CIMContouringEffect](CIMMap.md#CIMContouringEffect)
 
 [CIMCutAndFillEADefinition](CIMMap.md#CIMCutAndFillEADefinition)
 
@@ -2058,6 +2160,8 @@
 
 [CIM3DSymbolProperties](CIMSymbols.md#CIM3DSymbolProperties)
 
+[CIMAnimatedSymbolProperties](CIMSymbols.md#CIMAnimatedSymbolProperties)
+
 [CIMBackgroundCallout](CIMSymbols.md#CIMBackgroundCallout)
 
 [CIMBalloonCallout](CIMSymbols.md#CIMBalloonCallout)
@@ -2087,6 +2191,8 @@
 [CIMGeometricEffectBuffer](CIMSymbols.md#CIMGeometricEffectBuffer)
 
 [CIMGeometricEffectCircularSector](CIMSymbols.md#CIMGeometricEffectCircularSector)
+
+[CIMGeometricEffectControlMeasureLine](CIMSymbols.md#CIMGeometricEffectControlMeasureLine)
 
 [CIMGeometricEffectCut](CIMSymbols.md#CIMGeometricEffectCut)
 
@@ -2288,6 +2394,8 @@
 
 [CIMAggregateField](CIMVectorLayers.md#CIMAggregateField)
 
+[CIMAggregateVisualization](CIMVectorLayers.md#CIMAggregateVisualization)
+
 [CIMAnnotationLayer](CIMVectorLayers.md#CIMAnnotationLayer)
 
 [CIMAnnotationSubLayer](CIMVectorLayers.md#CIMAnnotationSubLayer)
@@ -2305,6 +2413,8 @@
 [CIMBuildingDisciplineLayer](CIMVectorLayers.md#CIMBuildingDisciplineLayer)
 
 [CIMBuildingLayer](CIMVectorLayers.md#CIMBuildingLayer)
+
+[CIMClusteringFeatureReduction](CIMVectorLayers.md#CIMClusteringFeatureReduction)
 
 [CIMColumnChartMediaInfo](CIMVectorLayers.md#CIMColumnChartMediaInfo)
 
@@ -2357,6 +2467,8 @@
 [CIMLayerRange](CIMVectorLayers.md#CIMLayerRange)
 
 [CIMLineChartMediaInfo](CIMVectorLayers.md#CIMLineChartMediaInfo)
+
+[CIMMaterializedViewProperties](CIMVectorLayers.md#CIMMaterializedViewProperties)
 
 [CIMMultipatchFeatureTemplate](CIMVectorLayers.md#CIMMultipatchFeatureTemplate)
 

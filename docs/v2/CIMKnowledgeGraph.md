@@ -201,7 +201,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | inclusionSetURI | string | The InclusionSet for the table. 
-| exclusionSetURI | string | The ExclusionSet for the table. 
+| exclusionSetURI | string | The ExclusionSet for the table. Deprecated at 2.9. Will be removed in 3.0. 
 
 
 

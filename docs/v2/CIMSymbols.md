@@ -29,6 +29,41 @@
 
 
 
+## CIMAnimatedSymbolProperties
+#### Represents animated symbol properties, a collection of symbol properties that apply when the symbol layer has animation data. 
+
+
+### CIMAnimatedSymbolProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| playAnimation | boolean | A value indicating whether the animated symbol should play its animation. 
+| reverseAnimation | boolean | A value indicating whether the animated symbol should playback in reverse. 
+| randomizeStartTime | boolean | A value indicating whether to generate a randomized start offset in seconds to apply to the symbol animation of each feature. 
+| randomizeStartSeed | long long | The starting value for generating a random number. This random number is used by the randomizeStartTime property to determine time offset for each feature. 
+| startTimeOffset | double | The time offset in seconds to use as the starting point of the symbol animation. This is used if randomizeStartTime=false. 
+| duration | double | How many seconds it takes to play through the symbol's animation once. This determines a symbol's playback speed. 
+| endingDuration | double | The ending duration of a symbol for time-aware data interpolation. The symbol's playback speed is interpolated linearly from duration to endingDuration over the diplay period of a time-aware feature. 
+| useEndingDuration | boolean | A value indicating whether to use the ending duration of a symbol for time-aware data interpolation. 
+| repeatType | [enumeration AnimatedSymbolRepeatType](CIMSymbols.md#enumeration-animatedsymbolrepeattype) | How to repeat the animation of a symbol when an animation cycle ends. 
+| repeatDelay | double | The number of seconds to delay before repeating an animation cycle. 
+
+
+
+
+
+### Enumeration: AnimatedSymbolRepeatType
+#### Represents the ways an animated symbol can be repeated. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| None| 0| When done playing an animation cycle, stop at the last frame. 
+| Loop| 1| When done playing an animation cycle, repeat it from the beginning. 
+| Oscillate| 2| When done playing an animation cycle, repeat it in reverse. 
+
+
+
+
 ## CIMBackgroundCallout
 #### Represents a background callout which draws a callout with an optional polygon background and leader line. 
 
@@ -596,6 +631,73 @@
 | radius | double | The radius of the circular sector. 
 
 
+
+
+
+
+## CIMGeometricEffectControlMeasureLine
+#### Represents the control measure line geometric effect. 
+
+
+### CIMGeometricEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| primitiveName | string | The primitive name. 
+
+
+### CIMGeometricEffectControlMeasureLine 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| rule | [enumeration GeometricEffectControlMeasureLineRule](CIMSymbols.md#enumeration-geometriceffectcontrolmeasurelinerule) | The style of effect. 
+
+
+
+
+
+### Enumeration: GeometricEffectControlMeasureLineRule
+#### Specifies the rules to transform the input ground control points given as a line. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| FullGeometry| 0| Default: returns the input line. 
+| PerpendicularFromFirstSegment| 1| Third vertex to first segment midpoint. 
+| ReversedFirstSegment| 2| Line between vertex 2 and vertex 1. Line begins at vertex 2. 
+| PerpendicularToSecondSegment| 3| Second segment midpoint to first vertex. 
+| SecondSegmentWithTicks| 4| Line between vertex 2 and vertex 3 with ticks on ends. 
+| DoublePerpendicular| 5| Two lines perpendicular to the first segment. Length of the lines is determined by vertex 3. 
+| OppositeToFirstSegment| 6| Lines perpendicular to vertex 3 and the midpoint of the first segment with the length determined by first segment. 
+| TriplePerpendicular| 7| Three lines perpendicular to the first segment. Length of the lines is determined by vertex 3. Top and bottom lines stop at 80% of first segment. 
+| HalfCircleFirstSegment| 8| Half circle centered on the midpoint of first segment. Orientation is opposite vertex 3. 
+| HalfCircleSecondSegment| 9| Half circle ending on vertex 2 opposite vertex 1. Diameter is defined by vertex 3. 
+| HalfCircleExtended| 10| U shaped line with curve between vertex 2 and vertex 3. Control points on vertex 1 and vertex 3. 
+| OpenCircle| 11| 330 degrees circle centered on vertex 1 starting at vertex 2. 
+| CoverageEdgesWithTicks| 12| Lines between vertex 1 to vertex 3 and vertex 2 to vertex 4. Angled ticks at the end of the lines and vertex 1 and vertex 2. 
+| GapExtentWithDoubleTicks| 13| Two lines with angled ticks on end. Lines created between first and third segments. 
+| GapExtentMidline| 14| Line centered between first and third segment. 
+| Chevron| 15| Chevron with apex at vertex 1 and ends at vertex 2 and vertex 3. 
+| PerpendicularWithArc| 16| Line between vertex 1 and vertex 2 with arc off of vertex 2. Cross line is perpendicular to vertex 3. 
+| ClosedHalfCircle| 17| Semi-circle with vertex 1 and vertex 2 at the corners. 
+| TripleParallelExtended| 18| Three parallel lines of varying length connected to a base line. The base defined by first segment. Vertex 3 is the end of the longest line. 
+| ParallelWithTicks| 19| Line with angled ticks on ends between vertex 1 and vertex 2 with a mirrored parallel line placed at the width defined by vertex 3. 
+| Parallel| 20| Line between vertex 1 and vertex 2 with a parallel line placed at the width defined by vertex 3. 
+| PerpendicularToFirstSegment| 21| Line perpendicular to the midpoint of first segment. Length X% longer than vertex 2-vertex 3. 
+| ParallelOffset| 22| Parallels lines offset from first segment. Offset determined by vertex 3. 
+| OffsetOpposite| 23| Single line offset from first segment. Offset to opposite side as vertex 3. 
+| OffsetSame| 24| Single line offset from first segment. Offset to same side as vertex 3. 
+| CircleWithArc| 25| Circle centered on vertex 1 with attached arc. Vertex 3 determines the side of the 90 degree arc. If 3 points, vertex 2 determines the length of the arc. If 4 points, vertex 2 determines the radius of the circle and vertex 4 determines the length of the arc. 
+| DoubleJog| 26| Two lines with jogs with gap in between. If there is 3 points the gap is centered on vertex. If 4 points the gap is defined by second segment. 
+| PerpendicularOffset| 27| Line perpendicular from midpoint of second segment. End point is offset from second segment. Vertex 1 sets length of line. 
+| LineExcludingLastSegment| 28| Line between vertex 1 and vertex N-1. 
+| MultivertexArrow| 29| Multipoint arrow. Vertex 1 sets the tip and vertex N the width and back of the arrowhead. 
+| CrossedArrow| 30| Multipoint arrow. Vertex 1 sets the tip and vertex N the width and back of the arrowhead. Crossed at midpoint between vertex 1 and vertex 2. 
+| ChevronArrow| 31| Chevron arrow centered on vertex 1. 
+| ChevronArrowOffset| 32| Chevron arrow centered on vertex 1 offset towards vertex 2. 
+| PartialFirstSegment| 33| Line along first segment, starting at vertex 2 extending in the direction and length of vertex 3. 
+| Arch| 34| 3 point arched line between vertex 1 and vertex 2. Vertex 3 determines the depth of the arch. 
+| CurvedParallelTicks| 35| Curved line with ticks. Curve begins on vertex 2 and ends on vertex 3. Ticks on opposite side of vertex 1. 
+| Arc90Degrees| 36| 90 degree arc with ends at vertex 1 and vertex 2. Vertex 3 determines the side of the curve. 
 
 
 
@@ -1925,6 +2027,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+| animatedSymbolProperties | [CIMAnimatedSymbolProperties](CIMSymbols.md#cimanimatedsymbolproperties) | The collection of symbol properties that apply when the symbol layer has animation data. 
 
 
 
@@ -2089,6 +2192,7 @@
 | tintColor | [Color](Types.md#color) | The color that is applied as a tint to the image. The color is applied to the whole image. When the tint is set to white the image appears with its native colors. 
 | URL | string | The image that is used in the symbol layer. Typically a base64 encoded image. 
 | verticalOrientation3D | boolean | A value indicating whether the marker stands upright as though locked in place. The marker can be viewed from all angles. 
+| animatedSymbolProperties | [CIMAnimatedSymbolProperties](CIMSymbols.md#cimanimatedsymbolproperties) | The collection of symbol properties that apply when the symbol layer has animation data. 
 
 
 
@@ -2986,6 +3090,7 @@
 | isRestricted | boolean | A value indicating whether the model can be exported. 
 | thumbnail | string | The representative image of the marker. 
 | useAnchorPoint | boolean | A value indicating whether or not to ignore the marker anchor point and insert the model directly at the data point. 
+| animatedSymbolProperties | [CIMAnimatedSymbolProperties](CIMSymbols.md#cimanimatedsymbolproperties) | The collection of symbol properties that apply when the symbol layer has animation data. 
 
 
 

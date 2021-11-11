@@ -18,6 +18,26 @@
 
 
 
+## CIMBlackAndWhiteEffect
+#### Represents a visual effect for reshading the map or scene to black and white. 
+
+
+### CIMVisualEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMBlackAndWhiteEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+
+
+
+
 ## CIMBookmarkDocument
 #### Represents a bookmark document which is the document type used for saving .bkmx files. 
 
@@ -77,6 +97,62 @@
 | outputColor | [Color](Types.md#color) | The color that will replace the input color. 
 
 
+
+
+
+
+## CIMCrossMosaicEffect
+#### Represents a visual effect for reshading the map or scene with a cross mosaic texture. 
+
+
+### CIMVisualEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMCrossMosaicEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| size | double | The size of the diamonds measured in points. 
+
+
+
+
+
+
+## CIMDepthOfFieldEffect
+#### Represents the data for simulating camera depth of field effect in 3D scenes. 
+
+
+### CIMCameraEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMDepthOfFieldEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| focusDistance | double | The camera's focus distance measured in meters. 
+| focusDepth | double | The camera's focus depth measured in meters. 
+| maxBlur | [enumeration DepthOfFieldMaxBlur](CIMDocument.md#enumeration-depthoffieldmaxblur) | The kernel size indicating the maximum blur radius. 
+
+
+
+
+
+### Enumeration: DepthOfFieldMaxBlur
+#### Represents the kernel sizes for depth of field camera effect. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Small| 0| Small kernel size 
+| Medium| 1| Medium kernel size 
+| Large| 2| Large kernel size 
+| VeryLarge| 3| Very large kernel size 
 
 
 
@@ -148,6 +224,9 @@
 | ranges | [[CIMLayerRange]](CIMVectorLayers.md#cimlayerrange) | The ranges of the table view. 
 | extent | [Envelope](ExternalReferences.md#envelope) | The extent of the table view. 
 | timeRelation | [enumeration esriTimeRelation](ExternalReferences.md#enumeration-esritimerelation) | A time relation which allows the start and end times to be included or excluded in the time query. 
+| showOnlyContingentValueFields | boolean | A value indicating whether the table field visibility settings should be overridden to only show fields that are part of one or more contingent value field groups. 
+| highlightInvalidContingentValueFields | boolean | A value indicating whether invalid contingent value fields should be highlighted in the table. 
+| autoPopulateContingentValueFields | boolean | A value indicating whether other contingent value fields should be automatically populated after a value is changed when only one match is valid. 
 
 
 ### CIMExternalTableView 
@@ -173,7 +252,7 @@
 | moduleSettings | [[CIMModuleSettings]](CIMDocument.md#cimmodulesettings) | The module settings of the project. 
 | projectItems | [[CIMProjectItem]](CIMDocument.md#cimprojectitem) | The items of the project. 
 | databaseConnections | [[CIMWorkspaceConnection]](CIMVectorLayers.md#cimworkspaceconnection) | The database connections of the project. 
-| serverConnections | [[CIMServerConnection]](Types.md#cserverconnection) | The service connections of the project. 
+| serverConnections | [[CIMServerConnection]](Types.md#serverconnection) | The service connections of the project. 
 | folderConnections | [[CIMFolderConnection]](CIMVectorLayers.md#cimfolderconnection) | The folder connections of the project. 
 | viewLayoutXML | string | An XML representation of the view layout used for the project. 
 | defaultGeoDatabase | string | The path of the default geodatabase of the project. 
@@ -216,6 +295,48 @@
 
 
 
+## CIMHalftoneEffect
+#### Represents a visual effect for reshading the map or scene with halftone. 
+
+
+### CIMVisualEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMHalftoneEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| strength | double | The strength of the effect. 
+
+
+
+
+
+
+## CIMHexMosaicEffect
+#### Represents a visual effect for reshading the map or scene with a hexagonal mosaic texture. 
+
+
+### CIMVisualEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMHexMosaicEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| size | double | The size of the hexagons measured in points. 
+
+
+
+
+
+
 ## CIMLayerDocument
 #### Represents a layer document which is the document type used for saving .lyrx files. 
 
@@ -232,7 +353,8 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| layers | [string] | An array of layer URIs stored in this layer document. 
+| layers | [string] | An array of layer URIs stored in this layer document.
+| tables | [string] | An array of table URIs stored in this layer document. 
 | layerDefinitions | [[CIMDefinition]](Types.md#definition) | The layer definitions in the layer document. 
 | binaryReferences | [[CIMBinaryReference]](CIMDocument.md#cimbinaryreference) | The binary references of the document. 
 | elevationSurfaces | [[CIMMapElevationSurface]](CIMMap.md#cimmapelevationsurface) | The elevation surfaces used by layer definitions in the layer document. 
@@ -337,6 +459,9 @@
 | ranges | [[CIMLayerRange]](CIMVectorLayers.md#cimlayerrange) | The ranges of the table view. 
 | extent | [Envelope](ExternalReferences.md#envelope) | The extent of the table view. 
 | timeRelation | [enumeration esriTimeRelation](ExternalReferences.md#enumeration-esritimerelation) | A time relation which allows the start and end times to be included or excluded in the time query. 
+| showOnlyContingentValueFields | boolean | A value indicating whether the table field visibility settings should be overridden to only show fields that are part of one or more contingent value field groups. 
+| highlightInvalidContingentValueFields | boolean | A value indicating whether invalid contingent value fields should be highlighted in the table. 
+| autoPopulateContingentValueFields | boolean | A value indicating whether other contingent value fields should be automatically populated after a value is changed when only one match is valid. 
 
 
 ### CIMMapTableView 
@@ -378,7 +503,12 @@
 | sceneDrawingMode | [enumeration SceneDrawingMode](CIMDocument.md#enumeration-scenedrawingmode) | The scene's drawing mode. 
 | fieldOfView | double | The scene's field-of-view in degrees (value must be between 35 and 70). Only used when the scene is in Perspective draw mode. 
 | pauseDrawing | boolean | A value indicating whether drawing is in paused state for the view. 
+| pauseAnimatedSymbols | boolean | A value indicating whether all animated symbol playback is in paused state for the view. 
 | exploratoryAnalysis | [[CIMExploratoryAnalysisDefinition]](Types.md#exploratoryanalysisdefinition) | The exploratory analysis definitions for the view. 
+| useVisualEffect | boolean | A value indicating whether the current visual effect should be applied to the map or scene. 
+| visualEffect | [VisualEffect](Types.md#visualeffect) | The visual effect definition for the map or scene. 
+| useCameraEffect | boolean | A value indicating whether the current camera effect should be applied to the 3D view. 
+| cameraEffect | [CameraEffect](Types.md#cameraeffect) | The camera effect definition for the 3D view. 
 
 
 
@@ -401,6 +531,27 @@
 
 
 
+## CIMMonochromaticEffect
+#### Represents a visual effect for reshading the map or scene to monochromatic tones. 
+
+
+### CIMVisualEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMMonochromaticEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| color | [Color](Types.md#color) | The color of the effect. 
+
+
+
+
+
+
 ## CIMProjectItem
 #### Represents an item in the project. 
 
@@ -409,6 +560,8 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+| alias | string | An identifier for this item that the user provides and can be displayed instead of the Name. 
+| ID | string | The system assigned unique identifier of the project item. 
 | catalogPath | string | Catalog path of the project item. 
 | pathHint | string | The path hint of the project item. Contains the absolute path of the item. Used as a fallback in case the relative path cannot be resolved. 
 | itemType | string | The item type of the project item. 
@@ -619,4 +772,70 @@
 | Count| 0| Regular value (numeric or text). 
 | Percent| 1| It is a percentage value and it should displayed using the rules for percentage values. 
 | Currency| 2| The value is a currency and should be displayed using the rules for currencies. 
+
+
+
+
+## CIMTiltShiftEffect
+#### Represents the data for simulating camera tilt-shift effect for creating a miniaturization effect in 3D scenes. 
+
+
+### CIMCameraEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMTiltShiftEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| blurStrength | double | The strength of the tilt-shift blur. 
+| leftOffset | double | The width of the blurred area starting from the left of the screen measured in points. 
+| rightOffset | double | The width of the blurred area starting from the right of the screen measured in points. 
+| topOffset | double | The width of the blurred area starting from the top of the screen measured in points. 
+| bottomOffset | double | The width of the blurred area starting from the bottom of the screen measured in points. 
+
+
+
+
+
+
+## CIMToonEffect
+#### Represents a visual effect for reshading the map or scene with a cartoon style. 
+
+
+### CIMVisualEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMToonEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| strength | double | The strength of the effect. 
+
+
+
+
+
+
+## CIMWatercolorEffect
+#### Represents a visual effect for reshading the map or scene with a watercolor style. 
+
+
+### CIMVisualEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMWatercolorEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
 

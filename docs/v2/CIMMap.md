@@ -95,10 +95,31 @@
 | location | [Envelope](ExternalReferences.md#envelope) | The location. 
 | timeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The time extent. 
 | timeRelation | [enumeration esriTimeRelation](ExternalReferences.md#enumeration-esritimerelation) | The time relation. 
-| rangeExtent | [CIMLayerRange](CIMVectorLayers.md#cimlayerrange) | The range extent. RangeExtent.LayerURI is not currently being used. 
+| rangeExtent | [CIMLayerRange](CIMVectorLayers.md#cimlayerrange) | The range extent. Can be used across multiple maps that share the same range name. RangeExtent.LayerURI is not used. 
+| layerRangeExtents | [[CIMLayerRange]](CIMVectorLayers.md#cimlayerrange) | The layer range extents. Each layer range applies to a single map. 
 | description | string | The bookmark description. 
 | videoURI | string | The URI to the standalone video. 
 | videoElapsedTime | double | The video elapsed time in seconds. 
+
+
+
+
+
+
+## CIMBorderlandsEffect
+#### Represents a surface effect for reshading the surface with a borderlands effect in 3D views. 
+
+
+### CIMSurfaceEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMBorderlandsEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
 
 
 
@@ -137,6 +158,29 @@
 | LessThan| 4| Less than comparison operator. 
 | GreaterThanOrEqualTo| 5| Greater than or equal to comparison operator. 
 | GreaterThan| 6| Greater than comparison operator. 
+
+
+
+
+## CIMContouringEffect
+#### Represents a surface effect for adding contour lines to surfaces in 3D views. 
+
+
+### CIMSurfaceEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMContouringEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| distance | double | Maximum distance for which the effect should be active measured in meters. 
+| useRealWorldSizeThickness | boolean | A value indicating whether thickness should be measured in meters when true or measured in points when false. 
+| thickness | double | The thickness of the contour lines measured in meters or points depending on the value of UseRealWorldSizeThickness. 
+
+
 
 
 
@@ -294,6 +338,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | layerURI | string | The URI for the Indoors Facility layer in the map CIM. 
+| subLayerID | long | The sublayer ID when the Facility layer is a sublayer within a dynamic map service layer. 
 | siteIDField | string | The name of the field containing the site id (a foreign key back to the Site feature class). 
 | facilityIDField | string | The name of the field containing the facility id. 
 | nameField | string | The name of the field containing the facility name. 
@@ -531,10 +576,14 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| range | [CIMRange](CIMVectorLayers.md#cimrange) | The value of the range. 
+| range | [CIMRange](CIMVectorLayers.md#cimrange) | The value of the active range. 
 | minTransition | [enumeration AnimationTransition](CIMEnumerations.md#enumeration-animationtransition) | The method of transition for the minimum value of the range. 
 | maxTransition | [enumeration AnimationTransition](CIMEnumerations.md#enumeration-animationtransition) | The method of transition for the maximum value of the range. 
 | isExclusion | boolean | A value indicating whether the range should be all values less than the minimum value and greater than the maximum value. 
+| layerRangeExtents | [[CIMLayerRange]](CIMVectorLayers.md#cimlayerrange) | The layer range extents. Each layer range applies to a single map. 
+| layerRangeTransition | [enumeration AnimationTransition](CIMEnumerations.md#enumeration-animationtransition) | The method of transition for the layer range extents. 
+| activeRangeLayer | string | The layer with the active range. Specify a single layer or leave empty to indicate all layers that share the active range name. 
+| activeRangeName | string | The active range name. Used to update which range is active. 
 
 
 
@@ -643,6 +692,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | layerURI | string | The URI for the Indoors Level layer in the map CIM. 
+| subLayerID | long | The sublayer ID when the Level layer is a sublayer within a dynamic map service layer. 
 | facilityIDField | string | The name of the field containing the facility id (a foreign key back to the Facility feature class). 
 | levelIDField | string | The name of the field containing the level id. 
 | shortNameField | string | The name of the field containing the level "short" name. 
@@ -833,6 +883,8 @@
 | metadataURI | string | The elevation metadata URI. 
 | offset | double | The vertical exaggeration. 
 | expanded | boolean | A value indicating whether the elevation surface is expanded in the contents pane. 
+| useSurfaceEffect | boolean | A value indicating whether the current surface effect should be applied in 3D views. 
+| surfaceEffect | [SurfaceEffect](Types.md#surfaceeffect) | The surface effect definition for the elevation surface. 
 
 
 
@@ -976,6 +1028,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | layerURI | string | The URI for the Indoors Site layer in the map CIM. 
+| subLayerID | long | The sublayer ID when the Site layer is a sublayer within a dynamic map service layer. 
 | siteIDField | string | The name of the field containing the site id. 
 | nameField | string | The name of the field containing the site name. 
 
@@ -1177,6 +1230,17 @@
 
 
 
+### Enumeration: SnapTipDisplayPart
+#### Snap tip display parts. Defines displayable parts of a snap tip. CIMSnappingProperties.SnapTipDisplayParts consists of the desired snap part bits OR-ed together. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| SnapTipDisplayNone| 0| Don't display a snap tip. 
+| SnapTipDisplayLayer| 1| Display the layer name in a snap tip. 
+| SnapTipDisplayType| 2| Display the snap type in a snap tip. 
+
+
+
 ### Enumeration: SnapXYToleranceUnit
 #### Snap XY tolerance units. 
 
@@ -1204,8 +1268,9 @@
 | snapRequestType | [enumeration SnapRequestType](CIMMap.md#enumeration-snaprequesttype) | The snap request type. 
 | geometricFeedbackColor | [Color](Types.md#color) | Geometric feedback color. 
 | visualFeedbackColor | [Color](Types.md#color) | The visual feedback color. 
-| showSnapTip | boolean | A value indicating whether the snap tip is visible. 
+| showSnapTip | boolean | A value indicating whether the snap tip is visible. Deprecated at 2.9, use SnapTipDisplayParts instead. 
 | isZSnappingEnabled | boolean | A value indicating whether Z snapping is enabled. When enabled, snapping to a feature Z value may occur if the feature is within the Z tolerance from the current cursor Z value. The Z tolerance is specified by is true. Otherwise, the Z tolerance is infinite. Z snapping is always enabled for Stereo and 3D views. 
+| snapTipDisplayParts | long | A value indicating whether the snap tip is fully or partially visible. The int value consists of zero or more enum bit values that are OR-ed together. 
 
 
 
