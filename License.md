@@ -1,4 +1,4 @@
-Copyright 2007 - 2021 Esri
+Copyright 2007 - 2022 Esri
 
 The specification is licensed under the [Creative Commons Attribution-NoDerivatives 4.0 International Public License](https://creativecommons.org/licenses/by-nd/4.0/legalcode).
 You can implement the specification in services, clients or processing tools without restrictions.
