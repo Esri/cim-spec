@@ -137,7 +137,7 @@
 | sortInformation | {JSON_object}| A property set containing sort information. 
 | selectionMode | boolean | A value indicating whether to view the table in selection mode. 
 | honorTime | boolean | A value indicating whether to honor time on the table view. 
-| frozenFields | long | The index of the frozen field. 
+| frozenFields | long | The count of frozen fields. 
 | zoomLevel | long | The zoom level of the table view. 
 | fieldWidth | {JSON_object}| A property set of field width information. 
 | displaySubtypeDomainDescriptions | boolean | A value indicating whether to display subtype and domain descriptions. 
