@@ -187,6 +187,7 @@
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the project was last modified. 
 | readOnly | boolean | A value indicating whether the project is read only for updatable projects. 
 | forceUpdate | boolean | A value indicating whether to force update an updatable project. 
+| thumbnailOptions | [CIMProjectThumbnailOptions](CIMDocument.md#cimprojectthumbnailoptions) | The thumbnail generation options for the project. 
 
 
 
@@ -329,7 +330,7 @@
 | sortInformation | {JSON_object}| A property set containing sort information. 
 | selectionMode | boolean | A value indicating whether to view the table in selection mode. 
 | honorTime | boolean | A value indicating whether to honor time on the table view. 
-| frozenFields | long | The index of the frozen field. 
+| frozenFields | long | The count of frozen fields. 
 | zoomLevel | long | The zoom level of the table view. 
 | fieldWidth | {JSON_object}| A property set of field width information. 
 | displaySubtypeDomainDescriptions | boolean | A value indicating whether to display subtype and domain descriptions. 
@@ -432,6 +433,43 @@
 | consolidationResources | [string] | Consolidation resources string array of the project item. 
 | pathSaveRelative | boolean | A value indicating whether the item is saved with relative paths. 
 | metadataURI | string | The URI of the binary reference containing the metadata. This property is only used for project items representing tasks. 
+
+
+
+
+
+### Enumeration: ProjectThumbnailAutomaticGenerationSource
+#### Represents the sources for automatic project thumbnail generation. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| ActiveMap| 0| Thumbnail is generated from the active map on save. 
+| SpecifiedMap| 1| Thumbnail is generated from a specified map on save. 
+
+
+
+### Enumeration: ProjectThumbnailGenerationMethod
+#### Represents the types of project thumbnail generation. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Manual| 0| Thumbnail is set manually in the UI by the user. 
+| Automatic| 1| Thumbnail is set using the specified automatic generation source. 
+
+
+
+
+## CIMProjectThumbnailOptions
+#### A collection of options governing project thumbnail generation. 
+
+
+### CIMProjectThumbnailOptions 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| generationMethod | [enumeration ProjectThumbnailGenerationMethod](CIMDocument.md#enumeration-projectthumbnailgenerationmethod) | A value indicating how a thumbnail should be generated for a project. 
+| automaticGenerationSource | [enumeration ProjectThumbnailAutomaticGenerationSource](CIMDocument.md#enumeration-projectthumbnailautomaticgenerationsource) | A value indicating how an automatically generated thumbnail is created. 
+| mapURI | string | A value indicating the path of a map to be used in the automatic generation of a project thumbnail. 
 
 
 
@@ -544,6 +582,70 @@
 | scriptLanguage | [enumeration LabelExpressionEngine](CIMLabelPlacement.md#enumeration-labelexpressionengine) | The additional attribute for 'Script' summary type that defines script language used by 'Script' attribute. Currently only Python is supported. 
 | usedFields | [string] | The additional attribute for 'Script' summary type that defines another fields used by script. These may include featureclass fields (even non-existing in calculator?) and another scripts. 
 | showInDataBrowser | boolean | A value indicating whether the field will be shown in the Data Browser control in ArcGIS Pro. 
+| outputFieldType | [enumeration esriFieldType](ExternalReferences.md#enumeration-esrifieldtype) | The type of the field for enrich output. For example, if we want to have a script variable returning String type values (like TLIFENAME variable in US dataset), or when the input (SDCX layer) fields are Integers we want to have integer output too. 
+
+
+
+
+
+
+## CIMStatisticalDataCollectionInputAreaProperty
+#### Represents the property used to calculate the geodesic area of the input feature. 
+
+
+### CIMStatisticalDataCollectionInputProperty 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name of the property. 
+| alias | string | The alias of the property. 
+| propertyType | [enumeration esriFieldType](ExternalReferences.md#enumeration-esrifieldtype) | The type of the property. 
+
+
+### CIMStatisticalDataCollectionInputAreaProperty 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| units | [AreaUnit](ExternalReferences.md#areaunit) | The area units. 
+
+
+
+
+
+
+## CIMStatisticalDataCollectionInputPropertiesCalculator
+#### Statistical Data Collection calculator for accessing properties of input features, e.g. Area of polygonal input. 
+
+
+### CIMStatisticalDataCollectionCalculator 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The Name of the calculator. 
+
+
+### CIMStatisticalDataCollectionInputPropertiesCalculator 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| area | [CIMStatisticalDataCollectionInputAreaProperty](CIMDocument.md#cimstatisticaldatacollectioninputareaproperty) | The area property. If this property is not null, the geodesic area of the input feature will be calculated. 
+
+
+
+
+
+
+## CIMStatisticalDataCollectionInputProperty
+#### Represents a property of an input feature. 
+
+
+### CIMStatisticalDataCollectionInputProperty 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name of the property. 
+| alias | string | The alias of the property. 
+| propertyType | [enumeration esriFieldType](ExternalReferences.md#enumeration-esrifieldtype) | The type of the property. 
 
 
 

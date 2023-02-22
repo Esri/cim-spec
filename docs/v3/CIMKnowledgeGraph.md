@@ -56,6 +56,8 @@
 |---------|--------|--------|
 | dataConnection | [DataConnection](Types.md#dataconnection) | The data connection. 
 | dataLoadingConfigurations | [[CIMKnowledgeGraphDataLoadingConfiguration]](CIMKnowledgeGraph.md#cimknowledgegraphdataloadingconfiguration) | The array of Data Loading Configurations referenced by this Investigation. All configurations are expected to have unique names. 
+| searchDefinitions | [[CIMKnowledgeGraphSearchDefinition]](CIMKnowledgeGraph.md#cimknowledgegraphsearchdefinition) | The array of search definitions referenced by this Investigation. All search definitions are expected to have unique names. 
+| queryDefinitions | [[CIMKnowledgeGraphQueryDefinition]](CIMKnowledgeGraph.md#cimknowledgegraphquerydefinition) | The array of query definitions referenced by this Investigation. All query definitions are expected to have unique names. 
 
 
 
@@ -110,6 +112,9 @@
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 | allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
+| rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
+| useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
+| visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 
 
 ### CIMStandaloneTableContainer 

@@ -66,6 +66,7 @@
 | labelCharacterLimit | long | The character limit for axis labels. 
 | zoomStartPosition | double | The relative start position for zoom/pan navigation. The value range is normalized between 0 and 1. This property can have a value between 0 and 1. 
 | zoomEndPosition | double | The relative end position for zoom/pan navigation. The value range is normalized between 0 and 1. This property can have a value between 0 and 1. 
+| inverted | boolean | A value indicating whether the chart axis is inverted. 
 
 
 
@@ -96,6 +97,7 @@
 | dataLabelText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text style for the data label. 
 | multiSeries | boolean | A value indicating whether this series is a multi series. 
 | locations | [[CIMChartLocationDefinition]](CIMCharts.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
+| fieldExpressions | [[CIMExpressionInfo]](CIMRenderers.md#cimexpressioninfo) | Expression properties for chart series' fields. 
 
 
 ### CIMChartBarSeries 
@@ -140,6 +142,7 @@
 | dataLabelText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text style for the data label. 
 | multiSeries | boolean | A value indicating whether this series is a multi series. 
 | locations | [[CIMChartLocationDefinition]](CIMCharts.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
+| fieldExpressions | [[CIMExpressionInfo]](CIMRenderers.md#cimexpressioninfo) | Expression properties for chart series' fields. 
 
 
 ### CIMChartBoxPlotSeries 
@@ -183,6 +186,7 @@
 | dataLabelText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text style for the data label. 
 | multiSeries | boolean | A value indicating whether this series is a multi series. 
 | locations | [[CIMChartLocationDefinition]](CIMCharts.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
+| fieldExpressions | [[CIMExpressionInfo]](CIMRenderers.md#cimexpressioninfo) | Expression properties for chart series' fields. 
 
 
 ### CIMChartCalendarHeatSeries 
@@ -242,6 +246,7 @@
 | dataLabelText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text style for the data label. 
 | multiSeries | boolean | A value indicating whether this series is a multi series. 
 | locations | [[CIMChartLocationDefinition]](CIMCharts.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
+| fieldExpressions | [[CIMExpressionInfo]](CIMRenderers.md#cimexpressioninfo) | Expression properties for chart series' fields. 
 
 
 ### CIMChartDataClockSeries 
@@ -434,6 +439,7 @@
 | dataLabelText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text style for the data label. 
 | multiSeries | boolean | A value indicating whether this series is a multi series. 
 | locations | [[CIMChartLocationDefinition]](CIMCharts.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
+| fieldExpressions | [[CIMExpressionInfo]](CIMRenderers.md#cimexpressioninfo) | Expression properties for chart series' fields. 
 
 
 ### CIMChartDimensionalProfileSeries 
@@ -496,6 +502,7 @@
 | color | [Color](Types.md#color) | The color of the fill. 
 | opacity | long | The transparency level of histogram bars. 
 | lineSymbolProperties | [CIMChartLineSymbolProperties](CIMCharts.md#cimchartlinesymbolproperties) | The properties of the fill symbol border. 
+| visible | boolean | A value indicating whether the fill is visible. 
 
 
 
@@ -600,6 +607,7 @@
 | dataLabelText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text style for the data label. 
 | multiSeries | boolean | A value indicating whether this series is a multi series. 
 | locations | [[CIMChartLocationDefinition]](CIMCharts.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
+| fieldExpressions | [[CIMExpressionInfo]](CIMRenderers.md#cimexpressioninfo) | Expression properties for chart series' fields. 
 
 
 ### CIMChartHistogramSeries 
@@ -696,6 +704,7 @@
 | dataLabelText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text style for the data label. 
 | multiSeries | boolean | A value indicating whether this series is a multi series. 
 | locations | [[CIMChartLocationDefinition]](CIMCharts.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
+| fieldExpressions | [[CIMExpressionInfo]](CIMRenderers.md#cimexpressioninfo) | Expression properties for chart series' fields. 
 
 
 ### CIMChartLineSeries 
@@ -821,6 +830,7 @@
 | dataLabelText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text style for the data label. 
 | multiSeries | boolean | A value indicating whether this series is a multi series. 
 | locations | [[CIMChartLocationDefinition]](CIMCharts.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
+| fieldExpressions | [[CIMExpressionInfo]](CIMRenderers.md#cimexpressioninfo) | Expression properties for chart series' fields. 
 
 
 ### CIMChartMatrixHeatSeries 
@@ -835,6 +845,8 @@
 | breaks | [double] | The upper bound breaks. 
 | breakColors | [[CIMColor]](Types.md#color) | The color for each break. 
 | colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp from which break colors are created. 
+| columnSortedCategoryValues | [string] | The array of sorted category values for column-wise custom sort. 
+| rowSortedCategoryValues | [string] | The array of sorted category values for row-wise custom sort. 
 
 
 
@@ -860,6 +872,65 @@
 | Null| 0| Leave the break in the line. 
 | Zero| 1| Substitute nulls with zeros. 
 | Interpolate| 2| Substitute nulls with interpolated values 
+
+
+
+
+## CIMChartPieSeries
+#### Provides access to members that control pie chart series. 
+
+
+### CIMChartSeries 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name of the series shown in the legend. 
+| uniqueName | string | The default and unique name of the series. 
+| fields | [string] | The data field names in the series. Optional depending on series type. 
+| orderFields | [string] | The sort field names in the series. 
+| groupFields | [string] | The group field names in the series. 
+| whereClause | string | The format string for series value labels. 
+| showLabels | boolean | A value indicating whether the series shows data labels. 
+| horizontalAxis | long | The index of horizontal axis. 
+| verticalAxis | long | The index of vertical axis. 
+| colorType | [enumeration ChartColorType](CIMCharts.md#enumeration-chartcolortype) | The type of color for the series. 
+| fieldAggregation | [string] | The aggregate field values if series data has a group field. Allowed values are count, sum, median, mean, and empty string. 
+| orderFieldsSortTypes | [long] | The array of sort order types for fields in OrderFields property Allowed values 0(Ascending), 1(Descending). 
+| visible | boolean | A value indicating whether the series is visible or not. 
+| dataLabelText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text style for the data label. 
+| multiSeries | boolean | A value indicating whether this series is a multi series. 
+| locations | [[CIMChartLocationDefinition]](CIMCharts.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
+| fieldExpressions | [[CIMExpressionInfo]](CIMRenderers.md#cimexpressioninfo) | Expression properties for chart series' fields. 
+
+
+### CIMChartPieSeries 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| sliceAggregationThreshold | double | The value indicating if slices with the size under a given percentage threshold are aggregated into a single slice. 
+| holePercentage | double | The size of the hole in middle of the chart. 
+| showLabelValue | boolean | A value indicating whether to show numeric value associated with a slice. 
+| showLabelPercentage | boolean | A value indicating whether to show percentage value associated with a slice. 
+| slices | [[CIMChartPieSlice]](CIMCharts.md#cimchartpieslice) | The array of slices. 
+
+
+
+
+
+
+## CIMChartPieSlice
+#### Represents a slice in the pie chart. 
+
+
+### CIMChartPieSlice 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| value | string | The value for the slice. 
+| symbol | [CIMChartFillSymbolProperties](CIMCharts.md#cimchartfillsymbolproperties) | The symbol for the slice. 
+| label | string | The label for the slice. 
+
+
 
 
 
@@ -901,6 +972,7 @@
 | dataLabelText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text style for the data label. 
 | multiSeries | boolean | A value indicating whether this series is a multi series. 
 | locations | [[CIMChartLocationDefinition]](CIMCharts.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
+| fieldExpressions | [[CIMExpressionInfo]](CIMRenderers.md#cimexpressioninfo) | Expression properties for chart series' fields. 
 
 
 ### CIMChartProbabilityPlotSeries 
@@ -953,6 +1025,7 @@
 | dataLabelText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text style for the data label. 
 | multiSeries | boolean | A value indicating whether this series is a multi series. 
 | locations | [[CIMChartLocationDefinition]](CIMCharts.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
+| fieldExpressions | [[CIMExpressionInfo]](CIMRenderers.md#cimexpressioninfo) | Expression properties for chart series' fields. 
 
 
 ### CIMChartProfileGraphSeries 
@@ -1029,6 +1102,7 @@
 | dataLabelText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text style for the data label. 
 | multiSeries | boolean | A value indicating whether this series is a multi series. 
 | locations | [[CIMChartLocationDefinition]](CIMCharts.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
+| fieldExpressions | [[CIMExpressionInfo]](CIMRenderers.md#cimexpressioninfo) | Expression properties for chart series' fields. 
 
 
 ### CIMChartScatterPlotMatrixSeries 
@@ -1084,6 +1158,7 @@
 | dataLabelText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text style for the data label. 
 | multiSeries | boolean | A value indicating whether this series is a multi series. 
 | locations | [[CIMChartLocationDefinition]](CIMCharts.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
+| fieldExpressions | [[CIMExpressionInfo]](CIMRenderers.md#cimexpressioninfo) | Expression properties for chart series' fields. 
 
 
 ### CIMChartScatterSeries 
@@ -1138,6 +1213,7 @@
 | dataLabelText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text style for the data label. 
 | multiSeries | boolean | A value indicating whether this series is a multi series. 
 | locations | [[CIMChartLocationDefinition]](CIMCharts.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
+| fieldExpressions | [[CIMExpressionInfo]](CIMRenderers.md#cimexpressioninfo) | Expression properties for chart series' fields. 
 
 
 ### CIMChartSpectralProfileSeries 
@@ -1147,6 +1223,130 @@
 | displayMode | [enumeration SpectralProfileDisplayMode](CIMCharts.md#enumeration-spectralprofiledisplaymode) | How this spectral profile is displayed. 
 | showOutliers | boolean | A value indicating whether to show the box plot outliers. 
 | standardizeValues | boolean | A value indicating whether to calculate standardized values for box plot. 
+
+
+
+
+
+
+## CIMChartSurfaceProfileBand
+#### Represents a band to be plotted over a line. 
+
+
+### CIMChartSurfaceProfileBand 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| bandID | long | The band ID. 
+| symbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol. 
+| label | string | The label. 
+
+
+
+
+
+
+## CIMChartSurfaceProfileDimensionValue
+#### Represents a dimension value for a given variable to be plotted over a line. 
+
+
+### CIMChartSurfaceProfileDimensionValue 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| value | double | The value. 
+| time | [TimeInstant](ExternalReferences.md#timeinstant) | The time at which the dimension value is to be used for the profile. 
+| symbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol. 
+| label | string | The label. 
+
+
+
+
+
+
+## CIMChartSurfaceProfileDimensionValues
+#### Represents dimension values for a given variable to be plotted over a line. 
+
+
+### CIMChartSurfaceProfileDimensionValues 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| variable | string | The name of the variable for which the values are to be plotted. 
+| values | [[CIMChartSurfaceProfileDimensionValue]](CIMCharts.md#cimchartsurfaceprofiledimensionvalue) | Dimension values for a variable for which the values are to be plotted. 
+| dimension | string | The name of the dimension for which the values are to be plotted. 
+
+
+
+
+
+
+## CIMChartSurfaceProfileLayer
+#### Represents the layer to be used as an additional input. 
+
+
+### CIMChartSurfaceProfileLayer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| URI | string | The URI of the layer. 
+| bandID | long | The band ID. 
+| symbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol. 
+| label | string | The label. 
+
+
+
+
+
+### Enumeration: ChartSurfaceProfilePlotType
+#### Represents the surface profile plot type. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| SingleLayer| 0| Plot using single layer as input. 
+| MultiLayer| 1| Plot using multiple layers as inputs. 
+
+
+
+
+## CIMChartSurfaceProfileSeries
+#### Represents a surface profile chart series. 
+
+
+### CIMChartSeries 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name of the series shown in the legend. 
+| uniqueName | string | The default and unique name of the series. 
+| fields | [string] | The data field names in the series. Optional depending on series type. 
+| orderFields | [string] | The sort field names in the series. 
+| groupFields | [string] | The group field names in the series. 
+| whereClause | string | The format string for series value labels. 
+| showLabels | boolean | A value indicating whether the series shows data labels. 
+| horizontalAxis | long | The index of horizontal axis. 
+| verticalAxis | long | The index of vertical axis. 
+| colorType | [enumeration ChartColorType](CIMCharts.md#enumeration-chartcolortype) | The type of color for the series. 
+| fieldAggregation | [string] | The aggregate field values if series data has a group field. Allowed values are count, sum, median, mean, and empty string. 
+| orderFieldsSortTypes | [long] | The array of sort order types for fields in OrderFields property Allowed values 0(Ascending), 1(Descending). 
+| visible | boolean | A value indicating whether the series is visible or not. 
+| dataLabelText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text style for the data label. 
+| multiSeries | boolean | A value indicating whether this series is a multi series. 
+| locations | [[CIMChartLocationDefinition]](CIMCharts.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
+| fieldExpressions | [[CIMExpressionInfo]](CIMRenderers.md#cimexpressioninfo) | Expression properties for chart series' fields. 
+
+
+### CIMChartSurfaceProfileSeries 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| plotType | [enumeration ChartSurfaceProfilePlotType](CIMCharts.md#enumeration-chartsurfaceprofileplottype) | The type of plot for this chart. 
+| sampleDistance | double | The sample distance for the profile. 
+| bands | [[CIMChartSurfaceProfileBand]](CIMCharts.md#cimchartsurfaceprofileband) | The bands to be used from the input to draw the profile. 
+| dimensionValues | [CIMChartSurfaceProfileDimensionValues](CIMCharts.md#cimchartsurfaceprofiledimensionvalues) | The dimension values to be used from a multidimensional input to draw the profile. 
+| layers | [[CIMChartSurfaceProfileLayer]](CIMCharts.md#cimchartsurfaceprofilelayer) | The layers to be used as additional inputs for the profile. 
+| horizontalUnit | [Unit](ExternalReferences.md#unit) | The unit of measure to be used for the axis. 
+| verticalScale | double | A value indicating the scale value for the axis. 
 
 
 
@@ -1184,6 +1384,7 @@
 | textUnderline | boolean | A value indicating whether the text is drawn with an underline. 
 | textStrikethrough | boolean | A value indicating whether the text is drawn with a strikethrough. 
 | textOverline | boolean | A value indicating whether the text is drawn with an overline. 
+| visible | boolean | A value indicating whether the text is visible. 
 
 
 
@@ -1253,6 +1454,8 @@
 | useSeriesMinMaxForAxisX | boolean | A value indicating whether each mini chart will use corresponding series' minimum and maximum of x values for axis X. If false it will use the combined series' minimum and maximum. 
 | useSeriesMinMaxForAxisY | boolean | A value indicating whether each mini chart will use corresponding series' minimum and maximum of y values for axis Y. If false it will use the combined series' minimum and maximum. 
 | selectionLineSymbolProperties | [CIMChartLineSymbolProperties](CIMCharts.md#cimchartlinesymbolproperties) | The line symbol properties of the outline for the selected mini chart. 
+| miniChartOutlineSymbolProperties | [CIMChartLineSymbolProperties](CIMCharts.md#cimchartlinesymbolproperties) | The line symbol properties of the outline for the non-selected mini chart. 
+| miniChartTitleText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text symbol properties of the series title for the mini chart. 
 
 
 

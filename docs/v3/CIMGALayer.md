@@ -50,7 +50,6 @@
 | showClassGaps | boolean | A value indicating whether or not to show class gaps. 
 | showInAscendingOrder | boolean | A value indicating whether or not to show classes in ascending order. 
 | heading | string | The heading. 
-| sampleSize | long | The sample size used for creating the classification. 
 | useDefaultSymbol | boolean | A value indicating whether or not to use the default symbol. 
 | defaultSymbolPatch | [enumeration PatchShape](CIMRenderers.md#enumeration-patchshape) | The patch shape for the default symbol. 
 | defaultSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The default symbol. 
@@ -59,6 +58,13 @@
 | defaultDescription | string | The default description. 
 | valueExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | ExpressionInfo that contains the Arcade expression that returns value as a number. When both Fields and ValueExpressionInfo are present ValueExpressionInfo is used. 
 | polygonSymbolColorTarget | [enumeration PolygonSymbolColorTarget](CIMRenderers.md#enumeration-polygonsymbolcolortarget) | The property that controls how the color ramp is applied to polygon symbols. 
+
+
+### CIMDataSampling 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| sampleSize | long | The maximum number of records to sample. 
 
 
 ### CIMGAIsoRenderer 
@@ -123,6 +129,9 @@
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 | allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
+| rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
+| useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
+| visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 
 
 ### CIMGALayerDefinition 

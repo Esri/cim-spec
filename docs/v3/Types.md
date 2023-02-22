@@ -156,6 +156,8 @@
 
 [CIMChartMatrixHeatSeries](CIMCharts.md#cimchartmatrixheatseries)
 
+[CIMChartPieSeries](CIMCharts.md#cimchartpieseries)
+
 [CIMChartProbabilityPlotSeries](CIMCharts.md#cimchartprobabilityplotseries)
 
 [CIMChartProfileGraphSeries](CIMCharts.md#cimchartprofilegraphseries)
@@ -165,6 +167,8 @@
 [CIMChartScatterSeries](CIMCharts.md#cimchartscatterseries)
 
 [CIMChartSpectralProfileSeries](CIMCharts.md#cimchartspectralprofileseries)
+
+[CIMChartSurfaceProfileSeries](CIMCharts.md#cimchartsurfaceprofileseries)
 
 ### ColorRamp
 
@@ -232,6 +236,8 @@
 
 [CIMSceneDataConnection](CIMTerrainLayers.md#cimscenedataconnection)
 
+[CIMENCDataConnection](CIMVectorLayers.md#cimencdataconnection)
+
 [CIMFeatureDatasetDataConnection](CIMVectorLayers.md#cimfeaturedatasetdataconnection)
 
 [CIMNetCDFRasterDataConnection](CIMVectorLayers.md#cimnetcdfrasterdataconnection)
@@ -281,6 +287,22 @@
 [CIMClassBreaksRenderer](CIMRenderers.md#cimclassbreaksrenderer)
 
 [CIMProportionalRenderer](CIMRenderers.md#cimproportionalrenderer)
+
+### DataSampling
+
+[CIMGAIsoRenderer](CIMGALayer.md#cimgaisorenderer)
+
+[CIMBivariateRendererAuthoringInfo](CIMRenderers.md#cimbivariaterendererauthoringinfo)
+
+[CIMClassBreaksRenderer](CIMRenderers.md#cimclassbreaksrenderer)
+
+[CIMDotDensityRenderer](CIMRenderers.md#cimdotdensityrenderer)
+
+[CIMProportionalRenderer](CIMRenderers.md#cimproportionalrenderer)
+
+[CIMSimpleRenderer](CIMRenderers.md#cimsimplerenderer)
+
+[CIMUniqueValueRenderer](CIMRenderers.md#cimuniquevaluerenderer)
 
 ### Definition
 
@@ -368,9 +390,17 @@
 
 [CIMBuildingLayer](CIMVectorLayers.md#cimbuildinglayer)
 
+[CIMCatalogDynamicGroupLayer](CIMVectorLayers.md#cimcatalogdynamicgrouplayer)
+
+[CIMCatalogLayer](CIMVectorLayers.md#cimcataloglayer)
+
 [CIMDimensionLayer](CIMVectorLayers.md#cimdimensionlayer)
 
+[CIMENCLayer](CIMVectorLayers.md#cimenclayer)
+
 [CIMFeatureLayer](CIMVectorLayers.md#cimfeaturelayer)
+
+[CIMFeatureTrajectorySubLayer](CIMVectorLayers.md#cimfeaturetrajectorysublayer)
 
 [CIMParcelFabricLayer](CIMVectorLayers.md#cimparcelfabriclayer)
 
@@ -379,6 +409,8 @@
 [CIMStandaloneTable](CIMVectorLayers.md#cimstandalonetable)
 
 [CIMSubtypeGroupLayer](CIMVectorLayers.md#cimsubtypegrouplayer)
+
+[CIMTrajectoryLayer](CIMVectorLayers.md#cimtrajectorylayer)
 
 [CIMVectorTileLayer](CIMVectorLayers.md#cimvectortilelayer)
 
@@ -904,6 +936,8 @@
 
 [CIMPieChartMediaInfo](CIMPopup.md#cimpiechartmediainfo)
 
+[CIMRelationshipMediaInfo](CIMPopup.md#cimrelationshipmediainfo)
+
 [CIMTableMediaInfo](CIMPopup.md#cimtablemediainfo)
 
 [CIMTextMediaInfo](CIMPopup.md#cimtextmediainfo)
@@ -1104,6 +1138,8 @@
 
 [CIMSceneDataConnection](CIMTerrainLayers.md#cimscenedataconnection)
 
+[CIMENCDataConnection](CIMVectorLayers.md#cimencdataconnection)
+
 [CIMFeatureDatasetDataConnection](CIMVectorLayers.md#cimfeaturedatasetdataconnection)
 
 [CIMStandardDataConnection](CIMVectorLayers.md#cimstandarddataconnection)
@@ -1128,9 +1164,17 @@
 
 [CIMStatisticalDataCollectionFeatureLayerCalculator](CIMDocument.md#cimstatisticaldatacollectionfeaturelayercalculator)
 
+[CIMStatisticalDataCollectionInputPropertiesCalculator](CIMDocument.md#cimstatisticaldatacollectioninputpropertiescalculator)
+
 [CIMStatisticalDataCollectionScriptCalculator](CIMDocument.md#cimstatisticaldatacollectionscriptcalculator)
 
 [CIMStatisticalDataCollectionStandardDataCalculator](CIMDocument.md#cimstatisticaldatacollectionstandarddatacalculator)
+
+### StatisticalDataCollectionInputProperty
+
+[CIMStatisticalDataCollectionInputAreaProperty](CIMDocument.md#cimstatisticaldatacollectioninputareaproperty)
+
+[CIMStatisticalDataCollectionInputProperty](CIMDocument.md#cimstatisticaldatacollectioninputproperty)
 
 ### SubLayer
 
@@ -1382,6 +1426,10 @@
 
 [CIMChartMatrixHeatSeries](CIMCharts.md#CIMChartMatrixHeatSeries)
 
+[CIMChartPieSeries](CIMCharts.md#CIMChartPieSeries)
+
+[CIMChartPieSlice](CIMCharts.md#CIMChartPieSlice)
+
 [CIMChartProbabilityPlotSeries](CIMCharts.md#CIMChartProbabilityPlotSeries)
 
 [CIMChartProfileGraphSeries](CIMCharts.md#CIMChartProfileGraphSeries)
@@ -1391,6 +1439,16 @@
 [CIMChartScatterSeries](CIMCharts.md#CIMChartScatterSeries)
 
 [CIMChartSpectralProfileSeries](CIMCharts.md#CIMChartSpectralProfileSeries)
+
+[CIMChartSurfaceProfileBand](CIMCharts.md#CIMChartSurfaceProfileBand)
+
+[CIMChartSurfaceProfileDimensionValue](CIMCharts.md#CIMChartSurfaceProfileDimensionValue)
+
+[CIMChartSurfaceProfileDimensionValues](CIMCharts.md#CIMChartSurfaceProfileDimensionValues)
+
+[CIMChartSurfaceProfileLayer](CIMCharts.md#CIMChartSurfaceProfileLayer)
+
+[CIMChartSurfaceProfileSeries](CIMCharts.md#CIMChartSurfaceProfileSeries)
 
 [CIMChartTextProperties](CIMCharts.md#CIMChartTextProperties)
 
@@ -1468,6 +1526,8 @@
 
 [CIMProjectItem](CIMDocument.md#CIMProjectItem)
 
+[CIMProjectThumbnailOptions](CIMDocument.md#CIMProjectThumbnailOptions)
+
 [CIMStatisticalDataCollection](CIMDocument.md#CIMStatisticalDataCollection)
 
 [CIMStatisticalDataCollectionDocument](CIMDocument.md#CIMStatisticalDataCollectionDocument)
@@ -1475,6 +1535,12 @@
 [CIMStatisticalDataCollectionFeatureLayerCalculator](CIMDocument.md#CIMStatisticalDataCollectionFeatureLayerCalculator)
 
 [CIMStatisticalDataCollectionField](CIMDocument.md#CIMStatisticalDataCollectionField)
+
+[CIMStatisticalDataCollectionInputAreaProperty](CIMDocument.md#CIMStatisticalDataCollectionInputAreaProperty)
+
+[CIMStatisticalDataCollectionInputPropertiesCalculator](CIMDocument.md#CIMStatisticalDataCollectionInputPropertiesCalculator)
+
+[CIMStatisticalDataCollectionInputProperty](CIMDocument.md#CIMStatisticalDataCollectionInputProperty)
 
 [CIMStatisticalDataCollectionScriptCalculator](CIMDocument.md#CIMStatisticalDataCollectionScriptCalculator)
 
@@ -1932,6 +1998,10 @@
 
 [CIMGroundToGridCorrection](CIMMap.md#CIMGroundToGridCorrection)
 
+[CIMIPSAwareMapProperties](CIMMap.md#CIMIPSAwareMapProperties)
+
+[CIMIPSPositioningTableProperties](CIMMap.md#CIMIPSPositioningTableProperties)
+
 [CIMIlluminationProperties](CIMMap.md#CIMIlluminationProperties)
 
 [CIMKeyframeAnalysis](CIMMap.md#CIMKeyframeAnalysis)
@@ -2075,6 +2145,8 @@
 [CIMPopupInfo](CIMPopup.md#CIMPopupInfo)
 
 [CIMPopupLayout](CIMPopup.md#CIMPopupLayout)
+
+[CIMRelationshipMediaInfo](CIMPopup.md#CIMRelationshipMediaInfo)
 
 [CIMTableMediaInfo](CIMPopup.md#CIMTableMediaInfo)
 
@@ -2462,6 +2534,10 @@
 
 [CIMBuildingLayer](CIMVectorLayers.md#CIMBuildingLayer)
 
+[CIMCatalogDynamicGroupLayer](CIMVectorLayers.md#CIMCatalogDynamicGroupLayer)
+
+[CIMCatalogLayer](CIMVectorLayers.md#CIMCatalogLayer)
+
 [CIMClusteringFeatureReduction](CIMVectorLayers.md#CIMClusteringFeatureReduction)
 
 [CIMDimensionLayer](CIMVectorLayers.md#CIMDimensionLayer)
@@ -2474,6 +2550,10 @@
 
 [CIMDisplayFilter](CIMVectorLayers.md#CIMDisplayFilter)
 
+[CIMENCDataConnection](CIMVectorLayers.md#CIMENCDataConnection)
+
+[CIMENCLayer](CIMVectorLayers.md#CIMENCLayer)
+
 [CIMEditingTemplateRelationship](CIMVectorLayers.md#CIMEditingTemplateRelationship)
 
 [CIMEditingTemplateToolOptions](CIMVectorLayers.md#CIMEditingTemplateToolOptions)
@@ -2484,7 +2564,11 @@
 
 [CIMFeatureLayer](CIMVectorLayers.md#CIMFeatureLayer)
 
+[CIMFeatureSortInfo](CIMVectorLayers.md#CIMFeatureSortInfo)
+
 [CIMFeatureTable](CIMVectorLayers.md#CIMFeatureTable)
+
+[CIMFeatureTrajectorySubLayer](CIMVectorLayers.md#CIMFeatureTrajectorySubLayer)
 
 [CIMFieldDescription](CIMVectorLayers.md#CIMFieldDescription)
 
@@ -2538,6 +2622,14 @@
 
 [CIMRowTemplate](CIMVectorLayers.md#CIMRowTemplate)
 
+[CIMS52DisplaySettings](CIMVectorLayers.md#CIMS52DisplaySettings)
+
+[CIMS52MarinerSettings](CIMVectorLayers.md#CIMS52MarinerSettings)
+
+[CIMS52TextGroupVisibilitySettings](CIMVectorLayers.md#CIMS52TextGroupVisibilitySettings)
+
+[CIMS52ViewingGroupSettings](CIMVectorLayers.md#CIMS52ViewingGroupSettings)
+
 [CIMSqlQueryDataConnection](CIMVectorLayers.md#CIMSqlQueryDataConnection)
 
 [CIMStandaloneTable](CIMVectorLayers.md#CIMStandaloneTable)
@@ -2567,6 +2659,8 @@
 [CIMTimeTableDefinition](CIMVectorLayers.md#CIMTimeTableDefinition)
 
 [CIMTrackingServerDataConnection](CIMVectorLayers.md#CIMTrackingServerDataConnection)
+
+[CIMTrajectoryLayer](CIMVectorLayers.md#CIMTrajectoryLayer)
 
 [CIMVectorTileDataConnection](CIMVectorLayers.md#CIMVectorTileDataConnection)
 

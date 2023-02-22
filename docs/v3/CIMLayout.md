@@ -1718,6 +1718,7 @@
 | view | [CIMMapView](CIMDocument.md#cimmapview) | The view associated with the map frame. 
 | extentIndicators | [[CIMExtentIndicator]](CIMLayout.md#cimextentindicator) | The extent indicators associated with the map frame. 
 | grids | [[CIMMapGrid]](Types.md#mapgrid) | The Grids and Graticules associated with the MapFrame. 
+| useMapBackgroundColor | boolean | A value indicating whether the MapFrame should use the Map background color. 
 
 
 

@@ -23,8 +23,8 @@
 
 |Property | Value | Description | 
 |---------|--------|--------|
-| Display| 0| Points remain aligned to the display when the map is rotated. 
-| Map| 1| Points are rotated with the map. 
+| Display| 0| Markers or fills remain aligned to the display when the map is rotated. 
+| Map| 1| Markers or fills are rotated with the map. 
 
 
 
@@ -2197,6 +2197,13 @@
 | clockwise | boolean | A value indicating whether the orientation of the wedges of the pie chart are clockwise or counterclockwise. 
 | showOutline | boolean | A value indicating whether or not to show the outline symbol. 
 | outlineSymbol | [CIMLineSymbol](CIMSymbols.md#cimlinesymbol) | The line symbol that is applied to outline of the whole pie chart. 
+| aggregateSmallSlices | boolean | A value indicating whether or not to aggregate small pie slices. 
+| sliceAggregationThreshold | double | The aggregation threshold. When AggregateSmallSlices is true, slices smaller than this value (as a percentage of the whole pie) will be aggregated. 
+| aggregateSliceSymbol | [CIMPolygonSymbol](CIMSymbols.md#cimpolygonsymbol) | The polygon symbol used to draw the aggregate slice. 
+| aggregateSliceLabel | string | The label shown in the legend for the aggregate slice. 
+| showInvalidValues | boolean | A value indicating whether or not to show a pie symbol for features with invalid values. A feature has "invalid values" if all the field values used by the renderer are negative, zero, or null. 
+| invalidValuesSymbol | [CIMPolygonSymbol](CIMSymbols.md#cimpolygonsymbol) | The polygon symbol used to draw features with invalid values. A feature has "invalid values" if all the field values used by the renderer are negative, zero, or null. 
+| invalidValuesLabel | string | The label shown in the legend for features with invalid values. 
 
 
 
@@ -2407,6 +2414,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+| angleAlignment | [enumeration AngleAlignment](CIMSymbols.md#enumeration-anglealignment) | Whether polygon symbol fills align to the map or to the display when a rotation is applied to the map. 
 
 
 

@@ -227,7 +227,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | forward | boolean | A value indicating whether or not this is a forward transformation. 
-| geoTransformation | [GeoTransformation](ExternalReferences.md#geotransformation) | The transformation. 
+| geoTransformation | [GeoTransformation](ExternalReferences.md#geotransformation) | The transformation. An object with a "NULL" method in the well-known-text string indicates the "Do not transform" case, where a pair of coordinate systems is deliberately configured so that no coordinate transformation occurs during projection. 
 
 
 
@@ -416,6 +416,38 @@
 
 
 
+## CIMIPSAwareMapProperties
+#### Define the properties needed to identify IPS layer and table. 
+
+
+### CIMIPSAwareMapProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| IPSRecordingsLayerURI | string | The properties of the IPS recordings layer in the map. 
+| IPSPositioningTableProperties | [CIMIPSPositioningTableProperties](CIMMap.md#cimipspositioningtableproperties) | The properties of the IPS positioning table in the map. 
+
+
+
+
+
+
+## CIMIPSPositioningTableProperties
+#### Defines the URI and selected global ID for the IPS positioning table. 
+
+
+### CIMIPSPositioningTableProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| tableURI | string | The URI for the IPS positioning table in the map. 
+| selectedGlobalID | string | The global ID of the row selected from the IPS positioning table. 
+
+
+
+
+
+
 ## CIMIlluminationProperties
 #### Represents illumination properties. 
 
@@ -557,6 +589,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | range | [CIMRange](CIMVectorLayers.md#cimrange) | The value of the active range. 
+| rangeRelation | [enumeration RangeRelation](CIMEnumerations.md#enumeration-rangerelation) | The range relation. 
 | minTransition | [enumeration AnimationTransition](CIMEnumerations.md#enumeration-animationtransition) | The method of transition for the minimum value of the range. 
 | maxTransition | [enumeration AnimationTransition](CIMEnumerations.md#enumeration-animationtransition) | The method of transition for the maximum value of the range. 
 | isExclusion | boolean | A value indicating whether the range should be all values less than the minimum value and greater than the maximum value. 
@@ -823,7 +856,7 @@
 | snapToScales | boolean | A value indicating whether to snap only to the map's list of named scales when zooming. 
 | scaleFormat | [CIMScaleFormat](CIMMap.md#cimscaleformat) | The scale format describing the formatting of the scale value. 
 | scaleDisplayFormat | [enumeration ScaleDisplayFormat](CIMMap.md#enumeration-scaledisplayformat) | The display mode for the map's Scales in the user interface. 
-| HVDatumTransforms | [ArrayOfCompositeHVDatumTransformation](ExternalReferences.md#arrayofcompositehvdatumtransformation) | The set of geographic transformations used by the map for spatial references with vertical coordinate system. 
+| HVDatumTransforms | [ArrayOfCompositeHVDatumTransformation](ExternalReferences.md#arrayofcompositehvdatumtransformation) | The set of geographic transformations used by the map for spatial references with vertical coordinate system. An object with an empty Transformations list indicates the "Do not transform" case, where a pair of coordinate systems is deliberately configured so that no coordinate transformation occurs during projection. 
 | useServiceLayerIDs | boolean | A value indicating whether to allow the use of unique numeric IDs on layers that will be used when publishing services. 
 | groundToGridCorrection | [CIMGroundToGridCorrection](CIMMap.md#cimgroundtogridcorrection) | The Ground To Grid Correction properties. 
 | clippingMode | [enumeration ClippingMode](CIMMap.md#enumeration-clippingmode) | The clipping mode for a map. 
@@ -840,6 +873,7 @@
 | CMYKColorProfile | string | The name of the CMYK color profile for a map. 
 | simulateOverprint | boolean | A value indicating whether to simulate overprint for a map. 
 | floorAwareMapProperties | [CIMFloorAwareMapProperties](CIMMap.md#cimfloorawaremapproperties) | The floor-aware properties of the map. 
+| IPSAwareMapProperties | [CIMIPSAwareMapProperties](CIMMap.md#cimipsawaremapproperties) | The IPS-aware properties of the map. 
 | autoFillFeatureCache | boolean | A value indicating whether auto fill mode is enabled or disabled for a map. 
 
 
@@ -867,6 +901,7 @@
 | isInverted | boolean | A value indicating whether the left and right images of the stereo model should be swapped. 
 | stereoModelDisplayMode | [enumeration StereoModelDisplayMode](CIMMap.md#enumeration-stereomodeldisplaymode) | The stereo model display mode. 
 | orientation | [enumeration StereoOrientation](CIMMap.md#enumeration-stereoorientation) | The stereo model display orientation. 
+| terrainFollowingDEM | [DataConnection](Types.md#dataconnection) | The Digital Elevation Model (DEM) used by cursor for terrain following. 
 
 
 

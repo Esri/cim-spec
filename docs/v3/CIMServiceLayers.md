@@ -89,6 +89,9 @@
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 | allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
+| rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
+| useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
+| visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 
 
 ### CIMBuildingDisciplineSceneLayerDefinition 
@@ -151,6 +154,9 @@
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 | allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
+| rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
+| useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
+| visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 
 
 ### CIMBuildingSceneLayerDefinition 
@@ -232,6 +238,9 @@
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 | allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
+| rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
+| useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
+| visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 
 
 ### CIMIndexedSceneLayerDefinition 
@@ -257,6 +266,9 @@
 | modificationLayerEnabled | boolean | A value indicating whether the integrated mesh modification is enabled. 
 | usePredefinedMaxScreenThreshold | boolean | A value indicating whether to use predefined max screen threshold as defined in the integrated mesh layer. 
 | floorAwareTableProperties | [CIMFloorAwareTableProperties](CIMVectorLayers.md#cimfloorawaretableproperties) | Floor-aware properties if the scene layer is used in floor filtering. 
+| timeFields | [CIMTimeTableDefinition](CIMVectorLayers.md#cimtimetabledefinition) | The time fields. 
+| timeDefinition | [CIMTimeDataDefinition](CIMVectorLayers.md#cimtimedatadefinition) | The time definition. 
+| timeDisplayDefinition | [CIMTimeDisplayDefinition](CIMVectorLayers.md#cimtimedisplaydefinition) | The time display definition. 
 
 
 
@@ -367,6 +379,9 @@
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 | allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
+| rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
+| useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
+| visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 
 
 ### CIMServiceLayerDefinition 
@@ -602,6 +617,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | definitionExpression | string | The definition expression. This property is used for composite layers that are backed by feature classes. 
+| URI | string | The URI of the backing layer. Used when feature layer capabilities are enabled. 
 
 
 
@@ -643,6 +659,7 @@
 | popupInfo | [CIMPopupInfo](CIMPopup.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | floorAwareTableProperties | [CIMFloorAwareTableProperties](CIMVectorLayers.md#cimfloorawaretableproperties) | Floor-aware properties if the sublayer is used in floor filtering. 
+| URI | string | The URI of the backing layer. Used when feature layer capabilities are enabled. 
 
 
 
@@ -728,6 +745,9 @@
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 | allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
+| rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
+| useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
+| visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 
 
 ### CIMServiceLayerDefinition 
@@ -747,6 +767,16 @@
 | associatedFeatureLayerURI | string | The URI for a feature layer (feature service-based or portal item-based) that provides pop-up support for the tiled service layer. 
 
 
+
+
+
+### Enumeration: VoxelAlignment
+#### Represents voxel alignment. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Origin| 0| Values are at voxel origin. 
+| Center| 1| Values are at voxel center. 
 
 
 
@@ -868,6 +898,9 @@
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 | allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
+| rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
+| useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
+| visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 
 
 ### CIMVoxelLayerDefinition 
@@ -890,6 +923,7 @@
 | staticSectionContainerVisible | boolean | A value indicating whether the voxel static section container is visible. 
 | surfaceContainerExpanded | boolean | A value indicating whether the surface container is expanded in the contents pane. 
 | visualization | [enumeration VoxelVisualization](CIMServiceLayers.md#enumeration-voxelvisualization) | The voxel visualization. 
+| alignment | [enumeration VoxelAlignment](CIMServiceLayers.md#enumeration-voxelalignment) | The voxel alignment. 
 | volumes | [[CIMVoxelVolume]](CIMServiceLayers.md#cimvoxelvolume) | The volumes. 
 
 
@@ -1202,6 +1236,7 @@
 | coverageName | string | The coverage name. 
 | version | string | The version. 
 | serverConnection | [CIMInternetServerConnectionBase](CIMServiceLayers.md#ciminternetserverconnectionbase) | The server connection. 
+| capabilitiesParameters | {JSON_object}| Vendor specific parameters for all WCS requests. 
 
 
 
@@ -1287,6 +1322,9 @@
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 | allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
+| rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
+| useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
+| visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 
 
 ### CIMServiceLayerDefinition 

@@ -80,6 +80,13 @@
 |---------|--------|--------|
 
 
+### CIMDataSampling 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| sampleSize | long | The maximum number of records to sample. 
+
+
 ### CIMBivariateRendererAuthoringInfo 
 
 |Property | Type | Description | 
@@ -88,7 +95,6 @@
 | gridSize | [enumeration BivariateGridSizeOption](CIMRenderers.md#enumeration-bivariategridsizeoption) | The grid size. 
 | gridOrientation | [enumeration BivariateGridLegendOrientationType](CIMRenderers.md#enumeration-bivariategridlegendorientationtype) | The grid orientation. 
 | gridLabelOption | [enumeration BivariateGridLegendLabelStrategy](CIMRenderers.md#enumeration-bivariategridlegendlabelstrategy) | The grid label option. 
-| sampleSize | long | The sample size used for creating the classification. 
 | templateSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The template symbol. 
 
 
@@ -209,7 +215,6 @@
 | showClassGaps | boolean | A value indicating whether or not to show class gaps. 
 | showInAscendingOrder | boolean | A value indicating whether or not to show classes in ascending order. 
 | heading | string | The heading. 
-| sampleSize | long | The sample size used for creating the classification. 
 | useDefaultSymbol | boolean | A value indicating whether or not to use the default symbol. 
 | defaultSymbolPatch | [enumeration PatchShape](CIMRenderers.md#enumeration-patchshape) | The patch shape for the default symbol. 
 | defaultSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The default symbol. 
@@ -218,6 +223,13 @@
 | defaultDescription | string | The default description. 
 | valueExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | ExpressionInfo that contains the Arcade expression that returns value as a number. When both Fields and ValueExpressionInfo are present ValueExpressionInfo is used. 
 | polygonSymbolColorTarget | [enumeration PolygonSymbolColorTarget](CIMRenderers.md#enumeration-polygonsymbolcolortarget) | The property that controls how the color ramp is applied to polygon symbols. 
+
+
+### CIMDataSampling 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| sampleSize | long | The maximum number of records to sample. 
 
 
 ### CIMDataNormalization 
@@ -341,6 +353,13 @@
 |---------|--------|--------|
 
 
+### CIMDataSampling 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| sampleSize | long | The maximum number of records to sample. 
+
+
 ### CIMVisualVariableRenderer 
 
 |Property | Type | Description | 
@@ -377,7 +396,6 @@
 | referenceScale | double | The reference scale. If specified, dots are calibrated from this scale. 
 | useMasking | boolean | A value indicating whether or not to use masking. 
 | valueExpressionInfos | [[CIMExpressionInfo]](CIMRenderers.md#cimexpressioninfo) | The arcade expressions the dot data comes from. If this array is populated it takes precedence over the FieldNames array. 
-| sampleSize | long | The sample size for the number of features used to determine with initial dot value. 
 | symbolLabel | string | The legend label indicating what the symbol is (e.g. "dot"). 
 | unitLabel | string | The legend label indicating what the dots represent (e.g. "people"). 
 
@@ -550,9 +568,12 @@
 |---------|--------|--------|
 | flanneryCompensation | boolean | A value indicating whether or not to use Flannery compensation. 
 | minimumSize | double | The minimum size. 
-| minimumValue | double | The minimum value. 
-| proportionalBySum | boolean | A value indicating whether to proportion by sum. 
-| proportionalFieldName | string | The proportional field name. 
+| minimumValue | double | The data value that corresponds to the minimum size. 
+| maximumSize | double | The maximum size. This value is optional. 
+| maximumValue | double | The data value that corresponds to the maximum size. This value is optional. 
+| proportionalBySum | boolean | A value indicating whether to size the pie chart proportionally by the sum of field values. 
+| proportionalFieldName | string | The field that is used to size the pie chart proportionally. 
+| proportionalExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The Arcade expression that is used to size the pie chart proportionally. This property is mutually exclusive with ProportionalBySum and ProportionalFieldName. 
 
 
 
@@ -567,6 +588,13 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+
+
+### CIMDataSampling 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| sampleSize | long | The maximum number of records to sample. 
 
 
 ### CIMVisualVariableRenderer 
@@ -717,6 +745,13 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+
+
+### CIMDataSampling 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| sampleSize | long | The maximum number of records to sample. 
 
 
 ### CIMVisualVariableRenderer 
@@ -955,6 +990,13 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+
+
+### CIMDataSampling 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| sampleSize | long | The maximum number of records to sample. 
 
 
 ### CIMVisualVariableRenderer 

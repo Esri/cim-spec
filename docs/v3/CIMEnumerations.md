@@ -201,6 +201,18 @@
 
 
 
+### Enumeration: RangeRelation
+#### Range relation types. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Overlaps| 0| Include values equal to the start or end and values that are between the start and end. 
+| OverlapsStartWithinEnd| 1| Include values equal to the start and values that are between the start and end. 
+| AfterStartOverlapsEnd| 2| Include values equal to the end and values that are between the start and end. 
+| Within| 3| Include values that are between the start and end but not equal to either. 
+
+
+
 ### Enumeration: RasterResamplingType
 #### Raster resampling types. 
 

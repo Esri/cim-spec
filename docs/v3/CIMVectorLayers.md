@@ -97,6 +97,9 @@
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 | allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
+| rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
+| useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
+| visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -125,6 +128,7 @@
 | displayFilterChoices | [[CIMDisplayFilter]](CIMVectorLayers.md#cimdisplayfilter) | The current set of display filters. 
 | featureElevationExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression for setting the feature elevation. 
 | featureBlendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The per-feature blending mode which allows features in a layer to blend against other features in the same layer that have already drawn. 
+| featureSortInfos | [[CIMFeatureSortInfo]](CIMVectorLayers.md#cimfeaturesortinfo) | The collection of field names and sort directions used to sort features during draw. 
 
 
 ### CIMAnnotationLayerDefinition 
@@ -254,6 +258,7 @@
 | spatialReference | [SpatialReference](ExternalReferences.md#spatialreference) | The spatial reference in which features are aggregated. A dataset may be aggregated in one or more spatial references. These may differ from the spatial reference of the dataset itself (the Geohash scheme always uses WGS84, for example). This property is the user's choice from among those spatial references. 
 | fixedLevel | long | The bin level at which bins will be drawn. If -1, the bin level will be automatically chosen based on the minimum bin size. 
 | binType | [enumeration esriFeatureBinType](ExternalReferences.md#enumeration-esrifeaturebintype) | The bin type in which features are aggregated. A dataset may be aggregated using one or more binning types. This property is the user's choice from among those binning types. 
+| clientSideBinning | boolean | A value indicating whether binning should be performed on the client side, even when the data source has binning capabilities. 
 
 
 
@@ -341,6 +346,9 @@
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 | allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
+| rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
+| useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
+| visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 
 
 ### CIMBuildingDisciplineLayerDefinition 
@@ -403,6 +411,9 @@
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 | allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
+| rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
+| useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
+| visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 
 
 ### CIMObject3DRenderingFilters 
@@ -422,6 +433,164 @@
 | buildingID | string | The building ID to filter by building. 
 | dataConnection | [DataConnection](Types.md#dataconnection) | The data connection to the workspace. 
 | summaryStatisticsURI | string | The URI of the binary reference containing the summary statistics. 
+
+
+
+
+
+
+## CIMCatalogDynamicGroupLayer
+#### Composite layer to hold all the dynamic content of a Catalog layer. 
+
+
+### CIMDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name. 
+| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
+| metadataURI | string | The metadata URI. 
+| useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
+
+
+### CIMLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| attribution | string | The attribution text that appears on a map that draws this layer. 
+| description | string | The description. 
+| layerElevation | [CIMLayerElevationSurface](CIMLayer.md#cimlayerelevationsurface) | The layer elevation. 
+| expanded | boolean | A value indicating whether this layer is expanded in the contents pane. 
+| layer3DProperties | [CIM3DLayerProperties](CIMLayer.md#cim3dlayerproperties) | The 3D layer properties. 
+| layerMasks | [string] | The URIs of the layers used as masks. 
+| layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
+| maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| showLegends | boolean | A value indicating whether or not to show legends. 
+| transparency | double | The transparency of the layer. 
+| visibility | boolean | A value indicating whether or not this layer is visible. 
+| displayCacheType | [enumeration DisplayCacheType](CIMLayer.md#enumeration-displaycachetype) | The display cache type. 
+| maxDisplayCacheAge | double | The maximum display cache age. 
+| layerTemplate | [CIMLayerTemplate](CIMLayer.md#cimlayertemplate) | The layer template. 
+| popupInfo | [CIMPopupInfo](CIMPopup.md#cimpopupinfo) | The pop-up info. 
+| showPopups | boolean | A value indicating whether or not to show pop-ups. 
+| serviceLayerID | long | Identifier that will be used to identify the layer in server. 
+| charts | [[CIMChart]](CIMCharts.md#cimchart) | Identifier the layer's charts. 
+| searchable | boolean | A value indicating whether or not this layer should be included in the search. This property is honored only by layers that support search. 
+| refreshRate | double | The amount of time to wait between refreshing the layer. 
+| refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
+| showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
+| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
+| allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
+| rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
+| useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
+| visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
+
+
+### CIMCatalogDynamicGroupLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+
+
+
+
+## CIMCatalogLayer
+#### Represents a layer which dynamically loads its sublayers according to scale and extent constraints. 
+
+
+### CIMDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name. 
+| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
+| metadataURI | string | The metadata URI. 
+| useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
+
+
+### CIMLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| attribution | string | The attribution text that appears on a map that draws this layer. 
+| description | string | The description. 
+| layerElevation | [CIMLayerElevationSurface](CIMLayer.md#cimlayerelevationsurface) | The layer elevation. 
+| expanded | boolean | A value indicating whether this layer is expanded in the contents pane. 
+| layer3DProperties | [CIM3DLayerProperties](CIMLayer.md#cim3dlayerproperties) | The 3D layer properties. 
+| layerMasks | [string] | The URIs of the layers used as masks. 
+| layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
+| maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| showLegends | boolean | A value indicating whether or not to show legends. 
+| transparency | double | The transparency of the layer. 
+| visibility | boolean | A value indicating whether or not this layer is visible. 
+| displayCacheType | [enumeration DisplayCacheType](CIMLayer.md#enumeration-displaycachetype) | The display cache type. 
+| maxDisplayCacheAge | double | The maximum display cache age. 
+| layerTemplate | [CIMLayerTemplate](CIMLayer.md#cimlayertemplate) | The layer template. 
+| popupInfo | [CIMPopupInfo](CIMPopup.md#cimpopupinfo) | The pop-up info. 
+| showPopups | boolean | A value indicating whether or not to show pop-ups. 
+| serviceLayerID | long | Identifier that will be used to identify the layer in server. 
+| charts | [[CIMChart]](CIMCharts.md#cimchart) | Identifier the layer's charts. 
+| searchable | boolean | A value indicating whether or not this layer should be included in the search. This property is honored only by layers that support search. 
+| refreshRate | double | The amount of time to wait between refreshing the layer. 
+| refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
+| showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
+| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
+| allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
+| rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
+| useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
+| visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
+
+
+### CIMFeatureLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| autoGenerateFeatureTemplates | boolean | A value indicating whether to automatically generate feature templates from the renderer. 
+| extrusion | [CIMFeatureExtrusion](CIMVectorLayers.md#cimfeatureextrusion) | The feature extrusion. 
+| featureElevationExpression | string | The feature elevation expression. 
+| featureTable | [CIMFeatureTable](CIMVectorLayers.md#cimfeaturetable) | The feature table. 
+| featureTemplates | [[CIMEditingTemplate]](Types.md#editingtemplate) | The feature templates. 
+| htmlPopupEnabled | boolean | A value indicating whether HTML pop-ups are enabled. 
+| htmlPopupFormat | [CIMHtmlPopupFormat](CIMVectorLayers.md#cimhtmlpopupformat) | The HTML pop-ups format. 
+| isFlattened | boolean | A value indicating whether the layer is flattened. 
+| selectable | boolean | A value indicating whether the layer is selectable. 
+| selectionColor | [Color](Types.md#color) | The selection color. For polygons, this is used as the outline color. 
+| polygonSelectionFillColor | [Color](Types.md#color) | The selection fill color. Only used for polygons. 
+| selectionSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The selection symbol. 
+| useSelectionSymbol | boolean | A value indicating whether to use the selection symbol. 
+| pageDefinition | [CIMPageDefinition](CIMVectorLayers.md#cimpagedefinition) | The page definition which allows for using current map series page to filter features. 
+| featureCacheType | [enumeration FeatureCacheType](CIMVectorLayers.md#enumeration-featurecachetype) | The feature cache type. 
+| enableDisplayFilters | boolean | A value indicating whether the current set of display filters are honored during drawing. 
+| displayFilters | [[CIMDisplayFilter]](CIMVectorLayers.md#cimdisplayfilter) | The current set of scale based display filters. 
+| displayFiltersType | [enumeration DisplayFilterType](CIMVectorLayers.md#enumeration-displayfiltertype) | DisplayFiltersType value. 
+| displayFilterName | string | The active display filter. 
+| displayFilterChoices | [[CIMDisplayFilter]](CIMVectorLayers.md#cimdisplayfilter) | The current set of display filters. 
+| featureElevationExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression for setting the feature elevation. 
+| featureBlendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The per-feature blending mode which allows features in a layer to blend against other features in the same layer that have already drawn. 
+| featureSortInfos | [[CIMFeatureSortInfo]](CIMVectorLayers.md#cimfeaturesortinfo) | The collection of field names and sort directions used to sort features during draw. 
+
+
+### CIMCatalogLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| footprintLayer | string | The path of the footprint feature layer. 
+| catalogDynamicGroupLayer | string | The path of the composite layer that contains all the currently-visible layers. The layers inside the composite layer are updated as the extent of the active view changes. 
+| maximumVisibleSublayers | long | Upper bound for number of layers in view. 
 
 
 
@@ -518,6 +687,9 @@
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 | allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
+| rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
+| useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
+| visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -546,6 +718,7 @@
 | displayFilterChoices | [[CIMDisplayFilter]](CIMVectorLayers.md#cimdisplayfilter) | The current set of display filters. 
 | featureElevationExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression for setting the feature elevation. 
 | featureBlendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The per-feature blending mode which allows features in a layer to blend against other features in the same layer that have already drawn. 
+| featureSortInfos | [[CIMFeatureSortInfo]](CIMVectorLayers.md#cimfeaturesortinfo) | The collection of field names and sort directions used to sort features during draw. 
 
 
 ### CIMDimensionLayerDefinition 
@@ -746,6 +919,99 @@
 
 
 
+## CIMENCDataConnection
+#### Represents an ENC layer data connection. 
+
+
+### CIMDataConnection 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMServiceDataConnectionProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| customParameters | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | Vendor specific parameters. 
+
+
+### CIMENCDataConnection 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| URI | string | The URI of the ENC files or resources. 
+
+
+
+
+
+
+## CIMENCLayer
+#### Represents an Electronic Navigational Charts (ENC) layer. ENC layers allow to visualize nautical charts from S-57 cells using S-52 symbology. 
+
+
+### CIMDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name. 
+| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
+| metadataURI | string | The metadata URI. 
+| useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
+
+
+### CIMLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| attribution | string | The attribution text that appears on a map that draws this layer. 
+| description | string | The description. 
+| layerElevation | [CIMLayerElevationSurface](CIMLayer.md#cimlayerelevationsurface) | The layer elevation. 
+| expanded | boolean | A value indicating whether this layer is expanded in the contents pane. 
+| layer3DProperties | [CIM3DLayerProperties](CIMLayer.md#cim3dlayerproperties) | The 3D layer properties. 
+| layerMasks | [string] | The URIs of the layers used as masks. 
+| layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
+| maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| showLegends | boolean | A value indicating whether or not to show legends. 
+| transparency | double | The transparency of the layer. 
+| visibility | boolean | A value indicating whether or not this layer is visible. 
+| displayCacheType | [enumeration DisplayCacheType](CIMLayer.md#enumeration-displaycachetype) | The display cache type. 
+| maxDisplayCacheAge | double | The maximum display cache age. 
+| layerTemplate | [CIMLayerTemplate](CIMLayer.md#cimlayertemplate) | The layer template. 
+| popupInfo | [CIMPopupInfo](CIMPopup.md#cimpopupinfo) | The pop-up info. 
+| showPopups | boolean | A value indicating whether or not to show pop-ups. 
+| serviceLayerID | long | Identifier that will be used to identify the layer in server. 
+| charts | [[CIMChart]](CIMCharts.md#cimchart) | Identifier the layer's charts. 
+| searchable | boolean | A value indicating whether or not this layer should be included in the search. This property is honored only by layers that support search. 
+| refreshRate | double | The amount of time to wait between refreshing the layer. 
+| refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
+| showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
+| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
+| allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
+| rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
+| useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
+| visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
+
+
+### CIMENCLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| dataConnection | [CIMENCDataConnection](CIMVectorLayers.md#cimencdataconnection) | The data connection to the ENC resource. 
+| displaySettings | [CIMENCDisplaySettings](CIMVectorLayers.md#cimencdisplaysettings) | The display settings of the ENC layer. 
+
+
+
+
+
+
 ## CIMEditingTemplateRelationship
 #### Represents an editing template relationship. 
 
@@ -904,6 +1170,9 @@
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 | allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
+| rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
+| useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
+| visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -932,6 +1201,7 @@
 | displayFilterChoices | [[CIMDisplayFilter]](CIMVectorLayers.md#cimdisplayfilter) | The current set of display filters. 
 | featureElevationExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression for setting the feature elevation. 
 | featureBlendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The per-feature blending mode which allows features in a layer to blend against other features in the same layer that have already drawn. 
+| featureSortInfos | [[CIMFeatureSortInfo]](CIMVectorLayers.md#cimfeaturesortinfo) | The collection of field names and sort directions used to sort features during draw. 
 
 
 ### CIMGeoFeatureLayerDefinition 
@@ -955,6 +1225,22 @@
 | showPreviousObservations | boolean | A value indicating whether previous observations are being drawn. 
 | featureReduction | [FeatureReduction](Types.md#featurereduction) | The feature reduction technique in use by this layer. 
 | showTracks | boolean | A value indicating whether track lines are being drawn. 
+
+
+
+
+
+
+## CIMFeatureSortInfo
+#### Contains information about the field name and sort order used to draw features. 
+
+
+### CIMFeatureSortInfo 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| fieldName | string | The name of the Field. 
+| sortDirection | [enumeration SortOrderType](CIMLayer.md#enumeration-sortordertype) | A value indicating the sort direction. 
 
 
 
@@ -1002,6 +1288,122 @@
 | searchOrder | [enumeration esriSearchOrder](ExternalReferences.md#enumeration-esrisearchorder) | The search order option. 
 | isLicensedDataSource | boolean | A value indicating whether the data source is licensed. 
 | definitionSetURI | string | The DefinitionSet for the table. 
+
+
+
+
+
+
+## CIMFeatureTrajectorySubLayer
+#### Represents the trajectory feature sublayer. 
+
+
+### CIMDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name. 
+| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
+| metadataURI | string | The metadata URI. 
+| useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
+
+
+### CIMLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| attribution | string | The attribution text that appears on a map that draws this layer. 
+| description | string | The description. 
+| layerElevation | [CIMLayerElevationSurface](CIMLayer.md#cimlayerelevationsurface) | The layer elevation. 
+| expanded | boolean | A value indicating whether this layer is expanded in the contents pane. 
+| layer3DProperties | [CIM3DLayerProperties](CIMLayer.md#cim3dlayerproperties) | The 3D layer properties. 
+| layerMasks | [string] | The URIs of the layers used as masks. 
+| layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
+| maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| showLegends | boolean | A value indicating whether or not to show legends. 
+| transparency | double | The transparency of the layer. 
+| visibility | boolean | A value indicating whether or not this layer is visible. 
+| displayCacheType | [enumeration DisplayCacheType](CIMLayer.md#enumeration-displaycachetype) | The display cache type. 
+| maxDisplayCacheAge | double | The maximum display cache age. 
+| layerTemplate | [CIMLayerTemplate](CIMLayer.md#cimlayertemplate) | The layer template. 
+| popupInfo | [CIMPopupInfo](CIMPopup.md#cimpopupinfo) | The pop-up info. 
+| showPopups | boolean | A value indicating whether or not to show pop-ups. 
+| serviceLayerID | long | Identifier that will be used to identify the layer in server. 
+| charts | [[CIMChart]](CIMCharts.md#cimchart) | Identifier the layer's charts. 
+| searchable | boolean | A value indicating whether or not this layer should be included in the search. This property is honored only by layers that support search. 
+| refreshRate | double | The amount of time to wait between refreshing the layer. 
+| refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
+| showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
+| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
+| allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
+| rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
+| useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
+| visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
+
+
+### CIMFeatureLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| autoGenerateFeatureTemplates | boolean | A value indicating whether to automatically generate feature templates from the renderer. 
+| extrusion | [CIMFeatureExtrusion](CIMVectorLayers.md#cimfeatureextrusion) | The feature extrusion. 
+| featureElevationExpression | string | The feature elevation expression. 
+| featureTable | [CIMFeatureTable](CIMVectorLayers.md#cimfeaturetable) | The feature table. 
+| featureTemplates | [[CIMEditingTemplate]](Types.md#editingtemplate) | The feature templates. 
+| htmlPopupEnabled | boolean | A value indicating whether HTML pop-ups are enabled. 
+| htmlPopupFormat | [CIMHtmlPopupFormat](CIMVectorLayers.md#cimhtmlpopupformat) | The HTML pop-ups format. 
+| isFlattened | boolean | A value indicating whether the layer is flattened. 
+| selectable | boolean | A value indicating whether the layer is selectable. 
+| selectionColor | [Color](Types.md#color) | The selection color. For polygons, this is used as the outline color. 
+| polygonSelectionFillColor | [Color](Types.md#color) | The selection fill color. Only used for polygons. 
+| selectionSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The selection symbol. 
+| useSelectionSymbol | boolean | A value indicating whether to use the selection symbol. 
+| pageDefinition | [CIMPageDefinition](CIMVectorLayers.md#cimpagedefinition) | The page definition which allows for using current map series page to filter features. 
+| featureCacheType | [enumeration FeatureCacheType](CIMVectorLayers.md#enumeration-featurecachetype) | The feature cache type. 
+| enableDisplayFilters | boolean | A value indicating whether the current set of display filters are honored during drawing. 
+| displayFilters | [[CIMDisplayFilter]](CIMVectorLayers.md#cimdisplayfilter) | The current set of scale based display filters. 
+| displayFiltersType | [enumeration DisplayFilterType](CIMVectorLayers.md#enumeration-displayfiltertype) | DisplayFiltersType value. 
+| displayFilterName | string | The active display filter. 
+| displayFilterChoices | [[CIMDisplayFilter]](CIMVectorLayers.md#cimdisplayfilter) | The current set of display filters. 
+| featureElevationExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression for setting the feature elevation. 
+| featureBlendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The per-feature blending mode which allows features in a layer to blend against other features in the same layer that have already drawn. 
+| featureSortInfos | [[CIMFeatureSortInfo]](CIMVectorLayers.md#cimfeaturesortinfo) | The collection of field names and sort directions used to sort features during draw. 
+
+
+### CIMGeoFeatureLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| actions | [[CIMLayerAction]](CIMVectorLayers.md#cimlayeraction) | The layer actions. 
+| exclusionSet | [long long] | The set of excluded features. 
+| featureMasks | [[CIMDataConnection]](Types.md#dataconnection) | The data connection of the masking data. 
+| labelClasses | [[CIMLabelClass]](CIMLabelPlacement.md#cimlabelclass) | The collection of label class definitions. 
+| labelVisibility | boolean | A value indicating whether to display labels for this layer's label classes. 
+| maskedSymbolLayers | [[CIMSymbolLayerMasking]](CIMVectorLayers.md#cimsymbollayermasking) | The masked symbol layers. Each SymbolLayerMasking gives the symbol layers that are masked by that masking layer. 
+| renderer | [Renderer](Types.md#renderer) | The primary symbol renderer. 
+| scaleSymbols | boolean | A value indicating whether to scale the symbols in this layer based on the map's reference scale. 
+| snappable | boolean | A value indicating whether this layer participates in snapping in the editor. 
+| symbolLayerDrawing | [CIMSymbolLayerDrawing](CIMLayer.md#cimsymbollayerdrawing) | The symbol layer drawing properties. 
+| trackLinesRenderer | [Renderer](Types.md#renderer) | The track renderer when displaying tracks. 
+| previousObservationsRenderer | [Renderer](Types.md#renderer) | The previous observations renderer. 
+| previousObservationsCount | long | The previous observation count. 
+| useRealWorldSymbolSizes | boolean | A value indicating whether to use real world symbols sizes (meters) vs. points. This value should always be in sync with the UseRealWorldSymbolSizes property at the symbol level. 
+| showPreviousObservations | boolean | A value indicating whether previous observations are being drawn. 
+| featureReduction | [FeatureReduction](Types.md#featurereduction) | The feature reduction technique in use by this layer. 
+| showTracks | boolean | A value indicating whether track lines are being drawn. 
+
+
+### CIMTrajectorySubLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| trajectorySubLayerType | [enumeration TrajectorySubLayerType](CIMVectorLayers.md#enumeration-trajectorysublayertype) | The trajectory sublayer type. 
 
 
 
@@ -1232,6 +1634,7 @@
 | layerURI | string | The URI of the layer this range is defined for. 
 | rangeName | string | The range name. 
 | currentRange | [CIMRange](CIMVectorLayers.md#cimrange) | The current range. 
+| currentRangeRelation | [enumeration RangeRelation](CIMEnumerations.md#enumeration-rangerelation) | The current range relation. 
 | isExclusion | boolean | A value indicating whether or not this is an exclusion range. 
 
 
@@ -1476,6 +1879,9 @@
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 | allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
+| rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
+| useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
+| visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 
 
 ### CIMParcelFabricLayerDefinition 
@@ -1548,6 +1954,9 @@
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 | allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
+| rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
+| useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
+| visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 
 
 ### CIMParcelLayerDefinition 
@@ -1587,8 +1996,10 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| fieldName | string | The field name. 
+| fieldName | string | The field name. Used as the start field name when an end field name is set. 
+| endFieldName | string | The end field name. 
 | currentRange | [CIMRange](CIMVectorLayers.md#cimrange) | The current range. 
+| currentRangeRelation | [enumeration RangeRelation](CIMEnumerations.md#enumeration-rangerelation) | The current range relation. 
 | customFullExtent | [CIMRange](CIMVectorLayers.md#cimrange) | The custom full extent. 
 | isExclusion | boolean | A value indicating whether or not range is exclusion. 
 | aliasExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | ExpressionInfo that contains the Arcade expression that returns a string representing range alias value. 
@@ -1790,6 +2201,160 @@
 
 
 
+### Enumeration: S52AreaSymbolizationType
+#### ENC area symbolization type. This is used to specify whether areas should be symbolized with plain or traditional symbols. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Plain| 0| Use plain symbols. 
+| Symbolized| 1| Use traditional symbols. 
+
+
+
+### Enumeration: S52ColorScheme
+#### ENC Color Schemes. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Day| 0| Day. 
+| Dusk| 1| Dusk. 
+| Night| 2| Night. 
+
+
+
+### Enumeration: S52DepthDisplayUnits
+#### ENC Depth Display Units. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Meters| 0| Meters. 
+| Feet| 1| Feet. 
+| Fathoms| 2| Fathoms. 
+
+
+
+
+## CIMS52DisplaySettings
+#### Represents S-52 display settings. 
+
+
+### CIMENCDisplaySettings 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMS52DisplaySettings 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| marinerSettings | [CIMS52MarinerSettings](CIMVectorLayers.md#cims52marinersettings) | The S-52 display properties for the layer. 
+| textGroupVisibilitySettings | [CIMS52TextGroupVisibilitySettings](CIMVectorLayers.md#cims52textgroupvisibilitysettings) | The S-52 text group properties for the layer. 
+| viewingGroupSettings | [CIMS52ViewingGroupSettings](CIMVectorLayers.md#cims52viewinggroupsettings) | The S-52 view group properties for the layer. 
+
+
+
+
+
+
+## CIMS52MarinerSettings
+#### Represents S-52 mariner settings object for controlling the drawing of ENC layers. 
+
+
+### CIMS52MarinerSettings 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| areaSymbolizationType | [enumeration S52AreaSymbolizationType](CIMVectorLayers.md#enumeration-s52areasymbolizationtype) | The area symbolization type. This controls the line symbol style for area boundaries. 
+| colorScheme | [enumeration S52ColorScheme](CIMVectorLayers.md#enumeration-s52colorscheme) | The color scheme. 
+| showDataQuality | boolean | A value indicating whether to display data quality (M_QUAL) for S-57 features. 
+| deepContour | double | The deep water contour depth in meters. This must be greater than or equal to the safety contour value. When four(rather than two) depth shades are used, this controls the boundary between safe and deep areas. 
+| showDisplayBase | boolean | A value indicating whether the S-52 "displaybase" display category is enabled. 
+| showOtherDisplay | boolean | A value indicating whether the S-52 "other" display category is enabled. 
+| showStandardDisplay | boolean | A value indicating whether the S-52 "standard" display category is enabled. 
+| depthDisplayUnits | [enumeration S52DepthDisplayUnits](CIMVectorLayers.md#enumeration-s52depthdisplayunits) | The depth units (meters/feet/fathoms) for display. 
+| showNOBJNM | boolean | A value indicating whether to display the national name attribute on S-57 features. This is text group 31 per IHO S-52 Annex A. 
+| honorSCAMIN | boolean | A value indicating whether the 'SCAMIN' (scale min) S-57 feature attribute will be used. If disabled, all ENC features will be rendered regardless of scale. 
+| showIsolatedDangers | boolean | A value indicating whether to display isolated dangers in shallow water. This is viewing group 24020, 24050 per IHO 2-52 Annex A. 
+| labelContours | boolean | A value indicating whether to display the depth contour labels, including safety contour labels. This is viewing group 33021, 33022 per IHO S-52 Annex A. 
+| labelSafetyContours | boolean | A value indicating whether to display the safety contour labels. 
+| showLowAccuracy | boolean | A value indicating whether to use low accuracy symbols (CATZOC). This is viewing group 31010 per IHO S-52 Annex A. When low accuracy is set to false, low accuracy data will be visually indistinguishable from other data. 
+| pointSymbolizationType | [enumeration S52PointSymbolizationType](CIMVectorLayers.md#enumeration-s52pointsymbolizationtype) | The S-52 point feature symbolization type (simplified/paperchart). Paperchart symbolization is based on traditional paper charts. Simplified symbols are more compact and visible. 
+| safetyContour | double | The depth of the safety contour in meters. 
+| shallowContour | double | The depth of the shallow contour in meters. This must be less than or equal to the safety contour value. When four(rather than two) depth shades are used, this value controls the separation between shallow and unsafe areas. 
+| showShallowDepthPattern | boolean | A value indicating whether the shallow depth pattern will be symbolized. 
+| showTwoDepthShades | boolean | A value indicating whether two or four depth shades will be used; two is the default. 
+
+
+
+
+
+### Enumeration: S52PointSymbolizationType
+#### ENC point symbolization options. This is used to specify whether point features should be symbolized with simplified or paperchart symbols. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| PaperChart| 0| Paper chart symbols which are based on traditional paper charts. 
+| Simplified| 1| Simplified symbols which are more compact and visible. 
+
+
+
+
+## CIMS52TextGroupVisibilitySettings
+#### Represents S-52 text group settings. 
+
+
+### CIMS52TextGroupVisibilitySettings 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| showBerthNumber | boolean | A value indicating whether the "berth number" text group should be visible. Per IHO S-52 Annex A, controls text group 29, which includes OBJNAM from BERTHS and ACHBRT. 
+| showCurrentVelocity | boolean | A value indicating whether the "current velocity" text group should be visible. Per IHO S-52 Annex A, controls text group 30, which includes CURVEL. 
+| showGeographicNames | boolean | A value indicating whether the "geographic names" text group should be visible. Per IHO S-52 Annex A, controls text group 26, which includes OBJNAM from ACHARE, BRIDGE, BUAARE, BUISGL, DOCARE, FAIRWY, LNDARE, LNDMARK, LNDRGN, SEAARE, TIDEWY, and PILBOP. 
+| showHeightOfIsletOrLandFeature | boolean | A value indicating whether the "height of islet or land feature" text group should be visible. Per IHO S-52 Annex A, controls text group 28, which includes HEIGHT of LNDARE. 
+| showImportantText | boolean | A value indicating whether the "important text" text group should be visible. Per IHO S-52 Annex A, controls text groups 10 and 11. 
+| showLightDescription | boolean | A value indicating whether the "light descriptions" text group should be visible. Per IHO S-52 Annex A, controls text group 23. 
+| showMagneticVariationAndSweptDepth | boolean | A value indicating whether the "magnetic variation and swept depth" text group should be visible. Per IHO S-52 Annex A, controls text group 27, which includes MAGVAR, VALMAG, SWPARE, and DRVAL1. 
+| showNamesForPositionReporting | boolean | A value indicating whether the "names for position reporting" text group should be visible. Per IHO S-52 Annex A, controls text group 21. 
+| showNatureOfSeabed | boolean | A value indicating whether the "nature of seabed" text group should be visible. Per IHO S-52 Annex A, controls text group 25, which includes SBDARE and NATSUR. 
+| showNoteOnChartData | boolean | A value indicating whether the "note on chart data" text group should be visible. Per IHO S-52 Annex A, controls text group 24. 
+
+
+
+
+
+
+## CIMS52ViewingGroupSettings
+#### Represents S-52 viewing group properties object. 
+
+
+### CIMS52ViewingGroupSettings 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| showAllIsolatedDangers | boolean | // Viewing Group settings a value indicating whether the "all isolated dangers" viewing group is enabled. Per IHO S-52 Annex A, controls viewing group layer 13, which includes viewing groups 34050 and 34051. 
+| showArchipelagicSeaLanes | boolean | A value indicating whether the "archipelagic sea lanes" viewing group is enabled. Per IHO S-52 Annex A, controls viewing group layer 9, which includes viewing group 26260. 
+| showBoundariesAndLimits | boolean | A value indicating whether the "boundaries and limits" viewing group is enabled. Per IHO S-52 Annex A, controls viewing group layer 4, which includes viewing groups 23030, 26050, 26220, 26240, and 26250. 
+| showBuoysBeaconsAidsToNavigation | boolean | A value indicating whether the "buoys, beacons, aids to navigation" viewing group is enabled. Per IHO S-52 Annex A, controls viewing group layer 3, which includes viewing groups 21020, 22200 ? 22240, 27000, 27010, 27011, 27020, 27025, 27040, 27050, 27070, 27080, 27200, 27210, 27230, 27030, and 27060. 
+| showBuoysBeaconsStructures | boolean | A value indicating whether the "buoys, beacons, structures" viewing group is enabled. Per IHO S-52 Annex A, controls viewing group layer 3.1, which includes viewing groups 21010, 21020, 22200 - 22240, 27000-27050, 27080, 27200 ? 27230, 27030, and 27060. 
+| showChartScaleBoundaries | boolean | A value indicating whether the "chart scale boundaries" viewing group is enabled. Per IHO S-52 Annex A, controls viewing group layer 6, which includes viewing group 21030. 
+| showDepthContours | boolean | A value indicating whether the "depth contours" viewing group is enabled. Per IHO S-52 Annex A, controls viewing group layer 15, which includes viewing group 33020. 
+| showDryingLine | boolean | A value indicating whether the "drying line" viewing group is enabled. Per IHO S-52 Annex A, controls viewing group layer 2, which includes viewing group 22010. 
+| showLights | boolean | A value indicating whether the "lights" viewing group is enabled. Per IHO S-52 Annex A, controls viewing group layer 3.2, which includes viewing group 27070. 
+| showMagneticVariation | boolean | A value indicating whether the "magnetic variation" viewing group is enabled. Per IHO S-52 Annex A, controls viewing group layer 14, which includes viewing group 31080. 
+| showOtherMiscellaneous | boolean | A value indicating whether the "other miscellaneous" viewing group is enabled. Per IHO S-52 Annex A, controls viewing group layer 18, which includes viewing group 30000-39999. 
+| showProhibitedAndRestrictedAreas | boolean | A value indicating whether the "prohibited and restricted areas" viewing group is enabled. Per IHO S-52 Annex A, controls viewing group layer 5, which includes viewing groups 2600, 26010, and 26040. 
+| showSeabed | boolean | A value indicating whether the "seabed" viewing group is enabled. Per IHO S-52 Annex A, controls viewing group layer 16, which includes viewing groups 34010, 34020, and 33040. 
+| showShipsRoutingSystemsAndFerryRoutes | boolean | A value indicating whether the "ships' routing systems and ferry routes" viewing group is enabled. Per IHO S-52 Annex A, controls viewing group layer 8, which includes viewing groups 25010-25060. 
+| showSpotSoundings | boolean | A value indicating whether the "spot soundings" viewing group is enabled. Per IHO S-52 Annex A, controls viewing group layer 11, which includes viewing group 33010. 
+| showStandardMiscellaneous | boolean | A value indicating whether the "standard miscellaneous" viewing group is enabled. Per IHO S-52 Annex A, controls viewing group layer 10 under the "standard display" viewing group, which includes all objects not covered by viewing groups 20000-29999. 
+| showSubmarineCablesAndPipelines | boolean | A value indicating whether the "submarine cables and pipelines" viewing group is enabled. Per IHO S-52 Annex A, controls viewing group layer 12, which includes viewing groups 34030 and 34070. 
+| showTidal | boolean | A value indicating whether the "tidal" viewing group is enabled. Per IHO S-52 Annex A, controls viewing group layer 17, which includes viewing groups 33050 and 33060. 
+
+
+
+
+
 
 ## CIMSqlQueryDataConnection
 #### Represents a SQL query data connection. 
@@ -1894,6 +2459,8 @@
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the standalone table. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 | webMapTableID | string | An identifier that will be used to identify the standalone table in a web map. This value is present if the standalone table originated in a web map and facilitates matching the standalone table back to its origin when updating the web map. 
 | searchable | boolean | A value indicating whether or not this table should be included in the search. This property is honored only by tables that support search. 
+| useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the table to be visible. 
+| visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 
 
 
@@ -2014,6 +2581,9 @@
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 | allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
+| rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
+| useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
+| visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -2042,6 +2612,7 @@
 | displayFilterChoices | [[CIMDisplayFilter]](CIMVectorLayers.md#cimdisplayfilter) | The current set of display filters. 
 | featureElevationExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression for setting the feature elevation. 
 | featureBlendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The per-feature blending mode which allows features in a layer to blend against other features in the same layer that have already drawn. 
+| featureSortInfos | [[CIMFeatureSortInfo]](CIMVectorLayers.md#cimfeaturesortinfo) | The collection of field names and sort directions used to sort features during draw. 
 
 
 ### CIMSubtypeGroupLayerDefinition 
@@ -2327,6 +2898,82 @@
 
 
 
+## CIMTrajectoryLayer
+#### Represents a trajectory layer corresponding to a trajectory dataset. 
+
+
+### CIMDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name. 
+| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
+| metadataURI | string | The metadata URI. 
+| useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
+
+
+### CIMLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| attribution | string | The attribution text that appears on a map that draws this layer. 
+| description | string | The description. 
+| layerElevation | [CIMLayerElevationSurface](CIMLayer.md#cimlayerelevationsurface) | The layer elevation. 
+| expanded | boolean | A value indicating whether this layer is expanded in the contents pane. 
+| layer3DProperties | [CIM3DLayerProperties](CIMLayer.md#cim3dlayerproperties) | The 3D layer properties. 
+| layerMasks | [string] | The URIs of the layers used as masks. 
+| layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
+| maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| showLegends | boolean | A value indicating whether or not to show legends. 
+| transparency | double | The transparency of the layer. 
+| visibility | boolean | A value indicating whether or not this layer is visible. 
+| displayCacheType | [enumeration DisplayCacheType](CIMLayer.md#enumeration-displaycachetype) | The display cache type. 
+| maxDisplayCacheAge | double | The maximum display cache age. 
+| layerTemplate | [CIMLayerTemplate](CIMLayer.md#cimlayertemplate) | The layer template. 
+| popupInfo | [CIMPopupInfo](CIMPopup.md#cimpopupinfo) | The pop-up info. 
+| showPopups | boolean | A value indicating whether or not to show pop-ups. 
+| serviceLayerID | long | Identifier that will be used to identify the layer in server. 
+| charts | [[CIMChart]](CIMCharts.md#cimchart) | Identifier the layer's charts. 
+| searchable | boolean | A value indicating whether or not this layer should be included in the search. This property is honored only by layers that support search. 
+| refreshRate | double | The amount of time to wait between refreshing the layer. 
+| refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
+| showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
+| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
+| allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
+| rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
+| useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
+| visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
+
+
+### CIMTrajectoryLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| footprintLayer | string | The path of the footprint feature layer. 
+| pointLayer | string | The path of the point feature layer. 
+| trajectoryDatasetConnection | [DataConnection](Types.md#dataconnection) | The data connection of the trajectory dataset. 
+
+
+
+
+
+### Enumeration: TrajectorySubLayerType
+#### Types of trajectory sublayers. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Footprint| 0| Footprint sublayer. 
+| Point| 1| Point sublayer. 
+
+
+
+
 ## CIMVectorTileDataConnection
 #### Represents a VectorTile layer data connection. 
 
@@ -2404,6 +3051,9 @@
 | webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
 | allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
+| rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
+| useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
+| visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 
 
 ### CIMVectorTileLayerDefinition 

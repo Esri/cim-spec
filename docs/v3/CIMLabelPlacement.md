@@ -93,6 +93,16 @@
 
 
 
+### Enumeration: MaplexCenterLabelAnchorType
+#### Options to determine how to place a centered point label. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Symbol| 0| Use the center of the symbol 
+| FeatureGeometry| 1| Use the center of the geometry 
+
+
+
 ### Enumeration: MaplexConnectionType
 #### Maplex connection types. 
 
@@ -359,6 +369,7 @@
 | canStackLabel | boolean | A value indicating whether to stack the label to obtain a better position. 
 | canTruncateLabel | boolean | A value indicating whether to truncate the label using an algorithm. 
 | canUseAlternateLabelExpression | boolean | A value indicating whether an alternate label expression is allowed to be used. 
+| centerLabelAnchorType | [enumeration MaplexCenterLabelAnchorType](CIMLabelPlacement.md#enumeration-maplexcenterlabelanchortype) | Options to determine where to anchor a centered point label. 
 | connectionType | [enumeration MaplexConnectionType](CIMLabelPlacement.md#enumeration-maplexconnectiontype) | The options for connecting line features. 
 | constrainOffset | [enumeration MaplexConstrainOffset](CIMLabelPlacement.md#enumeration-maplexconstrainoffset) | The label constraint options. 
 | contourAlignmentType | [enumeration MaplexContourAlignmentType](CIMLabelPlacement.md#enumeration-maplexcontouralignmenttype) | The options for the contour label alignment. 
@@ -413,6 +424,7 @@
 | preferredEndOfStreetClearance | double | The preferred clearance between street label and street end. 
 | primaryOffset | double | The primary offset between label and symbol. 
 | primaryOffsetUnit | [enumeration MaplexUnit](CIMLabelPlacement.md#enumeration-maplexunit) | The unit of the primary offset. 
+| removeAmbiguousLabels | [enumeration MaplexRemoveAmbiguousLabelsType](CIMLabelPlacement.md#enumeration-maplexremoveambiguouslabelstype) | The method to determine when to remove ambiguous labels. 
 | removeExtraLineBreaks | boolean | A value indicating whether extra line breaks are removed from the label text. 
 | removeExtraWhiteSpace | boolean | A value indicating whether extra white space characters are removed from the label text. 
 | repeatLabel | boolean | A value indicating whether to enable the repetition of label along line feature. 
@@ -421,6 +433,7 @@
 | secondaryOffset | double | The secondary offset between label and symbol. 
 | secondaryOffsetMaximum | double | The secondary offset maximum. 
 | secondaryOffsetMinimum | double | The secondary offset minimum. 
+| secondaryOffsetUnit | [enumeration MaplexUnit](CIMLabelPlacement.md#enumeration-maplexunit) | The unit of the secondary offset. 
 | spreadCharacters | boolean | A value indicating whether to spread label characters along line features. 
 | spreadWords | boolean | A value indicating whether to whether to spread words along line features. 
 | strategyPriorities | [CIMMaplexStrategyPriorities](CIMLabelPlacement.md#cimmaplexstrategypriorities) | The priority of a placement strategy when placing text. 
@@ -596,6 +609,17 @@
 | Low| 0| Draft quality. 
 | Medium| 1| Fast quality. 
 | High| 2| Best quality. 
+
+
+
+### Enumeration: MaplexRemoveAmbiguousLabelsType
+#### Options that describe when to remove ambiguous labels. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| All| 0| Remove all ambiguous labels. 
+| WithinLabelClass| 1| Remove ambiguous labels within the current label class only. 
+| None| 2| Do not remove ambiguous labels. 
 
 
 

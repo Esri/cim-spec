@@ -146,7 +146,8 @@
 | zoomPercent | long | The zoom level of the summary statistics table. 
 | layoutType | [enumeration DataEngineeringViewLayoutType](CIMDataEngineeringView.md#enumeration-dataengineeringviewlayouttype) | The view layout style. 
 | columns | [[CIMDataEngineeringStatisticColumn]](CIMDataEngineeringView.md#cimdataengineeringstatisticcolumn) | The properties of statistics to display in the summary statistic view. 
-| fieldTypeFilter | [enumeration ArrayOfFieldType](ExternalReferences.md#enumeration-arrayoffieldtype) | The list of field type filters. 
+| fieldTypeFilter | [enumeration ArrayOfFieldType](ExternalReferences.md#enumeration-arrayoffieldtype) | The list of field type filters. Deprecated at 3.1. Use FieldTypeFilters instead. 
+| fieldTypeFilters | [enumeration ArrayOfFieldType](ExternalReferences.md#enumeration-arrayoffieldtype) | The list of field type filters. 
 | fieldStatistics | [[CIMDataEngineeringFieldStatistics]](CIMDataEngineeringView.md#cimdataengineeringfieldstatistics) | A collection of field statistics. 
 | displayNumericStatistics | boolean | A value indicating whether to show numeric statistics in the table. 
 | displayDateTimeStatistics | boolean | A value indicating whether to show date statistics in the table. 
