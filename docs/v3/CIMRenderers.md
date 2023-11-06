@@ -139,6 +139,7 @@
 | showSizeLegend | boolean | A value indicating whether or not to show a legend group illustrating the chart's size. 
 | sizeLegendOutlineColor | [Color](Types.md#color) | The color of the outline for the size legend group. 
 | sizeLegendLeaderlineColor | [Color](Types.md#color) | The color of the leader line for the size legend group. 
+| drawChartSymbolsAboveAllLayers | boolean | A value indicating whether or not to draw chart symbols for line or polygon features above all layers. This option applies when drawing charts for line or polygon layer. The background will be drawn in contents order and this option indicates if the charts should be drawn in contents order or above all other layers. 
 
 
 ### CIMDataExclusion 
@@ -188,6 +189,16 @@
 
 
 
+### Enumeration: ClassBreaksLegendVisualVariableOptions
+#### Legend display options for class breaks visual variables. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| ShowVisualVariableSymbolClasses| 0| Show classes separately from the primary symbols. 
+| ShowClassesForEachPrimarySymbol| 1| Show classes for each primary symbol. 
+
+
+
 
 ## CIMClassBreaksRenderer
 #### Represents a class break renderer. 
@@ -204,25 +215,32 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | backgroundSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The background symbol used for graduated symbols. 
-| barrierWeight | [enumeration BarrierWeight](CIMVectorLayers.md#enumeration-barrierweight) | The barrier weight used for graduate symbols to avoid labels. 
-| breaks | [[CIMClassBreak]](CIMRenderers.md#cimclassbreak) | The class breaks. 
+| barrierWeight | [enumeration BarrierWeight](CIMVectorLayers.md#enumeration-barrierweight) | The barrier weight used for graduated symbols to avoid labels. 
 | classBreakType | [enumeration ClassBreakType](CIMRenderers.md#enumeration-classbreaktype) | The class break type. 
-| classificationMethod | [enumeration ClassificationMethod](CIMRenderers.md#enumeration-classificationmethod) | The classification method. 
 | colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp. 
 | field | string | The field for rendering. 
-| minimumBreak | double | The minimum break for the renderer. 
 | numberFormat | [NumberFormat](Types.md#numberformat) | The number format. 
+| heading | string | The heading. 
+| minimumLabel | string | The minimum label. 
+| valueExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | ExpressionInfo that contains the Arcade expression that returns value as a number. When both Fields and ValueExpressionInfo are present ValueExpressionInfo is used. 
+| polygonSymbolColorTarget | [enumeration PolygonSymbolColorTarget](CIMRenderers.md#enumeration-polygonsymbolcolortarget) | The property that controls how the color ramp is applied to polygon symbols. 
+| drawGraduatedSymbolsAboveAllLayers | boolean | A value indicating whether or not to draw graduated symbols for polygon features above all layers. This option applies when drawing graduated symbols for polygon layers. The background will be drawn in contents order and this option indicates if the graduated symbols should be drawn in contents order or above all other layers. 
+
+
+### CIMClassBreaksProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| classificationMethod | [enumeration ClassificationMethod](CIMRenderers.md#enumeration-classificationmethod) | The classification method. 
+| breaks | [[CIMClassBreak]](CIMRenderers.md#cimclassbreak) | The class breaks. 
+| minimumBreak | double | The minimum break. 
 | showClassGaps | boolean | A value indicating whether or not to show class gaps. 
 | showInAscendingOrder | boolean | A value indicating whether or not to show classes in ascending order. 
-| heading | string | The heading. 
 | useDefaultSymbol | boolean | A value indicating whether or not to use the default symbol. 
 | defaultSymbolPatch | [enumeration PatchShape](CIMRenderers.md#enumeration-patchshape) | The patch shape for the default symbol. 
 | defaultSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The default symbol. 
-| minimumLabel | string | The minimum label. 
 | defaultLabel | string | The default label. 
 | defaultDescription | string | The default description. 
-| valueExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | ExpressionInfo that contains the Arcade expression that returns value as a number. When both Fields and ValueExpressionInfo are present ValueExpressionInfo is used. 
-| polygonSymbolColorTarget | [enumeration PolygonSymbolColorTarget](CIMRenderers.md#enumeration-polygonsymbolcolortarget) | The property that controls how the color ramp is applied to polygon symbols. 
 
 
 ### CIMDataSampling 
@@ -275,6 +293,76 @@
 | NaturalBreaks| 4| Natural breaks. 
 | Quantile| 5| Quantile. 
 | StandardDeviation| 6| Standard deviation. 
+
+
+
+### Enumeration: ColorChannelTarget
+#### Indicates the target color channel overridden by the class breaks color visual variable. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| SV| 0| S and V channels of the HSV color model. 
+| All| 1| All channels. 
+
+
+
+
+## CIMColorClassBreaksVisualVariable
+#### Represents a classified color visual variable. 
+
+
+### CIMVisualVariable 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| authoringInfo | [CIMVisualVariableAuthoringInfo](CIMRenderers.md#cimvisualvariableauthoringinfo) | The authoring info. 
+
+
+### CIMColorVisualVariable 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| expression | string | Expression. This property is used for Python or VBScript expressions. Arcade expressions will use the ValueExpressionInfo property. 
+| minValue | double | The minimum value. 
+| maxValue | double | The maximum value. 
+| colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp. 
+| normalizationField | string | The normalization field. 
+| normalizationType | [enumeration DataNormalizationMethod](CIMRenderers.md#enumeration-datanormalizationmethod) | The data normalization method. 
+| valueExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | ExpressionInfo that contains the Arcade expression that returns value as a number. 
+| polygonSymbolColorTarget | [enumeration PolygonSymbolColorTarget](CIMRenderers.md#enumeration-polygonsymbolcolortarget) | The property that controls how the color ramp is applied to polygon symbols. 
+
+
+### CIMClassBreaksProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| classificationMethod | [enumeration ClassificationMethod](CIMRenderers.md#enumeration-classificationmethod) | The classification method. 
+| breaks | [[CIMClassBreak]](CIMRenderers.md#cimclassbreak) | The class breaks. 
+| minimumBreak | double | The minimum break. 
+| showClassGaps | boolean | A value indicating whether or not to show class gaps. 
+| showInAscendingOrder | boolean | A value indicating whether or not to show classes in ascending order. 
+| useDefaultSymbol | boolean | A value indicating whether or not to use the default symbol. 
+| defaultSymbolPatch | [enumeration PatchShape](CIMRenderers.md#enumeration-patchshape) | The patch shape for the default symbol. 
+| defaultSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The default symbol. 
+| defaultLabel | string | The default label. 
+| defaultDescription | string | The default description. 
+
+
+### CIMColorClassBreaksVisualVariable 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| colorChannelTarget | [enumeration ColorChannelTarget](CIMRenderers.md#enumeration-colorchanneltarget) | A value indicating which channels of the color model will be overridden by the visual variable. 
+
+
+### CIMClassBreaksVisualVariable 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| classBreaksLegendVisualVariableOptions | [enumeration ClassBreaksLegendVisualVariableOptions](CIMRenderers.md#enumeration-classbreakslegendvisualvariableoptions) | The legend display options. 
+| useClassBreaks | boolean | A value indicating whether or not to use class breaks. 
+
+
 
 
 
@@ -458,6 +546,7 @@
 | pixelIntensityStops | [double] | The pixel intensity stops. 
 | autoAdjustPixelIntensity | boolean | A value indicating whether to update renderers pixel intensity range automatically. When set to True renderer's pixel intensity range will change based on the features with in the visible extent. 
 | maxPixelIntensityReferenceScale | double | Base scale at which the maximum pixel intensity should be used. This value is used only when the auto adjust pixel intensity is set to false. 
+| referenceScale | double | The scale at which the search radius (in screen units - points) is converted to map units. 
 
 
 
@@ -525,6 +614,7 @@
 | AreaSquare| 21| A square polygon. 
 | AreaHexagonFlat| 22| A flat hexagon. 
 | AreaHexagonPointy| 23| A pointy hexagon. 
+| AreaTrapezium| 24| A trapezium. 
 
 
 
@@ -630,7 +720,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | backgroundSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | Background symbol features are drawn with underneath the proportional symbols. 
-| barrierWeight | [enumeration BarrierWeight](CIMVectorLayers.md#enumeration-barrierweight) | The barrier weight used for graduate symbols to avoid labels. 
+| barrierWeight | [enumeration BarrierWeight](CIMVectorLayers.md#enumeration-barrierweight) | The barrier weight used for graduated symbols to avoid labels. 
 | field | string | The field the renderer is using. 
 | flanneryCompensation | boolean | A value indicating whether or not to use Flannery compensation. 
 | legendSymbolCount | long | The legend symbol count. 
@@ -646,6 +736,7 @@
 | defaultDescription | string | The default description. 
 | showInAscendingOrder | boolean | A value indicating whether or not to show classes in ascending order. 
 | valueExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | ExpressionInfo that contains the Arcade expression that returns value as a number. When both Fields and ValueExpressionInfo are present ValueExpressionInfo is used. 
+| drawProportionalSymbolsAboveAllLayers | boolean | A value indicating whether or not to draw proportional symbols for polygon features above all layers. This option applies when drawing proportional symbols for polygon layers. The background will be drawn in contents order and this option indicates if the propoertional symbols should be drawn in contents order or above all other layers. 
 
 
 
@@ -770,6 +861,77 @@
 | patch | [enumeration PatchShape](CIMRenderers.md#enumeration-patchshape) | The patch. 
 | symbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol. 
 | alternateSymbols | [[CIMSymbolReference]](CIMRenderers.md#cimsymbolreference) | An array of symbol references that are intended to be used at specific scale ranges. 
+
+
+
+
+
+
+## CIMSizeClassBreaksVisualVariable
+#### Represents a classified size visual variable. 
+
+
+### CIMVisualVariable 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| authoringInfo | [CIMVisualVariableAuthoringInfo](CIMRenderers.md#cimvisualvariableauthoringinfo) | The authoring info. 
+
+
+### CIMSizeVisualVariable 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| expression | string | The expression. This property is used for Python or VBScript expressions. Arcade expressions will use the ValueExpressionInfo property. 
+| randomMin | double | The random minimum. 
+| randomMax | double | The random maximum. 
+| minSize | double | The minimum size. 
+| maxSize | double | The maximum size. 
+| minValue | double | The minimum value. 
+| maxValue | double | The maximum value. 
+| valueUnits | [LinearUnit](ExternalReferences.md#linearunit) | The size visual variable type. 
+| valueRepresentation | [enumeration ValueRepresentations](CIMRenderers.md#enumeration-valuerepresentations) | The value representations. 
+| variableType | [enumeration SizeVisualVariableType](CIMRenderers.md#enumeration-sizevisualvariabletype) | Size visual variable type. 
+| valueShape | [enumeration SymbolShapes](CIMRenderers.md#enumeration-symbolshapes) | The value shape. 
+| axis | [enumeration SizeVisualVariableAxis](CIMRenderers.md#enumeration-sizevisualvariableaxis) | Size visual variable axis. 
+| target | string | Size visual variable target which specifies the portion of the symbol targeted for sizing. 
+| normalizationField | string | The normalization field. 
+| normalizationType | [enumeration DataNormalizationMethod](CIMRenderers.md#enumeration-datanormalizationmethod) | The data normalization method. 
+| sizeValues | [double] | The size values that correspond to data values. 
+| dataValues | [double] | The data values. 
+| valueExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | ExpressionInfo that contains the Arcade expression that returns value as a number. 
+
+
+### CIMClassBreaksVisualVariable 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| classBreaksLegendVisualVariableOptions | [enumeration ClassBreaksLegendVisualVariableOptions](CIMRenderers.md#enumeration-classbreakslegendvisualvariableoptions) | The legend display options. 
+| useClassBreaks | boolean | A value indicating whether or not to use class breaks. 
+
+
+### CIMClassBreaksProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| classificationMethod | [enumeration ClassificationMethod](CIMRenderers.md#enumeration-classificationmethod) | The classification method. 
+| breaks | [[CIMClassBreak]](CIMRenderers.md#cimclassbreak) | The class breaks. 
+| minimumBreak | double | The minimum break. 
+| showClassGaps | boolean | A value indicating whether or not to show class gaps. 
+| showInAscendingOrder | boolean | A value indicating whether or not to show classes in ascending order. 
+| useDefaultSymbol | boolean | A value indicating whether or not to use the default symbol. 
+| defaultSymbolPatch | [enumeration PatchShape](CIMRenderers.md#enumeration-patchshape) | The patch shape for the default symbol. 
+| defaultSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The default symbol. 
+| defaultLabel | string | The default label. 
+| defaultDescription | string | The default description. 
+
+
+### CIMSizeClassBreaksVisualVariable 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| templateSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The template symbol. 
+| drawSizeMarkerSymbolsAboveAllLayers | boolean | A value indicating whether or not to draw size marker symbols for polygon features above all layers. This option applies when drawing size marker symbols for polygon layers. The background will be drawn in contents order and this option indicates if the size marker symbols should be drawn in contents order or above all other layers. 
 
 
 

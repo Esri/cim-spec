@@ -328,6 +328,33 @@
 
 
 
+## CIMFenceGeotrigger
+#### Represents a fence geotrigger. 
+
+
+### CIMGeotrigger 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name. 
+
+
+### CIMFenceGeotrigger 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| feed | [GeotriggerFeed](Types.md#geotriggerfeed) | Feed. 
+| fenceNotificationRule | [enumeration GeoFenceNotificationRule](CIMMap.md#enumeration-geofencenotificationrule) | Notification rule for this fence. 
+| feedAccuracyMode | [enumeration GeotriggerAccuracyMode](CIMMap.md#enumeration-geotriggeraccuracymode) | Accuracy mode for the fence. 
+| enterExitRule | [enumeration GeoFenceEnterExitRule](CIMMap.md#enumeration-geofenceenterexitrule) | Exit rule for the fence. 
+| fenceParameters | [GeotriggerFenceParameters](Types.md#geotriggerfenceparameters) | Exit rule for the fence. 
+| notificationOptions | [CIMGeotriggerNotificationProperties](CIMMap.md#cimgeotriggernotificationproperties) | Notification properties. 
+
+
+
+
+
+
 ## CIMFieldMapping
 #### Represents a field mapping that maps fields from source layer or table to target layer or table. 
 
@@ -380,6 +407,158 @@
 | pinnedLevels | boolean | A value indicating whether the levels portion of the floor filter have been pinned to show the levels lists or the floor filter includes the levels as a breadcrumb dropdown. 
 | siteFacilityIDs | [string] | The array of facility ids belonging to the selected site (only if just site has been selected). 
 | siteLevelIDs | [string] | The array of level ids belonging to the selected site (only if just site has been selected). 
+
+
+
+
+
+### Enumeration: GeoFenceEnterExitRule
+#### Rules to indicate whether a fence polygon has been entered or exited by the geometry from a feed. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| EnterContainsAndExitDoesNotIntersect| 0| A fence polygon is entered when it contains a feed geometry and exited when it no longer intersects. 
+| EnterContainsAndExitDoesNotContain| 1| A fence polygon is entered when it contains a feed geometry and exited when it is no longer contained. 
+| EnterIntersectsAndExitDoesNotIntersect| 2| A fence polygon is entered when it intersects a feed geometry and exited when it no longer intersects. 
+
+
+
+### Enumeration: GeoFenceNotificationRule
+#### Indicates the type of event that will trigger notifications for the Fence Geotrigger. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Enter| 0| Results in notification when the geometry of the source feed enters a fence polygon. 
+| EnterOrExit| 1| Results in notification when the geometry of the source feed enters or exits a fence polygon. 
+| Exit| 2| Results in notification when the geometry of the source feed exits a fence polygon. 
+
+
+
+
+## CIMGeotrigger
+#### Represents common properties for all the geotrigger types. 
+
+
+### CIMGeotrigger 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name. 
+
+
+
+
+
+### Enumeration: GeotriggerAccuracyMode
+#### Indicates how the geotrigger will use accuracy information from a feed. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| UseGeometry| 0| Indicates the reported geometry from a feed will be used. 
+| UseGeometryWithAccuracy| 1| The feed geometry will be used in conjunction with accuracy information. 
+
+
+
+
+## CIMGeotriggerDeviceLocationFeed
+#### Represents a Geotrigger feed that uses the device location to provide updates. 
+
+
+### CIMGeotriggerFeed 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMGeotriggerDeviceLocationFeed 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| filterExpression | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The arcade expression that controls whether a location update will be used by a geotrigger. This expression uses the Location Update Constraint Arcade profile. The expression should return a Boolean where false indicates the location will not be used. 
+
+
+
+
+
+
+## CIMGeotriggerFeatureFenceParameters
+#### Represents the parameters of a geotrigger feature fence. 
+
+
+### CIMGeotriggerFenceParameters 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMGeotriggerFeatureFenceParameters 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| bufferDistance | double | The buffer distance (in meters) to apply to fence features. 
+| sourceDataConnection | [DataConnection](Types.md#dataconnection) | Source data connection for the fence features. 
+| sourceLayer | string | Source layer URI for the fence features. 
+| filter | [CIMGeotriggerFenceFilter](CIMMap.md#cimgeotriggerfencefilter) | The filter that should be used for the fence. 
+
+
+
+
+
+
+## CIMGeotriggerFeed
+#### Represents feed for Geotriggers. 
+
+
+### CIMGeotriggerFeed 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+
+
+
+
+## CIMGeotriggerFenceFilter
+#### Represents a geotrigger fence filter. 
+
+
+### CIMGeotriggerFenceFilter 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| whereClause | string | The where clause. 
+| geometryURI | string | The geometry. 
+
+
+
+
+
+
+## CIMGeotriggerFenceParameters
+#### Represents the parameters of a geotrigger fence. 
+
+
+### CIMGeotriggerFenceParameters 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+
+
+
+
+## CIMGeotriggerNotificationProperties
+#### Represents a geotrigger notification properties. 
+
+
+### CIMGeotriggerNotificationProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| expressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The arcade expression which can be used to configure notification information when the Geotrigger condition is met. The expression uses the Geotrigger Notification Arcade profile. The expression can return either a string that will be used for a user facing message or a Dictionary that can include a user facing message with the key 'message', and a recommended list of app actions using the key 'actions'. 
+| requestedActions | [string] | List of recommended actions that the author intends to be taken for this Geotrigger. Actions can be any strings that are supported by geotrigger enabled apps in your organization and should cover all possible 'action' values returned from evaluation of expressionInfo.expression. 
 
 
 
@@ -875,6 +1054,22 @@
 | floorAwareMapProperties | [CIMFloorAwareMapProperties](CIMMap.md#cimfloorawaremapproperties) | The floor-aware properties of the map. 
 | IPSAwareMapProperties | [CIMIPSAwareMapProperties](CIMMap.md#cimipsawaremapproperties) | The IPS-aware properties of the map. 
 | autoFillFeatureCache | boolean | A value indicating whether auto fill mode is enabled or disabled for a map. 
+| geotriggerProperties | [CIMMapGeotriggerProperties](CIMMap.md#cimmapgeotriggerproperties) | The geotrigger properties of the map. 
+
+
+
+
+
+
+## CIMMapGeotriggerProperties
+#### Represents geotrigger properties for a map. 
+
+
+### CIMMapGeotriggerProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| geotriggers | [[CIMGeotrigger]](Types.md#geotrigger) | The geotriggers. 
 
 
 

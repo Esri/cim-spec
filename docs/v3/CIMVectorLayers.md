@@ -1655,6 +1655,16 @@
 
 
 
+### Enumeration: MappedOIDFieldType
+#### A list of mapped OID field types. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| OID32Bit| 4| Mapped OID field type is 32 bit. 
+| OID64Bit| 8| Mapped OID field type is 64 bit. 
+
+
+
 
 ## CIMMaterializedViewProperties
 #### Properties relevant to query layers based on materialized views. 
@@ -1815,6 +1825,122 @@
 
 
 
+## CIMOrientedImageryLayer
+#### Represents an oriented imagery layer. 
+
+
+### CIMDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name. 
+| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
+| metadataURI | string | The metadata URI. 
+| useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
+
+
+### CIMLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| attribution | string | The attribution text that appears on a map that draws this layer. 
+| description | string | The description. 
+| layerElevation | [CIMLayerElevationSurface](CIMLayer.md#cimlayerelevationsurface) | The layer elevation. 
+| expanded | boolean | A value indicating whether this layer is expanded in the contents pane. 
+| layer3DProperties | [CIM3DLayerProperties](CIMLayer.md#cim3dlayerproperties) | The 3D layer properties. 
+| layerMasks | [string] | The URIs of the layers used as masks. 
+| layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
+| maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| showLegends | boolean | A value indicating whether or not to show legends. 
+| transparency | double | The transparency of the layer. 
+| visibility | boolean | A value indicating whether or not this layer is visible. 
+| displayCacheType | [enumeration DisplayCacheType](CIMLayer.md#enumeration-displaycachetype) | The display cache type. 
+| maxDisplayCacheAge | double | The maximum display cache age. 
+| layerTemplate | [CIMLayerTemplate](CIMLayer.md#cimlayertemplate) | The layer template. 
+| popupInfo | [CIMPopupInfo](CIMPopup.md#cimpopupinfo) | The pop-up info. 
+| showPopups | boolean | A value indicating whether or not to show pop-ups. 
+| serviceLayerID | long | Identifier that will be used to identify the layer in server. 
+| charts | [[CIMChart]](CIMCharts.md#cimchart) | Identifier the layer's charts. 
+| searchable | boolean | A value indicating whether or not this layer should be included in the search. This property is honored only by layers that support search. 
+| refreshRate | double | The amount of time to wait between refreshing the layer. 
+| refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
+| showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
+| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
+| allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
+| rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
+| useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
+| visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
+
+
+### CIMFeatureLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| autoGenerateFeatureTemplates | boolean | A value indicating whether to automatically generate feature templates from the renderer. 
+| extrusion | [CIMFeatureExtrusion](CIMVectorLayers.md#cimfeatureextrusion) | The feature extrusion. 
+| featureElevationExpression | string | The feature elevation expression. 
+| featureTable | [CIMFeatureTable](CIMVectorLayers.md#cimfeaturetable) | The feature table. 
+| featureTemplates | [[CIMEditingTemplate]](Types.md#editingtemplate) | The feature templates. 
+| htmlPopupEnabled | boolean | A value indicating whether HTML pop-ups are enabled. 
+| htmlPopupFormat | [CIMHtmlPopupFormat](CIMVectorLayers.md#cimhtmlpopupformat) | The HTML pop-ups format. 
+| isFlattened | boolean | A value indicating whether the layer is flattened. 
+| selectable | boolean | A value indicating whether the layer is selectable. 
+| selectionColor | [Color](Types.md#color) | The selection color. For polygons, this is used as the outline color. 
+| polygonSelectionFillColor | [Color](Types.md#color) | The selection fill color. Only used for polygons. 
+| selectionSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The selection symbol. 
+| useSelectionSymbol | boolean | A value indicating whether to use the selection symbol. 
+| pageDefinition | [CIMPageDefinition](CIMVectorLayers.md#cimpagedefinition) | The page definition which allows for using current map series page to filter features. 
+| featureCacheType | [enumeration FeatureCacheType](CIMVectorLayers.md#enumeration-featurecachetype) | The feature cache type. 
+| enableDisplayFilters | boolean | A value indicating whether the current set of display filters are honored during drawing. 
+| displayFilters | [[CIMDisplayFilter]](CIMVectorLayers.md#cimdisplayfilter) | The current set of scale based display filters. 
+| displayFiltersType | [enumeration DisplayFilterType](CIMVectorLayers.md#enumeration-displayfiltertype) | DisplayFiltersType value. 
+| displayFilterName | string | The active display filter. 
+| displayFilterChoices | [[CIMDisplayFilter]](CIMVectorLayers.md#cimdisplayfilter) | The current set of display filters. 
+| featureElevationExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression for setting the feature elevation. 
+| featureBlendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The per-feature blending mode which allows features in a layer to blend against other features in the same layer that have already drawn. 
+| featureSortInfos | [[CIMFeatureSortInfo]](CIMVectorLayers.md#cimfeaturesortinfo) | The collection of field names and sort directions used to sort features during draw. 
+
+
+### CIMGeoFeatureLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| actions | [[CIMLayerAction]](CIMVectorLayers.md#cimlayeraction) | The layer actions. 
+| exclusionSet | [long long] | The set of excluded features. 
+| featureMasks | [[CIMDataConnection]](Types.md#dataconnection) | The data connection of the masking data. 
+| labelClasses | [[CIMLabelClass]](CIMLabelPlacement.md#cimlabelclass) | The collection of label class definitions. 
+| labelVisibility | boolean | A value indicating whether to display labels for this layer's label classes. 
+| maskedSymbolLayers | [[CIMSymbolLayerMasking]](CIMVectorLayers.md#cimsymbollayermasking) | The masked symbol layers. Each SymbolLayerMasking gives the symbol layers that are masked by that masking layer. 
+| renderer | [Renderer](Types.md#renderer) | The primary symbol renderer. 
+| scaleSymbols | boolean | A value indicating whether to scale the symbols in this layer based on the map's reference scale. 
+| snappable | boolean | A value indicating whether this layer participates in snapping in the editor. 
+| symbolLayerDrawing | [CIMSymbolLayerDrawing](CIMLayer.md#cimsymbollayerdrawing) | The symbol layer drawing properties. 
+| trackLinesRenderer | [Renderer](Types.md#renderer) | The track renderer when displaying tracks. 
+| previousObservationsRenderer | [Renderer](Types.md#renderer) | The previous observations renderer. 
+| previousObservationsCount | long | The previous observation count. 
+| useRealWorldSymbolSizes | boolean | A value indicating whether to use real world symbols sizes (meters) vs. points. This value should always be in sync with the UseRealWorldSymbolSizes property at the symbol level. 
+| showPreviousObservations | boolean | A value indicating whether previous observations are being drawn. 
+| featureReduction | [FeatureReduction](Types.md#featurereduction) | The feature reduction technique in use by this layer. 
+| showTracks | boolean | A value indicating whether track lines are being drawn. 
+
+
+### CIMOrientedImageryLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| orientedImageryPropertyOverrides | {JSON_object}| The overrides for editable properties of the oriented imagery dataset on the layer. 
+
+
+
+
+
+
 ## CIMPageDefinition
 #### Represents page definition. 
 
@@ -1825,6 +1951,23 @@
 |---------|--------|--------|
 | pageFieldName | string | The page field name. Show features where the value of this field either matches or doesn't match the current map series page name. Match versus don't match is controlled by ExcludePages. 
 | excludePages | boolean | A value indicating whether to exclude pages. Specify false to show features that match or true to show features that don't match. 
+
+
+
+
+
+
+## CIMParcelFabricActiveRecord
+#### Defines the parcel fabric active record properties needed for record-driven parcel workflows. 
+
+
+### CIMParcelFabricActiveRecord 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| activeRecord | string | The active record GlobalID. 
+| enabled | boolean | A value indicating whether or not there is an active record. 
+| showActiveRecordOnly | boolean | A value indicating whether to show only the features associated with the active record in the map. 
 
 
 
@@ -1965,6 +2108,7 @@
 |---------|--------|--------|
 | recordsLayer | string | The path to the parcel polygon records layer. The records layer links parcel polygons and lines to the legal record that created / retired it as well as integration point to business systems. 
 | parcelConnection | [DataConnection](Types.md#dataconnection) | The data connection to the Parcel Fabric. A Parcel Fabric controls simple feature classes and uses topology rules and parcel rules. Parcel geometry is edited using feature services The Parcel Layer provides additional services to control the fabric classes such as validate. 
+| parcelFabricActiveRecord | [CIMParcelFabricActiveRecord](CIMVectorLayers.md#cimparcelfabricactiverecord) | The Parcel Fabric Active Record properties. 
 
 
 
@@ -1998,6 +2142,7 @@
 | name | string | The name. 
 | fieldName | string | The field name. Used as the start field name when an end field name is set. 
 | endFieldName | string | The end field name. 
+| uniqueValues | [double] | A cached set of unique range values. 
 | currentRange | [CIMRange](CIMVectorLayers.md#cimrange) | The current range. 
 | currentRangeRelation | [enumeration RangeRelation](CIMEnumerations.md#enumeration-rangerelation) | The current range relation. 
 | customFullExtent | [CIMRange](CIMVectorLayers.md#cimrange) | The custom full extent. 
@@ -2393,6 +2538,7 @@
 | spatialIndexDimension | long | The spatial index dimension. Only used for query layers based on Oracle Spatial (SDO) storage. This property is managed by the system as an optimization. 
 | isTableBased | boolean | A value indicating whether the query is "table based" (retrieves all the columns from the table and has no where clause or postfix clause). This property is used as an optimization and is typically set by the system. 
 | materializedViewProperties | [CIMMaterializedViewProperties](CIMVectorLayers.md#cimmaterializedviewproperties) | The properties relevant to materialized view-based query layers. 
+| mappedOIDFieldLength | [enumeration MappedOIDFieldType](CIMVectorLayers.md#enumeration-mappedoidfieldtype) | A value indicating whether the auto generated Esri OID field will be 32-bit or 64-bit. 
 
 
 
@@ -3122,6 +3268,7 @@
 | BigDataConnection| 23| Big Data connection. 
 | KnowledgeGraph| 24| Knowledge Graph connection. 
 | NITF| 25| NITF connection. 
+| VPF| 26| VPF. 
 
 
 

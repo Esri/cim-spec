@@ -39,25 +39,32 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | backgroundSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The background symbol used for graduated symbols. 
-| barrierWeight | [enumeration BarrierWeight](CIMVectorLayers.md#enumeration-barrierweight) | The barrier weight used for graduate symbols to avoid labels. 
-| breaks | [[CIMClassBreak]](CIMRenderers.md#cimclassbreak) | The class breaks. 
+| barrierWeight | [enumeration BarrierWeight](CIMVectorLayers.md#enumeration-barrierweight) | The barrier weight used for graduated symbols to avoid labels. 
 | classBreakType | [enumeration ClassBreakType](CIMRenderers.md#enumeration-classbreaktype) | The class break type. 
-| classificationMethod | [enumeration ClassificationMethod](CIMRenderers.md#enumeration-classificationmethod) | The classification method. 
 | colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp. 
 | field | string | The field for rendering. 
-| minimumBreak | double | The minimum break for the renderer. 
 | numberFormat | [NumberFormat](Types.md#numberformat) | The number format. 
+| heading | string | The heading. 
+| minimumLabel | string | The minimum label. 
+| valueExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | ExpressionInfo that contains the Arcade expression that returns value as a number. When both Fields and ValueExpressionInfo are present ValueExpressionInfo is used. 
+| polygonSymbolColorTarget | [enumeration PolygonSymbolColorTarget](CIMRenderers.md#enumeration-polygonsymbolcolortarget) | The property that controls how the color ramp is applied to polygon symbols. 
+| drawGraduatedSymbolsAboveAllLayers | boolean | A value indicating whether or not to draw graduated symbols for polygon features above all layers. This option applies when drawing graduated symbols for polygon layers. The background will be drawn in contents order and this option indicates if the graduated symbols should be drawn in contents order or above all other layers. 
+
+
+### CIMClassBreaksProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| classificationMethod | [enumeration ClassificationMethod](CIMRenderers.md#enumeration-classificationmethod) | The classification method. 
+| breaks | [[CIMClassBreak]](CIMRenderers.md#cimclassbreak) | The class breaks. 
+| minimumBreak | double | The minimum break. 
 | showClassGaps | boolean | A value indicating whether or not to show class gaps. 
 | showInAscendingOrder | boolean | A value indicating whether or not to show classes in ascending order. 
-| heading | string | The heading. 
 | useDefaultSymbol | boolean | A value indicating whether or not to use the default symbol. 
 | defaultSymbolPatch | [enumeration PatchShape](CIMRenderers.md#enumeration-patchshape) | The patch shape for the default symbol. 
 | defaultSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The default symbol. 
-| minimumLabel | string | The minimum label. 
 | defaultLabel | string | The default label. 
 | defaultDescription | string | The default description. 
-| valueExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | ExpressionInfo that contains the Arcade expression that returns value as a number. When both Fields and ValueExpressionInfo are present ValueExpressionInfo is used. 
-| polygonSymbolColorTarget | [enumeration PolygonSymbolColorTarget](CIMRenderers.md#enumeration-polygonsymbolcolortarget) | The property that controls how the color ramp is applied to polygon symbols. 
 
 
 ### CIMDataSampling 

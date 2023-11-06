@@ -170,6 +170,24 @@
 
 [CIMChartSurfaceProfileSeries](CIMCharts.md#cimchartsurfaceprofileseries)
 
+[CIMChartTrajectoryProfileSeries](CIMCharts.md#cimcharttrajectoryprofileseries)
+
+### ClassBreaksProperties
+
+[CIMGAIsoRenderer](CIMGALayer.md#cimgaisorenderer)
+
+[CIMClassBreaksRenderer](CIMRenderers.md#cimclassbreaksrenderer)
+
+[CIMColorClassBreaksVisualVariable](CIMRenderers.md#cimcolorclassbreaksvisualvariable)
+
+[CIMSizeClassBreaksVisualVariable](CIMRenderers.md#cimsizeclassbreaksvisualvariable)
+
+### ClassBreaksVisualVariable
+
+[CIMColorClassBreaksVisualVariable](CIMRenderers.md#cimcolorclassbreaksvisualvariable)
+
+[CIMSizeClassBreaksVisualVariable](CIMRenderers.md#cimsizeclassbreaksvisualvariable)
+
 ### ColorRamp
 
 [CIMFixedColorRamp](CIMColor.md#cimfixedcolorramp)
@@ -220,9 +238,13 @@
 
 [CIMAGSServiceConnection](CIMServiceLayers.md#cimagsserviceconnection)
 
+[CIMOGCAPIMapTilesServiceConnection](CIMServiceLayers.md#cimogcapimaptilesserviceconnection)
+
 [CIMOGCAPIServiceConnection](CIMServiceLayers.md#cimogcapiserviceconnection)
 
 [CIMStandardServiceConnection](CIMServiceLayers.md#cimstandardserviceconnection)
+
+[CIMTiles3DDataConnection](CIMServiceLayers.md#cimtiles3ddataconnection)
 
 [CIMVoxelDataConnection](CIMServiceLayers.md#cimvoxeldataconnection)
 
@@ -370,6 +392,8 @@
 
 [CIMTiledServiceLayer](CIMServiceLayers.md#cimtiledservicelayer)
 
+[CIMTiles3DLayer](CIMServiceLayers.md#cimtiles3dlayer)
+
 [CIMVoxelLayer](CIMServiceLayers.md#cimvoxellayer)
 
 [CIMWMSLayer](CIMServiceLayers.md#cimwmslayer)
@@ -401,6 +425,8 @@
 [CIMFeatureLayer](CIMVectorLayers.md#cimfeaturelayer)
 
 [CIMFeatureTrajectorySubLayer](CIMVectorLayers.md#cimfeaturetrajectorysublayer)
+
+[CIMOrientedImageryLayer](CIMVectorLayers.md#cimorientedimagerylayer)
 
 [CIMParcelFabricLayer](CIMVectorLayers.md#cimparcelfabriclayer)
 
@@ -700,6 +726,24 @@
 
 [CIMGeometricEffectWave](CIMSymbols.md#cimgeometriceffectwave)
 
+### Geotrigger
+
+[CIMFenceGeotrigger](CIMMap.md#cimfencegeotrigger)
+
+[CIMGeotrigger](CIMMap.md#cimgeotrigger)
+
+### GeotriggerFeed
+
+[CIMGeotriggerDeviceLocationFeed](CIMMap.md#cimgeotriggerdevicelocationfeed)
+
+[CIMGeotriggerFeed](CIMMap.md#cimgeotriggerfeed)
+
+### GeotriggerFenceParameters
+
+[CIMGeotriggerFeatureFenceParameters](CIMMap.md#cimgeotriggerfeaturefenceparameters)
+
+[CIMGeotriggerFenceParameters](CIMMap.md#cimgeotriggerfenceparameters)
+
 ### Graphic
 
 [CIMInkGraphic](CIMGraphics.md#ciminkgraphic)
@@ -776,6 +820,12 @@
 
 [CIMReportSectionElement](CIMLayout.md#cimreportsectionelement)
 
+### GroupLayerProperties
+
+[CIMGroupLayer](CIMLayer.md#cimgrouplayer)
+
+[CIMDiagramLayer](CIMNetworkDiagrams.md#cimdiagramlayer)
+
 ### KeyframeLayer
 
 [CIMKeyframeLayer](CIMMap.md#cimkeyframelayer)
@@ -825,6 +875,14 @@
 [CIMHorizontalBarLegendItem](CIMLayout.md#cimhorizontalbarlegenditem)
 
 [CIMNestedLegendItem](CIMLayout.md#cimnestedlegenditem)
+
+### LinkChartFilter
+
+[CIMLinkChartFieldFilter](CIMLinkCharts.md#cimlinkchartfieldfilter)
+
+[CIMLinkChartFilter](CIMLinkCharts.md#cimlinkchartfilter)
+
+[CIMLinkChartPropertyFilter](CIMLinkCharts.md#cimlinkchartpropertyfilter)
 
 ### LinkChartLabelingInfo
 
@@ -925,6 +983,8 @@
 [CIMAttachmentsMediaInfo](CIMPopup.md#cimattachmentsmediainfo)
 
 [CIMBarChartMediaInfo](CIMPopup.md#cimbarchartmediainfo)
+
+[CIMCarouselMediaInfo](CIMPopup.md#cimcarouselmediainfo)
 
 [CIMColumnChartMediaInfo](CIMPopup.md#cimcolumnchartmediainfo)
 
@@ -1136,6 +1196,8 @@
 
 [CIMAGSServiceConnection](CIMServiceLayers.md#cimagsserviceconnection)
 
+[CIMTiles3DDataConnection](CIMServiceLayers.md#cimtiles3ddataconnection)
+
 [CIMSceneDataConnection](CIMTerrainLayers.md#cimscenedataconnection)
 
 [CIMENCDataConnection](CIMVectorLayers.md#cimencdataconnection)
@@ -1320,11 +1382,15 @@
 
 ### VisualVariable
 
+[CIMColorClassBreaksVisualVariable](CIMRenderers.md#cimcolorclassbreaksvisualvariable)
+
 [CIMColorVisualVariable](CIMRenderers.md#cimcolorvisualvariable)
 
 [CIMMultilevelColorVisualVariable](CIMRenderers.md#cimmultilevelcolorvisualvariable)
 
 [CIMRotationVisualVariable](CIMRenderers.md#cimrotationvisualvariable)
+
+[CIMSizeClassBreaksVisualVariable](CIMRenderers.md#cimsizeclassbreaksvisualvariable)
 
 [CIMSizeVisualVariable](CIMRenderers.md#cimsizevisualvariable)
 
@@ -1451,6 +1517,16 @@
 [CIMChartSurfaceProfileSeries](CIMCharts.md#CIMChartSurfaceProfileSeries)
 
 [CIMChartTextProperties](CIMCharts.md#CIMChartTextProperties)
+
+[CIMChartTimeBinningProperties](CIMCharts.md#CIMChartTimeBinningProperties)
+
+[CIMChartTrajectoryProfileFeature](CIMCharts.md#CIMChartTrajectoryProfileFeature)
+
+[CIMChartTrajectoryProfileLayer](CIMCharts.md#CIMChartTrajectoryProfileLayer)
+
+[CIMChartTrajectoryProfileSeries](CIMCharts.md#CIMChartTrajectoryProfileSeries)
+
+[CIMChartTrajectoryProfileVariable](CIMCharts.md#CIMChartTrajectoryProfileVariable)
 
 [CIMGridChartProperties](CIMCharts.md#CIMGridChartProperties)
 
@@ -1635,6 +1711,8 @@
 [CIMNitfLayer](CIMImageLayers.md#CIMNitfLayer)
 
 [CIMPansharpeningFilter](CIMImageLayers.md#CIMPansharpeningFilter)
+
+[CIMRangeDimensionValue](CIMImageLayers.md#CIMRangeDimensionValue)
 
 [CIMRasterBandDataConnection](CIMImageLayers.md#CIMRasterBandDataConnection)
 
@@ -1952,6 +2030,12 @@
 
 [CIMLinkChartEntity](CIMLinkCharts.md#CIMLinkChartEntity)
 
+[CIMLinkChartFieldFilter](CIMLinkCharts.md#CIMLinkChartFieldFilter)
+
+[CIMLinkChartFilter](CIMLinkCharts.md#CIMLinkChartFilter)
+
+[CIMLinkChartFilterGroup](CIMLinkCharts.md#CIMLinkChartFilterGroup)
+
 [CIMLinkChartLinkDrawingInfo](CIMLinkCharts.md#CIMLinkChartLinkDrawingInfo)
 
 [CIMLinkChartLinkLabelingInfo](CIMLinkCharts.md#CIMLinkChartLinkLabelingInfo)
@@ -1959,6 +2043,8 @@
 [CIMLinkChartNodeDrawingInfo](CIMLinkCharts.md#CIMLinkChartNodeDrawingInfo)
 
 [CIMLinkChartNodeLabelingInfo](CIMLinkCharts.md#CIMLinkChartNodeLabelingInfo)
+
+[CIMLinkChartPropertyFilter](CIMLinkCharts.md#CIMLinkChartPropertyFilter)
 
 [CIMLinkChartRelationship](CIMLinkCharts.md#CIMLinkChartRelationship)
 
@@ -1990,11 +2076,27 @@
 
 [CIMFacilityLayerProperties](CIMMap.md#CIMFacilityLayerProperties)
 
+[CIMFenceGeotrigger](CIMMap.md#CIMFenceGeotrigger)
+
 [CIMFieldMapping](CIMMap.md#CIMFieldMapping)
 
 [CIMFloorAwareMapProperties](CIMMap.md#CIMFloorAwareMapProperties)
 
 [CIMFloorFilterSettings](CIMMap.md#CIMFloorFilterSettings)
+
+[CIMGeotrigger](CIMMap.md#CIMGeotrigger)
+
+[CIMGeotriggerDeviceLocationFeed](CIMMap.md#CIMGeotriggerDeviceLocationFeed)
+
+[CIMGeotriggerFeatureFenceParameters](CIMMap.md#CIMGeotriggerFeatureFenceParameters)
+
+[CIMGeotriggerFeed](CIMMap.md#CIMGeotriggerFeed)
+
+[CIMGeotriggerFenceFilter](CIMMap.md#CIMGeotriggerFenceFilter)
+
+[CIMGeotriggerFenceParameters](CIMMap.md#CIMGeotriggerFenceParameters)
+
+[CIMGeotriggerNotificationProperties](CIMMap.md#CIMGeotriggerNotificationProperties)
 
 [CIMGroundToGridCorrection](CIMMap.md#CIMGroundToGridCorrection)
 
@@ -2029,6 +2131,8 @@
 [CIMLocator](CIMMap.md#CIMLocator)
 
 [CIMMap](CIMMap.md#CIMMap)
+
+[CIMMapGeotriggerProperties](CIMMap.md#CIMMapGeotriggerProperties)
 
 [CIMMapStereoProperties](CIMMap.md#CIMMapStereoProperties)
 
@@ -2130,6 +2234,8 @@
 
 [CIMBarChartMediaInfo](CIMPopup.md#CIMBarChartMediaInfo)
 
+[CIMCarouselMediaInfo](CIMPopup.md#CIMCarouselMediaInfo)
+
 [CIMColumnChartMediaInfo](CIMPopup.md#CIMColumnChartMediaInfo)
 
 [CIMExpressionMediaInfo](CIMPopup.md#CIMExpressionMediaInfo)
@@ -2166,6 +2272,8 @@
 
 [CIMMapImageLayer](CIMServiceLayers.md#CIMMapImageLayer)
 
+[CIMOGCAPIMapTilesServiceConnection](CIMServiceLayers.md#CIMOGCAPIMapTilesServiceConnection)
+
 [CIMOGCAPIServiceConnection](CIMServiceLayers.md#CIMOGCAPIServiceConnection)
 
 [CIMObject3DRenderingFilter](CIMServiceLayers.md#CIMObject3DRenderingFilter)
@@ -2184,9 +2292,15 @@
 
 [CIMServiceSubLayer](CIMServiceLayers.md#CIMServiceSubLayer)
 
+[CIMServiceSubTable](CIMServiceLayers.md#CIMServiceSubTable)
+
 [CIMStandardServiceConnection](CIMServiceLayers.md#CIMStandardServiceConnection)
 
 [CIMTiledServiceLayer](CIMServiceLayers.md#CIMTiledServiceLayer)
+
+[CIMTiles3DDataConnection](CIMServiceLayers.md#CIMTiles3DDataConnection)
+
+[CIMTiles3DLayer](CIMServiceLayers.md#CIMTiles3DLayer)
 
 [CIMVoxelColorUniqueValue](CIMServiceLayers.md#CIMVoxelColorUniqueValue)
 
@@ -2236,6 +2350,8 @@
 
 [CIMClassBreaksRenderer](CIMRenderers.md#CIMClassBreaksRenderer)
 
+[CIMColorClassBreaksVisualVariable](CIMRenderers.md#CIMColorClassBreaksVisualVariable)
+
 [CIMColorVisualVariable](CIMRenderers.md#CIMColorVisualVariable)
 
 [CIMDictionaryRenderer](CIMRenderers.md#CIMDictionaryRenderer)
@@ -2263,6 +2379,8 @@
 [CIMScaleDependentSizeVariation](CIMRenderers.md#CIMScaleDependentSizeVariation)
 
 [CIMSimpleRenderer](CIMRenderers.md#CIMSimpleRenderer)
+
+[CIMSizeClassBreaksVisualVariable](CIMRenderers.md#CIMSizeClassBreaksVisualVariable)
 
 [CIMSizeVisualVariable](CIMRenderers.md#CIMSizeVisualVariable)
 
@@ -2600,7 +2718,11 @@
 
 [CIMNetCDFStandardDataConnection](CIMVectorLayers.md#CIMNetCDFStandardDataConnection)
 
+[CIMOrientedImageryLayer](CIMVectorLayers.md#CIMOrientedImageryLayer)
+
 [CIMPageDefinition](CIMVectorLayers.md#CIMPageDefinition)
+
+[CIMParcelFabricActiveRecord](CIMVectorLayers.md#CIMParcelFabricActiveRecord)
 
 [CIMParcelFabricLayer](CIMVectorLayers.md#CIMParcelFabricLayer)
 

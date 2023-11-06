@@ -54,6 +54,13 @@
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 
 
+### CIMGroupLayerProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| sublayerVisibilityMode | [enumeration SublayerVisibilityMode](CIMLayer.md#enumeration-sublayervisibilitymode) | The visibility mode for sublayers. 
+
+
 ### CIMStandaloneTableContainer 
 
 |Property | Type | Description | 

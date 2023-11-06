@@ -392,6 +392,7 @@
 | subLayers | [[CIMSubLayerBase]](CIMLayer.md#cimsublayerbase) | The sublayers. 
 | transparentColor | [Color](Types.md#color) | The transparent color. 
 | backgroundColor | [Color](Types.md#color) | The background color. 
+| subTables | [[CIMServiceSubTable]](CIMServiceLayers.md#cimservicesubtable) | The subtables. 
 
 
 ### CIMDynamicServiceLayerDefinition 
@@ -406,6 +407,41 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+
+
+
+
+
+
+## CIMOGCAPIMapTilesServiceConnection
+#### Represents a OGC API Map Tiles service connection. 
+
+
+### CIMDataConnection 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMServiceConnection 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| description | string | The description. 
+
+
+### CIMOGCAPIMapTilesServiceConnection 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| layerName | string | The layer name. 
+| version | string | The version. 
+| serverConnection | [CIMInternetServerConnectionBase](CIMServiceLayers.md#ciminternetserverconnectionbase) | The server connection. 
+| style | string | The style. 
+| imageFormat | string | The image format. 
+| tileMatrixSet | string | The tile matrix set. 
+| capabilitiesParameters | {JSON_object}| The connection capabilities parameters as a property set. 
+| templateUrl | string | The template url that can be used for tile requests. 
 
 
 
@@ -666,6 +702,22 @@
 
 
 
+## CIMServiceSubTable
+#### Represents a service subtable. 
+
+
+### CIMServiceSubTable 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name. 
+| subTableID | string | The sub table ID. 
+
+
+
+
+
+
 ## CIMStandardServiceConnection
 #### Represents a standard service connection. 
 
@@ -758,6 +810,7 @@
 | subLayers | [[CIMSubLayerBase]](CIMLayer.md#cimsublayerbase) | The sublayers. 
 | transparentColor | [Color](Types.md#color) | The transparent color. 
 | backgroundColor | [Color](Types.md#color) | The background color. 
+| subTables | [[CIMServiceSubTable]](CIMServiceLayers.md#cimservicesubtable) | The subtables. 
 
 
 ### CIMTiledServiceLayerDefinition 
@@ -767,6 +820,110 @@
 | associatedFeatureLayerURI | string | The URI for a feature layer (feature service-based or portal item-based) that provides pop-up support for the tiled service layer. 
 
 
+
+
+
+
+## CIMTiles3DDataConnection
+#### Represents a 3D Tiles data connection. 
+
+
+### CIMDataConnection 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMServiceDataConnectionProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| customParameters | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | Vendor specific parameters. 
+
+
+### CIMTiles3DDataConnection 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| URI | string | The URI. 
+
+
+
+
+
+
+## CIMTiles3DLayer
+#### Represents a 3D Tiles layer. 
+
+
+### CIMDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name. 
+| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
+| metadataURI | string | The metadata URI. 
+| useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
+
+
+### CIMLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| attribution | string | The attribution text that appears on a map that draws this layer. 
+| description | string | The description. 
+| layerElevation | [CIMLayerElevationSurface](CIMLayer.md#cimlayerelevationsurface) | The layer elevation. 
+| expanded | boolean | A value indicating whether this layer is expanded in the contents pane. 
+| layer3DProperties | [CIM3DLayerProperties](CIMLayer.md#cim3dlayerproperties) | The 3D layer properties. 
+| layerMasks | [string] | The URIs of the layers used as masks. 
+| layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
+| maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| showLegends | boolean | A value indicating whether or not to show legends. 
+| transparency | double | The transparency of the layer. 
+| visibility | boolean | A value indicating whether or not this layer is visible. 
+| displayCacheType | [enumeration DisplayCacheType](CIMLayer.md#enumeration-displaycachetype) | The display cache type. 
+| maxDisplayCacheAge | double | The maximum display cache age. 
+| layerTemplate | [CIMLayerTemplate](CIMLayer.md#cimlayertemplate) | The layer template. 
+| popupInfo | [CIMPopupInfo](CIMPopup.md#cimpopupinfo) | The pop-up info. 
+| showPopups | boolean | A value indicating whether or not to show pop-ups. 
+| serviceLayerID | long | Identifier that will be used to identify the layer in server. 
+| charts | [[CIMChart]](CIMCharts.md#cimchart) | Identifier the layer's charts. 
+| searchable | boolean | A value indicating whether or not this layer should be included in the search. This property is honored only by layers that support search. 
+| refreshRate | double | The amount of time to wait between refreshing the layer. 
+| refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the layer. 
+| showMapTips | boolean | A value indicating whether or not the display value is shown when hovering over a layer in the view. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layer. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapLayerID | string | An identifier that will be used to identify the layer in a web map. This value is present if the layer originated in a web map and facilitates matching the layer back to its origin when updating the web map. 
+| blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode for the layer. 
+| allowDrapingOnIntegratedMesh | boolean | A value indicating whether layer can be draped on integrated mesh. 
+| rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
+| useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
+| visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
+
+
+### CIMTiles3DLayerDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| dataConnection | [DataConnection](Types.md#dataconnection) | The data connection. 
+| snappable | boolean | A value indicating whether the geometries are snappable. 
+| tiles3DLayerType | [enumeration Tiles3DLayerType](CIMServiceLayers.md#enumeration-tiles3dlayertype) | The 3D Tiles layer type. Typically set by the system and should not be modified. 
+
+
+
+
+
+### Enumeration: Tiles3DLayerType
+#### 3D Tiles layer types. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| IntegratedMesh| 0| Represents integrated mesh 3D Tiles layer type. 
+| Object3D| 1| Represents 3D object 3D Tiles layer type. 
 
 
 
@@ -1335,6 +1492,7 @@
 | subLayers | [[CIMSubLayerBase]](CIMLayer.md#cimsublayerbase) | The sublayers. 
 | transparentColor | [Color](Types.md#color) | The transparent color. 
 | backgroundColor | [Color](Types.md#color) | The background color. 
+| subTables | [[CIMServiceSubTable]](CIMServiceLayers.md#cimservicesubtable) | The subtables. 
 
 
 ### CIMDynamicServiceLayerDefinition 

@@ -26,7 +26,7 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the media. 
 | rowSpan | long | The row span. 
 | columnSpan | long | The column span. 
-| isCarousel | boolean | A value indicating whether this is a carousel element. 
+| isCarousel | boolean | A value indicating whether this is a carousel element. Deprecated at 3.2. 
 
 
 ### CIMAttachmentsMediaInfo 
@@ -57,7 +57,7 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the media. 
 | rowSpan | long | The row span. 
 | columnSpan | long | The column span. 
-| isCarousel | boolean | A value indicating whether this is a carousel element. 
+| isCarousel | boolean | A value indicating whether this is a carousel element. Deprecated at 3.2. 
 
 
 ### CIMChartMediaInfo 
@@ -80,6 +80,36 @@
 
 
 
+## CIMCarouselMediaInfo
+#### Represents carousel media info. 
+
+
+### CIMMediaInfo 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| row | long | The row. 
+| column | long | The column. 
+| refreshRate | double | The amount of time in RefreshRateUnit to wait between refreshing the media info. 
+| refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the media. 
+| rowSpan | long | The row span. 
+| columnSpan | long | The column span. 
+| isCarousel | boolean | A value indicating whether this is a carousel element. Deprecated at 3.2. 
+
+
+### CIMCarouselMediaInfo 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| caption | string | The caption. 
+| title | string | The title. 
+| mediaInfos | [[CIMMediaInfo]](Types.md#mediainfo) | The array of media infos. 
+
+
+
+
+
+
 ## CIMColumnChartMediaInfo
 #### Represents column chart media info. 
 
@@ -94,7 +124,7 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the media. 
 | rowSpan | long | The row span. 
 | columnSpan | long | The column span. 
-| isCarousel | boolean | A value indicating whether this is a carousel element. 
+| isCarousel | boolean | A value indicating whether this is a carousel element. Deprecated at 3.2. 
 
 
 ### CIMChartMediaInfo 
@@ -131,7 +161,7 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the media. 
 | rowSpan | long | The row span. 
 | columnSpan | long | The column span. 
-| isCarousel | boolean | A value indicating whether this is a carousel element. 
+| isCarousel | boolean | A value indicating whether this is a carousel element. Deprecated at 3.2. 
 
 
 ### CIMExpressionMediaInfo 
@@ -159,7 +189,7 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the media. 
 | rowSpan | long | The row span. 
 | columnSpan | long | The column span. 
-| isCarousel | boolean | A value indicating whether this is a carousel element. 
+| isCarousel | boolean | A value indicating whether this is a carousel element. Deprecated at 3.2. 
 
 
 ### CIMImageMediaInfo 
@@ -190,7 +220,7 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the media. 
 | rowSpan | long | The row span. 
 | columnSpan | long | The column span. 
-| isCarousel | boolean | A value indicating whether this is a carousel element. 
+| isCarousel | boolean | A value indicating whether this is a carousel element. Deprecated at 3.2. 
 
 
 ### CIMChartMediaInfo 
@@ -227,7 +257,7 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the media. 
 | rowSpan | long | The row span. 
 | columnSpan | long | The column span. 
-| isCarousel | boolean | A value indicating whether this is a carousel element. 
+| isCarousel | boolean | A value indicating whether this is a carousel element. Deprecated at 3.2. 
 
 
 ### CIMChartMediaInfo 
@@ -318,7 +348,7 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the media. 
 | rowSpan | long | The row span. 
 | columnSpan | long | The column span. 
-| isCarousel | boolean | A value indicating whether this is a carousel element. 
+| isCarousel | boolean | A value indicating whether this is a carousel element. Deprecated at 3.2. 
 
 
 ### CIMRelationshipMediaInfo 
@@ -350,7 +380,7 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the media. 
 | rowSpan | long | The row span. 
 | columnSpan | long | The column span. 
-| isCarousel | boolean | A value indicating whether this is a carousel element. 
+| isCarousel | boolean | A value indicating whether this is a carousel element. Deprecated at 3.2. 
 
 
 ### CIMTableMediaInfo 
@@ -381,7 +411,7 @@
 | refreshRateUnit | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units for the amount of time to wait between refreshing the media. 
 | rowSpan | long | The row span. 
 | columnSpan | long | The column span. 
-| isCarousel | boolean | A value indicating whether this is a carousel element. 
+| isCarousel | boolean | A value indicating whether this is a carousel element. Deprecated at 3.2. 
 
 
 ### CIMTextMediaInfo 

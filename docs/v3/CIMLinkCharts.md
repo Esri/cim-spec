@@ -38,6 +38,7 @@
 | viewport | [CIMLinkChartViewport](CIMLinkCharts.md#cimlinkchartviewport) | The link chart viewport. 
 | filterByMinLinks | boolean | A value indicating whether this link chart is filtered by the minimum number of links. 
 | minLinks | long | The minimum number of links allowed in the filter. 
+| filterGroups | [[CIMLinkChartFilterGroup]](CIMLinkCharts.md#cimlinkchartfiltergroup) | The link chart filter groups. 
 
 
 
@@ -63,6 +64,124 @@
 | keyFieldNames | [string] | The fields used to uniquely identify nodes. If duplicate values exist you can CollapseDuplicates. 
 
 
+
+
+
+
+## CIMLinkChartFieldFilter
+#### Represents additional settings used by a Link chart field filter. 
+
+
+### CIMLinkChartFilter 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| ID | string | The ID of the link chart filter. 
+| name | string | The name of the link chart filter. 
+| description | string | The description of the link chart filter. 
+| enabled | boolean | A value indicating whether the link chart filter is enabled or not. 
+| isExclusion | boolean | A value indicating whether or not this is an exclusion filter. 
+| filterStage | [enumeration LinkChartFilterStage](CIMLinkCharts.md#enumeration-linkchartfilterstage) | The value that indicates when the link chart filter is applied. 
+| filterType | [enumeration LinkChartFilterType](CIMLinkCharts.md#enumeration-linkchartfiltertype) | The filter type of the link chart filter. 
+| filterScope | [enumeration LinkChartFilterScope](CIMLinkCharts.md#enumeration-linkchartfilterscope) | The value that indicates what link chart component is filtered: entities, relationships, or both. 
+| targetIds | [string] | The entity and or relationship Ids to filter. 
+| valueSetURI | string | The binary reference of the filter values for the link chart filter. 
+
+
+### CIMLinkChartFieldFilter 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| field | string | The field that is used to filter the link chart entity or relationship. 
+| fieldType | [enumeration esriFieldType](ExternalReferences.md#enumeration-esrifieldtype) | The field type that is used to filter the link chart entity or relationship. 
+
+
+
+
+
+
+## CIMLinkChartFilter
+#### Represents the link chart filter information. 
+
+
+### CIMLinkChartFilter 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| ID | string | The ID of the link chart filter. 
+| name | string | The name of the link chart filter. 
+| description | string | The description of the link chart filter. 
+| enabled | boolean | A value indicating whether the link chart filter is enabled or not. 
+| isExclusion | boolean | A value indicating whether or not this is an exclusion filter. 
+| filterStage | [enumeration LinkChartFilterStage](CIMLinkCharts.md#enumeration-linkchartfilterstage) | The value that indicates when the link chart filter is applied. 
+| filterType | [enumeration LinkChartFilterType](CIMLinkCharts.md#enumeration-linkchartfiltertype) | The filter type of the link chart filter. 
+| filterScope | [enumeration LinkChartFilterScope](CIMLinkCharts.md#enumeration-linkchartfilterscope) | The value that indicates what link chart component is filtered: entities, relationships, or both. 
+| targetIds | [string] | The entity and or relationship Ids to filter. 
+| valueSetURI | string | The binary reference of the filter values for the link chart filter. 
+
+
+
+
+
+
+## CIMLinkChartFilterGroup
+#### Represents a group of link chart filters. 
+
+
+### CIMLinkChartFilterGroup 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| ID | string | The ID of the link chart filter group. 
+| name | string | The name of the link chart filter group. 
+| description | string | The description of the link chart filter group. 
+| enabled | boolean | A value indicating whether the link chart filter group is enabled or not. 
+| filters | [[CIMLinkChartFilter]](Types.md#linkchartfilter) | The link chart filters in the group. 
+
+
+
+
+
+### Enumeration: LinkChartFilterPropertyDataType
+#### Link chart filter type property data types. Used when specifying link chart filter type as PropertyData. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| EntityKeyValue| 0| Entity key value. 
+| LabelValue| 1| Entity or relationship label value. 
+
+
+
+### Enumeration: LinkChartFilterScope
+#### Link chart filter scope. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Entities| 0| Filter applies to entities. 
+| Relationships| 1| Filter applies to relationships. 
+| Both| 2| Filter applies to both entities and relationships. 
+
+
+
+### Enumeration: LinkChartFilterStage
+#### Link chart filter stage. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Unknown| 0| Unknown. 
+| Data| 1| Filter is applied at the data source. 
+| Visual| 2| Filter is applied at visualization. 
+
+
+
+### Enumeration: LinkChartFilterType
+#### Link chart filter type. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Unknown| 0| Unknown filter type. 
+| FieldData| 1| Filter is applied to a field in the source data. 
+| PropertyData| 2| Filter is applied to a property of the link chart or its components. For example, entity key value, entity node label, computed values, analysis results, counts, etc. 
 
 
 
@@ -192,6 +311,37 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+
+
+
+
+
+
+## CIMLinkChartPropertyFilter
+#### Represents additional settings used by a Link chart property filter. 
+
+
+### CIMLinkChartFilter 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| ID | string | The ID of the link chart filter. 
+| name | string | The name of the link chart filter. 
+| description | string | The description of the link chart filter. 
+| enabled | boolean | A value indicating whether the link chart filter is enabled or not. 
+| isExclusion | boolean | A value indicating whether or not this is an exclusion filter. 
+| filterStage | [enumeration LinkChartFilterStage](CIMLinkCharts.md#enumeration-linkchartfilterstage) | The value that indicates when the link chart filter is applied. 
+| filterType | [enumeration LinkChartFilterType](CIMLinkCharts.md#enumeration-linkchartfiltertype) | The filter type of the link chart filter. 
+| filterScope | [enumeration LinkChartFilterScope](CIMLinkCharts.md#enumeration-linkchartfilterscope) | The value that indicates what link chart component is filtered: entities, relationships, or both. 
+| targetIds | [string] | The entity and or relationship Ids to filter. 
+| valueSetURI | string | The binary reference of the filter values for the link chart filter. 
+
+
+### CIMLinkChartPropertyFilter 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| dataType | [enumeration LinkChartFilterPropertyDataType](CIMLinkCharts.md#enumeration-linkchartfilterpropertydatatype) | The property data type that will be filtered. 
 
 
 

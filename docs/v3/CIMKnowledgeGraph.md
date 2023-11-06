@@ -58,6 +58,7 @@
 | dataLoadingConfigurations | [[CIMKnowledgeGraphDataLoadingConfiguration]](CIMKnowledgeGraph.md#cimknowledgegraphdataloadingconfiguration) | The array of Data Loading Configurations referenced by this Investigation. All configurations are expected to have unique names. 
 | searchDefinitions | [[CIMKnowledgeGraphSearchDefinition]](CIMKnowledgeGraph.md#cimknowledgegraphsearchdefinition) | The array of search definitions referenced by this Investigation. All search definitions are expected to have unique names. 
 | queryDefinitions | [[CIMKnowledgeGraphQueryDefinition]](CIMKnowledgeGraph.md#cimknowledgegraphquerydefinition) | The array of query definitions referenced by this Investigation. All query definitions are expected to have unique names. 
+| filteredFindPathsConfigurations | [[CIMFilteredFindPathsConfiguration]](CIMKnowledgeGraph.md#cimfilteredfindpathsconfiguration) | The array of Filtered Find Paths Configurations referenced by this Investigation. All configurations are expected to have unique names. 
 
 
 

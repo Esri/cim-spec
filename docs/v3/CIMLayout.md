@@ -35,6 +35,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -151,6 +152,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -166,6 +168,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | mapFrame | string | The map frame associated with the map surround. 
+| minScale | double | The minimum scale. 
+| maxScale | double | The maximum scale. 
 
 
 ### CIMNorthArrow 
@@ -237,6 +241,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -351,6 +356,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -366,6 +372,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | mapFrame | string | The map frame associated with the map surround. 
+| minScale | double | The minimum scale. 
+| maxScale | double | The maximum scale. 
 
 
 ### CIMChartFrame 
@@ -499,6 +507,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -562,6 +571,8 @@
 | maxInteriorAngle | double | The maximum value of the interior angle that determines the edge of the mapFrame polygon. The angle is defined in degrees. 
 | edgeMinimumLength | double | The minimum length of the edge of the mapFrame polygon in page units. 
 | mapGridEdges | [[CIMMapGridEdge]](CIMLayout.md#cimmapgridedge) | The map grid edges. 
+| minScale | double | The minimum scale. 
+| maxScale | double | The maximum scale. 
 
 
 ### CIMCustomGrid 
@@ -643,6 +654,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -658,6 +670,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | mapFrame | string | The map frame associated with the map surround. 
+| minScale | double | The minimum scale. 
+| maxScale | double | The maximum scale. 
 
 
 ### CIMScaleBar 
@@ -905,6 +919,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMGraphicElement 
@@ -932,6 +947,8 @@
 | maxInteriorAngle | double | The maximum value of the interior angle that determines the edge of the mapFrame polygon. The angle is defined in degrees. 
 | edgeMinimumLength | double | The minimum length of the edge of the mapFrame polygon in page units. 
 | mapGridEdges | [[CIMMapGridEdge]](CIMLayout.md#cimmapgridedge) | The map grid edges. 
+| minScale | double | The minimum scale. 
+| maxScale | double | The maximum scale. 
 
 
 ### CIMGraticule 
@@ -1092,6 +1109,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -1135,6 +1153,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -1167,6 +1186,7 @@
 | excludePageNumberPages | string | The comma delimited list of pages to exclude the page number from. 
 | excludeSectionPages | string | The comma delimited list of pages to exclude the section from. 
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
+| autoGrowTextElements | boolean | A value indicating whether the height of Text elements in sections will grow based on their content. 
 
 
 ### CIMGroupFooter 
@@ -1196,6 +1216,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -1228,6 +1249,7 @@
 | excludePageNumberPages | string | The comma delimited list of pages to exclude the page number from. 
 | excludeSectionPages | string | The comma delimited list of pages to exclude the section from. 
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
+| autoGrowTextElements | boolean | A value indicating whether the height of Text elements in sections will grow based on their content. 
 
 
 ### CIMGroupHeader 
@@ -1543,6 +1565,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -1558,6 +1581,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | mapFrame | string | The map frame associated with the map surround. 
+| minScale | double | The minimum scale. 
+| maxScale | double | The maximum scale. 
 
 
 ### CIMLegend 
@@ -1699,6 +1724,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -1719,6 +1745,8 @@
 | extentIndicators | [[CIMExtentIndicator]](CIMLayout.md#cimextentindicator) | The extent indicators associated with the map frame. 
 | grids | [[CIMMapGrid]](Types.md#mapgrid) | The Grids and Graticules associated with the MapFrame. 
 | useMapBackgroundColor | boolean | A value indicating whether the MapFrame should use the Map background color. 
+| extentIndicatorsExpanded | boolean | A value indicating whether the map frame extent indicators are expanded in the contents pane. 
+| mapGridsExpanded | boolean | A value indicating whether the map frame grids are expanded in the contents pane. 
 
 
 
@@ -1757,6 +1785,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -1772,6 +1801,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | mapFrame | string | The map frame associated with the map surround. 
+| minScale | double | The minimum scale. 
+| maxScale | double | The maximum scale. 
 
 
 ### CIMBaseStreetIndex 
@@ -1848,6 +1879,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -1863,6 +1895,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | mapFrame | string | The map frame associated with the map surround. 
+| minScale | double | The minimum scale. 
+| maxScale | double | The maximum scale. 
 
 
 ### CIMBaseStreetIndex 
@@ -1956,6 +1990,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -1971,6 +2006,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | mapFrame | string | The map frame associated with the map surround. 
+| minScale | double | The minimum scale. 
+| maxScale | double | The maximum scale. 
 
 
 ### CIMNorthArrow 
@@ -2007,6 +2044,8 @@
 | maxInteriorAngle | double | The maximum value of the interior angle that determines the edge of the mapFrame polygon. The angle is defined in degrees. 
 | edgeMinimumLength | double | The minimum length of the edge of the mapFrame polygon in page units. 
 | mapGridEdges | [[CIMMapGridEdge]](CIMLayout.md#cimmapgridedge) | The map grid edges. 
+| minScale | double | The minimum scale. 
+| maxScale | double | The maximum scale. 
 
 
 ### CIMMeasuredGrid 
@@ -2041,6 +2080,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -2056,6 +2096,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | mapFrame | string | The map frame associated with the map surround. 
+| minScale | double | The minimum scale. 
+| maxScale | double | The maximum scale. 
 
 
 ### CIMMapProductSurround 
@@ -2283,6 +2325,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -2298,6 +2341,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | mapFrame | string | The map frame associated with the map surround. 
+| minScale | double | The minimum scale. 
+| maxScale | double | The maximum scale. 
 
 
 ### CIMProfileFrame 
@@ -2610,6 +2655,8 @@
 | maxInteriorAngle | double | The maximum value of the interior angle that determines the edge of the mapFrame polygon. The angle is defined in degrees. 
 | edgeMinimumLength | double | The minimum length of the edge of the mapFrame polygon in page units. 
 | mapGridEdges | [[CIMMapGridEdge]](CIMLayout.md#cimmapgridedge) | The map grid edges. 
+| minScale | double | The minimum scale. 
+| maxScale | double | The maximum scale. 
 
 
 ### CIMReferenceGrid 
@@ -2666,6 +2713,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -2698,6 +2746,7 @@
 | excludePageNumberPages | string | The comma delimited list of pages to exclude the page number from. 
 | excludeSectionPages | string | The comma delimited list of pages to exclude the section from. 
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
+| autoGrowTextElements | boolean | A value indicating whether the height of Text elements in sections will grow based on their content. 
 
 
 ### CIMRelatedReportSection 
@@ -2800,6 +2849,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -2832,6 +2882,7 @@
 | excludePageNumberPages | string | The comma delimited list of pages to exclude the page number from. 
 | excludeSectionPages | string | The comma delimited list of pages to exclude the section from. 
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
+| autoGrowTextElements | boolean | A value indicating whether the height of Text elements in sections will grow based on their content. 
 
 
 ### CIMReportDetails 
@@ -2941,6 +2992,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -2973,6 +3025,7 @@
 | excludePageNumberPages | string | The comma delimited list of pages to exclude the page number from. 
 | excludeSectionPages | string | The comma delimited list of pages to exclude the section from. 
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
+| autoGrowTextElements | boolean | A value indicating whether the height of Text elements in sections will grow based on their content. 
 
 
 ### CIMReportFooter 
@@ -3001,6 +3054,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -3033,6 +3087,7 @@
 | excludePageNumberPages | string | The comma delimited list of pages to exclude the page number from. 
 | excludeSectionPages | string | The comma delimited list of pages to exclude the section from. 
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
+| autoGrowTextElements | boolean | A value indicating whether the height of Text elements in sections will grow based on their content. 
 
 
 ### CIMReportHeader 
@@ -3062,6 +3117,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -3094,6 +3150,7 @@
 | excludePageNumberPages | string | The comma delimited list of pages to exclude the page number from. 
 | excludeSectionPages | string | The comma delimited list of pages to exclude the section from. 
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
+| autoGrowTextElements | boolean | A value indicating whether the height of Text elements in sections will grow based on their content. 
 
 
 ### CIMReportPageSection 
@@ -3155,6 +3212,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -3187,6 +3245,7 @@
 | excludePageNumberPages | string | The comma delimited list of pages to exclude the page number from. 
 | excludeSectionPages | string | The comma delimited list of pages to exclude the section from. 
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
+| autoGrowTextElements | boolean | A value indicating whether the height of Text elements in sections will grow based on their content. 
 
 
 ### CIMReportPageFooter 
@@ -3215,6 +3274,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -3247,6 +3307,7 @@
 | excludePageNumberPages | string | The comma delimited list of pages to exclude the page number from. 
 | excludeSectionPages | string | The comma delimited list of pages to exclude the section from. 
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
+| autoGrowTextElements | boolean | A value indicating whether the height of Text elements in sections will grow based on their content. 
 
 
 ### CIMReportPageHeader 
@@ -3275,6 +3336,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -3307,6 +3369,7 @@
 | excludePageNumberPages | string | The comma delimited list of pages to exclude the page number from. 
 | excludeSectionPages | string | The comma delimited list of pages to exclude the section from. 
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
+| autoGrowTextElements | boolean | A value indicating whether the height of Text elements in sections will grow based on their content. 
 
 
 ### CIMReportPageSection 
@@ -3336,6 +3399,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -3368,6 +3432,7 @@
 | excludePageNumberPages | string | The comma delimited list of pages to exclude the page number from. 
 | excludeSectionPages | string | The comma delimited list of pages to exclude the section from. 
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
+| autoGrowTextElements | boolean | A value indicating whether the height of Text elements in sections will grow based on their content. 
 
 
 ### CIMReportSection 
@@ -3397,6 +3462,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -3429,6 +3495,7 @@
 | excludePageNumberPages | string | The comma delimited list of pages to exclude the page number from. 
 | excludeSectionPages | string | The comma delimited list of pages to exclude the section from. 
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
+| autoGrowTextElements | boolean | A value indicating whether the height of Text elements in sections will grow based on their content. 
 
 
 
@@ -3536,6 +3603,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -3551,6 +3619,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | mapFrame | string | The map frame associated with the map surround. 
+| minScale | double | The minimum scale. 
+| maxScale | double | The maximum scale. 
 
 
 ### CIMScaleBar 
@@ -3645,6 +3715,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -3660,6 +3731,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | mapFrame | string | The map frame associated with the map surround. 
+| minScale | double | The minimum scale. 
+| maxScale | double | The maximum scale. 
 
 
 ### CIMScaleBar 
@@ -3731,6 +3804,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -3746,6 +3820,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | mapFrame | string | The map frame associated with the map surround. 
+| minScale | double | The minimum scale. 
+| maxScale | double | The maximum scale. 
 
 
 ### CIMMapProductSurround 
@@ -3824,7 +3900,7 @@
 | Period| 0| Period delimiter. 
 | Space| 1| Space delimiter. 
 | Hyphen| 2| Hyphen delimiter. 
-| Underscore| 2| Underscore delimiter. 
+| Underscore| 3| Underscore delimiter. 
 
 
 
@@ -3855,6 +3931,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -3870,6 +3947,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | mapFrame | string | The map frame associated with the map surround. 
+| minScale | double | The minimum scale. 
+| maxScale | double | The maximum scale. 
 
 
 ### CIMMapProductSurround 
@@ -3915,6 +3994,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -3930,6 +4010,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | mapFrame | string | The map frame associated with the map surround. 
+| minScale | double | The minimum scale. 
+| maxScale | double | The maximum scale. 
 
 
 ### CIMTableFrame 
@@ -4040,6 +4122,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMFrameElement 
@@ -4055,6 +4138,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | mapFrame | string | The map frame associated with the map surround. 
+| minScale | double | The minimum scale. 
+| maxScale | double | The maximum scale. 
 
 
 ### CIMNorthArrow 

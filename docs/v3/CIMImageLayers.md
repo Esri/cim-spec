@@ -272,6 +272,8 @@
 | multidimensionalExtent | [CIMRasterMultidimensionalExtentDefinition](CIMImageLayers.md#cimrastermultidimensionalextentdefinition) | A multidimensional extent definition describing the data cube(s) used for analysis. 
 | activeSlice | [CIMRasterMultidimensionalDisplayDefinition](CIMImageLayers.md#cimrastermultidimensionaldisplaydefinition) | A multidimensional display definition describing the current display slice. 
 | renderingRule | [CIMRenderingRule](CIMImageLayers.md#cimrenderingrule) | The rendering rule. 
+| activeCustomColorizer | string | The active custom colorizer. 
+| customColorizers | [[CIMRasterColorizer]](Types.md#rastercolorizer) | The custom colorizers. 
 
 
 ### CIMImageServiceLayerDefinition 
@@ -291,6 +293,7 @@
 | useSelectionSymbol | boolean | A value indicating whether or not to use the selection symbol. 
 | ignoreRenderingRuleOnIdentify | boolean | A value indicating whether or not to ignore the rendering rule on identify. 
 | useServiceCache | boolean | A value indicating whether or not to use the service cache. 
+| pageDefinition | [CIMPageDefinition](CIMVectorLayers.md#cimpagedefinition) | The page definition which allows for using current map series page to filter features. 
 
 
 ### CIMMosaicSubLayerDefinition 
@@ -375,6 +378,8 @@
 | multidimensionalExtent | [CIMRasterMultidimensionalExtentDefinition](CIMImageLayers.md#cimrastermultidimensionalextentdefinition) | A multidimensional extent definition describing the data cube(s) used for analysis. 
 | activeSlice | [CIMRasterMultidimensionalDisplayDefinition](CIMImageLayers.md#cimrastermultidimensionaldisplaydefinition) | A multidimensional display definition describing the current display slice. 
 | renderingRule | [CIMRenderingRule](CIMImageLayers.md#cimrenderingrule) | The rendering rule. 
+| activeCustomColorizer | string | The active custom colorizer. 
+| customColorizers | [[CIMRasterColorizer]](Types.md#rastercolorizer) | The custom colorizers. 
 
 
 ### CIMImageServiceLayerDefinition 
@@ -394,6 +399,7 @@
 | useSelectionSymbol | boolean | A value indicating whether or not to use the selection symbol. 
 | ignoreRenderingRuleOnIdentify | boolean | A value indicating whether or not to ignore the rendering rule on identify. 
 | useServiceCache | boolean | A value indicating whether or not to use the service cache. 
+| pageDefinition | [CIMPageDefinition](CIMVectorLayers.md#cimpagedefinition) | The page definition which allows for using current map series page to filter features. 
 
 
 
@@ -471,6 +477,7 @@
 | rangeDefinitions | [[CIMRangeDefinition]](CIMVectorLayers.md#cimrangedefinition) | The range definitions of the mosaic dataset. 
 | activeRangeName | string | The name of the active range. 
 | activeVariables | [string] | An array of the active variables. 
+| pageDefinition | [CIMPageDefinition](CIMVectorLayers.md#cimpagedefinition) | The page definition which allows for using current map series page to filter features. 
 
 
 
@@ -720,6 +727,8 @@
 | multidimensionalExtent | [CIMRasterMultidimensionalExtentDefinition](CIMImageLayers.md#cimrastermultidimensionalextentdefinition) | A multidimensional extent definition describing the data cube(s) used for analysis. 
 | activeSlice | [CIMRasterMultidimensionalDisplayDefinition](CIMImageLayers.md#cimrastermultidimensionaldisplaydefinition) | A multidimensional display definition describing the current display slice. 
 | renderingRule | [CIMRenderingRule](CIMImageLayers.md#cimrenderingrule) | The rendering rule. 
+| activeCustomColorizer | string | The active custom colorizer. 
+| customColorizers | [[CIMRasterColorizer]](Types.md#rastercolorizer) | The custom colorizers. 
 
 
 ### CIMNitfSubLayerDefinition 
@@ -791,6 +800,7 @@
 |---------|--------|--------|
 | dataConnection | [DataConnection](Types.md#dataconnection) | The data connection for the raster this layer is based on. 
 | layers | [string] | The layer URIs of the layers in the NITF layer. 
+| extraItems | [string] | The names of the layers (and tables) not visible by default. 
 
 
 
@@ -826,6 +836,22 @@
 | Brovey| 1| Brovey. 
 | ESRI| 2| Esri. 
 | Mean| 3| Mean. 
+
+
+
+
+## CIMRangeDimensionValue
+#### Represents a range dimension name and value pair used to define the multidimensional display definition for the current display slice. 
+
+
+### CIMRangeDimensionValue 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| rangeDimensionName | string | The name of the dimension. 
+| rangeDimensionValue | [CIMRange](CIMVectorLayers.md#cimrange) | The range dimension value. 
+
+
 
 
 
@@ -874,6 +900,7 @@
 | contrast | long | The contrast value. 
 | brightness | long | The brightness value. 
 | noDataColor | [Color](Types.md#color) | The no data color. 
+| name | string | The name. 
 
 
 ### CIMRasterCMYKColorizer 
@@ -943,6 +970,7 @@
 | contrast | long | The contrast value. 
 | brightness | long | The brightness value. 
 | noDataColor | [Color](Types.md#color) | The no data color. 
+| name | string | The name. 
 
 
 ### CIMDataNormalization 
@@ -1013,6 +1041,7 @@
 | contrast | long | The contrast value. 
 | brightness | long | The brightness value. 
 | noDataColor | [Color](Types.md#color) | The no data color. 
+| name | string | The name. 
 
 
 ### CIMRasterColorMapColorizer 
@@ -1078,6 +1107,7 @@
 | contrast | long | The contrast value. 
 | brightness | long | The brightness value. 
 | noDataColor | [Color](Types.md#color) | The no data color. 
+| name | string | The name. 
 
 
 ### CIMRasterDiscreteColorColorizer 
@@ -1202,6 +1232,8 @@
 | multidimensionalExtent | [CIMRasterMultidimensionalExtentDefinition](CIMImageLayers.md#cimrastermultidimensionalextentdefinition) | A multidimensional extent definition describing the data cube(s) used for analysis. 
 | activeSlice | [CIMRasterMultidimensionalDisplayDefinition](CIMImageLayers.md#cimrastermultidimensionaldisplaydefinition) | A multidimensional display definition describing the current display slice. 
 | renderingRule | [CIMRenderingRule](CIMImageLayers.md#cimrenderingrule) | The rendering rule. 
+| activeCustomColorizer | string | The active custom colorizer. 
+| customColorizers | [[CIMRasterColorizer]](Types.md#rastercolorizer) | The custom colorizers. 
 
 
 
@@ -1250,8 +1282,9 @@
 | variableName | string | The name of the variable. 
 | timeValue | [TimeExtent](ExternalReferences.md#timeextent) | The time value for the current display slice. 
 | hasRangeDimension | boolean | A value indicating whether the active variable has a range dimension. 
-| rangeDimensionName | string | The name of the range dimension. 
-| rangeDimensionValue | [CIMRange](CIMVectorLayers.md#cimrange) | The range dimension value for the current display slice. 
+| rangeDimensionName | string | The name of the selected range dimension. 
+| rangeDimensionValue | [CIMRange](CIMVectorLayers.md#cimrange) | The selected range dimension value for the current display slice. 
+| additionalDimensionValues | [[CIMRangeDimensionValue]](CIMImageLayers.md#cimrangedimensionvalue) | The additional range dimension values for the current display slice. 
 
 
 
@@ -1286,6 +1319,7 @@
 | contrast | long | The contrast value. 
 | brightness | long | The brightness value. 
 | noDataColor | [Color](Types.md#color) | The no data color. 
+| name | string | The name. 
 
 
 ### CIMRasterRGBColorizer 
@@ -1362,6 +1396,7 @@
 | contrast | long | The contrast value. 
 | brightness | long | The brightness value. 
 | noDataColor | [Color](Types.md#color) | The no data color. 
+| name | string | The name. 
 
 
 ### CIMRasterShadedReliefColorizer 
@@ -1412,6 +1447,7 @@
 | contrast | long | The contrast value. 
 | brightness | long | The brightness value. 
 | noDataColor | [Color](Types.md#color) | The no data color. 
+| name | string | The name. 
 
 
 ### CIMRasterStretchColorizer 
@@ -1483,6 +1519,7 @@
 | contrast | long | The contrast value. 
 | brightness | long | The brightness value. 
 | noDataColor | [Color](Types.md#color) | The no data color. 
+| name | string | The name. 
 
 
 ### CIMRasterUniqueValueColorizer 
@@ -1531,6 +1568,7 @@
 | contrast | long | The contrast value. 
 | brightness | long | The brightness value. 
 | noDataColor | [Color](Types.md#color) | The no data color. 
+| name | string | The name. 
 
 
 ### CIMRasterVectorFieldColorizer 
@@ -1736,6 +1774,7 @@
 | rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
 | lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
 
 
 ### CIMGraphicElement 
@@ -1749,7 +1788,6 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| expanded | boolean | A value indicating whether the graphic is expanded in the contents pane. 
 
 
 

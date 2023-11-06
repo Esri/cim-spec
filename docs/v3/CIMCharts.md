@@ -17,6 +17,7 @@
 | mapSelectionHandling | [enumeration ChartMapSelectionHandling](CIMCharts.md#enumeration-chartmapselectionhandling) | A setting which indicates whether chart handles selection in the input layer by creating series only from the selected data or highlights selected values on the chart made from entire dataset. 
 | metaData | string | The client metadata about the chart. 
 | multiSeriesChartProperties | [MultiSeriesChartProperties](Types.md#multiserieschartproperties) | The multi series chart properties for supported chart types. 
+| enableServerSideProcessing | boolean | A value indicating whether the server-side processing is enabled for supported chart types and data sources. 
 
 
 
@@ -67,6 +68,8 @@
 | zoomStartPosition | double | The relative start position for zoom/pan navigation. The value range is normalized between 0 and 1. This property can have a value between 0 and 1. 
 | zoomEndPosition | double | The relative end position for zoom/pan navigation. The value range is normalized between 0 and 1. This property can have a value between 0 and 1. 
 | inverted | boolean | A value indicating whether the chart axis is inverted. 
+| labelAngle | double | The rotation angle of the axis labels. The value range is from -90 to 90. This property can have a value between -90 and 90. 
+| useAutomaticLabelAngle | boolean | A value indicating whether the rotation angle of the axis labels is auto calculated. 
 
 
 
@@ -112,6 +115,8 @@
 | showMovingAverage | boolean | A value indicating whether to show a moving average line overlay for the time based bar chart. 
 | movingAverageLineSymbolProperties | [CIMChartLineSymbolProperties](CIMCharts.md#cimchartlinesymbolproperties) | The line symbol for the moving average. 
 | movingAveragePeriod | long long | A period value for moving average calculation. 
+| timeBinningProperties | [CIMChartTimeBinningProperties](CIMCharts.md#cimcharttimebinningproperties) | The time binning properties for bar category field values. If null, bar series will use unique values to create bar categories. 
+| nullPolicy | [enumeration ChartNullPolicy](CIMCharts.md#enumeration-chartnullpolicy) | The policy for handling missing data. 
 
 
 
@@ -299,6 +304,8 @@
 | locationID | long | The index of the location this definition corresponds to. 
 | dimension | string | The dimension to be plotted on the y axis. 
 | dimensionValues | [double] | The dimension values corresponding to the dimension to be plotted on the y axis. 
+| dimensionValuesSymbols | [[CIMSymbolReference]](CIMRenderers.md#cimsymbolreference) | The symbols for dimension values. 
+| dimensionValuesLabels | [string] | The labels for dimension values. 
 
 
 
@@ -465,6 +472,7 @@
 | CCDCArguments | [CIMChartDimensionalProfileCCDCArguments](CIMCharts.md#cimchartdimensionalprofileccdcarguments) | The CCDC options. 
 | landTrendrArguments | [CIMChartDimensionalProfileLandTrendrArguments](CIMCharts.md#cimchartdimensionalprofilelandtrendrarguments) | The LandTrendr options. 
 | timeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The time extent used by the chart. 
+| verticalOrientation | boolean | A value indicating whether this is a vertical (true) or horizontal (false) orientation of a dimensional series. 
 
 
 
@@ -485,6 +493,7 @@
 | dimension | string | The dimension to be plotted on the y axis. 
 | dimensionValues | [double] | The dimension values corresponding to the dimension to be plotted on the y axis. 
 | dimensionValuesSymbols | [[CIMSymbolReference]](CIMRenderers.md#cimsymbolreference) | The symbols for dimension values. 
+| dimensionValuesLabels | [string] | The labels for dimension values. 
 
 
 
@@ -714,13 +723,15 @@
 | lineSymbolProperties | [CIMChartLineSymbolProperties](CIMCharts.md#cimchartlinesymbolproperties) | The line symbol properties of the line series. 
 | markerSymbolProperties | [CIMChartMarkerSymbolProperties](CIMCharts.md#cimchartmarkersymbolproperties) | The marker symbol properties of the line series. 
 | timeAggregationType | [enumeration ChartTimeAggregationType](CIMCharts.md#enumeration-charttimeaggregationtype) | The time aggregation type. 
+| referenceTime | [TimeInstant](ExternalReferences.md#timeinstant) | The reference time value. Valid when TimeAggregationType property is set to ReferenceTime. 
 | timeIntervalUnits | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units used for the time interval size. 
 | timeIntervalSize | double | The time interval size. 
-| calculateAutomaticTimeInterval | boolean | A value indicating whether the time interval is automatically calculated. 
+| calculateAutomaticTimeInterval | boolean | A value indicating whether the time interval units and size are automatically calculated. 
 | trimIncompleteTimeInterval | boolean | A value indicating whether incomplete time intervals at the ends of time interval ranges are trimmed in order to avoid bias. 
 | nullPolicy | [enumeration ChartNullPolicy](CIMCharts.md#enumeration-chartnullpolicy) | The policy for handling missing data. 
 | verticalOrientation | boolean | A value indicating whether this is a vertical (true) or horizontal (false) orientation of a line series. 
 | sortedCategoryValues | [string] | The array of sorted category values for custom sort. 
+| smoothLine | boolean | A value indicating whether the line is smoothed with curves. 
 
 
 
@@ -754,9 +765,10 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | geometry | [Geometry](ExternalReferences.md#geometry) | The geometry. 
-| symbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol. 
+| symbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol of this location as symbolized in the chart. 
 | label | string | The label. 
 | enabled | boolean | A value indicating whether this location is enabled or not. 
+| mapLocationSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol of this location as symbolized in the map. 
 
 
 
@@ -847,6 +859,8 @@
 | colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp from which break colors are created. 
 | columnSortedCategoryValues | [string] | The array of sorted category values for column-wise custom sort. 
 | rowSortedCategoryValues | [string] | The array of sorted category values for row-wise custom sort. 
+| rowsTimeBinningProperties | [CIMChartTimeBinningProperties](CIMCharts.md#cimcharttimebinningproperties) | The time binning properties for row category field values. If null, matrix heat series will use unique values to create row categories. 
+| columnsTimeBinningProperties | [CIMChartTimeBinningProperties](CIMCharts.md#cimcharttimebinningproperties) | The time binning properties for column category field values. If null, matrix heat series will use unique values to create column categories. 
 
 
 
@@ -1293,6 +1307,8 @@
 | bandID | long | The band ID. 
 | symbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol. 
 | label | string | The label. 
+| dimensionValue | double | The value. 
+| time | [TimeInstant](ExternalReferences.md#timeinstant) | The time at which the dimension value is to be used for the profile. 
 
 
 
@@ -1347,6 +1363,8 @@
 | layers | [[CIMChartSurfaceProfileLayer]](CIMCharts.md#cimchartsurfaceprofilelayer) | The layers to be used as additional inputs for the profile. 
 | horizontalUnit | [Unit](ExternalReferences.md#unit) | The unit of measure to be used for the axis. 
 | verticalScale | double | A value indicating the scale value for the axis. 
+| variable | string | The name of the variable for which the values are to be plotted. 
+| dimension | string | The name of the dimension for which the values are to be plotted. 
 
 
 
@@ -1399,6 +1417,145 @@
 | EqualIntervalsFromStartTime| 1| Time intervals start with the first (earliest) data point. 
 | EqualIntervalsFromEndTime| 2| Time intervals start with the last (latest) data point. 
 | CalendarIntervals| 3| Time intervals follow calendar breaks. 
+| ReferenceTime| 4| Time intervals snap to reference time. 
+
+
+
+
+## CIMChartTimeBinningProperties
+#### Provides access to members that control time binning properties. 
+
+
+### CIMChartTimeBinningProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| timeAggregationType | [enumeration ChartTimeAggregationType](CIMCharts.md#enumeration-charttimeaggregationtype) | The time aggregation type. 
+| referenceTime | [TimeInstant](ExternalReferences.md#timeinstant) | The reference time value. Valid when TimeAggregationType property is set to ReferenceTime. 
+| timeIntervalUnits | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The units used for the time interval size. 
+| timeIntervalSize | double | The time interval size. 
+| calculateAutomaticTimeInterval | boolean | A value indicating whether the time interval units and size are automatically calculated. 
+| trimIncompleteTimeInterval | boolean | A value indicating whether incomplete time intervals at the ends of time interval ranges are trimmed in order to avoid bias. 
+
+
+
+
+
+
+## CIMChartTrajectoryProfileFeature
+#### Represents the definition of a track or point for which data is to be plotted. 
+
+
+### CIMChartTrajectoryProfileFeature 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| ID | long long | The object ID of the track or point feature. 
+| symbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The feature symbol. 
+| label | string | The feature label. 
+| enabled | boolean | A value indicating whether this feature is enabled or not. 
+| trajectoryID | long long | A value indicating the trajectoryID for this feature. 
+
+
+
+
+
+
+## CIMChartTrajectoryProfileLayer
+#### Represents the layer to be used as an additional input. 
+
+
+### CIMChartTrajectoryProfileLayer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| URI | string | The URI of the layer. 
+| ID | long long | The object ID of the track feature. 
+| symbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The layer symbol. 
+| label | string | The layer label. 
+| enabled | boolean | A value indicating whether this layer is enabled or not. 
+
+
+
+
+
+### Enumeration: ChartTrajectoryProfilePlotType
+#### Represents the trajectory profile plot type. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Tracks| 0| Plot multiple tracks using one variable. 
+| Track| 1| Plot single track using multiple variables. 
+| Points| 2| Plot multiple points using one variable. 
+| Layers| 3| Plot tracks from multiple layers using multiple variables. 
+
+
+
+
+## CIMChartTrajectoryProfileSeries
+#### Represents a trajectory profile chart series. 
+
+
+### CIMChartSeries 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name of the series shown in the legend. 
+| uniqueName | string | The default and unique name of the series. 
+| fields | [string] | The data field names in the series. Optional depending on series type. 
+| orderFields | [string] | The sort field names in the series. 
+| groupFields | [string] | The group field names in the series. 
+| whereClause | string | The format string for series value labels. 
+| showLabels | boolean | A value indicating whether the series shows data labels. 
+| horizontalAxis | long | The index of horizontal axis. 
+| verticalAxis | long | The index of vertical axis. 
+| colorType | [enumeration ChartColorType](CIMCharts.md#enumeration-chartcolortype) | The type of color for the series. 
+| fieldAggregation | [string] | The aggregate field values if series data has a group field. Allowed values are count, sum, median, mean, and empty string. 
+| orderFieldsSortTypes | [long] | The array of sort order types for fields in OrderFields property Allowed values 0(Ascending), 1(Descending). 
+| visible | boolean | A value indicating whether the series is visible or not. 
+| dataLabelText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text style for the data label. 
+| multiSeries | boolean | A value indicating whether this series is a multi series. 
+| locations | [[CIMChartLocationDefinition]](CIMCharts.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
+| fieldExpressions | [[CIMExpressionInfo]](CIMRenderers.md#cimexpressioninfo) | Expression properties for chart series' fields. 
+
+
+### CIMChartTrajectoryProfileSeries 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| plotType | [enumeration ChartTrajectoryProfilePlotType](CIMCharts.md#enumeration-charttrajectoryprofileplottype) | The type of plot for this chart. 
+| variables | [[CIMChartTrajectoryProfileVariable]](CIMCharts.md#cimcharttrajectoryprofilevariable) | The variables for which the tracks or points are to be plotted. 
+| features | [[CIMChartTrajectoryProfileFeature]](CIMCharts.md#cimcharttrajectoryprofilefeature) | The tracks or points to be used to draw the profile. 
+| layers | [[CIMChartTrajectoryProfileLayer]](CIMCharts.md#cimcharttrajectoryprofilelayer) | The layers to be used as additional inputs for the profile. 
+| timeIntervalSize | double | The interval size for the time plotted on the x axis. 
+| timeIntervalUnits | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The unit of time for the interval size. 
+| timeAggregationType | [enumeration ChartTimeAggregationType](CIMCharts.md#enumeration-charttimeaggregationtype) | The type of grouping to be applied on the time values plotted on the x axis. 
+| trimIncompleteTimeInterval | boolean | A value indicating whether incomplete time intervals at the ends of time interval ranges are trimmed in order to avoid bias. 
+| dateTimeFormat | string | The format of the date plotted on the x axis. 
+| areaOfInterestURI | string | The AOI to be used for plotting the chart. 
+| verticalOrientation | boolean | A value indicating whether the chart is vertically oriented. 
+| trajectoryIDsURI | string | The URI of the binary reference containing the trajectory IDs selected when plot type is Points. 
+| nullPolicy | [enumeration ChartNullPolicy](CIMCharts.md#enumeration-chartnullpolicy) | The policy for handling missing data. 
+
+
+
+
+
+
+## CIMChartTrajectoryProfileVariable
+#### Represents the definition of a variable for which data is to be plotted. 
+
+
+### CIMChartTrajectoryProfileVariable 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The variable name. 
+| symbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The variable symbol. 
+| label | string | The variable label. 
+| enabled | boolean | A value indicating whether this variable is enabled or not. 
+
+
 
 
 

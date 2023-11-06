@@ -419,6 +419,13 @@
 | standaloneTables | [string] | The standalone tables as an array of table repository paths. 
 
 
+### CIMGroupLayerProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| sublayerVisibilityMode | [enumeration SublayerVisibilityMode](CIMLayer.md#enumeration-sublayervisibilitymode) | The visibility mode for sublayers. 
+
+
 ### CIMGroupLayerDefinition 
 
 |Property | Type | Description | 
@@ -604,6 +611,16 @@
 | serviceLayerID | long | Identifier that will be used to identify the layer in server. 
 
 
+
+
+
+### Enumeration: SublayerVisibilityMode
+#### Visibility modes for layers inside group layers. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Independent| 0| Each sublayer has its own visibility setting, controlled independently of others. 
+| Exclusive| 1| Only one sublayer can be visible at a time. 
 
 
 

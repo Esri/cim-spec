@@ -82,7 +82,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | leaderLineSymbol | [CIMLineSymbol](CIMSymbols.md#cimlinesymbol) | The line symbol to draw leaders with. 
-| gap | double | The gap (in points) between the point symbol and the beginning of the leader line. 
+| gap | double | The gap (in points) between the text symbol and the beginning of the leader line. 
 | lineStyle | [enumeration LeaderLineStyle](CIMSymbols.md#enumeration-leaderlinestyle) | The style of line to generate when a Point leader is drawn defined by an enumeration value. Line leaders will always be drawn with their own geometry. 
 
 
@@ -1341,6 +1341,8 @@
 | miterLimit | double | The maximum 'sharpness' that is allowed for Miter joins. If the spike created by the miter join exceeds the miter limit times the width of the stroke, the sharp angle will be clipped and rendered with a bevel join. This property is only applied to the symbol layer when the JoinType is set to Miter. 
 | width | double | The width of the stroke. 
 | closeCaps3D | boolean | A value indicating whether to close caps when drawing them in 3D. When set to false, the caps are hollow. 
+| height3D | double | The height. Used when the 3D line style is Rectangle. 
+| anchor3D | [enumeration Simple3DLineAnchor](CIMSymbols.md#enumeration-simple3dlineanchor) | The vertical anchor of the 3D line style applied to the stroke. This property is ignored for the Strip and Wall styles. 
 
 
 ### CIMGradientStroke 
@@ -2129,6 +2131,8 @@
 | miterLimit | double | The maximum 'sharpness' that is allowed for Miter joins. If the spike created by the miter join exceeds the miter limit times the width of the stroke, the sharp angle will be clipped and rendered with a bevel join. This property is only applied to the symbol layer when the JoinType is set to Miter. 
 | width | double | The width of the stroke. 
 | closeCaps3D | boolean | A value indicating whether to close caps when drawing them in 3D. When set to false, the caps are hollow. 
+| height3D | double | The height. Used when the 3D line style is Rectangle. 
+| anchor3D | [enumeration Simple3DLineAnchor](CIMSymbols.md#enumeration-simple3dlineanchor) | The vertical anchor of the 3D line style applied to the stroke. This property is ignored for the Strip and Wall styles. 
 
 
 ### CIMPictureStroke 
@@ -2361,7 +2365,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | leaderLineSymbol | [CIMLineSymbol](CIMSymbols.md#cimlinesymbol) | The line symbol to draw leaders with. 
-| gap | double | The gap (in points) between the point symbol and the beginning of the leader line. 
+| gap | double | The gap (in points) between the text symbol and the beginning of the leader line. 
 | lineStyle | [enumeration LeaderLineStyle](CIMSymbols.md#enumeration-leaderlinestyle) | The style of line to generate when a Point leader is drawn defined by an enumeration value. Line leaders will always be drawn with their own geometry. 
 
 
@@ -2482,14 +2486,27 @@
 
 
 
+### Enumeration: Simple3DLineAnchor
+#### Defines the vertical anchor used to render the simple 3D line style in relation to the ground in 3D. This property is ignored for the Strip style which is drawn flat upon the surface, and for the Wall style which always uses a Bottom anchor. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Center| 0| The center of the 3D line style is vertically aligned with the ground. The 3D line style is rendered both above and under the ground as a result. 
+| Bottom| 1| The 3D line style is rendered above the ground as the vertical anchor is set to the bottom of the style. 
+| Top| 2| The 3D line style is rendered under the ground as the vertical anchor is set to the top of the style. 
+
+
+
 ### Enumeration: Simple3DLineStyle
 #### Simple 3D line styles which define how strokes will be rendered in 3D. 
 
 |Property | Value | Description | 
 |---------|--------|--------|
-| Tube| 0| Stroke draws as a tube where the width determines the diameter of the tube. 
-| Strip| 1| Stroke draws flat upon the surface. 
-| Wall| 2| Stroke is vertically oriented where Width determines the height of the wall. 
+| Tube| 0| Stroke draws as a circular tube where the width determines the diameter of the tube. 
+| Strip| 1| Stroke draws flat upon the surface at the specified width. 
+| Wall| 2| Stroke is vertically oriented where width determines the height of the wall. 
+| Square| 3| Stroke draws as a square tube where the width determines the height and width of the tube. 
+| Rectangle| 4| Stroke draws as a rectangular tube where the width property determines the width and height3D determines the height of the tube. 
 
 
 
@@ -2594,6 +2611,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | color | [Color](Types.md#color) | Color of the mesh stroke. 
+| thresholdAngle | double | The minimum edge angle between two neighboring face normals. 
+| applyThresholdAngleToBothSidesOfFaces | boolean | A value indicating whether threshold angle applies to both sides of faces. 
 
 
 
@@ -2626,6 +2645,8 @@
 | miterLimit | double | The maximum 'sharpness' that is allowed for Miter joins. If the spike created by the miter join exceeds the miter limit times the width of the stroke, the sharp angle will be clipped and rendered with a bevel join. This property is only applied to the symbol layer when the JoinType is set to Miter. 
 | width | double | The width of the stroke. 
 | closeCaps3D | boolean | A value indicating whether to close caps when drawing them in 3D. When set to false, the caps are hollow. 
+| height3D | double | The height. Used when the 3D line style is Rectangle. 
+| anchor3D | [enumeration Simple3DLineAnchor](CIMSymbols.md#enumeration-simple3dlineanchor) | The vertical anchor of the 3D line style applied to the stroke. This property is ignored for the Strip and Wall styles. 
 
 
 ### CIMSolidStroke 

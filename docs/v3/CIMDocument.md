@@ -150,6 +150,8 @@
 | showOnlyContingentValueFields | boolean | A value indicating whether the table field visibility settings should be overridden to only show fields that are part of one or more contingent value field groups. 
 | highlightInvalidContingentValueFields | boolean | A value indicating whether invalid contingent value fields should be highlighted in the table. 
 | autoPopulateContingentValueFields | boolean | A value indicating whether other contingent value fields should be automatically populated after a value is changed when only one match is valid. 
+| columnHeaderRowHeight | [enumeration TableRowHeightType](CIMDocument.md#enumeration-tablerowheighttype) | A value indicating the height for the column header row in the table. 
+| rowHeight | [enumeration TableRowHeightType](CIMDocument.md#enumeration-tablerowheighttype) | A value indicating the height for the rows in the table. 
 
 
 ### CIMExternalTableView 
@@ -343,6 +345,8 @@
 | showOnlyContingentValueFields | boolean | A value indicating whether the table field visibility settings should be overridden to only show fields that are part of one or more contingent value field groups. 
 | highlightInvalidContingentValueFields | boolean | A value indicating whether invalid contingent value fields should be highlighted in the table. 
 | autoPopulateContingentValueFields | boolean | A value indicating whether other contingent value fields should be automatically populated after a value is changed when only one match is valid. 
+| columnHeaderRowHeight | [enumeration TableRowHeightType](CIMDocument.md#enumeration-tablerowheighttype) | A value indicating the height for the column header row in the table. 
+| rowHeight | [enumeration TableRowHeightType](CIMDocument.md#enumeration-tablerowheighttype) | A value indicating the height for the rows in the table. 
 
 
 ### CIMMapTableView 
@@ -733,4 +737,16 @@
 | Count| 0| Regular value (numeric or text). 
 | Percent| 1| It is a percentage value and it should displayed using the rules for percentage values. 
 | Currency| 2| The value is a currency and should be displayed using the rules for currencies. 
+
+
+
+### Enumeration: TableRowHeightType
+#### Represents the height of rows in the table view. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| None| 0| No row height. 
+| Single| 1| The row will display one line of text. 
+| Double| 2| The row will display two lines of text. 
+| Triple| 3| The row will display three lines of text. 
 

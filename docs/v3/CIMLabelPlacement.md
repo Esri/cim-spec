@@ -351,6 +351,7 @@
 | allowAsymmetricOverrun | boolean | A value indicating whether a label may overrun one side of a polygon feature. 
 | allowStraddleStacking | boolean | A value indicating whether a stacked label may straddle the line feature. 
 | alternateLabelExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The ExpressionInfo for the alternate label expression. 
+| avoidOverlappingLabeledPolygonsAsIfHoles | boolean | A value indicating whether labels should avoid overlapping labeled polygons as if they were holes. 
 | avoidPolygonHoles | boolean | A value indicating whether labels should avoid holes in polygons. 
 | backgroundLabel | boolean | A value indicating whether to place the label first and allow other labels to be placed over it. 
 | boundaryLabelingAllowHoles | boolean | A value indicating whether to allow holes in boundary labeling. 
@@ -401,6 +402,7 @@
 | maximumLabelOverrun | double | The maximum distance that a label is allowed to overrun the end of its feature. 
 | maximumLabelOverrunUnit | [enumeration MaplexUnit](CIMLabelPlacement.md#enumeration-maplexunit) | The label overrun unit. 
 | maximumWordSpacing | double | Maximum word spacing. The word spacing may be increased up to this limit. 
+| measureFromClippedFeatureGeometry | boolean | A value indicating whether or not to measure the offset from the clipped feature geometry. This property applies to label offsets when using the Along Line or Fixed Position Polygon placement methods. 
 | minimumEndOfStreetClearance | double | Minimum clearance between street label and street end. 
 | minimumFeatureSizeUnit | [enumeration MaplexUnit](CIMLabelPlacement.md#enumeration-maplexunit) | Minimum feature size unit. 
 | minimumRepetitionInterval | double | The interval that must elapse before label is repeated. 
