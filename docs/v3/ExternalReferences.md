@@ -223,6 +223,30 @@ Feature types.
 | esriFTCoverageAnnotation| 6| Coverage Annotation Feature.
 | esriFTDimension| 7| Dimension Feature.
 | esriFTRasterCatalogItem| 8| Raster Catalog Item.
+| esriFTCatalogDatasetItem | 9| Catalog Dataset Item.
+| esriFTOrientedImageryDatasetItem | 10| Oriented Imagery Dataset Item.
+
+### Enumeration: esriFieldType
+ Field types.
+|Property | Value | Description |
+|---------|--------|--------|
+| esriFieldTypeSmallInteger| 0| 16-bit Integer.
+| esriFieldTypeInteger| 1| 32-bit Integer.
+| esriFieldTypeSingle| 2| Single-precision floating point number.
+| esriFieldTypeDouble| 3|  Double-precision floating point number.
+| esriFieldTypeString| 4| Character string.
+| esriFieldTypeDate| 5| Date.
+| esriFieldTypeOID| 6| Integer representing an object identifier. 32-bit OID has a length of 4 bytes, and 64-bit  OID has a length of 8 bytes.
+| esriFieldTypeGeometry| 7| Geometry.
+| esriFieldTypeBlob| 8| Binary Large Object.
+| esriFieldTypeRaster| 9| Raster.
+| esriFieldTypeGUID| 10| Globally Unique Identifier.
+| esriFieldTypeGlobalID| 11| Esri Global ID.
+| esriFieldTypeXML| 12| XML Document.
+| esriFieldTypeBigInteger| 13| 64-bit Integer.
+| esriFieldTypeDateOnly| 14| Date Only.
+| esriFieldTypeTimeOnly| 15| Time Only.
+| esriFieldTypeTimestampOffset| 16| Timestamp Offset. DateTime value, together with an offset.
 
 ### Enumeration: esriSearchOrder
 Spatial Filter Search Order.
