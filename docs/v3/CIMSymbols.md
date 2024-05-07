@@ -699,6 +699,7 @@
 | Arch| 34| 3 point arched line between vertex 1 and vertex 2. Vertex 3 determines the depth of the arch. 
 | CurvedParallelTicks| 35| Curved line with ticks. Curve begins on vertex 2 and ends on vertex 3. Ticks on opposite side of vertex 1. 
 | Arc90Degrees| 36| 90 degree arc with ends at vertex 1 and vertex 2. Vertex 3 determines the side of the curve. 
+| TipWithPerpendicularAndTicks| 37| Dynamic line perpendicular to segment 1, center on vertex 1 and offset towards vertex 2 with ticks. 
 
 
 
@@ -1561,6 +1562,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | angleToLine | boolean | A value indicating whether to angle the marker to the line. 
+| keepUpright | boolean | A value indicating whether to keep the marker upright. This is only considered if AngleToLine is true. 
 | offset | double | The offset. 
 
 
@@ -1603,6 +1605,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | angleToLine | boolean | A value indicating whether to angle the marker to the line. 
+| keepUpright | boolean | A value indicating whether to keep the marker upright. This is only considered if AngleToLine is true. 
 | offset | double | The offset. 
 
 
@@ -1643,6 +1646,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | angleToLine | boolean | A value indicating whether to angle the marker to the line. 
+| keepUpright | boolean | A value indicating whether to keep the marker upright. This is only considered if AngleToLine is true. 
 | offset | double | The offset. 
 
 
@@ -1712,6 +1716,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | angleToLine | boolean | A value indicating whether to angle the marker to the line. 
+| keepUpright | boolean | A value indicating whether to keep the marker upright. This is only considered if AngleToLine is true. 
 | offset | double | The offset. 
 
 
@@ -1744,6 +1749,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | angleToLine | boolean | A value indicating whether to angle the marker to the line. 
+| keepUpright | boolean | A value indicating whether to keep the marker upright. This is only considered if AngleToLine is true. 
 | offset | double | The offset. 
 
 
@@ -1777,6 +1783,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | angleToLine | boolean | A value indicating whether to angle the marker to the line. 
+| keepUpright | boolean | A value indicating whether to keep the marker upright. This is only considered if AngleToLine is true. 
 | offset | double | The offset. 
 
 
@@ -1849,6 +1856,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | angleToLine | boolean | A value indicating whether to angle the marker to the line. 
+| keepUpright | boolean | A value indicating whether to keep the marker upright. This is only considered if AngleToLine is true. 
 | offset | double | The offset. 
 
 
@@ -1881,6 +1889,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | angleToLine | boolean | A value indicating whether to angle the marker to the line. 
+| keepUpright | boolean | A value indicating whether to keep the marker upright. This is only considered if AngleToLine is true. 
 | offset | double | The offset. 
 
 

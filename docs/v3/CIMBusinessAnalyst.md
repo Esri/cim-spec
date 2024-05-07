@@ -1,6 +1,186 @@
 
 
 
+## CIMBAAreaOfInterest
+#### Represents Business Analyst Color Coded Layer Area Of Interest properties. 
+
+
+### CIMBAAreaOfInterest 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| areaOfInterestDataConnection | [CIMStandardDataConnection](CIMVectorLayers.md#cimstandarddataconnection) | The area of interest data connection. 
+| areaOfInterestItems | [[CIMBAAreaOfInterestItem]](Types.md#baareaofinterestitem) | The area of interest items. 
+
+
+
+
+
+
+## CIMBAAreaOfInterestItem
+#### Represents Business Analyst Color Coded Layer area of interest item. 
+
+
+### CIMBAAreaOfInterestItem 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The area of interest item name. 
+
+
+
+
+
+
+## CIMBAColorCodedLayerParameters
+#### Represents Business Analyst Color Coded Layer Properties. 
+
+
+### CIMBAColorCodedLayerParameters 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| dataSource | string | The data source used in calculation of distances. Structure of the value is TYPE;COUNTRY_INFO;LOCAL_DATA_INFO where TYPE can be ONLINE, LOCAL, or CUSTOM. COUNTRY_INFO is country_id{|hierarchy}. For example, US|census or US. LOCAL_DATA_INFO is ID of local dataset. For example, USA_ESRI_2019. For example, for local US 2019 dataset it will be: "LOCAL;;USA_ESRI_2019". If online US data source is used, it may be "ONLINE;US|census;". Can be value of baDataSource GP GPEnvironment variable. https://pro.arcgis.com/en/pro-app/tool-reference/environment-settings/ba-data-source.htm. 
+| rendererProperties | [BARendererProperties](Types.md#barendererproperties) | The Color Coded Map renderer properties. 
+| variable | string | The demographic variable name. 
+| areaOfInterest | [CIMBAAreaOfInterest](CIMBusinessAnalyst.md#cimbaareaofinterest) | The area of interest parameters. 
+| activeLevelOfDetail | string | The level of details. It's a layer ID of a standard geography. If ActiveLevelOfDetail is empty, automatic level selection based on the current map scale will be used. 
+| levelsOfDetail | [[CIMBALevelOfDetail]](CIMBusinessAnalyst.md#cimbalevelofdetail) | The level of detail items. 
+
+
+
+
+
+
+## CIMBAFeatureClassAreaOfInterestItem
+#### Represents Business Analyst Color Coded Layer feature class based area of interest item. 
+
+
+### CIMBAAreaOfInterestItem 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The area of interest item name. 
+
+
+### CIMBAFeatureClassAreaOfInterestItem 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| dataConnection | [CIMStandardDataConnection](CIMVectorLayers.md#cimstandarddataconnection) | The feature class data connection. 
+
+
+
+
+
+
+## CIMBAFeatureLayerAreaOfInterestItem
+#### Represents Business Analyst Color Coded Layer feature layer based area of interest item. 
+
+
+### CIMBAAreaOfInterestItem 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The area of interest item name. 
+
+
+### CIMBAFeatureLayerAreaOfInterestItem 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| URI | string | The area of interest feature layer URI. 
+
+
+
+
+
+
+## CIMBAGraduatedColorsRendererProperties
+#### Represents Business Analyst Color Coded Layer graduated colors renderer properties. 
+
+
+### CIMBARendererProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMBAGraduatedColorsRendererProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| numBreaks | long | The number of breaks for classification renderer. 
+| classificationMethod | [enumeration ClassificationMethod](CIMRenderers.md#enumeration-classificationmethod) | The classification method. 
+| colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp. 
+| classificationField | string | The classification field name in the levels of detail feature classes. Each level of detail may contain several fields for classification, depending on the variable flavors (i.e. "base", "percent", "average", "index", etc). ClassificationField is used to switch between the flavours to quickly update the classification renderer. 
+
+
+
+
+
+
+## CIMBALevelOfDetail
+#### Represents Business Analyst Color Coded Layer level of detail. 
+
+
+### CIMBALevelOfDetail 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| levelID | string | The level of detail LevelID. 
+| dataConnection | [CIMStandardDataConnection](CIMVectorLayers.md#cimstandarddataconnection) | The level of detail data connection. 
+
+
+
+
+
+
+## CIMBAStdGeoAreaOfInterestItem
+#### Represents Business Analyst Color Coded Layer standard geography based area of interest item. 
+
+
+### CIMBAAreaOfInterestItem 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The area of interest item name. 
+
+
+### CIMBAStdGeoAreaOfInterestItem 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| levelID | string | The standard geography level ID. 
+| geographyID | string | The standard geography geography ID. 
+
+
+
+
+
+
+## CIMBAUniqueValueRendererProperties
+#### Represents Business Analyst Color Coded Layer unique values renderer properties. 
+
+
+### CIMBARendererProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMBAUniqueValueRendererProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp. 
+| classificationField | string | The classification field name in the levels of detail feature classes. 
+
+
+
+
+
+
 ## CIMBAVariableList
 #### Represents Business Analyst variable list. 
 

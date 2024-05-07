@@ -219,7 +219,6 @@
 | classBreakType | [enumeration ClassBreakType](CIMRenderers.md#enumeration-classbreaktype) | The class break type. 
 | colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp. 
 | field | string | The field for rendering. 
-| numberFormat | [NumberFormat](Types.md#numberformat) | The number format. 
 | heading | string | The heading. 
 | minimumLabel | string | The minimum label. 
 | valueExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | ExpressionInfo that contains the Arcade expression that returns value as a number. When both Fields and ValueExpressionInfo are present ValueExpressionInfo is used. 
@@ -241,6 +240,7 @@
 | defaultSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The default symbol. 
 | defaultLabel | string | The default label. 
 | defaultDescription | string | The default description. 
+| numberFormat | [NumberFormat](Types.md#numberformat) | The number format. 
 
 
 ### CIMDataSampling 
@@ -346,6 +346,7 @@
 | defaultSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The default symbol. 
 | defaultLabel | string | The default label. 
 | defaultDescription | string | The default description. 
+| numberFormat | [NumberFormat](Types.md#numberformat) | The number format. 
 
 
 ### CIMColorClassBreaksVisualVariable 
@@ -924,6 +925,7 @@
 | defaultSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The default symbol. 
 | defaultLabel | string | The default label. 
 | defaultDescription | string | The default description. 
+| numberFormat | [NumberFormat](Types.md#numberformat) | The number format. 
 
 
 ### CIMSizeClassBreaksVisualVariable 

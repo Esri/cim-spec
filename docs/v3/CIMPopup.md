@@ -8,6 +8,7 @@
 | PreviewFirst| 0| Preview first. 
 | PreviewAll| 1| Preview all. 
 | List| 2| List. 
+| Auto| 3| Auto. 
 
 
 

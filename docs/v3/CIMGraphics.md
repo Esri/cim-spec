@@ -38,7 +38,7 @@
 | symbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol for the graphic. 
 | transparency | double | The transparency of the graphic. Typically set by the layer or element during draw. Change the transparency of layers in the symbol for persistent changes. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode of the graphic. Typically set by the layer or element during draw. 
-| masks | [{JSON_object}]| An array of masks for the graphic. Typically set by the layer or element during draw. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon. 
+| masks | [{JSON_object}]| An array of masks for the graphic. Set by the layer or element during draw, but not persisted in the project. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon. 
 | referenceScale | double | The reference scale of the graphic. Typically set by the layer or element during draw. 
 | attributes | {JSON_object}| A property set of attributes. Typically set by the layer or element during draw. 
 | placement | [enumeration Anchor](CIMLayout.md#enumeration-anchor) | The placement anchor of the graphic. 
@@ -110,7 +110,7 @@
 | symbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol for the graphic. 
 | transparency | double | The transparency of the graphic. Typically set by the layer or element during draw. Change the transparency of layers in the symbol for persistent changes. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode of the graphic. Typically set by the layer or element during draw. 
-| masks | [{JSON_object}]| An array of masks for the graphic. Typically set by the layer or element during draw. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon. 
+| masks | [{JSON_object}]| An array of masks for the graphic. Set by the layer or element during draw, but not persisted in the project. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon. 
 | referenceScale | double | The reference scale of the graphic. Typically set by the layer or element during draw. 
 | attributes | {JSON_object}| A property set of attributes. Typically set by the layer or element during draw. 
 | placement | [enumeration Anchor](CIMLayout.md#enumeration-anchor) | The placement anchor of the graphic. 
@@ -146,7 +146,7 @@
 | symbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol for the graphic. 
 | transparency | double | The transparency of the graphic. Typically set by the layer or element during draw. Change the transparency of layers in the symbol for persistent changes. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode of the graphic. Typically set by the layer or element during draw. 
-| masks | [{JSON_object}]| An array of masks for the graphic. Typically set by the layer or element during draw. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon. 
+| masks | [{JSON_object}]| An array of masks for the graphic. Set by the layer or element during draw, but not persisted in the project. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon. 
 | referenceScale | double | The reference scale of the graphic. Typically set by the layer or element during draw. 
 | attributes | {JSON_object}| A property set of attributes. Typically set by the layer or element during draw. 
 | placement | [enumeration Anchor](CIMLayout.md#enumeration-anchor) | The placement anchor of the graphic. 
@@ -182,7 +182,7 @@
 | symbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol for the graphic. 
 | transparency | double | The transparency of the graphic. Typically set by the layer or element during draw. Change the transparency of layers in the symbol for persistent changes. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode of the graphic. Typically set by the layer or element during draw. 
-| masks | [{JSON_object}]| An array of masks for the graphic. Typically set by the layer or element during draw. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon. 
+| masks | [{JSON_object}]| An array of masks for the graphic. Set by the layer or element during draw, but not persisted in the project. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon. 
 | referenceScale | double | The reference scale of the graphic. Typically set by the layer or element during draw. 
 | attributes | {JSON_object}| A property set of attributes. Typically set by the layer or element during draw. 
 | placement | [enumeration Anchor](CIMLayout.md#enumeration-anchor) | The placement anchor of the graphic. 
@@ -218,7 +218,7 @@
 | symbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol for the graphic. 
 | transparency | double | The transparency of the graphic. Typically set by the layer or element during draw. Change the transparency of layers in the symbol for persistent changes. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode of the graphic. Typically set by the layer or element during draw. 
-| masks | [{JSON_object}]| An array of masks for the graphic. Typically set by the layer or element during draw. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon. 
+| masks | [{JSON_object}]| An array of masks for the graphic. Set by the layer or element during draw, but not persisted in the project. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon. 
 | referenceScale | double | The reference scale of the graphic. Typically set by the layer or element during draw. 
 | attributes | {JSON_object}| A property set of attributes. Typically set by the layer or element during draw. 
 | placement | [enumeration Anchor](CIMLayout.md#enumeration-anchor) | The placement anchor of the graphic. 
@@ -258,7 +258,7 @@
 | symbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol for the graphic. 
 | transparency | double | The transparency of the graphic. Typically set by the layer or element during draw. Change the transparency of layers in the symbol for persistent changes. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode of the graphic. Typically set by the layer or element during draw. 
-| masks | [{JSON_object}]| An array of masks for the graphic. Typically set by the layer or element during draw. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon. 
+| masks | [{JSON_object}]| An array of masks for the graphic. Set by the layer or element during draw, but not persisted in the project. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon. 
 | referenceScale | double | The reference scale of the graphic. Typically set by the layer or element during draw. 
 | attributes | {JSON_object}| A property set of attributes. Typically set by the layer or element during draw. 
 | placement | [enumeration Anchor](CIMLayout.md#enumeration-anchor) | The placement anchor of the graphic. 
@@ -290,7 +290,7 @@
 | symbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol for the graphic. 
 | transparency | double | The transparency of the graphic. Typically set by the layer or element during draw. Change the transparency of layers in the symbol for persistent changes. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode of the graphic. Typically set by the layer or element during draw. 
-| masks | [{JSON_object}]| An array of masks for the graphic. Typically set by the layer or element during draw. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon. 
+| masks | [{JSON_object}]| An array of masks for the graphic. Set by the layer or element during draw, but not persisted in the project. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon. 
 | referenceScale | double | The reference scale of the graphic. Typically set by the layer or element during draw. 
 | attributes | {JSON_object}| A property set of attributes. Typically set by the layer or element during draw. 
 | placement | [enumeration Anchor](CIMLayout.md#enumeration-anchor) | The placement anchor of the graphic. 
@@ -327,7 +327,7 @@
 | symbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol for the graphic. 
 | transparency | double | The transparency of the graphic. Typically set by the layer or element during draw. Change the transparency of layers in the symbol for persistent changes. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode of the graphic. Typically set by the layer or element during draw. 
-| masks | [{JSON_object}]| An array of masks for the graphic. Typically set by the layer or element during draw. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon. 
+| masks | [{JSON_object}]| An array of masks for the graphic. Set by the layer or element during draw, but not persisted in the project. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon. 
 | referenceScale | double | The reference scale of the graphic. Typically set by the layer or element during draw. 
 | attributes | {JSON_object}| A property set of attributes. Typically set by the layer or element during draw. 
 | placement | [enumeration Anchor](CIMLayout.md#enumeration-anchor) | The placement anchor of the graphic. 
@@ -363,7 +363,7 @@
 | symbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol for the graphic. 
 | transparency | double | The transparency of the graphic. Typically set by the layer or element during draw. Change the transparency of layers in the symbol for persistent changes. 
 | blendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The blending mode of the graphic. Typically set by the layer or element during draw. 
-| masks | [{JSON_object}]| An array of masks for the graphic. Typically set by the layer or element during draw. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon. 
+| masks | [{JSON_object}]| An array of masks for the graphic. Set by the layer or element during draw, but not persisted in the project. The per-feature masks which defines an area where the CIMGraphic should NOT draw. Every element in the array should support be a Polygon. 
 | referenceScale | double | The reference scale of the graphic. Typically set by the layer or element during draw. 
 | attributes | {JSON_object}| A property set of attributes. Typically set by the layer or element during draw. 
 | placement | [enumeration Anchor](CIMLayout.md#enumeration-anchor) | The placement anchor of the graphic. 

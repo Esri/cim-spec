@@ -605,6 +605,22 @@
 |---------|--------|--------|
 | IPSRecordingsLayerURI | string | The properties of the IPS recordings layer in the map. 
 | IPSPositioningTableProperties | [CIMIPSPositioningTableProperties](CIMMap.md#cimipspositioningtableproperties) | The properties of the IPS positioning table in the map. 
+| IPSPositioningDataServiceProperties | [CIMIPSPositioningDataServiceProperties](CIMMap.md#cimipspositioningdataserviceproperties) | The properties of the IPS positioning data service from a portal. 
+
+
+
+
+
+
+## CIMIPSPositioningDataServiceProperties
+#### Defines the Portal Item for the IPS Positioning data service. 
+
+
+### CIMIPSPositioningDataServiceProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| portalItem | [CIMPortalItem](CIMCore.md#cimportalitem) | The portal item. 
 
 
 
@@ -997,6 +1013,7 @@
 | defaultCameraEffect | [CameraEffect](Types.md#cameraeffect) | The camera effect that new views of this scene are opened with. 
 | defaultPostprocessingEffects | [[CIMPostprocessingEffect]](Types.md#postprocessingeffect) | The post-processing effects that new views of this scene are opened with. 
 | defaultColorVisionDeficiencyMode | [enumeration ColorVisionDeficiencyType](CIMEnumerations.md#enumeration-colorvisiondeficiencytype) | The color vision deficiency mode that new views of this map or scene are opened with. 
+| weatherEffect | [WeatherEffect](Types.md#weathereffect) | The weather effect. 
 
 
 ### CIMStandaloneTableContainer 
@@ -1055,6 +1072,7 @@
 | IPSAwareMapProperties | [CIMIPSAwareMapProperties](CIMMap.md#cimipsawaremapproperties) | The IPS-aware properties of the map. 
 | autoFillFeatureCache | boolean | A value indicating whether auto fill mode is enabled or disabled for a map. 
 | geotriggerProperties | [CIMMapGeotriggerProperties](CIMMap.md#cimmapgeotriggerproperties) | The geotrigger properties of the map. 
+| useMasking | boolean | A value indicating whether masking established on all layers in the map is turned on or off. 
 
 
 

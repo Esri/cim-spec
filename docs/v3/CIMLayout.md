@@ -903,6 +903,75 @@
 
 
 
+## CIMGlossaryTable
+#### Represents a glossary table for map product surround elements. 
+
+
+### CIMElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| anchor | [enumeration Anchor](CIMLayout.md#enumeration-anchor) | The anchor position of the element. 
+| locked | boolean | A value indicating whether the element is locked. Each element in the contents pane has a lock icon. If the icon is shown as locked, you can not select that feature in the layout using the select tool. 
+| name | string | The name of the element. 
+| visible | boolean | A value indicating whether the element is visible. 
+| rotation | double | The rotation of the element. 
+| rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
+| lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
+
+
+### CIMFrameElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| frame | [Polygon](ExternalReferences.md#polygon) | The geometry of a frame for an element. 
+| graphicFrame | [CIMGraphicFrame](CIMGraphics.md#cimgraphicframe) | The graphic symbology of an element's frame. 
+
+
+### CIMMapSurround 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| mapFrame | string | The map frame associated with the map surround. 
+| minScale | double | The minimum scale. 
+| maxScale | double | The maximum scale. 
+
+
+### CIMMapProductSurround 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| autoUpdate | boolean | A value indicating whether properties of the surround should update automatically based on changes in the map. 
+| productSpecification | [enumeration MapProductSpecType](CIMLayout.md#enumeration-mapproductspectype) | The map product specification type of the surround. 
+| drawToSpecification | boolean | A value indicating whether to draw the element to specification size or allow user to manually resize element. 
+
+
+### CIMGlossaryTable 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| fittingStrategy | [enumeration TableFrameFittingStrategy](CIMLayout.md#enumeration-tableframefittingstrategy) | The fitting strategy. 
+| mapMemberURI | string | The URI to a Layer or Standalone table in the project. 
+| fields | [[CIMTableFrameField]](CIMLayout.md#cimtableframefield) | The fields displayed in the glossary table. 
+| title | string | The title of the element. 
+| titleTextSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The text symbol for title text. 
+| rightToLeft | boolean | A value indicating whether right to left orientation should be applied. 
+| minFontSize | double | The limit when reducing font sizes. Values are in points. 
+| titleGap | double | The gap between title and column headings. Values are in points. 
+| headingGap | double | The gap between column headings and rows. Values are in points. 
+| rowGap | double | The gap between rows. Values are in points. 
+| horizontalTextGap | double | The horizontal gap around field values. Values are in points. 
+| verticalTextGap | double | The vertical gap around field values. Values are in points. 
+| delimiterCharacter | string | The delimiter character that is displayed between columns. 
+| delimiterTextSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The text symbol for the delimiter displayed between columns. 
+
+
+
+
+
+
 ## CIMGraphicElement
 #### Represents the CIM representation of an element on a page layout. 
 
@@ -2755,6 +2824,7 @@
 |---------|--------|--------|
 | dataSource | [CIMReportDataSource](CIMLayout.md#cimreportdatasource) | The data source for a Related Report. 
 | relateName | string | The relate or relationship class name. 
+| expressions | [[CIMExpressionInfo]](CIMRenderers.md#cimexpressioninfo) | The expressions used by the related report. 
 
 
 
@@ -3440,6 +3510,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | dataSource | [CIMReportDataSource](CIMLayout.md#cimreportdatasource) | The data source for a report. 
+| expressions | [[CIMExpressionInfo]](CIMRenderers.md#cimexpressioninfo) | The expressions used by the report. 
 
 
 
@@ -4042,6 +4113,7 @@
 | customWhereClause | string | The custom where clause. Show rows that match custom where clause when FillingStrategy is set to esriCIMTableFrameFillingStrategy_CustomWhereClause. 
 | defaultTableFrameField | [CIMTableFrameField](CIMLayout.md#cimtableframefield) | The default table frame field used when creating new table frames. 
 | balanceColumns | boolean | A value indicating whether to balance the columns of the table. 
+| rowLimit | long | The maximum number of rows the table frame will show. 0 Indicates "no limit". 
 
 
 

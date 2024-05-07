@@ -70,6 +70,8 @@
 | inverted | boolean | A value indicating whether the chart axis is inverted. 
 | labelAngle | double | The rotation angle of the axis labels. The value range is from -90 to 90. This property can have a value between -90 and 90. 
 | useAutomaticLabelAngle | boolean | A value indicating whether the rotation angle of the axis labels is auto calculated. 
+| useAutomaticInterval | boolean | A value indicating whether the interval of the axis is auto calculated. 
+| interval | double | The interval of the axis. The value should be positive. This property can have a value larger than 0. Invalid value will be ignored. 
 
 
 
@@ -117,6 +119,10 @@
 | movingAveragePeriod | long long | A period value for moving average calculation. 
 | timeBinningProperties | [CIMChartTimeBinningProperties](CIMCharts.md#cimcharttimebinningproperties) | The time binning properties for bar category field values. If null, bar series will use unique values to create bar categories. 
 | nullPolicy | [enumeration ChartNullPolicy](CIMCharts.md#enumeration-chartnullpolicy) | The policy for handling missing data. 
+| matchLayerSymbology | boolean | A value indicating whether bar chart should match layer symbology. 
+| showNullCategory | boolean | A value indicating whether to show null category values as a separate category. 
+| nullCategoryFillSymbolProperties | [CIMChartFillSymbolProperties](CIMCharts.md#cimchartfillsymbolproperties) | The fill symbol for the null category. 
+| nullCategoryLabel | string | The label for the null category. 
 
 
 
@@ -124,7 +130,7 @@
 
 
 ## CIMChartBoxPlotSeries
-#### Provides access to members that control bar chart box plot series. 
+#### Provides access to members that control box plot series. 
 
 
 ### CIMChartSeries 
@@ -925,6 +931,7 @@
 | holePercentage | double | The size of the hole in middle of the chart. 
 | showLabelValue | boolean | A value indicating whether to show numeric value associated with a slice. 
 | showLabelPercentage | boolean | A value indicating whether to show percentage value associated with a slice. 
+| percentageDecimalPlaces | long | The number of decimal places in the percentage values. 
 | slices | [[CIMChartPieSlice]](CIMCharts.md#cimchartpieslice) | The array of slices. 
 
 
@@ -1142,6 +1149,8 @@
 | diagonalOption | [enumeration ChartSPMDiagonalOption](CIMCharts.md#enumeration-chartspmdiagonaloption) | The display option for the diagonal. 
 | sortByType | [enumeration ChartSPMSortByType](CIMCharts.md#enumeration-chartspmsortbytype) | The sort by type. 
 | sortDirection | [enumeration ChartSortDirection](CIMCharts.md#enumeration-chartsortdirection) | The direction type of sort order. 
+| trendLineFitType | [enumeration ChartTrendLineFitType](CIMCharts.md#enumeration-charttrendlinefittype) | A trend line fit type. 
+| trendOrder | long | The number of terms in a polynomial or Fourier equation. 
 
 
 

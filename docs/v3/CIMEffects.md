@@ -69,6 +69,29 @@
 
 
 
+## CIMCloudyWeatherEffect
+#### Represents a cloudy weather effect to be applied to a scene. 
+
+
+### CIMWeatherEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| isActive | boolean | A value indicating whether the effect should be applied to the scene. 
+| seed | long | The starting value for generating a random cloud pattern. 
+
+
+### CIMCloudyWeatherEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| cloudCover | double | The percentage (0-1) of cloud cover in the sky. 
+
+
+
+
+
+
 ## CIMColorGradingPostprocessingEffect
 #### Represents a post-processing technique that reshades the scene with adjusted color and luminance. 
 
@@ -147,6 +170,30 @@
 | Medium| 1| Medium kernel size 
 | Large| 2| Large kernel size 
 | VeryLarge| 3| Very large kernel size 
+
+
+
+
+## CIMFoggyWeatherEffect
+#### Represents a foggy weather effect to be applied to a scene. 
+
+
+### CIMWeatherEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| isActive | boolean | A value indicating whether the effect should be applied to the scene. 
+| seed | long | The starting value for generating a random cloud pattern. 
+
+
+### CIMFoggyWeatherEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| fogStrength | double | The percentage (0-1) of fog strength used in the scene. 
+| fogColor | [Color](Types.md#color) | The fog color. 
+
+
 
 
 
@@ -307,6 +354,78 @@
 |---------|--------|--------|
 | pixelSize | double | The size of the effect's simulated pixels in points. 
 | colorFactor | long | The factor that exponentially influences the number of colors used in the color palette. 
+
+
+
+
+
+
+## CIMRainyWeatherEffect
+#### Represents a rainy weather effect to be applied to a scene. 
+
+
+### CIMWeatherEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| isActive | boolean | A value indicating whether the effect should be applied to the scene. 
+| seed | long | The starting value for generating a random cloud pattern. 
+
+
+### CIMRainyWeatherEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| cloudCover | double | The percentage (0-1) of cloud cover in the sky. 
+| precipitation | double | The percentage (0-1) of rainfall amount in the scene. 
+
+
+
+
+
+
+## CIMSnowyWeatherEffect
+#### Represents a snowy weather effect to be applied to a scene. 
+
+
+### CIMWeatherEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| isActive | boolean | A value indicating whether the effect should be applied to the scene. 
+| seed | long | The starting value for generating a random cloud pattern. 
+
+
+### CIMSnowyWeatherEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| cloudCover | double | The percentage (0-1) of cloud cover in the sky. 
+| precipitation | double | The percentage (0-1) of snowfall amount in the scene. 
+| snowCover | boolean | A value indicating whether surfaces are covered with snow. 
+
+
+
+
+
+
+## CIMSunnyWeatherEffect
+#### Represents a sunny weather effect to be applied to a scene. 
+
+
+### CIMWeatherEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| isActive | boolean | A value indicating whether the effect should be applied to the scene. 
+| seed | long | The starting value for generating a random cloud pattern. 
+
+
+### CIMSunnyWeatherEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| cloudCover | double | The percentage (0-1) of cloud cover in the sky. 
 
 
 

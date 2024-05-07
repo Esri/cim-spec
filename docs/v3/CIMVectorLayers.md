@@ -79,6 +79,7 @@
 | layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
 | maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
 | minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| layerScaleVisibilityOptions | [CIMLayerScaleVisibilityOptions](CIMLayer.md#cimlayerscalevisibilityoptions) | The layer's scale visibility options. 
 | showLegends | boolean | A value indicating whether or not to show legends. 
 | transparency | double | The transparency of the layer. 
 | visibility | boolean | A value indicating whether or not this layer is visible. 
@@ -100,6 +101,8 @@
 | rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
+| enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -129,6 +132,8 @@
 | featureElevationExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression for setting the feature elevation. 
 | featureBlendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The per-feature blending mode which allows features in a layer to blend against other features in the same layer that have already drawn. 
 | featureSortInfos | [[CIMFeatureSortInfo]](CIMVectorLayers.md#cimfeaturesortinfo) | The collection of field names and sort directions used to sort features during draw. 
+| layerEffectsMode | [enumeration LayerEffectsMode](CIMLayer.md#enumeration-layereffectsmode) | The layer effects mode. 
+| featureEffects | [CIMFeatureLayerEffect](CIMLayer.md#cimfeaturelayereffect) | The collection of layer effects that apply to subset of features. 
 
 
 ### CIMAnnotationLayerDefinition 
@@ -328,6 +333,7 @@
 | layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
 | maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
 | minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| layerScaleVisibilityOptions | [CIMLayerScaleVisibilityOptions](CIMLayer.md#cimlayerscalevisibilityoptions) | The layer's scale visibility options. 
 | showLegends | boolean | A value indicating whether or not to show legends. 
 | transparency | double | The transparency of the layer. 
 | visibility | boolean | A value indicating whether or not this layer is visible. 
@@ -349,6 +355,8 @@
 | rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
+| enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
 
 
 ### CIMBuildingDisciplineLayerDefinition 
@@ -393,6 +401,7 @@
 | layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
 | maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
 | minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| layerScaleVisibilityOptions | [CIMLayerScaleVisibilityOptions](CIMLayer.md#cimlayerscalevisibilityoptions) | The layer's scale visibility options. 
 | showLegends | boolean | A value indicating whether or not to show legends. 
 | transparency | double | The transparency of the layer. 
 | visibility | boolean | A value indicating whether or not this layer is visible. 
@@ -414,6 +423,8 @@
 | rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
+| enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
 
 
 ### CIMObject3DRenderingFilters 
@@ -469,6 +480,7 @@
 | layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
 | maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
 | minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| layerScaleVisibilityOptions | [CIMLayerScaleVisibilityOptions](CIMLayer.md#cimlayerscalevisibilityoptions) | The layer's scale visibility options. 
 | showLegends | boolean | A value indicating whether or not to show legends. 
 | transparency | double | The transparency of the layer. 
 | visibility | boolean | A value indicating whether or not this layer is visible. 
@@ -490,6 +502,8 @@
 | rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
+| enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
 
 
 ### CIMCatalogDynamicGroupLayerDefinition 
@@ -532,6 +546,7 @@
 | layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
 | maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
 | minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| layerScaleVisibilityOptions | [CIMLayerScaleVisibilityOptions](CIMLayer.md#cimlayerscalevisibilityoptions) | The layer's scale visibility options. 
 | showLegends | boolean | A value indicating whether or not to show legends. 
 | transparency | double | The transparency of the layer. 
 | visibility | boolean | A value indicating whether or not this layer is visible. 
@@ -553,6 +568,8 @@
 | rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
+| enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -582,6 +599,8 @@
 | featureElevationExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression for setting the feature elevation. 
 | featureBlendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The per-feature blending mode which allows features in a layer to blend against other features in the same layer that have already drawn. 
 | featureSortInfos | [[CIMFeatureSortInfo]](CIMVectorLayers.md#cimfeaturesortinfo) | The collection of field names and sort directions used to sort features during draw. 
+| layerEffectsMode | [enumeration LayerEffectsMode](CIMLayer.md#enumeration-layereffectsmode) | The layer effects mode. 
+| featureEffects | [CIMFeatureLayerEffect](CIMLayer.md#cimfeaturelayereffect) | The collection of layer effects that apply to subset of features. 
 
 
 ### CIMCatalogLayerDefinition 
@@ -635,6 +654,24 @@
 |---------|--------|--------|
 | Contains| 0| Search for values that contain the search text. 
 | Exact| 1| Search for values that are the exact match with the search text. 
+| StartsWith| 2| Search for values that the search text starts with. 
+
+
+
+
+## CIMDatabaseRelateInfo
+#### Represents database relationship info that is used to represent layer or table level overrides. 
+
+
+### CIMDatabaseRelateInfo 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| relationshipClassName | string | The relationship class Name. 
+| serviceRelateID | long | A integer indicating the relate ID when published in a map service. 
+| relatedMapMemberURI | string | The related layer/table URI. This value is used to disambiguate cases where the same data connection is used by multiple layers or tables in a map. 
+
+
 
 
 
@@ -669,6 +706,7 @@
 | layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
 | maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
 | minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| layerScaleVisibilityOptions | [CIMLayerScaleVisibilityOptions](CIMLayer.md#cimlayerscalevisibilityoptions) | The layer's scale visibility options. 
 | showLegends | boolean | A value indicating whether or not to show legends. 
 | transparency | double | The transparency of the layer. 
 | visibility | boolean | A value indicating whether or not this layer is visible. 
@@ -690,6 +728,8 @@
 | rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
+| enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -719,6 +759,8 @@
 | featureElevationExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression for setting the feature elevation. 
 | featureBlendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The per-feature blending mode which allows features in a layer to blend against other features in the same layer that have already drawn. 
 | featureSortInfos | [[CIMFeatureSortInfo]](CIMVectorLayers.md#cimfeaturesortinfo) | The collection of field names and sort directions used to sort features during draw. 
+| layerEffectsMode | [enumeration LayerEffectsMode](CIMLayer.md#enumeration-layereffectsmode) | The layer effects mode. 
+| featureEffects | [CIMFeatureLayerEffect](CIMLayer.md#cimfeaturelayereffect) | The collection of layer effects that apply to subset of features. 
 
 
 ### CIMDimensionLayerDefinition 
@@ -977,6 +1019,7 @@
 | layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
 | maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
 | minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| layerScaleVisibilityOptions | [CIMLayerScaleVisibilityOptions](CIMLayer.md#cimlayerscalevisibilityoptions) | The layer's scale visibility options. 
 | showLegends | boolean | A value indicating whether or not to show legends. 
 | transparency | double | The transparency of the layer. 
 | visibility | boolean | A value indicating whether or not this layer is visible. 
@@ -998,6 +1041,8 @@
 | rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
+| enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
 
 
 ### CIMENCLayerDefinition 
@@ -1006,6 +1051,55 @@
 |---------|--------|--------|
 | dataConnection | [CIMENCDataConnection](CIMVectorLayers.md#cimencdataconnection) | The data connection to the ENC resource. 
 | displaySettings | [CIMENCDisplaySettings](CIMVectorLayers.md#cimencdisplaysettings) | The display settings of the ENC layer. 
+| subLayers | [[CIMENCSubLayer]](CIMVectorLayers.md#cimencsublayer) | A collection of ENCSubLayers, used to access features by type. 
+| subTables | [[CIMENCSubTable]](CIMVectorLayers.md#cimencsubtable) | A collection of ENCSubTables. 
+| selectionSetURI | string | The URI of the selection set for the layer. 
+| selectable | boolean | A value indicating whether the layer is selectable. 
+
+
+
+
+
+
+## CIMENCSubLayer
+#### Represents an ENC sublayer used to access features by type. 
+
+
+### CIMSubLayer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| description | string | The description. 
+| expanded | boolean | A value indicating whether this layer is expanded in the contents pane. 
+| maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| name | string | The name. 
+| showLegends | boolean | A value indicating whether or not to show legends. 
+| subLayerID | string | The sublayer ID. 
+| visibility | boolean | A value indicating whether or not this layer is visible. 
+| serviceLayerID | long | Identifier that will be used to identify the layer in server. 
+
+
+### CIMENCSubLayer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+
+
+
+
+## CIMENCSubTable
+#### Represents an ENC subtable. 
+
+
+### CIMENCSubTable 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name. 
+| subTableID | string | The sub table ID. 
 
 
 
@@ -1152,6 +1246,7 @@
 | layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
 | maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
 | minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| layerScaleVisibilityOptions | [CIMLayerScaleVisibilityOptions](CIMLayer.md#cimlayerscalevisibilityoptions) | The layer's scale visibility options. 
 | showLegends | boolean | A value indicating whether or not to show legends. 
 | transparency | double | The transparency of the layer. 
 | visibility | boolean | A value indicating whether or not this layer is visible. 
@@ -1173,6 +1268,8 @@
 | rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
+| enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -1202,6 +1299,8 @@
 | featureElevationExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression for setting the feature elevation. 
 | featureBlendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The per-feature blending mode which allows features in a layer to blend against other features in the same layer that have already drawn. 
 | featureSortInfos | [[CIMFeatureSortInfo]](CIMVectorLayers.md#cimfeaturesortinfo) | The collection of field names and sort directions used to sort features during draw. 
+| layerEffectsMode | [enumeration LayerEffectsMode](CIMLayer.md#enumeration-layereffectsmode) | The layer effects mode. 
+| featureEffects | [CIMFeatureLayerEffect](CIMLayer.md#cimfeaturelayereffect) | The collection of layer effects that apply to subset of features. 
 
 
 ### CIMGeoFeatureLayerDefinition 
@@ -1276,6 +1375,7 @@
 | selectionSetURI | string | The URI of the selection set for the table. 
 | floorAwareTableProperties | [CIMFloorAwareTableProperties](CIMVectorLayers.md#cimfloorawaretableproperties) | Floor-aware properties for the layer/table used in floor filtering. 
 | routeIDFieldName | string | The route identifier field of a route feature class. This property will only be set for route feature classes, namely line and polyline feature classes that are m-aware. 
+| databaseRelates | [[CIMDatabaseRelateInfo]](CIMVectorLayers.md#cimdatabaserelateinfo) | Overrides for database relationships as relationship info. By default this property is null. This will contain relationship info elements for those database relationships that have overrides. 
 
 
 ### CIMFeatureTableDefinition 
@@ -1324,6 +1424,7 @@
 | layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
 | maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
 | minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| layerScaleVisibilityOptions | [CIMLayerScaleVisibilityOptions](CIMLayer.md#cimlayerscalevisibilityoptions) | The layer's scale visibility options. 
 | showLegends | boolean | A value indicating whether or not to show legends. 
 | transparency | double | The transparency of the layer. 
 | visibility | boolean | A value indicating whether or not this layer is visible. 
@@ -1345,6 +1446,8 @@
 | rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
+| enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -1374,6 +1477,8 @@
 | featureElevationExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression for setting the feature elevation. 
 | featureBlendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The per-feature blending mode which allows features in a layer to blend against other features in the same layer that have already drawn. 
 | featureSortInfos | [[CIMFeatureSortInfo]](CIMVectorLayers.md#cimfeaturesortinfo) | The collection of field names and sort directions used to sort features during draw. 
+| layerEffectsMode | [enumeration LayerEffectsMode](CIMLayer.md#enumeration-layereffectsmode) | The layer effects mode. 
+| featureEffects | [CIMFeatureLayerEffect](CIMLayer.md#cimfeaturelayereffect) | The collection of layer effects that apply to subset of features. 
 
 
 ### CIMGeoFeatureLayerDefinition 
@@ -1855,6 +1960,7 @@
 | layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
 | maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
 | minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| layerScaleVisibilityOptions | [CIMLayerScaleVisibilityOptions](CIMLayer.md#cimlayerscalevisibilityoptions) | The layer's scale visibility options. 
 | showLegends | boolean | A value indicating whether or not to show legends. 
 | transparency | double | The transparency of the layer. 
 | visibility | boolean | A value indicating whether or not this layer is visible. 
@@ -1876,6 +1982,8 @@
 | rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
+| enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -1905,6 +2013,8 @@
 | featureElevationExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression for setting the feature elevation. 
 | featureBlendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The per-feature blending mode which allows features in a layer to blend against other features in the same layer that have already drawn. 
 | featureSortInfos | [[CIMFeatureSortInfo]](CIMVectorLayers.md#cimfeaturesortinfo) | The collection of field names and sort directions used to sort features during draw. 
+| layerEffectsMode | [enumeration LayerEffectsMode](CIMLayer.md#enumeration-layereffectsmode) | The layer effects mode. 
+| featureEffects | [CIMFeatureLayerEffect](CIMLayer.md#cimfeaturelayereffect) | The collection of layer effects that apply to subset of features. 
 
 
 ### CIMGeoFeatureLayerDefinition 
@@ -2004,6 +2114,7 @@
 | layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
 | maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
 | minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| layerScaleVisibilityOptions | [CIMLayerScaleVisibilityOptions](CIMLayer.md#cimlayerscalevisibilityoptions) | The layer's scale visibility options. 
 | showLegends | boolean | A value indicating whether or not to show legends. 
 | transparency | double | The transparency of the layer. 
 | visibility | boolean | A value indicating whether or not this layer is visible. 
@@ -2025,6 +2136,8 @@
 | rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
+| enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
 
 
 ### CIMParcelFabricLayerDefinition 
@@ -2079,6 +2192,7 @@
 | layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
 | maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
 | minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| layerScaleVisibilityOptions | [CIMLayerScaleVisibilityOptions](CIMLayer.md#cimlayerscalevisibilityoptions) | The layer's scale visibility options. 
 | showLegends | boolean | A value indicating whether or not to show legends. 
 | transparency | double | The transparency of the layer. 
 | visibility | boolean | A value indicating whether or not this layer is visible. 
@@ -2100,6 +2214,8 @@
 | rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
+| enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
 
 
 ### CIMParcelLayerDefinition 
@@ -2212,6 +2328,7 @@
 | selectionSetURI | string | The URI of the selection set for the table. 
 | floorAwareTableProperties | [CIMFloorAwareTableProperties](CIMVectorLayers.md#cimfloorawaretableproperties) | Floor-aware properties for the layer/table used in floor filtering. 
 | routeIDFieldName | string | The route identifier field of a route feature class. This property will only be set for route feature classes, namely line and polyline feature classes that are m-aware. 
+| databaseRelates | [[CIMDatabaseRelateInfo]](CIMVectorLayers.md#cimdatabaserelateinfo) | Overrides for database relationships as relationship info. By default this property is null. This will contain relationship info elements for those database relationships that have overrides. 
 
 
 ### CIMRasterTableDefinition 
@@ -2247,6 +2364,7 @@
 | cardinality | [enumeration esriRelCardinality](ExternalReferences.md#enumeration-esrirelcardinality) | The join cardinality. 
 | joinType | [enumeration esriJoinType](ExternalReferences.md#enumeration-esrijointype) | The join type. 
 | joinForward | boolean | A value indicating whether or not this is a forward join. 
+| oneToFirst | boolean | A value indicating whether or not the join will be one-to-first. 
 
 
 
@@ -2266,6 +2384,8 @@
 | primaryKey | string | The primary key. 
 | cardinality | [enumeration esriRelCardinality](ExternalReferences.md#enumeration-esrirelcardinality) | The relate cardinality. 
 | name | string | The name. 
+| serviceRelateID | long | A integer indicating the relate ID when published in a map service. 
+| relatedMapMemberURI | string | The related layer/table URI. This value is used to disambiguate cases where the same data connection is used by multiple layers or tables in a map. 
 
 
 
@@ -2587,6 +2707,7 @@
 | selectionSetURI | string | The URI of the selection set for the table. 
 | floorAwareTableProperties | [CIMFloorAwareTableProperties](CIMVectorLayers.md#cimfloorawaretableproperties) | Floor-aware properties for the layer/table used in floor filtering. 
 | routeIDFieldName | string | The route identifier field of a route feature class. This property will only be set for route feature classes, namely line and polyline feature classes that are m-aware. 
+| databaseRelates | [[CIMDatabaseRelateInfo]](CIMVectorLayers.md#cimdatabaserelateinfo) | Overrides for database relationships as relationship info. By default this property is null. This will contain relationship info elements for those database relationships that have overrides. 
 
 
 ### CIMStandaloneTableDefinition 
@@ -2709,6 +2830,7 @@
 | layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
 | maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
 | minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| layerScaleVisibilityOptions | [CIMLayerScaleVisibilityOptions](CIMLayer.md#cimlayerscalevisibilityoptions) | The layer's scale visibility options. 
 | showLegends | boolean | A value indicating whether or not to show legends. 
 | transparency | double | The transparency of the layer. 
 | visibility | boolean | A value indicating whether or not this layer is visible. 
@@ -2730,6 +2852,8 @@
 | rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
+| enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -2759,6 +2883,8 @@
 | featureElevationExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression for setting the feature elevation. 
 | featureBlendingMode | [enumeration BlendingMode](CIMSymbols.md#enumeration-blendingmode) | The per-feature blending mode which allows features in a layer to blend against other features in the same layer that have already drawn. 
 | featureSortInfos | [[CIMFeatureSortInfo]](CIMVectorLayers.md#cimfeaturesortinfo) | The collection of field names and sort directions used to sort features during draw. 
+| layerEffectsMode | [enumeration LayerEffectsMode](CIMLayer.md#enumeration-layereffectsmode) | The layer effects mode. 
+| featureEffects | [CIMFeatureLayerEffect](CIMLayer.md#cimfeaturelayereffect) | The collection of layer effects that apply to subset of features. 
 
 
 ### CIMSubtypeGroupLayerDefinition 
@@ -2766,6 +2892,88 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | subtypeLayers | [string] | The layer URI corresponding to each subtype value. 
+
+
+
+
+
+
+## CIMSubtypeGroupTable
+#### Represents a subtype group table that works with tables enabled with subtypes. 
+
+
+### CIMDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name. 
+| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
+| sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
+| metadataURI | string | The metadata URI. 
+| useSourceMetadata | boolean | A value indicating whether the CIM definition accesses metadata from its data source (the default behavior), or if it has its own metadata stored in the project. 
+| sourcePortalUrl | string | The source portal URI of the item. Set if sourced from an external item such as an item on a portal. 
+
+
+### CIMStandaloneTableDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| dataConnection | [DataConnection](Types.md#dataconnection) | The data connection for the table. 
+| description | string | The description. 
+| autoGenerateRowTemplates | boolean | A value indicating whether to automatically generate row templates from the renderer. 
+| rowTemplates | [[CIMEditingTemplate]](Types.md#editingtemplate) | The row templates. 
+| serviceTableID | long | Identifier that will be used to identify the layer in server. 
+| showPopups | boolean | A value indicating whether or not to show pop-ups. 
+| popupInfo | [CIMPopupInfo](CIMPopup.md#cimpopupinfo) | The pop-up info. 
+| charts | [[CIMChart]](CIMCharts.md#cimchart) | The table's charts. 
+| pageDefinition | [CIMPageDefinition](CIMVectorLayers.md#cimpagedefinition) | The page definition which allows for using current map series page to filter rows. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the standalone table. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
+| webMapTableID | string | An identifier that will be used to identify the standalone table in a web map. This value is present if the standalone table originated in a web map and facilitates matching the standalone table back to its origin when updating the web map. 
+| searchable | boolean | A value indicating whether or not this table should be included in the search. This property is honored only by tables that support search. 
+| useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the table to be visible. 
+| visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
+
+
+### CIMDisplayTableDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| definitionExpression | string | The definition expression that can subset the rows in the virtual table. 
+| definitionExpressionName | string | The Name of definition expression. 
+| definitionFilterChoices | [[CIMDefinitionFilter]](CIMLayer.md#cimdefinitionfilter) | The definition filter choices. 
+| displayField | string | The name of the attribute field that will be used as a label that represents each row in the table. The display field must be able to be represented as a string (string or numeric). 
+| editable | boolean | A value indicating whether or not the table can be edited. 
+| relates | [[CIMRelateInfoBase]](CIMVectorLayers.md#cimrelateinfobase) | The relates. 
+| fieldDescriptions | [[CIMFieldDescription]](Types.md#fielddescription) | The field descriptions. Field descriptions for fields may only be written if values are overridden from defaults. 
+| timeFields | [CIMTimeTableDefinition](CIMVectorLayers.md#cimtimetabledefinition) | The time fields. 
+| timeDefinition | [CIMTimeDataDefinition](CIMVectorLayers.md#cimtimedatadefinition) | The time definition. 
+| timeDisplayDefinition | [CIMTimeDisplayDefinition](CIMVectorLayers.md#cimtimedisplaydefinition) | The time display definition. 
+| timeDimensionFields | [CIMTimeDimensionDefinition](CIMVectorLayers.md#cimtimedimensiondefinition) | The time definition fields. 
+| rangeDefinitions | [[CIMRangeDefinition]](CIMVectorLayers.md#cimrangedefinition) | The range definitions. 
+| activeRangeName | string | The active range name. 
+| selectRelatedData | boolean | A value indicating whether related data should be selected when creating a new selection. 
+| bindVariables | [[CIMBindVariable]](Types.md#bindvariable) | The bind variables. 
+| subtypeValue | long | The subtype value that should be used in the feature layer definition. This property is honored only when feature layer is a member of SubtypeLayer. 
+| useSubtypeValue | boolean | A value indicating whether or not the SubtypeValue should be used. 
+| displayExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression information used for coming up with a string that represents a row or a feature. 
+| selectionSetURI | string | The URI of the selection set for the table. 
+| floorAwareTableProperties | [CIMFloorAwareTableProperties](CIMVectorLayers.md#cimfloorawaretableproperties) | Floor-aware properties for the layer/table used in floor filtering. 
+| routeIDFieldName | string | The route identifier field of a route feature class. This property will only be set for route feature classes, namely line and polyline feature classes that are m-aware. 
+| databaseRelates | [[CIMDatabaseRelateInfo]](CIMVectorLayers.md#cimdatabaserelateinfo) | Overrides for database relationships as relationship info. By default this property is null. This will contain relationship info elements for those database relationships that have overrides. 
+
+
+### CIMStandaloneTableContainer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| standaloneTables | [string] | The standalone tables as an array of table repository paths. 
+
+
+### CIMSubtypeGroupTableDefinition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
 
 
 
@@ -3074,6 +3282,7 @@
 | layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
 | maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
 | minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| layerScaleVisibilityOptions | [CIMLayerScaleVisibilityOptions](CIMLayer.md#cimlayerscalevisibilityoptions) | The layer's scale visibility options. 
 | showLegends | boolean | A value indicating whether or not to show legends. 
 | transparency | double | The transparency of the layer. 
 | visibility | boolean | A value indicating whether or not this layer is visible. 
@@ -3095,6 +3304,8 @@
 | rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
+| enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
 
 
 ### CIMTrajectoryLayerDefinition 
@@ -3179,6 +3390,7 @@
 | layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
 | maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
 | minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| layerScaleVisibilityOptions | [CIMLayerScaleVisibilityOptions](CIMLayer.md#cimlayerscalevisibilityoptions) | The layer's scale visibility options. 
 | showLegends | boolean | A value indicating whether or not to show legends. 
 | transparency | double | The transparency of the layer. 
 | visibility | boolean | A value indicating whether or not this layer is visible. 
@@ -3200,6 +3412,8 @@
 | rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
+| enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
 
 
 ### CIMVectorTileLayerDefinition 

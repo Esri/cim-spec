@@ -29,6 +29,7 @@
 | lighting | [enumeration Lighting3D](CIMLayer.md#enumeration-lighting3d) | The layer's lighting setting. 
 | optimizeMarkerTransparency | boolean | A value indicating whether true alpha is quantized to fully opaque or transparent when false, actual values are used in marker drawing. 
 | useDepthWritingForTransparency | boolean | A value indicating whether to use depth writing for transparency. This should be set to true if anomalies are seen in drawing order of transparent features in the same feature class. 
+| enable2DSymbolPerspectiveScaling | boolean | A value indicating whether perspective scaling to screen-size is enabled for billboarded 2D symbols. 
 
 
 
@@ -146,6 +147,7 @@
 | layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
 | maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
 | minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| layerScaleVisibilityOptions | [CIMLayerScaleVisibilityOptions](CIMLayer.md#cimlayerscalevisibilityoptions) | The layer's scale visibility options. 
 | showLegends | boolean | A value indicating whether or not to show legends. 
 | transparency | double | The transparency of the layer. 
 | visibility | boolean | A value indicating whether or not this layer is visible. 
@@ -167,6 +169,8 @@
 | rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
+| enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
 
 
 ### CIMElevationSurfaceLayerDefinition 
@@ -244,6 +248,7 @@
 | layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
 | maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
 | minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| layerScaleVisibilityOptions | [CIMLayerScaleVisibilityOptions](CIMLayer.md#cimlayerscalevisibilityoptions) | The layer's scale visibility options. 
 | showLegends | boolean | A value indicating whether or not to show legends. 
 | transparency | double | The transparency of the layer. 
 | visibility | boolean | A value indicating whether or not this layer is visible. 
@@ -265,6 +270,8 @@
 | rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
+| enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
 
 
 ### CIMStandaloneTableContainer 
@@ -319,6 +326,7 @@
 | layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
 | maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
 | minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| layerScaleVisibilityOptions | [CIMLayerScaleVisibilityOptions](CIMLayer.md#cimlayerscalevisibilityoptions) | The layer's scale visibility options. 
 | showLegends | boolean | A value indicating whether or not to show legends. 
 | transparency | double | The transparency of the layer. 
 | visibility | boolean | A value indicating whether or not this layer is visible. 
@@ -340,6 +348,8 @@
 | rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
+| enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
 
 
 ### CIMGraphicsLayerDefinition 
@@ -389,6 +399,7 @@
 | layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
 | maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
 | minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| layerScaleVisibilityOptions | [CIMLayerScaleVisibilityOptions](CIMLayer.md#cimlayerscalevisibilityoptions) | The layer's scale visibility options. 
 | showLegends | boolean | A value indicating whether or not to show legends. 
 | transparency | double | The transparency of the layer. 
 | visibility | boolean | A value indicating whether or not this layer is visible. 
@@ -410,6 +421,8 @@
 | rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
+| enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
 
 
 ### CIMStandaloneTableContainer 
@@ -496,6 +509,7 @@
 | layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
 | maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
 | minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| layerScaleVisibilityOptions | [CIMLayerScaleVisibilityOptions](CIMLayer.md#cimlayerscalevisibilityoptions) | The layer's scale visibility options. 
 | showLegends | boolean | A value indicating whether or not to show legends. 
 | transparency | double | The transparency of the layer. 
 | visibility | boolean | A value indicating whether or not this layer is visible. 
@@ -517,6 +531,8 @@
 | rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
+| enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
 
 
 ### CIMKMLLayerDefinition 
@@ -552,6 +568,23 @@
 
 
 
+## CIMLayerScaleVisibilityOptions
+#### Represents a layer's scale visibility options. 
+
+
+### CIMLayerScaleVisibilityOptions 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| savedMaxScale | double | The maximum scale that is saved when ShowLayerAtAllScales is set to true. 
+| savedMinScale | double | The minimum scale that is saved when ShowLayerAtAllScales is set to true. 
+| showLayerAtAllScales | boolean | A value indicating whether the layer is visible at all scales. When this value is true, the MinScale and MaxScale properties will be set to zero for the benefit of older CIM clients. 
+
+
+
+
+
+
 ## CIMLayerTemplate
 #### Represents a layer template. 
 
@@ -562,6 +595,7 @@
 |---------|--------|--------|
 | layerTemplateId | string | The layer template ID. 
 | parameters | {JSON_object}| The layer template parameters. 
+| dataURI | string | The URI of any additional data associated with this template. 
 
 
 
@@ -686,6 +720,7 @@
 | layerType | [enumeration MapLayerType](CIMEnumerations.md#enumeration-maplayertype) | The map layer type. 
 | maxScale | double | The maximum scale for layer draw (set as the denominator of the scale's representative fraction). 
 | minScale | double | The minimum scale for layer draw (set as the denominator of the scale's representative fraction). 
+| layerScaleVisibilityOptions | [CIMLayerScaleVisibilityOptions](CIMLayer.md#cimlayerscalevisibilityoptions) | The layer's scale visibility options. 
 | showLegends | boolean | A value indicating whether or not to show legends. 
 | transparency | double | The transparency of the layer. 
 | visibility | boolean | A value indicating whether or not this layer is visible. 
@@ -707,6 +742,8 @@
 | rasterizeOnExport | boolean | A value indicating whether layer should be rasterized when exporting. 
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
+| enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
 
 
 ### CIMTopologyLayerDefinition 
