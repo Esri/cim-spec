@@ -700,6 +700,7 @@
 | computeAtCenter | boolean | A value indicating whether to compute the scale at map center. 
 | displayFirstOutside | boolean | A value indicating whether to display the first numeric value outside the bar. 
 | displayLastOutside | boolean | A value indicating whether to display the last numeric value outside the bar. 
+| barWidth | double | The width of the scalebar. 
 
 
 ### CIMScaleMarks 
@@ -1263,6 +1264,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | field | string | The grouping field for the section. 
+| alignSubsectionToBottom | boolean | A value indicating whether to force the subsection to export at the bottom of the page. 
 
 
 
@@ -2021,6 +2023,7 @@
 | JNC| 5| Jet Navigation Chart 
 | ONC| 6| Operational Navigation Chart 
 | TPC| 7| Tactical Pilotage Chart 
+| EVC| 8| Escape Evasion Chart 
 
 
 
@@ -2496,6 +2499,7 @@
 | XMax | double | The horizontal length maximum value. 
 | verticalIntervalInMeters | long | The vertical interval for scale in meters. 
 | verticalIntervalInFeet | long | The vertical interval for scale in feet. 
+| showAbsoluteHorizontalScale | boolean | A value indicating whether to display absolute or relative grid text automatically. 
 
 
 
@@ -2962,6 +2966,7 @@
 | columns | long | The number of columns for the details section. 
 | rowBackgroundColors | [[CIMColor]](Types.md#color) | The collection of background colors for each of the repeating rows. 
 | rowBackgroundCount | long | The number of consecutive rows for each background color. 
+| keepRecordTogether | boolean | A value indicating whether to prevent a page break for a record in the Details subsection. 
 
 
 
@@ -3102,6 +3107,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+| alignSubsectionToBottom | boolean | A value indicating whether to force the subsection to export at the bottom of the page. 
 
 
 
@@ -3598,8 +3604,9 @@
 | AdjustDivisions| 1| Adjust the number of divisions. 
 | AdjustDivisionAndDivisions| 2| Adjust the division value and number of divisions. 
 | AdjustFrame| 3| Adjust the size of the scale bar frame. 
-| FixedWidth| 4| Preserve the width of the scale bar in page units. 
-| FixedHeight| 5| Preserve the total distance shown in the scale bar. 
+| FixedWidth| 4| Preserve the width of the scale bar in page units. Deprecated in 3.4. Use FixedBarWidth instead. 
+| FixedHeight| 5| Preserve the total distance shown in the scale bar. Deprecated in 3.4. 
+| FixedBarWidth| 6| Preserve the width of the scale bar in page units. 
 
 
 
@@ -3720,6 +3727,7 @@
 | computeAtCenter | boolean | A value indicating whether to compute the scale at map center. 
 | displayFirstOutside | boolean | A value indicating whether to display the first numeric value outside the bar. 
 | displayLastOutside | boolean | A value indicating whether to display the last numeric value outside the bar. 
+| barWidth | double | The width of the scalebar. 
 
 
 ### CIMScaleMarks 
@@ -3832,6 +3840,7 @@
 | computeAtCenter | boolean | A value indicating whether to compute the scale at map center. 
 | displayFirstOutside | boolean | A value indicating whether to display the first numeric value outside the bar. 
 | displayLastOutside | boolean | A value indicating whether to display the last numeric value outside the bar. 
+| barWidth | double | The width of the scalebar. 
 
 
 ### CIMScaleMarks 
@@ -4174,6 +4183,93 @@
 | AdjustColumns| 1| Flow to multiple columns to make data fit. 
 | AdjustColumnsAndSize| 2| Reduce font sizes and flow to multiple columns to make data fit. 
 | AdjustFrame| 3| Adjust the frame to fit the specified font sizes and columns. 
+
+
+
+
+## CIMTopoCompassRose
+#### Represents a compass rose north arrow which displays declination with a compass dial. 
+
+
+### CIMElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| anchor | [enumeration Anchor](CIMLayout.md#enumeration-anchor) | The anchor position of the element. 
+| locked | boolean | A value indicating whether the element is locked. Each element in the contents pane has a lock icon. If the icon is shown as locked, you can not select that feature in the layout using the select tool. 
+| name | string | The name of the element. 
+| visible | boolean | A value indicating whether the element is visible. 
+| rotation | double | The rotation of the element. 
+| rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
+| lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
+
+
+### CIMFrameElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| frame | [Polygon](ExternalReferences.md#polygon) | The geometry of a frame for an element. 
+| graphicFrame | [CIMGraphicFrame](CIMGraphics.md#cimgraphicframe) | The graphic symbology of an element's frame. 
+
+
+### CIMMapSurround 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| mapFrame | string | The map frame associated with the map surround. 
+| minScale | double | The minimum scale. 
+| maxScale | double | The maximum scale. 
+
+
+### CIMNorthArrow 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| referenceLocation | [Point](ExternalReferences.md#point) | The reference location for a north arrow. 
+| calibrationAngle | double | The calibration angle for a north arrow. 
+
+
+### CIMTopoNorthArrow 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| date | [TimeInstant](ExternalReferences.md#timeinstant) | The date used when calculating declination using world magnetic model. 
+| zone | [SpatialReference](ExternalReferences.md#spatialreference) | The spatial reference used for calculating declination, typically a UTM zone. 
+| isPrimaryZone | boolean | A value indicating whether the zone is the primary zone. Set to false when using 2nd north arrow for maps that extend across two UTM zones. 
+| GMAngle | [CIMDeclination](CIMLayout.md#cimdeclination) | The Grid Magnetic declination. 
+| gridConvergence | [CIMDeclination](CIMLayout.md#cimdeclination) | The Grid Convergence declination. 
+| directionalNotes | boolean | A value indicating whether the directional notes are displayed on the north arrow. 
+| leadingZero | boolean | A value indicating whether a leading zero is displayed for minute coordinates of grid convergence. 
+| roundGMAngle | boolean | A value indicating whether GM angle is rounded for display. If true GM angle is displayed to nearest 1/2 degree, if false it is displayed as degrees and minutes. 
+| roundMils | boolean | A value indicating whether Mils rounded for display. If true Mils for both GC and GM will be displayed rounded to nearest 10 Mils, otherwise to nearest 1 Mil. If RoundGMAngle is true, this property is ignored. 
+| autoUpdate | boolean | A value indicating whether the properties of the topographic north arrow should update automatically based on changes in the map. 
+| largeSize | boolean | A value indicating whether the topographic north arrow is displayed in large size. 
+| textSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol used for text elements in topographic north arrow. 
+| lineSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol used for line elements in the topographic north arrow. 
+| trueNorthMarkerSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol displayed at top of true north line, default is a star. 
+| magneticNorthNegativeSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol displayed at top of magnetic north line when the gm-angle is negative. 
+| magneticNorthPositiveSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol displayed at top of magnetic north line when the gm-angle is positive. 
+| magneticNorthZeroSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol displayed at top of magnetic north line when the gm-angle is 0 degrees. 
+| declinationArcSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The line symbol used to display declination arc lines. 
+| productSpecification | [enumeration MapProductSpecType](CIMLayout.md#enumeration-mapproductspectype) | The map product specification type of topographic north arrow. 
+| drawToSpecification | boolean | A value indicating whether to draw the element to specification size or allow user to manually resize element. 
+| dateInterval | long | A value indicating the date interval used to calculate declination. The default value is 5 which is based on the interval used by the World Magnetic Model. A value of zero indicates the current date should be used. 
+
+
+### CIMTopoCompassRose 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| degreeLabelFrequency | long | The frequency in which a degree label is displayed. Valid values are 0 to 359. 
+| divisionMarkSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The line symbol used to draw the division marks on compass dial. 
+| subdivisionMarkSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The line symbol used to draw the sub division marks on compass dial. 
+| degreeMarkSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The line symbol used to draw the degree marks on compass dial. 
+| divisions | long | The frequency of divisions on the compass dial. Valid values are 0 to 359. 
+| subdivisions | long | The frequency of subdivisions on the compass dial. Valid values are 0 to 359. 
+
+
 
 
 

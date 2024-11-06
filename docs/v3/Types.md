@@ -130,6 +130,26 @@
 
 [CIMBAUniqueValueRendererProperties](CIMBusinessAnalyst.md#cimbauniquevaluerendererproperties)
 
+### BAResultsPaneSettings
+
+[CIMBAResultsPaneSettings](CIMBusinessAnalyst.md#cimbaresultspanesettings)
+
+[CIMBASuitabilityAnalysisResultsPaneSettings](CIMBusinessAnalyst.md#cimbasuitabilityanalysisresultspanesettings)
+
+### BASuitabilityAnalysisCriterion
+
+[CIMBAFieldBasedCriterion](CIMBusinessAnalyst.md#cimbafieldbasedcriterion)
+
+[CIMBAPointLayerBasedCriterion](CIMBusinessAnalyst.md#cimbapointlayerbasedcriterion)
+
+[CIMBAVariableBasedCriterion](CIMBusinessAnalyst.md#cimbavariablebasedcriterion)
+
+### BASuitabilityAnalysisSubLayer
+
+[CIMBASuitabilityAnalysisSubLayer](CIMBusinessAnalyst.md#cimbasuitabilityanalysissublayer)
+
+[CIMBASuitabilityAnalysisTargetSiteSubLayer](CIMBusinessAnalyst.md#cimbasuitabilityanalysistargetsitesublayer)
+
 ### BindVariable
 
 [CIMDiscreteVariable](CIMVectorLayers.md#cimdiscretevariable)
@@ -400,6 +420,8 @@
 
 [CIMUtilityNetworkLayer](CIMNetworkLayers.md#cimutilitynetworklayer)
 
+[CIMPresentation](CIMPresentation.md#cimpresentation)
+
 [CIMBuildingDisciplineSceneLayer](CIMServiceLayers.md#cimbuildingdisciplinescenelayer)
 
 [CIMBuildingSceneLayer](CIMServiceLayers.md#cimbuildingscenelayer)
@@ -554,6 +576,8 @@
 
 [CIMTableFrame](CIMLayout.md#cimtableframe)
 
+[CIMTopoCompassRose](CIMLayout.md#cimtopocompassrose)
+
 [CIMTopoNorthArrow](CIMLayout.md#cimtoponortharrow)
 
 ### ElementContainer
@@ -693,6 +717,8 @@
 [CIMTMElevationGuideBarElement](CIMLayout.md#cimtmelevationguidebarelement)
 
 [CIMTableFrame](CIMLayout.md#cimtableframe)
+
+[CIMTopoCompassRose](CIMLayout.md#cimtopocompassrose)
 
 [CIMTopoNorthArrow](CIMLayout.md#cimtoponortharrow)
 
@@ -920,6 +946,12 @@
 
 [CIMNestedLegendItem](CIMLayout.md#cimnestedlegenditem)
 
+### LegendPatch
+
+[CIMAreaLegendPatch](CIMRenderers.md#cimarealegendpatch)
+
+[CIMLineLegendPatch](CIMRenderers.md#cimlinelegendpatch)
+
 ### LinkChartFilter
 
 [CIMLinkChartFieldFilter](CIMLinkCharts.md#cimlinkchartfieldfilter)
@@ -999,6 +1031,8 @@
 [CIMTMElevationGuideBarElement](CIMLayout.md#cimtmelevationguidebarelement)
 
 [CIMTableFrame](CIMLayout.md#cimtableframe)
+
+[CIMTopoCompassRose](CIMLayout.md#cimtopocompassrose)
 
 [CIMTopoNorthArrow](CIMLayout.md#cimtoponortharrow)
 
@@ -1084,6 +1118,8 @@
 
 [CIMMarkerNorthArrow](CIMLayout.md#cimmarkernortharrow)
 
+[CIMTopoCompassRose](CIMLayout.md#cimtopocompassrose)
+
 [CIMTopoNorthArrow](CIMLayout.md#cimtoponortharrow)
 
 ### NumberFormat
@@ -1149,6 +1185,22 @@
 [CIMGrainPostprocessingEffect](CIMEffects.md#cimgrainpostprocessingeffect)
 
 [CIMVignettePostprocessingEffect](CIMEffects.md#cimvignettepostprocessingeffect)
+
+### PresentationMapRestingState
+
+[CIMPresentationGravityWellRestingState](CIMPresentation.md#cimpresentationgravitywellrestingstate)
+
+[CIMPresentationRotateRestingState](CIMPresentation.md#cimpresentationrotaterestingstate)
+
+### PresentationPage
+
+[CIMImagePresentationPage](CIMPresentation.md#cimimagepresentationpage)
+
+[CIMMapPresentationPage](CIMPresentation.md#cimmappresentationpage)
+
+[CIMPresentationPage](CIMPresentation.md#cimpresentationpage)
+
+[CIMVideoPresentationPage](CIMPresentation.md#cimvideopresentationpage)
 
 ### ProfileObstacle
 
@@ -1312,6 +1364,20 @@
 
 [CIMContouringEffect](CIMMap.md#cimcontouringeffect)
 
+### SymbolAnimation
+
+[CIMSymbolAnimationColor](CIMSymbols.md#cimsymbolanimationcolor)
+
+[CIMSymbolAnimationOffset](CIMSymbols.md#cimsymbolanimationoffset)
+
+[CIMSymbolAnimationRotation](CIMSymbols.md#cimsymbolanimationrotation)
+
+[CIMSymbolAnimationScale](CIMSymbols.md#cimsymbolanimationscale)
+
+[CIMSymbolAnimationSize](CIMSymbols.md#cimsymbolanimationsize)
+
+[CIMSymbolAnimationTransparency](CIMSymbols.md#cimsymbolanimationtransparency)
+
 ### TabGridLine
 
 [CIMCondensedTabGridLine](CIMLayout.md#cimcondensedtabgridline)
@@ -1364,6 +1430,12 @@
 
 [CIMTinNodeValueRenderer](CIMTerrainLayers.md#cimtinnodevaluerenderer)
 
+### TopoNorthArrow
+
+[CIMTopoCompassRose](CIMLayout.md#cimtopocompassrose)
+
+[CIMTopoNorthArrow](CIMLayout.md#cimtoponortharrow)
+
 ### Version
 
 [CIMBAVariableList](CIMBusinessAnalyst.md#cimbavariablelist)
@@ -1385,6 +1457,8 @@
 [CIMLayoutDocument](CIMDocument.md#cimlayoutdocument)
 
 [CIMMapDocument](CIMDocument.md#cimmapdocument)
+
+[CIMPresentationDocument](CIMDocument.md#cimpresentationdocument)
 
 [CIMStatisticalDataCollectionDocument](CIMDocument.md#cimstatisticaldatacollectiondocument)
 
@@ -1492,19 +1566,37 @@
 
 [CIMBAAreaOfInterestItem](CIMBusinessAnalyst.md#CIMBAAreaOfInterestItem)
 
+[CIMBABenchmarkComparisonsProperties](CIMBusinessAnalyst.md#CIMBABenchmarkComparisonsProperties)
+
 [CIMBAColorCodedLayerParameters](CIMBusinessAnalyst.md#CIMBAColorCodedLayerParameters)
 
 [CIMBAFeatureClassAreaOfInterestItem](CIMBusinessAnalyst.md#CIMBAFeatureClassAreaOfInterestItem)
 
 [CIMBAFeatureLayerAreaOfInterestItem](CIMBusinessAnalyst.md#CIMBAFeatureLayerAreaOfInterestItem)
 
+[CIMBAFieldBasedCriterion](CIMBusinessAnalyst.md#CIMBAFieldBasedCriterion)
+
 [CIMBAGraduatedColorsRendererProperties](CIMBusinessAnalyst.md#CIMBAGraduatedColorsRendererProperties)
 
 [CIMBALevelOfDetail](CIMBusinessAnalyst.md#CIMBALevelOfDetail)
 
+[CIMBAPointLayerBasedCriterion](CIMBusinessAnalyst.md#CIMBAPointLayerBasedCriterion)
+
+[CIMBAResultsPaneSettings](CIMBusinessAnalyst.md#CIMBAResultsPaneSettings)
+
 [CIMBAStdGeoAreaOfInterestItem](CIMBusinessAnalyst.md#CIMBAStdGeoAreaOfInterestItem)
 
+[CIMBASuitabilityAnalysisLayer](CIMBusinessAnalyst.md#CIMBASuitabilityAnalysisLayer)
+
+[CIMBASuitabilityAnalysisResultsPaneSettings](CIMBusinessAnalyst.md#CIMBASuitabilityAnalysisResultsPaneSettings)
+
+[CIMBASuitabilityAnalysisSubLayer](CIMBusinessAnalyst.md#CIMBASuitabilityAnalysisSubLayer)
+
+[CIMBASuitabilityAnalysisTargetSiteSubLayer](CIMBusinessAnalyst.md#CIMBASuitabilityAnalysisTargetSiteSubLayer)
+
 [CIMBAUniqueValueRendererProperties](CIMBusinessAnalyst.md#CIMBAUniqueValueRendererProperties)
+
+[CIMBAVariableBasedCriterion](CIMBusinessAnalyst.md#CIMBAVariableBasedCriterion)
 
 [CIMBAVariableList](CIMBusinessAnalyst.md#CIMBAVariableList)
 
@@ -1685,6 +1777,8 @@
 [CIMMapView](CIMDocument.md#CIMMapView)
 
 [CIMModuleSettings](CIMDocument.md#CIMModuleSettings)
+
+[CIMPresentationDocument](CIMDocument.md#CIMPresentationDocument)
 
 [CIMProjectItem](CIMDocument.md#CIMProjectItem)
 
@@ -1926,7 +2020,13 @@
 
 [CIMKnowledgeGraphTableDataConnection](CIMKnowledgeGraph.md#CIMKnowledgeGraphTableDataConnection)
 
+[CIMKnowledgeLinkChartChronologicalLayoutSettings](CIMKnowledgeGraph.md#CIMKnowledgeLinkChartChronologicalLayoutSettings)
+
 [CIMKnowledgeLinkChartLayout](CIMKnowledgeGraph.md#CIMKnowledgeLinkChartLayout)
+
+[CIMKnowledgeLinkChartOrganicLayoutSettings](CIMKnowledgeGraph.md#CIMKnowledgeLinkChartOrganicLayoutSettings)
+
+[CIMKnowledgeNonspatialDataDisplay](CIMKnowledgeGraph.md#CIMKnowledgeNonspatialDataDisplay)
 
 [CIMLinkChartFeatureLayer](CIMKnowledgeGraph.md#CIMLinkChartFeatureLayer)
 
@@ -2180,6 +2280,8 @@
 
 [CIMTableFrameField](CIMLayout.md#CIMTableFrameField)
 
+[CIMTopoCompassRose](CIMLayout.md#CIMTopoCompassRose)
+
 [CIMTopoNorthArrow](CIMLayout.md#CIMTopoNorthArrow)
 
 [CIMVerticalLegendItem](CIMLayout.md#CIMVerticalLegendItem)
@@ -2258,11 +2360,21 @@
 
 [CIMGroundToGridCorrection](CIMMap.md#CIMGroundToGridCorrection)
 
+[CIMIPSAppleIPSConfiguration](CIMMap.md#CIMIPSAppleIPSConfiguration)
+
 [CIMIPSAwareMapProperties](CIMMap.md#CIMIPSAwareMapProperties)
+
+[CIMIPSConfiguration](CIMMap.md#CIMIPSConfiguration)
+
+[CIMIPSGNSSConfiguration](CIMMap.md#CIMIPSGNSSConfiguration)
+
+[CIMIPSPathSnappingConfiguration](CIMMap.md#CIMIPSPathSnappingConfiguration)
 
 [CIMIPSPositioningDataServiceProperties](CIMMap.md#CIMIPSPositioningDataServiceProperties)
 
 [CIMIPSPositioningTableProperties](CIMMap.md#CIMIPSPositioningTableProperties)
+
+[CIMIPSSmoothingConfiguration](CIMMap.md#CIMIPSSmoothingConfiguration)
 
 [CIMIlluminationProperties](CIMMap.md#CIMIlluminationProperties)
 
@@ -2418,6 +2530,28 @@
 
 [CIMTextMediaInfo](CIMPopup.md#CIMTextMediaInfo)
 
+[CIMAspectRatio](CIMPresentation.md#CIMAspectRatio)
+
+[CIMImagePresentationPage](CIMPresentation.md#CIMImagePresentationPage)
+
+[CIMMapPresentationPage](CIMPresentation.md#CIMMapPresentationPage)
+
+[CIMPresentation](CIMPresentation.md#CIMPresentation)
+
+[CIMPresentationGravityWellRestingState](CIMPresentation.md#CIMPresentationGravityWellRestingState)
+
+[CIMPresentationLayerOverrideSet](CIMPresentation.md#CIMPresentationLayerOverrideSet)
+
+[CIMPresentationMapView](CIMPresentation.md#CIMPresentationMapView)
+
+[CIMPresentationPage](CIMPresentation.md#CIMPresentationPage)
+
+[CIMPresentationRotateRestingState](CIMPresentation.md#CIMPresentationRotateRestingState)
+
+[CIMPresentationTransition](CIMPresentation.md#CIMPresentationTransition)
+
+[CIMVideoPresentationPage](CIMPresentation.md#CIMVideoPresentationPage)
+
 [CIMAGSServiceConnection](CIMServiceLayers.md#CIMAGSServiceConnection)
 
 [CIMBuildingDisciplineSceneLayer](CIMServiceLayers.md#CIMBuildingDisciplineSceneLayer)
@@ -2500,6 +2634,8 @@
 
 [CIMWMTSServiceConnection](CIMServiceLayers.md#CIMWMTSServiceConnection)
 
+[CIMAreaLegendPatch](CIMRenderers.md#CIMAreaLegendPatch)
+
 [CIMBivariateFieldInfo](CIMRenderers.md#CIMBivariateFieldInfo)
 
 [CIMBivariateRendererAuthoringInfo](CIMRenderers.md#CIMBivariateRendererAuthoringInfo)
@@ -2521,6 +2657,8 @@
 [CIMExpressionInfo](CIMRenderers.md#CIMExpressionInfo)
 
 [CIMHeatMapRenderer](CIMRenderers.md#CIMHeatMapRenderer)
+
+[CIMLineLegendPatch](CIMRenderers.md#CIMLineLegendPatch)
 
 [CIMMultilevelColorVisualVariable](CIMRenderers.md#CIMMultilevelColorVisualVariable)
 
@@ -2706,6 +2844,18 @@
 
 [CIMStackedBarChartMarker](CIMSymbols.md#CIMStackedBarChartMarker)
 
+[CIMSymbolAnimationColor](CIMSymbols.md#CIMSymbolAnimationColor)
+
+[CIMSymbolAnimationOffset](CIMSymbols.md#CIMSymbolAnimationOffset)
+
+[CIMSymbolAnimationRotation](CIMSymbols.md#CIMSymbolAnimationRotation)
+
+[CIMSymbolAnimationScale](CIMSymbols.md#CIMSymbolAnimationScale)
+
+[CIMSymbolAnimationSize](CIMSymbols.md#CIMSymbolAnimationSize)
+
+[CIMSymbolAnimationTransparency](CIMSymbols.md#CIMSymbolAnimationTransparency)
+
 [CIMTextMargin](CIMSymbols.md#CIMTextMargin)
 
 [CIMTextSymbol](CIMSymbols.md#CIMTextSymbol)
@@ -2721,6 +2871,8 @@
 [CIMColorModulationInfo](CIMTerrainLayers.md#CIMColorModulationInfo)
 
 [CIMColorUniqueValue](CIMTerrainLayers.md#CIMColorUniqueValue)
+
+[CIMContourIntervalScaleBreak](CIMTerrainLayers.md#CIMContourIntervalScaleBreak)
 
 [CIMLASDatasetLayer](CIMTerrainLayers.md#CIMLASDatasetLayer)
 

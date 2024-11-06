@@ -595,6 +595,21 @@
 
 
 
+## CIMIPSAppleIPSConfiguration
+#### Define IPS configuration Apple IPS propeties. 
+
+
+### CIMIPSAppleIPSConfiguration 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| enabled | boolean | A value indicating whether AppleIPS property is enabled. 
+
+
+
+
+
+
 ## CIMIPSAwareMapProperties
 #### Define the properties needed to identify IPS layer and table. 
 
@@ -606,6 +621,57 @@
 | IPSRecordingsLayerURI | string | The properties of the IPS recordings layer in the map. 
 | IPSPositioningTableProperties | [CIMIPSPositioningTableProperties](CIMMap.md#cimipspositioningtableproperties) | The properties of the IPS positioning table in the map. 
 | IPSPositioningDataServiceProperties | [CIMIPSPositioningDataServiceProperties](CIMMap.md#cimipspositioningdataserviceproperties) | The properties of the IPS positioning data service from a portal. 
+| IPSConfiguration | [CIMIPSConfiguration](CIMMap.md#cimipsconfiguration) | The properties of the IPS configuration. 
+
+
+
+
+
+
+## CIMIPSConfiguration
+#### Defines the properties for the IPS configuration. 
+
+
+### CIMIPSConfiguration 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| pathSnapping | [CIMIPSPathSnappingConfiguration](CIMMap.md#cimipspathsnappingconfiguration) | IPS configuration path snapping. 
+| smoothing | [CIMIPSSmoothingConfiguration](CIMMap.md#cimipssmoothingconfiguration) | IPS configuration smoothing. 
+| GNSS | [CIMIPSGNSSConfiguration](CIMMap.md#cimipsgnssconfiguration) | IPS configuration GNSS. 
+| appleIPS | [CIMIPSAppleIPSConfiguration](CIMMap.md#cimipsappleipsconfiguration) | IPS configuration AppleIPS. 
+
+
+
+
+
+
+## CIMIPSGNSSConfiguration
+#### Define IPS configuration GNSS properties. 
+
+
+### CIMIPSGNSSConfiguration 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| enabled | boolean | A value indicating whether GNSS property is enabled. 
+
+
+
+
+
+
+## CIMIPSPathSnappingConfiguration
+#### Defines IPS configuration path snapping properties. 
+
+
+### CIMIPSPathSnappingConfiguration 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| enabled | boolean | A value indicating whether path snapping property is enabled. 
+| distance | double | The distance for path snapping. 
+| distanceUnit | [LinearUnit](ExternalReferences.md#linearunit) | The distance unit for path snapping. 
 
 
 
@@ -621,6 +687,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | portalItem | [CIMPortalItem](CIMCore.md#cimportalitem) | The portal item. 
+| workspaceConnection | [CIMWorkspaceConnection](CIMVectorLayers.md#cimworkspaceconnection) | The workspace connection. 
 
 
 
@@ -637,6 +704,21 @@
 |---------|--------|--------|
 | tableURI | string | The URI for the IPS positioning table in the map. 
 | selectedGlobalID | string | The global ID of the row selected from the IPS positioning table. 
+
+
+
+
+
+
+## CIMIPSSmoothingConfiguration
+#### Defines IPS configuration smoothing properties. 
+
+
+### CIMIPSSmoothingConfiguration 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| enabled | boolean | A value indicating whether smoothing property is enabled. 
 
 
 
@@ -1006,7 +1088,7 @@
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the map. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 | linkCharts | [string] | The link charts as an array of link chart repository paths. 
 | timelines | [string] | The timelines as an array of timeline repository paths. 
-| knowledgeGraphLinkChartProperties | CIMKnowledgeGraphLinkChartProperties | The Knowledge Graph Link Chart properties of this map. This property is only applicable if the MapType is LinkChart. 
+| knowledgeGraphLinkChartProperties | [CIMKnowledgeGraphLinkChartProperties](CIMKnowledgeGraph.md#cimknowledgegraphlinkchartproperties) | The Knowledge Graph Link Chart properties of this map. This property is only applicable if the MapType is LinkChart. 
 | groundElevationSurfaceLayer | string | The URI of the ground elevation surface layer in the map. 
 | customElevationSurfaceLayers | [string] | The URIs of the custom elevation surface layers in the map. 
 | defaultVisualEffect | [VisualEffect](Types.md#visualeffect) | The visual effect that new views of this scene are opened with. 

@@ -416,6 +416,37 @@
 
 
 
+## CIMPresentationDocument
+#### Represents a presentation document which is the document type used for saving .prsx files. 
+
+
+### CIMVersion 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| version | string | Document version. Set by the system. 
+| build | long | The build an item was created with. Set by the system. 
+
+
+### CIMPresentationDocument 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| presentationDefinition | [CIMPresentation](CIMPresentation.md#cimpresentation) | The presentation definition in the document. 
+| binaryReferences | [[CIMBinaryReference]](CIMDocument.md#cimbinaryreference) | The binary references in the document. 
+| layerDefinitions | [[CIMDefinition]](Types.md#definition) | The layer definitions in the document. 
+| mapDefinitions | [[CIMDefinition]](Types.md#definition) | The map definitions in the document. 
+| tableDefinitions | [[CIMDefinition]](Types.md#definition) | The table definitions in the document. 
+| linkChartDefinitions | [[CIMDefinition]](Types.md#definition) | The link chart definitions in the document. 
+| timelineDefinitions | [[CIMDefinition]](Types.md#definition) | The timeline definitions in the document. 
+| videoDefinitions | [[CIMDefinition]](Types.md#definition) | The video definitions in the document. 
+| elevationSurfaceLayerDefinitions | [[CIMDefinition]](Types.md#definition) | The elevation surface layer definitions in the document. 
+
+
+
+
+
+
 ## CIMProjectItem
 #### Represents an item in the project. 
 

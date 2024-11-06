@@ -28,6 +28,18 @@
 
 
 
+### Enumeration: AnimatedSymbolEasingType
+#### Represents the easing options for an animated symbol. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Linear| 0| Represents a linear animation. 
+| EaseIn| 1| Represents an animation that eases in. 
+| EaseOut| 2| Represents an animation that eases out. 
+| EaseInOut| 3| Represents an animation that eases in and out. 
+
+
+
 
 ## CIMAnimatedSymbolProperties
 #### Represents animated symbol properties, a collection of symbol properties that apply when the symbol layer has animation data. 
@@ -48,6 +60,7 @@
 | repeatType | [enumeration AnimatedSymbolRepeatType](CIMSymbols.md#enumeration-animatedsymbolrepeattype) | How to repeat the animation of a symbol when an animation cycle ends. 
 | repeatDelay | double | The number of seconds to delay before repeating an animation cycle. 
 | primitiveName | string | The primitive name. 
+| easing | [enumeration AnimatedSymbolEasingType](CIMSymbols.md#enumeration-animatedsymboleasingtype) | The animation's easing. Only applicable on non file-based animations. 
 
 
 
@@ -147,6 +160,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+| animations | [[CIMSymbolAnimation]](Types.md#symbolanimation) | The animations that are applied to the symbol layer. 
 | effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
@@ -254,6 +268,7 @@
 | CGAAttributeType | [enumeration CGAAttributeType](CIMSymbols.md#enumeration-cgaattributetype) | The CGA attribute type. 
 | value | any | The value. Used when CGAAttributeType is Float, String and Boolean. 
 | values | [[any]]| The values in the array. Used when CGAAttributeType is Float_Array, String_Array and Boolean_Array. 
+| arrayRowCount | long | The count of rows in the array. Used when CGAAttributeType is Float_Array, String_Array and Boolean_Array. 
 
 
 
@@ -282,6 +297,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+| animations | [[CIMSymbolAnimation]](Types.md#symbolanimation) | The animations that are applied to the symbol layer. 
 | effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
@@ -700,6 +716,14 @@
 | CurvedParallelTicks| 35| Curved line with ticks. Curve begins on vertex 2 and ends on vertex 3. Ticks on opposite side of vertex 1. 
 | Arc90Degrees| 36| 90 degree arc with ends at vertex 1 and vertex 2. Vertex 3 determines the side of the curve. 
 | TipWithPerpendicularAndTicks| 37| Dynamic line perpendicular to segment 1, center on vertex 1 and offset towards vertex 2 with ticks. 
+| ConcentricCircles| 38| Creates 2 or 3 concentric circles centered on vertex 1. Circle radius is based on vertex location. 
+| DoubleJogArrow| 39| Creates two dynamic lines with jogs centered on vertex 1. 
+| LinkedChevrons| 40| Creates a dynamic line between vertex 1 and 2 connecting two chevrons. Vertex 3 defines the width of the chevrons. 
+| SegmentThenHalfCircle| 41| Creates a dynamic line with a straight segment followed by a half circle. The diameter of the circle is determined by the length of the second segment. Vertex 4 determines the side of the half circle. 
+| LineWithStraightTicks| 42| Creates a dynamic line with vertex 1 in the middle. Vertices 2 and 3 define the length of the ticks and the line. 
+| DoubleCurve| 43| Creates a dynamic line with alternating curves at vertex 2. 
+| ParallelWithTicksByWidth| 44| Creates a dynamic line with angled ticks on the ends between vertex 2 and vertex 3. A mirrored parallel line is placed at the width defined by vertex 2. 
+| EnclosingRoundedRectangle| 45| Creates an enclosing rectangle around the line with rounded corners. 
 
 
 
@@ -1273,6 +1297,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+| animations | [[CIMSymbolAnimation]](Types.md#symbolanimation) | The animations that are applied to the symbol layer. 
 | effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
@@ -1324,6 +1349,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+| animations | [[CIMSymbolAnimation]](Types.md#symbolanimation) | The animations that are applied to the symbol layer. 
 | effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
@@ -1380,6 +1406,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+| animations | [[CIMSymbolAnimation]](Types.md#symbolanimation) | The animations that are applied to the symbol layer. 
 | effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
@@ -1511,6 +1538,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+| animations | [[CIMSymbolAnimation]](Types.md#symbolanimation) | The animations that are applied to the symbol. 
 | effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | The geometric effects that are applied to the symbol. 
 | symbolLayers | [[CIMSymbolLayer]](Types.md#symbollayer) | The symbol layers. Symbol layers are the components that make up a symbol. A symbol layer is represented by a stroke, fill, marker, or procedural symbol layer. 
 | thumbnailURI | string | The representative image of the symbol as a base64 encoded string. 
@@ -1968,6 +1996,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+| animations | [[CIMSymbolAnimation]](Types.md#symbolanimation) | The animations that are applied to the symbol layer. 
 | effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
@@ -2002,6 +2031,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+| animations | [[CIMSymbolAnimation]](Types.md#symbolanimation) | The animations that are applied to the symbol. 
 | effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | The geometric effects that are applied to the symbol. 
 | symbolLayers | [[CIMSymbolLayer]](Types.md#symbollayer) | The symbol layers. Symbol layers are the components that make up a symbol. A symbol layer is represented by a stroke, fill, marker, or procedural symbol layer. 
 | thumbnailURI | string | The representative image of the symbol as a base64 encoded string. 
@@ -2027,6 +2057,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+| animations | [[CIMSymbolAnimation]](Types.md#symbolanimation) | The animations that are applied to the symbol layer. 
 | effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
@@ -2068,6 +2099,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+| animations | [[CIMSymbolAnimation]](Types.md#symbolanimation) | The animations that are applied to the symbol layer. 
 | effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
@@ -2122,6 +2154,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+| animations | [[CIMSymbolAnimation]](Types.md#symbolanimation) | The animations that are applied to the symbol layer. 
 | effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
@@ -2166,6 +2199,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+| animations | [[CIMSymbolAnimation]](Types.md#symbolanimation) | The animations that are applied to the symbol layer. 
 | effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
@@ -2333,6 +2367,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+| animations | [[CIMSymbolAnimation]](Types.md#symbolanimation) | The animations that are applied to the symbol. 
 | effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | The geometric effects that are applied to the symbol. 
 | symbolLayers | [[CIMSymbolLayer]](Types.md#symbollayer) | The symbol layers. Symbol layers are the components that make up a symbol. A symbol layer is represented by a stroke, fill, marker, or procedural symbol layer. 
 | thumbnailURI | string | The representative image of the symbol as a base64 encoded string. 
@@ -2417,6 +2452,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+| animations | [[CIMSymbolAnimation]](Types.md#symbolanimation) | The animations that are applied to the symbol. 
 | effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | The geometric effects that are applied to the symbol. 
 | symbolLayers | [[CIMSymbolLayer]](Types.md#symbollayer) | The symbol layers. Symbol layers are the components that make up a symbol. A symbol layer is represented by a stroke, fill, marker, or procedural symbol layer. 
 | thumbnailURI | string | The representative image of the symbol as a base64 encoded string. 
@@ -2442,6 +2478,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+| animations | [[CIMSymbolAnimation]](Types.md#symbolanimation) | The animations that are applied to the symbol layer. 
 | effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
@@ -2574,6 +2611,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+| animations | [[CIMSymbolAnimation]](Types.md#symbolanimation) | The animations that are applied to the symbol layer. 
 | effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
@@ -2607,6 +2645,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+| animations | [[CIMSymbolAnimation]](Types.md#symbolanimation) | The animations that are applied to the symbol layer. 
 | effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
@@ -2636,6 +2675,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+| animations | [[CIMSymbolAnimation]](Types.md#symbolanimation) | The animations that are applied to the symbol layer. 
 | effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
@@ -2677,6 +2717,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+| animations | [[CIMSymbolAnimation]](Types.md#symbolanimation) | The animations that are applied to the symbol layer. 
 | effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
@@ -2723,6 +2764,145 @@
 | outlineSymbol | [CIMLineSymbol](CIMSymbols.md#cimlinesymbol) | The outline symbol. 
 | verticalBar | boolean | A value indicating whether this chart has a vertical bar. 
 | width | double | The width. 
+
+
+
+
+
+
+## CIMSymbolAnimationColor
+#### Represents the color animation. Dynamically animates the symbol to the given color. 
+
+
+### CIMSymbolAnimation 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| animatedSymbolProperties | [CIMAnimatedSymbolProperties](CIMSymbols.md#cimanimatedsymbolproperties) | The animated symbol properties. 
+| primitiveName | string | The primitive name. 
+
+
+### CIMSymbolAnimationColor 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| toColor | [Color](Types.md#color) | The color to which the symbol will animate. 
+
+
+
+
+
+
+## CIMSymbolAnimationOffset
+#### Represents the offset animation. Dynamically animates the symbol to the given offset. 
+
+
+### CIMSymbolAnimation 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| animatedSymbolProperties | [CIMAnimatedSymbolProperties](CIMSymbols.md#cimanimatedsymbolproperties) | The animated symbol properties. 
+| primitiveName | string | The primitive name. 
+
+
+### CIMSymbolAnimationOffset 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| offsetX | double | The x offset to which the symbol will animate. 
+| offsetY | double | The y offset to which the symbol will animate. 
+
+
+
+
+
+
+## CIMSymbolAnimationRotation
+#### Represents the rotation animation. Dynamically animates the symbol to the given rotation value. 
+
+
+### CIMSymbolAnimation 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| animatedSymbolProperties | [CIMAnimatedSymbolProperties](CIMSymbols.md#cimanimatedsymbolproperties) | The animated symbol properties. 
+| primitiveName | string | The primitive name. 
+
+
+### CIMSymbolAnimationRotation 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| toRotation | double | The rotation value to which the symbol will animate. 
+
+
+
+
+
+
+## CIMSymbolAnimationScale
+#### Represents the scale animation. Dynamically animates the symbol by the given scale. 
+
+
+### CIMSymbolAnimation 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| animatedSymbolProperties | [CIMAnimatedSymbolProperties](CIMSymbols.md#cimanimatedsymbolproperties) | The animated symbol properties. 
+| primitiveName | string | The primitive name. 
+
+
+### CIMSymbolAnimationScale 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| scaleFactor | double | The scale factor for the animation. 
+
+
+
+
+
+
+## CIMSymbolAnimationSize
+#### Represents the size animation. Dynamically animates the symbol by the given size. 
+
+
+### CIMSymbolAnimation 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| animatedSymbolProperties | [CIMAnimatedSymbolProperties](CIMSymbols.md#cimanimatedsymbolproperties) | The animated symbol properties. 
+| primitiveName | string | The primitive name. 
+
+
+### CIMSymbolAnimationSize 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| toSize | double | The size value for the animation. 
+
+
+
+
+
+
+## CIMSymbolAnimationTransparency
+#### Represents the transparency animation. Dynamically animates the symbol to the given transparency. 
+
+
+### CIMSymbolAnimation 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| animatedSymbolProperties | [CIMAnimatedSymbolProperties](CIMSymbols.md#cimanimatedsymbolproperties) | The animated symbol properties. 
+| primitiveName | string | The primitive name. 
+
+
+### CIMSymbolAnimationTransparency 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| toTransparency | double | The transparency to which the symbol will animate. 
 
 
 
@@ -2869,6 +3049,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+| animations | [[CIMSymbolAnimation]](Types.md#symbolanimation) | The animations that are applied to the symbol layer. 
 | effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
@@ -2931,6 +3112,7 @@
 |---------|--------|--------|
 | Right| 0| Align right. 
 | Upright| 1| Align upright. 
+| Mixed| 2| Mixed orientation following the Unicode vertical text layout standard. 
 
 
 
@@ -2943,6 +3125,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+| animations | [[CIMSymbolAnimation]](Types.md#symbolanimation) | The animations that are applied to the symbol layer. 
 | effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
@@ -3003,6 +3186,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+| animations | [[CIMSymbolAnimation]](Types.md#symbolanimation) | The animations that are applied to the symbol layer. 
 | effects | [[CIMGeometricEffect]](Types.md#geometriceffect) | Whether the geometric effects that are applied to the symbol layer. Effects dynamically alter the feature geometry when the symbology is applied. Multiple effects applied to a symbol layer are rendered sequentially. 
 | enable | boolean | A value indicating whether the symbol layer is visible. The symbol layer draws only when enabled. Currently, an invisible layer is not considered in any transformations when in a 3D context. 
 | name | string | The internal name of the symbol layer used for symbol level drawing. 
@@ -3044,6 +3228,8 @@
 | useAnchorPoint | boolean | A value indicating whether or not to ignore the marker anchor point and insert the model directly at the data point. 
 | animatedSymbolProperties | [CIMAnimatedSymbolProperties](CIMSymbols.md#cimanimatedsymbolproperties) | The collection of symbol properties that apply when the symbol layer has animation data. 
 | primitiveShapeType | [enumeration PrimitiveShapeType](CIMEnumerations.md#enumeration-primitiveshapetype) | The PrimitiveShapeType. 
+| sourceStyleName | string | A value indicating the source style name. 
+| sourceSymbolKey | string | A value indicating the source symbol key. 
 
 
 

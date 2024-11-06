@@ -1,6 +1,27 @@
 
 
 
+## CIMAreaLegendPatch
+#### Represents an area legend patch, small rectangles used to display legend classes. 
+
+
+### CIMLegendPatch 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| geometryURI | string | The URI of the binary reference containing the geometry of the legend patch. 
+
+
+### CIMAreaLegendPatch 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+
+
+
+
 ## CIMBivariateFieldInfo
 #### Contains a collection of properties that describe a bivariate attribute field. 
 
@@ -152,6 +173,7 @@
 | exclusionSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The exclusion symbol. 
 | useExclusionSymbol | boolean | A value indicating whether or not to use the exclusion symbol. 
 | exclusionSymbolPatch | [enumeration PatchShape](CIMRenderers.md#enumeration-patchshape) | The patch shape for the exclusion symbol. 
+| exclusionSymbolCustomPatch | [LegendPatch](Types.md#legendpatch) | The custom patch for the exclusion symbol. 
 
 
 
@@ -173,6 +195,7 @@
 | symbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol for the class. 
 | upperBound | double | The upper bound of the class. 
 | alternateSymbols | [[CIMSymbolReference]](CIMRenderers.md#cimsymbolreference) | An array of symbol references that are intended to be used at specific scale ranges. 
+| customPatch | [LegendPatch](Types.md#legendpatch) | The custom patch for this class. 
 
 
 
@@ -241,6 +264,8 @@
 | defaultLabel | string | The default label. 
 | defaultDescription | string | The default description. 
 | numberFormat | [NumberFormat](Types.md#numberformat) | The number format. 
+| defaultSymbolCustomPatch | [LegendPatch](Types.md#legendpatch) | The custom patch for the default symbol. 
+| alwaysUpdateClassLabels | boolean | A value indicating whether or not to automatically update class labels whenever a class upper value is changed. 
 
 
 ### CIMDataSampling 
@@ -269,6 +294,7 @@
 | exclusionSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The exclusion symbol. 
 | useExclusionSymbol | boolean | A value indicating whether or not to use the exclusion symbol. 
 | exclusionSymbolPatch | [enumeration PatchShape](CIMRenderers.md#enumeration-patchshape) | The patch shape for the exclusion symbol. 
+| exclusionSymbolCustomPatch | [LegendPatch](Types.md#legendpatch) | The custom patch for the exclusion symbol. 
 
 
 ### CIMVisualVariableRenderer 
@@ -347,6 +373,8 @@
 | defaultLabel | string | The default label. 
 | defaultDescription | string | The default description. 
 | numberFormat | [NumberFormat](Types.md#numberformat) | The number format. 
+| defaultSymbolCustomPatch | [LegendPatch](Types.md#legendpatch) | The custom patch for the default symbol. 
+| alwaysUpdateClassLabels | boolean | A value indicating whether or not to automatically update class labels whenever a class upper value is changed. 
 
 
 ### CIMColorClassBreaksVisualVariable 
@@ -466,6 +494,7 @@
 | exclusionSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The exclusion symbol. 
 | useExclusionSymbol | boolean | A value indicating whether or not to use the exclusion symbol. 
 | exclusionSymbolPatch | [enumeration PatchShape](CIMRenderers.md#enumeration-patchshape) | The patch shape for the exclusion symbol. 
+| exclusionSymbolCustomPatch | [LegendPatch](Types.md#legendpatch) | The custom patch for the exclusion symbol. 
 
 
 ### CIMDotDensityRenderer 
@@ -554,6 +583,27 @@
 
 
 
+## CIMLineLegendPatch
+#### Represents a line legend patch, small lines used to display legend classes. 
+
+
+### CIMLegendPatch 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| geometryURI | string | The URI of the binary reference containing the geometry of the legend patch. 
+
+
+### CIMLineLegendPatch 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+
+
+
+
 ## CIMMultilevelColorVisualVariable
 #### Represents a color visual variable with different levels-of-detail. 
 
@@ -616,6 +666,7 @@
 | AreaHexagonFlat| 22| A flat hexagon. 
 | AreaHexagonPointy| 23| A pointy hexagon. 
 | AreaTrapezium| 24| A trapezium. 
+| Custom| 100| Custom shape. 
 
 
 
@@ -714,6 +765,7 @@
 | exclusionSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The exclusion symbol. 
 | useExclusionSymbol | boolean | A value indicating whether or not to use the exclusion symbol. 
 | exclusionSymbolPatch | [enumeration PatchShape](CIMRenderers.md#enumeration-patchshape) | The patch shape for the exclusion symbol. 
+| exclusionSymbolCustomPatch | [LegendPatch](Types.md#legendpatch) | The custom patch for the exclusion symbol. 
 
 
 ### CIMProportionalRenderer 
@@ -738,6 +790,7 @@
 | showInAscendingOrder | boolean | A value indicating whether or not to show classes in ascending order. 
 | valueExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | ExpressionInfo that contains the Arcade expression that returns value as a number. When both Fields and ValueExpressionInfo are present ValueExpressionInfo is used. 
 | drawProportionalSymbolsAboveAllLayers | boolean | A value indicating whether or not to draw proportional symbols for polygon features above all layers. This option applies when drawing proportional symbols for polygon layers. The background will be drawn in contents order and this option indicates if the propoertional symbols should be drawn in contents order or above all other layers. 
+| defaultSymbolCustomPatch | [LegendPatch](Types.md#legendpatch) | The custom patch for the default symbol. 
 
 
 
@@ -862,6 +915,7 @@
 | patch | [enumeration PatchShape](CIMRenderers.md#enumeration-patchshape) | The patch. 
 | symbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol. 
 | alternateSymbols | [[CIMSymbolReference]](CIMRenderers.md#cimsymbolreference) | An array of symbol references that are intended to be used at specific scale ranges. 
+| customPatch | [LegendPatch](Types.md#legendpatch) | The custom patch. 
 
 
 
@@ -926,6 +980,8 @@
 | defaultLabel | string | The default label. 
 | defaultDescription | string | The default description. 
 | numberFormat | [NumberFormat](Types.md#numberformat) | The number format. 
+| defaultSymbolCustomPatch | [LegendPatch](Types.md#legendpatch) | The custom patch for the default symbol. 
+| alwaysUpdateClassLabels | boolean | A value indicating whether or not to automatically update class labels whenever a class upper value is changed. 
 
 
 ### CIMSizeClassBreaksVisualVariable 
@@ -1124,6 +1180,7 @@
 | values | [[CIMUniqueValue]](CIMRenderers.md#cimuniquevalue) | The values this class corresponds to. 
 | visible | boolean | A value indicating whether this class is visible. 
 | alternateSymbols | [[CIMSymbolReference]](CIMRenderers.md#cimsymbolreference) | An array of symbol references that are intended to be used at specific scale ranges. 
+| customPatch | [LegendPatch](Types.md#legendpatch) | The custom patch. 
 
 
 
@@ -1181,11 +1238,14 @@
 | defaultSymbolPatch | [enumeration PatchShape](CIMRenderers.md#enumeration-patchshape) | The patch shape for the default symbol. 
 | fields | [string] | The fields used by this renderer. 
 | groups | [[CIMUniqueValueGroup]](CIMRenderers.md#cimuniquevaluegroup) | The unique value groups. 
-| useDefaultSymbol | boolean | A value indicating whether of not to use the default symbol. 
+| useDefaultSymbol | boolean | A value indicating whether or not to use the default symbol. 
+| isDefaultSymbolVisible | boolean | A value indicating whether or not the default symbol is visible. 
 | styleGallery | string | The style item name for the color ramp. 
 | valueExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | ExpressionInfo that contains the Arcade expression that returns value as a string. When both Fields and ValueExpressionInfo are present ValueExpressionInfo is used. 
 | polygonSymbolColorTarget | [enumeration PolygonSymbolColorTarget](CIMRenderers.md#enumeration-polygonsymbolcolortarget) | The property that controls how the color ramp is applied to polygon symbols. 
 | authoringInfo | [CIMUniqueValueRendererAuthoringInfo](CIMRenderers.md#cimuniquevaluerendererauthoringinfo) | The property that controls how the color ramp is applied to polygon symbols. 
+| defaultSymbolCustomPatch | [LegendPatch](Types.md#legendpatch) | The custom patch for the default symbol. 
+| showClassVisibility | boolean | A value indicating whether the class visibility is shown in the contents pane. 
 
 
 

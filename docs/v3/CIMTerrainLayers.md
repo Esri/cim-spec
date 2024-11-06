@@ -55,6 +55,22 @@
 
 
 
+## CIMContourIntervalScaleBreak
+#### Represents a contour interval scale break. 
+
+
+### CIMContourIntervalScaleBreak 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| upperBound | double | The upper bound for scale break, represented as the denominator of the scale. Values less than or equal to 0 represent infinite scale and should be used only for the final break. 
+| contourInterval | double | The contour interval. 
+
+
+
+
+
+
 ## CIMLASDatasetLayer
 #### Represents a LAS dataset layer. 
 
@@ -108,7 +124,7 @@
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 | enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
-| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. This property will contain either a list of all scale-dependent layer effects, or a single layer effect. 
 
 
 ### CIMLASDatasetLayerDefinition 
@@ -150,6 +166,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | illuminate | boolean | A value indicating whether or not to illuminate. 
+| maxScale | double | The maximum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no maximum scale and the renderer will draw at any scale above the minimum. 
+| minScale | double | The minimum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no minimum scale and the renderer will draw at any scale below the maximum. 
 
 
 ### CIMTerrainAttributeRenderer 
@@ -169,6 +187,7 @@
 | colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp. 
 | cursorType | [enumeration TerrainDrawCursorType](CIMTerrainLayers.md#enumeration-terraindrawcursortype) | The cursor type. 
 | description | string | The description. 
+| heading | string | The heading. 
 | label | string | The label. 
 | minimumBreak | double | The minimum break. 
 | numberFormat | [NumberFormat](Types.md#numberformat) | The number format. 
@@ -293,6 +312,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | illuminate | boolean | A value indicating whether or not to illuminate. 
+| maxScale | double | The maximum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no maximum scale and the renderer will draw at any scale above the minimum. 
+| minScale | double | The minimum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no minimum scale and the renderer will draw at any scale below the maximum. 
 
 
 ### CIMTerrainAttributeRenderer 
@@ -316,6 +337,7 @@
 | useModulation | boolean | A value indicating whether to use modulation. 
 | useSplat | boolean | A value indicating whether to use the splat technique. 
 | colorModulation | [CIMColorModulationInfo](CIMTerrainLayers.md#cimcolormodulationinfo) | Color modulation. 
+| heading | string | The heading. 
 
 
 
@@ -356,6 +378,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | illuminate | boolean | A value indicating whether or not to illuminate. 
+| maxScale | double | The maximum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no maximum scale and the renderer will draw at any scale above the minimum. 
+| minScale | double | The minimum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no minimum scale and the renderer will draw at any scale below the maximum. 
 
 
 ### CIMTerrainAttributeRenderer 
@@ -533,7 +557,7 @@
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 | enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
-| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. This property will contain either a list of all scale-dependent layer effects, or a single layer effect. 
 
 
 ### CIMPointCloudLayerDefinition 
@@ -769,6 +793,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | illuminate | boolean | A value indicating whether or not to illuminate. 
+| maxScale | double | The maximum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no maximum scale and the renderer will draw at any scale above the minimum. 
+| minScale | double | The minimum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no minimum scale and the renderer will draw at any scale below the maximum. 
 
 
 ### CIMTinSimpleRenderer 
@@ -860,7 +886,7 @@
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 | enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
-| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. This property will contain either a list of all scale-dependent layer effects, or a single layer effect. 
 
 
 ### CIMTerrainLayerDefinition 
@@ -896,6 +922,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | illuminate | boolean | A value indicating whether or not to illuminate. 
+| maxScale | double | The maximum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no maximum scale and the renderer will draw at any scale above the minimum. 
+| minScale | double | The minimum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no minimum scale and the renderer will draw at any scale below the maximum. 
 
 
 ### CIMTerrainAttributeRenderer 
@@ -915,6 +943,7 @@
 | colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp. 
 | cursorType | [enumeration TerrainDrawCursorType](CIMTerrainLayers.md#enumeration-terraindrawcursortype) | The cursor type. 
 | description | string | The description. 
+| heading | string | The heading. 
 | label | string | The label. 
 | minimumBreak | double | The minimum break. 
 | numberFormat | [NumberFormat](Types.md#numberformat) | The number format. 
@@ -936,6 +965,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | illuminate | boolean | A value indicating whether or not to illuminate. 
+| maxScale | double | The maximum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no maximum scale and the renderer will draw at any scale above the minimum. 
+| minScale | double | The minimum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no minimum scale and the renderer will draw at any scale below the maximum. 
 
 
 ### CIMTerrainAttributeRenderer 
@@ -974,6 +1005,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | illuminate | boolean | A value indicating whether or not to illuminate. 
+| maxScale | double | The maximum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no maximum scale and the renderer will draw at any scale above the minimum. 
+| minScale | double | The minimum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no minimum scale and the renderer will draw at any scale below the maximum. 
 
 
 ### CIMTerrainAttributeRenderer 
@@ -993,6 +1026,7 @@
 | colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp. 
 | cursorType | [enumeration TerrainDrawCursorType](CIMTerrainLayers.md#enumeration-terraindrawcursortype) | The cursor type. 
 | description | string | The description. 
+| heading | string | The heading. 
 | label | string | The label. 
 | minimumBreak | double | The minimum break. 
 | numberFormat | [NumberFormat](Types.md#numberformat) | The number format. 
@@ -1014,6 +1048,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | illuminate | boolean | A value indicating whether or not to illuminate. 
+| maxScale | double | The maximum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no maximum scale and the renderer will draw at any scale above the minimum. 
+| minScale | double | The minimum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no minimum scale and the renderer will draw at any scale below the maximum. 
 
 
 ### CIMTerrainAttributeRenderer 
@@ -1052,6 +1088,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | illuminate | boolean | A value indicating whether or not to illuminate. 
+| maxScale | double | The maximum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no maximum scale and the renderer will draw at any scale above the minimum. 
+| minScale | double | The minimum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no minimum scale and the renderer will draw at any scale below the maximum. 
 
 
 ### CIMTinContourRenderer 
@@ -1067,6 +1105,8 @@
 | indexContourLabel | string | The index contour label. 
 | indexContourSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The index contour symbol. 
 | referenceContourHeight | double | The reference contour height. 
+| useIntervalScaleBreaks | boolean | A value indicating whether scale-dependent intervals are used. If true, is used at all scales. 
+| contourIntervalScaleBreaks | [[CIMContourIntervalScaleBreak]](CIMTerrainLayers.md#cimcontourintervalscalebreak) | The contour interval scale breaks. The scale breaks should be ordered from the smallest scale to the largest. The last scale break's upper bound will always be treated as 0, indicating no upper bound. 
 
 
 
@@ -1082,6 +1122,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | illuminate | boolean | A value indicating whether or not to illuminate. 
+| maxScale | double | The maximum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no maximum scale and the renderer will draw at any scale above the minimum. 
+| minScale | double | The minimum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no minimum scale and the renderer will draw at any scale below the maximum. 
 
 
 ### CIMTinSimpleRenderer 
@@ -1106,6 +1148,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | illuminate | boolean | A value indicating whether or not to illuminate. 
+| maxScale | double | The maximum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no maximum scale and the renderer will draw at any scale above the minimum. 
+| minScale | double | The minimum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no minimum scale and the renderer will draw at any scale below the maximum. 
 
 
 ### CIMTerrainAttributeRenderer 
@@ -1125,6 +1169,7 @@
 | colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp. 
 | cursorType | [enumeration TerrainDrawCursorType](CIMTerrainLayers.md#enumeration-terraindrawcursortype) | The cursor type. 
 | description | string | The description. 
+| heading | string | The heading. 
 | label | string | The label. 
 | minimumBreak | double | The minimum break. 
 | numberFormat | [NumberFormat](Types.md#numberformat) | The number format. 
@@ -1146,6 +1191,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | illuminate | boolean | A value indicating whether or not to illuminate. 
+| maxScale | double | The maximum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no maximum scale and the renderer will draw at any scale above the minimum. 
+| minScale | double | The minimum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no minimum scale and the renderer will draw at any scale below the maximum. 
 
 
 ### CIMTinSimpleRenderer 
@@ -1170,6 +1217,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | illuminate | boolean | A value indicating whether or not to illuminate. 
+| maxScale | double | The maximum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no maximum scale and the renderer will draw at any scale above the minimum. 
+| minScale | double | The minimum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no minimum scale and the renderer will draw at any scale below the maximum. 
 
 
 ### CIMTerrainAttributeRenderer 
@@ -1252,7 +1301,7 @@
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 | enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
-| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. This property will contain either a list of all scale-dependent layer effects, or a single layer effect. 
 
 
 ### CIMTinLayerDefinition 
@@ -1278,6 +1327,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | illuminate | boolean | A value indicating whether or not to illuminate. 
+| maxScale | double | The maximum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no maximum scale and the renderer will draw at any scale above the minimum. 
+| minScale | double | The minimum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no minimum scale and the renderer will draw at any scale below the maximum. 
 
 
 ### CIMTerrainAttributeRenderer 
@@ -1297,6 +1348,7 @@
 | colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp. 
 | cursorType | [enumeration TerrainDrawCursorType](CIMTerrainLayers.md#enumeration-terraindrawcursortype) | The cursor type. 
 | description | string | The description. 
+| heading | string | The heading. 
 | label | string | The label. 
 | minimumBreak | double | The minimum break. 
 | numberFormat | [NumberFormat](Types.md#numberformat) | The number format. 
@@ -1318,6 +1370,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | illuminate | boolean | A value indicating whether or not to illuminate. 
+| maxScale | double | The maximum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no maximum scale and the renderer will draw at any scale above the minimum. 
+| minScale | double | The minimum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no minimum scale and the renderer will draw at any scale below the maximum. 
 
 
 ### CIMTinSimpleRenderer 
@@ -1342,6 +1396,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | illuminate | boolean | A value indicating whether or not to illuminate. 
+| maxScale | double | The maximum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no maximum scale and the renderer will draw at any scale above the minimum. 
+| minScale | double | The minimum scale for renderer draw (set as the denominator of the scale's representative fraction). Values less than or equal to 0 indicate there is no minimum scale and the renderer will draw at any scale below the maximum. 
 
 
 ### CIMTerrainAttributeRenderer 

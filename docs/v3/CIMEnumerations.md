@@ -67,6 +67,7 @@
 | Deuteranopia| 1| Green color vision deficiency. 
 | Protanopia| 2| Red color vision deficiency. 
 | Tritanopia| 3| Blue color vision deficiency. 
+| Achromatopsia| 4| Monochromatic vision. 
 
 
 
@@ -258,6 +259,8 @@
 | PercentMinimumMaximum| 7| Stretch by percent minimum and maximum. 
 | Count| 8| Stretch by count. 
 | ESRI| 9| Esri's stretch. 
+| SquareRoot| 10| Square root stretch. 
+| Logarithm| 11| Logarithmic stretch. 
 
 
 

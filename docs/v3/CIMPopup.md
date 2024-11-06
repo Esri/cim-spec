@@ -38,6 +38,8 @@
 | title | string | The title. 
 | contentType | string | The content MIME type. Example: (image/png, image/jpeg, audio/mp3). 
 | displayType | [enumeration AttachmentDisplayType](CIMPopup.md#enumeration-attachmentdisplaytype) | The display type. 
+| sortField | string | The attachment sort field. 
+| sortOrder | [enumeration SortOrderType](CIMLayer.md#enumeration-sortordertype) | The attachment sort order. 
 
 
 
@@ -69,6 +71,8 @@
 | normalizeField | string | The normalization field. 
 | caption | string | The caption. 
 | title | string | The title. 
+| maximumAxisValue | double | The maximum axis value. 
+| colorRamp | [CIMFixedColorRamp](CIMColor.md#cimfixedcolorramp) | The color ramp to be used for charts. 
 
 
 ### CIMBarChartMediaInfo 
@@ -136,6 +140,8 @@
 | normalizeField | string | The normalization field. 
 | caption | string | The caption. 
 | title | string | The title. 
+| maximumAxisValue | double | The maximum axis value. 
+| colorRamp | [CIMFixedColorRamp](CIMColor.md#cimfixedcolorramp) | The color ramp to be used for charts. 
 
 
 ### CIMColumnChartMediaInfo 
@@ -232,6 +238,8 @@
 | normalizeField | string | The normalization field. 
 | caption | string | The caption. 
 | title | string | The title. 
+| maximumAxisValue | double | The maximum axis value. 
+| colorRamp | [CIMFixedColorRamp](CIMColor.md#cimfixedcolorramp) | The color ramp to be used for charts. 
 
 
 ### CIMLineChartMediaInfo 
@@ -269,6 +277,8 @@
 | normalizeField | string | The normalization field. 
 | caption | string | The caption. 
 | title | string | The title. 
+| maximumAxisValue | double | The maximum axis value. 
+| colorRamp | [CIMFixedColorRamp](CIMColor.md#cimfixedcolorramp) | The color ramp to be used for charts. 
 
 
 ### CIMPieChartMediaInfo 

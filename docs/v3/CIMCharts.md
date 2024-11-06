@@ -18,6 +18,7 @@
 | metaData | string | The client metadata about the chart. 
 | multiSeriesChartProperties | [MultiSeriesChartProperties](Types.md#multiserieschartproperties) | The multi series chart properties for supported chart types. 
 | enableServerSideProcessing | boolean | A value indicating whether the server-side processing is enabled for supported chart types and data sources. 
+| chartType | [enumeration ChartType](CIMCharts.md#enumeration-charttype) | The type of chart. 
 
 
 
@@ -582,6 +583,7 @@
 | guideType | [enumeration ChartGuideType](CIMCharts.md#enumeration-chartguidetype) | The type of the guide. 
 | guideValueType | [enumeration ChartValueType](CIMCharts.md#enumeration-chartvaluetype) | The type of the coordinate value used in the guide. 
 | fillSymbolProperties | [CIMChartFillSymbolProperties](CIMCharts.md#cimchartfillsymbolproperties) | The symbol properties for the guide. 
+| polyline | [double] | Vertices of the polyline guide as an array of x and y coordinates in a row-major order. 
 
 
 
@@ -594,6 +596,7 @@
 |---------|--------|--------|
 | ChartGuideType_Line| 0| Guide is a line 
 | ChartGuideType_Range| 1| Guide is a range 
+| ChartGuideType_Polyline| 2| Guide is a polyline 
 
 
 
@@ -1057,6 +1060,14 @@
 | markerSymbolProperties | [CIMChartMarkerSymbolProperties](CIMCharts.md#cimchartmarkersymbolproperties) | The marker symbol properties of the profile graph series. 
 | horizontalUnit | [Unit](ExternalReferences.md#unit) | The unit of measure to be used for horizontal distance. The default value is layer's spatial reference XY unit. 
 | verticalUnit | [Unit](ExternalReferences.md#unit) | The the unit of measure to be used for elevation. The default value is the layer's vertical coordinate system's Z unit, if there is one. 
+| variableInYAxis1 | [enumeration ProfileGraphVariableInYAxis](CIMCharts.md#enumeration-profilegraphvariableinyaxis) | A value indicating which variable to display in the first Y axis. 
+| lineSeriesType | [enumeration ProfileGraphLineSeriesType](CIMCharts.md#enumeration-profilegraphlineseriestype) | A value indicating which line type to use in the graph. 
+| trackCursor | boolean | A value indicating whether in the map/scene to dynamically display cursor movement in the chart. 
+| verticalExaggeration | double | A value by which to exaggerate the vertical axis relative to the horizontal axis. 
+| showLoSPoints | boolean | A value indicating whether to draw points from Line Of Sight output. 
+| showLoSConnectingLine | boolean | A value indicating whether to draw a line connecting points from Line Of Sight output. 
+| chain | boolean | A value indicating whether to chain lines together from end to end if their endpoints coincide. 
+| chainingTolerance | double | A threshold value determining whether line endpoints coincide. 
 
 
 
@@ -1196,6 +1207,9 @@
 | showTrendEquation | boolean | A value indicating whether or not to have a trend equation overlay. 
 | bubbleMinimumSize | double | Minimum size of the bubbles. 
 | bubbleMaximumSize | double | Maximum size of the bubbles. 
+| visualAggregationThreshold | long long | The number of points in a scatter plot series that will trigger visual aggregation. 
+| visualAggregationGridRowCount | long long | The number of rows for visual aggregation grid. 
+| visualAggregationGridColumnCount | long long | The number of columns for visual aggregation grid. 
 
 
 
@@ -1246,6 +1260,7 @@
 | displayMode | [enumeration SpectralProfileDisplayMode](CIMCharts.md#enumeration-spectralprofiledisplaymode) | How this spectral profile is displayed. 
 | showOutliers | boolean | A value indicating whether to show the box plot outliers. 
 | standardizeValues | boolean | A value indicating whether to calculate standardized values for box plot. 
+| horizontalUnit | [enumeration SpectralProfileHorizontalUnit](CIMCharts.md#enumeration-spectralprofilehorizontalunit) | The horizontal unit to be displayed in the chart. 
 
 
 
@@ -1588,6 +1603,16 @@
 
 
 
+### Enumeration: ChartType
+#### Represents the type of chart. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Basic| 0| Basic chart. 
+| Combo| 1| Combo chart can contain series of several types. 
+
+
+
 ### Enumeration: ChartValueType
 #### Specifies the type of value. 
 
@@ -1642,6 +1667,27 @@
 
 
 
+### Enumeration: ProfileGraphLineSeriesType
+#### Choices of graph line series type. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| ProfileGraphLineSeriesType_LineOnly| 0| Line only 
+| ProfileGraphLineSeriesType_LineAndVertices| 1| Line and vertices 
+| ProfileGraphLineSeriesType_Fill| 2| Fill (area) 
+
+
+
+### Enumeration: ProfileGraphVariableInYAxis
+#### Choices of what to display in the Y axis. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| ProfileGraphVariableInYAxis_Z| 0| Z 
+| ProfileGraphVariableInYAxis_M| 1| M 
+
+
+
 ### Enumeration: SpectralProfileDisplayMode
 #### Spectral profile display modes. 
 
@@ -1651,4 +1697,15 @@
 | Boxes| 1| Show spectral profile as a series of boxes for each raster band. 
 | BoxesAndMeanLine| 2| Show spectral profile as both a series of boxes for each raster band and lines joining mean values of each raster band. 
 | ConsolidatedBoxesAndMeanLine| 3| Show spectral profile as both consolidated boxes for each raster band and lines joining mean values of each raster band. 
+
+
+
+### Enumeration: SpectralProfileHorizontalUnit
+#### Spectral Profile horizontal units. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| BandIDs| 0| Uses Band IDs for the Spectral Profile horizontal unit. 
+| Wavelengths| 1| Uses Band Wavelengths for the Spectral Profile horizontal unit. 
+| BandNames| 2| Uses Band Names for the Spectral Profile horizontal unit. 
 

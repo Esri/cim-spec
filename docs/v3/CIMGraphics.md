@@ -273,6 +273,7 @@
 | frame | [CIMGraphicFrame](CIMGraphics.md#cimgraphicframe) | The graphic frame of the picture graphic. 
 | sourceURL | string | The source URL of the picture graphic. Typically the source of the image copied into the PictureURL. 
 | referenceURI | string | The URI of the binary reference containing the picture data. 
+| shape | [Geometry](ExternalReferences.md#geometry) | The shape of the picture graphic. 
 
 
 

@@ -102,7 +102,7 @@
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 | enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
-| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. This property will contain either a list of all scale-dependent layer effects, or a single layer effect. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -287,6 +287,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+| standardDeviationMultiplier | [enumeration StandardDeviationMultiplier](CIMVectorLayers.md#enumeration-standarddeviationmultiplier) | The standard deviation multiplier used to define the data min, max values for visualization. 
 
 
 
@@ -356,7 +357,7 @@
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 | enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
-| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. This property will contain either a list of all scale-dependent layer effects, or a single layer effect. 
 
 
 ### CIMBuildingDisciplineLayerDefinition 
@@ -424,7 +425,7 @@
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 | enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
-| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. This property will contain either a list of all scale-dependent layer effects, or a single layer effect. 
 
 
 ### CIMObject3DRenderingFilters 
@@ -503,7 +504,7 @@
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 | enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
-| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. This property will contain either a list of all scale-dependent layer effects, or a single layer effect. 
 
 
 ### CIMCatalogDynamicGroupLayerDefinition 
@@ -569,7 +570,7 @@
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 | enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
-| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. This property will contain either a list of all scale-dependent layer effects, or a single layer effect. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -729,7 +730,7 @@
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 | enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
-| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. This property will contain either a list of all scale-dependent layer effects, or a single layer effect. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -1042,7 +1043,7 @@
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 | enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
-| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. This property will contain either a list of all scale-dependent layer effects, or a single layer effect. 
 
 
 ### CIMENCLayerDefinition 
@@ -1269,7 +1270,7 @@
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 | enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
-| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. This property will contain either a list of all scale-dependent layer effects, or a single layer effect. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -1447,7 +1448,7 @@
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 | enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
-| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. This property will contain either a list of all scale-dependent layer effects, or a single layer effect. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -1983,7 +1984,7 @@
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 | enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
-| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. This property will contain either a list of all scale-dependent layer effects, or a single layer effect. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -2137,7 +2138,7 @@
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 | enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
-| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. This property will contain either a list of all scale-dependent layer effects, or a single layer effect. 
 
 
 ### CIMParcelFabricLayerDefinition 
@@ -2215,7 +2216,7 @@
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 | enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
-| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. This property will contain either a list of all scale-dependent layer effects, or a single layer effect. 
 
 
 ### CIMParcelLayerDefinition 
@@ -2765,6 +2766,21 @@
 
 
 
+### Enumeration: StandardDeviationMultiplier
+#### Standard deviation multiplier to define min and max data values from the mean for binning levels. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| None| 0| No multiplier, use full data range. 
+| OneFourth| 1| Use one fourth of the standard deviation to define data range. 
+| OneThird| 2| Use one third of the standard deviation to define data range. 
+| OneHalf| 3| Use one half of the standard deviation to define data range. 
+| One| 4| Use one standard deviation to define data range. 
+| Two| 5| Use two standard deviations to define data range. 
+| Custom| 6| Allow users to define custom data range. 
+
+
+
 
 ## CIMStreamServiceDataConnection
 #### Represents a stream service data connection. 
@@ -2853,7 +2869,7 @@
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 | enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
-| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. This property will contain either a list of all scale-dependent layer effects, or a single layer effect. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -3305,7 +3321,7 @@
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 | enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
-| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. This property will contain either a list of all scale-dependent layer effects, or a single layer effect. 
 
 
 ### CIMTrajectoryLayerDefinition 
@@ -3413,7 +3429,7 @@
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 | enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
-| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. This property will contain either a list of all scale-dependent layer effects, or a single layer effect. 
 
 
 ### CIMVectorTileLayerDefinition 

@@ -196,6 +196,35 @@
 | Hierarchy_BottomToTop| 3| Hierarchy layout oriented bottom to top. 
 | Hierarchy_LeftToRight| 4| Hierarchy layout oriented left to right. 
 | Hierarchy_RightToLeft| 5| Hierarchy layout oriented right to left. 
+| Circular_Default| 6| Circular layout with default parameters. 
+| Circular_Substructures| 7| Circular layout with substructure processing. 
+| Organic_Substructures| 8| Organic layout with substructure processing. 
+| Organic_Clustered_Substructures| 9| Organic layout with cluster detection and substructure processing. 
+| Organic_Clustered| 10| Organic layout with cluster detection. 
+| Tree_Multi_Parent_Tree_TopToBottom| 11| Tree layout with multi-parent parameters oriented top to bottom. 
+| Tree_Multi_Parent_Tree_BottomToTop| 12| Tree layout with multi-parent parameters oriented bottom to top. 
+| Tree_Multi_Parent_Tree_LeftToRight| 13| Tree layout with multi-parent parameters oriented left to right. 
+| Tree_Multi_Parent_Tree_RightToLeft| 14| Tree layout with multi-parent parameters oriented right to left. 
+| Tree_Mindmap_TopToBottom| 15| Tree layout with mindmap organization oriented top to bottom. 
+| Tree_Mindmap_BottomToTop| 16| Tree layout with mindmap organization oriented bottom to top. 
+| Tree_Mindmap_LeftToRight| 17| Tree layout with mindmap organization oriented left to right. 
+| Tree_Mindmap_RightToLeft| 18| Tree layout with mindmap organization oriented right to left. 
+| Tree_Compact_TopToBottom| 19| Tree layout with compact grouping oriented top to bottom. 
+| Tree_Compact_BottomToTop| 20| Tree layout with compact grouping oriented bottom to top. 
+| Tree_Compact_LeftToRight| 21| Tree layout with compact grouping oriented left to right. 
+| Tree_Compact_RightToLeft| 22| Tree layout with compact grouping oriented right to left. 
+| Balloon_Default| 23| Balloon with default parameters. 
+| Balloon_Ray_Like| 24| Balloon layout with ray like placement. 
+| Radial_Default| 25| Radial layout with default parameters. 
+| Radial_Dendrogram| 26| Radial layout with dendrogram layout. 
+| Hierarchy_Curves_TopToBottom| 27| Hierarchy layout with curve edges oriented top to bottom. 
+| Hierarchy_Curves_BottomToTop| 28| Hierarchy layout with curve edges oriented bottom to top. 
+| Hierarchy_Curves_LeftToRight| 29| Hierarchy layout with curve edges oriented left to right. 
+| Hierarchy_Curves_RightToLeft| 30| Hierarchy layout with curve edges oriented right to left. 
+| Hierarchy_Flowchart_TopToBottom| 31| Hierarchy layout with flowchart layout oriented top to bottom. 
+| Hierarchy_Flowchart_BottomToTop| 32| Hierarchy layout with flowchart layout oriented bottom to top. 
+| Hierarchy_Flowchart_LeftToRight| 33| Hierarchy layout with flowchart layout oriented left to right. 
+| Hierarchy_Flowchart_RightToLeft| 34| Hierarchy layout with flowchart layout oriented right to left. 
 
 
 

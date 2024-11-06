@@ -22,6 +22,17 @@
 
 
 
+### Enumeration: EventsTicksVisualization
+#### Represents how events ticks are displayed. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| None| 0| Events ticks are not shown. 
+| StartOnly| 1| Only start ticks are shown. 
+| StartAndEnd| 2| Start and End ticks are shown. 
+
+
+
 
 ## CIMFilteredFindPathsConfiguration
 #### Represents a Knowledge Graph Filtered Find Paths Configuration. 
@@ -553,6 +564,7 @@
 | queryDefinitions | [[CIMKnowledgeGraphQueryDefinition]](CIMKnowledgeGraph.md#cimknowledgegraphquerydefinition) | The array of query definitions referenced by this Investigation. All query definitions are expected to have unique names. 
 | filteredFindPathsConfigurations | [[CIMFilteredFindPathsConfiguration]](CIMKnowledgeGraph.md#cimfilteredfindpathsconfiguration) | The array of Filtered Find Paths Configurations referenced by this Investigation. All configurations are expected to have unique names. 
 | typeInfos | [[CIMKnowledgeGraphInvestigationTypeInfo]](CIMKnowledgeGraph.md#cimknowledgegraphinvestigationtypeinfo) | The array of Knowledge Graph Investigation Type Infos referenced by this Investigation. All infos are expected to have unique type names. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the investigation. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 
 
 
@@ -569,6 +581,8 @@
 |---------|--------|--------|
 | typeName | string | The name of the type. 
 | popupInfo | [CIMPopupInfo](CIMPopup.md#cimpopupinfo) | The pop-up info. 
+| symbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol for the type. 
+| displayExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression information used to create the display name for members of the type. 
 
 
 
@@ -628,7 +642,7 @@
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 | enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
-| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. This property will contain either a list of all scale-dependent layer effects, or a single layer effect. 
 
 
 ### CIMStandaloneTableContainer 
@@ -683,6 +697,7 @@
 | centralityConfiguration | [CIMKnowledgeGraphLinkChartCentralityConfiguration](CIMKnowledgeGraph.md#cimknowledgegraphlinkchartcentralityconfiguration) | The Configuration for Centrality computation in this Link Chart. Centrality scores found in the Nodes and AggregatedNodes tables were computed using this Configuration. 
 | centralityIsUpToDate | boolean | A value indicating whether the Centrality scores found in the Nodes and AggregatedNodes tables were computed using the current Link Chart topology. 
 | lastUsedLayout | [CIMKnowledgeLinkChartLayout](CIMKnowledgeGraph.md#cimknowledgelinkchartlayout) | Information about the last used layout. 
+| nonspatialDataDisplay | [CIMKnowledgeNonspatialDataDisplay](CIMKnowledgeGraph.md#cimknowledgenonspatialdatadisplay) | The Nonspatial Data Display information in this Link Chart. 
 
 
 
@@ -840,6 +855,35 @@
 
 
 
+## CIMKnowledgeLinkChartChronologicalLayoutSettings
+#### Contains settings to be used in chronological layout calculations. 
+
+
+### CIMKnowledgeLinkChartChronologicalLayoutSettings 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| timeDirection | [enumeration LinkChartLayoutDirection](CIMKnowledgeGraph.md#enumeration-linkchartlayoutdirection) | The time axis direction. 
+| timeBannerUTCOffsetInMinutes | long | The UTC offset of the time banner, in minutes. 
+| eventsTicksVisualization | [enumeration EventsTicksVisualization](CIMKnowledgeGraph.md#enumeration-eventsticksvisualization) | The event ticks visualization option. Event ticks are displayed in the time banner. 
+| showDurationLineForNonZeroDurationEntityEvents | boolean | A value indicating whether lines representing the duration of events with non-zero durations are shown. 
+| durationLineWidth | long | A value indicating the width of the line, in points, representing the duration of an event with non-zero duration. 
+| entityPositionAtDurationRatio | double | A value indicating where the entity of a non-zero duration event will be placed. 0.0 represents the start of the duration interval, 1.0 represents the end of the duration interval. Used in multi-timeline layout only. 
+| showNonZeroDurationIntervalBounds | boolean | A value indicating whether duration interval bounds are represented in relationship lines of events that have non-zero durations. Used in multi-timeline layout only. 
+| separateTimeOverlaps | boolean | A value indicating whether events that overlap in time are separated. 
+| separateTimelineOverlaps | boolean | A value indicating whether events that overlap on a timeline are separated. 
+| moveFirstBends | boolean | A value indicating whether the first bend on a relationship line related to an event is moved higher up from the event location when some events are separated. Used only in the mono-timeline layout, when 'SeparateTimelineOverlaps' is true. 
+| secondBendRatio | double | The ratio at which the second bend or a relationship occurs, for event relationships and non-event relationships between events and non-event entities. Used only in the mono-timeline layout. 
+| lineSeparationMultiplier | double | The multiplier used for line separation. Lines will be more separated with a higher multiplier. 
+| spaceSeparatedLinesEvenly | boolean | A value indicating whether separated lines are spaced evenly. When true, the offset for the i-th overlapping line is proportional to 'i'. When false, the offset for the i-th overlapping line is proportional to 'squareRoot(i)'. 
+| useBezierCurves | boolean | A value indicating whether to use Bezier curves to represent separated lines. 
+| separatedLineShapeRatio | double | The separated line shape ratio. When the ratio is high, the angle between the extremities of the separated line geometry and the original line is small. 
+
+
+
+
+
+
 ## CIMKnowledgeLinkChartLayout
 #### Represents a Knowledge Link Chart Layout Info object. 
 
@@ -849,6 +893,10 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | algorithm | [enumeration KnowledgeLinkChartLayoutAlgorithm](CIMKnowledgeGraph.md#enumeration-knowledgelinkchartlayoutalgorithm) | The layout algorithm. 
+| organicLayoutSettings | [CIMKnowledgeLinkChartOrganicLayoutSettings](CIMKnowledgeGraph.md#cimknowledgelinkchartorganiclayoutsettings) | The organic layout settings. 
+| chronologicalLayoutSettings | [CIMKnowledgeLinkChartChronologicalLayoutSettings](CIMKnowledgeGraph.md#cimknowledgelinkchartchronologicallayoutsettings) | The chronological layout settings. 
+| autoApply | boolean | A value indicating whether the layout is automatically redone when a setting value changes. 
+| preserveExtent | boolean | A value indicating whether the current Link Chart extent is preserved by the layout (only applies to Chronological and Geographical layouts). 
 
 
 
@@ -873,6 +921,53 @@
 | Radial_NodeCentric| 11| Radial Node Centric. 
 | Hierarchical_TopToBottom| 12| Hierarchical Top To Bottom. 
 | Hierarchical_BottomToTop| 13| Hierarchical Bottom To Top. 
+| Chronological_MonoTimeline| 14| Chronological Mono-Timeline. 
+| Chronological_MultiTimeline| 15| Chronological Multi-Timeline. 
+
+
+
+
+## CIMKnowledgeLinkChartOrganicLayoutSettings
+#### Contains settings to be used in organic layout calculations. 
+
+
+### CIMKnowledgeLinkChartOrganicLayoutSettings 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| computationTimeBudget | double | The computation time budget, in seconds. The maximum count of iterations of the force directed algorithm is computed based on the size of the link chart and this computation budget, assuming computations are executed by a theoretical CPU with some known characteristics. Higher values lead to better looking layouts. 
+| absoluteIdealEdgeLength | double | The value, in degrees, to use for the ideal edge length during layout calculations when the IdealEdgeLengthType is 'absoluteValue'. Only used for geographic layouts. 
+| multiplicativeIdealEdgeLength | double | The value used to multiply the default edge length to determine the ideal edge length during layout calculations, when the IdealEdgeLengthType is 'multiplier'. Only used for geographic layouts. 
+| idealEdgeLengthType | [enumeration LinkChartLayoutIdealEdgeLengthType](CIMKnowledgeGraph.md#enumeration-linkchartlayoutidealedgelengthtype) | The ideal edge length type which determines which property to use to compute the ideal edge length. Only used for geographic layouts. When the value is 'AbsoluteValue', the 'AbsoluteIdealEdgeLength' property is used. When the value is 'Multiplier', the 'MultiplicativeIdealEdgeLength' property is used. 
+| autoComputeRepulsionRadius | boolean | A value indicating whether the repulsion radius is automatically computed or if it is computed according to 'RepulsionRadiusMultiplier'. 
+| repulsionRadiusMultiplier | double | The value to be used for the repulsion radius multiplier. The repulsion radius is computed as the repulsion radius multiplier multiplied by the actual ideal edge length. Only used when 'AutoComputeRepulsionRadius' is false. 
+
+
+
+
+
+
+## CIMKnowledgeNonspatialDataDisplay
+#### Represents a Knowledge Nonspatial Data Display object. 
+
+
+### CIMKnowledgeNonspatialDataDisplay 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| mode | [enumeration KnowledgeNonspatialDataDisplayMode](CIMKnowledgeGraph.md#enumeration-knowledgenonspatialdatadisplaymode) | The display mode. 
+
+
+
+
+
+### Enumeration: KnowledgeNonspatialDataDisplayMode
+#### Specifies a Knowledge Nonspatial Data Display Mode. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Visible| 0| Visible. 
+| Hidden| 1| Hidden. 
 
 
 
@@ -930,7 +1025,7 @@
 | useVisibilityTimeExtent | boolean | A value indicating whether or not to use the visibility time extent. When true the map time must overlap the visibility time extent for the layer to be visible. 
 | visibilityTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The visibility time extent. 
 | enableLayerEffects | boolean | A value indicating whether to enable any type of effects on the layer. 
-| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. 
+| layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. This property will contain either a list of all scale-dependent layer effects, or a single layer effect. 
 
 
 ### CIMFeatureLayerDefinition 
@@ -994,6 +1089,28 @@
 | aggregationLayerURI | string | The layer URI of the aggregation layer. 
 
 
+
+
+
+### Enumeration: LinkChartLayoutDirection
+#### Represents the direction of a Link Chart layout. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Top| 0| Top 
+| Bottom| 1| Bottom 
+| Left| 2| Left 
+| Right| 3| Right 
+
+
+
+### Enumeration: LinkChartLayoutIdealEdgeLengthType
+#### Determines how the ideal edge length is computed. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| AbsoluteValue| 0| The ideal edge length is specified as an absolute value. 
+| Multiplier| 1| The ideal edge length is the computed ideal edge length multiplied by a value. 
 
 
 
