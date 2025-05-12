@@ -31,6 +31,16 @@
 
 
 
+### Enumeration: BABenchmarkAboveAndBelowType
+#### Specifies a type of the Above and Below benchmark style. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| RawValue| 1| Raw value. 
+| Percentage| 2| Percentage. 
+
+
+
 
 ## CIMBABenchmarkComparisonsProperties
 #### Benchmark Comparisons properties. 
@@ -45,9 +55,26 @@
 | variables | [string] | The variables from the data browser, such as income, population, or spending, used to enrich the input features. 
 | addDifferenceField | boolean | A value indicating whether to add difference benchmark field. 
 | addPercentDifferenceField | boolean | A value indicating whether to add % difference benchmark field. 
-| benchmarkMethod | [enumeration BABenchmarkMethod](CIMBusinessAnalyst.md#enumeration-babenchmarkmethod) | The benchmark method. 
+| addAverageRow | boolean | A value indicating whether to add average row to the results table. 
+| addMedianRow | boolean | A value indicating whether to add median row to the results table. 
+| addStandardDeviationRow | boolean | A value indicating whether to add standard deviation row to the results table. 
+| isTableTransposed | boolean | A value indicating whether the results table is transposed. 
+| benchmarkMethod | [enumeration BABenchmarkMethod](CIMBusinessAnalyst.md#enumeration-babenchmarkmethod) | A benchmark method. 
+| topAndBottomType | [enumeration BABenchmarkTopAndBottomType](CIMBusinessAnalyst.md#enumeration-babenchmarktopandbottomtype) | The type of the Top and Bottom benchmark style. 
+| aboveAndBelowType | [enumeration BABenchmarkAboveAndBelowType](CIMBusinessAnalyst.md#enumeration-babenchmarkaboveandbelowtype) | The type of the Above and Below benchmark style. 
+| highlightExtremesType | [enumeration BABenchmarkHighlightExtremesType](CIMBusinessAnalyst.md#enumeration-babenchmarkhighlightextremestype) | The type of the Highlight Extremes benchmark style. 
+| topRecordsNumber | long | A top value for the Top and Bottom benchmark style. 
+| bottomRecordsNumber | long | A bottom value for the Top and Bottom benchmark style. 
 | benchmarkFeatureID | string | Benchmark feature ID. 
+| numberOfQuantiles | long | A number of quantiles for the Quantiles benchmark style. 
+| lowerExtremeLimit | double | A less than value for Highlight Extremes benchmark style. 
+| higherExtremeLimit | double | A greater than value for Highlight Extremes benchmark style. 
+| mapVariable | string | A map variable. 
 | benchmarkStyle | [enumeration BABenchmarkStyle](CIMBusinessAnalyst.md#enumeration-babenchmarkstyle) | Benchmark style. 
+| fillColor | [CIMRGBColor](CIMColor.md#cimrgbcolor) | A fill color for the None benchmark style. 
+| colorRamp | [ColorRamp](Types.md#colorramp) | A color ramp for High to Low, Above and Below and Quantiles benchmark styles. 
+| outlineColor | [CIMRGBColor](CIMColor.md#cimrgbcolor) | An outline color for a selected benchmark style. 
+| outlineSize | double | An outline size for a selected benchmark style. 
 | aboveColor | [CIMRGBColor](CIMColor.md#cimrgbcolor) | Above color. 
 | belowColor | [CIMRGBColor](CIMColor.md#cimrgbcolor) | Below color. 
 | inBetweenColor | [CIMRGBColor](CIMColor.md#cimrgbcolor) | In-between color. 
@@ -55,9 +82,58 @@
 | quartile2Color | [CIMRGBColor](CIMColor.md#cimrgbcolor) | Quartile 2 color. 
 | quartile3Color | [CIMRGBColor](CIMColor.md#cimrgbcolor) | Quartile 3 color. 
 | quartile4Color | [CIMRGBColor](CIMColor.md#cimrgbcolor) | Quartile 4 color. 
+| topColor | [Color](Types.md#color) | Top color. 
+| bottomColor | [Color](Types.md#color) | Bottom color. 
 | geographyLevels | [string] | Standard geography levels that can be added to the results table. 
+| neighboringGeographies | [[CIMBANeighboringGeographyInfo]](CIMBusinessAnalyst.md#cimbaneighboringgeographyinfo) | Neighboring geographies that can be added to the results table. 
+| dataSource | string | The data source used in calculation of variables and standard geographies. Structure of the value is TYPE;COUNTRY_INFO;LOCAL_DATA_INFO where TYPE can be ONLINE, LOCAL, or CUSTOM. COUNTRY_INFO is country_id{|hierarchy}. For example, US|census or US. LOCAL_DATA_INFO is ID of local dataset. For example, USA_ESRI_2019. For example, for local US 2019 dataset it will be: "LOCAL;;USA_ESRI_2019". If online US data source is used, it may be "ONLINE;US|census;". Can be value of baDataSource GP GPEnvironment variable. https://pro.arcgis.com/en/pro-app/tool-reference/environment-settings/ba-data-source.htm. 
+| resultsPaneSettings | [CIMBABenchmarkComparisonsResultsPaneSettings](CIMBusinessAnalyst.md#cimbabenchmarkcomparisonsresultspanesettings) | The results pane settings. 
 
 
+
+
+
+
+## CIMBABenchmarkComparisonsResultsPaneSettings
+#### Represents Benchmark Comparison Results Pane settings. 
+
+
+### CIMBAResultsPaneSettings 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| matchTopBottomChartToLayerSymbology | boolean | A value indicating whether top/bottom charts should match layer symbology. 
+| histogramSubsetSelectionMethod | [enumeration BAHistogramSubsetSelectionMethod](CIMBusinessAnalyst.md#enumeration-bahistogramsubsetselectionmethod) | The histogram chart subset selection method. 
+| histogramSubsetSelectionValue | double | The histogram chart subset selection method value. 
+| histogramBinCount | long | The number of bins in the histogram chart. 
+| histogramFillSymbolProperties | [CIMChartFillSymbolProperties](CIMCharts.md#cimchartfillsymbolproperties) | The fill symbol properties of the histogram chart bar. 
+| tableSortDirection | [enumeration SortOrderType](CIMLayer.md#enumeration-sortordertype) | The direction of the sort in the Results Pane table. 
+| tableSortField | string | The sort field of the Results Pane table. 
+
+
+### CIMBABenchmarkComparisonsResultsPaneSettings 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| statisticsVariable | string | The variable for statistics in the Summary tab. 
+| histogramVariable | string | The histogram variable for the histogram chart. 
+| showRegressionLineOnScatterplot | boolean | A value indicating whether the regression line should be shown on the scatterplot chart. 
+| scatterplotChartType | [enumeration BAScatterplotChartType](CIMBusinessAnalyst.md#enumeration-bascatterplotcharttype) | The scatterplot chart type. 
+| scatterplotXAxisField | string | The field name for the X-Axis of the scatterplot chart. 
+| scatterplotYAxisField | string | The field name for the Y-Axis of the scatterplot chart. 
+| scatterplotDotSizeField | string | The field name for the dot size of the scatterplot chart. 
+
+
+
+
+
+### Enumeration: BABenchmarkHighlightExtremesType
+#### Specifies a type of the Highlight Extremes benchmark style. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| IQR| 1| IQR. 
+| StandardDeviation| 2| Standard deviation. 
 
 
 
@@ -81,6 +157,46 @@
 | AboveOrBelow| 1| Above or below. 
 | AboveInBetweenOrBelow| 2| Above, in-between or below. 
 | Quartiles| 3| Quartiles. 
+| HighToLow| 4| High to low. 
+| TopAndBottom| 5| Top and bottom. 
+| Quantiles| 6| Quantiles. 
+| HighlightExtremes| 7| Highlight extremes. 
+| None| 0| None. 
+
+
+
+### Enumeration: BABenchmarkTopAndBottomType
+#### Specifies a type of the Top and Bottom benchmark style. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Rank| 1| Rank. 
+| Percentile| 2| Percentile. 
+
+
+
+
+## CIMBABivariateColorsRendererProperties
+#### Represents Business Analyst Color Coded Layer bivariate colors renderer properties. 
+
+
+### CIMBARendererProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMBABivariateColorsRendererProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| gridSize | [enumeration BivariateGridSizeOption](CIMRenderers.md#enumeration-bivariategridsizeoption) | The grid size. 
+| orientationType | [enumeration BivariateGridLegendOrientationType](CIMRenderers.md#enumeration-bivariategridlegendorientationtype) | The orientation type. 
+| classificationMethod | [enumeration ClassificationMethod](CIMRenderers.md#enumeration-classificationmethod) | Classification method. 
+| colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp. 
+| classificationFields | [string] | The classification field names in the levels of detail feature classes. 
+
+
 
 
 
@@ -106,11 +222,44 @@
 | dataSource | string | The data source used in calculation of distances. Structure of the value is TYPE;COUNTRY_INFO;LOCAL_DATA_INFO where TYPE can be ONLINE, LOCAL, or CUSTOM. COUNTRY_INFO is country_id{|hierarchy}. For example, US|census or US. LOCAL_DATA_INFO is ID of local dataset. For example, USA_ESRI_2019. For example, for local US 2019 dataset it will be: "LOCAL;;USA_ESRI_2019". If online US data source is used, it may be "ONLINE;US|census;". Can be value of baDataSource GP GPEnvironment variable. https://pro.arcgis.com/en/pro-app/tool-reference/environment-settings/ba-data-source.htm. 
 | rendererProperties | [BARendererProperties](Types.md#barendererproperties) | The Color Coded Map renderer properties. 
 | variable | string | The demographic variable name. 
+| secondaryVariable | string | The secondary demographic variable name. 
 | areaOfInterest | [CIMBAAreaOfInterest](CIMBusinessAnalyst.md#cimbaareaofinterest) | The area of interest parameters. 
 | activeLevelOfDetail | string | The level of details. It's a layer ID of a standard geography. If ActiveLevelOfDetail is empty, automatic level selection based on the current map scale will be used. 
 | levelsOfDetail | [[CIMBALevelOfDetail]](CIMBusinessAnalyst.md#cimbalevelofdetail) | The level of detail items. 
 | boundaryMode | [enumeration BABoundaryMode](CIMBusinessAnalyst.md#enumeration-baboundarymode) | The Color Coded Layer boundary mode. 
 | resultsPaneSettings | [BAResultsPaneSettings](Types.md#baresultspanesettings) | The results pane settings. 
+| activeLevelsGroup | string | The group of levels. 
+
+
+
+
+
+
+## CIMBAColorCodedLayerResultsPaneSettings
+#### Represents Color Coded Layer Results Pane settings. 
+
+
+### CIMBAResultsPaneSettings 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| matchTopBottomChartToLayerSymbology | boolean | A value indicating whether top/bottom charts should match layer symbology. 
+| histogramSubsetSelectionMethod | [enumeration BAHistogramSubsetSelectionMethod](CIMBusinessAnalyst.md#enumeration-bahistogramsubsetselectionmethod) | The histogram chart subset selection method. 
+| histogramSubsetSelectionValue | double | The histogram chart subset selection method value. 
+| histogramBinCount | long | The number of bins in the histogram chart. 
+| histogramFillSymbolProperties | [CIMChartFillSymbolProperties](CIMCharts.md#cimchartfillsymbolproperties) | The fill symbol properties of the histogram chart bar. 
+| tableSortDirection | [enumeration SortOrderType](CIMLayer.md#enumeration-sortordertype) | The direction of the sort in the Results Pane table. 
+| tableSortField | string | The sort field of the Results Pane table. 
+
+
+### CIMBAColorCodedLayerResultsPaneSettings 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| histogramVariable | string | The variable name for the histogram chart. 
+| showRegressionLineOnScatterplot | boolean | A value indicating whether the regression line should be shown on the scatterplot chart. 
+| scatterplotXAxisVariableName | string | The variable name for the X-Axis of the scatterplot chart. 
+| scatterplotYAxisVariableName | string | The variable name for the Y-Axis of the scatterplot chart. 
 
 
 
@@ -244,8 +393,37 @@
 |---------|--------|--------|
 | numBreaks | long | The number of breaks for classification renderer. 
 | classificationMethod | [enumeration ClassificationMethod](CIMRenderers.md#enumeration-classificationmethod) | The classification method. 
+| standardDeviationMultiplier | [enumeration StandardDeviationMultiplier](CIMVectorLayers.md#enumeration-standarddeviationmultiplier) | The standard deviation multiplier. Used to compute breaks for the standard deviation classification method. 
 | colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp. 
-| classificationField | string | The classification field name in the levels of detail feature classes. Each level of detail may contain several fields for classification, depending on the variable flavors (i.e. "base", "percent", "average", "index", etc). ClassificationField is used to switch between the flavours to quickly update the classification renderer. 
+| classificationField | string | The classification field name in the levels of detail feature classes. 
+
+
+
+
+
+
+## CIMBAGraduatedSymbolsRendererProperties
+#### Represents Business Analyst Color Coded Layer graduated symbol renderer properties. 
+
+
+### CIMBARendererProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMBAGraduatedSymbolsRendererProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| numBreaks | long | The number of breaks for classification renderer. 
+| classificationMethod | [enumeration ClassificationMethod](CIMRenderers.md#enumeration-classificationmethod) | The classification method. 
+| minSymbolSize | double | The minimum symbol size. 
+| maxSymbolSize | double | The maximum symbol size. 
+| standardDeviationMultiplier | [enumeration StandardDeviationMultiplier](CIMVectorLayers.md#enumeration-standarddeviationmultiplier) | The standard deviation multiplier. Used to compute breaks for the standard deviation classification method. 
+| colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp. 
+| templateColor | [Color](Types.md#color) | The template color. Used for layers with a single variable. 
+| classificationFields | [string] | The classification field names in the levels of detail feature classes. 
 
 
 
@@ -273,6 +451,23 @@
 |---------|--------|--------|
 | levelID | string | The level of detail LevelID. 
 | dataConnection | [CIMStandardDataConnection](CIMVectorLayers.md#cimstandarddataconnection) | The level of detail data connection. 
+| levelOfDetailDataConnection | [DataConnection](Types.md#dataconnection) | The level of detail data connection. 
+
+
+
+
+
+
+## CIMBANeighboringGeographyInfo
+#### Represent a neighboring geography information used in Benchmark Comparisons. 
+
+
+### CIMBANeighboringGeographyInfo 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| geographyLevelId | string | A geography level. 
+| itemIds | [string] | A list of items for selected geography level. 
 
 
 
@@ -516,6 +711,28 @@
 |---------|--------|--------|
 | sourceTargetSiteDataConnection | [CIMStandardDataConnection](CIMVectorLayers.md#cimstandarddataconnection) | The Suitability Analysis target site data connection. 
 | selectedSourceTargetSiteObjectID | string | The object ID of the Suitability Analysis target site. 
+
+
+
+
+
+
+## CIMBAUnclassedColorsRendererProperties
+#### Represents Business Analyst Color Coded Layer unclassed colors renderer properties. 
+
+
+### CIMBARendererProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMBAUnclassedColorsRendererProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp. 
+| classificationField | string | The classification field name in the levels of detail feature classes. 
 
 
 

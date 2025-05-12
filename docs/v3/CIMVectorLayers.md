@@ -655,7 +655,9 @@
 |---------|--------|--------|
 | Contains| 0| Search for values that contain the search text. 
 | Exact| 1| Search for values that are the exact match with the search text. 
-| StartsWith| 2| Search for values that the search text starts with. 
+| StartsWith| 2| Search for values that start with the search text. 
+| FullTextSearchStartsWith| 3| Search for values that start with the search text using full text index. 
+| FullTextSearchExact| 4| Search for values that are the exact match with the search text using full text index. 
 
 
 
@@ -2990,6 +2992,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+| expanded | boolean | A value indicating whether this group table is expanded in the contents pane. 
 
 
 
@@ -3172,6 +3175,7 @@
 | customTimeExtent | [TimeExtent](ExternalReferences.md#timeextent) | The custom time extent. 
 | hasLiveData | boolean | A value indicating whether or not this dataset has live data. 
 | timeExtentCanChange | boolean | A value indicating whether the data regularly changes, so the extent needs recalculated. 
+| applyTimeReferenceToAllFields | boolean | A value indicating whether the time reference applies to all date fields in the layer or only the fields driving time-awareness. 
 
 
 
@@ -3499,6 +3503,7 @@
 | KnowledgeGraph| 24| Knowledge Graph connection. 
 | NITF| 25| NITF connection. 
 | VPF| 26| VPF. 
+| Parquet| 27| Parquet. 
 
 
 

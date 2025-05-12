@@ -45,6 +45,7 @@
 | defaultLabel | string | The default label used for the legend. 
 | minimumBreak | double | The minimum break. 
 | upperBounds | [double] | The collection of upper bounds. 
+| numberOfHistogramBins | long | The number of bins displayed in the histogram. 
 
 
 
@@ -247,6 +248,7 @@
 | valueExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | ExpressionInfo that contains the Arcade expression that returns value as a number. When both Fields and ValueExpressionInfo are present ValueExpressionInfo is used. 
 | polygonSymbolColorTarget | [enumeration PolygonSymbolColorTarget](CIMRenderers.md#enumeration-polygonsymbolcolortarget) | The property that controls how the color ramp is applied to polygon symbols. 
 | drawGraduatedSymbolsAboveAllLayers | boolean | A value indicating whether or not to draw graduated symbols for polygon features above all layers. This option applies when drawing graduated symbols for polygon layers. The background will be drawn in contents order and this option indicates if the graduated symbols should be drawn in contents order or above all other layers. 
+| authoringInfo | [CIMClassBreaksRendererAuthoringInfo](CIMRenderers.md#cimclassbreaksrendererauthoringinfo) | The additional authoring information used by the renderer. 
 
 
 ### CIMClassBreaksProperties 
@@ -302,6 +304,28 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | visualVariables | [[CIMVisualVariable]](Types.md#visualvariable) | The visual variables. 
+
+
+
+
+
+
+## CIMClassBreaksRendererAuthoringInfo
+#### Represents additional authoring properties used by a class breaks renderer. 
+
+
+### CIMRendererAuthoringInfo 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMClassBreaksRendererAuthoringInfo 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| numberOfHistogramBins | long | The number of bins displayed in the histogram. 
+| templateSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The template symbol. 
 
 
 
@@ -789,8 +813,30 @@
 | defaultDescription | string | The default description. 
 | showInAscendingOrder | boolean | A value indicating whether or not to show classes in ascending order. 
 | valueExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | ExpressionInfo that contains the Arcade expression that returns value as a number. When both Fields and ValueExpressionInfo are present ValueExpressionInfo is used. 
-| drawProportionalSymbolsAboveAllLayers | boolean | A value indicating whether or not to draw proportional symbols for polygon features above all layers. This option applies when drawing proportional symbols for polygon layers. The background will be drawn in contents order and this option indicates if the propoertional symbols should be drawn in contents order or above all other layers. 
+| drawProportionalSymbolsAboveAllLayers | boolean | A value indicating whether or not to draw proportional symbols for polygon features above all layers. This option applies when drawing proportional symbols for polygon layers. The background will be drawn in contents order and this option indicates if the proportional symbols should be drawn in contents order or above all other layers. 
 | defaultSymbolCustomPatch | [LegendPatch](Types.md#legendpatch) | The custom patch for the default symbol. 
+| authoringInfo | [CIMProportionalRendererAuthoringInfo](CIMRenderers.md#cimproportionalrendererauthoringinfo) | The additional authoring information used by the renderer. 
+
+
+
+
+
+
+## CIMProportionalRendererAuthoringInfo
+#### Represents additional authoring properties used by a proportional renderer. 
+
+
+### CIMRendererAuthoringInfo 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMProportionalRendererAuthoringInfo 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| numberOfHistogramBins | long | The number of bins displayed in the histogram. 
 
 
 
@@ -1294,6 +1340,7 @@
 | theme | string | A theme as an array of strings. 
 | showLegend | boolean | A value indicating whether or not to show legends. 
 | heading | string | The legend heading. 
+| numberOfHistogramBins | long | The number of bins displayed in the histogram. 
 
 
 

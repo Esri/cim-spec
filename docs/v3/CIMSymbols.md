@@ -213,7 +213,7 @@
 
 
 ### Enumeration: BlendingMode
-#### Blending modes. Determines how the strokes with dash patterns and other patterns (tiled pictures, placement effects) are handled at the end points of the line geometry's segments. If more than one pattern exists (for example, a dashed simple stroke, a hash stroke, and a marker stroke) then the longest pattern's length is affected directly by this option and the rest of the stroke patterns are resized proportionately to match. 
+#### Blending modes. Represents blending modes that define the formula for how layers or features blend with the content below. 
 
 |Property | Value | Description | 
 |---------|--------|--------|
@@ -431,7 +431,7 @@
 | shadowSymbol | [CIMPolygonSymbol](CIMSymbols.md#cimpolygonsymbol) | The shadow symbol for the callout. 
 | shadowXOffset | double | The shadow offset from the callout symbol in the horizontal direction. If X and Y are zero, no shadow is drawn. 
 | shadowYOffset | double | The shadow offset from the callout symbol in the vertical direction. If X and Y are zero, no shadow is drawn. 
-| middle | [CIMCompositeTextPartPosition](CIMSymbols.md#cimcompositetextpartposition) | The text part position properties for the middle part of the callout text. This contains the relative positioning information. Split offset and box will have no effect on this text part, since it is required that that the middle part is in the center of the callout. 
+| middle | [CIMCompositeTextPartPosition](CIMSymbols.md#cimcompositetextpartposition) | The text part position properties for the middle part of the callout text. This contains the relative positioning information. Split offset and box will have no effect on this text part, since it is required that the middle part is in the center of the callout. 
 | topLeft | [CIMCompositeTextPartPosition](CIMSymbols.md#cimcompositetextpartposition) | The text part position properties for the top left part of the callout text. This contains the relative positioning information, as well as split offset indicating the extent to which the callout part will mask the callout outline, and whether or not the part should be boxed in by the overall callout, or not. 
 | top | [CIMCompositeTextPartPosition](CIMSymbols.md#cimcompositetextpartposition) | The text part position properties for the top part of the callout text. This contains the relative positioning information, as well as split offset indicating the extent to which the callout part will mask the callout outline, and whether or not the part should be boxed in by the overall callout, or not. 
 | topRight | [CIMCompositeTextPartPosition](CIMSymbols.md#cimcompositetextpartposition) | The text part position properties for the top right part of the callout text. This contains the relative positioning information, as well as split offset indicating the extent to which the callout part will mask the callout outline, and whether or not the part should be boxed in by the overall callout, or not. 
@@ -2834,6 +2834,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | toRotation | double | The rotation value to which the symbol will animate. 
+| rotateClockwise | boolean | A value indicating whether the rotation animation is applied clockwise or counterclockwise. 
 
 
 
@@ -3145,7 +3146,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | color | [Color](Types.md#color) | The intrinsic color of the water. 
-| waveStrength | [enumeration WaveStrength](CIMSymbols.md#enumeration-wavestrength) | Strength of the waves. This property along with waterbody size are the parameters which drive the wave appearance. 
+| waveStrength | [enumeration WaveStrength](CIMSymbols.md#enumeration-wavestrength) | The strength of the waves. This property along with waterbody size are the parameters which drive the wave appearance. 
 | waterbodySize | [enumeration WaterbodySize](CIMSymbols.md#enumeration-waterbodysize) | The waterbody size allowing for a range of sizes from small pools to oceans. This property along with wave strength are the parameters which drive the wave appearance. 
 | waveHasDirection | boolean | A value indicating whether the waves are directionless (false), or if they have a dominant direction (true). 
 | waveDirection | double | The azimuthal bearing for direction of the waves. Only has effect when WasHasDirection is true. 

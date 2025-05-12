@@ -29,7 +29,7 @@
 |---------|--------|--------|
 | minimum | any | Minimum/first in the X axis. 
 | maximum | any | Maximum/last in the X axis. 
-| values | [[any]]| Preiew chart values. 
+| values | [[any]]| Preview chart values. 
 
 
 

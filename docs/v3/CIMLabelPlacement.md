@@ -481,6 +481,7 @@
 | maximumNumberOfCharsPerLine | long | The maximum number of characters per line. 
 | separators | [[CIMMaplexStackingSeparator]](CIMLabelPlacement.md#cimmaplexstackingseparator) | The stacking separators. 
 | trimStackingSeparators | boolean | A value indicating whether leading and trailing stacking separators are trimmed from the label string. 
+| preferToStackLongLabels | boolean | A value indicating whether to prefer to stack long labels. 
 
 
 
@@ -839,7 +840,7 @@
 | parallel | boolean | A value indicating whether or not to allow placement parallel to lines. 
 | perpendicular | boolean | A value indicating whether or not to allow placement perpendicular to lines. 
 | horizontal | boolean | A value indicating whether or not to allow placement horizontally. 
-| offset | double | A the offset from the line. 
+| offset | double | The offset from the line. 
 
 
 
@@ -854,21 +855,21 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| aboveBefore | long | A the label position priority for above and before the line. 
-| aboveStart | long | A the label position priority for above and at the start of the line. 
-| aboveAlong | long | A the label position priority for above and along the line. 
-| aboveEnd | long | A the label position priority for above and at the end of the line. 
-| aboveAfter | long | A the label position priority for above and after the line. 
-| centerBefore | long | A the label position priority for centered and before the line. 
-| centerStart | long | A the label position priority for centered and at the start of the line. 
-| centerAlong | long | A the label position priority for centered and along the line. 
-| centerEnd | long | A the label position priority for centered and at the end of the line. 
-| centerAfter | long | A the label position priority for centered and after the line. 
-| belowBefore | long | A the label position priority for below and before the line. 
-| belowStart | long | A the label position priority for below and at the start of the line. 
-| belowAlong | long | A the label position priority for below and along the line. 
-| belowEnd | long | A the label position priority for below and at the end of the line. 
-| belowAfter | long | A the label position priority for below and after the line. 
+| aboveBefore | long | The label position priority for above and before the line. 
+| aboveStart | long | The label position priority for above and at the start of the line. 
+| aboveAlong | long | The label position priority for above and along the line. 
+| aboveEnd | long | The label position priority for above and at the end of the line. 
+| aboveAfter | long | The label position priority for above and after the line. 
+| centerBefore | long | The label position priority for centered and before the line. 
+| centerStart | long | The label position priority for centered and at the start of the line. 
+| centerAlong | long | The label position priority for centered and along the line. 
+| centerEnd | long | The label position priority for centered and at the end of the line. 
+| centerAfter | long | The label position priority for centered and after the line. 
+| belowBefore | long | The label position priority for below and before the line. 
+| belowStart | long | The label position priority for below and at the start of the line. 
+| belowAlong | long | The label position priority for below and along the line. 
+| belowEnd | long | The label position priority for below and at the end of the line. 
+| belowAfter | long | The label position priority for below and after the line. 
 
 
 
@@ -907,14 +908,14 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| aboveLeft | long | A the label position priority for the above left position. 
-| aboveCenter | long | A the label position priority for the above center position. 
-| aboveRight | long | A the label position priority for the above right position. 
-| centerLeft | long | A the label position priority for the center left position. 
-| centerRight | long | A the label position priority for the center right position. 
-| belowLeft | long | A the label position priority for the below left position. 
-| belowCenter | long | A the label position priority for the below center position. 
-| belowRight | long | A the label position priority for the below right position. 
+| aboveLeft | long | The label position priority for the above left position. 
+| aboveCenter | long | The label position priority for the above center position. 
+| aboveRight | long | The label position priority for the above right position. 
+| centerLeft | long | The label position priority for the center left position. 
+| centerRight | long | The label position priority for the center right position. 
+| belowLeft | long | The label position priority for the below left position. 
+| belowCenter | long | The label position priority for the below center position. 
+| belowRight | long | The label position priority for the below right position. 
 
 
 

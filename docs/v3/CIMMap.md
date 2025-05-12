@@ -401,6 +401,9 @@
 | selectedSiteID | string | The site ID for the selected site, which is used when filtering layers by SITE_ID (optional). 
 | selectedFacilityID | string | The facility ID for the selected facility, which is used when filtering layers by FACILITY_ID. 
 | selectedLevelID | string | The level ID for the selected level, which is used when filtering layers by LEVEL_ID or the layer's configured floor-aware properties. 
+| selectedVerticalOrder | long | The vertical order which is used when filtering layers by VERTICAL_ORDER or the layer's configured floor-aware properties. 
+| useVerticalOrder | boolean | A value indicating whether or not the floor filter should use the selected vertical order for floor filtering. 
+| focusSelectedFacility | boolean | A value indicating whether or not the floor filter should display only the selected facility or all facilities. 
 | enabled | boolean | A value indicating whether or not the floor filter is enabled and filtering the displayed content according to the floor filter selections. 
 | minimized | boolean | A value indicating whether the floor filter has been minimized to show only the levels list or if it is showing the full set of breadcrumbs. 
 | longNames | boolean | A value indicating whether the levels lists are showing the long names from the NAME field or showing the short names from the NAME_SHORT field. 
@@ -596,7 +599,7 @@
 
 
 ## CIMIPSAppleIPSConfiguration
-#### Define IPS configuration Apple IPS propeties. 
+#### Define IPS configuration Apple IPS properties. 
 
 
 ### CIMIPSAppleIPSConfiguration 
@@ -1221,6 +1224,7 @@
 | hasLiveData | boolean | A value indicating whether or not this map has live data. 
 | timeRelation | [enumeration esriTimeRelation](ExternalReferences.md#enumeration-esritimerelation) | The time relation. 
 | uniqueTimes | [double] | A cached set of unique OLE date values. Expected to be in the CIMMapTimeDisplay's TimeReference. 
+| displayDatesInMapTimeZone | boolean | A value indicating whether date field values should be projected to the map's time reference for display. 
 
 
 

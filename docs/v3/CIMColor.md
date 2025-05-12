@@ -9,7 +9,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| colorSpace | [ColorSpace](Types.md#colorspace) | The color spaced used defined by an ICC color profile. 
+| colorSpace | [ColorSpace](Types.md#colorspace) | The color space used defined by an ICC color profile. 
 | values | [double] | The values for the color and alpha channels as defined by the color model. Alpha is the last value in the array for all colors. 
 
 
@@ -47,7 +47,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| colorSpace | [ColorSpace](Types.md#colorspace) | The color spaced used defined by an ICC color profile. 
+| colorSpace | [ColorSpace](Types.md#colorspace) | The color space used defined by an ICC color profile. 
 
 
 ### CIMFixedColorRamp 
@@ -67,7 +67,7 @@
 |Property | Value | Description | 
 |---------|--------|--------|
 | Default| 1| A fixed list of colors, typically used for unique value renderer. 
-| Bivariate| 2| A fixed list of colors for bivariate renderering. The count of colors should be equal to the number of breaks for each axis multiplied. For example, a 3x3 bivariate fixed list should have 9 colors in the order of A1, A2, A3, B1, B2, B3, C1, C2, C3 where values 1,2, and 3 correspond to classes in variable 1 and A, B, and C correspond to classes in variable 2. 
+| Bivariate| 2| A fixed list of colors for bivariate rendering. The count of colors should be equal to the number of breaks for each axis multiplied. For example, a 3x3 bivariate fixed list should have 9 colors in the order of A1, A2, A3, B1, B2, B3, C1, C2, C3 where values 1,2, and 3 correspond to classes in variable 1 and A, B, and C correspond to classes in variable 2. 
 
 
 
@@ -80,7 +80,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| colorSpace | [ColorSpace](Types.md#colorspace) | The color spaced used defined by an ICC color profile. 
+| colorSpace | [ColorSpace](Types.md#colorspace) | The color space used defined by an ICC color profile. 
 | values | [double] | The values for the color and alpha channels as defined by the color model. Alpha is the last value in the array for all colors. 
 
 
@@ -102,7 +102,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| colorSpace | [ColorSpace](Types.md#colorspace) | The color spaced used defined by an ICC color profile. 
+| colorSpace | [ColorSpace](Types.md#colorspace) | The color space used defined by an ICC color profile. 
 | values | [double] | The values for the color and alpha channels as defined by the color model. Alpha is the last value in the array for all colors. 
 
 
@@ -124,7 +124,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| colorSpace | [ColorSpace](Types.md#colorspace) | The color spaced used defined by an ICC color profile. 
+| colorSpace | [ColorSpace](Types.md#colorspace) | The color space used defined by an ICC color profile. 
 | values | [double] | The values for the color and alpha channels as defined by the color model. Alpha is the last value in the array for all colors. 
 
 
@@ -167,7 +167,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| colorSpace | [ColorSpace](Types.md#colorspace) | The color spaced used defined by an ICC color profile. 
+| colorSpace | [ColorSpace](Types.md#colorspace) | The color space used defined by an ICC color profile. 
 | values | [double] | The values for the color and alpha channels as defined by the color model. Alpha is the last value in the array for all colors. 
 
 
@@ -189,7 +189,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| colorSpace | [ColorSpace](Types.md#colorspace) | The color spaced used defined by an ICC color profile. 
+| colorSpace | [ColorSpace](Types.md#colorspace) | The color space used defined by an ICC color profile. 
 
 
 ### CIMContinuousColorRamp 
@@ -219,7 +219,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| colorSpace | [ColorSpace](Types.md#colorspace) | The color spaced used defined by an ICC color profile. 
+| colorSpace | [ColorSpace](Types.md#colorspace) | The color space used defined by an ICC color profile. 
 
 
 ### CIMMultipartColorRamp 
@@ -242,7 +242,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| colorSpace | [ColorSpace](Types.md#colorspace) | The color spaced used defined by an ICC color profile. 
+| colorSpace | [ColorSpace](Types.md#colorspace) | The color space used defined by an ICC color profile. 
 
 
 ### CIMContinuousColorRamp 
@@ -285,7 +285,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| colorSpace | [ColorSpace](Types.md#colorspace) | The color spaced used defined by an ICC color profile. 
+| colorSpace | [ColorSpace](Types.md#colorspace) | The color space used defined by an ICC color profile. 
 | values | [double] | The values for the color and alpha channels as defined by the color model. Alpha is the last value in the array for all colors. 
 
 
@@ -307,7 +307,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| colorSpace | [ColorSpace](Types.md#colorspace) | The color spaced used defined by an ICC color profile. 
+| colorSpace | [ColorSpace](Types.md#colorspace) | The color space used defined by an ICC color profile. 
 
 
 ### CIMRandomHSVColorRamp 
@@ -337,7 +337,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| colorSpace | [ColorSpace](Types.md#colorspace) | The color spaced used defined by an ICC color profile. 
+| colorSpace | [ColorSpace](Types.md#colorspace) | The color space used defined by an ICC color profile. 
 | values | [double] | The values for the color and alpha channels as defined by the color model. Alpha is the last value in the array for all colors. 
 
 
@@ -386,7 +386,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| colorSpace | [ColorSpace](Types.md#colorspace) | The color spaced used defined by an ICC color profile. 
+| colorSpace | [ColorSpace](Types.md#colorspace) | The color space used defined by an ICC color profile. 
 | values | [double] | The values for the color and alpha channels as defined by the color model. Alpha is the last value in the array for all colors. 
 
 

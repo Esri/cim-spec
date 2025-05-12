@@ -707,7 +707,7 @@
 | drawTimeCumulative | boolean | A value indicating whether or not draw time cumulatively. 
 | timeOffset | double | The time offset. 
 | timeOffsetUnits | [enumeration esriTimeUnits](ExternalReferences.md#enumeration-esritimeunits) | The time offset units. 
-| layerDefinition | string | The layer definition for dynamic service layer. 
+| layerDefinition | string | The layer definition for dynamic service layer. This is a JSON string in REST API syntax. 
 | popupInfo | [CIMPopupInfo](CIMPopup.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | floorAwareTableProperties | [CIMFloorAwareTableProperties](CIMVectorLayers.md#cimfloorawaretableproperties) | Floor-aware properties if the sublayer is used in floor filtering. 
@@ -715,6 +715,8 @@
 | definitionExpressionName | string | The Name of definition expression. 
 | definitionFilterChoices | [[CIMDefinitionFilter]](CIMLayer.md#cimdefinitionfilter) | The definition filter choices. 
 | selectionSetURI | string | The URI of the selection set for the layer. 
+| selectable | boolean | A value indicating whether the layer is selectable. 
+| renderer | [Renderer](Types.md#renderer) | The primary symbol renderer. 
 
 
 
@@ -937,6 +939,8 @@
 | dataConnection | [DataConnection](Types.md#dataconnection) | The data connection. 
 | snappable | boolean | A value indicating whether the geometries are snappable. 
 | tiles3DLayerType | [enumeration Tiles3DLayerType](CIMServiceLayers.md#enumeration-tiles3dlayertype) | The 3D Tiles layer type. Typically set by the system and should not be modified. 
+| modificationLayerURI | string | The URI of the modification layer. 
+| modificationLayerEnabled | boolean | A value indicating whether the modification is enabled. 
 
 
 

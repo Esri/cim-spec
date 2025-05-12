@@ -86,6 +86,9 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | cloudCover | double | The percentage (0-1) of cloud cover in the sky. 
+| cloudBaseElevation | long | The base cloud elevation in meters above sea level. 
+| windSpeed | long | The wind speed in km/h. 
+| windDirection | long | The wind direction (0-359). 
 
 
 
@@ -378,6 +381,9 @@
 |---------|--------|--------|
 | cloudCover | double | The percentage (0-1) of cloud cover in the sky. 
 | precipitation | double | The percentage (0-1) of rainfall amount in the scene. 
+| cloudBaseElevation | long | The base cloud elevation in meters above sea level. 
+| windSpeed | long | The wind speed in km/h. 
+| windDirection | long | The wind direction (0-359). 
 
 
 
@@ -403,6 +409,9 @@
 | cloudCover | double | The percentage (0-1) of cloud cover in the sky. 
 | precipitation | double | The percentage (0-1) of snowfall amount in the scene. 
 | snowCover | boolean | A value indicating whether surfaces are covered with snow. 
+| cloudBaseElevation | long | The base cloud elevation in meters above sea level. 
+| windSpeed | long | The wind speed in km/h. 
+| windDirection | long | The wind direction (0-359). 
 
 
 
@@ -426,6 +435,9 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | cloudCover | double | The percentage (0-1) of cloud cover in the sky. 
+| cloudBaseElevation | long | The base cloud elevation in meters above sea level. 
+| windSpeed | long | The wind speed in km/h. 
+| windDirection | long | The wind direction (0-359). 
 
 
 

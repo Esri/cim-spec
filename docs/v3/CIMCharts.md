@@ -345,7 +345,7 @@
 |---------|--------|--------|
 | temporalMaskBandIDs | [long] | The bandIDs for temporal masking. 
 | updatingFrequency | double | The frequency in years at which to update the time series model with new observations. 
-| chiSquaredThreshold | double | The chi squared statictic change probablity threshold. 
+| chiSquaredThreshold | double | The chi squared statistic change probability threshold. 
 | minimumAnomaly | long | The minimum number of consecutive anomaly observations that must occur before an event is considered a change. 
 
 
@@ -398,7 +398,7 @@
 |---------|--------|--------|
 | snappingDate | string | The date in the format MM-DD used to select a slice for each year. 
 | maximumSegments | long | The maximum number of segments to be fitted to the time series for each pixel. 
-| vertexCountOvershoot | long | The the number of additional vertices beyond MaximumSegments + 1 that can be used to fit the model during the initial stage of identifying vertices. 
+| vertexCountOvershoot | long | The number of additional vertices beyond MaximumSegments + 1 that can be used to fit the model during the initial stage of identifying vertices. 
 | spikeThreshold | double | The threshold to use for dampening spikes or anomalies in the pixel value trajectory. 
 | recoveryThreshold | double | The recovery threshold value in years. 
 | preventOneYearRecovery | boolean | A value indicating whether segments that exhibit a one year recovery will be excluded. 
@@ -584,6 +584,8 @@
 | guideValueType | [enumeration ChartValueType](CIMCharts.md#enumeration-chartvaluetype) | The type of the coordinate value used in the guide. 
 | fillSymbolProperties | [CIMChartFillSymbolProperties](CIMCharts.md#cimchartfillsymbolproperties) | The symbol properties for the guide. 
 | polyline | [double] | Vertices of the polyline guide as an array of x and y coordinates in a row-major order. 
+| valueFromField | string | The field name for calculation of the numeric coordinate of the from value for the guide. This value will be used when guide value type is set to numeric. 
+| valueFromFieldAggregationType | [enumeration ChartAggregationType](CIMCharts.md#enumeration-chartaggregationtype) | The aggregation type for calculation of the numeric coordinate of the from value for the guide. This value will be used when guide value type is set to numeric. 
 
 
 
@@ -823,6 +825,9 @@
 | Square| 1| Uses square to draw the marker symbol. 
 | Diamond| 2| Uses diamond to draw the marker symbol. 
 | Triangle| 3| Uses triangle to draw the marker symbol. 
+| Star_FourPoint| 4| Uses four point star to draw the marker symbol. 
+| Star_FivePoint| 5| Uses five point star to draw the marker symbol. 
+| Cross| 6| Uses cross to draw the marker symbol. 
 
 
 
@@ -1059,7 +1064,7 @@
 | lineSymbolProperties | [CIMChartLineSymbolProperties](CIMCharts.md#cimchartlinesymbolproperties) | The line symbol properties of the profile graph series. 
 | markerSymbolProperties | [CIMChartMarkerSymbolProperties](CIMCharts.md#cimchartmarkersymbolproperties) | The marker symbol properties of the profile graph series. 
 | horizontalUnit | [Unit](ExternalReferences.md#unit) | The unit of measure to be used for horizontal distance. The default value is layer's spatial reference XY unit. 
-| verticalUnit | [Unit](ExternalReferences.md#unit) | The the unit of measure to be used for elevation. The default value is the layer's vertical coordinate system's Z unit, if there is one. 
+| verticalUnit | [Unit](ExternalReferences.md#unit) | The unit of measure to be used for elevation. The default value is the layer's vertical coordinate system's Z unit, if there is one. 
 | variableInYAxis1 | [enumeration ProfileGraphVariableInYAxis](CIMCharts.md#enumeration-profilegraphvariableinyaxis) | A value indicating which variable to display in the first Y axis. 
 | lineSeriesType | [enumeration ProfileGraphLineSeriesType](CIMCharts.md#enumeration-profilegraphlineseriestype) | A value indicating which line type to use in the graph. 
 | trackCursor | boolean | A value indicating whether in the map/scene to dynamically display cursor movement in the chart. 
@@ -1106,6 +1111,17 @@
 | PearsonsR| 1| Sort by Pearson's R value. 
 | Alphabetical| 2| Sort by alphabetical value. 
 | Custom| 3| Sort by custom order. 
+
+
+
+### Enumeration: ChartScatterDisplayOption
+#### Grid Scatter plots display options. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| ScatterPlots| 0| Display the scatter plots. 
+| RSquared| 1| Display the R squared values. 
+| PearsonsR| 2| Display the Pearson's R values. 
 
 
 
@@ -1162,6 +1178,7 @@
 | sortDirection | [enumeration ChartSortDirection](CIMCharts.md#enumeration-chartsortdirection) | The direction type of sort order. 
 | trendLineFitType | [enumeration ChartTrendLineFitType](CIMCharts.md#enumeration-charttrendlinefittype) | A trend line fit type. 
 | trendOrder | long | The number of terms in a polynomial or Fourier equation. 
+| showPValue | boolean | A value indicating whether to show p-value in the chart. 
 
 
 
@@ -1647,6 +1664,28 @@
 | selectionLineSymbolProperties | [CIMChartLineSymbolProperties](CIMCharts.md#cimchartlinesymbolproperties) | The line symbol properties of the outline for the selected mini chart. 
 | miniChartOutlineSymbolProperties | [CIMChartLineSymbolProperties](CIMCharts.md#cimchartlinesymbolproperties) | The line symbol properties of the outline for the non-selected mini chart. 
 | miniChartTitleText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text symbol properties of the series title for the mini chart. 
+| scatterProperties | [CIMGridScatterProperties](CIMCharts.md#cimgridscatterproperties) | The properties for the grid scatter plots. 
+
+
+
+
+
+
+## CIMGridScatterProperties
+#### Provides access to members that control the display of grid scatter plots. 
+
+
+### CIMGridScatterProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| RSquareText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text symbol properties for the RSquare. 
+| displayOption | [enumeration ChartScatterDisplayOption](CIMCharts.md#enumeration-chartscatterdisplayoption) | The display option for the grid scatter plots. 
+| colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp for the grid scatter plots when RSquared or Pearson's R is selected. 
+| breakColors | [[CIMColor]](Types.md#color) | The color for each break in the grid scatter plots. 
+| sortByType | [enumeration ChartSPMSortByType](CIMCharts.md#enumeration-chartspmsortbytype) | The sort by type. 
+| sortDirection | [enumeration ChartSortDirection](CIMCharts.md#enumeration-chartsortdirection) | The direction type of sort order. 
+| showPValue | boolean | A value indicating whether to show p-value in the chart. 
 
 
 

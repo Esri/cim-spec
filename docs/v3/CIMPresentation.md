@@ -114,6 +114,7 @@
 | colorModel | [enumeration ColorModel](CIMEnumerations.md#enumeration-colormodel) | The color model for a presentation. 
 | RGBColorProfile | string | The name of the RGB color profile for a presentation. 
 | CMYKColorProfile | string | The name of the CMYK color profile for a presentation. 
+| colorVisionDeficiencyMode | [enumeration ColorVisionDeficiencyType](CIMEnumerations.md#enumeration-colorvisiondeficiencytype) | The color vision deficiency mode. 
 
 
 
@@ -262,6 +263,7 @@
 | None| 0| No transition. 
 | Swipe| 1| Swipe transition. 
 | Fade| 2| Fade in/out transition. 
+| Fly| 3| Fly transition. It is supported only for map presentation page. 
 
 
 

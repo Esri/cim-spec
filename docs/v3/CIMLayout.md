@@ -196,7 +196,7 @@
 | displayVariationDate | boolean | A value indicating whether to display the variation date. 
 | displayRateOfChange | boolean | A value indicating whether to display the rate of change text. 
 | autoUpdate | boolean | A value indicating whether the north arrow auto updates. 
-| rateOfChangeText | string | The rate of change text dispalyed. 
+| rateOfChangeText | string | The rate of change text displayed. 
 
 
 
@@ -215,7 +215,7 @@
 | alignVariationToLine | boolean | A value indicating whether to align text to line or display on side. 
 | variationTextOnLeft | boolean | A value indicating whether the variation text will be displayed on the left side of aviation north arrow, if false will display on the right side. 
 | showYear | boolean | A value indicating whether to show the variation year in the variation text. 
-| showYearInParenthesis | boolean | A value indicating whether to show the variation year enclosed in paranthesis. 
+| showYearInParenthesis | boolean | A value indicating whether to show the variation year enclosed in parenthesis. 
 | variationYearSeparator | string | The string separator that goes between the variation text and the variation year. 
 | magneticVariationIdentifier | string | The magnetic north identifier for the variation text. 
 | gridVariationIdentifier | string | The grid north identifier for the variation text. 
@@ -528,7 +528,7 @@
 | titleTextSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The text symbol used for the diagram title, which appears above the element. 
 | bearingArrowLineSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The line symbol used for the arrow that leads from the starting bearing to the ending bearing for a part of the diagram. 
 | lineSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The line symbol used for the outline of the circle sections on the diagram. 
-| diameterUnits | [LinearUnit](ExternalReferences.md#linearunit) | The page units used to determinte the diameter of the cruising altitude diagram. 
+| diameterUnits | [LinearUnit](ExternalReferences.md#linearunit) | The page units used to determine the diameter of the cruising altitude diagram. 
 | diagramDiameter | double | The diameter of the cruising altitude diagram in page units. 
 | diagramTitle | string | The text for the diagram title. 
 | verticalLeftText | string | The text for the left side of the vertical diagram. 
@@ -581,6 +581,7 @@
 |---------|--------|--------|
 | layerURI | string | The path to the layer used to define the grid lines. 
 | gridLines | [[CIMGridLine]](Types.md#gridline) | The gridLines of the custom grid. These are limited to ticks, labels, and tabs. 
+| useMapClipShape | boolean | A value indicating whether to use the clip shape of the map (if set) as the grid boundary. 
 
 
 
@@ -737,6 +738,98 @@
 | Hollow| 0| Hollow fill. 
 | Alternating| 1| Alternating fill. 
 | DoubleAlternating| 2| Double alternating fill. 
+
+
+
+
+## CIMDualScaleBar
+#### Represents a dual scale bar on a page layout. 
+
+
+### CIMElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| anchor | [enumeration Anchor](CIMLayout.md#enumeration-anchor) | The anchor position of the element. 
+| locked | boolean | A value indicating whether the element is locked. Each element in the contents pane has a lock icon. If the icon is shown as locked, you can not select that feature in the layout using the select tool. 
+| name | string | The name of the element. 
+| visible | boolean | A value indicating whether the element is visible. 
+| rotation | double | The rotation of the element. 
+| rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
+| lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
+
+
+### CIMFrameElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| frame | [Polygon](ExternalReferences.md#polygon) | The geometry of a frame for an element. 
+| graphicFrame | [CIMGraphicFrame](CIMGraphics.md#cimgraphicframe) | The graphic symbology of an element's frame. 
+
+
+### CIMMapSurround 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| mapFrame | string | The map frame associated with the map surround. 
+| minScale | double | The minimum scale. 
+| maxScale | double | The maximum scale. 
+
+
+### CIMScaleBar 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| alignToZeroPoint | boolean | A value indicating whether the scale bar should align to zero. 
+| barHeight | double | The scale bar height. 
+| division | double | The division value. 
+| divisions | long | The number of divisions. 
+| divisionsBeforeZero | long | The number of divisions before zero. 
+| fittingStrategy | [enumeration ScaleBarFittingStrategy](CIMLayout.md#enumeration-scalebarfittingstrategy) | The fitting strategy. 
+| labelFrequency | [enumeration ScaleBarFrequency](CIMLayout.md#enumeration-scalebarfrequency) | The label frequency. 
+| labelGap | double | The label gap value. 
+| labelPosition | [enumeration ScaleBarVerticalPosition](CIMLayout.md#enumeration-scalebarverticalposition) | The label position. 
+| labelSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | Label symbol. 
+| numberFormat | [NumberFormat](Types.md#numberformat) | The number format. 
+| subdivisions | long | The number of subdivisions. 
+| unitLabel | string | The unit label. 
+| unitLabelGap | double | The unit label gap. Units set in points. 
+| unitLabelPosition | [enumeration ScaleBarLabelPosition](CIMLayout.md#enumeration-scalebarlabelposition) | The unit label position. 
+| unitLabelSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The unit label symbol. 
+| units | [Unit](ExternalReferences.md#unit) | The units for the scale bar. 
+| useFractionCharacters | boolean | A value indicating whether fractional characters should be used. 
+| zeroPoint | [Point](ExternalReferences.md#point) | The zero location for the scale bar. 
+| computeAtCenter | boolean | A value indicating whether to compute the scale at map center. 
+| displayFirstOutside | boolean | A value indicating whether to display the first numeric value outside the bar. 
+| displayLastOutside | boolean | A value indicating whether to display the last numeric value outside the bar. 
+| barWidth | double | The width of the scalebar. 
+
+
+### CIMScaleMarks 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| divisionMarkHeight | double | The division mark height value. 
+| divisionMarkSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The division mark line symbol. 
+| markFrequency | [enumeration ScaleBarFrequency](CIMLayout.md#enumeration-scalebarfrequency) | The division mark frequency. 
+| markPosition | [enumeration ScaleBarVerticalPosition](CIMLayout.md#enumeration-scalebarverticalposition) | The division mark position. 
+| subdivisionMarkHeight | double | The subdivision mark height. 
+| subdivisionMarkSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The subdivision mark line symbol. 
+| midpointMarkHeight | double | The midpoint mark height. 
+| midpointMarkSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The midpoint mark line symbol. 
+
+
+### CIMDualScaleBar 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| upperScaleBar | [ScaleBar](Types.md#scalebar) | The upper scale bar of the dual scale bar. 
+| lowerScaleBar | [ScaleBar](Types.md#scalebar) | The lower scale bar of the dual scale bar. 
+| unitLabelVerticalGap | double | The unit label vertical gap. Units set in points. 
+
+
 
 
 
@@ -1534,6 +1627,22 @@
 
 
 
+## CIMLayerOverrideSet
+#### Represents a layer property override set. 
+
+
+### CIMLayerOverrideSet 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| layerURI | string | The path to the associated map layer. 
+| value | boolean | A value indicating whether this flag is set. It overrides some arbitrary property on the associated map layer. 
+
+
+
+
+
+
 ## CIMLayout
 #### Represents a layout in a project. A layout is a collection of visual elements arranged on a logical sheet of paper. A layout in a GIS is typically used to display one or more maps at a particular extent and scale. The layout is used to compose a presentation of data, describe the maps, and/or tell a story of the map data. A layout defines a logical sheet of paper. It has a height and a width, and also a linear unit used to display positions on the page. It can have a snapping grid and a set of guides to help users arrange its elements. The layout contains an ordered list of elements. When the layout draws, it tells each element to draw, in order. 
 
@@ -1818,6 +1927,8 @@
 | useMapBackgroundColor | boolean | A value indicating whether the MapFrame should use the Map background color. 
 | extentIndicatorsExpanded | boolean | A value indicating whether the map frame extent indicators are expanded in the contents pane. 
 | mapGridsExpanded | boolean | A value indicating whether the map frame grids are expanded in the contents pane. 
+| overrideLayerVisibility | boolean | A value indicating whether LayerVisibilityOverrides are used to override layer visibility. 
+| layerVisibilityOverrides | [[CIMLayerOverrideSet]](CIMLayout.md#cimlayeroverrideset) | The array of layer visibility overrides. 
 
 
 
@@ -4123,6 +4234,7 @@
 | defaultTableFrameField | [CIMTableFrameField](CIMLayout.md#cimtableframefield) | The default table frame field used when creating new table frames. 
 | balanceColumns | boolean | A value indicating whether to balance the columns of the table. 
 | rowLimit | long | The maximum number of rows the table frame will show. 0 Indicates "no limit". 
+| showHeadings | boolean | A value indicating whether to show the headings. 
 
 
 

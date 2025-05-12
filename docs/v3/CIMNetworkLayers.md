@@ -658,6 +658,13 @@
 | layerEffects | [[CIMLayerEffect]](CIMLayer.md#cimlayereffect) | The layer effects for the layer. This property will contain either a list of all scale-dependent layer effects, or a single layer effect. 
 
 
+### CIMStandaloneTableContainer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| standaloneTables | [string] | The standalone tables as an array of table repository paths. 
+
+
 ### CIMUtilityNetworkLayerDefinition 
 
 |Property | Type | Description | 
@@ -671,6 +678,7 @@
 | structuralAttachmentAssociationSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol used to draw the structural attachment associations of the utility network. 
 | containerAssociationSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol used to draw the container associations of the utility network. 
 | activeTraceConfigurations | [[CIMNetworkTraceConfiguration]](CIMNetworkLayers.md#cimnetworktraceconfiguration) | The active trace configurations. 
+| dirtyObjectsTable | string | The path of the dirty objects table in the utility network layer. 
 
 
 
