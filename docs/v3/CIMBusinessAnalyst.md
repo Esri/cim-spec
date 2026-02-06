@@ -339,7 +339,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| URI | string | The area of interest feature layer URI. 
+| uRI | string | The area of interest feature layer URI. 
 
 
 
@@ -354,7 +354,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| ID | string | The ID of the criterion. 
+| iD | string | The ID of the criterion. 
 | title | string | The title of the criterion. 
 | valueField | string | The value of the criterion. 
 | weight | double | The weight of the criterion. 
@@ -506,7 +506,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| ID | string | The ID of the criterion. 
+| iD | string | The ID of the criterion. 
 | title | string | The title of the criterion. 
 | valueField | string | The value of the criterion. 
 | weight | double | The weight of the criterion. 
@@ -782,7 +782,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| ID | string | The ID of the criterion. 
+| iD | string | The ID of the criterion. 
 | title | string | The title of the criterion. 
 | valueField | string | The value of the criterion. 
 | weight | double | The weight of the criterion. 

@@ -58,7 +58,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
@@ -313,7 +313,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
@@ -381,7 +381,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
@@ -460,7 +460,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
@@ -526,7 +526,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
@@ -688,7 +688,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
@@ -847,7 +847,7 @@
 | extensionLineOption | [enumeration DimensionPartOptions](CIMVectorLayers.md#enumeration-dimensionpartoptions) | The extension line display options of the style. 
 | extensionLineOvershot | double | The length of the extension line overshot. 
 | extensionLineSymbol | [CIMLineSymbol](CIMSymbols.md#cimlinesymbol) | The symbol used for extension lines. 
-| ID | long | The ID of the style. 
+| iD | long | The ID of the style. 
 | markerFit | [enumeration DimensionMarkerFit](CIMVectorLayers.md#enumeration-dimensionmarkerfit) | The arrow fit policy of the style. 
 | markerFitTolerance | double | The arrow fit tolerance of the style. 
 | markerOption | [enumeration DimensionPartOptions](CIMVectorLayers.md#enumeration-dimensionpartoptions) | The arrow display properties of the style. 
@@ -985,7 +985,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| URI | string | The URI of the ENC files or resources. 
+| uRI | string | The URI of the ENC files or resources. 
 
 
 
@@ -1001,7 +1001,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
@@ -1228,7 +1228,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
@@ -1346,6 +1346,17 @@
 
 
 
+### CIMRelateInfoBase
+#### TODO: Document
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| dataConnection | |
+| foreignKey | |
+| primaryKey | |
+| cardinality | |
+| serviceRelateID | |
+| relatedMapMemberURI | |
 
 
 
@@ -1406,7 +1417,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
@@ -1943,7 +1954,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
@@ -2097,7 +2108,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
@@ -2175,7 +2186,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
@@ -2678,7 +2689,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
@@ -2828,7 +2839,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
@@ -2926,7 +2937,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
@@ -3028,7 +3039,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| ID | long | The ID which identifies the symbol in the collection. 
+| iD | long | The ID which identifies the symbol in the collection. 
 | name | string | The name of the symbol in the symbol collection. 
 | symbol | [Symbol](Types.md#symbol) | The symbol. 
 
@@ -3282,7 +3293,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
@@ -3373,7 +3384,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| URI | string | The URI of the VectorTile files or resources. 
+| uRI | string | The URI of the VectorTile files or resources. 
 | resourcesURI | string | The URI of the binary reference containing the external resources. 
 
 
@@ -3390,7 +3401,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 

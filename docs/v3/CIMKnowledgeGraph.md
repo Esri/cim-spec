@@ -115,7 +115,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| ID | any | The id of the entity instance used as a origin/destination entity. If this id is null, then the filtered find paths algorithm uses all instances of the specified entity type. 
+| iD | any | The id of the entity instance used as a origin/destination entity. If this id is null, then the filtered find paths algorithm uses all instances of the specified entity type. 
 | entityTypeName | string | The type name of the entity (type or instance) used as an origin/destination entity. 
 | propertyFilterPredicate | string | The property filter predicate (openCypher syntax) associated with the path filter. The predicate is only taken into account when ID has no value. 
 
@@ -161,7 +161,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| ID | any | The id of the entity/relationship instance used for the path filter. If this id is null, then the path filter is used on all instances of the specified entity/relationship type. 
+| iD | any | The id of the entity/relationship instance used for the path filter. If this id is null, then the path filter is used on all instances of the specified entity/relationship type. 
 | itemTypeName | string | The type name of the entity/relationship (type or instance) used for the path filter. 
 | itemType | [enumeration KGPathFilterItemType](CIMKnowledgeGraph.md#enumeration-kgpathfilteritemtype) | Whether the path filter is used for entities or relationships. 
 | filterType | [enumeration KGPathFilterType](CIMKnowledgeGraph.md#enumeration-kgpathfiltertype) | The filter type of the path filter. 
@@ -916,7 +916,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
@@ -970,7 +970,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
@@ -1537,7 +1537,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 

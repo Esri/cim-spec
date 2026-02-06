@@ -33,7 +33,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
@@ -76,7 +76,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| ID | string | The value of the lane data source ID. 
+| iD | string | The value of the lane data source ID. 
 
 
 
@@ -111,7 +111,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| ID | string | The value of the lane data source ID. 
+| iD | string | The value of the lane data source ID. 
 
 
 ### CIMTimelineLaneMapMemberDataSource 
@@ -147,7 +147,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| ID | string | The Id of for the timeline layer. 
+| iD | string | The Id of for the timeline layer. 
 | alias | string | The timeline layer alias. 
 | layerURI | string | The value of the layer uri. 
 | displayField | string | The value of the display field name. 
@@ -180,7 +180,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| ID | string | The Id of for the timeline swimlane. 
+| iD | string | The Id of for the timeline swimlane. 
 | alias | string | An alias for the swimlane. 
 | visibility | boolean | A value indicating whether the swimlane is visible. 
 | expanded | boolean | A value indicating whether the swimlane is expanded in the contents pane. 

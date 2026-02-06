@@ -31,7 +31,7 @@
 |---------|--------|--------|
 | objectName | string | The object name. 
 | objectType | string | The object type. 
-| URL | string | The URL. 
+| url | string | The URL. 
 | capabilities | string | The capabilities. 
 | serverConnection | [ServerConnection](Types.md#serverconnection) | The server connection. 
 | gdbVersion | string | The name of the geodatabase version to use in service requests. 
@@ -50,7 +50,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
@@ -118,7 +118,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
@@ -205,7 +205,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
@@ -273,7 +273,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
@@ -382,7 +382,7 @@
 | anonymous | boolean | A value indicating whether of not this is an anonymous connection. 
 | hideUserProperty | boolean | A value indicating whether of not to hide the user. 
 | password | string | The encrypted password as a base 64 encoded string. Used internally by the system. Not persisted in documents. 
-| URL | string | The URL. 
+| url | string | The URL. 
 | user | string | The user. 
 | authenticationInfo | string | The string containing additional authentication information for the connection. 
 
@@ -399,7 +399,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| ID | string | The ID. 
+| iD | string | The ID. 
 | color | [Color](Types.md#color) | The isosurface color. 
 | isCustomColor | boolean | A value indicating whether the color was set by user. 
 | value | double | The variable value. 
@@ -420,7 +420,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
@@ -570,7 +570,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| ID | string | The ID. 
+| iD | string | The ID. 
 | name | string | The name. 
 | description | string | The description. 
 | filterBlocks | [[CIMObject3DRenderingFilterBlock]](CIMServiceLayers.md#cimobject3drenderingfilterblock) | The filter blocks. 
@@ -672,7 +672,7 @@
 | anonymous | boolean | A value indicating whether of not this is an anonymous connection. 
 | hideUserProperty | boolean | A value indicating whether of not to hide the user. 
 | password | string | The encrypted password as a base 64 encoded string. Used internally by the system. Not persisted in documents. 
-| URL | string | The URL. 
+| url | string | The URL. 
 | user | string | The user. 
 | authenticationInfo | string | The string containing additional authentication information for the connection. 
 
@@ -737,7 +737,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | definitionExpression | string | The definition expression. This property is used for composite layers that are backed by feature classes. 
-| URI | string | The URI of the backing layer. Used when feature layer capabilities are enabled. 
+| uRI | string | The URI of the backing layer. Used when feature layer capabilities are enabled. 
 
 
 
@@ -779,7 +779,7 @@
 | popupInfo | [CIMPopupInfo](CIMPopup.md#cimpopupinfo) | The pop-up info. 
 | showPopups | boolean | A value indicating whether or not to show pop-ups. 
 | floorAwareTableProperties | [CIMFloorAwareTableProperties](CIMVectorLayers.md#cimfloorawaretableproperties) | Floor-aware properties if the sublayer is used in floor filtering. 
-| URI | string | The URI of the backing layer. Used when feature layer capabilities are enabled. 
+| uRI | string | The URI of the backing layer. Used when feature layer capabilities are enabled. 
 | definitionExpressionName | string | The Name of definition expression. 
 | definitionFilterChoices | [[CIMDefinitionFilter]](CIMLayer.md#cimdefinitionfilter) | The definition filter choices. 
 | selectionSetURI | string | The URI of the selection set for the layer. 
@@ -832,7 +832,7 @@
 |---------|--------|--------|
 | serviceProvider | string | The service provider. 
 | serviceType | string | The service type. 
-| URL | string | The service URL. 
+| url | string | The service URL. 
 | culture | string | The service culture. 
 
 
@@ -849,7 +849,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
@@ -939,7 +939,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| URI | string | The URI. 
+| uRI | string | The URI. 
 
 
 
@@ -955,7 +955,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
@@ -1070,7 +1070,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| URI | string | The URI. 
+| uRI | string | The URI. 
 
 
 
@@ -1115,7 +1115,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
@@ -1228,7 +1228,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| ID | string | The ID. 
+| iD | string | The ID. 
 | name | string | The plane's name. 
 | visible | boolean | A value indicating whether the plane is visible. 
 | position | [Point](ExternalReferences.md#point) | A point on the plane, specified in voxel coordinates. 
@@ -1287,7 +1287,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| ID | long | The section ID, which must be unique among all sections in the layer. 
+| iD | long | The section ID, which must be unique among all sections in the layer. 
 | name | string | The section name. 
 | visible | boolean | A value indicating whether the section is visible. 
 | expanded | boolean | A value indicating whether this section is expanded in the contents pane. 
@@ -1464,7 +1464,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| ID | long | The volume ID, which must be unique among all volumes in the layer. 
+| iD | long | The volume ID, which must be unique among all volumes in the layer. 
 | sections | [[CIMVoxelPlane]](CIMServiceLayers.md#cimvoxelplane) | A collection of sections. 
 | slices | [[CIMVoxelPlane]](CIMServiceLayers.md#cimvoxelplane) | A collection of slices. 
 | variableProfiles | [[CIMVoxelVariableProfile]](CIMServiceLayers.md#cimvoxelvariableprofile) | The variable profiles. 
@@ -1545,7 +1545,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
@@ -1716,4 +1716,22 @@
 | templateUrl | string | The template url that can be used for tile requests. 
 
 
+
+### CIMInternetServerConnectionBase
+
+|Property | Type | Description | 
+|---------|--------|--------|
+anonymous | |
+hideUserProperty | |
+password | |
+url | |
+user | |
+authenticationInfo | |
+
+
+### CIMLANServerConnection
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| machine | |
 

@@ -1386,7 +1386,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| ID | long | The identifier of this level. 
+| iD | long | The identifier of this level. 
 | minValue | double | The minimum value. 
 | maxValue | double | The maximum value. 
 | mean | double | The cached mean of the data at this level. Used to rapidly compute new minimum and maximum values. 

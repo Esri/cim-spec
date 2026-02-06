@@ -1669,7 +1669,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 
@@ -1937,7 +1937,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | autoCamera | [CIMAutoCamera](CIMLayout.md#cimautocamera) | The camera associated with the map frame. 
-| URI | string | The path to the map in the project. 
+| uRI | string | The path to the map in the project. 
 | view | [CIMMapView](CIMDocument.md#cimmapview) | The view associated with the map frame. 
 | extentIndicators | [[CIMExtentIndicator]](CIMLayout.md#cimextentindicator) | The extent indicators associated with the map frame. 
 | grids | [[CIMMapGrid]](Types.md#mapgrid) | The Grids and Graticules associated with the MapFrame. 
@@ -2973,7 +2973,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | name | string | The name. 
-| URI | string | The URI of the definition. Typically set by the system and used as an identifier. 
+| uRI | string | The URI of the definition. Typically set by the system and used as an identifier. 
 | sourceURI | string | The source URI of the item. Set if sourced from an external item such as an item on a portal. 
 | sourceModifiedTime | [TimeInstant](ExternalReferences.md#timeinstant) | The time the source was last modified, as of the last sync. Used to detect when another sync is needed. 
 | metadataURI | string | The metadata URI. 

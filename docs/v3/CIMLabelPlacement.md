@@ -33,7 +33,7 @@
 | useCodedValue | boolean | A value indicating whether or not to use coded value domain descriptions when labeling. 
 | whereClause | string | The SQL where clause of which features to label with this label class. 
 | visibility | boolean | A value indicating whether this label class is visible. 
-| ID | long | The ID of the label class. This property is only used in the context of annotation. 
+| iD | long | The ID of the label class. This property is only used in the context of annotation. 
 
 
 

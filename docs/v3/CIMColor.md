@@ -152,7 +152,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| URL | string | The URL of short name of the color space definition. As a shortcut, the following strings can be set instead of full URLs: "Default RGB", "Default CMYK", "CIELAB", "CIEXYZ", and "Default Gray". 
+| url | string | The URL of short name of the color space definition. As a shortcut, the following strings can be set instead of full URLs: "Default RGB", "Default CMYK", "CIELAB", "CIEXYZ", and "Default Gray". 
 
 
 
