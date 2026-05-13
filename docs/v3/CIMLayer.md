@@ -78,6 +78,7 @@
 | definitionExpression | string | The definition expression to filter features in the dataset. 
 | geometryURI | string | The URI to the geometry to filter features in the dataset. 
 | spatialReference | [SpatialReference](ExternalReferences.md#spatialreference) | The spatial reference of the definition filter geometry. 
+| searchOrder | [enumeration esriSearchOrder](ExternalReferences.md#enumeration-esrisearchorder) | The search order option. 
 
 
 

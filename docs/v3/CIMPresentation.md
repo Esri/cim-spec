@@ -253,6 +253,7 @@
 | duration | double | The transition duration in seconds. 
 | transitionType | [enumeration PresentationTransitionType](CIMPresentation.md#enumeration-presentationtransitiontype) | The transition type. 
 | swipeDirection | [enumeration SwipeDirection](CIMMap.md#enumeration-swipedirection) | The swipe transition direction. 
+| flyTransitionMode | [enumeration AnimationTransition](CIMEnumerations.md#enumeration-animationtransition) | The fly transition mode: Hop, Linear, etc. 
 
 
 

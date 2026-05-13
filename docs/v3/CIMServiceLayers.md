@@ -327,6 +327,7 @@
 | snappable | boolean | A value indicating whether the geometries are snappable. 
 | renderer | [Renderer](Types.md#renderer) | The primary symbol renderer. 
 | featureElevationExpression | string | The feature elevation expression. 
+| featureElevationExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression for setting the feature elevation. 
 | labelClasses | [[CIMLabelClass]](CIMLabelPlacement.md#cimlabelclass) | The collection of label class definitions. 
 | labelVisibility | boolean | A value indicating whether to display labels for this layer's label classes. 
 | dataConnection | [DataConnection](Types.md#dataconnection) | The data connection. 

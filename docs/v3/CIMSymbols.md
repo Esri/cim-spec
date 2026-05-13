@@ -77,6 +77,16 @@
 
 
 
+### Enumeration: AnimationColorMode
+#### Options to control how the animation color combines with symbol layer colors. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Override| 0| Symbol layer color is overridden by the animation color during the animation. 
+| Multiply| 1| Symbol layer color is blended with the animation color during the animation. 
+
+
+
 
 ## CIMBackgroundCallout
 #### Represents a background callout which draws a callout with an optional polygon background and leader line. 
@@ -668,6 +678,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | rule | [enumeration GeometricEffectControlMeasureLineRule](CIMSymbols.md#enumeration-geometriceffectcontrolmeasurelinerule) | The style of effect. 
+| width | double | A width value. 
 
 
 
@@ -724,6 +735,7 @@
 | DoubleCurve| 43| Creates a dynamic line with alternating curves at vertex 2. 
 | ParallelWithTicksByWidth| 44| Creates a dynamic line with angled ticks on the ends between vertex 2 and vertex 3. A mirrored parallel line is placed at the width defined by vertex 2. 
 | EnclosingRoundedRectangle| 45| Creates an enclosing rectangle around the line with rounded corners. 
+| ParallelOffsetByValue| 46| Creates dynamic parallel lines offset from the geometry. The offset is determined by a specified value or a defined attribute. 
 
 
 
@@ -2658,7 +2670,8 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| color | [Color](Types.md#color) | Color of the mesh stroke. 
+| width | double | The width (in points) of the mesh stroke. 
+| color | [Color](Types.md#color) | The color of the mesh stroke. 
 | thresholdAngle | double | The minimum edge angle between two neighboring face normals. 
 | applyThresholdAngleToBothSidesOfFaces | boolean | A value indicating whether threshold angle applies to both sides of faces. 
 
@@ -2787,6 +2800,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | toColor | [Color](Types.md#color) | The color to which the symbol will animate. 
+| colorMode | [enumeration AnimationColorMode](CIMSymbols.md#enumeration-animationcolormode) | A value indicating how the color animation is applied. 
 
 
 

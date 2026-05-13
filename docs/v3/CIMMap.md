@@ -1170,6 +1170,8 @@
 | autoFillFeatureCache | boolean | A value indicating whether auto fill mode is enabled or disabled for a map. 
 | geotriggerProperties | [CIMMapGeotriggerProperties](CIMMap.md#cimmapgeotriggerproperties) | The geotrigger properties of the map. 
 | useMasking | boolean | A value indicating whether masking established on all layers in the map is turned on or off. 
+| locationDisplayUnit | long | The WKID of the location display unit used by the map. A value of -1 indicates the units of the map's spatial reference should be used. 
+| elevationDisplayUnit | long | The WKID of the elevation display unit used by the map. A value of -1 indicates the units of the map's spatial reference should be used. 
 
 
 

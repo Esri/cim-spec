@@ -1939,6 +1939,7 @@
 | BeaufortWindMilesPerHour| 7| Beaufort wind miles per hour. 
 | BeaufortWindKilometersPerHour| 8| Beaufort wind kilometers per hour. 
 | ClassifiedArrow| 9| Classified arrow. 
+| BeaufortWindFeetPerSecond| 10| Beaufort wind feet per second. 
 | Custom| 100| Custom. 
 
 

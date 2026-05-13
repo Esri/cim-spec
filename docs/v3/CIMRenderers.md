@@ -572,6 +572,9 @@
 | Default| 0| The return type of the expression is determined by the consumer using the expression. 
 | String| 1| The return type of the expression is treated as a string by all consumers. 
 | Numeric| 2| The return type of the expression is treated as a numeric value by all consumers. 
+| Date| 3| The return type of the expression is treated as a date value by all consumers. 
+| DateOnly| 4| The return type of the expression is treated as a date-only value by all consumers. 
+| Time| 5| The return type of the expression is treated as a time value by all consumers. 
 
 
 

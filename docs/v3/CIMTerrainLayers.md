@@ -151,6 +151,8 @@
 | selectable | boolean | A value indicating whether the layer is selectable. 
 | eyeDomeLighting | [CIMEyeDomeLighting](CIMLayer.md#cimeyedomelighting) | Eye-dome lighting properties. 
 | useDynamicLOD | boolean | A value indicating whether to use dynamic level-of-detail. 
+| selectionColor | [Color](Types.md#color) | The selection color. 
+| useSelectionColor | boolean | A value indicating whether to use the selection color. 
 
 
 

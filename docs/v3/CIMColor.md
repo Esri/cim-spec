@@ -9,7 +9,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| colorSpace | [ColorSpace](Types.md#colorspace) | The color space used defined by an ICC color profile. 
+| colorSpace | [ColorSpace](Types.md#colorspace) | The color space of the color. This color space is defined by an ICC color profile (except for spot colors which use a dedicated color space definition). For color types for which color profiles are available (RGB, HSL, HSV and CMYK), the color space should be defined and its URL should match the color profile defined on the container (map, layout, report or style) for the given color type: RGB, HSL or HSV color => RGB color profile. CMYK color => CMYK color profile. 
 | values | [double] | The values for the color and alpha channels as defined by the color model. Alpha is the last value in the array for all colors. 
 
 
@@ -47,7 +47,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| colorSpace | [ColorSpace](Types.md#colorspace) | The color space used defined by an ICC color profile. 
+| colorSpace | [ColorSpace](Types.md#colorspace) | The color space of the color. This color space is defined by an ICC color profile. 
 
 
 ### CIMFixedColorRamp 
@@ -80,7 +80,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| colorSpace | [ColorSpace](Types.md#colorspace) | The color space used defined by an ICC color profile. 
+| colorSpace | [ColorSpace](Types.md#colorspace) | The color space of the color. This color space is defined by an ICC color profile (except for spot colors which use a dedicated color space definition). For color types for which color profiles are available (RGB, HSL, HSV and CMYK), the color space should be defined and its URL should match the color profile defined on the container (map, layout, report or style) for the given color type: RGB, HSL or HSV color => RGB color profile. CMYK color => CMYK color profile. 
 | values | [double] | The values for the color and alpha channels as defined by the color model. Alpha is the last value in the array for all colors. 
 
 
@@ -102,7 +102,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| colorSpace | [ColorSpace](Types.md#colorspace) | The color space used defined by an ICC color profile. 
+| colorSpace | [ColorSpace](Types.md#colorspace) | The color space of the color. This color space is defined by an ICC color profile (except for spot colors which use a dedicated color space definition). For color types for which color profiles are available (RGB, HSL, HSV and CMYK), the color space should be defined and its URL should match the color profile defined on the container (map, layout, report or style) for the given color type: RGB, HSL or HSV color => RGB color profile. CMYK color => CMYK color profile. 
 | values | [double] | The values for the color and alpha channels as defined by the color model. Alpha is the last value in the array for all colors. 
 
 
@@ -124,7 +124,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| colorSpace | [ColorSpace](Types.md#colorspace) | The color space used defined by an ICC color profile. 
+| colorSpace | [ColorSpace](Types.md#colorspace) | The color space of the color. This color space is defined by an ICC color profile (except for spot colors which use a dedicated color space definition). For color types for which color profiles are available (RGB, HSL, HSV and CMYK), the color space should be defined and its URL should match the color profile defined on the container (map, layout, report or style) for the given color type: RGB, HSL or HSV color => RGB color profile. CMYK color => CMYK color profile. 
 | values | [double] | The values for the color and alpha channels as defined by the color model. Alpha is the last value in the array for all colors. 
 
 
@@ -167,7 +167,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| colorSpace | [ColorSpace](Types.md#colorspace) | The color space used defined by an ICC color profile. 
+| colorSpace | [ColorSpace](Types.md#colorspace) | The color space of the color. This color space is defined by an ICC color profile (except for spot colors which use a dedicated color space definition). For color types for which color profiles are available (RGB, HSL, HSV and CMYK), the color space should be defined and its URL should match the color profile defined on the container (map, layout, report or style) for the given color type: RGB, HSL or HSV color => RGB color profile. CMYK color => CMYK color profile. 
 | values | [double] | The values for the color and alpha channels as defined by the color model. Alpha is the last value in the array for all colors. 
 
 
@@ -189,7 +189,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| colorSpace | [ColorSpace](Types.md#colorspace) | The color space used defined by an ICC color profile. 
+| colorSpace | [ColorSpace](Types.md#colorspace) | The color space of the color. This color space is defined by an ICC color profile. 
 
 
 ### CIMContinuousColorRamp 
@@ -219,7 +219,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| colorSpace | [ColorSpace](Types.md#colorspace) | The color space used defined by an ICC color profile. 
+| colorSpace | [ColorSpace](Types.md#colorspace) | The color space of the color. This color space is defined by an ICC color profile. 
 
 
 ### CIMMultipartColorRamp 
@@ -242,7 +242,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| colorSpace | [ColorSpace](Types.md#colorspace) | The color space used defined by an ICC color profile. 
+| colorSpace | [ColorSpace](Types.md#colorspace) | The color space of the color. This color space is defined by an ICC color profile. 
 
 
 ### CIMContinuousColorRamp 
@@ -285,7 +285,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| colorSpace | [ColorSpace](Types.md#colorspace) | The color space used defined by an ICC color profile. 
+| colorSpace | [ColorSpace](Types.md#colorspace) | The color space of the color. This color space is defined by an ICC color profile (except for spot colors which use a dedicated color space definition). For color types for which color profiles are available (RGB, HSL, HSV and CMYK), the color space should be defined and its URL should match the color profile defined on the container (map, layout, report or style) for the given color type: RGB, HSL or HSV color => RGB color profile. CMYK color => CMYK color profile. 
 | values | [double] | The values for the color and alpha channels as defined by the color model. Alpha is the last value in the array for all colors. 
 
 
@@ -307,7 +307,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| colorSpace | [ColorSpace](Types.md#colorspace) | The color space used defined by an ICC color profile. 
+| colorSpace | [ColorSpace](Types.md#colorspace) | The color space of the color. This color space is defined by an ICC color profile. 
 
 
 ### CIMRandomHSVColorRamp 
@@ -337,7 +337,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| colorSpace | [ColorSpace](Types.md#colorspace) | The color space used defined by an ICC color profile. 
+| colorSpace | [ColorSpace](Types.md#colorspace) | The color space of the color. This color space is defined by an ICC color profile (except for spot colors which use a dedicated color space definition). For color types for which color profiles are available (RGB, HSL, HSV and CMYK), the color space should be defined and its URL should match the color profile defined on the container (map, layout, report or style) for the given color type: RGB, HSL or HSV color => RGB color profile. CMYK color => CMYK color profile. 
 | values | [double] | The values for the color and alpha channels as defined by the color model. Alpha is the last value in the array for all colors. 
 
 
@@ -386,7 +386,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| colorSpace | [ColorSpace](Types.md#colorspace) | The color space used defined by an ICC color profile. 
+| colorSpace | [ColorSpace](Types.md#colorspace) | The color space of the color. This color space is defined by an ICC color profile (except for spot colors which use a dedicated color space definition). For color types for which color profiles are available (RGB, HSL, HSV and CMYK), the color space should be defined and its URL should match the color profile defined on the container (map, layout, report or style) for the given color type: RGB, HSL or HSV color => RGB color profile. CMYK color => CMYK color profile. 
 | values | [double] | The values for the color and alpha channels as defined by the color model. Alpha is the last value in the array for all colors. 
 
 

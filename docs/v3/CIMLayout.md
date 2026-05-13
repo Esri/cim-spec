@@ -18,6 +18,18 @@
 
 
 
+### Enumeration: AttachmentFilterType
+#### Represents the attachment filter type. The filter attachment type determines which attachments from the feature are shown in the exported report. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| None| 0| Display all the attachments. 
+| First| 1| Display the first number of attachments according to sort order. 
+| Last| 2| Display the last number of attachments according to sort order. 
+| Index| 3| Display only the specified indexed attachment. 
+
+
+
 
 ## CIMAttachmentFrame
 #### Represents an attachment graphic frame. 
@@ -59,6 +71,13 @@
 | gridRowDirection | boolean | A value indicating whether the grid layout is in row major order. 
 | imageHeight | double | The height of each attachment image. 
 | imageWidth | double | The width of each attachment image. 
+| startOnNewPage | boolean | A value indicating whether the first attachment image should start on a new page. 
+| imageRotation | double | The rotation of all attachment images. The value is in degrees counterclockwise. 
+| imageRotationExpression | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The rotation of each attachment image using an expression. This value overrides the ImageRotation value. 
+| whereClause | string | The where clause that queries the attachment table. The where clause is used before applying the filter type. For example, CONTENT_TYPE = 'image/jpeg'. 
+| filterType | [enumeration AttachmentFilterType](CIMLayout.md#enumeration-attachmentfiltertype) | The attachment filter type. The filter attachment type determines which attachments from the feature that are used in the exported report. 
+| filterValue | long | The filter value. When using the First or Last attachment filter type, the value indicates the number of attachments to use in the grid configuration. When using the Index attachment filter type, the value indicates the index and is zero-based. 
+| excludedCells | string | The list of excluded grid cells. Cells that are excluded are left blank when the report is exported. 
 
 
 
@@ -1366,6 +1385,7 @@
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
 | autoGrowTextElements | boolean | A value indicating whether the height of Text elements in sections will grow based on their content. 
 | honorColumns | boolean | A value indicating whether the section should be displayed in columns. 
+| keepSubsectionTogether | boolean | A value indicating whether to prevent a page break for a subsection. This property can be applied to the report footer, group header, and group footer subsections. 
 
 
 ### CIMGroupFooter 
@@ -1431,6 +1451,7 @@
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
 | autoGrowTextElements | boolean | A value indicating whether the height of Text elements in sections will grow based on their content. 
 | honorColumns | boolean | A value indicating whether the section should be displayed in columns. 
+| keepSubsectionTogether | boolean | A value indicating whether to prevent a page break for a subsection. This property can be applied to the report footer, group header, and group footer subsections. 
 
 
 ### CIMGroupHeader 
@@ -2556,6 +2577,7 @@
 | runwayDesignator | string | The runway designator for which profile is created. 
 | primaryOISDescription | string | The primary OIS surface for which profile is created. 
 | secondaryOISDescription | string | The secondary OIS description for cases where different classifications were used for the ends of runway user can choose secondary classification. 
+| primarySurfaceDescription | string | The primary surface description. 
 | OISLayerURI | string | The URI of the layer of the OIS feature which defines the data for which profile is drawn. 
 | grid | [CIMProfileGrid](CIMLayout.md#cimprofilegrid) | The display options for the grid. 
 | terrain | [CIMProfileTerrain](CIMLayout.md#cimprofileterrain) | Display options for terrain. 
@@ -2628,6 +2650,7 @@
 | verticalIntervalInMeters | long | The vertical interval for scale in meters. 
 | verticalIntervalInFeet | long | The vertical interval for scale in feet. 
 | showAbsoluteHorizontalScale | boolean | A value indicating whether to display absolute or relative grid text automatically. 
+| runwayObstacleDisplay | boolean | A value indicating whether to display obstacle along the runway. 
 
 
 
@@ -2949,6 +2972,7 @@
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
 | autoGrowTextElements | boolean | A value indicating whether the height of Text elements in sections will grow based on their content. 
 | honorColumns | boolean | A value indicating whether the section should be displayed in columns. 
+| keepSubsectionTogether | boolean | A value indicating whether to prevent a page break for a subsection. This property can be applied to the report footer, group header, and group footer subsections. 
 
 
 ### CIMRelatedReportSection 
@@ -3087,6 +3111,7 @@
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
 | autoGrowTextElements | boolean | A value indicating whether the height of Text elements in sections will grow based on their content. 
 | honorColumns | boolean | A value indicating whether the section should be displayed in columns. 
+| keepSubsectionTogether | boolean | A value indicating whether to prevent a page break for a subsection. This property can be applied to the report footer, group header, and group footer subsections. 
 
 
 ### CIMReportDetails 
@@ -3234,6 +3259,7 @@
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
 | autoGrowTextElements | boolean | A value indicating whether the height of Text elements in sections will grow based on their content. 
 | honorColumns | boolean | A value indicating whether the section should be displayed in columns. 
+| keepSubsectionTogether | boolean | A value indicating whether to prevent a page break for a subsection. This property can be applied to the report footer, group header, and group footer subsections. 
 
 
 ### CIMReportFooter 
@@ -3298,6 +3324,7 @@
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
 | autoGrowTextElements | boolean | A value indicating whether the height of Text elements in sections will grow based on their content. 
 | honorColumns | boolean | A value indicating whether the section should be displayed in columns. 
+| keepSubsectionTogether | boolean | A value indicating whether to prevent a page break for a subsection. This property can be applied to the report footer, group header, and group footer subsections. 
 
 
 ### CIMReportHeader 
@@ -3362,6 +3389,7 @@
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
 | autoGrowTextElements | boolean | A value indicating whether the height of Text elements in sections will grow based on their content. 
 | honorColumns | boolean | A value indicating whether the section should be displayed in columns. 
+| keepSubsectionTogether | boolean | A value indicating whether to prevent a page break for a subsection. This property can be applied to the report footer, group header, and group footer subsections. 
 
 
 ### CIMReportPageSection 
@@ -3401,6 +3429,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | spatialMapSeries | [CIMSpatialMapSeries](CIMLayout.md#cimspatialmapseries) | The spatial map series properties for a map frame element. 
+| highlightFeatures | boolean | A value indicating whether to highlight features in a map frame element. 
 
 
 
@@ -3458,6 +3487,7 @@
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
 | autoGrowTextElements | boolean | A value indicating whether the height of Text elements in sections will grow based on their content. 
 | honorColumns | boolean | A value indicating whether the section should be displayed in columns. 
+| keepSubsectionTogether | boolean | A value indicating whether to prevent a page break for a subsection. This property can be applied to the report footer, group header, and group footer subsections. 
 
 
 ### CIMReportPageFooter 
@@ -3521,6 +3551,7 @@
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
 | autoGrowTextElements | boolean | A value indicating whether the height of Text elements in sections will grow based on their content. 
 | honorColumns | boolean | A value indicating whether the section should be displayed in columns. 
+| keepSubsectionTogether | boolean | A value indicating whether to prevent a page break for a subsection. This property can be applied to the report footer, group header, and group footer subsections. 
 
 
 ### CIMReportPageHeader 
@@ -3584,6 +3615,7 @@
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
 | autoGrowTextElements | boolean | A value indicating whether the height of Text elements in sections will grow based on their content. 
 | honorColumns | boolean | A value indicating whether the section should be displayed in columns. 
+| keepSubsectionTogether | boolean | A value indicating whether to prevent a page break for a subsection. This property can be applied to the report footer, group header, and group footer subsections. 
 
 
 ### CIMReportPageSection 
@@ -3648,6 +3680,7 @@
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
 | autoGrowTextElements | boolean | A value indicating whether the height of Text elements in sections will grow based on their content. 
 | honorColumns | boolean | A value indicating whether the section should be displayed in columns. 
+| keepSubsectionTogether | boolean | A value indicating whether to prevent a page break for a subsection. This property can be applied to the report footer, group header, and group footer subsections. 
 
 
 ### CIMReportSection 
@@ -3713,6 +3746,7 @@
 | startOnNewPage | boolean | A value indicating whether the section should start on a new page. 
 | autoGrowTextElements | boolean | A value indicating whether the height of Text elements in sections will grow based on their content. 
 | honorColumns | boolean | A value indicating whether the section should be displayed in columns. 
+| keepSubsectionTogether | boolean | A value indicating whether to prevent a page break for a subsection. This property can be applied to the report footer, group header, and group footer subsections. 
 
 
 

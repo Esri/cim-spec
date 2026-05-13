@@ -348,6 +348,7 @@
 | typeName | string | The name of the type. 
 | geometryType | [enumeration esriGeometryType](ExternalReferences.md#enumeration-esrigeometrytype) | The geometry type of the type. 
 | properties | [[CIMKGTypeProperty]](CIMKnowledgeGraph.md#cimkgtypeproperty) | The properties of the type. 
+| indexes | [[CIMKGTypeIndex]](CIMKnowledgeGraph.md#cimkgtypeindex) | The indexes of the type. 
 | colorInfo | [CIMKGColorInfo](CIMKnowledgeGraph.md#cimkgcolorinfo) | The color information for the type. 
 
 
@@ -553,6 +554,7 @@
 | typeName | string | The name of the type. 
 | geometryType | [enumeration esriGeometryType](ExternalReferences.md#enumeration-esrigeometrytype) | The geometry type of the type. 
 | properties | [[CIMKGTypeProperty]](CIMKnowledgeGraph.md#cimkgtypeproperty) | The properties of the type. 
+| indexes | [[CIMKGTypeIndex]](CIMKnowledgeGraph.md#cimkgtypeindex) | The indexes of the type. 
 | colorInfo | [CIMKGColorInfo](CIMKnowledgeGraph.md#cimkgcolorinfo) | The color information for the type. 
 
 
@@ -643,6 +645,24 @@
 | Any| 0| The filtered find paths algorithm considers all relationships independent of their direction. 
 | Forward| 1| The filtered find paths algorithm considers only the relationships that are traversed in forward direction. 
 | Backward| 2| The filtered find paths algorithm considers only the relationships that are traversed in backward direction. 
+
+
+
+
+## CIMKGTypeIndex
+#### Represents a Knowledge Graph Type Index. It is primarily used to configure a property of an entity type or a relationship type within the data model visualization view. 
+
+
+### CIMKGTypeIndex 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| indexName | string | The name of the index. 
+| isUnique | boolean | A value indicating whether the index is used to enforce uniqueness. 
+| isAscending | boolean | A value indicating whether the index is stored in ascending order. 
+| propertyNames | [string] | The property names associated with the index. 
+
+
 
 
 
@@ -1180,6 +1200,7 @@
 | name | string | User defined name for open cypher query. 
 | openCypherQuery | string | User defined open cypher query. 
 | provenanceBehavior | [enumeration ProvenanceBehavior](CIMKnowledgeGraph.md#enumeration-provenancebehavior) | The query behavior for Provenance. 
+| bindParameters | [[CIMDiscreteVariable]](CIMVectorLayers.md#cimdiscretevariable) | The bind parameters associated with the open cypher query. 
 
 
 

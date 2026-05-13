@@ -81,6 +81,64 @@
 
 
 
+## CIMDisplayUnit
+#### Represents a unit along with its display settings. Units set in the Pro backstage are not saved with the project unless their display settings are modified. 
+
+
+### CIMDisplayUnit 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| WKID | long | The WKID of the unit. 
+| name | string | The name of the unit. 
+| pluralName | string | The plural name of the unit. 
+| abbreviationName | string | The abbreviation name of the unit. 
+| format | [NumberFormat](Types.md#numberformat) | The format of the unit. 
+
+
+
+
+
+
+## CIMDisplayUnitCategory
+#### Represents a category of display units. 
+
+
+### CIMDisplayUnitCategory 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| defaultUnit | long | The WKID of the default unit for the category. 
+| unitOverrides | [[CIMDisplayUnit]](CIMDocument.md#cimdisplayunit) | The overridden display settings for units in the category. 
+| excludedUnits | [long] | The WKIDs of units that have been removed from the category. 
+
+
+
+
+
+
+## CIMDisplayUnitSettings
+#### Represents the display unit settings for the project. 
+
+
+### CIMDisplayUnitSettings 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| mapLinearUnitCategory | [CIMDisplayUnitCategory](CIMDocument.md#cimdisplayunitcategory) | The display settings for linear units. 
+| mapAngularUnitCategory | [CIMDisplayUnitCategory](CIMDocument.md#cimdisplayunitcategory) | The display settings for angular units. 
+| mapAreaUnitCategory | [CIMDisplayUnitCategory](CIMDocument.md#cimdisplayunitcategory) | The display settings for area units. 
+| pageUnitCategory | [CIMDisplayUnitCategory](CIMDocument.md#cimdisplayunitcategory) | The display settings for page units. 
+| locationUnitCategory | [CIMDisplayUnitCategory](CIMDocument.md#cimdisplayunitcategory) | The display settings for location units. 
+| symbol2DUnitCategory | [CIMDisplayUnitCategory](CIMDocument.md#cimdisplayunitcategory) | The display settings for 2D symbol units. 
+| symbol3DUnitCategory | [CIMDisplayUnitCategory](CIMDocument.md#cimdisplayunitcategory) | The display settings for 3D symbol units. 
+| directionUnitCategory | [CIMDisplayUnitCategory](CIMDocument.md#cimdisplayunitcategory) | The display settings for direction units. 
+
+
+
+
+
+
 ## CIMDocumentInfo
 #### Represents high level information for a document. 
 
@@ -190,6 +248,7 @@
 | readOnly | boolean | A value indicating whether the project is read only for updatable projects. 
 | forceUpdate | boolean | A value indicating whether to force update an updatable project. 
 | thumbnailOptions | [CIMProjectThumbnailOptions](CIMDocument.md#cimprojectthumbnailoptions) | The thumbnail generation options for the project. 
+| displayUnitSettings | [CIMDisplayUnitSettings](CIMDocument.md#cimdisplayunitsettings) | The display unit settings for the project. 
 
 
 
@@ -305,6 +364,8 @@
 | timelineDefinitions | [[CIMDefinition]](Types.md#definition) | The timeline definitions of the map document. 
 | videoDefinitions | [[CIMDefinition]](Types.md#definition) | The video definitions of the map document. 
 | elevationSurfaceLayerDefinitions | [[CIMDefinition]](Types.md#definition) | The elevation surface layer definitions of the map document. 
+| locationUnitOverride | [CIMDisplayUnit](CIMDocument.md#cimdisplayunit) | The location unit override of the map document. 
+| elevationUnitOverride | [CIMDisplayUnit](CIMDocument.md#cimdisplayunit) | The elevation unit override of the map document. 
 
 
 

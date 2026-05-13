@@ -647,7 +647,7 @@
 | showMean | boolean | A value indicating whether to show the mean line on the histogram. 
 | showMedian | boolean | A value indicating whether to show the median line on a histogram. 
 | showStandardDeviation | boolean | A value indicating whether to show the standard deviation band on the histogram. 
-| fillSymbolProperties | [CIMChartFillSymbolProperties](CIMCharts.md#cimchartfillsymbolproperties) | The properties of the fill symbol border. 
+| fillSymbolProperties | [CIMChartFillSymbolProperties](CIMCharts.md#cimchartfillsymbolproperties) | The properties of the fill symbol. 
 | meanLineSymbolProperties | [CIMChartLineSymbolProperties](CIMCharts.md#cimchartlinesymbolproperties) | The mean line symbol properties of the line series. 
 | medianLineSymbolProperties | [CIMChartLineSymbolProperties](CIMCharts.md#cimchartlinesymbolproperties) | The median line symbol properties of the line series. 
 | standardDeviationLineSymbolProperties | [CIMChartLineSymbolProperties](CIMCharts.md#cimchartlinesymbolproperties) | The line symbol for the standard deviation. 
@@ -761,6 +761,9 @@
 | verticalOrientation | boolean | A value indicating whether this is a vertical (true) or horizontal (false) orientation of a line series. 
 | sortedCategoryValues | [string] | The array of sorted category values for custom sort. 
 | smoothLine | boolean | A value indicating whether the line is smoothed with curves. 
+| stackingType | [enumeration ChartStackingType](CIMCharts.md#enumeration-chartstackingtype) | The type of series stacking. 
+| showAsArea | boolean | A value indicating whether the line series shows as an area. 
+| fillSymbolProperties | [CIMChartFillSymbolProperties](CIMCharts.md#cimchartfillsymbolproperties) | The properties of the area fill symbol. This property is only being used if ShowAsArea is true. 
 
 
 
@@ -905,8 +908,8 @@
 |---------|--------|--------|
 | None| 0| Do no use multiple bar series placement options. 
 | SideBySide| 1| Uses side by side multiple bar series placement option. 
-| Stacked| 2| Uses stacked bar series placement options. 
-| Stacked100| 3| Uses stacked 100% multiple bar series placement options. 
+| Stacked| 2| Uses stacked bar series placement option. Stacked charts show how each value contributes to the total. 
+| Stacked100| 3| Uses 100% stacked multiple bar series placement option. 100% stacked charts show how each value contributes to the total with the relative size of each series representing its contribution to the total. 
 
 
 
@@ -1304,6 +1307,17 @@
 
 
 
+### Enumeration: ChartStackingType
+#### Chart multiple series stacking type. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| None| 0| Uses no stacking option. 
+| Stacked| 1| Uses stacked option. Stacked charts show how each value contributes to the total. 
+| Stacked100| 2| Uses 100% stacked option. 100% stacked charts show how each value contributes to the total with the relative size of each series representing its contribution to the total. 
+
+
+
 
 ## CIMChartSurfaceProfileBand
 #### Represents a band to be plotted over a line. 
@@ -1648,6 +1662,7 @@
 |---------|--------|--------|
 | Basic| 0| Basic chart. 
 | Combo| 1| Combo chart can contain series of several types. 
+| StackProfile| 2| StackProfile chart to customize handling of the chart that is output by the Stack Profile GP tool. 
 
 
 

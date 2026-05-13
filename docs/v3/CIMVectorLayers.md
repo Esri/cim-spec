@@ -228,6 +228,13 @@
 | Double| 2| Double variable type. 
 | Date| 3| Date variable type. 
 | Geometry| 4| Geometry variable type. 
+| Boolean| 5| Boolean variable type. 
+| DateOnly| 6| Date only variable type. 
+| TimeOnly| 7| Time only variable type. 
+| Duration| 8| Duration variable type. 
+| TimestampOffset| 9| Timestamp offset variable type. 
+| EntityID| 10| Entity ID variable type. 
+| RelationshipID| 11| Relationship ID variable type. 
 
 
 
@@ -1053,7 +1060,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | dataConnection | [CIMENCDataConnection](CIMVectorLayers.md#cimencdataconnection) | The data connection to the ENC resource. 
-| displaySettings | [CIMENCDisplaySettings](CIMVectorLayers.md#cimencdisplaysettings) | The display settings of the ENC layer. 
+| displaySettings | [ENCDisplaySettings](Types.md#encdisplaysettings) | The display settings of the ENC layer. 
 | subLayers | [[CIMENCSubLayer]](CIMVectorLayers.md#cimencsublayer) | A collection of ENCSubLayers, used to access features by type. 
 | subTables | [[CIMENCSubTable]](CIMVectorLayers.md#cimencsubtable) | A collection of ENCSubTables. 
 | selectionSetURI | string | The URI of the selection set for the layer. 
@@ -1379,6 +1386,7 @@
 | floorAwareTableProperties | [CIMFloorAwareTableProperties](CIMVectorLayers.md#cimfloorawaretableproperties) | Floor-aware properties for the layer or table used in floor filtering. 
 | routeIDFieldName | string | The route identifier field of a route feature class. This property will only be set for route feature classes, namely line and polyline feature classes that are m-aware. 
 | databaseRelates | [[CIMDatabaseRelateInfo]](CIMVectorLayers.md#cimdatabaserelateinfo) | Overrides for database relationships as relationship info. By default this property is null. This will contain relationship info elements for those database relationships that have overrides. 
+| formInfo | [CIMFormInfo](CIMFormInfo.md#cimforminfo) | The form information for the layer or table. 
 
 
 ### CIMFeatureTableDefinition 
@@ -2333,6 +2341,7 @@
 | floorAwareTableProperties | [CIMFloorAwareTableProperties](CIMVectorLayers.md#cimfloorawaretableproperties) | Floor-aware properties for the layer or table used in floor filtering. 
 | routeIDFieldName | string | The route identifier field of a route feature class. This property will only be set for route feature classes, namely line and polyline feature classes that are m-aware. 
 | databaseRelates | [[CIMDatabaseRelateInfo]](CIMVectorLayers.md#cimdatabaserelateinfo) | Overrides for database relationships as relationship info. By default this property is null. This will contain relationship info elements for those database relationships that have overrides. 
+| formInfo | [CIMFormInfo](CIMFormInfo.md#cimforminfo) | The form information for the layer or table. 
 
 
 ### CIMRasterTableDefinition 
@@ -2465,6 +2474,32 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+
+
+
+
+
+
+## CIMS101DisplaySettings
+#### Represents S-101 portrayal settings. 
+
+
+### CIMENCDisplaySettings 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMS101DisplaySettings 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| contextParameters | {JSON_object}| The catalogue context parameter values. 
+| displayPlanes | {JSON_object}| The catalogue display plane values. 
+| viewingGroupLayers | {JSON_object}| The catalogue viewing group layer values. Setting viewing group layers values may override viewing group values. This also applies to viewing group layers that contain the same viewing groups, for example "Chart text". 
+| viewingGroups | {JSON_object}| The catalogue viewing group values. 
+| colorPalette | string | The color palette value. 
+| displayMode | string | The display mode value. 
 
 
 
@@ -2712,6 +2747,7 @@
 | floorAwareTableProperties | [CIMFloorAwareTableProperties](CIMVectorLayers.md#cimfloorawaretableproperties) | Floor-aware properties for the layer or table used in floor filtering. 
 | routeIDFieldName | string | The route identifier field of a route feature class. This property will only be set for route feature classes, namely line and polyline feature classes that are m-aware. 
 | databaseRelates | [[CIMDatabaseRelateInfo]](CIMVectorLayers.md#cimdatabaserelateinfo) | Overrides for database relationships as relationship info. By default this property is null. This will contain relationship info elements for those database relationships that have overrides. 
+| formInfo | [CIMFormInfo](CIMFormInfo.md#cimforminfo) | The form information for the layer or table. 
 
 
 ### CIMStandaloneTableDefinition 
@@ -2980,6 +3016,7 @@
 | floorAwareTableProperties | [CIMFloorAwareTableProperties](CIMVectorLayers.md#cimfloorawaretableproperties) | Floor-aware properties for the layer or table used in floor filtering. 
 | routeIDFieldName | string | The route identifier field of a route feature class. This property will only be set for route feature classes, namely line and polyline feature classes that are m-aware. 
 | databaseRelates | [[CIMDatabaseRelateInfo]](CIMVectorLayers.md#cimdatabaserelateinfo) | Overrides for database relationships as relationship info. By default this property is null. This will contain relationship info elements for those database relationships that have overrides. 
+| formInfo | [CIMFormInfo](CIMFormInfo.md#cimforminfo) | The form information for the layer or table. 
 
 
 ### CIMStandaloneTableContainer 
