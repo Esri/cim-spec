@@ -249,6 +249,7 @@
 | forceUpdate | boolean | A value indicating whether to force update an updatable project. 
 | thumbnailOptions | [CIMProjectThumbnailOptions](CIMDocument.md#cimprojectthumbnailoptions) | The thumbnail generation options for the project. 
 | displayUnitSettings | [CIMDisplayUnitSettings](CIMDocument.md#cimdisplayunitsettings) | The display unit settings for the project. 
+| memoryWorkspaces | [[CIMMemoryWorkspace]](CIMDocument.md#cimmemoryworkspace) | The memory workspaces of the project. 
 
 
 
@@ -295,11 +296,11 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| layers | [string] | An array of layer URIs stored in this layer document. 
-| tables | [string] | An array of table URIs stored in this layer document. 
-| layerDefinitions | [[CIMDefinition]](Types.md#definition) | The layer definitions in the layer document. 
+| layers | [string] | The URIs of the top-level layers stored in this layer document. 
+| tables | [string] | The URIs of the top-level tables stored in this layer document. 
+| layerDefinitions | [[CIMDefinition]](Types.md#definition) | The layer definitions in the layer document. This collection contains the definitions for the top-level layers and all sublayers. 
 | binaryReferences | [[CIMBinaryReference]](CIMDocument.md#cimbinaryreference) | The binary references of the document. 
-| tableDefinitions | [[CIMDefinition]](Types.md#definition) | The table definitions in the layer document. 
+| tableDefinitions | [[CIMDefinition]](Types.md#definition) | The table definitions in the layer document. This collection contains the definitions for the top-level tables and all subtables. 
 | RGBColorProfile | string | The name of the RGB color profile of this layer's source map. If the target map has color management enabled, this value will be used to transform the layer's RGB colors as it is imported into that map. 
 | CMYKColorProfile | string | The name of the CMYK color profile of this layer's source map. If the target map has color management enabled, this value will be used to transform the layer's CMYK colors as it is imported into that map. 
 | elevationSurfaceLayerDefinitions | [[CIMDefinition]](Types.md#definition) | The elevation surface layer definitions. 
@@ -455,6 +456,38 @@
 | cameraEffect | [CameraEffect](Types.md#cameraeffect) | The camera effect definition for the scene. 
 | postprocessingEffects | [[CIMPostprocessingEffect]](Types.md#postprocessingeffect) | The post-processing effect definitions for the scene. 
 | colorVisionDeficiencyMode | [enumeration ColorVisionDeficiencyType](CIMEnumerations.md#enumeration-colorvisiondeficiencytype) | The color vision deficiency mode of the view. 
+
+
+
+
+
+
+## CIMMemoryDataset
+#### Represents a dataset in an in-memory workspace. 
+
+
+### CIMMemoryDataset 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name of the dataset. 
+| datasetURI | string | The URI of the binary reference containing the serialized dataset. 
+
+
+
+
+
+
+## CIMMemoryWorkspace
+#### Represents an in-memory workspace stored in the project. 
+
+
+### CIMMemoryWorkspace 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| instanceID | string | A string that uniquely identifies the workspace in the project. 
+| datasets | [[CIMMemoryDataset]](CIMDocument.md#cimmemorydataset) | The datasets that belong to this workspace. 
 
 
 

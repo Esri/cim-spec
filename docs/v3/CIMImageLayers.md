@@ -135,7 +135,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| autoGenerateFeatureTemplates | boolean | A value indicating whether to automatically generate feature templates from the renderer. When this value is set to true, appropriate templates will be added to whenever the renderer is changed. 
+| autoGenerateFeatureTemplates | boolean | A value indicating whether to automatically generate feature templates from the renderer. When this value is set to true, appropriate templates will be added to `FeatureTemplates` whenever the renderer is changed. 
 | extrusion | [CIMFeatureExtrusion](CIMVectorLayers.md#cimfeatureextrusion) | The feature extrusion. 
 | featureElevationExpression | string | The feature elevation expression. 
 | featureTable | [CIMFeatureTable](CIMVectorLayers.md#cimfeaturetable) | The feature table. 
@@ -195,6 +195,28 @@
 
 
 
+
+## CIMFlowColorizerAuthoringInfo
+#### Represents additional authoring properties used by a raster flow colorizer. 
+
+
+### CIMRendererAuthoringInfo 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMFlowColorizerAuthoringInfo 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| flowTheme | [enumeration FlowTheme](CIMImageLayers.md#enumeration-flowtheme) | The flow theme. 
+| visualVariables | [[CIMVisualVariableAuthoringInfo]](CIMRenderers.md#cimvisualvariableauthoringinfo) | The visual variable authoring info. Used to preserve slider range and theme selections for each visual variable. 
+
+
+
+
+
 ### Enumeration: FlowRepresentationType
 #### A list of flow representation types. 
 
@@ -202,6 +224,16 @@
 |---------|--------|--------|
 | From| 0| Flow from. 
 | To| 1| Flow to. 
+
+
+
+### Enumeration: FlowTheme
+#### A list of flow themes for the flow colorizer authoring info. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| FlowLine| 0| Flow line theme. 
+| WaveFront| 1| Wave front theme. 
 
 
 
@@ -615,7 +647,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| autoGenerateFeatureTemplates | boolean | A value indicating whether to automatically generate feature templates from the renderer. When this value is set to true, appropriate templates will be added to whenever the renderer is changed. 
+| autoGenerateFeatureTemplates | boolean | A value indicating whether to automatically generate feature templates from the renderer. When this value is set to true, appropriate templates will be added to `FeatureTemplates` whenever the renderer is changed. 
 | extrusion | [CIMFeatureExtrusion](CIMVectorLayers.md#cimfeatureextrusion) | The feature extrusion. 
 | featureElevationExpression | string | The feature elevation expression. 
 | featureTable | [CIMFeatureTable](CIMVectorLayers.md#cimfeaturetable) | The feature table. 
@@ -1329,6 +1361,46 @@
 | numColors | long | The number of colors. 
 | colormap | [RasterColormap](ExternalReferences.md#rastercolormap) | The colormap. 
 | colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp. 
+
+
+
+
+
+
+## CIMRasterFlowColorizer
+#### Represents a raster flow colorizer that renders animated streamlines for Vector-UV and Vector-MagDir raster sources. 
+
+
+### CIMRasterColorizer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| resamplingType | [enumeration RasterResamplingType](CIMEnumerations.md#enumeration-rasterresamplingtype) | The raster resampling type. 
+| contrast | long | The contrast value. 
+| brightness | long | The brightness value. 
+| noDataColor | [Color](Types.md#color) | The no data color. 
+| name | string | The name. 
+
+
+### CIMRasterFlowColorizer 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| magnitudeBandIndex | long | The magnitude band index. When `IsUVComponents` is true, this is the U-component band index. 
+| directionBandIndex | long | The direction band index. When `IsUVComponents` is true, this is the V-component band index. 
+| isUVComponents | boolean | A value indicating whether flow is composed from U and V components. 
+| referenceSystem | [enumeration SymbolRotationType](CIMRenderers.md#enumeration-symbolrotationtype) | The reference system for symbol rotation. 
+| color | [Color](Types.md#color) | The single streamline color used when no color visual variable is active. Default is white. 
+| useColorVisualVariable | boolean | A value indicating whether the color visual variable in VisualVariables is active. When false, Color is used instead. 
+| density | double | The density of the streamlines. Controls how many streamlines are seeded. Values above 1 increase density, values between 0 and 1 decrease it, and a value of 0 shows no streamlines. Very high values may be limited by screen size and trail length. 
+| flowRepresentation | [enumeration FlowRepresentationType](CIMImageLayers.md#enumeration-flowrepresentationtype) | The flow representation type indicating whether data is interpreted as flow-from or flow-to. 
+| flowSpeed | double | The flow speed multiplier. Multiplies animation speed without changing trail length. A value of 0 stops animation. 
+| maxPathLength | double | The maximum path length in points. Controls how far a trail can travel before looping. 
+| trailCap | [enumeration LineCapStyle](CIMSymbols.md#enumeration-linecapstyle) | The trail cap style. Round only applies when TrailWidth is greater than 3pt. Square is not applicable. 
+| trailLength | double | The trail length in points. Controls the visible lit portion of the streamline. This will be longer where the particle is moving faster, and shorter where the particle is moving slower. 
+| trailWidth | double | The trail width in points. 
+| visualVariables | [[CIMVisualVariable]](Types.md#visualvariable) | The visual variables. Supports magnitude-driven color, opacity, and size overrides. 
+| authoringInfo | [CIMFlowColorizerAuthoringInfo](CIMImageLayers.md#cimflowcolorizerauthoringinfo) | The authoring info. Stores UI authoring metadata used by clients to restore their state when reopening the renderer. 
 
 
 

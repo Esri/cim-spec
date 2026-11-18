@@ -26,17 +26,17 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| allowUserRename | boolean | A value indicating whether the user renaming an attachment is allowed. 
+| allowUserRename | boolean | A value indicating whether the user is allowed to rename an attachment. 
 | attachmentKeyword | string | A string to identify the attachment(s). When a file is attached using the form, this property is used to set the value of the keywords field for the attachment. When a form is displaying existing attachments, this property is used to query attachments using an exact match on the keywords field. 
 | description | string | A string that describes the element in detail. 
-| displayFilename | boolean | A value indicating whether the file name should be displayed. Default is 'false'. 
+| displayFilename | boolean | A value indicating whether the filename should be displayed. Default is 'false'. 
 | editableExpressionName | string | The name of an Arcade expression that returns a boolean value. When this expression evaluates to 'true', the element is editable. When the expression evaluates to 'false' the element is not editable. If set, this name must match the Name of exactly one expression in the form's ExpressionInfos array. 
 | filenameExpression | string | An Arcade expression that is evaluated to produce filenames for new attachments. If not specified, a unique name will be generated using the 'AttachmentKeyword' and the current timestamp when the attachment is added. Unlike other uses of Arcade in forms, the value of this property is the expression to evaluate, not the name of an expression in the form's ExpressionInfos. 
 | attachmentInput | [FormAttachmentInput](Types.md#formattachmentinput) | The input user interface to use for the attachment. 
 | label | string | A string value indicating what the element represents. 
 | maxAttachmentCount | long long | The maximum number of attachments allowed for this element. If set (or defaulted) to -1, there is no maximum. 
 | minAttachmentCount | long long | The minimum number of attachments required for this element. If set (or defaulted) to 0, no attachements are required. 
-| useOriginalFilename | boolean | A value indicating whether the uploaded attachment's file name is preserved. If 'false', the name is updated based on 'FilenameExpression'. Default is 'true'. 
+| useOriginalFilename | boolean | A value indicating whether the uploaded attachment's filename is preserved. If 'false', the name is updated based on 'FilenameExpression'. Default is 'true'. 
 | visibilityExpressionName | string | The name of an Arcade expression that returns a boolean value. When this expression evaluates to 'true', the element is displayed. When the expression evaluates to 'false' the element is not displayed. If no expression is provided, the default behavior is that the element is displayed. If set, this name must match the Name of exactly one expression in the form's ExpressionInfos array. 
 
 
@@ -58,8 +58,8 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| inputMethod | [enumeration FormElementInputMethod](CIMFormInfo.md#enumeration-formelementinputmethod) | The supported input methods used to attach an audio. 
-| maxDuration | long long | The maximum length of an attachment for this element in seconds. If set (or defaulted) to -1, there is no maximum. 
+| inputMethod | [enumeration FormElementInputMethod](CIMFormInfo.md#enumeration-formelementinputmethod) | The supported input methods used to attach an audio file. 
+| maxDuration | long long | The maximum length of an attachment for this element, in seconds. If set (or defaulted) to -1, there is no maximum. 
 
 
 
@@ -82,6 +82,22 @@
 |---------|--------|--------|
 | maxLength | long long | The maximum number of characters allowed. This only applies for string fields. If set (or defaulted) to -1, the value is derived from the length property of the referenced field in the service. 
 | minLength | long long | The minimum number of characters allowed. This only applies for string fields. If set (or defaulted) to 0, there is no minimum constraint. 
+
+
+
+
+
+
+## CIMFormChoice
+#### Represents a single choice within a multiple choice form input. 
+
+
+### CIMFormChoice 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| fieldName | string | The label for the choice. 
+| value | string | The value stored for this choice, when selected. 
 
 
 
@@ -271,7 +287,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | description | string | A string that describes the element in detail. 
-| formElements | [[CIMFormElement]](Types.md#formelement) | An array of Form Element objects that represent an ordered list of form elements. Nested group elements are not supported. 
+| formElements | [[CIMFormElement]](Types.md#formelement) | An array of CIMFormElement objects that represent an ordered list of form elements. Nested group elements are not supported. 
 | initialState | [enumeration FormGroupElementInitialState](CIMFormInfo.md#enumeration-formgroupelementinitialstate) | Whether the group should be expanded or collapsed when the form is initially displayed. If not provided, the default value is Expanded. 
 | label | string | A string value indicating what the element represents. 
 | visibilityExpressionName | string | The name of an Arcade expression that returns a boolean value. When this expression evaluates to 'true', the element is displayed. When the expression evaluates to 'false' the element is not displayed. If no expression is provided, the default behavior is that the element is displayed. If set, this name must match the Name of exactly one expression in the form's ExpressionInfos array. 
@@ -333,7 +349,7 @@
 
 
 ## CIMFormInheritedDomain
-#### Represents a domain inherited from the parent layer by a subtype. It implies that the domain for a field at the subtyp level is the same as the domain for the field at the layer level. 
+#### Represents a domain inherited from the parent layer by a subtype. It implies that the domain for a field at the subtype level is the same as the domain for the field at the layer level. 
 
 
 ### CIMFormDomain 
@@ -346,6 +362,49 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
+
+
+
+
+
+
+## CIMFormMultipleChoiceInput
+#### Represents a checkbox group where multiple choices can be selected. Applies to string fields only. 
+
+
+### CIMFormInput 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMFormMultipleChoiceInput 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| choiceDelimiter | string | The delimiter used to join multiple selected choice values. If not provided, a comma (,) will be used as the default delimiter. Choice values cannot contain the delimiter character. The delimiter must be a single character (a string of length 1). 
+| choices | [[CIMFormChoice]](CIMFormInfo.md#cimformchoice) | The choices presented in the checkbox group. Choices are presented in the order they appear within this array. 
+| includeSelectAllChoices | boolean | A value indicating whether to include an option to select/unselect all choices. If not defined, only defined choices (and the 'other' choice) are displayed. 
+| maximumChoiceCount | long | The maximum number of choices that may be selected. If set (or defaulted) to -1, there is no maximum. 
+| minimumChoiceCount | long | The minimum number of choices that must be selected. If this property is set (or defaulted) to zero and the associated field is non-nullable, then at least one choice must be selected. If the property is set (or defaulted) to zero and the field is nullable, selecting no choices is acceptable. 
+| otherChoice | [CIMFormOtherChoice](CIMFormInfo.md#cimformotherchoice) | The properties for the 'Other' choice. 
+
+
+
+
+
+
+## CIMFormOtherChoice
+#### Represents an 'Other' choice for multiple choice input, capturing free text from the user when none of the predefined choices are appropriate. 
+
+
+### CIMFormOtherChoice 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| fieldName | string | The name of the field in which to store the value entered when the 'Other' choice is selected. 
+| hint | string | Placeholder text when the 'Other' choice is selected. If not provided, no hint text will be displayed. 
+| label | string | The text to use for the 'Other' choice label. 
 
 
 
@@ -514,8 +573,8 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| maxLength | long long | The this represents the maximum number of characters allowed. If set (or defaulted) to -1, the value is derived from the length property of the referenced field in the service. 
-| minLength | long long | The this represents the minimum number of characters allowed. If set (or defaulted) to 0, there is no minimum constraint. 
+| maxLength | long long | The maximum number of characters allowed. If set (or defaulted) to -1, the value is derived from the length property of the referenced field in the service. 
+| minLength | long long | The minimum number of characters allowed. If set (or defaulted) to 0, there is no minimum constraint. 
 
 
 
@@ -606,12 +665,13 @@
 |---------|--------|--------|
 | Minutes| 0| Minutes. 
 | Seconds| 1| Seconds. 
+| Milliseconds| 2| Milliseconds. 
 
 
 
 
 ## CIMFormTimestampOffsetPickerInput
-#### Reprsents calendar date and time picker, with time offset, form input. 
+#### Represents a calendar date and time picker form input, with timezone offset. 
 
 
 ### CIMFormInput 
@@ -674,7 +734,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | inputMethod | [enumeration FormElementInputMethod](CIMFormInfo.md#enumeration-formelementinputmethod) | The supported input methods used to attach a video. 
-| maxDuration | long long | The defines the maximum length of an attachment for this element in seconds. If set (or defaulted) to -1, there is no maximum length. 
+| maxDuration | long long | The defines the maximum length of an attachment for this element, in seconds. If set (or defaulted) to -1, there is no maximum length. 
 
 
 

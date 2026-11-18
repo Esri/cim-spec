@@ -9,6 +9,7 @@
 | PreviewAll| 1| Preview all. 
 | List| 2| List. 
 | Auto| 3| Auto. 
+| Carousel| 4| Carousel. 
 
 
 
@@ -441,6 +442,7 @@
 | useLayerFields | boolean | A value indicating whether or not the table is generated using the layer's visible fields. 
 | caption | string | The caption. 
 | title | string | The title. 
+| fieldsFontInfo | string | The font information for the Fields. 
 
 
 

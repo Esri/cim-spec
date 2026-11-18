@@ -13,18 +13,18 @@
 | Betweenness| 5| Betweenness measure. Betweenness is a shortest paths based measure. Computing this centrality measure may be slow on large graphs. 
 | Closeness| 6| Closeness measure. Closeness is a shortest paths based measure. Computing this centrality measure may be slow on large graphs. 
 | Harmonic| 7| Harmonic measure. Harmonic is a shortest paths based measure. Computing this centrality measure may be slow on large graphs. 
-| Coreness| 8| Coreness measure. This measure is only compatible with . 
+| Coreness| 8| Coreness measure. This measure is only compatible with `CentralityRelationshipInterpretation.Undirected`. 
 
 
 
 ### Enumeration: CentralityRelationshipInterpretation
-#### Specifies the way relationships are interpreted for centrality computations. . 
+#### Specifies the way relationships are interpreted for centrality computations. `CentralityMeasure.Coreness` is only compatible with `CentralityRelationshipInterpretation.Undirected`. 
 
 |Property | Value | Description | 
 |---------|--------|--------|
 | Undirected| 0| Relationships are considered to be undirected. 
-| Directed| 1| Relationships are considered to be directed. Not compatible with instead to compute this measure). 
-| Reversed| 2| Relationships are considered to be directed and their direction is reversed. Not compatible with instead to compute this measure). 
+| Directed| 1| Relationships are considered to be directed. Not compatible with `CentralityMeasure.Coreness` (use `CentralityRelationshipInterpretation.Undirected` instead to compute this measure). 
+| Reversed| 2| Relationships are considered to be directed and their direction is reversed. Not compatible with `CentralityMeasure.Coreness` (use `CentralityRelationshipInterpretation.Undirected` instead to compute this measure). 
 
 
 
@@ -70,7 +70,7 @@
 
 |Property | Value | Description | 
 |---------|--------|--------|
-| AtLeastOneCostIsStrictlyNegative| 0| At least one strictly negative cost was found during pathfinding, and it was replaced by a positive cost according to . 
+| AtLeastOneCostIsStrictlyNegative| 0| At least one strictly negative cost was found during pathfinding, and it was replaced by a positive cost according to `KGNegativeCostBehaviour`. 
 
 
 
@@ -92,7 +92,7 @@
 | traversalDirections | [[CIMKGTraversalDirection]](CIMKnowledgeGraph.md#cimkgtraversaldirection) | The traversal directions. 
 | entityUsage | [enumeration FilteredFindPathsEntityUsage](CIMKnowledgeGraph.md#enumeration-filteredfindpathsentityusage) | The usage of origin/destination entities in the filtered find paths algorithm. 
 | pathMode | [enumeration KGPathMode](CIMKnowledgeGraph.md#enumeration-kgpathmode) | Whether the filtered find paths algorithm searches for shortest paths, for lowest cost paths or for all paths. 
-| relationshipCostProperty | string | The name of the property representing the cost of a relationship. If a relationship lacks this property, the property is not of a numeric type, or the property value is null, the cost of the relationship will be . Only positive costs are supported. Any strictly negative cost will be converted to a positive cost based on . 
+| relationshipCostProperty | string | The name of the property representing the cost of a relationship. If a relationship lacks this property, the property is not of a numeric type, or the property value is null, the cost of the relationship will be `CIMFilteredFindPathsConfiguration.DefaultRelationshipCost`. Only positive costs are supported. Any strictly negative cost will be converted to a positive cost based on `CIMFilteredFindPathsConfiguration.NegativeCostBehaviour`. 
 | defaultRelationshipCost | double | The default relationship cost. If the default relationship cost is negative, it is replaced by zero. 
 | negativeCostBehaviour | [enumeration KGNegativeCostBehaviour](CIMKnowledgeGraph.md#enumeration-kgnegativecostbehaviour) | The behaviour when a negative cost is found. 
 | minPathLength | long | The minimum path length. 
@@ -586,15 +586,15 @@
 
 
 ## CIMKGTimeFilter
-#### A Knowledge Graph Time Filter represents a set of time constraints that apply to the "events" of a path. "Events" are entities and relationships of the path that have a matching A CIMKGEventDefinition can either be durative (one property represents the start time, and one property representing the end time) or "punctual" (a single property represents the time at which the event occurs). The time filter represents three kinds of time constraints: - constraints that are applied to all events of the path ( - constraints that are applied only to durative events of the path ( - constraints that are applied to all pairs of consecutive events of the path ( The time filter also specifies the behavior when an event has missing or ill-formed time information (). 
+#### A Knowledge Graph Time Filter represents a set of time constraints that apply to the "events" of a path. "Events" are entities and relationships of the path that have a matching `CIMKGEventDefinition` in `CIMKGTimeFilter.EventsDefinitions`. A CIMKGEventDefinition can either be durative (one property represents the start time, and one property representing the end time) or "punctual" (a single property represents the time at which the event occurs). The time filter represents three kinds of time constraints: - constraints that are applied to all events of the path (`TimeWindow`), - constraints that are applied only to durative events of the path (`DurativeEventsDurationConstraint`). - constraints that are applied to all pairs of consecutive events of the path (`KGPathTimeFlow` and `ConsecutiveEventsRestrictions`). The time filter also specifies the behavior when an event has missing or ill-formed time information (`EventErrorHandling`). 
 
 
 ### CIMKGTimeFilter 
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| enabled | boolean | A value indicating whether the filter is enabled. Having an empty list of event definitions in is equivalent to not enabling the time filter. 
-| KGPathTimeFlow | [enumeration KGPathTimeFlow](CIMKnowledgeGraph.md#enumeration-kgpathtimeflow) | A value indicating how time should flow along the result paths. The - When time flows forward, for each pair of consecutive events, the event which is closer to the path origin must be a valid predecessor of the event which is closer to the path destination. - When time flows backward, for each pair of consecutive events, the event which is closer to the path origin must be a valid successor of the event which is closer to the path destination. - When the time flow is not constrained, for each pair of consecutive events, the event which is closer to the path origin must either be a valid successor or a valid predecessor of the event which is closer to the path destination. 
+| enabled | boolean | A value indicating whether the filter is enabled. Having an empty list of event definitions in `EventsDefinitions` is equivalent to not enabling the time filter. 
+| KGPathTimeFlow | [enumeration KGPathTimeFlow](CIMKnowledgeGraph.md#enumeration-kgpathtimeflow) | A value indicating how time should flow along the result paths. The `ConsecutiveEventsRestrictions` define rules that apply to each pair (A, B) of consecutive events, enforcing that event B is a valid "successor" of event A (event A is then called a valid "predecessor" of event B). - When time flows forward, for each pair of consecutive events, the event which is closer to the path origin must be a valid predecessor of the event which is closer to the path destination. - When time flows backward, for each pair of consecutive events, the event which is closer to the path origin must be a valid successor of the event which is closer to the path destination. - When the time flow is not constrained, for each pair of consecutive events, the event which is closer to the path origin must either be a valid successor or a valid predecessor of the event which is closer to the path destination. 
 | timeWindow | [CIMKGTimeWindow](CIMKnowledgeGraph.md#cimkgtimewindow) | The time window. Any event that has a time span not intersecting the time window will be excluded. 
 | eventsDefinitions | [CIMKGEventsDefinitions](CIMKnowledgeGraph.md#cimkgeventsdefinitions) | The events definitions. If no event is defined, it is as if the time filter was disabled. The time filter will have no effect on path finding. 
 | durativeEventsDurationConstraint | [CIMKGDurativeEventsDurationConstraint](CIMKnowledgeGraph.md#cimkgdurativeeventsdurationconstraint) | The constraint on durative events duration. 
@@ -843,6 +843,22 @@
 
 
 
+## CIMKnowledgeGraphEntityDefinitionPosition
+#### Represents a Knowledge Graph Load Data Entity Definition Position. 
+
+
+### CIMKnowledgeGraphEntityDefinitionPosition 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| entityDefinitionName | string | The name of the Entity Definition referenced by this Entity Definition Position. 
+| position | [CIMKGDiagramPosition](CIMKnowledgeGraph.md#cimkgdiagramposition) | The position referenced by the specified entity definition. 
+
+
+
+
+
+
 ## CIMKnowledgeGraphExpressionPropertyValue
 #### Represents a property value from an expression. 
 
@@ -956,6 +972,7 @@
 | typeInfos | [[CIMKnowledgeGraphInvestigationTypeInfo]](CIMKnowledgeGraph.md#cimknowledgegraphinvestigationtypeinfo) | The array of Knowledge Graph Investigation Type Infos referenced by this Investigation. All infos are expected to have unique type names. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the investigation. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 | dataModelVisualizations | [[CIMKGDataModelVisualization]](CIMKnowledgeGraph.md#cimkgdatamodelvisualization) | The array of Data Model Visualizations referenced by this Investigation. All Data Model Visualizations are expected to have unique names. 
+| loadDataPlans | [[CIMKnowledgeGraphLoadDataPlan]](CIMKnowledgeGraph.md#cimknowledgegraphloaddataplan) | The array of Load Data Plans referenced by this Investigation. All plans are expected to have unique names. 
 
 
 
@@ -1102,6 +1119,39 @@
 
 
 
+## CIMKnowledgeGraphLoadDataPlan
+#### Represents a Knowledge Graph Load Data Plan. 
+
+
+### CIMKnowledgeGraphLoadDataPlan 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name of the Load Data Plan. Names are expected to be unique within an Investigation. 
+| planItems | [[CIMKnowledgeGraphLoadDataPlanItem]](CIMKnowledgeGraph.md#cimknowledgegraphloaddataplanitem) | The Load Data Plan Items referenced by this Plan. 
+
+
+
+
+
+
+## CIMKnowledgeGraphLoadDataPlanItem
+#### Represents a Knowledge Graph Load Data Plan Item. 
+
+
+### CIMKnowledgeGraphLoadDataPlanItem 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| sourceTableDataConnection | [DataConnection](Types.md#dataconnection) | The Data Connection to the source table. 
+| configuration | [CIMKnowledgeGraphDataLoadingConfiguration](CIMKnowledgeGraph.md#cimknowledgegraphdataloadingconfiguration) | The Data Loading Configuration referenced by this Plan Item. 
+| entityDefinitionPositions | [[CIMKnowledgeGraphEntityDefinitionPosition]](CIMKnowledgeGraph.md#cimknowledgegraphentitydefinitionposition) | The entity definition positions referenced by this Plan Item. 
+
+
+
+
+
+
 ## CIMKnowledgeGraphMultipleTypeLookup
 #### Contains the information defining the multiple type entity lookup. 
 
@@ -1134,7 +1184,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| instancesIDs | [[any]]| The ids of the entity/relationship instances represented by the filter. Use to include or exclude these instances. 
+| instancesIDs | [[any]]| The ids of the entity/relationship instances represented by the filter. Use `CIMKnowledgeGraphNamedTypeFilter.FilterType` to include or exclude these instances. 
 
 
 
@@ -1157,7 +1207,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| propertyFilterPredicate | string | The property filter predicate (openCypher syntax) associated with the filter. When the property filter predicate is empty, the filter represents all instances of the named type. When the property filter predicate is not empty, the filter represents the instances of the named type that match the predicate. Use to include or exclude these instances. 
+| propertyFilterPredicate | string | The property filter predicate (openCypher syntax) associated with the filter. When the property filter predicate is empty, the filter represents all instances of the named type. When the property filter predicate is not empty, the filter represents the instances of the named type that match the predicate. Use `CIMKnowledgeGraphNamedTypeFilter.FilterType` to include or exclude these instances. 
 
 
 
@@ -1472,6 +1522,7 @@
 | algorithm | [enumeration KnowledgeLinkChartLayoutAlgorithm](CIMKnowledgeGraph.md#enumeration-knowledgelinkchartlayoutalgorithm) | The layout algorithm. 
 | organicLayoutSettings | [CIMKnowledgeLinkChartOrganicLayoutSettings](CIMKnowledgeGraph.md#cimknowledgelinkchartorganiclayoutsettings) | The organic layout settings. 
 | chronologicalLayoutSettings | [CIMKnowledgeLinkChartChronologicalLayoutSettings](CIMKnowledgeGraph.md#cimknowledgelinkchartchronologicallayoutsettings) | The chronological layout settings. 
+| rootedLayoutSettings | [CIMKnowledgeLinkChartRootedLayoutSettings](CIMKnowledgeGraph.md#cimknowledgelinkchartrootedlayoutsettings) | The rooted layout settings. 
 | autoApply | boolean | A value indicating whether the layout is automatically redone when a setting value changes. 
 | preserveExtent | boolean | A value indicating whether the current Link Chart extent is preserved by the layout (only applies to Chronological and Geographical layouts). 
 
@@ -1524,6 +1575,22 @@
 
 
 
+## CIMKnowledgeLinkChartRootedLayoutSettings
+#### Contains settings to be used in rooted layout calculations. Rooted layouts are layouts that can handle root entities (tree, radial tree and hierarchical layouts). 
+
+
+### CIMKnowledgeLinkChartRootedLayoutSettings 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| rootEntities | [[CIMKnowledgeRecordInstance]](CIMKnowledgeGraph.md#cimknowledgerecordinstance) | The Identifier and type values of entities that serve as roots for the link chart layout. 
+| rootEntityGroups | [[CIMKnowledgeRecordInstance]](CIMKnowledgeGraph.md#cimknowledgerecordinstance) | The Identifier and type values of entity groups that serve as roots for the link chart layout. 
+
+
+
+
+
+
 ## CIMKnowledgeNonspatialDataDisplay
 #### Represents a Knowledge Nonspatial Data Display object. 
 
@@ -1545,6 +1612,22 @@
 |---------|--------|--------|
 | Visible| 0| Visible. 
 | Hidden| 1| Hidden. 
+
+
+
+
+## CIMKnowledgeRecordInstance
+#### A Knowledge record instance is an entity or a relationship. In Pro link charts, users can define groups of record instances, where all records in a group have the same type name. Depending on the context, CIMKnowledgeRecordInstance represents either a Knowledge record instance or a group of Knowledge record instances. 
+
+
+### CIMKnowledgeRecordInstance 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| ID | any | The ID of the record instance. The ID cannot be null. 
+| typeName | string | The type name of the record instance. 
+
+
 
 
 
@@ -1609,7 +1692,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| autoGenerateFeatureTemplates | boolean | A value indicating whether to automatically generate feature templates from the renderer. When this value is set to true, appropriate templates will be added to whenever the renderer is changed. 
+| autoGenerateFeatureTemplates | boolean | A value indicating whether to automatically generate feature templates from the renderer. When this value is set to true, appropriate templates will be added to `FeatureTemplates` whenever the renderer is changed. 
 | extrusion | [CIMFeatureExtrusion](CIMVectorLayers.md#cimfeatureextrusion) | The feature extrusion. 
 | featureElevationExpression | string | The feature elevation expression. 
 | featureTable | [CIMFeatureTable](CIMVectorLayers.md#cimfeaturetable) | The feature table. 

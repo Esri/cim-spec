@@ -563,6 +563,35 @@
 
 
 
+## CIMOGCAPIVectorsServiceConnection
+#### Represents a OGC API Vectors service connection. 
+
+
+### CIMDataConnection 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMServiceConnection 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| description | string | The description. 
+
+
+### CIMOGCAPIVectorsServiceConnection 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| serverConnection | [CIMInternetServerConnectionBase](CIMServiceLayers.md#ciminternetserverconnectionbase) | The server connection. 
+| capabilitiesParameters | {JSON_object}| The connection capabilities parameters as a property set. 
+
+
+
+
+
+
 ## CIMObject3DRenderingFilter
 #### Represents a 3D object rendering filter. 
 
@@ -1678,6 +1707,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | styleName | string | The style name. 
+| showPopups | boolean | A value indicating whether or not to show pop-ups. 
 
 
 

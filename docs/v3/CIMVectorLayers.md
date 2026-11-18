@@ -109,7 +109,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| autoGenerateFeatureTemplates | boolean | A value indicating whether to automatically generate feature templates from the renderer. When this value is set to true, appropriate templates will be added to whenever the renderer is changed. 
+| autoGenerateFeatureTemplates | boolean | A value indicating whether to automatically generate feature templates from the renderer. When this value is set to true, appropriate templates will be added to `FeatureTemplates` whenever the renderer is changed. 
 | extrusion | [CIMFeatureExtrusion](CIMVectorLayers.md#cimfeatureextrusion) | The feature extrusion. 
 | featureElevationExpression | string | The feature elevation expression. 
 | featureTable | [CIMFeatureTable](CIMVectorLayers.md#cimfeaturetable) | The feature table. 
@@ -263,8 +263,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | thresholdType | [enumeration BinsToPointsThresholdType](CIMVectorLayers.md#enumeration-binstopointsthresholdtype) | The threshold at which points are shown. 
-| maximumScale | double | The maximum scale to use when . 
-| featureCount | long | The number of features to use when . 
+| maximumScale | double | The maximum scale to use when `ThresholdType` is set to `BinsToPointsThresholdType.MaxScale`. 
+| featureCount | long | The number of features to use when `ThresholdType` is set to `BinsToPointsThresholdType.FeatureCount`. 
 | minimumBinSize | double | The minimum size (in points) to maintain as the bins are drawn at different scales. 
 | visualization | [CIMBinningVisualization](CIMVectorLayers.md#cimbinningvisualization) | The visualization used by the bins. 
 | spatialReference | [SpatialReference](ExternalReferences.md#spatialreference) | The spatial reference in which features are aggregated. A dataset may be aggregated in one or more spatial references. These may differ from the spatial reference of the dataset itself (the Geohash scheme always uses WGS84, for example). This property is the user's choice from among those spatial references. 
@@ -584,7 +584,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| autoGenerateFeatureTemplates | boolean | A value indicating whether to automatically generate feature templates from the renderer. When this value is set to true, appropriate templates will be added to whenever the renderer is changed. 
+| autoGenerateFeatureTemplates | boolean | A value indicating whether to automatically generate feature templates from the renderer. When this value is set to true, appropriate templates will be added to `FeatureTemplates` whenever the renderer is changed. 
 | extrusion | [CIMFeatureExtrusion](CIMVectorLayers.md#cimfeatureextrusion) | The feature extrusion. 
 | featureElevationExpression | string | The feature elevation expression. 
 | featureTable | [CIMFeatureTable](CIMVectorLayers.md#cimfeaturetable) | The feature table. 
@@ -746,7 +746,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| autoGenerateFeatureTemplates | boolean | A value indicating whether to automatically generate feature templates from the renderer. When this value is set to true, appropriate templates will be added to whenever the renderer is changed. 
+| autoGenerateFeatureTemplates | boolean | A value indicating whether to automatically generate feature templates from the renderer. When this value is set to true, appropriate templates will be added to `FeatureTemplates` whenever the renderer is changed. 
 | extrusion | [CIMFeatureExtrusion](CIMVectorLayers.md#cimfeatureextrusion) | The feature extrusion. 
 | featureElevationExpression | string | The feature elevation expression. 
 | featureTable | [CIMFeatureTable](CIMVectorLayers.md#cimfeaturetable) | The feature table. 
@@ -1286,7 +1286,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| autoGenerateFeatureTemplates | boolean | A value indicating whether to automatically generate feature templates from the renderer. When this value is set to true, appropriate templates will be added to whenever the renderer is changed. 
+| autoGenerateFeatureTemplates | boolean | A value indicating whether to automatically generate feature templates from the renderer. When this value is set to true, appropriate templates will be added to `FeatureTemplates` whenever the renderer is changed. 
 | extrusion | [CIMFeatureExtrusion](CIMVectorLayers.md#cimfeatureextrusion) | The feature extrusion. 
 | featureElevationExpression | string | The feature elevation expression. 
 | featureTable | [CIMFeatureTable](CIMVectorLayers.md#cimfeaturetable) | The feature table. 
@@ -1367,6 +1367,7 @@
 | definitionExpression | string | The definition expression that can subset the rows in the layer or table. 
 | definitionExpressionName | string | The name of the active definition expression. 
 | definitionFilterChoices | [[CIMDefinitionFilter]](CIMLayer.md#cimdefinitionfilter) | The definition filter choices. 
+| allowNativeQueries | boolean | A value indicating whether the SQL in a definition query can contain native SQL syntax. This property applies to layers whose data source is a map service or feature service. When the service allows it, a user can set this flag to enable native SQL queries supported by the underlying database. This property is ignored when the service has useStandardizedQueries set to true. In such cases the SQL must conform to standardized query specifications. 
 | displayField | string | The name of the attribute field that will be used as a label that represents each row in the layer or table. The display field must be able to be represented as a string (string or numeric). 
 | editable | boolean | A value indicating whether or not the layer or table can be edited. 
 | relates | [[CIMRelateInfoBase]](CIMVectorLayers.md#cimrelateinfobase) | The relates. 
@@ -1381,7 +1382,7 @@
 | bindVariables | [[CIMBindVariable]](Types.md#bindvariable) | The bind variables. 
 | subtypeValue | long | The subtype value that should be used in the feature layer definition. This property is honored only when feature layer is a member of SubtypeLayer. 
 | useSubtypeValue | boolean | A value indicating whether or not the SubtypeValue should be used. 
-| displayExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression information used for coming up with a string that represents a row or a feature. This property takes precedence over . 
+| displayExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression information used for coming up with a string that represents a row or a feature. This property takes precedence over `DisplayField`. 
 | selectionSetURI | string | The URI of the selection set for the layer or table. 
 | floorAwareTableProperties | [CIMFloorAwareTableProperties](CIMVectorLayers.md#cimfloorawaretableproperties) | Floor-aware properties for the layer or table used in floor filtering. 
 | routeIDFieldName | string | The route identifier field of a route feature class. This property will only be set for route feature classes, namely line and polyline feature classes that are m-aware. 
@@ -1465,7 +1466,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| autoGenerateFeatureTemplates | boolean | A value indicating whether to automatically generate feature templates from the renderer. When this value is set to true, appropriate templates will be added to whenever the renderer is changed. 
+| autoGenerateFeatureTemplates | boolean | A value indicating whether to automatically generate feature templates from the renderer. When this value is set to true, appropriate templates will be added to `FeatureTemplates` whenever the renderer is changed. 
 | extrusion | [CIMFeatureExtrusion](CIMVectorLayers.md#cimfeatureextrusion) | The feature extrusion. 
 | featureElevationExpression | string | The feature elevation expression. 
 | featureTable | [CIMFeatureTable](CIMVectorLayers.md#cimfeaturetable) | The feature table. 
@@ -1942,6 +1943,60 @@
 
 
 
+## CIMOGCAPIVectorTileDataConnection
+#### Represents an OGCAPI vector tile data connection. 
+
+
+### CIMDataConnection 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+
+
+### CIMVectorTileDataConnection 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| URI | string | The URI of the VectorTile files or resources. 
+| resourcesURI | string | The URI of the binary reference containing the external resources. 
+
+
+### CIMServiceDataConnectionProperties 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| customParameters | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | Vendor specific parameters. 
+
+
+### CIMOGCAPIVectorTileDataConnection 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| tileSetURL | string | The tile set url. 
+| tileMatrixSet | string | The tile matrix set. 
+
+
+
+
+
+
+## CIMOrientedImageryImageAccessConnections
+#### Represents access information for secured oriented imagery. 
+
+
+### CIMOrientedImageryImageAccessConnections 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| ID | string | The identifier for the access information. 
+| connectionString | string | The connection string. 
+| connectionFile | string | The path to the connection file used to access the imagery. 
+
+
+
+
+
+
 ## CIMOrientedImageryLayer
 #### Represents an oriented imagery layer. 
 
@@ -2002,7 +2057,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| autoGenerateFeatureTemplates | boolean | A value indicating whether to automatically generate feature templates from the renderer. When this value is set to true, appropriate templates will be added to whenever the renderer is changed. 
+| autoGenerateFeatureTemplates | boolean | A value indicating whether to automatically generate feature templates from the renderer. When this value is set to true, appropriate templates will be added to `FeatureTemplates` whenever the renderer is changed. 
 | extrusion | [CIMFeatureExtrusion](CIMVectorLayers.md#cimfeatureextrusion) | The feature extrusion. 
 | featureElevationExpression | string | The feature elevation expression. 
 | featureTable | [CIMFeatureTable](CIMVectorLayers.md#cimfeaturetable) | The feature table. 
@@ -2057,6 +2112,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | orientedImageryPropertyOverrides | {JSON_object}| The overrides for editable properties of the oriented imagery dataset on the layer. 
+| imageAccessConnections | [[CIMOrientedImageryImageAccessConnections]](CIMVectorLayers.md#cimorientedimageryimageaccessconnections) | The collection of image access objects, which provide information on how to access the images in the oriented imagery dataset. 
 
 
 
@@ -2322,6 +2378,7 @@
 | definitionExpression | string | The definition expression that can subset the rows in the layer or table. 
 | definitionExpressionName | string | The name of the active definition expression. 
 | definitionFilterChoices | [[CIMDefinitionFilter]](CIMLayer.md#cimdefinitionfilter) | The definition filter choices. 
+| allowNativeQueries | boolean | A value indicating whether the SQL in a definition query can contain native SQL syntax. This property applies to layers whose data source is a map service or feature service. When the service allows it, a user can set this flag to enable native SQL queries supported by the underlying database. This property is ignored when the service has useStandardizedQueries set to true. In such cases the SQL must conform to standardized query specifications. 
 | displayField | string | The name of the attribute field that will be used as a label that represents each row in the layer or table. The display field must be able to be represented as a string (string or numeric). 
 | editable | boolean | A value indicating whether or not the layer or table can be edited. 
 | relates | [[CIMRelateInfoBase]](CIMVectorLayers.md#cimrelateinfobase) | The relates. 
@@ -2336,7 +2393,7 @@
 | bindVariables | [[CIMBindVariable]](Types.md#bindvariable) | The bind variables. 
 | subtypeValue | long | The subtype value that should be used in the feature layer definition. This property is honored only when feature layer is a member of SubtypeLayer. 
 | useSubtypeValue | boolean | A value indicating whether or not the SubtypeValue should be used. 
-| displayExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression information used for coming up with a string that represents a row or a feature. This property takes precedence over . 
+| displayExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression information used for coming up with a string that represents a row or a feature. This property takes precedence over `DisplayField`. 
 | selectionSetURI | string | The URI of the selection set for the layer or table. 
 | floorAwareTableProperties | [CIMFloorAwareTableProperties](CIMVectorLayers.md#cimfloorawaretableproperties) | Floor-aware properties for the layer or table used in floor filtering. 
 | routeIDFieldName | string | The route identifier field of a route feature class. This property will only be set for route feature classes, namely line and polyline feature classes that are m-aware. 
@@ -2728,6 +2785,7 @@
 | definitionExpression | string | The definition expression that can subset the rows in the layer or table. 
 | definitionExpressionName | string | The name of the active definition expression. 
 | definitionFilterChoices | [[CIMDefinitionFilter]](CIMLayer.md#cimdefinitionfilter) | The definition filter choices. 
+| allowNativeQueries | boolean | A value indicating whether the SQL in a definition query can contain native SQL syntax. This property applies to layers whose data source is a map service or feature service. When the service allows it, a user can set this flag to enable native SQL queries supported by the underlying database. This property is ignored when the service has useStandardizedQueries set to true. In such cases the SQL must conform to standardized query specifications. 
 | displayField | string | The name of the attribute field that will be used as a label that represents each row in the layer or table. The display field must be able to be represented as a string (string or numeric). 
 | editable | boolean | A value indicating whether or not the layer or table can be edited. 
 | relates | [[CIMRelateInfoBase]](CIMVectorLayers.md#cimrelateinfobase) | The relates. 
@@ -2742,7 +2800,7 @@
 | bindVariables | [[CIMBindVariable]](Types.md#bindvariable) | The bind variables. 
 | subtypeValue | long | The subtype value that should be used in the feature layer definition. This property is honored only when feature layer is a member of SubtypeLayer. 
 | useSubtypeValue | boolean | A value indicating whether or not the SubtypeValue should be used. 
-| displayExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression information used for coming up with a string that represents a row or a feature. This property takes precedence over . 
+| displayExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression information used for coming up with a string that represents a row or a feature. This property takes precedence over `DisplayField`. 
 | selectionSetURI | string | The URI of the selection set for the layer or table. 
 | floorAwareTableProperties | [CIMFloorAwareTableProperties](CIMVectorLayers.md#cimfloorawaretableproperties) | Floor-aware properties for the layer or table used in floor filtering. 
 | routeIDFieldName | string | The route identifier field of a route feature class. This property will only be set for route feature classes, namely line and polyline feature classes that are m-aware. 
@@ -2915,7 +2973,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| autoGenerateFeatureTemplates | boolean | A value indicating whether to automatically generate feature templates from the renderer. When this value is set to true, appropriate templates will be added to whenever the renderer is changed. 
+| autoGenerateFeatureTemplates | boolean | A value indicating whether to automatically generate feature templates from the renderer. When this value is set to true, appropriate templates will be added to `FeatureTemplates` whenever the renderer is changed. 
 | extrusion | [CIMFeatureExtrusion](CIMVectorLayers.md#cimfeatureextrusion) | The feature extrusion. 
 | featureElevationExpression | string | The feature elevation expression. 
 | featureTable | [CIMFeatureTable](CIMVectorLayers.md#cimfeaturetable) | The feature table. 
@@ -2997,6 +3055,7 @@
 | definitionExpression | string | The definition expression that can subset the rows in the layer or table. 
 | definitionExpressionName | string | The name of the active definition expression. 
 | definitionFilterChoices | [[CIMDefinitionFilter]](CIMLayer.md#cimdefinitionfilter) | The definition filter choices. 
+| allowNativeQueries | boolean | A value indicating whether the SQL in a definition query can contain native SQL syntax. This property applies to layers whose data source is a map service or feature service. When the service allows it, a user can set this flag to enable native SQL queries supported by the underlying database. This property is ignored when the service has useStandardizedQueries set to true. In such cases the SQL must conform to standardized query specifications. 
 | displayField | string | The name of the attribute field that will be used as a label that represents each row in the layer or table. The display field must be able to be represented as a string (string or numeric). 
 | editable | boolean | A value indicating whether or not the layer or table can be edited. 
 | relates | [[CIMRelateInfoBase]](CIMVectorLayers.md#cimrelateinfobase) | The relates. 
@@ -3011,7 +3070,7 @@
 | bindVariables | [[CIMBindVariable]](Types.md#bindvariable) | The bind variables. 
 | subtypeValue | long | The subtype value that should be used in the feature layer definition. This property is honored only when feature layer is a member of SubtypeLayer. 
 | useSubtypeValue | boolean | A value indicating whether or not the SubtypeValue should be used. 
-| displayExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression information used for coming up with a string that represents a row or a feature. This property takes precedence over . 
+| displayExpressionInfo | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The expression information used for coming up with a string that represents a row or a feature. This property takes precedence over `DisplayField`. 
 | selectionSetURI | string | The URI of the selection set for the layer or table. 
 | floorAwareTableProperties | [CIMFloorAwareTableProperties](CIMVectorLayers.md#cimfloorawaretableproperties) | Floor-aware properties for the layer or table used in floor filtering. 
 | routeIDFieldName | string | The route identifier field of a route feature class. This property will only be set for route feature classes, namely line and polyline feature classes that are m-aware. 
@@ -3478,7 +3537,7 @@
 
 |Property | Type | Description | 
 |---------|--------|--------|
-| dataConnection | [CIMVectorTileDataConnection](CIMVectorLayers.md#cimvectortiledataconnection) | The data connection to the VectorTile resource. 
+| dataConnection | [VectorTileDataConnection](Types.md#vectortiledataconnection) | The data connection to the VectorTile resource. 
 | currentStyle | string | The current style the vector tile layer features should be rendered with. 
 | associatedFeatureLayerURI | string | The URI for a feature layer (feature service-based or portal item-based) that provides pop-up support for the vector tile layer. 
 

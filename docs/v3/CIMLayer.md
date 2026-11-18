@@ -79,8 +79,24 @@
 | geometryURI | string | The URI to the geometry to filter features in the dataset. 
 | spatialReference | [SpatialReference](ExternalReferences.md#spatialreference) | The spatial reference of the definition filter geometry. 
 | searchOrder | [enumeration esriSearchOrder](ExternalReferences.md#enumeration-esrisearchorder) | The search order option. 
+| geometrySource | [enumeration DefinitionFilterGeometrySource](CIMLayer.md#enumeration-definitionfiltergeometrysource) | The definition filter geometry source. 
+| sourceLayerURI | string | The source layer URI for feature-linked definition filter geometry. 
+| featureIdentifierSetURI | string | The URI of the source layer's feature identifier set (identified by GlobalID or OID) used as the definition filter geometry. 
 
 
+
+
+
+### Enumeration: DefinitionFilterGeometrySource
+#### Definition filter geometry sources. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| None| 0| Definition filter geometry is not specified. 
+| Embedded| 1| Definition filter geometry is embedded in the definition filter. 
+| LayerReference| 2| Definition filter geometry is specified by reference to a layer. 
+| LayerSelectionReference| 3| Definition filter geometry is specified by reference to a layer selection set. 
+| FeatureIdentifierSetReference| 4| Definition filter geometry is specified by reference to a feature identifier set. 
 
 
 

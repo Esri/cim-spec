@@ -596,6 +596,7 @@
 | colorScheme | [ColorRamp](Types.md#colorramp) | The color scheme of the heat map. Controls how smooth the color gradient appears. Must be either a continuous or multipart color ramp. If no color scheme is specified, a default color ramp will be used. 
 | field | string | The name of the field denoting weighting values for each feature. The field's value is the count or quantity to be spread across the landscape to create a continuous surface. Values in the field may be integer or floating point. The options for the field are listed below. Specify the name of a numeric field in the feature table Use "" if no item or special value will be used and each feature will be counted once. Use Shape if input features contains Z. 
 | radius | long | The radius which defines how far the heat spreads away from the points. Specified and stored in Points and translates to Pixels at draw time. 
+| searchRadius | double | The radius which defines how far the heat spreads away from the points. Specified and stored in Points and translates to Pixels at draw time. 
 | rendererQuality | long | The renderer quality which controls the pixelation of the raster. This is an arbitrary range that goes from Best (10) to Fastest (0). 
 | heading | string | The legend heading. 
 | minLabel | string | The legend label for the minimum density value. 

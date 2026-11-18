@@ -521,9 +521,9 @@
 
 |Property | Value | Description | 
 |---------|--------|--------|
-| OneLabelPerFeature| 0| One label per feature. 
-| OneLabelPerPart| 1| One label per feature part. 
-| OneLabelPerSegment| 2| One label per segment. 
+| OneLabelPerFeature| 0| Label each feature. Typically one label per feature unless labeling repetition is enabled. 
+| OneLabelPerPart| 1| Label each part. Typically one label per part unless labeling repetition is enabled. 
+| OneLabelPerSegment| 2| Label each segment. Typically one label per segment unless labeling repetition is enabled. 
 
 
 

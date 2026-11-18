@@ -7,6 +7,8 @@
 |---------|--------|--------|
 | GramsPerSecond| 0| Grams per second (g/s). 
 | KilogramsPerHour| 1| Kilograms per hour (kg/hr). 
+| GramsPerSecondPerSquareMeter| 2| Grams per second per square meter (g/s/m²). 
+| KilogramsPerHourPerSquareMeter| 3| Kilograms per hour per square meter (kg/hr/m²). 
 
 
 

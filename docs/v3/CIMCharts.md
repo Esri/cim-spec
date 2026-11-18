@@ -111,7 +111,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | multipleBarType | [enumeration ChartMultiBarType](CIMCharts.md#enumeration-chartmultibartype) | The type of multiple bar-series chart. 
-| barSize | long | The relative width of the bar. 
+| barSize | long | The relative width of the bar as a percentage. 
 | fillSymbolProperties | [CIMChartFillSymbolProperties](CIMCharts.md#cimchartfillsymbolproperties) | The properties of the fill symbol border. 
 | verticalOrientation | boolean | A value indicating whether this bar chart is vertically oriented. 
 | sortedCategoryValues | [string] | The array of sorted category values for custom sort. 
@@ -130,6 +130,51 @@
 | showMovingAverage | boolean | A value indicating whether to show a moving average line overlay. 
 | movingAverageLineSymbolProperties | [CIMChartLineSymbolProperties](CIMCharts.md#cimchartlinesymbolproperties) | The line symbol for the moving average. 
 | movingAveragePeriod | long long | A period value for moving average calculation. 
+
+
+
+
+
+
+## CIMChartBeeswarmSeries
+#### Provides access to members that control beeswarm series. 
+
+
+### CIMChartSeries 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The name of the series shown in the legend. 
+| uniqueName | string | The default and unique name of the series. 
+| fields | [string] | The data field names in the series. Optional depending on series type. 
+| orderFields | [string] | The sort field names in the series. 
+| groupFields | [string] | The group field names in the series. 
+| whereClause | string | The format string for series value labels. 
+| showLabels | boolean | A value indicating whether the series shows data labels. 
+| horizontalAxis | long | The index of horizontal axis. 
+| verticalAxis | long | The index of vertical axis. 
+| colorType | [enumeration ChartColorType](CIMCharts.md#enumeration-chartcolortype) | The type of color for the series. 
+| fieldAggregation | [string] | The aggregate field values if series data has a group field. Allowed values are count, sum, median, mean, and empty string. 
+| orderFieldsSortTypes | [long] | The array of sort order types for fields in OrderFields property Allowed values 0(Ascending), 1(Descending). 
+| visible | boolean | A value indicating whether the series is visible or not. 
+| dataLabelText | [CIMChartTextProperties](CIMCharts.md#cimcharttextproperties) | The text style for the data label. 
+| multiSeries | boolean | A value indicating whether this series is a multi series. 
+| locations | [[CIMChartLocationDefinition]](CIMCharts.md#cimchartlocationdefinition) | The locations for which data is to be plotted. 
+| fieldExpressions | [[CIMExpressionInfo]](CIMRenderers.md#cimexpressioninfo) | Expression properties for chart series' fields. 
+
+
+### CIMChartBeeswarmSeries 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| standardizeValues | boolean | A value indicating whether to calculate standardized values for beeswarm chart. 
+| sortedCategoryValues | [string] | The array of sorted category values for custom sort. 
+| markerSymbolProperties | [CIMChartMarkerSymbolProperties](CIMCharts.md#cimchartmarkersymbolproperties) | The marker symbol properties for the series. 
+| colorRamp | [ColorRamp](Types.md#colorramp) | The color ramp for the series. 
+| bubbleMinimumSize | double | The minimum size of the bubbles. Units in pixels. 
+| bubbleMaximumSize | double | The maximum size of the bubbles. Units in pixels. 
+| verticalOrientation | boolean | A value indicating whether the chart is vertically oriented. 
+| normalizeAmplitude | boolean | A value indicating whether to normalize the amplitude of all beeswarms in a chart. 
 
 
 
@@ -779,7 +824,7 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | visible | boolean | A value indicating whether the line is visible. 
-| width | double | The width of the line. 
+| width | double | The width of the line. Units in pixels. 
 | style | [enumeration ChartLineDashStyle](CIMCharts.md#enumeration-chartlinedashstyle) | The style of the line. 
 | color | [Color](Types.md#color) | The color of the line. 
 
@@ -827,8 +872,8 @@
 |Property | Type | Description | 
 |---------|--------|--------|
 | visible | boolean | A value indicating whether the symbol is visible. 
-| width | double | The width of the symbol. 
-| height | double | The height of the symbol. 
+| width | double | The width of the symbol. Units in pixels. 
+| height | double | The height of the symbol. Units in pixels. 
 | style | [enumeration ChartMarkerSymbolStyle](CIMCharts.md#enumeration-chartmarkersymbolstyle) | The style of the symbol. 
 | color | [Color](Types.md#color) | The color of the symbol fill. 
 | lineSymbolProperties | [CIMChartLineSymbolProperties](CIMCharts.md#cimchartlinesymbolproperties) | The properties of the symbol border. 
@@ -1246,8 +1291,8 @@
 | trendLineFitType | [enumeration ChartTrendLineFitType](CIMCharts.md#enumeration-charttrendlinefittype) | A trend line fit type. 
 | trendOrder | long | The number of terms in a polynomial or Fourier equation. 
 | showTrendEquation | boolean | A value indicating whether or not to have a trend equation overlay. 
-| bubbleMinimumSize | double | Minimum size of the bubbles. 
-| bubbleMaximumSize | double | Maximum size of the bubbles. 
+| bubbleMinimumSize | double | The minimum size of the bubbles. Units in pixels. 
+| bubbleMaximumSize | double | The maximum size of the bubbles. Units in pixels. 
 | visualAggregationThreshold | long long | The number of points in a scatter plot series that will trigger visual aggregation. 
 | visualAggregationGridRowCount | long long | The number of rows for visual aggregation grid. 
 | visualAggregationGridColumnCount | long long | The number of columns for visual aggregation grid. 

@@ -177,6 +177,28 @@
 
 
 
+## CIMEmissiveGlowPostprocessingEffect
+#### Represents a post-processing technique that reshades the scene with an emissive glow effect. 
+
+
+### CIMPostprocessingEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| isActive | boolean | A value indicating whether the effect should be applied to the scene. 
+
+
+### CIMEmissiveGlowPostprocessingEffect 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| strength | double | The strength. 
+
+
+
+
+
+
 ## CIMFoggyWeatherEffect
 #### Represents a foggy weather effect to be applied to a scene. 
 

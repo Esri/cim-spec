@@ -1120,7 +1120,7 @@
 | indexContourLabel | string | The index contour label. 
 | indexContourSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The index contour symbol. 
 | referenceContourHeight | double | The reference contour height. 
-| useIntervalScaleBreaks | boolean | A value indicating whether scale-dependent intervals are used. If true, is used at all scales. 
+| useIntervalScaleBreaks | boolean | A value indicating whether scale-dependent intervals are used. If true, `ContourIntervalScaleBreaks` are used; if false, `ContourInterval` is used at all scales. 
 | contourIntervalScaleBreaks | [[CIMContourIntervalScaleBreak]](CIMTerrainLayers.md#cimcontourintervalscalebreak) | The contour interval scale breaks. The scale breaks should be ordered from the smallest scale to the largest. The last scale break's upper bound will always be treated as 0, indicating no upper bound. 
 
 

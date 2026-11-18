@@ -78,6 +78,9 @@
 | filterType | [enumeration AttachmentFilterType](CIMLayout.md#enumeration-attachmentfiltertype) | The attachment filter type. The filter attachment type determines which attachments from the feature that are used in the exported report. 
 | filterValue | long | The filter value. When using the First or Last attachment filter type, the value indicates the number of attachments to use in the grid configuration. When using the Index attachment filter type, the value indicates the index and is zero-based. 
 | excludedCells | string | The list of excluded grid cells. Cells that are excluded are left blank when the report is exported. 
+| showEmptyPlaceholder | boolean | A value indicating whether to show a text placeholder when no attachment images are available. 
+| emptyPlaceholderText | string | The text to display when no attachment images are available. 
+| emptyPlaceholderTextSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The text symbol for the empty placeholder text. 
 
 
 
@@ -652,6 +655,7 @@
 | degrees | long | The degrees of declination. 
 | minutes | long | The minutes of declination. 
 | mils | double | The mil radians of declination. 
+| seconds | long | The seconds of declination. 
 
 
 
@@ -1189,6 +1193,7 @@
 | lineSelection | long | The end point selection. 
 | drawLabelsParallel | boolean | A value indicating whether to draw the labels parallel to the map grid edges. 
 | edgeVisibilityFilter | [enumeration EndPointSelection](CIMLayout.md#enumeration-endpointselection) | A value indicating which labels to draw along the map grid edges. 
+| drawCornerLabelsInside | boolean | A value indicating whether to draw corner labels inside the map grid edges. 
 
 
 
@@ -1719,6 +1724,7 @@
 | simulateOverprint | boolean | A value indicating whether to simulate overprint for a layout. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layout. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 | defaultColorVisionDeficiencyMode | [enumeration ColorVisionDeficiencyType](CIMEnumerations.md#enumeration-colorvisiondeficiencytype) | The color vision deficiency mode that new views of this layout are opened with. 
+| PDFAccessibilityReadingOrder | [string] | The ordered list of element names that defines the reading order for assistive technologies such as screen readers. 
 
 
 
@@ -2339,6 +2345,7 @@
 | properties | [CIMMeterReferenceProperties](CIMLayout.md#cimmeterreferenceproperties) | The display properties of the meter reference guide. 
 | textSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol used for the text elements in the meter reference guide. 
 | lineSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol used for the grid lines in the meter reference guide. 
+| mapIndexLayerURI | string | The layer used to define the area of interest for calculating intersecting MGRS values. 
 
 
 
@@ -2509,6 +2516,103 @@
 |---------|--------|--------|
 | Portrait| 0| Portrait orientation. 
 | Landscape| 1| Landscape orientation. 
+
+
+
+### Enumeration: PlaceNameFittingStrategy
+#### Defines how to display place name index. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| None| 0| No automatic adjustments are made, no resizing of fonts. 
+| Shrink| 1| Text can be shrunk, but will not grow larger than the set font sizes. 
+| Fill| 2| Text shrinks or grows to fill all available space. Text maintains relative size differences if shrunk or grown. 
+
+
+
+
+## CIMPlaceNameIndex
+#### Represents the place name index surround element. 
+
+
+### CIMElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| anchor | [enumeration Anchor](CIMLayout.md#enumeration-anchor) | The anchor position of the element. 
+| locked | boolean | A value indicating whether the element is locked. Each element in the contents pane has a lock icon. If the icon is shown as locked, you can not select that feature in the layout using the select tool. 
+| name | string | The name of the element. 
+| visible | boolean | A value indicating whether the element is visible. 
+| rotation | double | The rotation of the element. 
+| rotationCenter | [Point](ExternalReferences.md#point) | The location of the anchor in page units.This is also the location the feature is rotated around. 
+| lockedAspectRatio | boolean | A value indicating whether the aspect ratio for an element is locked. If locked, the width and height values stretch proportionally. 
+| customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the element. 
+| expanded | boolean | A value indicating whether this element is expanded in the contents pane. 
+
+
+### CIMFrameElement 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| frame | [Polygon](ExternalReferences.md#polygon) | The geometry of a frame for an element. 
+| graphicFrame | [CIMGraphicFrame](CIMGraphics.md#cimgraphicframe) | The graphic symbology of an element's frame. 
+
+
+### CIMMapSurround 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| mapFrame | string | The map frame associated with the map surround. 
+| minScale | double | The minimum scale. 
+| maxScale | double | The maximum scale. 
+
+
+### CIMPlaceNameIndex 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| placeNameLayer | [CIMPlaceNameLayerInfo](CIMLayout.md#cimplacenamelayerinfo) | The layer information for place name features. 
+| gridLayer | [CIMPlaceNameLayerInfo](CIMLayout.md#cimplacenamelayerinfo) | The layer information for grid features. 
+| placeNameLayerSortFields | [[CIMTableField]](Types.md#tablefield) | The fields used from the place name layer for sorting. 
+| titleText | string | The text for the title of the element. 
+| titleTextSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The text symbol for title text. 
+| showTitle | boolean | A value indicating whether to show/hide the title. 
+| groupByExpression | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The arcade expression that controls what text will be displayed from groupby field. 
+| groupTextSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The text symbol for a field that is grouped. 
+| groupGap | double | The spacing between group text and index text. Units in points. 
+| showGroupHeaders | boolean | A value indicating whether to show/hide group headers. 
+| customGroupHeader | string | The text value to use for custom group header. 
+| indexDelimiterSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol for the index delimiter. 
+| indexDelimiter | [enumeration StreetIndexDelimiter](CIMLayout.md#enumeration-streetindexdelimiter) | The delimiter that is displayed between the place name and grid value. 
+| gridValueDelimiter | [enumeration StreetIndexDelimiter](CIMLayout.md#enumeration-streetindexdelimiter) | The delimiter that is displayed between multiple grid values. 
+| fittingStrategy | [enumeration PlaceNameFittingStrategy](CIMLayout.md#enumeration-placenamefittingstrategy) | The fitting strategy. 
+| spatialRelationship | [enumeration esriSpatialRelEnum](ExternalReferences.md#enumeration-esrispatialrelenum) | The spatial relationship between place name and grid features. 
+| rightToLeft | boolean | A value indicating whether right to left orientation should be applied. 
+| minFontSize | double | The minimum font size. Units in points. 
+| maxFontSize | double | The maximum font size. Units in points. 
+| rowGap | double | The gap between rows. Units in points. 
+| columnGap | double | The gap between frame columns. Units in points. 
+| verticalTextGap | double | The vertical gap around field values. Units in points. 
+| horizontalTextGap | double | The horizontal gap around field values. Units in points. 
+
+
+
+
+
+
+## CIMPlaceNameLayerInfo
+#### Represents layer information referenced in the place name index surround element. 
+
+
+### CIMPlaceNameLayerInfo 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| layerURI | string | The path to a layer. 
+| displayField | [CIMTableFrameField](CIMLayout.md#cimtableframefield) | The field to display. 
+| fieldExpression | [CIMExpressionInfo](CIMRenderers.md#cimexpressioninfo) | The arcade expression that controls the text value for the DisplayField. 
+
+
 
 
 
@@ -2782,8 +2886,21 @@
 | groundDisplayOption | [enumeration ProfileObstacleGroundDisplayOption](CIMLayout.md#enumeration-profileobstaclegrounddisplayoption) | The option to display how the base of obstacle is shown. 
 | obstacleSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol used to draw the obstacle. 
 | substituteObstacleSymbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The substitute obstacle symbol. 
+| polygonPolylineGroundDisplayOption | [enumeration ProfilePolyObstacleDisplayOption](CIMLayout.md#enumeration-profilepolyobstacledisplayoption) | The option to display how the base of obstacle is shown. 
 
 
+
+
+
+### Enumeration: ProfilePolyObstacleDisplayOption
+#### Polygon and Polyline obstacles are displayed based on the ground display option. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| CenterlineIntersect| 0| Show the first intersection of the obstacle and the OIS surface centerline 
+| CenterlineVolume| 1| Show the first and last intersection of the obstacle and the OIS surface centerline 
+| OISIntersect| 2| Show the first intersection of the obstacle and the OIS surface 
+| OISVolume| 3| Show the first and last intersection of the obstacle and the OIS surface 
 
 
 
@@ -3019,6 +3136,7 @@
 | simulateOverprint | boolean | A value indicating whether to simulate overprint for a layout. 
 | customProperties | [[CIMStringMap]](CIMRenderers.md#cimstringmap) | The custom properties of the layout. Custom properties are limited to key / value pairs of strings and developers are fully responsible for stored content. 
 | defaultColorVisionDeficiencyMode | [enumeration ColorVisionDeficiencyType](CIMEnumerations.md#enumeration-colorvisiondeficiencytype) | The color vision deficiency mode that new views of this layout are opened with. 
+| PDFAccessibilityReadingOrder | [string] | The ordered list of element names that defines the reading order for assistive technologies such as screen readers. 
 
 
 ### CIMElementContainer 
@@ -3051,6 +3169,7 @@
 |---------|--------|--------|
 | dataConnection | [DataConnection](Types.md#dataconnection) | The data connection to the source. 
 | definitionQuery | string | The definition query. 
+| definitionFilter | [CIMDefinitionFilter](CIMLayer.md#cimdefinitionfilter) | The definition query. For map members, this can include a spatial filter. 
 | fields | [[CIMReportField]](CIMLayout.md#cimreportfield) | The fields used by the report. 
 | mapMemberURI | string | The URI to a Layer or Standalone table in the project. 
 | useSelectionSet | boolean | A value indicating whether the selection of the layer or table should be used for the report. 
@@ -4156,6 +4275,7 @@
 | Space| 1| Space delimiter. 
 | Hyphen| 2| Hyphen delimiter. 
 | Underscore| 3| Underscore delimiter. 
+| Comma| 4| Comma delimiter. 
 
 
 
@@ -4432,6 +4552,7 @@
 | productSpecification | [enumeration MapProductSpecType](CIMLayout.md#enumeration-mapproductspectype) | The map product specification type of topographic north arrow. 
 | drawToSpecification | boolean | A value indicating whether to draw the element to specification size or allow user to manually resize element. 
 | dateInterval | long | A value indicating the date interval used to calculate declination. The default value is 5 which is based on the interval used by the World Magnetic Model. A value of zero indicates the current date should be used. 
+| gridLinesLayerURI | string | The path to the layer containing the grid lines aligned with the calculated angles. 
 
 
 ### CIMTopoCompassRose 
@@ -4519,6 +4640,7 @@
 | productSpecification | [enumeration MapProductSpecType](CIMLayout.md#enumeration-mapproductspectype) | The map product specification type of topographic north arrow. 
 | drawToSpecification | boolean | A value indicating whether to draw the element to specification size or allow user to manually resize element. 
 | dateInterval | long | A value indicating the date interval used to calculate declination. The default value is 5 which is based on the interval used by the World Magnetic Model. A value of zero indicates the current date should be used. 
+| gridLinesLayerURI | string | The path to the layer containing the grid lines aligned with the calculated angles. 
 
 
 

@@ -2060,6 +2060,16 @@
 
 
 
+### Enumeration: MovementAlongLineType
+#### Options to control the movement type for the move along line animation, indicating whether the symbol animates along the line by distance or by speed. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Distance| 0| Symbol animates along the line by distance. The DistanceAlong property defines the distance as a percentage along the line to which the symbol will animate. 
+| Speed| 1| Symbol animates along the line by speed. The Speed property defines the speed at which the symbol will animate along the line. 
+
+
+
 
 ## CIMPictureFill
 #### Represents a picture fill which fills polygonal geometry with a picture. Supported file types are .bmp, .jpg, .png, and .gif. 
@@ -2807,6 +2817,32 @@
 
 
 
+## CIMSymbolAnimationMoveAlongLine
+#### Represents the move along line animation. Dynamically animates marker(s) along a line. The animation can be defined by either distance along the line or speed. The initial marker placement for the animation is determined by the MarkerPlacement property on the symbol layer, and the animation will move the marker(s) from that initial placement along the line. 
+
+
+### CIMSymbolAnimation 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| animatedSymbolProperties | [CIMAnimatedSymbolProperties](CIMSymbols.md#cimanimatedsymbolproperties) | The animated symbol properties. 
+| primitiveName | string | The primitive name. 
+
+
+### CIMSymbolAnimationMoveAlongLine 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| movementType | [enumeration MovementAlongLineType](CIMSymbols.md#enumeration-movementalonglinetype) | The movement type, indicating whether the marker animates along the line by distance or by speed. 
+| distanceAlong | double | The distance as a percentage along the line to which the marker will animate. 0 corresponds to the starting placement of the marker, and 100 corresponds to a full movement along the line. This is only used if MovementType is set to Distance. 
+| speed | double | The speed at which the marker will animate along the line, in units of the line's unit per second. When the MovementType is set to Distance, the marker will move along the line at this speed until it reaches the DistanceAlong value. When the MovementType is set to Speed, the marker will move along the line at this speed, and DistanceAlong is ignored. 
+| continuous | boolean | A value indicating whether the animation will loop continuously when Speed is defined. If true, once the marker reaches the end of the line it will jump back to the starting placement and repeat the animation continuously until the duration is reached. 
+
+
+
+
+
+
 ## CIMSymbolAnimationOffset
 #### Represents the offset animation. Dynamically animates the symbol to the given offset. 
 
@@ -3039,6 +3075,7 @@
 | wordSpacing | double | The additional spacing that is added to between the words of the text string. 100% indicates that regular spacing is used. 
 | billboardMode3D | [enumeration BillboardMode](CIMEnumerations.md#enumeration-billboardmode) | The billboard mode of the text symbol. 
 | overprint | boolean | A value indicating whether or not the symbol should overprint in press printing. 
+| verticalPositioning | [enumeration VerticalPositioning](CIMSymbols.md#enumeration-verticalpositioning) | The vertical position of the text within its frame. 
 
 
 
@@ -3128,6 +3165,17 @@
 | Right| 0| Align right. 
 | Upright| 1| Align upright. 
 | Mixed| 2| Mixed orientation following the Unicode vertical text layout standard. 
+
+
+
+### Enumeration: VerticalPositioning
+#### Vertical positioning types. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Top| 0| The top of the frame that contains the text. 
+| Center| 1| The center of the frame that contains the text. 
+| Bottom| 2| The bottom of the frame that contains the text. 
 
 
 

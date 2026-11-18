@@ -17,6 +17,102 @@
 
 
 
+## CIMAnimationGeometry
+#### Provides access to properties of an animation geometry. 
+
+
+### CIMAnimationObject 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| alias | string | An identifier for the user. 
+| ID | long | A unique identifier to be accessed by keyframes in the animation. 
+
+
+### CIMAnimationGeometry 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| geometry | [Geometry](ExternalReferences.md#geometry) | The geometry. 
+
+
+
+
+
+
+## CIMAnimationGeometryKeyframe
+#### Properties defining the geometry at a single point in time for the animation. 
+
+
+### CIMAnimationGeometryKeyframe 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| trackTime | double | The time in seconds relative to the beginning of the animation. 
+| geometryID | long | The ID of the CIMAnimationGeometry to be used. 
+
+
+
+
+
+
+## CIMAnimationGeometryStorage
+#### Represents storage for animation geometry objects. 
+
+
+### CIMAnimationGeometryStorage 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| geometries | [[CIMAnimationGeometry]](CIMMap.md#cimanimationgeometry) | An array of geometries. 
+| symbols | [[CIMAnimationSymbol]](CIMMap.md#cimanimationsymbol) | An array of symbols. 
+
+
+
+
+
+
+## CIMAnimationGeometryTrack
+#### Properties defining a geometry track for animating a geometry. 
+
+
+### CIMAnimationGeometryTrack 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| alias | string | An identifier for the user. 
+| symbolID | long | The ID of the CIMAnimationSymbol to be used by this track. 
+| keyframes | [[CIMAnimationGeometryKeyframe]](Types.md#animationgeometrykeyframe) | The collection of animation geometry keyframes. 
+
+
+
+
+
+
+## CIMAnimationLineKeyframe
+#### Properties defining a portion of a line to draw at a single point in time for the animation. 
+
+
+### CIMAnimationGeometryKeyframe 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| trackTime | double | The time in seconds relative to the beginning of the animation. 
+| geometryID | long | The ID of the CIMAnimationGeometry to be used. 
+
+
+### CIMAnimationLineKeyframe 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| fromRatio | double | The ratio of a line to start drawing from. 
+| toRatio | double | The ratio of a line to finish drawing to. 
+
+
+
+
+
+
 ## CIMAnimationScreenGraphic
 #### Represents a graphic and list of keyframes indicating properties that can be changed during the animation. 
 
@@ -74,6 +170,29 @@
 | elementWidth | double | The pixel width for the graphic. It applies only to the animation screen graphic that contains a polygon graphic. 
 | elementHeight | double | The pixel height for the graphic. It applies only to the animation screen graphic that contains a polygon graphic. 
 | rotation | double | The angle of rotation (in degrees) for the graphic. It applies only to the animation screen graphic that contains a polygon graphic. 
+
+
+
+
+
+
+## CIMAnimationSymbol
+#### Provides access to properties of an animation symbol. 
+
+
+### CIMAnimationObject 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| alias | string | An identifier for the user. 
+| ID | long | A unique identifier to be accessed by keyframes in the animation. 
+
+
+### CIMAnimationSymbol 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| symbol | [CIMSymbolReference](CIMRenderers.md#cimsymbolreference) | The symbol. 
 
 
 
@@ -592,7 +711,7 @@
 | useScale | boolean | A value indicating whether the distance scale will be used in the ground to grid correction. 
 | direction | double | The direction angle (in degrees) that will be used in ground to grid calculations. 
 | scaleType | [enumeration GroundToGridScaleType](CIMMap.md#enumeration-groundtogridscaletype) | The type of scale that will be used in ground to grid calculations. 
-| constantScaleFactor | double | The constant scale factor used in ground to grid calculations, only when . 
+| constantScaleFactor | double | The constant scale factor used in ground to grid calculations, only when `ScaleType` equals `GroundToGridScaleType.ConstantFactor`. 
 
 
 
@@ -604,7 +723,7 @@
 |Property | Value | Description | 
 |---------|--------|--------|
 | ConstantFactor| 0| A constant scale factor will be used to specify scale for ground to grid corrections. 
-| ComputeUsingElevation| 1| The scale will be computed using the current Editing ElevationCapturing mode. 
+| ComputeUsingElevation| 1| The scale will be computed using the current Editing `ArcGIS.Desktop.Editing.ElevationCapturing` mode.
 
 
 
@@ -843,6 +962,21 @@
 |---------|--------|--------|
 | sourceID | string | The id for the elevation source. 
 | visible | boolean | A value indicating whether the elevation source is visible. 
+
+
+
+
+
+
+## CIMKeyframeGeometryStorage
+#### Represents storage for keyframe geometry objects. 
+
+
+### CIMKeyframeGeometryStorage 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| geometryTracks | [[CIMAnimationGeometryTrack]](CIMMap.md#cimanimationgeometrytrack) | An array of geometry tracks. 
 
 
 
@@ -1215,6 +1349,8 @@
 | orientation | [enumeration StereoOrientation](CIMMap.md#enumeration-stereoorientation) | The stereo model display orientation. 
 | terrainFollowingDEM | [DataConnection](Types.md#dataconnection) | The Digital Elevation Model (DEM) used by cursor for terrain following. 
 | isStereoCursorFixed | boolean | A value indicating whether the cursor of the stereo model is fixed. 
+| stereoModelFilters | [[CIMStereoModelFilter]](CIMMap.md#cimstereomodelfilter) | The stereo model filter(s). 
+| stereoModelFilterName | string | The current stereo model filter. 
 
 
 
@@ -1568,13 +1704,13 @@
 | XYTolerance | double | The XY tolerance. 
 | XYToleranceUnit | [enumeration SnapXYToleranceUnit](CIMMap.md#enumeration-snapxytoleranceunit) | The XY tolerance unit. 
 | ZTolerance | double | The Z tolerance. 
-| ZToleranceEnabled | boolean | A value indicating whether Z tolerance is enabled. When enabled, the value is used to evaluate Z snapping. When disabled, the is considered to be infinite. The value is considered to be false (disabled) in 3D views. 
+| ZToleranceEnabled | boolean | A value indicating whether Z tolerance is enabled. When enabled, the `ZTolerance` value is used to evaluate Z snapping. When disabled, the `ZTolerance` is considered to be infinite. The value is considered to be false (disabled) in 3D views. 
 | snapToSketchEnabled | boolean | A value indicating whether snapping to the sketch is enabled. 
 | snapRequestType | [enumeration SnapRequestType](CIMMap.md#enumeration-snaprequesttype) | The snap request type. 
 | geometricFeedbackColor | [Color](Types.md#color) | Geometric feedback color. 
 | visualFeedbackColor | [Color](Types.md#color) | The visual feedback color. 
-| isZSnappingEnabled | boolean | A value indicating whether Z snapping is enabled. When enabled, snapping to a feature Z value may occur if the feature is within the Z tolerance from the current cursor Z value. The Z tolerance is specified by is true. Otherwise, the Z tolerance is infinite. Z snapping is always enabled for Stereo and 3D views. 
-| snapTipDisplayParts | long | A value indicating whether the snap tip is fully or partially visible. The int value consists of zero or more enum bit values that are OR-ed together. 
+| isZSnappingEnabled | boolean | A value indicating whether Z snapping is enabled. When enabled, snapping to a feature Z value may occur if the feature is within the Z tolerance from the current cursor Z value. The Z tolerance is specified by `ZTolerance` if `ZToleranceEnabled` is true. Otherwise, the Z tolerance is infinite. Z snapping is always enabled for Stereo and 3D views. 
+| snapTipDisplayParts | long | A value indicating whether the snap tip is fully or partially visible. The int value consists of zero or more `SnapTipDisplayPart` enum bit values that are OR-ed together. 
 
 
 
@@ -1589,6 +1725,23 @@
 | OnlyLeftImage| 1| Display only the left image of the stereo model. 
 | OnlyRightImage| 2| Display only the right image of the stereo model. 
 | None| 3| Turn off stereo model. 
+
+
+
+
+## CIMStereoModelFilter
+#### Represents a filter for stereo model selection. 
+
+
+### CIMStereoModelFilter 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| name | string | The filter name. 
+| whereClause | string | The where clause for the filter. 
+| geometry | [Geometry](ExternalReferences.md#geometry) | The geometry for the filter. 
+
+
 
 
 
@@ -1677,6 +1830,7 @@
 | z | double | Z. 
 | viewportHeight | double | The height of the viewport in meters. Viewport height and width are used for consistent camera positioning in isometric 3D views, eye separation in 3D stereo views and defines the focal distance in perspective views. 
 | viewportWidth | double | The width of the viewport in meters. Viewport height and width are used for consistent camera positioning in isometric 3D views, eye separation in 3D stereo views and defines the focal distance in perspective views. 
+| fieldOfView | double | The camera's field-of-view in degrees. 
 
 
 
@@ -1747,6 +1901,8 @@
 | dataRateFactor | double | The data rate factor. A higher data rate can give better quality, but produces a larger file. 
 | startFrameTime | double | What time in the animation to start at for exporting. 
 | endFrameTime | double | What time in the animation to end at for exporting. 
+| geometryStorageURI | string | The URI of the storage for geometries. 
+| keyframeGeometryStorageURI | string | The URI of the storage for keyframes using geometries. 
 
 
 

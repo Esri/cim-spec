@@ -210,6 +210,55 @@
 
 
 
+
+## CIMBACalculatedVariableDocument
+#### Represents a Business Analyst Calculated Variable. 
+
+
+### CIMVersion 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| version | string | Document version. Set by the system. 
+| build | long | The build an item was created with. Set by the system. 
+
+
+### CIMBACalculatedVariableDocument 
+
+|Property | Type | Description | 
+|---------|--------|--------|
+| dataSource | string | The data source used in calculation of distances. Structure of the value is TYPE;COUNTRY_INFO;LOCAL_DATA_INFO where TYPE can be ONLINE, LOCAL, or CUSTOM. COUNTRY_INFO is country_id{|hierarchy}. For example, US|census or US. LOCAL_DATA_INFO is ID of local dataset. For example, USA_ESRI_2019. For example, for local US 2019 dataset it will be: "LOCAL;;USA_ESRI_2019". If online US data source is used, it may be "ONLINE;US|census;". Can act as the value of the baDataSource GP environment variable. https://pro.arcgis.com/en/pro-app/tool-reference/environment-settings/ba-data-source.htm. 
+| name | string | The name of the variable. 
+| alias | string | The alias of the variable. 
+| category | string | The category of the variable. 
+| outputType | [enumeration esriFieldType](ExternalReferences.md#enumeration-esrifieldtype) | The output type of the variable. 
+| summaryType | [enumeration BACalculatedVariableSummaryType](CIMBusinessAnalyst.md#enumeration-bacalculatedvariablesummarytype) | The summary type of the variable. 
+| precision | long | The precision of the variable. 
+| length | long | The length of the variable. 
+| script | string | The Python script (expression) which should be calculated. 
+| usedVariables | [string] | The variables used in the script expression. For example, if Script is "!RENTER_CY! / !TOTPOP_CY!", UsedVariables contains "RENTER_CY" and "TOTPOP_CY". 
+| fieldFormat | [enumeration StatisticalReportFieldFormat](CIMDocument.md#enumeration-statisticalreportfieldformat) | How to display the values of the custom variable in reports. 
+| cardViewMode | boolean | A value indicating whether to use the Card View mode. 
+| variableDefinition | string | The definition of the variable. 
+| percentBase | string | The percent base of the variable. 
+| averageBase | string | The average base of the variable. 
+| hasIndexBase | boolean | A value indicating whether the variable has an index base. 
+| indexBase | double | The index base of the variable. 
+
+
+
+
+
+### Enumeration: BACalculatedVariableSummaryType
+#### Represents calculated variable value types. 
+
+|Property | Value | Description | 
+|---------|--------|--------|
+| Sum| 0| Sum summary type. 
+| Average| 1| Average summary type. 
+
+
+
 ### Enumeration: BAColorCodedLayerLODStatus
 #### Specifies the status of the level of detail. 
 
